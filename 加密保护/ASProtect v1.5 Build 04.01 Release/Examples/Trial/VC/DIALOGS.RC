@@ -1,0 +1,159 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_APP_DIALOG DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hello"
+FONT 8, "Verdana"
+BEGIN
+    DEFPUSHBUTTON   "Registration",IDC_REG_BUTTON,129,74,50,14
+    PUSHBUTTON      "Close",IDCANCEL,7,74,50,14
+    LTEXT           "Advanced Application v1.0",IDC_STATIC,48,22,86,8
+    CTEXT           "Static",IDC_REG_TEXT,7,52,172,9
+    LTEXT           "",IDC_STATIC,7,66,172,2,SS_SUNKEN | NOT WS_GROUP
+END
+
+IDD_TRIAL_DIALOG DIALOG DISCARDABLE  0, 0, 186, 95
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Unregistered version"
+FONT 8, "Verdana"
+BEGIN
+    PUSHBUTTON      "Exit",IDCANCEL,7,74,50,14
+    PUSHBUTTON      "Buy Now !",IDC_BUYNOW,67,74,50,14
+    PUSHBUTTON      "Registration",IDC_REG_BUTTON,129,74,50,14
+    LTEXT           "Trial expired !",IDC_STATIC,66,25,47,8
+    LTEXT           "",IDC_STATIC,7,66,172,2,SS_SUNKEN | NOT WS_GROUP
+END
+
+IDD_REG_DIALOG DIALOG DISCARDABLE  0, 0, 187, 119
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Registration"
+FONT 8, "Verdana"
+BEGIN
+    PUSHBUTTON      "OK",IDOK,7,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,66,98,50,14
+    EDITTEXT        IDC_REGNUM_EDIT,7,43,173,49,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "Enter you registration code below, please",IDC_STATIC,7,
+                    33,158,8
+    PUSHBUTTON      "Paste",IDC_PASTE,130,98,50,14
+    LTEXT           "Please, send your hardware ID to the autor",IDC_STATIC,
+                    7,7,143,8
+    EDITTEXT        IDC_HARDWAREKEY_EDIT,7,17,118,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Send",IDC_SEND,130,17,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_APP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_TRIAL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_REG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

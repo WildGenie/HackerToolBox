@@ -1,0 +1,48 @@
+Version 2.28 (18-May-2011)
+
+*	Fixed invalid PE Checksum after compression
+*	Fixed crash on About tab
+*	Added Indonesian language
+
+Version 2.25 (28-Oct-2010)
+
+*	Fixed History menu
+*	Fixed rare crash on some specific files
+*	Fixed inability to run multiple copies of certain files
+
+Version 2.24 (17-Mar-2010)
+
+*	Improved ASLR compatibility for EXE files
+*	Updated Help system
+*	Minor bugfixes
+
+Version 2.2 (31-Mar-2009)
+
+*	Fixed Runtime Error R6002 on VC2008-compiled files
+*	Improved DEP compatibility
+
+
+Version 2.11 (04-Oct-2000)
+
+*	Minor bugs fixed 
+*	/U command line option added (compress sub-directories)
+
+
+Version 2.1 (30-Mar-2000)
+
+*	Minor bugs fixed 
+*	Compression ratio of max. compression mode improved
+*	Japanese language is now supported
+
+
+Version 2.000 (27-Dec-1999)
+
+*	Improved compression ratio
+*	/M (max compression) option added 
+*	Minor bugs fixed 
+
+
+Version 2.000 beta (06-Dec-1999)
+
+*	Improved compression speed (up to 3 times !)
+*	Improved compression ratio

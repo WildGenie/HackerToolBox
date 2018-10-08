@@ -1,0 +1,109 @@
+/*
+OllyScript -  Script to set a Conditional Breakpoint MFC Messages
+Author  : Externalist
+Modified: Playboysen
+Supports : mfc42,mfc71,mfc80,mfc90
+*/ 
+
+var Dll_CodeBase,Condition,BP_Loc,temp
+var nMsg,nID,hWnd
+
+
+/* Edit these lines */
+/* Make sure you put a ¡®0¡¯ prefix if the hex value starts with an Alphabet */
+//--------------------------------------------//
+MOV hWnd,"123"	// Window Handle
+MOV nMsg,"111"	// WM_COMMAND
+MOV nID,"1"	// Resource ID
+//--------------------------------------------//
+
+
+MOV Condition,"([esp+4]=="+nMsg+") && ([ebp+8]=="+nID+") && ([edi+20]==0"+hWnd+")"
+
+GMA "mfc42",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc42",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc42",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc42",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+//mfc42 family
+
+GMA "mfc71",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc71u",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc71d",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc71ud",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+//mfc71 family
+
+GMA "mfc80",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc80u",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc80d",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+GMA "mfc80ud",CODEBASE
+CMP $RESULT,0
+JNZ FIND_OPCODE
+//mfc80 family
+
+GMA "mfc90",CODEBASE
+CMP $RESULT,0
+JNZ FIX_CONDITION
+GMA "mfc90u",CODEBASE
+CMP $RESULT,0
+JNZ FIX_CONDITION
+GMA "mfc90d",CODEBASE
+CMP $RESULT,0
+JNZ FIX_CONDITION
+GMA "mfc90ud",CODEBASE
+CMP $RESULT,0
+JNZ FIX_CONDITION
+//mfc90 family
+
+MSG "module not found :("
+JMP RETURN
+
+FIX_CONDITION:
+MOV Condition,"([esp+4]=="+nMsg+") && ([ebp+8]=="+nID+") && ([ebx+20]==0"+hWnd+")"
+
+FIND_OPCODE:
+MOV Dll_CodeBase,$RESULT
+FIND Dll_CodeBase,#FF7508FF750C??FF7604E8#
+MOV BP_Loc,$RESULT+A
+EVAL "Breakpoint set at : {BP_Loc}"
+LOG $RESULT
+BPCND BP_Loc,Condition
+
+msg "Please modify Window Handle and Resource ID in breakpoint window."
+pause
+sto
+add eax,14
+mov eax,[eax]
+bc BP_Loc
+bp eax
+cmt eax,"Here is our address,enjoy!"
+var Addr
+mov Addr,eax
+eval "Attention,our address is {Addr}.\r\nNow,you can restart your application and begin your journey~"
+msg $RESULT
+run
+
+
+RETURN:
+RET

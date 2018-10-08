@@ -1,0 +1,1 @@
+In order to run the compiled executable, you may need to click "generate keygen.dll" button in "Registration keys" tab to generate keygen.dll(you should use the same project file which is used in protecting), and then copy it to the directory which the executable exists before test.

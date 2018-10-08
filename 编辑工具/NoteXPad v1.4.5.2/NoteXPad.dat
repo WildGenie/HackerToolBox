@@ -1,0 +1,59 @@
+;NoteXPad was written with Win32ASM by dREAMtHEATER
+;Copyright (c) 2000-2004 dREAMtHEATER Studio. All rights reserved.
+;DO NOT manually edit this file , it will lead NoteXPad to CRUSH!
+
+[General]
+EscapeExit=1
+AlwaysOnTop=0
+FullPath=1
+MinimizeToTray=0
+SaveWindowPos=1
+DNDNewWindow=0
+ShowSplash=0
+View=3
+MaxMRU=4
+Transparent=0
+TransparentPct=30
+WindowPos=381 99 635 594 1
+
+[Editor]
+WordWarp=1
+AutoIndent=0
+CopyOnSelect=0
+PasteOnCopy=0
+ShowMargins=1
+HilitURL=1
+DbClickURL=1
+SuppressUpdateURLPrompt=0
+SuppressUpdateTextModePrompt=0
+TabStops=8
+Margins=10
+
+[Integration]
+RegisterOnStart=0
+ShellExt=1
+FileTypes=
+
+[SyntaxHilit]
+EnableSynHilit=1
+CurrentSynHilit=2
+
+[Appearance]
+Font=Fixedsys
+Height=210
+Effects=0
+CharSet=134
+PitchAndFamily=49
+TextColor=0
+BackColor=16777215
+
+[Tools]
+00=-
+01=计算器(&A)@calc.exe,,0343
+02=资源管理器(&E)@Explorer.exe,%P,0345
+03=命令行提示符(&P)@cmd.exe,,0000
+[MRU]
+File01=C:\Users\SteVeN\AppData\Local\Temp\Rar$DR53.840\KuGou7.nsi
+File02=C:\Users\SteVeN\Desktop\Visual C++.txt
+File03=C:\Users\SteVeN\Desktop\qqmtdl_1.28_pmdown.com\Config\Account.dat
+File04=F:\Temp\整理中\文本\TXT\QQ.txt

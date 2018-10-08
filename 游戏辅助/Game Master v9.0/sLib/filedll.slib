@@ -1,0 +1,21 @@
+function filedll(var str libpath)
+begin
+  // 19-03-2002
+  DLL_func("initfile",libpath+"filedll.dll","int")
+
+  DLL_func("GetFileSize",libpath+"filedll.dll","int","str")
+
+  DLL_func("copyfile",libpath+"filedll.dll","int","str","str")
+  DLL_func("deletefile",libpath+"filedll.dll","int","str")
+  DLL_func("renamefile",libpath+"filedll.dll","int","str","str")
+
+  DLL_func("opentextfile",libpath+"filedll.dll","int","str","int")
+  DLL_func("closetextfile",libpath+"filedll.dll","int","int")
+  DLL_func("readstr",libpath+"filedll.dll","str","int")
+  DLL_func("writestr",libpath+"filedll.dll","int","int","str")
+  DLL_func("readchar",libpath+"filedll.dll","int","int")
+  DLL_func("writechar",libpath+"filedll.dll","int","int","int")
+  DLL_func("eof",libpath+"filedll.dll","int","int")
+
+  initfile()
+end

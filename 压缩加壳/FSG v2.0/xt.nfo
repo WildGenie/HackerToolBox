@@ -1,0 +1,114 @@
+         h o m e   o f   p o l i s h   m o t h e r f u c k e r s               
+               ______                                      .______             
+ ______ ______/     /___________________   ________ ______ |     /________     
+ \_    `     /     __/    ,____/   /___/__/   /___/_\     \|    /    /___/__   
+ /_____|_____\_____\______\    \_________/__________/____\  /___\\_________/   
+ -------------------------------------------------------- \/ -----xtreeme--    
+                                                                               
+ app name   : FSG v2.0                          rel type   : exe packer        
+ url        : http://www.xtreeme.prv.pl         system     : 95,98,NT,2K,XP    
+ rel date   : 24.05.2004                        size       : n/a               
+ cracked by : bart                              protection : n/a               
+                                                                               
+ --------------------------------------------------------------------------    
+ FSG - F[ast] S[mall] G[ood]                                                   
+ Perfect compressor for small exes, eg. 4k,64kb intros, asm appz etc.(upx sux) 
+                                                                               
+ features:                                                                     
+ + designed for asm executable files (kg, cracks, trojans :)                   
+ + small loader size (but if u know how to improve it, mail me)                
+ + imports handling                                                            
+ + support for executables with export tables                                  
+ + TLS support (delphi, bcc exes)                                              
+ + overlays support (flash, director, shockwave etc.)                          
+ + aPLib compression (LZMA is too big and NRV from z0mbie's site is soo sloow) 
+ + command line support, eg. "fsg.exe notepad.exe" (drag&drop also works)      
+                                                                               
+                                                                               
+ changes v2.0                                                                  
+ + 100% recoded (pure win32asm)                                                
+ + 158 bytes of loader code, gee its so cute :), can you make it smaller?      
+ + support for exports and overlays (flash and co.)                            
+ + strip unused resources option (version info, delphi's resources)            
+ + configuration file (fsg.ini), read it for more info                         
+ + it wasnt my intention, but you can pack executable from vb-shit too :)      
+ + fixed command line handling for Windows Server 2003                         
+ + fixed Windows95 compatibility problems (command line support)               
+ - 32x32 icon isnt removed anymore                                             
+                                                                               
+                                                                               
+ changes v1.33                                                                 
+ + smaller loader code (again??), this time its 197bytes long (u cant stop us) 
+                                                                               
+                                                                               
+ changes v1.32 (internal release)                                              
+ + smaller loader code (206 bytes)                                             
+ + ms-dos header optimization (PE header at 0Ch offset)                        
+ ! shitty Web3000 claims that FSG is a trojan, dont use this cheap Web3000     
+   crapware, anyway if you still think FSG is a trojan, reverse it and         
+   tell me about your worries                                                  
+                                                                               
+ changes v1.31                                                                 
+ + smaller loader code (thnx Jibz for aplip optimization tips), 239 bytes      
+ + compatibility with FASM exe files                                           
+                                                                               
+                                                                               
+ changes v1.3                                                                  
+ + nice GUI                                                                    
+ + FSG saves its import strings in PE header, just like TLS table if detected  
+ + PE header moved 32bytes up (40h), i dont give a fuck about dos message      
+ + heavily tested under XP (yeah rite...)                                      
+ + detection of invalid PE files (signatures, packers flags at PE+F4h)         
+ + error handling (seh requested :P)                                           
+ - polymorphic encryption (you didnt like it, am i rite?)                      
+                                                                               
+                                                                               
+ changes v1.2                                                                  
+ + now FSG loader is placed correctly in the PE header (always on 200h)        
+ + tested under XP (but still i wont pay 500$ for this shit :P)                
+ - disabled compression of RT_FONTDIR & RT_FONT & RT_MANIFEST resources        
+ - disabled compression of RT_VERSION resource (shit, now you can compress     
+   all those little shitty VB appz)                                            
+                                                                               
+ bugs                                                                          
+ - no .NET executables support (what can be worst than VB for .NET? :)         
+ - no DLL support (who needs it anyway?)                                       
+ - no TLS callbacks support                                                    
+ - no delay imports support                                                    
+ - and much more :)                                                            
+                                                                               
+ bart - cryogen@box43.pl or cryogen@host.sk                                    
+                                                                               
+ thnx dulek for the idea                                                       
+                                                                               
+ --------------------------------------------------------------------------    
+ bart...............................................................founder    
+ dulek..............................................................founder    
+ WiteG..............................................................cracker    
+ smola................................................................coder    
+ sachy..............................................................cracker    
+ butthead............................................................fucker    
+                                                                               
+ Nasza ekipa obecnie nie potrzebuje nowych czlonkow, wiec jesli jestes mlody,  
+ utalentowany i garniesz sie do roboty, wez swojego bejzbola i idz sie wyzyj   
+ na jakichs staruszkach w parku.                                               
+                                                                               
+ --------------------------------------------------------------------------    
+ greetz to:                                                                    
+ dulek                 - hey master, do you like it :), mail me                
+ cybult                - thnx for the optimization tip (popad rox)             
+ Northfox              - good work with Mew, greets to all hungarian cracking  
+                         scene                                                 
+ cyberbob              - pespin - pozytywne zaskoczenie, wow to w .pl ktos     
+                         jeszcze cos robi :)                                   
+                                                                               
+ fucks to:                                                                     
+ mksvir                - najbardziej syfiasty antyvir na rynku, z wyrazami     
+                         antypatii dla Marka Sella, ten anty-greet pozostaje   
+                         aktualny, od wydania poprzedniego FSG minelo sporo    
+                         czasu, a nadal ten gowniany antywir wykrywa FSG jako  
+                         wirka, probowalem namowic ich na usuniecie tego       
+                         problemu, ale nie potrafili nawet tego rozpakowac :)  
+                                                                               
+ --------------------------------------------------------------------------    
+ logo by sK!                                                                   

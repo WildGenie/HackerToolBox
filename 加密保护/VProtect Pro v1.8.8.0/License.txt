@@ -1,0 +1,33 @@
+Virtualize Protect
+Copyright (C) 2004-2010 Virtualize Protect Developers Team
+All Rights Reserved
+Web:		http://www.vprotect.net
+E-mail:		support@vprotect.net
+Developers:	VProtectTeam
+Support QQ:	1360505490
+
+*** LICENSE AGREEMENT ***
+
+Please carefully read the following terms and conditions before using "Virtualize Protect". The license agreement is the contract between you and "Virtualize Protect Developers Team". By using the "Virtualize Protect" you are agreeing to all the limitations and rules provided by "Virtualize Protect Developers Team". In case you are do not agree with the following license agreement, you should not use or download or store "Virtualize Protect".
+
+*** BASIC LICENSE AGREEMENT ***
+
+1. Virtualize Protect is a result of the intellectual property of "Virtualize Protect Developers Team" and is protected by intellectual property laws. You will be able to use "Virtualize Protect" only within the scope of the current license agreement. In case you do not agree to the terms set forth, please do not use or download or store "Virtualize Protect".
+
+2. "Virtualize Protect" and all accompanying files are licensed "AS IS" without warranties as to performance or merchantability or any other warranties whether expressed or implied. Because of the various hardware and software environments in which "Virtualize Protect" may be operated, no warranty of fitness for a particular purpose is offered.
+
+3. "Virtualize Protect" is not a freeware software. There are certain limitations in the evaluation copy which will not be present in the registered version. Please see below for the license agreement for the registered version. If you find this program useful and want to use all of its features, you must make a registration payment. This registration fee will license one or more copies of user licenses.
+
+4. You may not, nor permit or allow others to, sell, distribute, rent, loan, lease, sub-license "Virtualize Protect".
+
+5. "Virtualize Protect" and the accompanying files should not be reverse-engineered, disassembled, decompiled etc.
+
+6. You shall comply with all relevant import and export laws, rules and regulations affecting "Virtualize Protect" or any portion of it, including the limited-function evaluation copy.
+
+*** REGISTERED VERSION LICENSE ***
+
+1. The registered version of "Virtualize Protect" permits you unique registration information for single or company usage. The registration information contains the registration key, which you may not publish or distribute. In the event you share or distribute or publish the registration information, your license to use "Virtualize Protect" will be automatically terminated.
+
+2. You agree not to install, or use any individual copy of "Virtualize Protect" on more than one computer, or via any network, or by means of remote or other access. This rule is only for single developer license and does not relate to the other license types.
+
+3. The company license allows use of "Virtualize Protect" on the company computers only. It cannot be used for single purpose of any company person.

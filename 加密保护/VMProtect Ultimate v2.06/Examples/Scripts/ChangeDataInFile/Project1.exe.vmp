@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<Protection InputFileName="Project1.exe" Options="72" CheckKernelDebugger="false" CompressionMode="0" VMCodeSectionName=".vmp" VMExecutorCount="1" LicenseDataFileName="" OutputFileName="" WaterMarkName="" RunParameters="">
+		<Folders/>
+		<Procedures>
+			<Procedure MapAddress="VMProtectMarker &quot;Test marker&quot;" IncludedInCompilation="true" Options="1" CompilationType="0"/>
+			<Procedure MapAddress="string &quot;Incorrect password&quot;" IncludedInCompilation="false" Options="1" CompilationType="0"/>
+			<Procedure MapAddress="string &quot;Correct password&quot;" IncludedInCompilation="false" Options="1" CompilationType="0"/>
+		</Procedures>
+	</Protection>
+	<DLLBox/>
+	<Script IncludedInCompilation="true">procedure OnAfterSaveFile;
+var SourceString: TStringList;
+    I:Longint;
+    S,S1:AnsiString;
+    P,J:Integer;
+begin
+  SourceString:=TStringList.Create;
+  SourceString.Add('VMProtect test [MASM]');
+  SourceString.Add('Password:');
+  SourceString.Add('Check password');
+  SourceString.Add('Information');
+  SourceString.Add('Correct password');
+  SourceString.Add('Error');
+  SourceString.Add('Incorrect password');
+  try
+   with VMProtector.OutputFile do
+    begin
+     for J:=0 to SourceString.Count-1 do
+      begin
+       Position:=Sections[2].PhysicalOffset;
+       P:=1;
+       S:=SourceString[J]+#0;
+       for I:=1 to Sections[2].PhysicalSize do
+        begin
+         if Read(S1,1)=0 then
+          break;
+         if S[P]=S1[1] then 
+          begin
+           P:=P+1;
+           if P=Length(S) then
+            begin
+             Position:=Position-P+1;
+             Writeln(Format('%s: %.4x',[S,Position]));
+             S1:='Str'+IntToStr(J);
+             while Length(S1)&lt;Length(S)-1 do
+              S1:=S1+' ';
+             Write(S1,Length(S1)); 
+             P:=1; 
+            end;
+          end
+         else
+          P:=1;     
+        end;
+      end;  
+    end; 
+  finally
+   SourceString.Free;
+  end;
+end;
+</Script>
+</Document>

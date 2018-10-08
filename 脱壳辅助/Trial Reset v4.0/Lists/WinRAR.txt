@@ -1,0 +1,3 @@
+WinRAR	File32	%A\WinRAR\version.dat
+WinRAR	Reg32Val	HKCU\Software\WinRAR\General\\VerInfo
+WinRAR	Reg32Key	HKCR\WRTE.Document.1\UID\

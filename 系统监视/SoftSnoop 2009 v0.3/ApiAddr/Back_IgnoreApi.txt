@@ -1,0 +1,7 @@
+ReadFile
+WideCharToMultiByte
+SendMessageW
+SendMessageA
+ShowWindow
+EnableMenuItem
+GetProcAddress

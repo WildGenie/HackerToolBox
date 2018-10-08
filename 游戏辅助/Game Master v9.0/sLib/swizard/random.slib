@@ -1,0 +1,48 @@
+function main()
+begin
+  var int start,range,tmp
+
+  set tmp=Q_ChooseOne("請選擇亂數的範圍:","1-6,1-100,0-255,0-65535,自定,")
+  if tmp=1
+  then begin         
+    set start=1
+    set range=6
+  end
+  else begin
+    if tmp=2
+    then begin         
+      set start=1
+      set range=100
+    end
+    else begin
+      if tmp=2
+      then begin         
+        set start=0
+        set range=256
+      end
+      else begin
+        if tmp=3
+        then begin
+          set start=0
+          set range=65536
+        end
+        else begin
+          set start=val(Q_InputText("亂數的最少值是?","",250))
+          set range=val(Q_InputText("亂數的最大值是?","",250))-start+1
+        end
+      end
+    end
+  end
+
+
+  if !Q_IsQuit()
+  then begin
+    Q_CreateSList()
+    Q_SList_Add("function "+Q_GetNextAutoLockFuncName()+"(var int addr)")
+    Q_SList_Add("begin")
+    Q_SList_Add("  writemem(addr, str(random("+str(range)+")+"+str(start)+"))")
+    Q_SList_Add("end")
+    Q_SListToAutoLock()
+    Q_FreeSList()
+  end
+end

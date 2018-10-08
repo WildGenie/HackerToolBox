@@ -1,0 +1,13 @@
+# EXECryptor 2.0 project
+AppFile=CustomSerialsDemo.exe
+VLevel=25
+AntiTrace=TRUE
+AntiDebug=TRUE
+ProtectEP=TRUE
+CheckCRC=TRUE
+StripReloc=TRUE
+SoftwareID=1793994828
+StolenKeys=
+FeatureList=Feature 1`Feature 2`Feature 3`Feature 4`Feature 5`Feature 6
+LicenseList=Standard`Time limited`
+Key=ext_key.bin

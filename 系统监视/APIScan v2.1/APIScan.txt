@@ -1,0 +1,113 @@
+
+
+APIScan 2.1      By Sirmabus
+=============================================================================
+
+
+Intro
+------
+APIScan is a simple tool to gather a list of APIs that a target process uses.
+
+You can use this list in an initial analysis to help determine a target's
+general operating nature.  Also can be used to help determine patch/update
+changes by doing a WinDif on "before" and "after".
+
+There are similar tools, often more robust (like "Dependency Walker"), but
+most of these just parse the target IAT ("Import Address Table") alone.  
+APIScan catches dynamically/delayed loaded modules too; and dumps them as a
+simple list.
+
+
+While only tested (extensively) on Windows XP SP2 32bit, APIScan should work 
+on everything from W2K to Vista.
+
+
+How to use it:
+---------------
+Two ways of running APIScan:  Invoke it directly (a file dialog will come up),
+or run it from the command line.  The command line will allow passing
+parameters to the target.
+I.E. "APIScan C:\MyTarget\TheTarget.exe -P MyParms -C MoreParms"
+
+Once you started the target:
+1. Run it, excising it's options that should cause any modules to be loaded
+   dynamically, etc.
+
+2. Exit the target application.  Even though the APIScan splash screen is 
+   gone, the hook DLL continues to collect information until the application
+   is fully closed. Only after this point is the output list file complete 
+   and valid.
+
+The output file:
+-----------------
+The output file (to be stored in the target directory) is simply a list of 
+alphabetically sorted modules followed by the API call names.  The calls are
+listed (unsorted) as they are parsed and loaded.
+
+The API flags provide some additional information:
+ 'I' = There is one or more IAT reference.
+'D'  =  One or more times the API was dynamically loaded (via 
+       GetProcAddress()").
+'O'  =  One or more reference where the API was accessed via ordinal.
+'F'  =  One or more attempted dynamic load that failed (as in if the module or
+        the export doesn't exist)
+
+
+How it works:
+--------------
+It loads the specified process and injects "apiscan.dll" into it before it 
+runs. "apiscan.dll" first parses the targets IAT(s) and then apples a 
+"GetProcAddress()" API hook to it.  This hook should catch all attempts at 
+delayed and dynamic API loading.  The DLL will continue to be resident inside
+the target collecting data until the application is closed.  Upon closing 
+(detach stage) the data is collated and the list file saved into the target-
+/source path.
+
+Know issues:
+-------------
+1. The "GetProcAddress()" hook catches all references target process wide.
+   So even APIs dynamically/delayed loaded in modules will show up in the
+   list.  In the future there might be a switch to select main module, or 
+   "all".
+
+2. Won't catch applications using low level ways to load APIs like 
+   "LdrGetProcedureAddress()" from "ntdll.dll".  Using "GetProcAddress()" is
+   the WinOS independent way for now.
+
+3. If the target application uses a loader, APIScan will only see/collect data
+   form that process, it doesn't currently ride along to child processes.
+   This could be done (more API hooks) in the future.
+
+4. Might not work correctly with packed, and, or protected processes
+   Not surprising, this is the same problem one might run in to with any
+   similar tool.
+   One might have to unpack, and, or unprotect the process first.
+   APIScan could get around some of this in the future by hooking at a lower
+   level layer.
+
+
+Changes:
+--------
+1.0b Initial version.
+
+2.0  Reworked with a much better and simpler API hooking then 1.0b.
+     Just a single text file output now, no .CSV output file.
+     Ordinal references are resolved to export name strings if possible.
+
+2.1  Fixed a bug that would occasionally not flag 'O' (ordinal) for some APIs.
+     Ordinal export names now resolved (when possible) from the IAT too.
+     Now sorts API names too to make the output more consistent and
+     useful with WinDif.
+     Should work better with Vista and 64bit OS versions.	    
+
+
+Terms of Use
+------------
+This software is provided "as is", without any guarantee made as to its
+suitability or fitness for any particular use. It may contain bugs, so use
+this software is at your own risk.  We take no responsibly for any damage
+that may unintentionally be caused through its use.
+
+
+
+

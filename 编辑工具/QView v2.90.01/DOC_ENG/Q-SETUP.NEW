@@ -1,0 +1,77 @@
+                          Q-Setup changes since v1.30R
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*** 07/12/97 * Q-Setup 1.30R released.
+
+-----------------------------------------------------------------------------
+
+*** 14/12/97
+   Check of the INI-file header was added.
+
+*** 15/12/97
+   Convert Character Tables menu option added. Analogue to the Import
+   Configuration option.
+   {requested by A.Gazko}
+
+*** 15/12/97
+   Bug in convertion procedure with the tables number limit fixed.
+
+*** 15/12/97
+   Mouse work in the EHL-browser window was corrected.
+
+*** 15/12/97
+   Extra mouse-control symbols in the EHL-window and in the 'Read Str' window:
+   x - delete
+    - insert
+    - left
+    - right
+    - browse/table
+
+*** 15/12/97
+   Fast Quit - (Ctrl-\) or mouse-click in the left up screen corner. Save
+   changes dialog appeares when needed.
+
+*** 15/12/97 * Q-Setup 1.31b released.
+
+-----------------------------------------------------------------------------
+
+*** 19/12/97
+   QVIEW.CHR is now wrote to the Q-SETUP directory instead of the current one.
+
+*** 19/12/97
+   Convert Log output is changed a bit.
+
+*** 28/01/98
+   Swap on DOS Shell to XMS/EMS/Disk.
+
+*** 28/01/98
+   Zooming boxes (if enabled).
+
+*** 14/02/98
+   Function 'Save INI' (F2) allows to enter the new path and/or name for
+   the INI-file.
+
+*** 15/02/98
+   Directory browser when open file for import/convert.
+
+*** 16/02/98
+   Import/convert browser now starts in the start-up directory instead of
+   '\INI' subdirectory.
+
+*** 17/02/98
+   FastQuit option was corrected a bit (Cancel in file save prompt window
+   is now work ok).
+
+*** 17/02/98
+   Default position for 'Colors' window was changed.
+
+*** 19/02/98
+   File manager configuration file (qview.fmg) support added.
+
+*** 19/02/98
+   Available memory heap size instead of current date wrote on screen.
+
+*** ??/02/98
+   Minor cosmetic changes.
+
+*** 21/02/98 * Q-Setup 2.50 released.

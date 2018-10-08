@@ -1,0 +1,21 @@
+1 修正 -=> PE Tools v1.5.800.2006 RC7 <=-  "HEX 方式编辑区段"菜单灰色不可用的BUG
+
+修改前
+
+00426ECF   .  68 54594000   PUSH PETools_.00405954                   ; /pItem = "HEX 方式编辑区段"
+00426ED4   .  68 9F9C0000   PUSH 9C9F                                ; |ItemID = 9C9F (40095.)
+00426ED9   .  6A 01         PUSH 1                                   ; |Flags = MF_BYCOMMAND|MF_GRAYED|MF_STRING
+00426EDB   .  A1 5C954300   MOV EAX,DWORD PTR DS:[43955C]            ; |
+00426EE0   .  50            PUSH EAX                                 ; |hMenu => 00260ECF
+00426EE1   .  FFD6          CALL ESI                                 ; \AppendMenuA
+
+修改后
+
+00426ECF   .  68 54594000   PUSH PETools.00405954                    ; /pItem = "HEX 方式编辑区段"
+00426ED4   .  68 9F9C0000   PUSH 9C9F                                ; |ItemID = 9C9F (40095.)
+00426ED9   .  6A 00         PUSH 0                                   ; |Flags = MF_BYCOMMAND|MF_ENABLED|MF_STRING
+00426EDB   .  A1 5C954300   MOV EAX,DWORD PTR DS:[43955C]            ; |
+00426EE0   .  50            PUSH EAX                                 ; |hMenu => NULL
+00426EE1   .  FFD6          CALL ESI                                 ; \AppendMenuA
+
+这里直接把 00426ED9 的 PUSH 1 改成 PUSH 0 就可以了，我改的是cao_cong汉化的版本，看了下原英文版也有这问题，不知道作者为什么默认这里为关闭状态？

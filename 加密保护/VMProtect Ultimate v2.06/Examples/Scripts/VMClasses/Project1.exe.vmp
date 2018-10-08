@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<Protection InputFileName="Project1.exe" Options="72" CheckKernelDebugger="false" CompressionMode="0" VMCodeSectionName=".vmp" VMExecutorCount="1" LicenseDataFileName="" OutputFileName="" WaterMarkName="" RunParameters="">
+		<Folders/>
+		<Procedures>
+			<Procedure MapAddress="VMProtectMarker &quot;Test marker&quot;" IncludedInCompilation="true" Options="1" CompilationType="0"/>
+			<Procedure MapAddress="string &quot;Incorrect password&quot;" IncludedInCompilation="false" Options="1" CompilationType="0"/>
+			<Procedure MapAddress="string &quot;Correct password&quot;" IncludedInCompilation="false" Options="1" CompilationType="0"/>
+		</Procedures>
+	</Protection>
+	<DLLBox/>
+	<Script IncludedInCompilation="true">procedure OnBeforeCompilation;
+var I,J,K: Integer;
+    FileName,S: String;
+    P: TVMProcedure;
+    Lines: TStringList;
+begin 
+  Lines:=TStringList.Create;
+  try
+   for K:=0 to VMProtector.Count-1 do
+    begin
+     P:=VMProtector.Procedures[K];
+     Lines.Add('//');
+     Lines.Add('// procedure '+P.Name);
+
+     if P.IncludedInCompilation then S:='True'
+                                else S:='False';
+     Lines.Add('// IncludedInCompilation = '+S);
+     
+     case P.CompilationType of
+      ctMutation: S:='Mutation';
+      ctVirtualization: S:='Virtualization';
+      ctUltra: S:='Ultra';
+     else
+      S:='Unknown';
+     end; 
+     Lines.Add('// CompilationType = '+S);
+     
+     case P.CodeType of
+      otCode: S:='Code';
+      otMarker: S:='Marker';
+      otString: S:='String';
+     else
+      S:='Unknown';
+     end; 
+     Lines.Add('// CodeType = '+S);
+     Lines.Add('//');
+     
+     for I:=0 to P.Count-1 do
+      with P.Records[I] do
+       begin
+        S:='';
+        for J:=0 to DumpLength-1 do
+         S:=S+Format('%.2x',[Dump[J]]);
+        while Length(S)&lt;24 do
+         S:=S+'  '; 
+        Lines.Add(Format('%.8x %s %s',[Address,S,CommandText]));
+       end;
+    end;   
+                 
+   FileName:=ChangeFileExt(VMProtector.InputFileName,'.txt');  
+   Lines.SaveToFile(FileName);
+  finally    
+   Lines.Free;
+  end;  
+  
+  MsgBox('Functions are saved in file:'#13+FileName,'VMProtect Script',MB_OK or MB_ICONINFORMATION);
+end;
+</Script>  <LicenseManager ProductCode="" LicenseData="" Algorithm="" Bits="0" PublicExp="" PrivateExp="" Modulus="" BlackList=""/>
+</Document>

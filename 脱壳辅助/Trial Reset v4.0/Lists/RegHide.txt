@@ -1,0 +1,1 @@
+RegHide	Reg32Key	HKLM\SOFTWARE\Systems Internals\

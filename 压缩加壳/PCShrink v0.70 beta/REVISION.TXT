@@ -1,0 +1,70 @@
+; Update: v0.11: Fixed bug like 10 minutes after initial release.
+;		thanks to nIabI for testing.
+; 	  v0.12: Optimized lzrw1 decompression code some
+; 	  v0.13: Rewrote lzrw1 decompression procedure, vast improvement.
+;		 Removed NULLing of destination buffer, not necessary
+;		 I don't think.
+;	  v0.14: +Fixed bug in LCC-WIN32 applications, where physical 
+;	   	 size of of sections is, surprisingly enough, not aligned.
+;		 +No longer flagged by AVP as suspicious.
+;	  v0.20: +Removes reloc table because it's not viable anymore 
+;		 anyway. This should cause no problems except in DLLs.
+;		 In other words, don't use this utility on DLLs.
+;		 +Compresses all resource data following the last icon,
+;		 group icon, or version information. In other words,
+;		 as much as possible without removing the shell icon and
+;		 version information and not having to restructure
+;		 the entire resource section. v0.30 will restructure the
+;		 import section to improve compression.
+;                +Added compression of import table.
+;		 +Removes debug information.
+;                +Moved symbiont up to end of last section raw data.
+;		 +Renamed to PCSHRINK.
+;	 v0.26:  +Removes debug directory rva and size.
+;		 +Resource section restructuring added!
+;		 +Bug fix: I imported my resource type equates from 
+;		  windows.inc. Turns out the RT_GROUPICON was wrong,
+;		  causing some applications to lose their shell icon
+;		  after compression.
+;		 +Fixed alignfile bug where handle was being closed.
+;	 v0.28:  +Added GUI
+;		 +Added option to not restructure resource data
+;		 +Added merging capabilities of first two sections.		 
+;		 +TiTi/Blizzard suggested and coded an update for 
+;		  vgalign. His update to the vgalign routine is 
+;		  incorporated.
+;	 v0.29:  +Fixed stack bug which caused blue screens in win9x.
+;	 v0.30:  +Changed from LZRW1 to Jibz Compression Library. This
+;		  significantly improves compression ratios.
+;	 v0.31:  +Updated to APLib v0.22. This fixes the bug causing
+;		  Win9x to lockup while compressing large files.
+;	 v0.32:  +Bug fix: Incorrect image size on executables with
+;  	          relocations in last section.
+;		 +Now displays little error messagebox if there was
+;		  a problem loading the host's original import table
+;		  due to a missing DLL or export.
+;	 v0.40:  +Bug fix: Section merging sometimes overwrote data.
+;		 +Section merging now supported throughout exectuable.		 		 
+;		 +Sections renamed to 'pcsX'.
+;		 +Section merging is now done before compression,
+;		  allowing for better compression ratios.		 
+;	 v0.45	 +A large portion of the symbiont code is now 
+;		  compressed.
+;		 +Bug fix: If more than two section merges occured,
+;		  only the first was saved in the SymbiontMergeTable.
+;		 +Section merging no longer limited to two sections
+;		  per merge. As many sequential, compressable sections
+;		  as possible will be merged.		 
+;		 +New, spiffy GUI with progress bar.
+;	 v0.50   +Added file backup option
+;		 +Added icon to dialog to fill an empty spot<g>.
+;	 v0.51   +Bug Fix: involving Visual Basic apps with oddly
+;		  named relocation sections.
+;	 v0.60   +Removed dependency on fixup section to be named
+;		  .reloc or .rloc.
+;		 +Added user defined resource type compression, meaning
+;		  the user can decide which resource type to compress 
+;		  and which to leave alone.
+;		 +Bug fix: TLS handling. (example: mirc32.exe)
+;  	 v0.70   +Creation of thread for compression.
+;		

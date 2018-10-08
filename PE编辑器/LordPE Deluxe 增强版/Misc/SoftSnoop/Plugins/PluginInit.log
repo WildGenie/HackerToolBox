@@ -1,0 +1,12 @@
+
+->HelloWorld.dll:
+插件载入成功.
+"HelloWorld" 已添加到插件菜单.
+
+->MsgHook.dll:
+插件载入成功.
+"StartSSPlugin" 输出没找到.
+
+->PluginExp3.dll:
+插件载入成功.
+"PluginExp3" 已添加到插件菜单.

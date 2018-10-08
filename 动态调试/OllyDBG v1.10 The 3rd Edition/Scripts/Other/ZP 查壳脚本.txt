@@ -1,0 +1,110 @@
+var VirtualProtect
+
+gpa "VirtualProtect","kernel32.dll"
+BP $RESULT
+    run
+
+    cmp $RESULT,0
+    je ccc
+mov dizhi1 ,esp
+    MOV dizhi,[dizhi1]
+ bbb:
+    FIND [dizhi],#ff1514c5#
+    cmp $RESULT,0
+    jnz A130y   
+    FIND [dizhi],#ff1594cd#
+    cmp $RESULT,0
+    jnz A130
+    FIND [dizhi],#ff153463#
+    cmp $RESULT,0
+    jnz A140
+    FIND [dizhi],#ff156c5f#
+    cmp $RESULT,0
+    jnz A141dm    
+    FIND [dizhi],#ff158c6d#
+    cmp $RESULT,0
+    jnz A142dm    
+    FIND [dizhi],#ff154447#
+    cmp $RESULT,0
+    jnz A146dm
+    FIND [dizhi],#ff155c46#
+    cmp $RESULT,0
+    jnz A146    
+    FIND [dizhi],#ff15bc5f#
+    cmp $RESULT,0
+    jnz A148dm
+    FIND [dizhi],#ff157c4b#
+    cmp $RESULT,0
+    jnz A148    
+                 
+    FIND [dizhi],#ff152c65#
+    cmp $RESULT,0
+    jnz A49
+    FIND [dizhi],#ff158495#
+    cmp $RESULT,0
+    JNZ A44P
+    FIND [dizhi],#ff15346F#
+    cmp $RESULT,0
+    JNZ A44QY    
+    FIND [dizhi],#ff157c56#
+    cmp $RESULT,0
+    JNZ A44w
+
+    FIND [dizhi],#ff158493#
+    cmp $RESULT,0
+    JNZ A44DM
+    add dizhi,4
+    jmp bbb
+    A130y:
+    msg "这个程序是ZProtect 1.30 DEMO版加的保护！ 脚本BY 浓咖啡"
+    ret    
+    
+    A49:
+    msg "这个程序是ZProtect 1.49版本加的保护！ 脚本BY 浓咖啡"
+    ret
+    ccc:
+    msg "这个程序不是ZProtect 加的保护！脚本BY 浓咖啡"
+    ret
+    A44P:
+    msg "这个程序是ZProtect 1.44 PRO版本加的保护！脚本BY 浓咖啡"
+    ret
+    A44QY:
+    msg "这个程序是ZProtect 1.44 企业版加的保护！脚本BY 浓咖啡"
+    ret
+    A44DM:
+    msg "这个程序是ZProtect 1.44 演示本加的保护！脚本BY 浓咖啡"
+    ret  
+    A44w:
+    msg "这个程序是ZProtect 1.49 加的保护！脚本BY 浓咖啡"
+    ret   
+    
+    A130y:
+    msg "这个程序是ZProtect 1.30 DEMO版加的保护！ 脚本BY 浓咖啡"
+    ret    
+    
+    A130:
+    msg "这个程序是ZProtect 1.30 版本加的保护！ 脚本BY 浓咖啡"
+    ret
+    A140:
+    msg "这个程序不是ZProtect 1.40 加的保护！脚本BY 浓咖啡"
+    ret
+    A141:
+    msg "这个程序是ZProtect 1.41 DEMO版本加的保护！脚本BY 浓咖啡"
+    ret
+    A142:
+    msg "这个程序是ZProtect 1.42 DEMO版加的保护！脚本BY 浓咖啡"
+    ret
+    A146dm:
+    msg "这个程序是ZProtect 1.46 演示本加的保护！脚本BY 浓咖啡"
+    ret  
+    A146:
+    msg "这个程序是ZProtect 1.46 加的保护！脚本BY 浓咖啡"
+    ret      
+     A148dm:
+    msg "这个程序是ZProtect 1.48 演示本加的保护！脚本BY 浓咖啡"
+    ret  
+    A148:
+    msg "这个程序是ZProtect 1.48 加的保护！脚本BY 浓咖啡"
+    ret   
+    
+     

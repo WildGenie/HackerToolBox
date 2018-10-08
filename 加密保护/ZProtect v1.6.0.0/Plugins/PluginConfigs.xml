@@ -1,0 +1,11 @@
+<Plugins>
+    <PluginOne Active="1" DLLName="anti.dll">
+        <Settings AntiLPK="0" AntiAttach="0" AntiRegmon="0" AntiDumper="0" AntiSoftICE="0" AntiFileMon="0" AntiDebugger="0" />
+    </PluginOne>
+    <PluginOne Active="1" DLLName="overlay.dll">
+        <Settings EnumOverlay="0" />
+    </PluginOne>
+    <PluginOne Active="1" DLLName="">
+        <Settings />
+    </PluginOne>
+</Plugins>

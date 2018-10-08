@@ -1,0 +1,1 @@
+In order to see how SDProtector API works, You should protect examples first before test.

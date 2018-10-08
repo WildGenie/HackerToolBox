@@ -1,0 +1,10 @@
+﻿;MOLEBOX CONFIG SCRIPT 1.0
+<options>
+target=Test\mxbtest.exe
+source=mxbtest.exe
+extpwd=123
+extmask=*.dat
+isexecutable=yes
+<files>
+testfile.htm
+<end>

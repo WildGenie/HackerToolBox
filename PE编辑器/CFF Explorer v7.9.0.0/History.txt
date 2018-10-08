@@ -1,0 +1,150 @@
+-------------------------------------------------------------
+
+CFF EXPLORER HISTORY:
+
+Version VII:
+
+- Fixed some major message handling bugs
+- Fixed a lot of bugs
+- Fixed a minor bug in the MetaData tables
+- Fixed minor resizing bug on Vista
+- Fixed a bug of the Quick Disassembler
+- Fixed multiple interface bug
+- Fixed minor address converter interface bug
+- Fixed long file names tab bug
+- Fixed command line bug
+- Fixed Exception Directory bug
+- Fixed Add Sectiong bug
+- General improvements
+- Significantly improved the interface
+- Improved Resource Editor
+- Improved Rebuilder (added checksum update and strip debug directory)
+- Improved Data Directories viewer
+- Improved Hex Editor
+- Improved Sections Dialog (added section's hex view)
+- Improved MetaData Tables
+- Improved extensions message dispatch
+- Improved integrity checks
+- Improved support for tiny PEs
+- Improved PE rebuilding
+- Extended the SDK
+- Added very powerful scripting language
+- Added documentation for the scripting language
+- Added security features for the scripting language
+- Added support for generic files
+- Added Name Unmangler
+- Added Debug Directory
+- Added Dependency Walker
+- Added Quick Disassembler (x86, x64, MSIL)
+- Added safe mode open file
+- Added Exception Directory
+- Added scripting arguments
+- Updated scripting language
+
+Version VI:
+
+- Fixed some bugs
+- Fixed extensions loading bug
+- General improvements
+- 100% Vista compatible
+- Improved File Information
+- Improved Hex Editor
+- Improved Address Converter
+- Improved icons and cursors visualization
+- Converted Resource Viewer to Resouece Editor
+- Added support for Vista's 256x256 icons
+- Added PE Identifier
+- Added extension support
+- Added UPX Utility
+- Added Visual Studio Extension Wizard
+- Added PE integrity checks
+
+Version V:
+
+- Fixed some bugs
+- Fixed Resource Directory bug
+- Fixed Hex Editor font bug
+- Fixed Delete Section bug
+- Fixed Relocation Directory bug
+- Fixed Streams Header bug
+- Fixed x64/Itanium Grid Control bug
+- Fixed x64/Itanium MetaData Header bug
+- General improvements
+- Improved Advanced Interface
+- Improved Hex Editor
+- Improved Import Adder
+- Added multiple file processing
+- Added Signature Scanner
+- Added Version Information
+- Compiled CFF Explorer for x64
+- Compiled CFF Explorer for Itanium
+
+Version IV:
+
+- Fixed Export Table bug
+- Fixed Advanced Interface bug
+- General improvements
+- Improved Resource Viewer
+- Improved MetaData Tables Viewer
+- Added TLS Directory
+- Added Import Adder
+- Added .NET Flags Modification
+
+Version III:
+
+- Fixed Resource Viewer bug
+- Fixed Export Table bug
+- Fixed Icons/Cursors Dump bug
+- Fixed Add Section bug 
+- Improved Hex Editor
+- Improved MetaData Tables Viewer
+- Added switchable interface (Simple/Advanced)
+- Added Strong Signature Remover for .NET Assemblies
+- Added Relocation Directory
+- Added Image Base Changer
+- Added Import Table Binder
+
+Version II:
+
+- Fixed Export Table bug
+- Improved Import Table
+- Improved Hex Editor
+- Improved Resource Viewer
+- Added special fields description
+- Added .NET internal structures
+- Added .NET MetaData resources in the Resource Viewer
+
+-------------------------------------------------------------
+
+TASK EXPLORER HISTORY:
+
+Version II:
+
+- Fixed some bugs
+- Fixed dump region on x64 for x86 processes bug
+- General improvements
+- Improved Windows Viewer
+- Added Windows Viewer
+- Added Driver List
+
+Version I:
+
+- Fixed x64/Itanium Task Explorer bug
+
+-------------------------------------------------------------
+
+SIGNATURE EXPLORER HISTORY:
+
+Version I:
+
+- Fixed some bugs
+
+-------------------------------------------------------------
+
+PE DETECTIVE HISTORY:
+
+Version 1.1.0.0:
+
+- Fixed some bugs
+
+-------------------------------------------------------------

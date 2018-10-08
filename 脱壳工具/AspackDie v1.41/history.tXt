@@ -1,0 +1,58 @@
+1.41: (25th November 2002)
+--------------------------
+- supports a new unknown version (thx Mezenga 4 da PE)
+- command line argument stuffed into Aspack: /NO_PROMPT
+
+1.4: (12th July 2002)
+---------------------
+- corrected support for Aspack2000
+- added support for Aspack2001
+- solved 2 "Aspack Unknown X" detections
+
+1.3g: (26th June 2002)
+----------------------
+- version support update for an unknown version (Chendler adviced
+  to WinAce211.exe)
+
+1.3f: (23th June 2002)
+----------------------
+- support for another Aspack version added (thx Chendler)
+- adds executable characteristics to first section (Wdasm friendly)
+
+1.3e: (1st May 2002)
+--------------------
+- support for another Aspack version added (thx GLD for the PE)
+- possibility to continue unpacking procedure also if
+  the signature check fails (idea by Unknown One)
+
+1.3d: (26th Mar 2002)
+---------------------
+- support for an unknown Aspack version added (thx Proggi Killa for the PE)
+
+1.3c: (21th Mar 2002)
+---------------------
+- command line support added
+
+1.3b: (18th Mar 2002)
+---------------------
+- support for packed files with extra data added (thx Armando)
+
+1.3: (16th Mar 2002)
+--------------------
+- support for PE libraries (DLL, OCX, ...) added (hope the algorithms are
+  generic enough)
+- support for some Win95 versions added by wiping VirtualAllocEx/VirtualFreeEx
+  out of the ImportTable
+- resulting raw size of the unpacked images corrected
+
+1.2: (08th Jan 2002)
+--------------------
+- small code update to support Aspack 2.12
+
+1.1: (25th Feb 2001)
+--------------------
+- small code update to support Aspack 2.11c/2.11d (phantasm was the coz :)
+
+1.0: (16th Feb 2001)
+--------------------
+- support for Aspack 2.11

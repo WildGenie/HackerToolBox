@@ -1,0 +1,26 @@
+
+                 使用说明
+
+程序功能:
+
+    解压缩经过Krypont0.5加壳的程序.包括Krypont0.5自身程序.
+
+使用方法:
+
+1,确信你所选择的程序经过Krypont0.5加壳.
+2,选择要脱壳的文件后,按GO按钮就可以了.
+3,脱壳后的文件名为:Unpack_by_Fleaf[DFCG].exe.在加壳程序的同一目录中.
+
+
+BUG修理:
+
+2002.12.27        修复不能运行于WIN98平台的BUG
+
+
+
+BUG报告:
+
+     WEBSITE:   www.jxlb.com
+     EMAIL  :   wycrack@hotmail.com
+
+程序写手: 飞叶流枫[DFCG]/F-Leaf[dfcg]

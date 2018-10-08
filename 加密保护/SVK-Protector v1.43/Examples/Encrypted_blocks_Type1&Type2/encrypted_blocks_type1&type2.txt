@@ -1,0 +1,18 @@
+Today's problem protections like SVKP is dumping.
+Crackers wait when protected application is decoded
+in memory and then with special programs (dumpers)
+dump it from memory. 
+SVKP uses some technics against dumping. But if
+you use special blocks is protected application
+more secure and it isn't easy dump it correct.
+
+You can use two types of encrypted blocks:
+
+Type1 - these blocks are decrypted before using
+and after use encrypted again
+
+Type2 - these blocks are decrypted before using
+and after use removed. This mean, encrypted code
+is not possible call again!!
+
+Note: Don't use this method in Visual Basic !

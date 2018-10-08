@@ -1,0 +1,61 @@
+#include "\masm32\include\resource.h"
+/**********************************************************************************************/
+#define IDC_STATIC -1
+#define ID_OK 1009
+#define IDC_ABOUT 105
+#define IDB_LOGO 501
+#define IDR_ACCEL 400
+
+#define ID_BUTTON1 301
+#define ID_BUTTON2 302
+#define ID_BUTTON3 303
+#define ID_BUTTON4 304
+#define ID_BUTTON5 305
+#define ID_BUTTON6 306
+
+#define IDC_TEXT1 2001
+#define IDC_TEXT2 2002
+#define IDC_TEXT3 2003
+#define IDC_TEXT4 2004
+#define IDC_TEXT5 2005
+#define IDC_TEXT6 2006
+#define IDC_TEXT7 2007
+
+#define ID_EDIT1 101
+#define ID_EDIT2 102
+#define ID_EDIT3 103
+#define ID_EDIT4 104
+#define ID_EDIT5 105
+#define ID_EDIT6 106
+#define ID_EDIT7 107
+#define ID_EDIT8 108
+#define ID_EDIT9 109
+
+
+DIALOG DIALOGEX DISCARDABLE 30, 10, 250, 100, 0
+STYLE WS_VISIBLE | DS_CENTER | WS_POPUP
+//EXSTYLE WS_EX_TOPMOST
+FONT 8, "fixedsys", 700, 0 /*FALSE*/
+BEGIN
+    LTEXT       " [00] Generic OEP Finder v0.4",IDC_TEXT3,0,0,250,8
+	CONTROL		"", ID_EDIT1, EDIT, ES_LEFT | ES_READONLY | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_CHILD | ES_MULTILINE, 9, 17, 232, 65
+    LTEXT       "1",IDC_STATIC,30,91,5,10
+    LTEXT       "2",IDC_STATIC,91,91,5,10
+    LTEXT       "3",IDC_STATIC,152,91,5,10
+    CONTROL     "", ID_BUTTON1, BUTTON, BS_OWNERDRAW, 35,90,54,10
+    CONTROL     "", ID_BUTTON2, BUTTON, BS_OWNERDRAW | BS_DEFPUSHBUTTON, 96,90,54,10
+    CONTROL     "", ID_BUTTON3, BUTTON, BS_OWNERDRAW, 157,90,54,10
+    CONTROL     "", ID_BUTTON4, BUTTON, BS_OWNERDRAW, 96,90,54,10
+    LTEXT       "Generic OEP Finder v0.4\nBased on Code Injection (no Debug API used)\nCoded by: UsAr\nRelease date: 23.02.2007\nSite:\nGreetz to: =TS=, NG, W[4F]LF, nice, mr.clumsy,\nsER, dzen, dMNt, lord_Phoenix",IDC_TEXT2,10,20,230,60
+    LTEXT       "http://usar.pp.ru/",IDC_TEXT7,35,52,105,8
+END
+
+IDR_ACCEL ACCELERATORS DISCARDABLE
+BEGIN
+  VK_F1,ID_BUTTON1,VIRTKEY,NOINVERT
+  VK_F2,ID_BUTTON2,VIRTKEY,NOINVERT
+  VK_F3,ID_BUTTON3,VIRTKEY,NOINVERT
+  VK_SPACE,ID_BUTTON2,VIRTKEY,NOINVERT
+  VK_F10,ID_BUTTON5,VIRTKEY,NOINVERT
+  VK_F4,ID_BUTTON5,ALT,VIRTKEY,NOINVERT
+END

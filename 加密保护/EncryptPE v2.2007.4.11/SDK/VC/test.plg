@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: test - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/test.res" "C:\Documents and Settings\Aming\桌面\EncryptPE_C_SDK\EncryptPE_C_SDK\test.rc"" 
+Creating temporary file "C:\DOCUME~1\Aming\LOCALS~1\Temp\RSP3B4.tmp" with contents
+[
+/Zp16 /ML /W3 /GX /ZI /Od /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Aming\桌面\EncryptPE_C_SDK\EncryptPE_C_SDK\test.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Aming\LOCALS~1\Temp\RSP3B4.tmp" 
+Creating command line "link.exe kernel32.lib user32.lib Gdi32.lib Comdlg32.lib shell32.lib comctl32.lib /subsystem:windows /pdb:none /debug /machine:I386 /out:"Release/test.exe"  ".\Release\test.obj" ".\Release\test.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8168 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+
+cl /Zp16 /ML /W3 /GX /ZI /Od /Fo"Release/" /Fd"Release/" /FD /c 
+   "C:\Documents and Settings\Aming\桌面\EncryptPE_C_SDK\EncryptPE_C_SDK\test.cpp"
+
+test.cpp
+c:\documents and settings\aming\桌面\encryptpe_c_sdk\encryptpe_c_sdk\test.h(226) : warning C4018: '<' : signed/unsigned mismatch
+c:\documents and settings\aming\桌面\encryptpe_c_sdk\encryptpe_c_sdk\test.h(230) : warning C4018: '==' : signed/unsigned mismatch
+c:\documents and settings\aming\桌面\encryptpe_c_sdk\encryptpe_c_sdk\test.h(254) : warning C4018: '<' : signed/unsigned mismatch
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8168
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+
+
+
+
+<h3>Results</h3>
+test.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

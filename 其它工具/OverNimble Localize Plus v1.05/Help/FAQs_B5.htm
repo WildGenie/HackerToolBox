@@ -1,0 +1,117 @@
+<html><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<head><title>Overnimble Localize Plus 1.05</title><style>
+p{text-indent:22pt}
+b{cursor:default;font-weight:normal}
+blockquote{font-family:arial;font-size:11pt}
+.Title{font-family:細明体,Arial;font-size:12pt;font-weight:700;color:ffffff;text-align:left;background-color:9999ff;filter:Alpha(Opacity=50);cursor:default}
+pre{font-family:Fixedsys;font-size:16pt;color:333399}
+</style></head>
+
+<body background="wind.jpg" bgcolor="#d4e8ff" style="font-family:細明体,Arial;margin-left:6%;margin-right:6%;font-size:11pt">
+
+<br><center><table border=1 width=45%><tr><td align="center">
+	<div style="margin-top:10pt;margin-bottom:8pt;text-align:center;height:30pt;filter:shadow(color:#777777,Direction=150);cursor:default">
+	<FONT face=細明体,Arial color=#00ff00 size=6>字串替換器 1.05 FAQs</FONT>
+</div></td></tr></table></center><br><br><br>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★為什么有些程式找不到可中文化的字串？</td></tr></table></center>
+<p></p>
+<p>有些程式進行了壓縮或加密處理，對於這樣的程式，需要首先解壓縮和解密之後才能中文化。常用的壓縮程式有 UPX、ASPack 等，其中 UPX 0.90 以上版本壓縮的程式可以使用 UPX 本身進行解壓縮，而 ASPack 可以使用 Unaspack、Caspr 等工具進行解壓縮。或者也可以使用 CoCoRes 及其前導程式解決此問題<font color="#008888">（CoCoRes 只對資源部分有效）</font>。要檢測檔案被哪种壓縮軟体壓縮，可以使用 FileInfo、GetType 之類的工具。<font color="#008888">（建議和原作者聯系，以取得可中文化的版本。）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★為什么有些程式中文化之後，執行時只出現一個對話方塊，說程式染毒，然後就結束了？</td></tr></table></center>
+<p></p>
+<p>有些程式為了防止程式被病毒感染或惡意篡改造成的破環，有這樣的自校驗，對於這些程式，首先要破解其自校驗代碼後才能中文化。或者也可以使用 CoCoRes 及其前導程式解決此問題<font color="#008888">（CoCoRes 只對資源部分有效）</font>。<font color="#008888">（建議和原作者聯系，以取得可中文化的版本。）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★什么是「標准資源」？</td></tr></table></center>
+<p></p>
+<p>微軟在定義 Windows 程式的格式時，特意增加了一個可變更的段放置程式界面部分的資訊，以便軟体可以很方便的實現多國語言支援，其中有包含多种類型，如「Dialog」、「String」、「Icon」、「Version」等資訊，另外還定義了一個「RCData」作為自訂類型。不過因為其定義的 Dialog 類型太單薄，不足以應付很多 RAD 語言，所以一般只有 C 語言的程式使用「標准資源」中的「Dialog」類型，Delphi 和 C++ Builder 不使用 Dialog 類型，而是將其窗體資訊放入「RCData」內，而 VB 程式不使用「標准資源」放置其界面資訊，其所有資訊和代碼一樣在「.TEXT」區段內。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★什么是「PE 檔案」？什么是「VA 方式」？</td></tr></table></center>
+<p></p>
+<p>在 Win16<font color="#008888">（如 Windows 3.x）</font>時，可執行檔案<font color="#008888">（EXE、DLL、OCX 等）</font>是 NE 格式，而在 Win32<font color="#008888">（包括 Win95/98/ME/XP/NT/2000/CE）</font>時，可執行檔案是 PE<font color="#008888">（Portable Executable）</font>格式，也就是說，如果一個可執行檔案是專為 Win32 平台編譯的，那么它就是 PE 檔案了。
+<p>VA 就是「Virtual Address」，即「虛擬位址」，是 PE 檔案中的指標，<font color="#008888">（几乎？）</font>所有的字串都有其相應的 VA，所以反過來使用 VA 來查找字串的話，可以增加准确率，使垃圾字串大為減少，也因此可以查找中文、日文等語种的程式。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何中文化一個 C 語言編寫的軟体？</td></tr></table></center>
+<p></p>
+<p>C 語言程式一般都使用「標准資源」，對「標准資源」，可以使用 VC、eXeScope、ResHacker 等工具進行中文化，使用 VC 的話，可以使用「中文化精靈」之類的工具以方便中文化升級，另外好像還有一個 Visual Localize 也有中文化升級的功能。雖然使用者也可以使用 LocPlus 的查找 ASCII 和 UniCode 的功能中文化「標准資源」，不過因為無法實現大於源字串的替換，所以還是推荐使用以上介紹的資源中文化工具。C 程式中文化後有時候會出現界面字型難看的問題，對此，我有專文論述解決方法，請訪問 <a href="http://llf.126.com">點睛工作室</a> 瀏覽。
+<p>不過，經常有一些 C 語言的程式的一些字串并不是在「標准資源」內，而是在其它的區段內<font color="#008888">（一般是「.data」段）</font>，對於這些字串，可以使用 LocPlus 查找替換 ASCII 和 UniCode 的功能進行中文化。不過需要註意的是，如果查找時不是使用「英文和符號」方式的話，則需要使用者把所有的非法項<font color="#008888">（最好是所有沒有中文化的項 —— 可以使用「清除重复項目」的「清除相同項」功能清除）</font>都移除之後再替換，而且對這种非資源的字串經常有一些是不能中文化的，這時使用「軟体測試」進行「選擇性替換」可以很快定位不應中文化的項。
+<p>所以，中文化一個 C 語言程式的基本步驟如下：
+<p>　　1、使用資源中文化工具進行「標准資源」的中文化；
+<p>　　2、使用 LocPlus 進行 ASCII 的查找和替換；<font color="#008888">（一般 WinCE 程式<font color=red>不</font>需要）</font>
+<p>　　3、使用 LocPlus 進行 UniCode 的查找和替換；<font color="#008888">（一般 WinCE 程式<font color=red>才</font>需要）</font>
+<p>　　4、進行字型修正。<font color="#008888">（可選）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何中文化一個 Delphi 編寫的軟体？</td></tr></table></center>
+<p></p>
+<p>Delphi 和 C++ Builder 的程式雖然也使用「標准資源」，但是卻是使用「自訂格式」，所以無法使用 VC 進行中文化，不過 eXeScope 和 ResHacker 都可以編輯它，另外，使用這兩個工具還可以把窗體資訊導出為 DFM 格式的檔案，此檔案可以使用 Delphi 進行編輯。另外好像還有 Restorator 和 Language Localizator 對 Delphi 程式有中文化升級的功能。目前還沒有 Delphi 資源的可視化編輯工具，不過可以使用 DFMView 或 FormRead 進行預覽式編輯。雖然使用者也可以使用 LocPlus 的查找 ASCII 和 UniCode 的功能中文化 Delphi 的「標准資源」，不過因為無法實現大於源字串的替換，所以還是推荐使用以上介紹的資源中文化工具。Delphi 程式中文化後有時候會出現界面字型難看的問題，對此，我有專文論述解決方法，請訪問 <a href="http://llf.126.com">點睛工作室</a> 瀏覽。
+<p>也有很多的 Delphi 程式使用一個工具生成的 *.lng 的檔案來實現多語言支援，和它配套的有一個編輯工具用來編輯此格式的檔案，遇到這种情況，最好是使用它的編輯工具進行處理。
+<p>另外，Delphi 程式里也經常有一些字串并不是在「標准資源」內，而其格式中有一個字串長度，如果中文化後的字串長度和原字串不同，則其界面也會有相應的亂碼出現，對於這种字串，推荐使用 LocPlus 的查找和替換 Delphi 字串的功能<font color="#008888">（此功能自動修改字串長度計數）</font>。不過，Delphi 程式里的非資源字串也有一些并不是前面所說的格式，而是 ASCIIZ<font color="#008888">（ASCIIZ 指 ASCII 和 一個「00」[Zero] 組成的字串）</font> 格式的字串，所以也許您還需要再進行一次 ASCII 的查找和替換，才能完整的中文化一個 Delphi 程式。同樣的，對 Delphi 字串也需要移除非法項之後再進行替換。
+<p>所以，中文化一個 Delphi 語言程式的基本步驟如下：
+<p>　　1、使用資源中文化工具進行「標准資源」的中文化；
+<p>　　2、使用 LocPlus 進行 Delphi 字串的查找和替換；
+<p>　　3、使用 LocPlus 進行 ASCII 的查找和替換；
+<p>　　4、進行字型修正。<font color="#008888">（可選）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何中文化一個 VB 編寫的軟体？</td></tr></table></center>
+<p></p>
+<p>VB 程式<font color="#008888">（僅指 VB5/6）</font>的窗體資訊雖然不在「標准資源」內，不過其格式和 Delphi 的窗體格式類似，可以使用我編寫的「VB 窗體中文化器」進行中文化，此工具可以實現大於源字串的替換，不過需要使用者保証整個窗體中的所有字串的總長度不變。雖然我在其說明檔案里說它是不安全的，不過它也并不比用查找和替換 ASCII 的方式更危險，因為目前并沒有更好的中文化 VB 程式的工具，它也就是一個不錯的選擇了。此工具目前只有簡體中文版。不過，如果原程式使用了 ActiveX 控件的話<font color="#008888">（很多程式都使用了 ActiveX 控件，但是不包括 LocPlus :）</font>，一般還需要進行一次 UniCode 的查找和替換。VB 程式中文化後容易出現界面字型難看的問題，對此，我有專文論述解決方法，請訪問 <a href="http://llf.126.com">點睛工作室</a> 瀏覽。
+<p>不過，如果要中文化的 VB 程式里使用了 Form 2.0 設計器的話，其使用 Form 2.0 作為窗體的窗體資訊無法用「VB 窗體中文化器」找到，只能使用查找替換 ASCII 和 UniCode 的方式中文化。而其字型的修正在我的文章里也沒有提及，不過修正方法已經被 WWP 找到，具體方法可以訪問 <a href="http://llftalk.126.com">點睛工作室 論壇</a> 查找。
+<p>另外，VB 程式里也有一些字串并不是在窗體資訊內<font color="#008888">（相當於標准資源里的「String」類型）</font>，而其格式中有一個字串長度，如果中文化後的字串長度和原字串不同，則其界面也會有相應的亂碼出現，對於這种字串，推荐使用 LocPlus 的查找和替換 VB 字串的功能<font color="#008888">（此功能自動修改字串長度計數）</font>。同樣的，對 VB 字串也需要移除非法項之後再進行替換。
+<p>所以，中文化一個 VB 語言程式的基本步驟如下：
+<p>　　1、使用「VB 窗體中文化器」進行窗體的中文化；
+<p>　　2、使用 LocPlus 進行 VB 字串的查找和替換；
+<p>　　3、使用 LocPlus 進行 UniCode 的查找和替換；<font color="#008888">（在程式使用了控件時）</font>
+<p>　　4、使用 LocPlus 進行 ASCII 的查找和替換；<font color="#008888">（僅在程式使用了 Form 2.0 設計器時）</font>
+<p>　　5、進行字型修正。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何將一個軟体從簡體(GBK)轉換成繁體(BIG5)或從繁體(BIG5)轉換成簡體(GBK)？</td></tr></table></center>
+<p></p>
+<p>對於資源編輯工具，要查找和替換其它語种的字串并不難，其方式和中文化并沒有什么不同，所以對於 C、Delphi、VB 程式分別進行以上的中文化方式的操作就可以了，不過這里的問題在於非資源方式查找中文。在 LocPlus 中，對於 Delphi、VB，其專用查找功能可以選擇「非限制查找」的方式查到中文<font color="#008888">（或其它語言，如日文）</font>，「VB 窗體中文化器」也有「非限制查找」方式。而對於 C 程式<font color="#008888">（使用 ASCII 和 UniCode 方式查找的）</font>，查找 ASCII 時選擇「VA非控制符」或「VA非限制查找」方式可以查到中文，「VA非控制符」方式會比「VA非限制查找」方式少一些垃圾字串；查找 UniCode 時選擇「VA中文(GBK)」、「VA中文(BIG5)」、「VA完全中文」、「VA非保留區」、「VA非限制」可以查找到中文，按需要選擇就可以了。
+<p>對於以上查找到的對照檔案，在移除非法項之後，按「翻譯項方式」分割對照檔案，對「*.2」檔案用內碼轉換軟体進行轉碼<font color="#008888">（如果要求完美，可以再使用一下「繁簡用語轉換」功能）</font>，再按「翻譯項方式」合併對照檔案，然後就可以進行替換操作了。
+<p>另外，還有一點，對於 UniCode<font color="#008888">（包括 VB 字串）</font>方式查找到的對照檔案，如果要轉碼的話，要註意只是進行繁簡轉換，而不是進行內碼轉換<font color="#008888">（GBK、BIG5）</font>，換句話說，就是在保持原有內碼格式的情況下把繁體字轉成簡體字<font color="#008888">（或相反）</font>。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何中文化一個以純文字格式實現多語种支援的軟体？</td></tr></table></center>
+<p></p>
+<p>目前，以純文字格式實現多語种支援的軟体越來越多<font color="#008888">（比如 LocPlus :）</font>，對於這种軟体，使用普通的純文字編輯器就可以進行中文化了，不過如果只是使用純文字編輯器，原軟体升級的話，則需要重新輸入所有內容，而使用 LocPlus，則可以輕松地實現版本升級。
+<p>對於占大多數的 INI 格式<font color="#008888">（用「=」分隔的）</font>，建議使用 LocPlus 提供的專用查找和替換功能。而對於其它格式的純文字檔，可以使用「通用格式」查找和替換。
+<p>不過有很多此類軟体沒有設置字型字號的方法，而仍然使用 8.25 磅的字型，所以中文化後在 Win98 下的字很難看<font color="#008888">（Win2000 在內部偷偷地增大了字號，所以不會很難看）</font>，對於這种情況，可以使用我介紹的字型修改的方法。<font color="#008888">（建議和原作者聯系，以便取得字型字號可改的版本。）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★怎樣使用「版本升級」功能？</td></tr></table></center>
+<p></p>
+<p>要使用「版本升級」功能，首先需要轉到「翻譯新版本」頁面內，其中「對照檔名」選擇對新版本查找得到的對照檔案，而「字典檔名」選擇以前版本翻譯過的對照檔案或字典檔案就可以了。字典檔案可以使用「偏移量方式」分割對照檔案得到。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★使用 LocPlus 能否進行其它語种間的轉換，比如可否中文化日文軟体？</td></tr></table></center>
+<p></p>
+<p>中文化日語軟体和轉換簡繁體中文軟体類似，不同之處在於 GBK 和 BIG5 是相容的，而 Shift-JIS <font color="#008888">（日語中還有 JIS 和 EUC 編碼，不過不如 Shift-JIS 常見）</font> 和 GBK 或 BIG5 并不相容<font color="#008888">（主要在於其片假名使用的是單位元組編碼，而 GBK 和 BIG5 中沒有單位元組編碼）</font>，所以您不能在中文 Windows 下進行查找，不能在日文 Windows 下進行替換。正因為如此，您需要使用 Windows 2000 多語言版，先切換到日文狀態下查找，再切換到中文狀態下編輯和替換才可以。<font color="#008888">（也可以使用 Visual PC 等軟体安裝一套日文 Windows，在其中也安裝一套 LocPlus 進行查找，這樣的話，不需要重啟就可以在中日文 Windows 之間快速切換）</font>
+<p>另外，因為對照檔案是 ASCII 格式，所以在日文狀態下儲存的對照檔案中的日文是 Shift-JIS 格式，而在中文狀態下編輯時卻是把它看作 GBK 內碼的，因而看到的是亂碼，所以需要進行內碼轉換，但是只能轉換偶數行，如果找不到好的轉碼軟体<font color="#008888">（能保証不出現亂碼的）</font>，可以在日文狀態時使用「翻譯項方式」分割對照檔案，使用 Win2K 的 Notepad 把「.2」檔案存為 UniCode 格式，而在中文狀態下再用 Notepad 把它轉存回 ASCII 格式，然後合併，則對照檔案中的「偶數項」<font color="#008888">（「奇數項」需保持原狀態）</font>就不是亂碼<font color="#008888">（如果轉碼正常的話，在 GBK 下可保証平假名、片假名及中文字都顯示正常，BIG5 下不太清楚……）</font>了；如果出現轉碼錯誤或內碼不完全相容<font color="#008888">（比如「日文化」一個中文軟体時 :）</font>時會有某些部分有亂碼，這种情況可以使用像 EmEditor 之類的編輯器，在翻譯時反复切換語种，以便了解原意。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★「繁簡用語轉換」功能在哪里，都可用於哪些方面？</td></tr></table></center>
+<p></p>
+<p>「繁簡用語轉換」功能在「替換純文字資源」頁面內，可以用於任何純文字檔<font color="#008888">（即也可用於 VC 產生的 *.RC 檔案）</font>，對於 LocPlus 產生的對照檔案或字典檔案來說，需要先使用「翻譯項方式」分割對照檔案，然後對「*.2」檔案使用此功能。不過，這种机器做的轉換仍然可能有一些不正确的地方，還是需要校對一遍再使用才好。
+<p>「繁簡用語轉換」的速度為 50KB/s ，并不算快，不過台灣黃國書先生有一個「繁簡詞匯轉換」，使用「漢書」系統進行替換，据說要轉換 Teleport 需要 20 分鐘，這樣算來，LocPlus 的這個功能的速度還是很快的了。 :)
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★ LocPlus 的其它功能怎么使用？</td></tr></table></center>
+<p></p>
+<p>LocPlus 還有一些輔助性功能，也采用獨立方式設計，可以說，在 LocPlus 中，所有功能都是獨立存在的，就像是積木一樣，可以根据使用者的要求拼接出不同的功能。而所有這些功能其核心及共同點在於其統一的對照檔案和字典檔案格式，使用者可以在此基礎上理解各個功能的用處<font color="#008888">（甚至可能是我所不曾想到過的 :）</font>。舉例來說，應我的請求，吳佳勳先生曾把 1.01 版的 Readme 和 INI 的繁體用語做了調整後 Mail 給我，而我希望知道在 INI 中吳先生都做了哪些調整，所以采取了以下的步驟：
+<p>1、使用「INI 格式」查找原版的 INI 檔案，使用「翻譯項方式」分割查找到的字典檔案；
+<p>2、使用「INI 格式」查找吳先生修改後的 INI 檔案，使用「翻譯項方式」分割查找到的字典檔案；
+<p>3、將原版的分割後的「.1」檔案和吳先生修改而分割後的「.2」檔案采用「翻譯項方式」合併。
+<p>4、使用「清除重复項目」中的「清除相同項」功能，得到了所有做過修改部分的對照純文字。
+<p><br></p>
+
+<p><center><font style="font-family:Arial;font-size:9pt">CopyRight &copy OverNimble Inc. 2001</font></center></p>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+、直接打开记事本，输入下面内容，
+保存为XX.reg 然后双击确定，OK 
+
+Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT＼exefile＼shell＼open＼command]@="0"
+
+
+二、开始→运行，输入 regedit.com ，
+打开注册表编辑器，进入
+HKEY_CLASSES_ROOT＼exefile＼shell＼open＼command
+下，将其值改为 "0"，保存并退出，重启计算机。
+恢复方法：打开我的电脑，进入C盘根目录下的 WINDOWS 文件夹下的 regedit.exe ,
+将其重命名为 regedit.com 。运行regedit.com ，
+打开注册表编辑器，进入HKEY_CLASSES_ROOT＼exefile＼shell＼open＼command下
+，将其值改为 "%1" %* ，保存并退出，重启计算机。
+

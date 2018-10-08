@@ -1,0 +1,2 @@
+Sorry, but SDK for MS VB can be used for now :(
+Any way, you may use Licensing functions and all protection API

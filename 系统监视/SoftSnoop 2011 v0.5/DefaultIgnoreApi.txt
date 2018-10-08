@@ -1,0 +1,1351 @@
+GetNumberOfConsoleInputEvents
+GetConsoleScreenBufferInfo
+FreeLibrary
+std::_Allocate(int,*)
+std::vector<int,class std::allocator<int> >::_Ucopy(const *,const *,*)
+std::vector<int,class std::allocator<int> >::_Ufill(*,unsigned int,const &)
+std::vector<int,class std::allocator<int> >::_Destroy(*,*)
+std::_Construct(*,const &)
+rtcVarBstrFromAnsi
+__vbaVarSetObjAddref
+__vbaVarNot
+__vbaVarInt
+__vbaAryConstruct2
+rtcHexVarFromVar
+__vbaFpI4
+__vbaI2I4
+__vbaLenVarB
+__vbaI4Var
+__vbaVarVargNofree
+__vbaFpR8
+__vbaUI1I2
+__vbaVar2Vec
+__vbaAryMove
+__vbaStrMove
+__vbaErase
+SendMessageA
+SendMessageW
+DrawStateW
+DrawFrameControl
+CWnd::GetScrollPos(int)const
+ATL::CComObjectRootEx<ATL::CComSingleThreadModel>::_AtlInitialConstruct(void)
+CFormView::accHitTest(long,long,tagVARIANT *)
+`dynamic initializer for 'afxDump''(void)
+`dynamic initializer for 'CRect const CFrameWnd::rectDefault''(void)
+AfxWndProc(HWND__ *,uint,uint,long)
+CCmdTarget::~CCmdTarget(void)
+CWnd::SendMessageA(unsigned int,unsigned int,long)
+CWnd::IsWindowEnabled(void)const
+CWnd::SetScrollInfo(int,struct tagSCROLLINFO *,int)
+_mbschr
+_mbclen
+CMDIFrameWnd::AssertValid(void)const
+ATL::CSimpleStringT<wchar_t,0>::ReleaseBuffer(int)
+CWnd::Detach(void)
+AfxIsIdleMessage(tagMSG *)
+CWnd::IsDialogMessageW(tagMSG *)
+CWinThread::IsIdleMessage(tagMSG *)
+AfxInternalIsIdleMessage(tagMSG *)
+AfxInternalPumpMessage(void)
+AfxPumpMessage(void)
+AfxPreTranslateMessage(tagMSG *)
+AfxInternalPreTranslateMessage(tagMSG *)
+AfxGetMainWnd(void)
+CCmdTarget::OnCmdMsg(uint,int,void *,AFX_CMDHANDLERINFO *)
+CWnd::DefWindowProcW(uint,uint,long)
+CWnd::GetDlgItem(int,HWND__ * *)
+CWnd::Attach(HWND__ *)
+CWnd::FromHandle(HWND__ *)
+CWnd::WindowProc(uint,uint,long)
+AfxCallWndProc(CWnd *,HWND__ *,uint,uint,long)
+CWnd::FromHandlePermanent(HWND__ *)
+CFont::CreateFontIndirectW(tagLOGFONTW const *)
+CCmdTarget::CCmdTarget(void)
+CreateFontIndirectW
+SHAppBarMessage
+PostThreadMessageW
+GetFileSize
+GetMapMode
+GetDlgItem
+_errno
+SetEvent
+CreateEventA
+CompareStringW
+CompareStringA
+CWnd::DefWindowProcA(unsigned int,unsigned int,long)
+CDocument::AssertValid(void)const
+CView::AssertValid(void)const
+CFrameWnd::AssertValid(void)const
+CWnd::GetStyle(void)const
+CWnd::CheckAutoCenter(void)
+CWnd::MoveWindow(int,int,int,int,int)
+CWnd::GetScrollInfo(int,struct tagSCROLLINFO *,unsigned int)
+CDialog::PreTranslateMessage(struct tagMSG *)
+AfxFindResourceHandle(char const *,char const *)
+ConstructElements(class CString *,int)
+__vbaNextEachCollObj
+DrawStateA
+CWnd::FromHandlePermanent(struct HWND__ *)
+CWinApp::OnIdle(long)
+CMDIFrameWnd::OnCommand(unsigned int,long)
+CWnd::OnNotify(unsigned int,long,long *)
+CWnd::GetTopLevelFrame(void)const
+CWnd::OnWndMsg(unsigned int,unsigned int,long,long *)
+operator new(unsigned int)
+CWnd::UpdateDialogControls(class CCmdTarget *,int)
+ActivateActCtx
+ActivateKeyboardLayout
+AddBlockAfter
+AdjustWindowRectEx
+Adjustment
+AfxActivateActCtxWrapper(void *,ulong *)
+AfxAssertFailedLine(char const *,int)
+AfxCallWndProc
+AfxCancelModes(HWND__ *)
+AfxClassInit
+AfxCreateActCtxW(tagACTCTXW const *)
+AfxDeleteObject(void * *)
+AfxDeleteObject
+AfxDiagnosticInit(void)
+AfxEnableWin40Compatibility(void)
+AfxFindResourceHandle
+AfxGetAfxWndProc(void)
+AfxGetMainWnd
+AfxGetModuleThreadState
+AfxGetModuleThreadState(void)
+AfxGetParentOwner(HWND__ *)
+AfxGetThread(void)
+AfxGetThreadState(void)
+AfxHookWindowCreate(CWnd *)
+AfxInternalIsIdleMessage
+AfxInternalPreTranslateMessage
+AfxInternalPumpMessage
+AfxIsDescendant(HWND__ *,HWND__ *)
+AfxIsIdleMessage
+AfxIsValidString(char const *,int)
+AfxLoadString
+AfxLoadSysColorBitmap
+AfxLockGlobals(int)
+AfxLockTempMaps(void)
+AfxPreTranslateMessage
+AfxPumpMessage
+AfxRepositionWindow
+AfxSetNewHandler(int (*)(uint))
+AfxSetWindowText(HWND__ *,char const *)
+AfxUnhookWindowCreate(void)
+AfxUnlockGlobals(int)
+AlphaBlend
+AnimatePalette
+Arc
+BASIC_CLASS_AddRef
+BASIC_CLASS_Invoke
+BASIC_CLASS_Release
+BeginDeferWindowPos
+BeginPaint
+BitBlt
+BringWindowToTop
+ByteTypeTest
+CDialog::PreTranslateMessage(tagMSG *)
+CFrameWnd::AssertValid(void)
+CFrameWnd::GetDefaultAccelerator(void)
+CFrameWnd::IsTracking(void)
+CFrameWnd::NotifyFloatingWindows
+CFrameWnd::OnEnterIdle(uint,CWnd *)
+CFrameWnd::PreTranslateMessage(struct tagMSG *)
+CFrameWnd::PreTranslateMessage(tagMSG *)
+CFrameWnd::SetMessageText(uint)
+CMDIChildWnd::AssertValid(void)
+CMDIFrameWnd::AssertValid(void)
+CMDIFrameWnd::GetActiveFrame(void)
+CMDIFrameWnd::PreTranslateMessage(struct tagMSG *)
+CMenu::FromHandle(struct HMENU__ *)
+CString::AllocBeforeWrite(int)
+CString::AssignCopy(int,char const *)
+CString::CString(void)
+CString::CopyBeforeWrite(void)
+CString::Empty(void)
+CString::FreeData(struct CStringData *)
+CString::GetBuffer(int)
+CString::GetBufferSetLength(int)
+CString::ReleaseBuffer(int)
+CString::operator char const *(void)
+CString::~CString(void)
+CStringArray::SetSize(int,int)
+CView::AssertValid(void)
+CWinApp::AssertValid(void)
+CWinApp::PreTranslateMessage(tagMSG *)
+CWinThread::CWinThread(void)
+CWinThread::CommonConstruct(void)
+CWinThread::ExitInstance
+CWinThread::GetMainWnd(void)
+CWinThread::GetMainWnd
+CWinThread::InitInstance
+CWinThread::IsIdleMessage
+CWinThread::OnIdle(long)
+CWinThread::PreTranslateMessage
+CWinThread::PreTranslateMessage(tagMSG *)
+CWinThread::ProcessMessageFilter
+CWinThread::ProcessWndProcException
+CWinThread::PumpMessage
+CWinThread::Run
+CWnd::AttachControlSite(CHandleMap *)
+CWnd::BeginModalState
+CWnd::CWnd(void)
+CWnd::CalcWindowRect
+CWnd::CalcWindowRect(struct tagRECT *,unsigned int)
+CWnd::ClientToScreen(struct tagRECT *)const
+CWnd::ContinueModal
+CWnd::ContinueModal(void)
+CWnd::DefWindowProc
+CWnd::DefWindowProcA
+CWnd::DefWindowProcW
+CWnd::Default(void)
+CWnd::FromHandle(struct HWND__ *)
+CWnd::GetDescendantWindow(HWND__ *,int,int)
+CWnd::GetOwner(void)
+CWnd::GetScrollBarCtrl
+CWnd::GetScrollInfo
+CWnd::GetScrollPos
+CWnd::GetStyle(void)
+CWnd::GetSuperWndProcAddr
+CWnd::GetTopLevelFrame(void)
+CWnd::GrayCtlColor(HDC__ *,HWND__ *,uint,HBRUSH__ *,ulong)
+CWnd::IsDialogMessageA(tagMSG *)
+CWnd::IsDialogMessageW
+CWnd::IsFrameWnd
+CWnd::OnActivateTopLevel(uint,long)
+CWnd::OnAmbientProperty
+CWnd::OnChildNotify
+CWnd::OnChildNotify(uint,uint,long,long *)
+CWnd::OnCommand
+CWnd::OnCommand(uint,long)
+CWnd::OnCtlColor(CDC *,CWnd *,uint)
+CWnd::OnDestroy(void)
+CWnd::OnEnterIdle(uint,CWnd *)
+CWnd::OnGrayCtlColor(CDC *,CWnd *,uint)
+CWnd::OnNTCtlColor(uint,long)
+CWnd::OnNcDestroy(void)
+CWnd::OnParentNotify(uint,long)
+CWnd::OnWndMsg
+CWnd::PostNcDestroy
+CWnd::PreTranslateInput(struct tagMSG *)
+CWnd::PreTranslateInput(tagMSG *)
+CWnd::PreTranslateMessage
+CWnd::PreTranslateMessage(struct tagMSG *)
+CWnd::PreTranslateMessage(tagMSG *)
+CWnd::ReflectChildNotify(uint,uint,long,long *)
+CWnd::ReflectLastMsg(HWND__ *,long *)
+CWnd::ScreenToClient(struct tagRECT *)const
+CWnd::ScreenToClient
+CWnd::SendChildNotifyLastMsg(long *)
+CWnd::SendMessageToDescendants(HWND__ *,uint,uint,long,int,int)
+CWnd::SetWindowPos(CWnd const *,int,int,int,int,uint)
+CWnd::SetWindowPos(class CWnd const *,int,int,int,int,unsigned int)
+CWnd::WalkPreTranslateTree(HWND__ *,tagMSG *)
+CWnd::WindowProc(unsigned int,unsigned int,long)
+CWnd::WindowProc
+CWnd::~CWnd(void)
+CalcJmpOffset
+CallNextHookEx
+CallWindowProcA
+CallWindowProcW
+CharNextA
+ClientToScreen
+CoFreeAllLibraries
+CoTaskMemAlloc
+CoTaskMemFree
+CombineRgn
+Commit
+ConstructElements
+ConstructElements(CString *,int)
+ConvertDefaultLocale
+CopyImage
+CopyRect
+CreateActCtxW
+CreateBitmap
+CreateBrushIndirect
+CreateCompatibleBitmap
+CreateCompatibleDC
+CreateDCA
+CreateDIBSection
+CreateDIBitmap
+CreateFontIndirectA
+CreateMutexA
+CreatePalette
+CreatePatternBrush
+CreatePen
+CreatePenIndirect
+CreatePolygonRgn
+CreateProcessAsUserSecure
+CreateProcessInternalWSecure
+CreateRectRgn
+CreateRectRgnIndirect
+CreateRoundRectRgn
+CreateSolidBrush
+CreateStreamOnHGlobal
+CreateSystemPalette
+CreateWaitableTimerA
+DNameNode::DNameNode(void)
+DbgBreakPoint
+DbgUserBreakPoint
+DeactivateActCtx
+DefDlgProcW
+DefFrameProcA
+DefFrameProcW
+DefMDIChildProcA
+DefWindowProcA
+DefWindowProcW
+DeferWindowPos
+DeleteBlock
+DeleteCriticalSection
+DeleteDC
+DeleteFree
+DeleteMenu
+DeleteObject
+Dephi_System_LStrFromPCharLen
+DestroyCaret
+DestroyCursor
+DestroyIcon
+DeviceIoControl
+DispatchMessageA
+DispatchMessageW
+DllCanUnloadNow
+DllRegisterServer
+DllUnregisterServer
+DrawEdge
+DrawFocusRect
+DrawIconEx
+DrawTextA
+DrawTextW
+EVENT_SINK_AddRef
+EVENT_SINK_Release
+EbGetHandleOfExecutingProject
+EndDeferWindowPos
+EndPaint
+EnterCriticalSection
+EnumChildWindows
+EnumDisplayMonitors
+EnumThreadWindows
+EnumWindows
+EqualRect
+EqualRgn
+ExcludeClipRect
+ExtCreateRegion
+ExtSelectClipRgn
+ExtTextOutA
+ExtTextOutW
+FileTimeToDosDateTime
+FillRect
+FillRgn
+FindClose
+FindCommitted
+FindNextFileA
+FindNextFileW
+FindResourceA
+FindResourceW
+FlatSB_GetScrollPos
+FlatSB_SetScrollInfo
+FlatSB_SetScrollProp
+FlsGetValue
+FlushInstructionCache
+FrameRect
+FreeCommitted
+FreeCurAlloc
+FreeEnvironmentStringsA
+GdiFlush
+GdiSetServerAttr
+GdipCreateFromHDC
+GdipDeleteGraphics
+GdipDrawImageI
+GetACP
+GetActiveWindow
+GetAsyncKeyState
+GetBitmapBits
+GetBlockDesc
+GetCPInfo
+GetCapture
+GetCaretPos
+GetClassInfoA
+GetClassLongA
+GetClassLongW
+GetClassNameA
+GetClassNameW
+GetClientRect
+GetClipBox
+GetClipRgn
+GetClipboardFormatNameA
+GetCommitted
+GetConsoleMode
+GetCurrentObject
+GetCurrentPositionEx
+GetCurrentProcessId
+GetCurrentProcess
+GetCurrentThread
+GetCurrentThreadId
+GetCursorPos
+GetDC
+GetDIBColorTable
+GetDIBits
+GetDeviceCaps
+GetDlgCtrlID
+GetFileType
+GetFocus
+GetFontData
+GetForegroundWindow
+GetHashCode
+GetKeyState
+GetKeyboardLayoutList
+GetKeyboardType
+GetLastActivePopup
+GetLastError
+GetLocaleInfoA
+GetLocaleInfoW
+GetMenuDefaultItem
+GetMenuInfo
+GetMenuItemInfoA
+GetMenuItemRect
+GetMenuState
+GetMessageA
+GetMessagePos
+GetMessageW
+GetModuleFileNameA
+GetModuleHandleA
+GetModuleHandleW
+GetMonitorInfoA
+GetNearestColor
+GetObjectA
+GetObjectW
+GetPaletteEntries
+GetParent
+GetPixel
+GetProcessHeap
+GetPropA
+GetPropW
+GetROP2
+GetRgnBox
+GetScrollBarInfo
+GetScrollInfo
+GetScrollPos
+GetStdHandle
+GetStockObject
+GetStringTypeW
+GetSubMenu
+GetSysColorBrush
+GetSysColor
+GetSystemDefaultLCID
+GetSystemDefaultUILanguage
+GetSystemInfo
+GetSystemMenu
+GetSystemMetrics
+GetTextColor
+GetTextExtentPoint32A
+GetTextExtentPoint32W
+GetTextExtentPointA
+GetTextMetricsA
+GetThreadLocale
+GetTickCount
+GetTopWindow
+GetUpdateRect
+GetUserDefaultLCID
+GetUserDefaultLangID
+GetUserDefaultUILanguage
+GetVersion
+GetVersionExA
+GetVersionEx
+GetVersionExW
+GetViewportExtEx
+GetViewportOrgEx
+GetWindowDC
+GetWindowLongA
+GetWindowLongW
+GetWindowOrgEx
+GetWindowRect
+GetWindow
+GetWindowRgn
+GetWindowThreadProcessId
+GlobalAddAtomA
+GlobalAddAtomW
+GlobalAlloc
+GlobalDeleteAtom
+GlobalFindAtomA
+GlobalFindAtomW
+GlobalFlags
+GlobalFree
+GlobalGetAtomNameA
+GlobalHandle
+GlobalLock
+GlobalReAlloc
+GlobalSize
+GlobalUnlock
+HACCEL_UserFree
+HBRUSH_UserFree
+HDC_UserFree
+HICON_UserFree
+HMENU_UserFree
+HWND_UserFree
+HeapDestroy
+HeapFree
+HeapValidate
+I_RpcLogEvent
+ImageList_Add
+ImageList_Create
+ImageList_Destroy
+ImageList_DrawEx
+ImageList_Draw
+ImageList_GetBkColor
+ImageList_GetImageCount
+ImageList_Remove
+ImageList_Replace
+ImmIsIME
+InflateRect
+InitCommonControlsEx
+InitDriveSpacePtr
+InitScreenLogPixels
+InitializeCriticalSectionAndSpinCount
+InitializeCriticalSection
+InsertFree
+InterlockedDecrement
+InterlockedExchange
+InterlockedIncrement
+InternalFreeMem
+IntersectClipRect
+IntersectRect
+InvalidateRect
+IsBadCodePtr
+IsBadReadPtr
+IsBadWritePtr
+IsCharAlphaNumericA
+IsChild
+IsDBCSLeadByte
+IsDialogMessageA
+IsDialogMessageW
+IsDialogMessage
+IsIconic
+IsRectEmpty
+IsValidCodePage
+IsWindowEnabled
+IsWindowUnicode
+IsWindow
+IsWindowVisible
+IsZoomed
+KiUserCallbackDispatcher
+LCMapStringA
+LCMapStringW
+LZDone
+LZStart
+LeaveCriticalSection
+LineDDA
+LineTo
+LoadBitmapA
+LoadCursorA
+LoadCursorW
+LoadIconW
+LoadImageW
+LoadResource
+LoadStringA
+LoadStringW
+LocalAlloc
+LocalFree
+LocalFreeT
+LocalGetLocaleStr
+LockResource
+LpkDllInitialize
+MakeEmpty
+MapVirtualKeyA
+MapVirtualKeyW
+MapWindowPoints
+MaskBlt
+MergeCommit
+MethCallEngine
+Module32Next
+MonitorFromWindow
+MoveToEx
+MoveWindow
+MsgWaitForMultipleObjects
+MulDiv
+NdrServerInitializeMarshall
+NewCommit
+NtQueryPerformanceCounter
+OffsetRect
+OffsetRgn
+OffsetWindowOrgEx
+OleTranslateColor
+PatBlt
+PeekMessageA
+PeekMessageW
+PolyPolyline
+Polygon
+Polyline
+PostMessageA
+PostMessageW
+PostThreadMessageA
+Process32Next
+Process32NextW
+PtInRect
+RealizePalette
+RectInRegion
+RectVisible
+Rectangle
+RedrawWindow
+RegisterClipboardFormatA
+RegisterClipboardFormatW
+RegisterWindowMessageA
+RegisterWindowMessageW
+ReleaseCapture
+ReleaseDC
+ReleaseMutex
+ReleaseSemaphore
+RemovePropA
+RemovePropW
+ResetEvent
+ResizeInPlace
+RestoreDC
+RoundRect
+RtlAllocateHeap
+RtlCompareMemory
+RtlDebugPrintTimes
+RtlDecodePointer
+RtlDeleteCriticalSection
+RtlEncodePointer
+RtlEnterCriticalSection
+RtlFreeHeap
+RtlGetLastWin32Error
+RtlInitializeCriticalSection
+RtlLeaveCriticalSection
+RtlMoveMemory
+RtlReAllocateHeap
+RtlRestoreLastWin32Error
+RtlSetLastWin32Error
+RtlSetUnicodeCallouts
+RtlSizeHeap
+RtlUnwind
+RtlZeroMemory
+SHGetPathFromIDListW
+SafeArrayAllocData
+SaveDC
+ScreenToClient
+SelectClipRgn
+SelectObject
+SelectPalette
+SetBitmapBits
+SetBkColor
+SetBkMode
+SetBrushOrgEx
+SetCaretPos
+SetConsoleCursorPosition
+SetCursor
+SetDIBColorTable
+SetDIBits
+SetDIBitsToDevice
+SetDebugErrorLevel
+SetErrorInfo
+SetErrorMode
+SetFocus
+SetHandleCount
+SetLastError
+SetLayeredWindowAttributes
+SetMenu
+SetParent
+SetPixel
+SetProcessWorkingSetSize
+SetPropA
+SetPropW
+SetROP2
+SetRectEmpty
+SetRect
+SetRectRgn
+SetScrollInfo
+SetStretchBltMode
+SetTextAlign
+SetTextColor
+SetViewportOrgEx
+SetWaitableTimer
+SetWindowLongA
+SetWindowLongW
+SetWindowOrgEx
+SetWindowPos
+SetWindowRgn
+Shell_NotifyIconA
+Shell_NotifyIconW
+SizeofResource
+Sleep
+StretchBlt
+StretchDIBits
+SysFreeString
+SysReAllocStringLen
+SystemParametersInfo
+SystemParametersInfoA
+SystemParametersInfoW
+TlsAlloc
+TlsFree
+TlsGetValue
+TlsSetValue
+TrackMouseEvent
+TranslateAcceleratorA
+TranslateAccelerator
+TranslateAcceleratorW
+TranslateMDISysAccel
+TranslateMessage
+TryHarder
+UTUnRegister
+UnhookWindowsHookEx
+UnionRect
+UnrealizeObject
+UpdateWindow
+VRipOutput
+VTagOutput
+ValidateRect
+VariantChangeType
+VariantChangeTypeEx
+VariantClear
+VariantCopy
+VirtualAlloc
+VirtualFree
+VirtualQueryEx
+VirtualQuery
+VkKeyScanA
+WINNLSEnableIME
+WSAGetLastError
+WSAUnhookBlockingHook
+WaitForMultipleObjects
+WaitForSingleObject
+WaitMessage
+Win95IsDebuggerPresent(void)
+WindowFromPoint
+WriteConsoleOutputA
+Zombie_AddRef
+Zombie_Release
+ZwQueryPerformanceCounter
+_AfxBinaryCompatibleStubFunction
+_AfxChildWindowFromPoint
+_AfxGetComCtlVersion(void)
+_AfxHandleActivate(CWnd *,uint,CWnd *)
+_AfxHandleSetCursor(CWnd *,uint,uint)
+_AfxModifyStyle
+_AfxPostInitDialog(CWnd *,tagRECT const &,ulong)
+_AfxPreInitDialog(CWnd *,tagRECT *,ulong *)
+_CRT_RTC_INIT
+_CrtSetDbgFlag
+_TrackMouseEvent
+__CxxQueryExceptionSize
+___crtGetEnvironmentStringsA
+___initmbctable
+___initstdio
+__cinit
+__dllonexit
+__fpmath
+__getmainargs
+__initptd
+__ioinit
+__mtinit
+__p__commode
+__p__fmode
+__set_app_type
+__setargv
+__setenvp
+__setmbcp
+__threadhandle
+__threadid
+__vbaAryDestruct
+__vbaBoolVarNull
+__vbaChkstk
+__vbaCopyBytes
+__vbaDateVar
+__vbaFPInt
+__vbaFpUI1
+__vbaFreeObj
+__vbaFreeObjList
+__vbaFreeStr
+__vbaFreeStrList
+__vbaFreeVar
+__vbaFreeVarList
+__vbaI2Var
+__vbaInStr
+__vbaInStrVar
+__vbaLenBstr
+__vbaLenVar
+__vbaObjSet
+__vbaObjSetAddref
+__vbaPowerR8
+__vbaRedim
+__vbaSetSystemError
+__vbaStrCat
+__vbaStrCopy
+__vbaStrToAnsi
+__vbaStrToUnicode
+__vbaStrVarCopy
+__vbaUI1I4
+__vbaVarAnd
+__vbaVarCat
+__vbaVarCopy
+__vbaVarDateVar
+__vbaVarDup
+__vbaVarForNext
+__vbaVarMove
+__vbaVarOr
+__vbaVarSub
+_adj_fpatan
+_adj_fptan
+_allshl
+_allshr
+_aullshr
+_chkesp
+_controlfp
+_ftol
+_getpid
+_initterm
+_ismbblead
+_lock
+_mbsicmp
+_mbsinc
+_msize
+_onexit
+_parse_cmdline
+_setmbcp
+_unlock
+afxMapHDC(int)
+afxMapHGDIOBJ(int)
+afxMapHMENU(int)
+afxMapHWND(int)
+afxMsgMouseWheel
+calloc
+filebuf::`scalar deleting destructor'(uint)
+filebuf::seekoff(long,ios::seek_dir,int)
+filebuf::sync(void)
+filebuf::underflow(void)
+free
+getAF
+getAH
+getAL
+getAX
+getBH
+getBL
+getBP
+getBX
+getCF
+getCH
+getCL
+getCS
+getCX
+getDF
+getDH
+getDI
+getDL
+getDS
+getDX
+getEAX
+getEBP
+getEBX
+getECX
+getEDI
+getEDX
+getEFLAGS
+getEIP
+getES
+getESI
+getESP
+getFS
+getGS
+getIF
+getIP
+getIntelRegistersPointer
+getMSW
+getOF
+getPF
+getSF
+getSI
+getSP
+getSS
+getZF
+lstrcmpi
+m_pfnGetBaseClass
+malloc
+memcpy
+memmove
+memset
+midiStreamOut
+mmGetCurrentTask
+operator new(uint)
+realloc
+rtcBstrFromAnsi
+rtcGetCurrentCalendar
+rtcGetObject
+rtcHexBstrFromVar
+rtcLeftBstr
+rtcLeftTrimBstr
+rtcMidBstr
+rtcRightBstr
+rtcStringVar
+rtcUpperCaseBstr
+rtcVarBstrFromChar
+setAF
+setAH
+setAL
+setAX
+setBH
+setBL
+setBP
+setBX
+setCF
+setCH
+setCL
+setCS
+setCX
+setDF
+setDH
+setDI
+setDL
+setDS
+setDX
+setEAX
+setEBP
+setEBX
+setECX
+setEDI
+setEDX
+setEFLAGS
+setEIP
+setESI
+setES
+setESP
+setFS
+setGS
+setIF
+setIP
+setMSW
+setOF
+setPF
+setSF
+setSI
+setSP
+setSS
+setZF
+std::_Lockit::_Lockit(void)
+std::_Lockit::~_Lockit(void)
+std::locale::_Init(void)
+streambuf::in_avail(void)
+streambuf::sync(void)
+streambuf::xsgetn(char *,int)
+timeGetTime
+waveOutGetPosition
+waveOutPrepareHeader
+wcschr
+wcslen
+************************Mfc*************************************************
+`dynamic initializer for '_afxMsgMouseWheel''(void)
+_AfxCrtReportHook(int,char *,int *)
+_AfxIsComboBoxControl(HWND__ *,uint)
+_CPtoLCID
+_CheckBytes
+_CrtMessageWindow
+_GetLcidFromDefault
+_IsThisWindowsNT
+_LocaleUpdate::GetLocaleT(void)
+_ProcessCodePage
+_ValidateExecute(int (*)(void))
+__ArrayUnwind(void *,uint,int,void (*)(void *))
+__CopyMan
+__CrtDbgReport
+__CrtIsValidPointer_0
+__CrtIsValidPointer
+__CrtSetDbgFlag
+__CrtSetReportMode
+__CxxRestoreUnhandledExceptionFilter
+__CxxSetUnhandledExceptionFilter(void)
+__CxxUnhandledExceptionFilter(_EXCEPTION_POINTERS *)
+__EH_prolog
+__E_afxMsgMouseWheel@@YAXXZ
+__EafxDump@@YAXXZ
+__ErectDefault@CFrameWnd@@2VCRect@@B@@YAXXZ
+__FF_MSGBANNER
+__FillZeroMan
+__IncMan
+__IsZeroMan
+__NLG_Dispatch
+__NLG_Notify1
+__NLG_Notify
+__NLG_Return2
+__NMSG_WRITE
+__RoundMan
+__ShrMan
+__Strftime
+__XcptFilter
+__ZeroTail
+___CxxFrameHandler
+___FrameUnwindToState
+___InternalCxxFrameHandler
+___add_12
+___addl
+___crtCompareStringA
+___crtGetEnvironmentStringsA
+___crtGetLocaleInfoA
+___crtGetLocaleInfoW
+___crtGetStringTypeA
+___crtGetStringTypeW
+___crtLCMapStringA
+___crtMessageBoxA
+___crtsetenv
+___doserrno
+___dtold
+___endstdio
+___from_strstr_to_strchr
+___get_qualified_locale
+___getlocaleinfo
+___init_ctype
+___init_monetary
+___init_numeric
+___init_time
+___initmbctable
+___initstdio
+___lc_lctostr
+___lc_strtolc
+___ld12mul
+___loctotime_t
+___mtold12
+___multtenpow12
+___onexitinit
+___sbh_alloc_block
+___sbh_alloc_new_group
+___sbh_alloc_new_region
+___sbh_find_block
+___sbh_free_block
+___sbh_heap_init
+___sbh_resize_block
+___shl_12
+___shr_12
+___strgtold12
+___tzset
+___wtomb_environ
+__abnormal_termination
+__abstract_cw
+__allmul
+__alloca_probe
+__amsg_exit
+__aulldiv
+__aullrem
+__beep
+__callnewh
+__calloc_dbg
+__cfltcvt
+__cfltcvt_init
+__cftoe2
+__cftoe
+__cftof2
+__cftof
+__cftog
+__cinit
+__close
+__close_lk
+__commit
+__control87
+__controlfp
+__cropzeros
+__dosmaperr
+__ehhandler$1AFX_MODULE_STATE@@UAE@XZ
+__errno
+__exit
+__expandlocale
+__expand
+__expandtime
+__fassign
+__fclose_lk
+__fcloseall
+__fflush_lk
+__flsbuf
+__fltout2
+__flush
+__forcdecpt
+__fpmath
+__fptostr
+__fptrap
+__free_dbg
+__free_lc_lconv
+__free_lc_time
+__free_osfhnd
+__freebuf
+__ftol
+__get_lc_lconv
+__get_lc_time
+__get_osfhandle
+__getbuf
+__getptd
+__global_unwind2
+__heap_alloc_base
+__heap_alloc_dbg
+__heap_alloc
+__heap_init
+__hw_cw
+__initp_eh_hooks
+__initp_misc_winxfltr_0
+__initp_misc_winxfltr_1
+__initp_misc_winxfltr_2
+__initp_misc_winxfltr_3
+__initp_misc_winxfltr_4
+__initp_misc_winxfltr_5
+__initp_misc_winxfltr_6
+__initp_misc_winxfltr_7
+__initp_misc_winxfltr_8
+__initptd
+__initterm
+__ioinit
+__isatty
+__isctype
+__isindst
+__isindst_0
+__ismbblead
+__ismbcdigit
+__ismbcspace
+__itoa
+__ld12cvt
+__local_unwind2
+__lock
+__lock_fhandle
+__lock_file
+__lockexit
+__lseek_lk
+__lseek
+__ltoa
+__make_time_t
+__malloc_dbg
+__mbclen
+__mbschr
+__mbscmp
+__mbsdec
+__mbsinc
+__mbsnbcmp
+__mbsnbicoll
+__mbspbrk
+__mbsrchr
+__ms_p5_mp_test_fdiv
+__ms_p5_test_fdiv
+__msize
+__mtinit
+__mtinitlocks
+__nh_malloc
+__nh_malloc_dbg
+__onexit
+__output
+__positive
+__setargv
+__setdefaultprecision
+__setenvp
+__setlocale_get_all
+__setlocale_set_cat
+__setmbcp
+__shift
+__snprintf
+__store_num
+__store_number
+__store_str
+__store_winword
+__strcats
+__strcmpi
+__strdup
+__strnicmp
+__strrev
+__tcsrchr
+__tzset_lk
+__ultoa
+__unlock_fhandle
+__unlock_file
+__unlock
+__unlockexit
+__unwind_handler
+__vsnprintf
+__wctomb_lk
+__wctype
+__wincmdln
+__write_lk
+__write
+_atexit
+_atoi
+_atol
+_calloc
+_doexit
+_fix_grouping
+_flsall
+_free
+_getSystemCP
+_get_int_arg
+_getenv
+_gmtime
+_localtime
+_malloc
+_memcmp
+_memcpy
+_memset
+_rand
+_setSBUpLow
+_setlocale
+_srand
+_strcat
+_strcmp
+_strcpy
+_strftime
+_strlen
+_strncnt
+_strncpy
+_time
+_vsprintf
+_write_char
+_write_multi_char
+_write_string
+_x_ismbbtype
+_xcptlookup
+_xtoa
+`eh vector constructor iterator'(void *,uint,int,void (*)(void *),void (*)(void *))
+`eh vector destructor iterator'(void *,uint,int,void (*)(void *))
+operator delete(void *)
+***********************以下函数没有注释***********
+****Delphi*****
+TIntConst_Create
+TResourceManager_AllocResource
+TResourceManager_ChangeResource
+TResourceManager_Destroy
+TPatternManager_FreePatterns
+TRegGroups_Lock
+CreateComponent
+GetFieldClassTable
+ListAdd
+ListRemove
+FreeDeviceContexts
+GetMonthDayNames
+FillBeforeGap
+FillerSizeBeforeGap
+MergeBlockAfter
+AlignWork
+SetLongStrProp
+ScrollBarVisible
+StdWndProc
+DoControlMsg
+SendFocusMessage
+FindGlobalComponent
+SetIntIdent
+FreeSpace
+RemoveBlock
+InitAnApi
+InitAllocator
+InitComponent
+@Borlndmm@SysGetMem$qqri
+@Borlndmm@SysReallocMem$qqrpvi
+@Borlndmm@SysFreeMem$qqrpv
+****Delphi End********************
+AfxGetModuleState(void)
+CDialog::GetMessageMap(void)
+CDialogBar::GetMessageMap(void)
+CDockBar::GetMessageMap(void)
+CDocument::GetMessageMap(void)
+CEditView::GetMessageMap(void)
+CFormView::GetMessageMap(void)
+CFrameWnd::GetMessageMap(void)
+CListCtrl::GetMessageMap(void)
+CMDIChildWnd::GetMessageMap(void)
+CMDIFrameWnd::GetMessageMap(void)
+CMiniDockFrameWnd::GetMessageMap(void)
+CMiniFrameWnd::GetMessageMap(void)
+CScrollView::GetMessageMap(void)
+CSocketWnd::GetMessageMap(void)
+CSplitterWnd::GetMessageMap(void)
+CStatusBar::GetMessageMap(void)
+CStockPropPage::classCStockPropPage
+CTabCtrl::GetMessageMap(void)
+CThreadLocalObject::GetData(CNoTrackObject * (__stdcall*)(void))
+CToolBar::GetMessageMap(void)
+CToolBarCtrl::GetMessageMap(void)
+CToolTipCtrl::GetMessageMap(void)
+CTreeCtrl::GetMessageMap(void)
+CTreeView::GetMessageMap(void)
+CView::GetMessageMap(void)
+CWinApp::GetMessageMap(void)
+CWnd::GetMessageMap(void)
+const CCheckListBox::messageMap
+const CCmdTarget::messageMap
+const CColorDialog::messageMap
+const CCommonDialog::messageMap
+const CControlBar::messageMap
+const CCtrlView::messageMap
+const CDaoRecordView::messageMap
+const CDialog::messageMap
+const CDialogBar::messageMap
+const CDockBar::messageMap
+const CDocument::messageMap
+const CEditView::messageMap
+const CFormView::messageMap
+const CFrameWnd::messageMap
+const CListCtrl::messageMap
+const CMDIChildWnd::messageMap
+const CMDIFrameWnd::messageMap
+const CMiniDockFrameWnd::messageMap
+const CMiniFrameWnd::messageMap
+const COleDBRecordView::messageMap
+const COleDocIPFrameWnd::messageMap
+const COleIPFrameWnd::messageMap
+const COleMessageFilter::interfaceMap
+const COleServerDoc::messageMap
+const CPreviewView::messageMap
+const CPrintDialog::messageMap
+const CPropertyPage::messageMap
+const CPropertySheet::messageMap
+const CReBar::messageMap
+const CRecordView::messageMap
+const CRichEditView::messageMap
+const CScrollView::messageMap
+const CSocketWnd::messageMap
+const CSplitterWnd::messageMap
+const CStatusBar::messageMap
+const CTabCtrl::messageMap
+const CToolBar::messageMap
+const CToolBarCtrl::messageMap
+const CToolTipCtrl::messageMap
+const CTreeCtrl::messageMap
+const CTreeView::messageMap
+const CView::messageMap
+const CWinApp::messageMap
+const CWnd::messageMap
+CCheckListBox::GetMessageMap(void)
+CCmdTarget::GetDispatchMap(void)
+CCmdTarget::GetMessageMap(void)
+CColorDialog::GetMessageMap(void)
+CCommonDialog::GetMessageMap(void)
+CControlBar::GetMessageMap(void)
+CCtrlView::GetMessageMap(void)
+CDialog::GetMessageMap(void)
+CDialogBar::GetMessageMap(void)
+CDockBar::GetMessageMap(void)
+CDocument::GetMessageMap(void)
+CEditView::GetMessageMap(void)
+CFormView::GetMessageMap(void)
+CFrameWnd::GetMessageMap(void)
+CListCtrl::GetMessageMap(void)
+CMDIChildWnd::GetMessageMap(void)
+CMDIFrameWnd::GetMessageMap(void)
+CMiniDockFrameWnd::GetMessageMap(void)
+CMiniFrameWnd::GetMessageMap(void)
+COleDBRecordView::GetMessageMap(void)
+COleDocIPFrameWnd::GetMessageMap(void)
+COleIPFrameWnd::GetMessageMap(void)
+COleMessageFilter::GetInterfaceMap(void)
+COleServerDoc::GetMessageMap(void)
+CPreviewView::GetMessageMap(void)
+CPrintDialog::GetMessageMap(void)
+CProcessLocalObject::GetData(CNoTrackObject * (__stdcall*)(void))
+CPropertyPage::GetMessageMap(void)
+CPropertySheet::GetMessageMap(void)
+CReBar::GetMessageMap(void)
+CRecordView::GetMessageMap(void)
+CRichEditView::GetMessageMap(void)
+CScrollView::GetMessageMap(void)
+CSocketWnd::GetMessageMap(void)
+CSplitterWnd::GetMessageMap(void)
+CStatusBar::GetMessageMap(void)
+CStockPropPage::GetRuntimeClass(void)
+CStockPropPage::classCStockPropPage
+CTabCtrl::GetMessageMap(void)
+CThreadLocalObject::GetData(CNoTrackObject * (__stdcall*)(void))
+CToolBar::GetMessageMap(void)
+CToolBarCtrl::GetMessageMap(void)
+CToolTipCtrl::GetMessageMap(void)
+CTreeCtrl::GetMessageMap(void)
+CTreeView::GetMessageMap(void)
+CView::GetMessageMap(void)
+CWinApp::GetMessageMap(void)

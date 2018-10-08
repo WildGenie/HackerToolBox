@@ -1,0 +1,57 @@
+procedure OnBeforeCompilation;
+var I,J,K: Integer;
+    FileName,S: String;
+    P: TVMProcedure;
+    Lines: TStringList;
+begin 
+  Lines:=TStringList.Create;
+  try
+   for K:=0 to VMProtector.Count-1 do
+    begin
+     P:=VMProtector.Procedures[K];
+     Lines.Add('//');
+     Lines.Add('// procedure '+P.Name);
+
+     if P.IncludedInCompilation then S:='True'
+                                else S:='False';
+     Lines.Add('// IncludedInCompilation = '+S);
+     
+     case P.CompilationType of
+      ctMutation: S:='Mutation';
+      ctVirtualization: S:='Virtualization';
+      ctUltra: S:='Ultra';
+     else
+      S:='Unknown';
+     end; 
+     Lines.Add('// CompilationType = '+S);
+     
+     case P.CodeType of
+      otCode: S:='Code';
+      otMarker: S:='Marker';
+      otString: S:='String';
+     else
+      S:='Unknown';
+     end; 
+     Lines.Add('// CodeType = '+S);
+     Lines.Add('//');
+     
+     for I:=0 to P.Count-1 do
+      with P.Records[I] do
+       begin
+        S:='';
+        for J:=0 to DumpLength-1 do
+         S:=S+Format('%.2x',[Dump[J]]);
+        while Length(S)<24 do
+         S:=S+'  '; 
+        Lines.Add(Format('%.8x %s %s',[Address,S,CommandText]));
+       end;
+    end;   
+                 
+   FileName:=ChangeFileExt(VMProtector.InputFileName,'.txt');  
+   Lines.SaveToFile(FileName);
+  finally    
+   Lines.Free;
+  end;  
+  
+  MsgBox('Functions are saved in file:'#13+FileName,'VMProtect Script',MB_OK or MB_ICONINFORMATION);
+end;

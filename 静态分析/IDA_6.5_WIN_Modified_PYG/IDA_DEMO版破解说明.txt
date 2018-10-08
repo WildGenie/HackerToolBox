@@ -1,0 +1,11 @@
+1.去除过期限制
+2.去除退出NAG
+3.去除代码复制限制
+4.去除批处理行数限制
+5.去除不能反编译自身限制
+6.去除二次拖入文件时NAG
+7.去除点击"Close"菜单时NAG
+
+Cracked By PiaoYun/P.Y.G
+http://bbs.chinapyg.com
+基于官方最新6.5.140124 DEMO版本修改

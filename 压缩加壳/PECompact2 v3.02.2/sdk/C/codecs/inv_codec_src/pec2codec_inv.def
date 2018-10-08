@@ -1,0 +1,3 @@
+LIBRARY	pec2codec_inv
+EXPORTS   CodecGetProcAddress
+		  GetNumberOfCodecs	

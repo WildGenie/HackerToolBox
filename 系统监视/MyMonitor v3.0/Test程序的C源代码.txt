@@ -1,0 +1,27 @@
+
+void main()
+{
+	Sleep(6);
+	CopyFile("c:\\a.txt", "c:\\a2.txt", TRUE);
+	int i = 0;
+	int j = 0;
+	while (i < 100)
+	{
+		i++;
+		Sleep(200);
+		j++;
+	}
+	i=0;
+	CopyFile("c:\\a.txt", "c:\\a2.txt", TRUE);
+	Sleep(3);
+	CopyFile("c:\\a.txt", "c:\\a2.txt", TRUE);
+	j = 0;
+	while (i < 200)
+	{
+		i++;
+		j++;
+		Sleep(100);
+	}
+	Sleep(8);
+	CopyFile("c:\\a.txt", "c:\\a2.txt", TRUE);
+}

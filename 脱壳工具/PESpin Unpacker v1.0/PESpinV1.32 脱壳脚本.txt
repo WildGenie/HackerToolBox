@@ -1,0 +1,669 @@
+var sectionbase
+mov sectionbase, eip
+and sectionbase, FFFFF000
+
+var codebase
+var codesize
+var lastException
+
+gmi eip, CODEBASE
+mov codebase, $RESULT
+
+gmi eip, CODESIZE
+mov codesize, $RESULT
+
+//========================================================================
+//  双进程解除
+//=========================================================================
+
+// 对CreateMutexA的首地址下硬件断点  --- > (不能在首地址下软件断点,有检测)
+bphwc
+gpa "CreateMutexA", "Kernel32.dll"
+bphws $RESULT, "x"
+run
+bphwc
+
+rtu
+bphwc $RESULT 
+
+find eip, #9CC12C2406F7142483242401#
+bphws $RESULT, "x"
+run
+bphwc
+
+
+// 解除双进程,双变成单
+mov !ZF,1
+run
+
+
+find eip, #F187DF57C3#
+mov lastException, $RESULT+1
+
+// int1异常的处理方法,新EIP  --> 有调试进程(父进程处理的),所以根据debugApi处理
+add eip, 1E
+run
+
+
+// 两次特权指令  三次内存异常 都是被调试进程自己处理
+_exception:
+esto
+
+cmp eip, lastException
+jnz _exception
+
+
+// 最后一个单步异常, 由调试进程处理的
+add eip, 2B
+
+//===========================================================
+//    IAT 修复
+//===========================================================
+
+bphwc
+
+var bp1
+var bp2
+var bp3
+var encryptTable
+var minIatAddr
+var maxIatAddr
+var iatSize
+var compareValue
+var pespinFound
+
+//mov bp1, 010147EF
+//mov bp2, 0101402D
+//mov bp3, 010149B7
+//mov encryptTable, 01014079
+
+find sectionbase, #817E10????????9CEB01#
+mov bp1, $RESULT
+
+find sectionbase, #2407F5FF3424C30BC0C3#
+mov bp2, $RESULT + 7
+
+find sectionbase, #0FBA67FF07EB01#
+mov bp3, $RESULT + 5
+
+find sectionbase, #3917EB07??EB01#
+mov encryptTable, $RESULT + E
+
+// 获取比较的数值
+mov compareValue, bp1+3
+mov compareValue, [compareValue]
+
+// NOP掉比较查找是否加密的表
+fill encryptTable, 6, 90
+
+
+bphws bp1, "x"
+bphws bp2, "x"
+bphws bp3, "x"
+
+_cycle:
+run
+
+// 第一个段点 判读所有 DLL是否处理结束
+cmp eip, bp1
+jnz _bp2Label
+
+cmp [esi+10], compareValue
+jz _iatProcessOver
+jmp _cycle
+
+
+// 第二个断点保存 IAT地址 --> 计算出最大和最新的IAT地址(后面用)
+_bp2Label:
+
+cmp eip, bp2
+jnz _bp3Label
+
+cmp minIatAddr, 0
+jnz _label
+mov minIatAddr, edx
+mov maxIatAddr, edx
+
+_label:
+cmp edx, minIatAddr
+ja _label1
+mov minIatAddr, edx
+
+_label1:
+cmp edx, maxIatAddr
+jb _label2
+mov maxIatAddr, edx
+
+_label2:
+jmp _cycle
+
+
+// 第三个断点 让外壳不重定向API函数
+_bp3Label:
+
+mov !CF, 0
+jmp _cycle
+
+
+_iatProcessOver:
+
+//-----------------------------------------------------------
+// FF15 FF25 修复--> FF25 jmp [iat] 
+//-----------------------------------------------------------
+
+//-------------------------------
+//  特殊的一种 EA ???????? FF
+//-------------------------------
+
+var ff15Addr
+var ff25Addr
+var 8bAddr
+var a1Addr
+
+var ff15Count
+var ff25Count
+var 8bCount
+
+var iatAddr
+var errIatAddr
+
+_findFF25Start:
+mov ff25Addr, codebase
+
+_findFF25:
+find ff25Addr, #EA????????FF#
+mov ff25Addr, $RESULT
+
+cmp ff25Addr, 0
+jz _findFF25Start_2
+
+mov iatAddr, [ff25Addr+1]
+
+// 判读IAT地址是否正确
+cmp iatAddr, minIatAddr
+jb _ff25Out
+cmp iatAddr, maxIatAddr
+ja _ff25Out
+
+// 修复
+mov [ff25Addr], 25FF
+mov [ff25Addr+2], iatAddr
+inc ff25Count
+
+_ff25Out:
+add ff25Addr, 6
+jmp _findFF25
+
+//---------------------------------------------
+// FF25 [IAT]  jmp dword ptr [iat]
+//---------------------------------------------
+
+_findFF25Start_2:
+
+mov pespinFound, 0
+mov ff25Addr, codebase
+
+_findFF25_2:
+find ff25Addr, #FF25#
+mov ff25Addr, $RESULT
+
+cmp ff25Addr, 0
+jz _findff25PESpinStart_2
+
+mov errIatAddr, [ff25Addr+2]
+mov iatAddr, [errIatAddr]
+
+// 判读IAT地址是否正确
+cmp iatAddr, minIatAddr
+jb _ff25Out_2
+cmp iatAddr, maxIatAddr
+ja _ff25Out_2
+
+// 修复
+mov [ff25Addr+2], iatAddr
+inc ff25Count
+
+_ff25Out_2:
+add ff25Addr, 2
+jmp _findFF25_2
+
+_findff25PESpinStart_2:
+cmp pespinFound, 1
+jz _findFF15Start
+
+mov ff25Addr, sectionbase
+mov pespinFound, 1
+jmp _findFF25_2
+
+
+
+//-----------------------------------------------
+// call dword ptr [iat]
+
+_findFF15Start:
+mov pespinFound, 0
+
+mov ff15Addr, codebase
+
+_findFF15:
+find ff15Addr, #FF15#
+mov ff15Addr, $RESULT
+
+cmp ff15Addr, 0
+jz _findff15PESpinStart
+
+// 获取FF15的目的地址,由目的地址获取IAT地址
+mov errIatAddr, [ff15Addr+2]
+mov iatAddr, [errIatAddr]
+
+// 判读IAT地址是否正确
+cmp iatAddr, minIatAddr
+jb _ff15Out
+cmp iatAddr, maxIatAddr
+ja _ff15Out
+
+// 修复
+mov [ff15Addr+2], iatAddr
+inc ff15Count
+
+_ff15Out:
+add ff15Addr, 2
+jmp _findFF15
+
+
+_findff15PESpinStart:
+cmp pespinFound, 1
+jz _findA1Start
+
+mov ff15Addr, sectionbase
+mov pespinFound, 1
+jmp _findFF15
+
+
+//-----------------------------------------------------------
+//   A1 E6AF5800   mov     eax, dword ptr [58AFE6]
+//   A3 F8C74900   mov     dword ptr [49C7F8], eax          ;  <&kernel32.TlsGetValue>
+//-----------------------------------------------------------
+_findA1Start:
+mov pespinFound, 0
+mov a1Addr, codebase
+
+_findA1:
+find a1Addr, #A1#
+mov a1Addr, $RESULT
+
+cmp a1Addr, 0
+jz _finda1PESpinStart
+
+
+// 获取8B35的目的地址,由目的地址获取IAT地址
+mov errIatAddr, [a1Addr+1]
+mov iatAddr, [errIatAddr]
+
+// 判读IAT地址是否正确
+cmp iatAddr, minIatAddr
+jb _A1Out
+cmp iatAddr, maxIatAddr
+ja _A1Out
+
+// 修复
+mov [a1Addr+1], iatAddr 
+inc 8bCount
+
+_A1Out:
+add a1Addr, 1
+jmp _findA1
+
+
+
+_finda1PESpinStart:
+cmp pespinFound, 1
+jz _find8BStart
+
+mov a1Addr, sectionbase
+mov pespinFound, 1
+jmp _findA1
+
+
+
+
+// 被保护程序所在区段 和 外壳所在的区段(OEP)
+//------------------------------------------------------------
+// 8B35 [IAT]  --> mov esi, dword ptr [iat]  call esi
+// 8B3D [IAT]  --> mov edi, dword ptr [iat]  call edi
+// BYTE:           05 0D 15 1D 25 2D 35 3D
+
+
+_find8BStart:
+mov pespinFound, 0
+
+mov 8bAddr, codebase
+
+
+// 效率比较差点...
+_find8B:
+find 8bAddr, #8B#
+mov 8bAddr, $RESULT
+
+cmp 8bAddr, 0
+jz _find8bPESpinStart
+
+
+// 获取8B35的目的地址,由目的地址获取IAT地址
+mov errIatAddr, [8bAddr+2]
+mov iatAddr, [errIatAddr]
+
+// 判读IAT地址是否正确
+cmp iatAddr, minIatAddr
+jb _8BOut
+cmp iatAddr, maxIatAddr
+ja _8BOut
+
+// 修复
+mov [8bAddr+2], iatAddr 
+inc 8bCount
+
+_8BOut:
+add 8bAddr, 1
+jmp _find8B
+
+
+
+_find8bPESpinStart:
+cmp pespinFound, 1
+jz _oepFinder
+
+mov 8bAddr, sectionbase
+mov pespinFound, 1
+jmp _find8B
+
+
+//==================================================================
+//  OEP 查找
+//===================================================================
+var oep
+
+_oepFinder:
+
+bphwc
+
+// esp定理, 然后向下单步几步就到了
+bphws esp+1C, "r"
+run
+bphwc
+
+// 直接作为EIP，不知道查找什么
+mov oep, eip
+
+//===================================================================
+//  SDK 修复
+//===================================================================
+
+var start
+var end
+var SDK1Count
+var SDK2Count
+var fixcallCount
+var fixjmpCount
+
+SDKFixer:
+
+mov start, codebase
+mov tmp, start
+
+_findclearmacro:
+find tmp, #9C60B9????????BF????????81E9????????B8????????05????????FF0D????????0011619D#
+mov tmp, $RESULT
+
+cmp tmp, 0
+jz SDKFixer2
+inc SDK1Count
+
+mov eip, tmp
+bp tmp+25
+run
+bc tmp+25
+
+sto
+
+// 修改跳转
+mov dest, eip
+sub dest, tmp
+sub dest, 2
+
+mov [tmp], EB
+mov [tmp+1], dest
+
+
+// 修改被保护代码下面的代码 (找popfd)  -->防止删除
+findop eip, #9D#
+mov tmp, $RESULT
+
+inc tmp
+inc tmp
+mov dest, [tmp]
+and dest, FF
+
+add dest, tmp
+add dest, 1
+
+// 固定长度的...
+mov [tmp-2F], EB
+sub dest, tmp-2F
+sub dest, 2
+mov [tmp-2E], dest
+
+// 下一个
+jmp _findclearmacro
+
+
+/////////////////////////////////////////////////////////////////////
+// SDK第二个宏修复 (这个代码不好搜索,暂时找FF15,并且进入的是EB 01)
+SDKFixer2:
+
+var crypt1
+var crypt2
+
+mov start, codebase
+mov tmp, start
+
+_cryptmacro:
+findop tmp, #FF15#
+
+mov tmp, $RESULT
+
+cmp tmp, 0
+jz CodeRedirectionFixer
+
+mov crypt1, tmp
+
+// 查看 FF15到的函数的前2个字节是不是EB 01
+add tmp, 2
+mov dest, [tmp]
+mov dest, [dest]
+mov dest, [dest]
+and dest, FFFF
+
+cmp dest, 01EB
+jnz _cryptmacro
+
+inc SDK2Count
+
+// 新建eip
+mov eip, tmp-2
+
+// 对原程序的指令下段, 接着call后的是将要解密代码的大小 (4 + 6)
+bphws eip+A, "x"
+run
+bphwc   eip
+
+// 查找下一个call, 下一个call为重新加密
+find tmp, #FF15????????#
+mov tmp, $RESULT
+
+
+// 修改上一个call为直接跳到 解密后代码
+mov [crypt1], 08EB
+fill   crypt1+2, 8, 90
+mov [tmp], 08EB
+fill tmp+2, 8, 90
+
+jmp _cryptmacro
+
+
+//////////////////////////////以下修复code redirection//////////////////////////
+
+CodeRedirectionFixer:
+
+mov start, codebase
+
+
+// 查找CALL
+_findcallstart:
+mov tmp, start
+
+
+_findcall:
+findop  tmp, #E8#
+mov tmp, $RESULT
+
+cmp tmp, 0
+jz _findjmpstart
+
+// 判断目的地址是否为 0x1000以下
+inc tmp
+mov dest, [tmp]
+add dest, tmp
+add dest, 4
+
+cmp dest, codebase
+jb _fixcall
+jmp _findcall
+
+_fixcall:
+
+inc fixcallCount
+
+// 修复
+inc dest
+mov dest1, [dest]
+add dest1, dest
+add dest1, 4
+
+sub dest1, tmp
+sub dest1, 4
+mov [tmp], dest1
+
+// 如果相邻的两个会有问题，下一个的call查找不到
+add tmp, 4
+ 
+jmp _findcall
+
+///////////////////////////////////////
+
+// 查找jmp
+_findjmpstart:
+mov tmp, start
+
+
+_findjmp:
+findop tmp, #E9#
+mov tmp, $RESULT
+
+cmp tmp, 0
+jz exit
+
+inc tmp
+mov dest, [tmp]
+add dest, tmp
+add dest, 4
+
+
+cmp dest, codebase
+jb _fixjmp
+jmp _findjmp
+
+_fixjmp:
+
+inc fixjmpCount
+
+
+// 修复   都是5个字节 --> 可能不止
+var b1
+var b2
+var longjumpdest
+var movsize
+var movsize1
+var movdest
+var srcbyte
+
+mov b1, [dest]
+and b1, FF
+mov b2, [dest+1]
+
+mov [tmp-1], b1
+
+// 注意: 如果进去的 jmp 语句的话(肯定是E9)--> 不能直接搬
+cmp b1, E9
+jz _isLongJump
+
+
+// 确定需要搬多少个字节--> jmp指令之前
+findop dest, #E9#
+mov movsize, $RESULT
+sub movsize, dest
+mov movsize1, 0
+mov movdest, tmp-1
+
+// 每个字节拷贝
+_movcycle:
+cmp movsize1, movsize
+jz _movover
+mov srcbyte, [dest]
+and srcbyte, FF
+fill movdest, 1, srcbyte
+
+inc dest
+inc movdest
+inc movsize1
+jmp _movcycle
+
+_movover:
+
+jmp _isnotLongJump
+
+_isLongJump:
+add longjumpdest, dest
+add longjumpdest, b2
+add longjumpdest, 4
+sub longjumpdest, tmp
+sub longjumpdest, 1
+sub longjumpdest, 2
+mov [tmp], longjumpdest
+
+_isnotLongJump:
+
+add tmp, 4
+jmp _findjmp
+
+exit:
+bphwc
+
+//=========================================================
+// 信息提示
+//==========================================================
+sub maxIatAddr, minIatAddr
+mov iatSize, maxIatAddr+4
+
+var message
+mov message, ""
+add message, "OEP: "
+add message, oep
+add message, "\r\n"
+add message, "IAT Address: "
+add message, minIatAddr
+add message, "\r\n"
+add message, "IAT Size: "
+add message, iatSize
+
+msg message

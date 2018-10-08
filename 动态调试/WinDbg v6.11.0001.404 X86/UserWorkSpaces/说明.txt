@@ -1,0 +1,3 @@
+ClearWorkspaces.reg    清除工作空间恢复默认状态
+DefaultWorkspaces.reg  调试 Exe 文件的工作空间
+DefaultWorkspaces.WEW  调试 Exe 文件的工作空间与上面的只是文件格式不同而已

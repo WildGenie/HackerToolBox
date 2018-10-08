@@ -1,0 +1,46 @@
+var iats
+var iate
+var oep
+var apiaddr
+var patchaddr
+
+
+mov oep, 00839904
+mov iats, 00863DBC
+mov iate, 008648A4
+
+patch:
+mov eip, [iats]
+sto
+sto
+sto
+sto
+sto
+sto
+sti
+find eip, #7C08#
+mov patchaddr, $RESULT
+mov [patchaddr],#EB08#
+find eip, #C20400#
+bp $RESULT
+
+fix:
+mov eip, [iats]
+cmp [iats],0
+je skip
+cmp iats, iate
+ja end
+run
+mov apiaddr, eax
+mov [iats], apiaddr
+add iats, 4
+jmp fix
+
+
+skip:
+add iats, 4
+jmp fix
+
+end:
+mov eip, oep
+ret

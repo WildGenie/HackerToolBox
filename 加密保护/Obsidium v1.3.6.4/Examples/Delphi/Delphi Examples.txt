@@ -1,0 +1,8 @@
+Keygen Example
+    Key generation sample application, shows how to use
+    GenerateKeyfile, ConvertToString
+Sample Application
+    Sample application using short license keys, shows how to use
+    isRegistered, getRegInfo, setShortKey, runtime code encryption
+
+You need the files from SDK\Delphi to compile the examples.

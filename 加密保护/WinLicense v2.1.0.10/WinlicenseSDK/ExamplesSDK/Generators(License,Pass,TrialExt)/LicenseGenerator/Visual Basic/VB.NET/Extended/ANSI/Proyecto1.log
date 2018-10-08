@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UpgradeLog>
+    <Settings>
+        <Setting
+            Name = "LogFile"
+            Value = "Proyecto1.log"
+        />
+        <Setting
+            Name = "GenerateInterfacesForClasses"
+            Value = "FALSE"
+        />
+        <Setting
+            Name = "ProjectName"
+            Value = "Proyecto1"
+        />
+        <Setting
+            Name = "OutputName"
+            Value = "Proyecto1.vbproj"
+        />
+        <Setting
+            Name = "OutputDir"
+            Value = "C:\WinLicense\Sources\WinlicenseSDK\ExamplesSDK\Generators (Keys, Passwords)\LicenseGenerator\Visual Basic\Visual Basic .NET\Proyecto1.NET"
+        />
+        <Setting
+            Name = "ProjectPath"
+            Value = "C:\WinLicense\Sources\WinlicenseSDK\ExamplesSDK\Generators (Keys, Passwords)\LicenseGenerator\Visual Basic\Visual Basic .NET\Proyecto1.vbp"
+        />
+        <Setting
+            Name = "MigrateProjectTo"
+            Value = "0"
+        />
+    </Settings>
+    <File
+        OldPath = "C:\WinLicense\Sources\WinlicenseSDK\ExamplesSDK\Generators (Keys, Passwords)\LicenseGenerator\Visual Basic\Visual Basic .NET\Form1.frm"
+        NewPath = "C:\WinLicense\Sources\WinlicenseSDK\ExamplesSDK\Generators (Keys, Passwords)\LicenseGenerator\Visual Basic\Visual Basic .NET\Proyecto1.NET\Form1.vb"
+        FileType = "Form"
+        Upgraded = "True"
+    >
+        <Section Name = "(Layout)" >
+            <Issue
+                Type = "Design"
+                Number = "2064"
+                ObjectName = "MaxExecEdit"
+                ObjectType = "TextBox"
+                PME = "DataFormat"
+            >TextBox property MaxExecEdit.DataFormat was not upgraded.</Issue>
+        </Section>
+        <Section Name = "GenerateFileButton_Click" >
+            <Issue
+                Type = "Runtime"
+                Number = "1037"
+            >Couldn't resolve default property of object LicenseHash.</Issue>
+        </Section>
+        <Section Name = "GenerateSmartButton_Click" >
+            <Issue
+                Type = "Runtime"
+                Number = "1037"
+            >Couldn't resolve default property of object LicenseHash.</Issue>
+        </Section>
+        <Section Name = "GenerateTextButton_Click" >
+            <Issue
+                Type = "Runtime"
+                Number = "1037"
+            >Couldn't resolve default property of object LicenseHash.</Issue>
+        </Section>
+    </File>
+    <File
+        OldPath = "C:\WinLicense\Sources\WinlicenseSDK\ExamplesSDK\Generators (Keys, Passwords)\LicenseGenerator\Visual Basic\Visual Basic .NET\Module1.bas"
+        NewPath = "C:\WinLicense\Sources\WinlicenseSDK\ExamplesSDK\Generators (Keys, Passwords)\LicenseGenerator\Visual Basic\Visual Basic .NET\Proyecto1.NET\Module1.vb"
+        FileType = "Module"
+        Upgraded = "True"
+    >
+        <Section Name = "GenerateTrialExtensionKey" >
+            <Issue
+                Type = "Compile"
+                Number = "1016"
+            >Declaring a parameter 'As Any' is not supported.</Issue>
+        </Section>
+        <Section Name = "GenerateTextKey" >
+            <Issue
+                Type = "Compile"
+                Number = "1016"
+            >Declaring a parameter 'As Any' is not supported.</Issue>
+        </Section>
+        <Section Name = "GenerateSmartActivateKey" >
+            <Issue
+                Type = "Compile"
+                Number = "1016"
+            >Declaring a parameter 'As Any' is not supported.</Issue>
+        </Section>
+        <Section Name = "GenerateLicenseFileKey" >
+            <Issue
+                Type = "Compile"
+                Number = "1016"
+            >Declaring a parameter 'As Any' is not supported.</Issue>
+        </Section>
+    </File>
+</UpgradeLog>
+

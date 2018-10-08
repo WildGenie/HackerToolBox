@@ -1,0 +1,79 @@
+         h o m e   o f   p o l i s h   m o t h e r f u c k e r s              
+               ______                                      .______             
+ ______ ______/     /___________________   ________ ______ |     /________     
+ \_    `     /     __/    ,____/   /___/__/   /___/_\     \|    /    /___/__   
+ /_____|_____\_____\______\    \_________/__________/____\  /___\\_________/   
+ -------------------------------------------------------- \/ -----xtreeme--    
+                                                                               
+ app name   : UnPECompact2 v0.2                 rel type   : t00l
+ url        : http://www.ctrl-d.prv.pl          system     : aLL
+ rel date   : 14.04.2006                        size       : 50KB
+ cracked by : smola                             protection : none
+                                                                               
+ --------------------------------------------------------------------------    
+
+      UnPECompact2 is a generic stand-alone unpacker and rebuilder for
+      files packed with Jeremy Collake's PECompact v2.x.
+
+      UnPECompact2 was tested with latest 2.78a version and several older
+      v2 versions of executables (also DLL). Should work with all 2.x
+      versions, so simply try it. If you have a bit of luck, you will got
+      unpacked exe or do it by hand if not :)
+
+      UnPECompact2 was written in msvc6 and using my new generic unpacking
+      engine.
+
+      UnPECompact2 features:
+      + sections rebuilding
+      + imports rebuilding
+      + TLS relocating
+      + fixups rebuilding
+      + exports rebuilding and relocating
+      + resources rebuilding and relocating
+
+      Usage is simple, just run UnPECompact2, select packed and get
+      unpacked (what a stupid guide :)
+
+      Note: naming of sections is standard like .code, .data etc. but when
+      engine can't recognize what kind of data is placed at this rva,
+      the name of section is a size of unpacked data of this section.
+
+      History:
+      o6.o4.2oo6 - v0.1 - first working version
+      14.o4.2oo6 - v0.2 - better TLS handling, added support for imports
+      and IAT counting if only FirtsThunk in IID is present (thx Snow
+      Panther for bug report), also changed default section characteristics
+      to 0xE00000E0 for better compatibility with DEP (thx Bart). BTW,
+      tomorrow in Poland is an Easter Day, so best wishes and lots of eggs
+      and bunnys to everyone :)
+
+      OK, time to greetz:
+      + yoda->LordPE
+      + MackT->impRec & ReloX
+      + Snow Panther->MGD & CoolDump
+      + all unpackers authors
+
+      Shit list:
+      Hm, nobody? (Hint: If you wanna join this list, drop me an e-mail :)
+
+      If you wanna contact me, try write at smola[at]pcplus[dot]com[dot]pl
+                                                                               
+ --------------------------------------------------------------------------    
+ bart...............................................................founder    
+ dulek..............................................................founder    
+ WiteG..............................................................cracker    
+ smola................................................................coder    
+ sachy..............................................................cracker    
+ butthead............................................................fucker    
+                                                                              
+ Nasza ekipa obecnie nie potrzebuje nowych czlonkow, wiec jesli jestes mlody,  
+ utalentowany i garniesz sie do roboty, wez swojego bejzbola i idz sie wyzyj   
+ na jakichs staruszkach w parku.                                               
+                                                                               
+ --------------------------------------------------------------------------    
+ pozdrowienia dla                                                              
+ dulek, Ptasiek, smola, Pit'R, tepe^, oles, jard, hinte, eax, benek, Noir,  
+ pwaity, witeg, Liquid, Devon, oraz calej bandy ciezko pracujacych crackerow   
+                                                                               
+ --------------------------------------------------------------------------    
+ logo by sK!                                                                   

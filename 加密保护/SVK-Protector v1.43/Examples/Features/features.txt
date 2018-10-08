@@ -1,0 +1,12 @@
+It is very easy protect your application with SVK very well.
+You can encrypt some blocks of code and these parts will not
+possible decrypt without correct registration key. I wrote 
+examples for Masm, Delphi and Visual C++. Of course You can use
+this method of protection in other compilers too. 
+It is very easy use it and it is very secure way how protect some
+functions in your application. 
+If user will not have correct registration key, there will not show
+message box. Protected code will not proceed.
+
+
+Note: Don't use this method in Visual Basic !

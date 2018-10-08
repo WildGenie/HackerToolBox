@@ -1,0 +1,99 @@
+*******************************************************************************
+Thank you for buying the eXPressor software!
+
+*******************************************************************************
+License Agreement
+_________________
+
+
+PLEASE READ THE FOLLOWING TERMS AND CONDITIONS.
+
+YOU AGREE THAT ALL OF THE TERMS AND CONDITIONS BELOW APPLY 
+TO YOU, IF YOU COPY, INSTALL, OR USE THIS COPY OF eXPressor SOFTWARE
+
+IF YOU DO NOT AGREE, PLEASE TERMINATE INSTALLATION 
+IMMEDIATELY, AND DO NOT USE THIS SOFTWARE.
+
+
+SOFTWARE COVERED BY THIS LICENSE
+   This license agreement ("Agreement") applies only to the version of the eXPressor
+software with which this Agreement is included, and  license terms for later
+versions of eXPressor may also be changed.
+
+LICENSE TYPES
+
+*Home User License*
+   This license is for Non-Commercial Use. A Home User License for the eXPressor
+is a License to ONE user or developer.Entitles you to compress your files at home.
+Also this license provides rights for developers to distribute compressed files only
+in the form of a 'freeware' product. Include a full year free support and free updates.
+The number of packed products that can be distributed is unlimited.
+
+*Individual Developer License*
+   It is designed for individual developers.This license provides rights to 
+distribute compressed files in the form of a 'freeware' or 'shareware' product.
+As 'shareware', both the evaluation and registered builds (of packed file)
+may be distributed. The number of packed products that can be distributed is 
+limited or not depending on buying option. Include a full year free support and
+free updates.
+
+*Corporate License*
+   A corporate license for eXPressor entitles an organization to receive one copy
+of the distribution software and to duplicate the software for any number of people
+or workstations within the corporation plus full year free support and free updates.
+The number of packed products that can be distributed is limited or not depending on 
+buying option.
+
+*SourceCode License*
+   A single user source code license for the eXPressor to one developer, include
+a full year support and free updates, free minor version source code updates.
+
+*Beta Testing License*
+  Only for registered users.
+
+
+IN ANY TYPE OF LICENSE YOU MAY NOT:
+-modify,reverse engineer, decompile, disassemble, this eXPressor program;
+-copy and distribute eXPressor for use other than the one specified in TYPES OF LICENSE,
+coresponding to your purchased license;
+-sell or license copies of eXPressor to others;
+-remove any proprietary notices or labels on eXPressor or any other CGSoftLabs
+software;
+-use eXPressor in or for High Risk Activities (defined below);
+
+
+TERMINATION.
+  The license will terminate automatically if you fail to comply with
+any of the limitations, conditions or obligations described herein.  
+On termination, you must destroy all copies of the eXPressor software 
+and all other materials in this eXPressor Original Distribution Package 
+and, any or all of the files created by you using eXPressor and distributed
+to others.
+
+HIGH RISK ACTIVITIES.
+  eXPressor is not fault-tolerant and is not designed, manufactured 
+or intended for use or resale as on-line control equipment in hazardous
+environments requiring fail-safe performance, such as in the operation 
+of nuclear facilities, aircraft navigation or communication systems, air
+traffic control, direct life support machines, or weapons systems, in which
+the failure of eXPressor could lead directly to death, personal injury,
+or severe physical or environmental damage ("High Risk Activities").
+
+NO WARRANTY.
+   Any use of the SOFTWARE PRODUCT is at your own risk. 
+To the maximum extent permitted by applicable law, CGSoftLabs and its
+suppliers disclaim all warranties and conditions, either express or implied,
+including, but not limited to, implied warranties of merchantability, 
+fitness for a particular purpose, and noninfringement. 
+
+NO LIABILITY FOR CONSEQUENTIAL DAMAGES.
+   To the maximum extent permitted by applicable law, in no event shall CGSoftLabs 
+or its suppliers be liable for any special, incidental, indirect, or consequential 
+damages whatsoever (including, without limitation, damages for loss of business 
+profits, business interruption, loss of business information, or any other 
+pecuniary loss) arising out of the use of or inability to use the SOFTWARE PRODUCT,
+even if CGSoftLabs has been advised of the possibility of such damages.
+
+LIMITATION OF LIABILITY.
+   CGSoftLabs's entire liability and your exclusive remedy under this 
+License Agreement shall not exceed your purchase price.

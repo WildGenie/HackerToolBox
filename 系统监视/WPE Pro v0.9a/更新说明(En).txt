@@ -1,0 +1,11 @@
+If you have a packet like this : 
+04 BB 04 00 00 00 06 00 08
+and you want increase or decrease for example the byte in position 7 (byte = 06) by one each time a packet is sent:
+-right mouse button on a packet logged,SEND
+-double click or press INSER on the byte at the position 7(it will be show in red) and press play as usually
+-wpe will send packet : 
+04 BB 04 00 00 00 07 00 08
+04 BB 04 00 00 00 08 00 08
+04 BB 04 00 00 00 09 00 08
+etc...
+for decrease set the step at -1

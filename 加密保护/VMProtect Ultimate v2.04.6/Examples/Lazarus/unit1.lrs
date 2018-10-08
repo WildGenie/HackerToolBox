@@ -1,0 +1,15 @@
+{ Это - файл ресурсов, автоматически созданный lazarus }
+
+LazarusResources.Add('TForm1','FORMDATA',[
+  'TPF0'#6'TForm1'#5'Form1'#4'Left'#3#129#1#6'Height'#2'+'#3'Top'#3#31#1#5'Widt'
+  +'h'#3','#1#18'HorzScrollBar.Page'#3'+'#1#18'VertScrollBar.Page'#2'*'#13'Acti'
+  +'veControl'#7#5'Edit1'#11'BorderIcons'#11#12'biSystemMenu'#0#11'BorderStyle'
+  +#7#8'bsSingle'#7'Caption'#6#24'VMProtect test [Lazarus]'#11'Font.Height'#2
+  +#245#9'Font.Name'#6#13'MS Sans Serif'#8'Position'#7#14'poScreenCenter'#0#6'T'
+  +'Label'#6'Label1'#4'Left'#2#8#6'Height'#2#14#3'Top'#2#15#5'Width'#2'3'#7'Cap'
+  +'tion'#6#9'Password:'#5'Color'#7#6'clNone'#11'ParentColor'#8#0#0#5'TEdit'#5
+  +'Edit1'#4'Left'#2'<'#6'Height'#2#21#3'Top'#2#12#5'Width'#2'y'#8'TabOrder'#2#0
+  +#0#0#7'TButton'#7'Button1'#4'Left'#3#189#0#6'Height'#2#25#3'Top'#2#10#5'Widt'
+  +'h'#2'd'#25'BorderSpacing.InnerBorder'#2#4#7'Caption'#6#14'Check password'#7
+  +'Default'#9#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#0
+]);

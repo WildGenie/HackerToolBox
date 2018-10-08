@@ -1,0 +1,4 @@
+@echo off
+SET MASMPATH=E:\masm32
+%MASMPATH%\bin\LIB.EXE /MACHINE:IX86 /DEF:msvcrt.DEF
+PAUSE

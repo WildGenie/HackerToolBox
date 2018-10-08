@@ -1,0 +1,19 @@
+LIBRARY DUMMY.DLL
+
+EXPORTS
+isRegistered@0=isRegistered     @1
+getRegInfo@8=getRegInfo         @2
+setExternalKey@8=setExternalKey @3
+getSystemID@4=getSystemID       @4
+CallMark@4=CallMark             @5
+storeLicense@4=storeLicense     @6
+getTrialRuns@0=getTrialRuns     @7
+getTrialDays@0=getTrialDays     @8
+getLicenseExpiration@4=getLicenseExpiration     @9
+storeLicenseShort@8=storeLicenseShort	@10
+getCustomValue@0=getCustomValue @11
+getLicenseHash@4=getLicenseHash @12
+getLicenseStatus@0=getLicenseStatus     @13
+setLicense@4=setLicense		@14
+setLicenseShort@8=setLicenseShort	@15
+deleteTrialData@0=deleteTrialData	@16

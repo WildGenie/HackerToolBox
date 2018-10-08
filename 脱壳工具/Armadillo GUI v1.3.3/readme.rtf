@@ -1,0 +1,186 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deflangfe1033{\fonttbl{\f0\fmodern\fprq1\fcharset0 Courier New;}}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\nowidctlpar\qc\i\f0\fs20 ############################################\b\i0\par
+ArmaGUI 1.3.3 - Armadillo 3.xx/4.xx unpacker\par
+Spec0p 2004/2006\b0\par
+############################################\par
+\pard\nowidctlpar\par
+\ul\b\par
+\ulnone\b0\par
+\par
+\par
+\ul\b Supported Armadillo options:\ulnone\b0\par
+Standard Features\par
+Debugblocker\par
+CopyMemII\par
+Nanomites\par
+Import Elimination\par
+Strategic Code Splicing\par
+\par
+\ul\b Main features:\par
+\ulnone\b0 Complete automatic recover and validation of nanomites, even the fake ones in the tables;\par
+Complete automatic reinsertion of Strategic Spliced Code at the original location before exe was protected by Armadillo;\par
+Complete rebuild of the dumped file, cleaning all the trash;\par
+Complete rebuild of the IAT without the use of any extern tool;\par
+\par
+\par
+\par
+\ul\b Introduction & Disclaimer:\par
+\ulnone\b0 ArmaGUI unpacking tool for the commercial protector Armadillo from Silicon Realms Toolworks (http://siliconrealms.com/index.shtml), it supports most of the protection options offered by Armadillo since version 3. \par
+It's coded in VC++ with MFC for GUI support with some inline asm, MFC is the explanation to the over bloated 212kb exe file, and its only tested on XP SP2, maybe it works on w2k3 too, forget anything bellow XP.\par
+This project was started based on a "challenge" by crUsAdEr on the Woodmann excellent forum: http://www.woodmann.com/forum/showthread.php?t=6365\par
+crUsAdEr said: "hopefully u wont spread it to everyone though cos unpackers itself doesnt teach ppl much.", and I agree with that, you DON'T learn by using unpackers. This tool is working for 1+ year now as private but suffered big and important updates along the way.\par
+This tool WASN'T created to harm SRT in any way, Armadillo is a good product with some nice ideas. \par
+It WAS created in the sequence of my desire to see if I was able to create an unpacker to some protector more complex than UPX, together with the challenge from crUsAdEr, learning was and will always be my main purpose.\par
+I know the GUI isn\rquote t very user friendly, but really I don't care, don't bother bashing me with that;\par
+I know it crash's alot, my coding sucks, the code it's crappy and non optimized, really it's a mess, eventually it will hang ur PC;\par
+I know it doesn't automatic detect the protection options, this happens because it wasn't my main objective. I focused on getting the hard stuff like Nanomites and IAT Elim, and when I was over, I realized that I had made the engine based on the options I specified and couldn't change it, and so it stays like that, and I actually don't care. If you don't like it, start writing a Options detector (its easy stuff), or keep the opinion to yourself;\par
+If all this isn't a problem to you, then I hope you enjoy using the tool almost as I enjoyed creating it;\par
+\par
+\ul\b Why make it public?\ulnone\i  \b0\par
+\i0 Because today there are already several tools outside like ArmaInline or dilloDie, and it seems that SRT are updating Armadillo again, so ArmaGUI wont be useful for long;\par
+Also Nico is no longer part of the SRT team, I know him from the RCE community and I liked him, that was a very bad move Chad;\par
+\par
+\ul\b When to use it?\b0\par
+\ulnone This tool should ONLY be used when you own a purchased license of some product protected by Armadillo and want to rip the Armadillo from it.\par
+Now you are wondering what is the use of the tool if you already have one purchased license. Well Armadillo protection schemes does slow down the original code, mainly if options like Strategic Spliced Code, Nanomites or CopyMemII are used, so by ripping Armadillo off, you will get the original faster code. \par
+\par
+\ul\b How to use it:\par
+\ulnone\b0 Unpacking tab:\par
+Select DebugBlocker: If you run the app and check if there are 2 process's with the same name;\par
+Select CopyMemII: If you choosed DebugBlocker and got an error from the tool while dumping the file from memory;\par
+Select IAT Elim: If you get an error while dumping or fixing the IAT; \par
+Select Spliced Code: If after a successful dump, the dump crashes because of some long jumps to non existing memory locations;\par
+\par
+Fixing nanomites:\par
+Select the the needed options from the unpacking tab, and UNSELECT the "rebuild file" option.\par
+After dumping the file go into the nanomites tab, select the "edit" option and the section field will get filled with the name of the 1st section in the protected exe, change it if isn't correct, also change the name of the dumped file if you didn\rquote t named it "dumped.exe", press fix.\par
+After the nanomites are resolved go into the Utils tab press select file to select the dumped and fixed exe, select the "rebuild file" option, select "IAT Elimination" accordingly to what you selected in the unpacking options, finally press "do it".\par
+\par
+\par
+\par
+\ul\b Special Thanks:\par
+\ulnone\b0 c0n3r0n3(sometimes supports me, sometimes fu** my head, love him anyway), Melvill, Forgetoz, Portuogral, Eddie, Crusader(The challenger), Ricardo Narvaja(Excellent tuts), tenketsu (amazing investigation job in your compendiums)\par
+\par
+\ul\b Shouts to:\ulnone\b0\par
+CrkPortugal RCE community;\par
+Woodmann RCE community;\par
+Exetools RCE community;\par
+All those deserve respect in the RCE scene;\par
+uP Clan (www.upgaming-hq.com) for helping me relief the coding stress;\par
+You for reading this;\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\ul\b History:\ulnone\b0\par
+\par
+\ul 25/07/2006 \endash  V1.3.3;\ulnone\par
+\tab * Added support for some new custom versions I found, this included updates in the IAT/SPC engine;\par
+\par
+ \par
+\par
+\ul 21/07/2006 - V1.3.2:\ulnone\par
+\pard\nowidctlpar\fi-993\li993\tab * Fixed a bug that was causing the IAT rebuilding engine to crash;\par
+\pard\nowidctlpar\li993\tab\par
+\par
+\tab\par
+\pard\nowidctlpar\ul 21/07/2006 - V1.3.1:\ulnone\par
+\pard\nowidctlpar\fi-993\li993\tab * Fixed a bug in the Spliced Code Engine, were it sometimes cleared trash code that actually wasn't trash. But really, why would some code have instructions like *mov eax, eax* on it? Anyway it should be kind of fixed now, needs more testing;\par
+\pard\nowidctlpar\par
+\pard\nowidctlpar\fi-993\li993\tab * Fixed a bug where false nanomites were being fixed under specific conditions, needs testing; \par
+\pard\nowidctlpar\par
+\par
+\par
+\ul 20/07/2006 - V1.3:\ulnone\par
+\pard\nowidctlpar\fi-993\li993\tab * Rewrote the Spliced Code engine, it now fully parses all the striped code and inserts it at the original position before it was ripped and obfuscated by armadillo, from now on its impossible to identify were the spliced code was, or I risk to say, to even guess that the dumped file was ever protected by the Spliced Code option, this makes our analyze work much easier, and allows to clear one more section that was before used to keep the ripped code, this means that together with the improvement I did a few days ago in the IAT Elim engine, after the file rebuilding, the dumped file will almost identical to what it was before being protected in code and in size;\par
+\pard\nowidctlpar\par
+\par
+\par
+\ul 18/07/2006 - V1.2:\ulnone\par
+\pard\nowidctlpar\fi-709\li709\tab * Wrapped part of the disasm engine source code from Ollydbg into a class, and I will use it from now on;\par
+\pard\nowidctlpar\par
+\pard\nowidctlpar\fi-709\li709\tab * Nanomites are now fully parsed automatically, no more need to parse the nanomites one by one to validate them;\par
+\pard\nowidctlpar\par
+\pard\nowidctlpar\fi-709\li709\tab * Small update to IAT Elim recover engine, the section size of were new iat VA is saved will be the IAT size itself, that reduces the dumped file size after the rebuilding;\par
+\pard\nowidctlpar\par
+\par
+\par
+\ul 16/07/2006 - V1.1:\ulnone\par
+\pard\nowidctlpar\fi-709\li709\tab *Fixed the way to detect the IAT elimin fixing routine, arma was clearing all my breakpoints, cant say if was custom code;\par
+\pard\nowidctlpar\par
+\tab *Small change on how loading libraries are detected;\par
+\par
+\par
+\par
+\ul June 2006:\ulnone\par
+\tab *World of Warcraft rocks :x, and its also destroying my life;\par
+\par
+\par
+\par
+\ul May 2006 - v1.0:\ulnone\par
+\pard\nowidctlpar\fi-709\li709\tab *Added support to unpack dll's, it can now really be called an unpacker (tm);\par
+\pard\nowidctlpar\par
+\par
+\par
+\ul April 2006:\ulnone\par
+v0.8:\par
+\tab *More bugs fixed\par
+\par
+\par
+\par
+v0.7:\par
+\pard\nowidctlpar\fi-709\li709\tab *Implemented engine to completely rebuild the IAT without use of any external app;\par
+\pard\nowidctlpar\par
+\pard\nowidctlpar\li709\tab *Implemented engine to completely rebuild the dumped file without use of any external app;\par
+\pard\nowidctlpar\par
+\par
+\par
+\ul About 10 months later, February 2006 I decide to get back on RCE:\ulnone\par
+v0.6:\par
+\tab *Added support for version 4.xx\par
+\par
+\par
+\par
+V0.5:\par
+\tab *Completely rewrote the application;\par
+\par
+\par
+\par
+\par
+\ul Sometime in 2005:\ulnone\par
+v0.4:\par
+\tab *Lots of bugs fixed;\par
+\tab *Added support to Nanomites;\par
+\par
+\par
+\par
+v0.3:\par
+\tab *Added support to IAT Elimination;\par
+\par
+\par
+\par
+\ul Sometime in 2004:\ulnone\par
+v0.2:\par
+\tab *Some bugs fix;\par
+\par
+\tab *Added support to Spliced Code\par
+\par
+\tab *Added support to CopyMemII;\par
+\par
+\par
+v0.1:\par
+\tab *First release;\par
+\tab *Unpack single process protected apps;\par
+\tab *Unpack double process protected apps;\par
+\par
+\par
+\ul 11 November 2004:\par
+\ulnone\par
+\tab Started the project on a challenge by Crusader:\par
+\tab http://www.woodmann.com/forum/showthread.php?t=6365\par
+}
+ 

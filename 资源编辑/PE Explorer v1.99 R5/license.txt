@@ -1,0 +1,205 @@
+   ELECTRONIC END USER LICENSE AGREEMENT
+   FOR PE EXPLORER version 1.99
+
+   NOTICE TO USER: PLEASE READ THE FOLLOWING LICENSE 
+   AGREEMENT. IT WILL BE NECESSARY FOR YOU TO AGREE TO
+   BE BOUND BY THE TERMS OF THIS AGREEMENT BEFORE BEING 
+   PERMITTED TO CONTINUE TO INSTALL THE PRODUCT. THE 
+   PROCEDURE FOR ACCEPTING OR REJECTING THE LICENSE 
+   AGREEMENT IS SET OUT AFTER THE LICENSE AGREEMENT.
+
+   This Heaventools Software ("Heaventools") End User License Agreement 
+   accompanies the Heaventools PE Explorer product and related explanatory 
+   materials ("SOFTWARE"). The term "SOFTWARE" also shall include any 
+   upgrades, modified versions or updates of the Software licensed to you 
+   by Heaventools. By installing and/or using the enclosed, attached, or 
+   about-to-be-installed SOFTWARE you are agreeing to be bound by the terms 
+   of this End User License Agreement. You assume responsibility for the 
+   selection of the SOFTWARE to achieve your intended results, and for the 
+   installation, use and result obtained from the SOFTWARE. Do not use the 
+   SOFTWARE in any case where significant damage or injury to persons, 
+   property or business may happen if an error occurs. If you do not agree 
+   to the terms of this End User License Agreement, promptly stop the 
+   installation process, cease to use SOFTWARE, and erase this SOFTWARE 
+   and all of its associated files from your system.
+
+  1. LICENSE GRANT.
+
+    Heaventools grants to you a nonexclusive license to use one copy 
+    of the version of this SOFTWARE on one personal computer or other
+    device located within your home or office for as many licenses as 
+    you purchase. "You" means the company, entity or individual whose 
+    funds are used to pay the license fee. "Use" means storing, loading,
+    installing, executing or displaying the SOFTWARE. If you install 
+    the SOFTWARE onto a multi-user platform or network, each and every
+    individual user of the SOFTWARE must be licensed separately or be
+    covered by a site license.
+    You may not modify the SOFTWARE or disable any licensing or
+    control features of the SOFTWARE except as an intended part of
+    the SOFTWARE's programming features. When you first obtain a copy
+    of the SOFTWARE, you are granted an evaluation period of not more
+    than 30 days, after which time you must pay for the SOFTWARE
+    according to the terms and prices discussed in the SOFTWARE's
+    documentation, or you must remove the SOFTWARE from your computer.
+    This license is not transferable to any other hardware product or
+    other company, entity, or individual. You are expected to use the
+    SOFTWARE on your system and to thoroughly evaluate its usefulness
+    and functionality before making a purchase.
+    This "try before you buy" approach is the ultimate guarantee that
+    the SOFTWARE will perform to your satisfaction.
+
+    You may process any number of PE files using the SOFTWARE, provided
+    that such processed output be used internally for evaluation purposes
+    only. You may not distribute or publish any of your products that 
+    are processed by the SOFTWARE using this evaluation version of
+    SOFTWARE. You must obtain a full commercial License for the SOFTWARE
+    in order for you to distribute or incorporate and processed works
+    produced while utilizing this evaluation version of the SOFTWARE.
+
+    Any use of the SOFTWARE which is illegal under international or
+    local law is forbidden by this licence. You agree that you will not 
+    use this software to decompile, reverse engineer, or dissasemble any
+    third party software whose License expressly prohibits such reverse
+    engineering activities. In addition, you must indemnify and defend
+    Heaventools from and against any claims or lawsuits, including
+    attorneys' fees that arise from or result from your use of this software
+    in a manner that violates any of the terms of this or any other License
+    agreement.
+
+  2. RESERVATION OF RIGHTS AND OWNERSHIP.
+
+    Heaventools Software reserves all rights not expressly granted to 
+    you in this EULA. The Software is protected by copyright and other
+    intellectual property laws and treaties. Heaventools Software or its
+    suppliers own the title, copyright, and other intellectual property
+    rights in the Software. The Software is Licensed, not sold. This EULA
+    does not grant you any rights to trademarks or service marks of 
+    Heaventools Software.
+
+  3. COPYRIGHT.
+
+    The SOFTWARE is protected by copyright, including without limitation
+    by United States Copyright Law, international treaty provisions and
+    applicable laws in the country in which it is being used. You 
+    acknowledge that no title to the intellectual property in the SOFTWARE 
+    is transferred to you. You further acknowledge that title and full 
+    ownership rights to the SOFTWARE will remain the exclusive property of 
+    Heaventools and you will not acquire any rights to the SOFTWARE except 
+    as expressly set forth in this license.
+    You agree to respect and not to remove or conceal from view any copyright,
+    trademark or confidentiality notices appearing on the SOFTWARE, and to
+    reproduce any such copyright, trademark or confidentiality notices 
+    on all copies of the SOFTWARE or any portion thereof made by you as 
+    permitted hereunder and on all portions contained in or merged into 
+    other computer software products and documentation.
+
+  4. RESTRICTIONS.
+
+    You agree that you will not attempt to modify, adapt, translate, reverse 
+    engineer, decompile, clone, disassemble the SOFTWARE in whole or in part, 
+    or otherwise attempt to discover the source code of the SOFTWARE (except 
+    and solely to the extent an applicable statute expressly and specifically 
+    prohibits such restrictions). You may not alter or modify the installer 
+    program or create a new installer for the SOFTWARE. You may not sublicense, 
+    rent, lease, resell for profit or otherwise dispose of the SOFTWARE 
+    without our written permission. You may not grant a security interest in, 
+    or otherwise transfer rights to the SOFTWARE. You may not remove any 
+    proprietary notices or labels on the SOFTWARE.
+
+    Usage of the SOFTWARE may violate the copyright of the modified
+    material. It is your responsibility to respect all legal aspects.
+    You don't have the right to release to public any programs which
+    were altered using the SOFTWARE, if not expressively granted by the
+    respective authors.
+
+  5. DISCLAIMER OF WARRANTY.
+
+    THIS SOFTWARE AND THE ACCOMPANYING FILES ARE PROVIDED
+    ON AN "AS IS" BASIS AND YOU ASSUME FULL RESPONSIBILITY
+    FOR DETERMINING THE SUITABILITY OF THE PROGRAM AND FOR
+    RESULTS OBTAINED. HEAVENTOOLS DISCLAIMS ALL WARRANTIES
+    RELATING TO THIS SOFTWARE, WHETHER EXPRESSED OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED
+    WARRANTIES OF MERCHANTABILITY, FREE OF DEFECTS, FITNESS 
+    FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD
+    PARTY RIGHTS. NEITHER HEAVENTOOLS NOR ANYONE ELSE WHO
+    HAS BEEN INVOLVED IN THE CREATION, PRODUCTION, OR 
+    DELIVERY OF THIS SOFTWARE SHALL BE LIABLE FOR ANY INDIRECT,
+    CONSEQUENTIAL, SPECIAL, OR INCIDENTAL DAMAGES (INCLUDING,
+    WITHOUT LIMITATIONS, DAMAGES FOR LOSS OF BUSINESS PROFITS,
+    BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, 
+    DATA LOSS, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF
+    THE USE OR INABILITY TO USE SUCH SOFTWARE, EVEN IF 
+    HEAVENTOOLS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+    DAMAGES OR CLAIMS. THE PERSON USING THE SOFTWARE BEARS
+    ALL RISK AS TO THE QUALITY AND PERFORMANCE OF THE
+    SOFTWARE. SHOULD THE SOFTWARE PROVE DEFECTIVE IN ANY
+    RESPECT, YOU AND NOT HEAVENTOOLS OR ITS SUPPLIERS ASSUME
+    THE ENTIRE COST OF ANY SERVICE AND REPAIR.
+
+    SOME JURISDICTIONS DO NOT ALLOW LIMITATION OR EXCLUSION
+    OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE
+    LIMITATIONS OR EXCLUSION MAY NOT APPLY TO YOU TO THE
+    EXTENT THAT LIABILITY IS BY LAW INCAPABLE OF EXCLUSION OR
+    RESTRICTION.
+
+    IN NO EVENT SHALL ANY THEORY OF LIABILITY EXCEED THE
+    LICENSE FEE PAID TO HEAVENTOOLS.
+
+  6. SEVERABILITY. 
+
+    Any term or provision of this Agreement held to be illegal or 
+    unenforceable shall, if possible, be interpreted so as to be construed 
+    as valid, but in any event the validity or enforceability of the 
+    remainder hereof shall not be affected.
+
+  7. NO LIABILITY FOR CONSEQUENTIAL DAMAGES. 
+
+    IN NO EVENT SHALL HEAVENTOOLS OR ITS SUPPLIERS BE LIABLE
+    TO YOU FOR ANY CONSEQUENTIAL, SPECIAL, INCIDENTAL OR
+    INDIRECT DAMAGES OF ANY KIND ARISING OUT OF THE DELIVERY,
+    PERFORMANCE OR USE OF THE SOFTWARE, EVEN IF HEAVENTOOLS
+    HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO
+    EVENT WILL HEAVENTOOLS' LIABILITY FOR ANY CLAIM, WHETHER IN
+    CONTRACT, TORT OR ANY OTHER THEORY OF LIABILITY, EXCEED
+    THE LICENSE FEE PAID BY YOU, IF ANY. HEAVENTOOLS SHALL HAVE
+    NO OBLIGATION TO YOU WITH RESPECT TO ANY CLAIM OF
+    INFRINGEMENT BASED UPON YOUR USE OF THE SOFTWARE IN 
+    COMBINATION, OPERATION OR OTHERWISE WITH THE DATA OR
+    MATERIALS NOT SUPPLIED BY HEAVENTOOLS.
+
+  8. TERMINATION.
+
+    This Agreement and the license granted hereunder will terminate
+    automatically if you fail to comply with the limitations described
+    herein. Upon termination, you must destroy all copies of the SOFTWARE
+    and documentation.
+
+  9. ENTIRE AGREEMENT.
+
+    This EULA (including any addendum or amendment to this EULA which 
+    is included with the Software) is the entire agreement between you 
+    and Heaventools relating to the Software and the support services 
+    (if any) and they supersede all prior or contemporaneous oral or 
+    written communications, proposals and representations with respect 
+    to the Software or any other subject matter covered by this EULA. 
+    To the extent the terms of any Heaventools policies or programs for
+    support services conflict with the terms of this EULA, the terms of 
+    this EULA shall control. If any provision of this EULA is held to be
+    void, invalid, unenforceable or illegal, the other provisions shall
+    continue in full force and effect.
+
+ 10. RESERVED RIGHTS.
+
+    All rights not expressly granted here are reserved to Heaventools
+    and/or the respective authors (listed either in the documentation
+    or within the SOFTWARE).
+
+    Heaventools reserves the right to make exceptions to any of these
+    conditions, or alter these conditions, at any time. However, you
+    may always use these conditions instead of any altered version if
+    you prefer (note that this licence explicitly applies only to one
+    version of the program; therefore, if Heaventools makes new
+    conditions in connection with a future version, you do not then have
+    the right to apply these conditions to that version instead).
+

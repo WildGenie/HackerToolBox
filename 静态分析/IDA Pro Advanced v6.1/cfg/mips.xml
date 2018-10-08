@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ida xmlns:xi="http://www.w3.org/2003/XInclude"
+     xmlns:xpath="http://www.idapro.com/ns/xpath"
+     xmlns:idc="http://www.idapro.com/ns/idc">
+  <templates>
+    <page X="processor_mips_p" title="MIPS Processor Options" subtitle="How would you like the MIPS processor module to analyze the input file?" visible="false">
+      <checkbox variable="/ida/processors/mips/@MIPS_MNEMONIC"            caption="Use mnemonic register names">
+        <help>
+          If checked, IDA will use mnemonic names of the registers,
+          like a0, a1, t0, v0...
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/mips/@MIPS_STRICT"              caption="Strictly adhere to instruction formats">
+        <help>
+          If this option is on, IDA will check that unused fields
+          of instructions are filled by zeroes. If they are not,
+          it will refuse to disassemble the instruction.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/mips/@MIPS_SIMPLIFY"            caption="Simplify instructions">
+        <help>
+          If this option is on, IDA will simplify instructions and replace
+          them by clearer pseudo-instructions.
+          For example,
+
+                  or      r5, r0, r4
+
+          will be replaced by
+
+                  move    r5, r4
+
+          NOTE: the move macro instruction is architecture dependent.
+          For mipsl and mipsb processors, 32-bit macro definition is used.
+          For other processors, 64-bit macro definition is used.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/mips/@MIPS_MACRO"               caption="Use macro instructions">
+        <help>
+          If this option is on, IDA will try to combine several instructions
+          into a macro instruction.
+          For example,
+
+                  lui     r5, 1
+                  ori     r5, 0xA5A5
+
+          will be replaced by
+
+                  li      r5, 0x1A5A5
+
+          This option requires the previous option to be turned on.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/mips/@MIPS_SIMPLIFY_GP"         caption="Simplify $gp expressions">
+        <help>
+          Expressions that use $gp to load addresses will be simplified.
+          For example,
+
+                  lw	   $t9,	(signal_ptr - 0x46D120)($gp)
+
+          will be replaced by
+
+                  la	   $t9,	signal
+
+          This options requires $gp value to be valid.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/mips/@MIPS_MACRO_RESPECT_XREFS" caption="Prudently search for 'lui'">
+        <help>
+          When looking back for the 'lui' instruction,
+          stop when an xrefed instruction is found.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/mips/@MIPS_MACRO_HIDDEN_R1"     caption="Allow hidden $1 modifications">
+        <help>
+          Allow hidden modification of $1 in macros.
+        </help>
+      </checkbox>
+    </page>
+  </templates>
+</ida>

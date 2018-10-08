@@ -1,0 +1,112 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 450, 311
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ZProtect Protection Example"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Code_Confusion",IDC_BUTTON1,16,19,151,14
+    PUSHBUTTON      "Decode_Section_B",IDC_BUTTON2,16,121,151,14
+    PUSHBUTTON      "ZProtect_VM",IDC_BUTTON3,16,36,151,14
+    PUSHBUTTON      "Code_Elimination",IDC_BUTTON4,16,70,151,14
+    PUSHBUTTON      "Decode_onReg",IDC_BUTTON5,16,87,151,14
+    PUSHBUTTON      "Decode_Section_A",IDC_BUTTON6,16,104,151,14
+    PUSHBUTTON      "Decode_onExec",IDC_BUTTON7,16,53,151,14
+    GROUPBOX        "Macros",IDC_STATIC,8,6,170,153
+    PUSHBUTTON      "Decode_Section_C",IDC_BUTTON8,16,138,151,14
+    GROUPBOX        "License APIs",IDC_STATIC,183,6,259,153
+    PUSHBUTTON      "ZP_GetUserName",IDC_BUTTON9,192,17,118,14
+    PUSHBUTTON      "ZP_GetTrialDays",IDC_BUTTON10,192,119,118,14
+    PUSHBUTTON      "ZP_GetExecutionTime",IDC_BUTTON11,192,34,118,14
+    PUSHBUTTON      "ZP_GetTrialTimesLeft",IDC_BUTTON12,192,68,118,14
+    PUSHBUTTON      "ZP_GetTrialDate",IDC_BUTTON13,192,85,118,14
+    PUSHBUTTON      "ZP_GetTrialDateLeft",IDC_BUTTON14,192,102,118,14
+    PUSHBUTTON      "ZP_GetTrialTimes",IDC_BUTTON15,192,51,118,14
+    PUSHBUTTON      "ZP_GetTrialDaysLeft",IDC_BUTTON16,192,136,118,14
+    PUSHBUTTON      "ZP_GetHardwareIDStr",IDC_BUTTON17,316,17,118,14
+    PUSHBUTTON      "ZP_GetRegistrationState",IDC_BUTTON18,316,101,118,14
+    PUSHBUTTON      "ZP_GetHomePageStr",IDC_BUTTON19,316,34,118,14
+    PUSHBUTTON      "ZP_GetKeyBuffer",IDC_BUTTON20,316,51,118,14
+    PUSHBUTTON      "ZP_GetKeyCustomInt",IDC_BUTTON21,316,68,118,14
+    PUSHBUTTON      "ZP_GetKeyCustomStr",IDC_BUTTON22,316,85,118,14
+    GROUPBOX        "Utility APIs",IDC_STATIC,8,167,170,134
+    GROUPBOX        "Script APIs",IDC_STATIC,183,167,259,134
+    PUSHBUTTON      "ZP_CRC32",IDC_BUTTON23,16,180,151,14
+    PUSHBUTTON      "ZP_MD5",IDC_BUTTON24,16,198,151,14
+    PUSHBUTTON      "ZP_DES128",IDC_BUTTON25,16,216,151,14
+    PUSHBUTTON      "ZP_OpenReadOnlyFileMapping",IDC_BUTTON26,16,234,151,14
+    PUSHBUTTON      "ZP_CloseFileMapping",IDC_BUTTON27,16,252,151,14
+    PUSHBUTTON      "ZP_ScpExec",IDC_BUTTON28,192,180,118,14
+    PUSHBUTTON      "ZP_ScpGetGlobal",IDC_BUTTON29,192,198,118,14
+    PUSHBUTTON      "ZP_ScpCall",IDC_BUTTON30,192,216,118,14
+    PUSHBUTTON      "ZP_ScpRegFunc",IDC_BUTTON31,192,234,118,14
+    PUSHBUTTON      "ZP_GetExclusiveGUID",IDC_BUTTON32,16,271,151,14
+END
+
+#endif    // resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

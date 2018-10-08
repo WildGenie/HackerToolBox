@@ -1,0 +1,28 @@
+function main()
+begin
+  var int astep,acnt,vstep,vstart
+
+  set acnt =Q_InputValue("稱эぶ竚",1,150)
+  set astep=Q_InputValue("–砆э竚琌ぶじ(Bytes)",1,150)
+  if Q_ChooseOne("┮Τ竚常ノ计ㄓэ盾","琌,,")=0
+    then begin
+      set vstep=0
+      set vstart=Q_InputValue("稱р硂ㄇ竚эΘぐ或计",99,150)
+    end
+    else begin
+      set vstart=Q_InputValue("ノэ材计琌ぐ或",1,150)
+      set vstep=Q_InputValue("–э计畉ぶ",1,150)
+    end
+  if !Q_IsQuit()
+  then begin
+    Q_CreateSList()
+    Q_SList_Add("function "+Q_GetNextAutoLockFuncName()+"(var int addr)")
+    Q_SList_Add("begin")
+    Q_SList_Add("  var int i")
+    Q_SList_Add("  for set i=1 to "+str(acnt))
+    Q_SList_Add("  writemem(addr+(i-1)*"+str(astep)+",str("+str(vstart)+"+(i-1)*"+str(vstep)+"))")
+    Q_SList_Add("end")
+    Q_SListToAutoLock()
+    Q_FreeSList()
+  end
+end

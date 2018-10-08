@@ -1,0 +1,28 @@
+安装与配置 windbg 的 symbol (符号)
+
+本篇是新手自己写的一点心得.建议新手看看.同时希望前辈多多指教.
+
+写这篇的动机:在网上找了一上午的 windbg 配置符号教程.楞是没找到详细的,都讲的太模糊而且互相抄袭.不适合新手看.终于靠自己的努力弄懂了一点,呵呵写出来新手们分享.
+
+安装与配置 windbg 的 symbol (符号)
+
+第一步 是从 http://www.microsoft.com/ddk/debugging 下载最新版本的 WinDBG，因为符号服务器二进制文件是由 WinDBG 小组开发的。
+
+您将需要检查是否有 WinDBG 更新版本，因为该小组似乎具有相当紧凑的发布日程安排，并且每隔几个月就会发布更新版本。
+
+第二步 双击下载的文件安装 windbg .安装时注意记住安装到那里了.
+
+第三步 windbg 访问符号需要两个文件(SYMSRV.DLL 和 SYMSTORE.EXE)所以添加主 path 环境变量中它们的路径进去,即:你的 windbg 安装目录.
+
+操作方法:在桌面我的电脑点右键--属性--高级--环境变量,在系统变量列表框中找到 path 双击,在变量值最后面加一个分号再把你的安装目录写上.点确定. 
+这一步是告诉 windbg 那两个文件放在什么地方.
+
+第四步 新建一个环境变量_NT_SYMBOL_PATH 值为: SRV*c:\mysymbol* http://msdl.microsoft.com/download/symbols 
+
+操作方法:桌面我的电脑点右键--属性--高级--环境变量 ,点击新建,把上面的变量名和变量值填上.这一步的意思是说告诉 windbg ,我的符号文件存放在c:\mysymbol 中(当然其实里面什么也没有,甚至这个文件夹也不存在,不过没关系,系统找不到的话会给你创建一个,并在上面的网址中去帮你下载符号文件放在里面)
+
+第五步 运行 windbg 打开一个exe文件或者附加到一个进程里去, 你会看到 Symbol search path is: SRV*c:\mysymbol* http://msdl.microsoft.com/download/symbols
+
+打开c盘看到有一个新目录 mysymbol,里面有 windbg 新下载的文件.
+
+恭喜说明配置成功了.

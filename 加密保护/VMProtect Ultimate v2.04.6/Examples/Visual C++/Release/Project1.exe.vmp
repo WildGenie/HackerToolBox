@@ -1,0 +1,28 @@
+[ProjectInfo]
+Count=3
+Options=32768
+AddressSort=0
+VMCodeSectionName=.vmp
+RunParameters=
+ScriptIncludedInCompilation=1
+CheckKernelModeDebugger=0
+CompressionMode=0
+VMExecutorCount=1
+[Folders]
+Count=0
+[Procedures]
+MapAddress0=VMProtectMarker "Test marker"
+NeedCompile0=1
+Options0=1
+CompilationType0=0
+ExtAddressCount0=0
+MapAddress1=string "Correct password"
+NeedCompile1=0
+Options1=1
+CompilationType1=0
+ExtAddressCount1=0
+MapAddress2=string "Incorrect password"
+NeedCompile2=0
+Options2=1
+CompilationType2=0
+ExtAddressCount2=0

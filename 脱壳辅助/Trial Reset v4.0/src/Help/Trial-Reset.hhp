@@ -1,0 +1,24 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Trial-Reset.chm
+Contents file=Trial-Reset.hhc
+Default topic=welcome.htm
+Display compile progress=Yes
+Language=0x409 English (United States)
+Title=Trial-Reset Help
+
+
+[FILES]
+commandline.htm
+edit.htm
+file.htm
+history.htm
+license.htm
+options.htm
+requirements.htm
+shortcut.htm
+supported.htm
+welcome.htm
+
+[INFOTYPES]
+

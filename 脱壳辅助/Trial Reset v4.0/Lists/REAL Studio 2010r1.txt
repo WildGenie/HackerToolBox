@@ -1,0 +1,2 @@
+REAL Studio 2010r1	Reg32Val	HKCU\Software\REALSoftware\REALbasic\Databases\\MySQL
+REAL Studio 2010r1	Reg32Val	HKCR\CLSID\{D0B52978-7841-26AE-EDAB-CA378600AF8D-}\Databases\\MySQL

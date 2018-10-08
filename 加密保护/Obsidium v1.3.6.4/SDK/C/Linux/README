@@ -1,0 +1,27 @@
+This directory contains all the files needed to build the key generation
+library on x86 *nix systems (tested on Debian and OpenBSD/FreeBSD).
+Open the makefile to see how to compile the library.
+A sample program which demonstrates how to load and call the
+library is included as well.
+Run
+make keygen
+to build the shared library and
+make keygen_test
+to build the example program.
+
+Notes:
+- To compile the sample application on BSD based systems,
+  remove the option '-ldl' from the makefile.
+- If you are using an old version of GCC you may have to
+  uncomment the workaround in keygen_lib.cpp
+
+List of included files:
+
+keygen.h                license key generation library header file
+keygen.o                license key generation library object file
+keygen_lib.cpp          library wrapper code
+keygen_lib.h            ""
+libkeygen_test.cpp      sample application
+Makefile                minimalistic makefile to build the library and test program
+sample_project.opf      sample project file used by the sample application
+win.h                   some Windows related definitions

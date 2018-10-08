@@ -1,0 +1,7 @@
+Name: "user"
+Addr1: "here"
+Addr2: "ther"
+Key1: "D54CF04F5A4EB2573A54E5AFA3924A07"
+Key2: "02DD8FB75AEBE8B93C14EEFDF59881D4"
+Chksm: "F7"
+ 

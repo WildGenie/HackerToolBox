@@ -1,0 +1,17 @@
+CharUpperBuffA
+EnableMenuItem
+GetKeyboardLayout
+GetKeyboardState
+GetKeyNameTextA
+GetMenuItemCount
+GetMenuItemID
+GetMenuStringA
+GetProcAddress
+KillTimer
+MapVirtualKeyExA
+MultiByteToWideChar
+ReadProcessMemory
+SetTimer
+ShowWindow
+WideCharToMultiByte
+WriteProcessMemory

@@ -1,0 +1,109 @@
+<html><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+<head><title>Overnimble Localize Plus 1.05</title><style>
+p{text-indent:30pt}
+b{cursor:default;font-weight:normal}
+blockquote{font-family:arial;font-size:10.5pt}
+.Title{font-family:細明体,Arial;font-size:18pt;color:ffff00;text-align:center;background-color:9999ff;filter:Alpha(Opacity=50);cursor:default}
+pre{font-family:Fixedsys;font-size:16pt;color:333399}
+</style></head>
+
+<body background="wind.jpg" bgcolor="#d4e8ff" style="font-family:細明体,Arial;margin-left:6%;margin-right:6%;font-size:12pt">
+
+<br><center><table border=1 width=40%><tr><td align="center">
+	<div style="margin-top:10pt;margin-bottom:8pt;text-align:center;height:30pt;filter:shadow(color:#777777,Direction=150);cursor:default">
+	<FONT face=細明体,Arial color=#00ff00 size=6>字串替換器 1.05</FONT>
+</div></td></tr></table></center><br><br>
+
+<center><table border=0 width="100%" height="42pt"><tr><td class="Title">簡介</td></tr></table></center>
+<p><br></p>
+<p>本軟体是一個本地化工具，主要用於非資源格式的本地化工作，支援的种類包括非資源格式的 C 編譯的程式中的 ASCII 字串和 UniCode 字串、非資源格式的 Delphi<font color="#008888">（C++ Builder）</font>編譯的程式的字串、VB 編譯的程式的字串、純文字格式的字串等的提取及替換。同時它還擁有方便的版本升級功能、字典處理功能，使您在翻譯新版本時事半功倍。本軟体提供英文、簡體中文和繁體中文三种語言選擇，并且您也可以很方便的添加對其它語言的支援。
+<p>Win98/Me/2000 可以直接執行本軟体，Win95/NT4 需要安裝 VB5 動態連結程式庫。你可以在微軟的站點 <a href="http://download.microsoft.com/download/vb50pro/Utility/1/WIN98/EN-US/MSVBVM50.EXE">MSVBVM50.EXE</a> 或者我們的站點 <a href="http://www.overnimble.com/download/MSVBVM50.EXE">MSVBVM50.EXE</a> 下載它。
+<p><br></p><br>
+
+<center><table border=0 width="100%" height="42pt"><tr><td class="Title">使用方法</td></tr></table></center>
+<p><br></p>
+<p>本軟体主要用於非資源格式的本地化工作，對於資源格式的本地化工作，雖然也可以使用本工具處理，但因為無法做到大於源字串的替換，所以推荐使用其它一些工具<font color="#008888">（如 Visual C++、ResHacker 等）</font>處理。
+<p>本軟体的每一個界面上都有一段說明，在使用其功能之前，請先閱讀這些說明。
+<p>對於所有的功能，其中所說的「對照檔案」和「字典檔案」都忽略空行，所以可以隨意添加空行，不過只有空白字元的行不被視為空行，而「對照檔案」中的其它行以如下格式重复：
+<pre>
+            偏移量:源字串
+            修改後的字串
+</pre>
+<p>「偏移量」用十進制表示，一般應由程式自行填寫，使用者不要再做修改；「源字串」也一樣由程式自行填寫，使用者也不要再做修改。
+<p>而「字典檔案」中的其它行以如下格式重复：
+<pre>
+            源字串
+            修改後的字串
+</pre>
+<p>同樣的，「源字串」也由程式自行填寫，使用者不要再做修改。<p>另外，所有對可執行檔案進行的替換工作，都不能進行長於源字串的替換，如果修改後的字串長於源字串，本程式將自動剪裁以便和源字串長度相同。如果短於源字串，將會以十六進制數「00」或空白字元<font color="#008888">（在「替換字串」界面上選擇「多余補空白字元」）</font>填充空余。
+<p>對於 VB 和 Delphi 編譯的程式，因為有字串長度計數器，所以使用其專用功能不僅能提高查找的准确性，而且替換後的程式的相容性也會更好，故推荐對於它們使用其專用的查找和替換功能。
+<p>本工具約定，VB 格式的 UniCode 的對照檔案的副檔名是「.txt」，Delphi 格式的 ASCII 對照檔案的副檔名是「.d.txt」， UniCode 格式的對照檔案的副檔名是「.u.txt」，而 ASCII 格式的對照檔案的副檔名是「.a.txt」。這四种對照檔案的格式完全相同。程式會根据所選檔名判斷它的類型，雖然使用者仍然可以變更類型，不過還是建議使用約定的副檔名。
+<p>因為本程式在替換的時候做源字串的檢測，所以選錯類型一般不會造成不可挽回的後果，不過還是慎重為好。
+<p>對於 UniCode 和 ASCII 的查找，并沒有前置碼作為判斷標志，所以如果一個字串的實際長度大於所選的最大長度，則采取右截取的方式。比如實際字串「Text」，而最大長度選擇「3」，則提取此字串為「ext」。    對於內含歸位換行的字串，使用替換方式進行處理，如下：
+<p>對於內含歸位換行的字串，使用替換方式進行處理，如下：
+<pre>
+            歸位 替換成 \r
+            換行 替換成 \n
+            \    替換成 \\
+            "    替換成 \"
+            Tab  替換成 \t
+</pre>
+<p>「翻譯新版本」時，既可以使用「字典檔案」，也可以使用「對照檔案」。而「對照檔案」可以使用「偏移量方式」的「分割對照檔案」功能得到「字典檔案」。
+<p>本程式查找時沒有進度棒指示進度，不過使用者可以預估查找時間。在 P200 上的測試數据如下：查找 UniCode <font color="#008888">（包括 VB）</font>的速度是 1MB/s ，而查找 ASCII <font color="#008888">（包括 Delhpi）</font>的速度是 0.5MB/s 。
+<p>對於「清除預定義項」,使用者可以自行修改其同目錄下的「PDef.dat」檔案。而對於它，可以使用「翻譯項方式」的分割方式分割對照檔案，把得到的「.2」檔案中想添加的項加入「PDef.dat」即可。不過就我的測試而言，「清除預定義項」的功能對於不特定軟体的效果并不是很顯著，當然了，對於特定的軟体<font color="#008888">（把不需要的項加入了「PDef.dat」的）</font>效果還是不錯的。
+<p>對於 INI 檔案需要註意的是，程式只把第一個字元是「;」的行作為註釋，如果有如「屬性=值;註釋」這樣的行，將把「值;註釋」當作「值」處理。
+<p>繁簡用語替換時，如果使用者的使用界面是簡體中文，則使用 GBK 內碼，如果使用者的使用界面是繁體中文，則使用 BIG5 內碼，分別對應不同的字典檔案，如果本軟体提供的詞匯量不夠的話，可以自行添加。此功能不進行內碼轉換，所以如果需要轉換內碼的話，請配合使用其它軟体。在字典中請盡量使用長的詞匯，這樣可以增加准确性。我測得的替換速度約為 50KB/s <font color="#008888">（字典檔案過大時也會對速度造成影響）</font>。
+<p>使用 VA 方式查找可以增加查找的准确率，使查找到的垃圾字串大為減少，另外，「VA非控制符」、「VA中文(GBK)」、「VA中文(BIG5)」、「VA完全中文」、「VA非保留區」、「VA非限制查找」可以用於其它語系<font color="#008888">（如中文、日文等）</font>的程式的查找，可以用於簡體中文和繁體中文程式的互相轉換，也可以用於對已中文化的程式進行進一步的修改。其中「VA非控制符」表示查找不是控制符的字串，不過也查找歸位換行和 Tab。「VA中文(GBK)」、「VA中文(BIG5)」、「VA完全中文」、「VA非保留區」也同樣查找「英文和符號」。<font color="#008888">（控制符指 ASCII 值小於 32 的符號；保留區是 UniCode 指保留的部分用於擴充的區域。）</font>
+<p>使用 VA 方式查找時有時有重疊項的現象，在替換前需要移除這些項，不過您可以在查找時使用「排除重疊項」讓軟体自行排除這些項。
+<p>對於所有的「VA中文(GBK)」、「VA中文(BIG5)」、「VA完全中文」、「非保留區」、「非控制符」「非限制查找」方式得到的對照檔案，需要使用者自行移除非法項，否則在替換時將會出現錯誤。
+<p>「快捷鍵轉換」方式的「純文字替換」對應「英轉中」時的快捷鍵設置，將「&ampFile」轉換成「File(&ampF)」。
+<p>「能否完成替換」方式的分割合併功能使用兩种新的副檔名：「.ok」和「.not」，分別對應可以完成替換的字串和將會被截斷的字串。請保持這兩個檔案的原始排列順序，只有這樣才能順利完成合併。
+<p><br></p><br>
+
+<center><table border=0 width="100%" height="42pt"><tr><td class="Title">版本延革</td></tr></table></center>
+<p><br></p>
+<p>1.05 版增加「自訂轉換」方式的純文字替換；修改演算法，「繁簡用語轉換」速度大為增加，「翻譯新版本」速度大為增加；修正 ASCII 和 UniCode 如果源字串是中文（或其它非英文語言）時不進行替換的 Bug；增加一個專用的對照檔案編輯器；附帶工具「偏移量轉換器」、「純文字編碼查詢」和「剪貼簿繁簡轉換」。
+<p>1.04 版，「純文字替換」增加「快捷鍵轉換」方式；增加「能否完成替換」方式的分割合併對照檔案功能；增加選項界面。修改「VA模式」的演算法，使其查找大型檔案的速度大為增加。修正兩個 Bug 。
+<p>1.03 版增加查找「VA英文和符號」、「VA中文(GBK)」、「VA中文(BIG5)」、「VA完全中文」、「VA非保留區」、「VA非限制」六种新的 UniCode 查找方式；對於 VA 方式查找增加了「排除重疊項」的選項；增加 FAQs。修正一個 Bug 。
+<p>1.02 版增加查找「VA英文和符號」、「VA非控制符」、「VA非限制查找」三种新的 ASCII 查找方式。對繁體用語進行了部分修改。
+<p>1.01 版增加「冒號格式」的純文字查找替換功能，增加繁簡用語替換的功能<font color="#008888">（亦可用於普通純文字）</font>，對繁體用語進行了修改。
+<p>1.0 版增加「清除預定義項」功能，增加對於 INI 格式的純文字資源的支援，增加了多語言的支援，支援的語言為英語、簡體中文和繁體中文。另外，1.0 版對檔案副檔名做了修改：「.偏移量」改為「.off」；「.奇數行」改為「.1」；「.偶數行」改為「.2」。
+<p>0.94B 修正查找 Delphi 字串時的一個 Bug ，這個 Bug 導致查找到的 Delphi 字串不全。另外，還做了一些小調整。把配置檔案改名為「StrRep.ini」并且把其中的配置項名改為英文，以便在繁體中文 Windows 上執行的時候不會出現一些不必要的麻煩。<font color="#008888">（不過本版仍暫不提供繁體版。）</font>
+<p>0.94 版增加完全的頁面自動轉移支援；增加了對於Delphi 字串的查找替換功能；調整了 VB 字串的對照檔案中的偏移量，原來偏移量指向字串計數器，現在偏移量指向字串本身，以便和其它字串格式統一。<font color="#008888">（本版暫不提供繁體版。）</font>
+<p>0.93 版增加軟体測試、清除重复項目、格式轉換、查找純文字資源、替換純文字資源、查找 VB ASCII 的功能。支援內含歸位換行的字串的查找；支援自訂純文字編輯器；另提供所有功能表的快捷鍵。另外，本版同時提供繁體中文版。
+<p>0.92C 版修正在字串中如果有「J」或「j」的話會出現的錯誤截斷的問題。
+<p>0.92B 版修正寫入 ASCII 的時候出現的錯誤截斷的問題。
+<p>0.92 版增加檔案的拖放支援；增加「多余補空白字元」的替換選項；增加對普通 UniCode 的支援；增加對於 ASCII 的支援。也就是說，現在本工具已經不僅可以查找和替換 VB 程式的字串，其它的程式也一樣可以。
+<p>0.91 版新增翻譯新版本、分割對照檔案、合併對照檔案的功能，增加無限制查找方式，并且對使用者界面進行了很大的改動，對每一种功能都加入了比較詳細的說明。
+<p>0.90 版，本軟体的第一個版本，提供對 VB 編譯的可執行檔案進行字串替換的工作，用以輔助中文化 VB 編寫的程式。
+<p><br></p>
+
+<center><table border=0 width="100%" height="42pt"><tr><td class="Title">關於註冊</td></tr></table></center>
+<p><br></p>
+<p>這是本軟体的註冊版本，未註冊版本有一些功能<font color="#008888">（「VA英文和符號」、「VA非控制符」、「VA中文(GBK)」、「VA中文(BIG5)」、「VA完全中文」、「VA非保留區」、「VA非限制查找」方式的 ASCII 及 UniCode 查找）</font>不能使用。
+<p>要註冊本軟体，請首先訪問<a href="https://www.Qwerks.com/order/buynow.asp?ProductID=3531">購買頁面</a>以便取得您個人的註冊碼。
+<p>對於國內使用者，可以使用新的註冊方法，使用招商銀行一卡通匯款，卡號：0010-28196667，註冊費寄出後，給我發一封 E-Mail，說明你的一卡通賬號，註冊碼會通過 E-Mail 寄回。從2003年3月10日起，起始註冊費人民幣 80 元，以後每月降 2 元，至 30 元止。原則上本方法只用於大陸地區，不過如果如果港台地區的使用者有招商銀行一卡通的話，我也沒有意見的。 :)
+<p><br></p><br>
+
+<center><table border=0 width="100%" height="42pt"><tr><td class="Title">感謝</td></tr></table></center>
+<p><br></p>
+<p>偉：　　bug 報告；一些好的建議。
+<p>乾：　　bug 報告。
+<p>大宇：　一些好的建議。
+<p>阿春：　bug 報告。
+<p>Ronnier:一些好的建議。
+<p>吳佳勳: 一些好的建議。
+<p>其他一些關心本工具的朋友。
+<p>還有你　<font face=Arial>:)</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="42pt"><tr><td class="Title">聯絡方式</td></tr></table></center>
+<center><p><br></p>
+<p>對本軟体有任何意見和建議，請 E-Mail 至：<a href="mailto:support@overnimble.com">support@overnimble.com</a>
+<p>獲得最新版本或我們的其它軟体，請訪問：<a href="http://www.overnimble.com">http://www.overnimble.com</a>
+<p><br></p></center>
+
+<p><center><font style="font-family:Arial;font-size:9pt">CopyRight &copy OverNimble Inc. 2001</font></center></p>
+</body>
+</html>
+

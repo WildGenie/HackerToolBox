@@ -1,0 +1,36 @@
+1.06 rev B, 7 Sep 2005
+ ! HDasm is free now
+
+1.06, 7 Jan 2004
+ + after giving name to the global variable you can go to any instruction that
+   uses this variable
+ * if executable file has multi-language resources, resources for system 
+   language are used
+ * after executing "Redasm" user info is not cleared
+ * fixed bug in deleting the procedure and variable names
+
+1.05, 3 Nov 2003
+ + syntax highlighting
+ + adding comments to code
+ + giving names to the procedures and global variables
+ + ability of clearing jump history
+ + copying to clipboard current line in the references windows 
+   (Ctrl-C, Ctrl-Ins)
+ * the text of disassembled program is not saved automatically on the disk
+   and is generated in real-time when it's required
+ * you can set more than 10 bookmarks, all bookmarks are placed in the list;
+   appearance of bookmarks in text is changed
+ * some settings take effect before pressing "Ok"
+ * selecting text fragment became easier
+ * project file doesn't contain the information received during the
+   disassembling, but just user info; so when opening the project, the 
+   disassembling is repeated
+ * "Enter" works like double-click in the references, bookmarks, procedures and
+   variables lists
+ * in "Goto Address" you can enter addresses without Image Base
+ * little changes
+ 
+1.00, 19 Jul 2003
+ * fixed some bugs
+
+1.00 beta1, 11 Jun 2003

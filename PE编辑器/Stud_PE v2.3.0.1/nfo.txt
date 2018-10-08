@@ -1,0 +1,298 @@
+*******************************************************************************************
+**************Stud_Pe The Portable Executable editor   working status  ********************
+*******************************************************************************************
+                     						   by ChristiG - CGSoftLabs
+
+NOTE:
+Stud_PE does not execute loaded exe in any way, when "looking" at it!
+You won't get infected looking at infected files;
+The only way to run loaded exe is by presing "Test'it" button on bottom of Stud_PE,which 
+will perform Shell exec command;also take care what plugins you use on loaded exe;
+
+v 2.3.0.1 [xx xxx 2006]
+-fixed a bug with imported functions name lenght;
+-added external signature verifier; writed a note about signatures;
+-fixed RVA2RAW for UPACK which has EP inside PE HEADER; now imports are shown fine;
+-this is an intermediate releas ("night build" it comes only with this info); 
+ extract the exe into your previous stud_pe folder;
+
+Note about external signatures:
+-we have 2 kind of signature : 
+	1. relative to entry point (ep_only=true); a number of bytes searched only at a location;
+	2. absolute (ep_only=false); a number of bytes searched in entire file;
+-relative signature can start with an offset (negative or positive) specified by
+ (offset=x , x can be ie. 5 or -7 relative to entry point); in addition the relative
+ signature can start with a number of unknown bytes (?? ?? ?? 3E 45 etc), in this case,
+ the starting number of those bytes will be considered as an positif offset; but remember, 
+ this is only for (ep_only=true);
+
+ Signature rules:-sections with different names; section is ie:"[Name of the Packer v1.0]"
+		 -sections with different signatures; for not wasting time;
+		 -signature bytes must be hex represended (0-9,A-F);
+		 -each signature lenght must be a multiple of 2;
+		 -you can use as separator an empty space between each byte (2 hex char)
+		  for good understanding (like: "signature = 00 A2 3F" , the same as
+		  "signature = 00A23F";
+		 -you can use wildcards as "??" if the byte can be everething inside a signature;
+		 -only relative signatures (ep_only=true) can start with "??";
+
+-when you fix external signatures file, you must fix first!!, section names (otherwise will 
+ have checking mistakes for next verifications!!),then signature correctitude,then overlaping
+ signatures; you will have on clipboard the section's name or signature when an error is 
+ found; just paste it to search box in notepad; if you have multiple sections with the same 
+ name and different signatures, just rename it like mepacker_s1, mepacker_s2 etc.;
+-avoid adding large signature; it will be a time killer; be smart!
+-add signature at the end of the file (EOF) then see if your file is detected, for avoiding 
+ signatures overlaping;
+-the signatures verification is done only for those signatures starting at entry point! for
+ different offsets ( ie signatures starting with "?? ?? A2" etc. or offset=x) the code it 
+ becomes to complicate, so it is easy to add those signatures at the EOF and see if it works;
+-what is overlapping: look next 2 signatures "EB 02 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? F6" and
+ "EB 02 ?? ?? EB 02"; it covers the same range of bytes; the short one is covered by longest;
+ in this case you may escape a packer because of this, depending of which is searched first;
+ it's recommended to put the longest first;
+
+v 2.2.0.5 [19 mar 2006]
+-Open Folder option in Procs list;
+-fixed dos header word array - 10x TQN;
+-fixed showing wrong signature searching time on PEs with EP 0 - 10x marciano;
+-removed a validity check..some packed with asprot files didn't show any res dir;
+-it now shows the forwarder exports;
+-TLS table editor/viewer;
+-new option in hexeditor :select up to 4 bytes the from menu -> GoToRAW GoToRVA GoToVA;
+-option to view what is the virtual address of slected byte in hexeditor;
+-"Mark Sel"ection inside hexeditor;
+-"History" of recent Blocks of data viewed inside hexeditor;
+-it will see imports like upack imports (names inside header);
+
+v 2.1.0.1 [19 mar 2005]
+-unlocked scrollbars on "sections" tabpage;
+-fixed a bug,not showing some sections characteristics flags on win98;
+-icons are showed now in "Procs" list om win98 too;
+-fixed cursor position on RVA to RAW edit controls;
+-a little windows arrangement when "Basic tree view";
+-fixed a bug when operating on PEs with DOS stub modified...Stud_PE was showing DOS instead PE;
+-fixed a bug when EP of loaded exe was in the last few bytes of a section;
+-fixed a bug inside scanning engine -> crash when scanning some files;
+-more bugfixes in Resource TabPage;
+-options to decompile dialog resources;
+Remember! : press Esc to close dialogs generated from resources;
+-some dialog windows won't be created from resources;select decompile options;
+it seems to be a strange behaviour because if you check that,the dialogs will be now visible;
+-fixed a bug on "Dump section" on Tab "Sections";
+-some changes in "Headers" tab;support for Characteristics field;
+-new option in HexEditor,view current location relative to file offset,not only to start of data loaded in hexeditor;
+-Relocations viewer;
+-"GoHex" option in Virtual2Raw window;you can navigate in hexeditor to a speciffic raw offset from there,just select "File Offset";
+-small fix on Add NewSection;highRVA is searched for new section;
+-chunck support (at the eof) when add/delete new section;
+-"Delete Section" option on tab "Sections";
+-tab "Sections" will show now extra data (if) found at the end of the file;
+-fixed adding/deleting sections on packed exe files, in which sections are not aligned in rawdata order (like petite does);
+also chunck data on these exes is preserved after adding/deleting sections;
+-CheckSum calculator for corresponding header field;
+-SizeOfHeaders direct editbox + compare real/header;option to enlarge SizeofHeaders,rawsize of each section is automatically increased;
+(note: the max SizeOfHeaders is 0x1000)
+-"Delete Section" will delete also ExtraDat..if selected;
+-"GoTo Export Section" option in tab "Functions";
+-delete section by the (file.aligned)->rawsize...to delete the entire section,for sections where raw is non_aligned to file alignment;
+-fixed a bug when saving exports dir size;
+-"GoTo Function Start" on exported functions (0x500 bytes from function start);
+-Plugin support based on PEiD sdk;so Stud_PE plugins will be supported by PEid also;
+-the plugins dir must be named "Plugins" inside Stud_PE root dir;
+Note: to use PEiD plugins you must enable "Identify as PEiD" option;
+
+Note:
+-resource viewer won't show all resources (if one resource exist in more than one language);
+so when updating resources only first resource is preserved;
+
+v 2.0.0.1 [13 jan 2005]
+-"View as text" for FileCompare dialog;
+-when selected "External DB" on Signature Tab...ListCtrl will be filled up with packerz name..and number of signatures will be shown;
+-updated external signature database up to 120 new signs;
+-fixed some linker warnings;
+-performed a dump of iexplore.exe on xp sp2..and noticed that it runs..in compatibility mode :)) version "Side - by - side";
+-fixed a bug in packer search engine;
+-fixed a bug introduced in previous version when selecting to GoTo EP in Sections popup menu;
+-Stud_Pe has now support for Dos files;View/Edit Dos header in HexEditor;
+-CompareFiles supports DOS files only in binary mode;
+-option to add another tool [ie: dosfile signature scanner];
+for Gtui (http://philip.helger.com/gt/) file format analyzer  the cmd line is " * /wf";
+-added link to this file in "Help" menu;
+
+v 1.9.0.0 [26 december 2004]
+-added support for external file signatures;
+-the external database is used in exclusion with internal one;so when you check "external db" internal search will not be performed;
+-see packsig.txt for syntax;
+-you must use "Hard" mode detection,for searching signatures that are not at the EntryPoint but in all the file;
+-added option to copy to clipboard packer text;
+-you can see now, how much time search takes..in miliseconds;
+-more options in FileCompare Dialog;hope will help someone finding signatures at EntryPoint;
+-added option in TaskList popup menu, to search for a process on google;
+-aboutbox shows last build date;
+-Import/Export functions can now be viewed as text in a little dialog;also,copy selected item text in popup menu;Show/hide panels now will expand the remaining one;
+-"View as Txt" options in popup menu ->Sections;
+
+24 december 2004
+-version 1.8.2;
+-a bug not showing rightly file signature;this bug was introduced in one of 1.8.0 builds;
+
+8 october 2004
+-fixed a bug related to WinXP sp2;Choosing to open a file from Shell menu Stud_PE report "file not found";
+
+15 april 2003
+-a bugfix when analyzing exported functions..some null pointers;
+
+3 february 2003
+-more bugfixes;
+
+5 december 2002
+-all settings saved to ini(if win9x) registry(winNt);
+-added option to configure an external HexEditor;
+-GoTo EntryPoint added to Sections Tab;
+
+4 december 2002
+-file compare ready...for the moment;
+-file offset to rva..;
+-MRU;
+-version 1.7 beta out;
+
+3 december 2002
+-UpdateResource uses now mslu finaly fixed dll..
+
+18 september 2002
+-bugfixed dump section;
+-hand over tab;
+
+12 september 2002
+-cursor over tab ;)
+
+8 september 2002
+-more gui & Procs;
+
+5 september 2002
+-fixed a lot fo bugs..mem leaks and stuff;
+-nasty bug detected/fixed when trying to display (corrupted) dialog resources (win9x blue screen..lol);
+
+4 september 2002
+-Process viewer...dumper;
+-i'm working to provide users with an interface to search/add new packer signatures;
+
+29 august 2002
+-fixed functions for deleting resources on win2k..(not deleting some string type/name resources);
+-fixes on UpdateResource9x() and resource dislpay routine;
+
+22 august 2002
+-yesterday i've lost the boot loader partition of my hdd...and for 24h because my latest backup was damaged (damn easy cd creator!) i was a ded person;
+-but miracle...my brother fix it manualy..and now all my projects are safe..and i'm still coding;
+-UpdateResource for win9x... :) from codeguru sample...fix some buggies on that sample;on win2k still using that damn unfinished Kernel32!UpdateResource()
+...u can see the diffrences;now StudPe can add/delete/replace resource on win9x;There are some limitations:the resource dir must be the last(raw and rva)
+(tips: standard files u can strip reloc) that dir is enlarging if add more resources;if the size of that .rsrc 
+dir fits in the original size(deleting or adding small resources) the update will work;
+-the UpdateResource it will not work for sure on packed exes :(..
+
+8 august 2002
+-fixed a bug when dropdown a file over Stud_PE;
+-finished Delete_Resource function;
+-Replace_Resource done;support Ico/Bmp files ...for beginning; 
+-fix a bug caused by exports with name more than 128 characters;
+-discovered .dll's with EP==0...;p
+
+7 august 2002
+-some workaround at ResourceUpdate functions;figured out how VisualStudio use that function to delete a resource,because the thing with lpData==NULL suckz;
+now delete resource works fine :)
+-updated PackerSignature database up to 303..from peid 0.8;
+
+11 mai 2002
+-detectie cand se dragheaza  .lnk peste icoana;
+-avansez cu descoperirile in UpdateResource ;pp
+
+10 mai 2002
+-de vo 2 zile lucru la AddNewResource;pe win2k incepe sa mearga insa pe w98 apar neste erori mai ales cand adaug resurse cu type string;
+-am lucrat la o clasa derivata din CEdit..pentru controalele din AddNewRes wnd;
+
+29 aprilie 2002
+-fix la show exportz care nu aveau nume...descoperit cand am uncercat sa vad wininet.dll;
+
+27 aprilie 2002
+-bitmap preview;
+-save as .bin;
+-detectie pentru .bmp .jpg .gif;
+
+26 aprilie 2002
+-refacut neste functzii pe la resurse;
+-se pot salva dialoagele si bitmapurile;
+
+22 aprilie 2002
+-inceput lucrul la un file_compare,si am terminat comparatia binara;mai trebe cea PE;
+
+21 aprilie 2002
+-fix add_import on pklite compressed pe (cand raw_offset pentru prima sectiune< headers_size..dar progul foloseste baytzii din diferentza);
+-save in tabul de Headere...se pot modifica tote valorile..bineintzele inafara de cele raw..care sunt calculate si afisate special pentru orientare intr-un hexeditor;
+
+20 aprilie 2002
+-fix dropdawn target cand peste prog erau dragate shortcuturi;
+-goto import_start/thunk_start...cand meniu popup;
+-show/hide import/export tree;
+-se poate selecta care sir de pointeri (characteristicz/IAT)duce la importuri;
+-pentru fiecare import..adaugat raw-urile la Imagini(Thunk->/ImportByName->);
+
+15 aprilie 2002
+-fix..cateodata in exeuri daca aparea tipul resursei ca numar (pentru o resursa nonstandard)..resursa nu era aratata corect in tree;
+Regula: 
+	1.folder cu o dunga rosie==ResourceType este tip string
+	2.folder cu o dunga verde==ResourceType este tip numar
+-bug..unele dialoage nu sunt aratate..?!! nustiu dece..o sa vad mai incolo;gata am descoperit:CreateIndirect(..)nu accepta DLGTEMPLATEEX;
+-import function adder...la sectiunea functzii;functziile noi sunt introduse intr-o noua sectiune;
+-suporta drag'n'drop direct pe icoana;
+
+14 aprilie 2002
+-save as .res hmmmmmm  dupa o zi de munca...lol e putin diferita de structura unui ico;inca mai am de codat pentru a exporta un intreg director 
+de resurse..sau chiar toate resursele;si inca de codat pentru a exporta un grup de icoane,cursoare;
+
+13 aprilie 2002
+-adaugat suport pentru resursele non-standard,care acum sunt aratate cu un folder marcat cu o bara rosie;
+
+12-aprilie 2002
+-drag'n'drop added;
+-resursele dialoag apar la selectare..:);
+-Armadillo sig..interfera cu vo cateva alte semnaturi..asa ca am renuntzat la ea ..pana ii bag si alte constrangeri..aka section characteristicz..etc..;
+ma gandesc la o baza de date acces pentru semnaturi..care sa poata fi updatata..manual..sau din alta baza..:)
+
+11-aprilie 2002
+-gata cu add sectiune noua;
+-save ico/cur;
+-fix..cursoarelor erau afisata cu o marime gresita;
+
+9-aprilie 2002
+-analize..in meniu click dreapta pe sectiuni;
+-add newsection..aproape gata in meniu click dreapta;
+-added packer sig..Armadillo;
+
+7-aprilie 2002
+-dump section added;
+-icon 4 ep in lista sectiunilor;
+
+5-aprilie 2002
+-detecteaza 227 packere/cript/viri.compilere;
+-some bugz fixes;
+
+28-martie 2002
+-adaugat metoda 2 de gasire a resurselor(ico/cur) cand exele e packed;
+-inlataurat o constrangere care verifica  pDosHdr->e_lfarlc < 0x40...;
+-integrat in sell la click dreapta pe exe,dll...hmm am cautat ceva pana am descoperit cum se face...si apiul GetCommandLine;
+-reparat un bug cand se vedeau exeuri cu dos_headerele mici..si adaugat niste restrictii in plus la resursele ce nu exista;
+-lol..cel mai kool revers de l-am facut..o zi mi-a luat sa ripuiesc baza de date cu semnaturi de packere din peid;
+-n-am mai avut rabdare sa codez keile ptru registru asa ca n-au aninstal..deci trebe sterse manual..:)
+
+27-martie 2002
+-am inceput acest nfo..pentru ca proiectul capata proportii;
+-.ico si .cur sunt aratate acum corect in cadran (le-am centrat);
+-adaugat Rva(Adresa Virtuala Relativa la Imagebase) la selectare unei resurse...si posibilitatea de a salva din HexViewer in PE;
+-"advanced tree in hex"..acum inainteaza editorului destule date pentru a putea modifica PE-ul;
+-cand se trece mouse-ul peste imagine...aceasta "se agatza" de el;
+
+download here:
+http://www.cgsoftlabs.ro
+discussion forum:
+http://makephpbb.com/phpbb/index.php?mforum=cgsoftlabs

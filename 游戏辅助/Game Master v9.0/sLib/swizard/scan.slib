@@ -1,0 +1,41 @@
+function main()
+begin
+  var str atarget,astart,aend,amodify
+
+  set atarget=Q_InputText("想搜尋出來並作修改的目標？","",250)
+  if Q_ChooseOne("請選擇自動搜尋的範圍：","常用區(00000000h-10000000h),全視窗軟件區(00000000h-7FFF0000h),")=0
+  then begin
+    set astart="00000000"
+    set aend  ="10000000"
+  end
+  else begin
+    set astart="00000000"
+    set aend  ="7FFF0000"
+  end
+  set amodify=Q_InputText("想把這目標修改成？","",250)
+
+  if !Q_IsQuit()
+  then begin
+    Q_CreateSList()
+    Q_SList_Add("function "+Q_GetNextAutoLockFuncName()+"(var int addr)")
+    Q_SList_Add("begin")
+    Q_SList_Add("    var str target")
+    Q_SList_Add("    var int answer")
+    Q_SList_Add("                  ")
+    Q_SList_Add("    set target="""+atarget+"""")
+    Q_SList_Add("    Scanclear()")
+    Q_SList_Add("    Scanquick(1)")
+    Q_SList_Add("                  ")
+    Q_SList_Add("    // If you know the result's last digit, enable this line")
+    Q_SList_Add("    // scanlastdigit(0)")    
+    Q_SList_Add("    Scanlimit(1)")
+    Q_SList_Add("    if ScanMem(target,hextoint("""+astart+"""),hextoint("""+aend+"""),addr(""answer""),1)>0")
+    Q_SList_Add("    then begin")
+    Q_SList_Add("      writemem(answer, """+amodify+""")")
+    Q_SList_Add("    end")
+    Q_SList_Add("end")
+    Q_SListToAutoLock()
+    Q_FreeSList()
+  end
+
+end

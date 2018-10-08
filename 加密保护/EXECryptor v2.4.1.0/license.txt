@@ -1,0 +1,22 @@
+This is a legal Agreement between you (either an single individual or an entity, herein referred to as Licensee) and SoftComplete Development (herein after referred to as Licensor). By installing this software (herein after referred to as Product), you indicate your acceptance of this Agreement.
+
+SOFTCOMPLETE DEVELOPMENT EVALUATION LICENSE AGREEMENT 
+
+1. GRANT OF LICENSE. 
+
+1.1 Licensor grants you a non-exclusive royalty-free license to make as many copies of the Product accompanying this agreement as you want, solely to test and to evaluate the Product before you make the decision to purchase the Product.
+
+1.2 You may use the accompanying Product free of charge for a period of 30 days for the sole purpose of evaluating the Product. If, after 30 days, you wish to continue using this Product, you are required to purchase it. In other case, you are required to remove this Product, in its entirety, from all computers on which it is installed. 
+
+1.3 You shall not use, copy, rent, lease, sell, modify, decompile, disassemble, otherwise reverse engineer, or transfer the Product except as provided in this Agreement. Any such unauthorized use shall result in immediate and automatic termination of this Agreement.
+
+1.4 You may transfer and distribute the Product in its unmodified form via electronic means to another persons so long as their use of the Product will be strictly for the purpose of evaluation.
+
+1.5 You are specifically prohibited from charging, or requesting donations for copies of the Product, distributing the Product with any other products without Licensors prior written permission.
+
+1.6 Using Software for obscure all kind of viruses, trojans, spyware, malicious ware or other software activated unknown and/or unwillingly to users on their computers is strongly PROHIBITED!
+
+2. WARRANTY AND LIMITATION OF LIABILITY.
+
+The Licensor hereby disclaims all warranties of any kind relating to the Product, whether express or implied, including without limitation any implied warranties of merchantability or fitness for a particular purpose. The Licensee must assume the entire risk of using the Product.
+

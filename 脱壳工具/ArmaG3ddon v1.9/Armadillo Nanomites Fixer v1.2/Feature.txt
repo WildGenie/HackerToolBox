@@ -1,0 +1,10 @@
+Features of Armadillo Nanomites Fixer
+
+- Detect all Nanomites in an Armadillo protected program.
+- Patch Nanomites directly to the dumped file.
+- Increase the speed of searching for nanomites.
+- Fix a problem in Nanolib.dll of Admiral's NanoSearchEngine
+- No more child process needed for searching Nanomites
+( it can read from a dumped and fixed file )
+- Create a log of all Nanomites a *.txt file.
+- Patch Nanomites to a child process before dump.  

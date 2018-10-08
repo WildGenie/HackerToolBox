@@ -1,0 +1,15 @@
+Windows Registry (Wide)
+NT
+###########################################################
+advapi32.dll,RegOpenKeyW
+advapi32.dll,RegOpenKeyExW
+advapi32.dll,RegQueryValueW
+advapi32.dll,RegQueryValueExW
+advapi32.dll,RegSetValueW
+advapi32.dll,RegSetValueExW
+advapi32.dll,RegCreateKeyW
+advapi32.dll,RegCreateKeyExW
+advapi32.dll,RegCloseKey
+advapi32.dll,RegDeleteKeyW
+advapi32.dll,RegDeleteValueW
+advapi32.dll,RegConnectRegistryW

@@ -1,0 +1,10 @@
+Windows Socket 1 
+NT
+###########################################################
+wsock32.dll,send
+wsock32.dll,recv
+wsock32.dll,sendto
+wsock32.dll,recvfrom
+wsock32.dll,WSARecvEx
+wsock32.dll,socket
+wsock32.dll,WSAStartup

@@ -1,0 +1,13 @@
+Windows 7下很多内核的数据结构都变掉了，比如EPROCESS的偏移。
+
+欲使用WinDbg进行内核调试，做几件事情
+
+1、运行 bcdedit -debug on 开启调试，需要重启生效
+
+2、到http://www.microsoft.com/whdc/devtools/debugging/symbolpkg.mspx 下载符号包
+
+Windows 7 RC x86 retail symbols, all languages
+
+3、添加环境变量 _NT_SYMBOL_PATH    值为符号包的安装路径
+
+以管理员身份运行WinDbg就能进行7的内核调试了

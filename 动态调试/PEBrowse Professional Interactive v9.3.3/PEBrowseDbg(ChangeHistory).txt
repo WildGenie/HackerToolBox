@@ -1,0 +1,432 @@
+V 7.8.4
+
+- Check for button press outside of Register display listbox count.
+- Fixed invalid index value after a failed search in Structure and ILDisassembly displays.
+- Changed "COM Runtime" to "CLR Header" in directory displays
+- Added library name to table identifier in imports structure
+- Corrected stack display crash when the number of items in the listbox was 0.
+- Change process information caption to reflect displayed tabsheet.
+- Use the existing caption to seed the caption change dialogbox.
+- Add debug symbols to edit menu items.
+- Always display the local variables listbox (since hiding it disables the splitter -- for some unknown reason.)
+- Fix crash in exception handler display.
+- Flip accelerators for adjusting the disassembly start 1 or 16 bytes.
+- Change offset displays when dumping the ESP register.
+- Added address hint to disassembly, memory dump, and stackwalk windows.
+- Free buffer used in SymInitialize processing.
+- Fix for variable displays that exceed MAX_TEXTSIZE.
+- Added check for string size before adding to string-lists.
+- Fixed disassembly menu item when no stack address is selected.  Added cursor hour-glass when walking the critical section list.
+- Fixed invalid index value after a failed search.
+
+Changes since V 7.8.4
+- Clean up GUI flaws with menu item display and call statement display.
+- Do not add a stack frame item when the return address is zero.
+- Enable/disable menu items in stack, register, and process information displays if the address is available or not.
+- Added profiler progid default.
+- Changed default settings that were true to false; changed tests in the code to handle this - NOTE: THIS WILL CHANGE ANY SAVED SETTINGS.
+- Deleting default XML file installation.
+- Removed index and button display from XML file settings.  Also, made certain the default profiler is the default when none was specified in the XML settings.
+- Removed index and button display from the XML settings file.  Added a dialogbox when it has been determined that the .NET profiler has not been enabled.
+
+Changes since V 7.8.5
+- Filter out processes that are already being debugged.
+- Correct display address when dumping resources.
+- Added in the memory dump window the option to set a new zero-base.
+- Expanded size of thread listbox and added thread id display with both decimal and hex values.
+- Added delay-load entries to import node.
+
+Changes since V 7.8.6
+- Reworked session management creation including the ability load already existing session files and to unload modules.
+- Display the fully qualified node text in the memory dump and debug type detail displays.
+- Fixed crash while copying JIT events to the clipboard.
+- Changed BreakpointOnMain to match the undecorated symbol name.
+- Added an option to strip the fully qualifed path from the JIT events display.
+- Improved the user-object display in process information.
+
+Changes since V 7.9
+- Enabled jump target highlighting.
+- DbgHelp V.6.4.4.3 now included in installation script.
+
+Changes since V 7.9.1
+- Changed local variables display from listbox to stringgrid control.
+- Added stackframe comment in memory display.
+- Changed local variable display when the request is force variable display.
+- Added breakpoint on process initialization option.
+- Added Image File Execution Options manager menuitem for adding Debugger keyvalue.
+- Added break on process shutdown option.
+
+Changes since V 7.10
+- Corrected display error interpreting the flag values in the EFLAGS register.
+- Include debug symbols in structure displays.
+- Fixed various memory display problems: inverted stack positioning and labelling.
+
+Changes since V 7.10.1
+- Corrected crash in error and window messages search when repeating the search after a not found message.
+- Changed default value for forcing local variable display to true.
+- Fixed display of missing local variable names when there is an intervening jump statement to the routine.
+- Fixed crashes related to debugging .NET emitted code.
+
+Changes since V 7.10.3
+- Additional file information displayed.
+- Added support for DebugActiveProcessStop.
+- Enabled/fixed debug return from even when the next frame is not standard.
+- Fixed "blinking" display update of thread and stack items.
+
+Changes since V 7.11
+- Added counters tabsheet in process information display.
+
+Changes since V 7.12
+- Preserve positioning after refresh of memory display when debugger has stopped.
+- Clear memory dump window when unable to refresh the display.
+- Clear edits in start debugging dialogbox before displaying the dialogbox.
+- Include extensions to heaps when displaying heap information.
+
+Changes since V 7.12.1
+- Restored color highlighting when memory contents changes.
+
+Changes since V 7.12.2
+- Corrected bug in initial display of main executables treeview items.
+- Added opcode explanation display in disassembly statusbar when a line is selected.
+
+Changes since V 7.13
+- Adjust position in disassembly window when the requested address is different than the starting address.
+- Added minidump generation.
+
+Changes since V 7.14
+- Added intelligent JE/JZ displays.
+- Two new options - OutputDebugString display and beep debug event toggles.
+- Fixed an annoying "flicker" in the variables display while single-stepping through code.
+
+Changes since V 7.15
+- Cleaned up toolbar "flickering".
+- Enhancements to CLR Header structure display including the display of all metadata in its raw format.
+
+Changes since V 7.16
+- Added new analyze disable option.
+- Relaxing restriction on modifying a register's content.
+- Added new region attributes modification dialogbox.
+
+Changes since V 7.16.1
+- Added EFlags toggle option.
+
+Changes since V 7.18
+- Added execution path logging and display.
+
+Changes since V 7.19
+- Added extended analysis option.
+- Added refresh menu item to the registers display.
+- Improved memory modify dialogbox.
+- Changed EFlags dialogbox from listbox to checkboxes.
+
+Changes since V 7.20
+- Added one-time breakpoint option.
+- Restored broken pin functionality.
+- Allowed for the case where the debuggee has moved and one wants to use the session information.
+
+Changes since V 7.21
+- Added interesting PE-address list and return a string if an address is found in this list.
+- Changed the way the execution path log works to record each statement with a visit count; made this an option in the settings.
+- Added auto-refresh and clear option to execution path display; preserving display size in session file.
+- Added status displays to memory dump window.
+- Added save to file option for trace output.
+- Change cursor when tracing.
+- Added index refresh status notification.
+- Added modification of memory and register values to event log.
+
+Changes since V 7.22
+
+Changes since V 7.22.1
+- Removed goto listbox and back menu item from memory display.
+- Disable exception suppression when the last exception code is EXCEPTION_SINGLE_STEP or EXCEPTION_BREAKPOINT; fixed analysis mode default.
+
+Changes since V 7.22.2
+- Added disassembly modification dialogbox.
+
+Changes since V 7.23
+- Removed debug footprints option.
+- Removed break on entry-point option; now always break.
+- Bring back local variable display (even when the code has been patched.)
+
+Changes since V 7.23.1
+- Added conditional value (register or memory) breakpoints.
+- Added debug restart menu item.
+- Reposition index selection at last known node after index refresh.
+- Added thread termination option.
+- Added previous disassembly/dump/breakpoint/etc. history listbox to display.
+
+Changes since V 7.24
+- Flipped positions of local variable and disassembly listing displays.
+
+Changes since V 7.25
+- Added color to stack frame displays highlighting non-standard frame items.
+- In messages and displays differentiate between 1st and 2nd chance exceptions.
+- Added new feature in Image Execution File Options manager - user can enter an executable name.
+- Added kernel/user/gdi object totals display.
+- Created an option to display a brief X86 instruction explanation in the disassembly statusbar.
+- Added jump/call preview display.
+
+Changes since V 7.26
+- Added new configuration option - load automatically all or from a pre-selected list debug symbols for modules.
+- Added symbol match option.
+
+Changes since V 7.27
+- Enhanced pending .NET breakpoints - allow the setting of breakpoints on any IL statement.
+
+Changes since V 7.28
+- Option to switch between Microsoft and Borland-style debugging shortcuts.
+
+Changes since V 7.28.1
+- Add option to reset IsDebuggerPresent flag.
+- Added register display configuration options.
+- Added process info display configuration options.
+- Add breakpoints from execution path display.
+
+Changes since V 7.29
+
+Changes since V 7.29.1
+- Added recent node menu item to help navigation in the GC heap treeview display.
+- Added .NET GC heap display refresh option.
+- Fixed stack display when contents change.
+
+Changes since V 7.30
+- Added sort by name or address option in subroutines display.
+
+Changes since V 7.30.1
+- Added support for including user comments in debug log display.
+- Added menu option to exclude paths from breakpoint display.
+- Added thread-specific breakpoints - see setting conditional breakpoints.
+- Displaying date/time and configuration options in log when starting a new session.
+
+Changes since V 7.31
+- Added other processes display to process information.
+- Added heap information search from register and memory dump displays.
+
+Changes since V 7.32
+- Added user-defined symbol capability.
+- Added color highlighting to execution path display.
+
+Changes since V 7.32.1
+
+Changes since V 7.32.2
+- Added in the scratch pad font change menu item.
+- Restore breakpoints when attaching to an active process.
+
+Changes since V 7.32.3
+- Added uninstall support
+- Modified disassembly listing by introducing new code interval indicators.
+- Added popup sort menu items in process information display.
+
+Changes since V 7.33
+- Display section and data directory addresses in the index.
+- Added support for v 2.0 .NET assemblies.
+
+Changes since V 8.0
+- Added Run To menu item in stack frame display.
+- Added source code setting (line & file vs. all).
+- Persist the User-defined structure file selection and reopen it at the start of the next session.
+
+Changes since V 8.0.1
+- Removed code that read and saved (deprecated) settings in the system registry.
+- Display an error message when the settings file could not be created.
+- Added option to load UDS file at session start.
+- Removed redundant data in disassembly engine.
+
+Changes since V 8.0.2
+- Added summary display to trace output.
+- Improved trace output display.
+
+Changes since V 8.0.3
+- Added setting to control display of startup patched warning.
+
+Changes since V 8.1
+- Extensive work on disassembly engine.
+- Added DUMPBIN mode to disassembly display.
+
+Changes since V 8.2
+- Added options to suppress disabled driver and profiler displays at startup.
+- Added _NT_SYMBOL_PATH text file to installation.
+- Improved DIA support.
+- Installation script now creates a shortcut.
+
+Changes since V 8.2.1
+
+Changes since V 8.4
+- Fixed disassembly copy where lines were truncated.
+- Added register context values in execution path display.
+- Fixed process information counters clipboard copy.
+- Breakpoint displays now honor configuration preferences for display hex values.
+- Popup breakpoint menuitem remove all now disabled when no child window has focus.
+- Converted PEFile to VS.NET 2005
+
+Changes since V 8.5
+- Fixed "unknown" module names displayed in the index.
+
+Changes since V 8.5.1
+- Changed message prompts when the driver cannot be loaded at startup.
+- Sort trace summary items by address.
+- Allow user defined NOACCESS page exceptions to continue and to be cleared.
+- Fixed crashes when attaching to processes on multi-cpu systems.
+- Enabled attach even when the driver is not available.
+- Enabled kernel object display when the driver is not available.
+
+Changes since V 8.6
+
+Changes since V 8.6.1
+- Added clear/restore menu items for breakpoint visit counts.
+- Fixed the source of many crashes on startup especially when using IEFO.
+- Save the position and size of stack window in the settings file.
+- Added Pin Frame Address menu item to memory display menus.
+- Fixed bug where startup information from a previous session would "leak" into the current session.
+
+Changes since V 8.6.2
+- Fixed unwanted debugger stop after call statement while in run-to-mode.
+- Added option to persist center stack frame display option.
+- Removed need to request debugger continuation after selecting stop debug.
+- Fixed crash in pending breakpoint item deletion.
+- Fixed crash in stackframes display.
+- Fixed .NET 20 profiler startup.
+- Disabled API help when Vista - Vista does not support Win32Hlp.
+- Handle new Vista32 kernel objects.
+- Fixed missing stackwalk on Vista32 in process information display.
+- Display a message if one attempts to debug a 64-bit executable.
+- Fixed conditional breakpoint thread list display.
+- Updated and added structures to Templates.TXT file.
+- Added message to log when a breakpoint occurs on a different thread.
+
+Changes since V 8.7
+- Improved memory dump display speed and memory consumption.
+- Fixed many bugs in source display within the disassembly window.
+
+Changes since V 8.7.1
+- Updated structure TLS and LoadConfig displays.
+- Added locate return instructions menuitem in disassembly display.
+- Added optional header characteristics field to display and code.
+- Added anti-debug settings to configuration dialog to support overriding of known anti-debugging techniques.
+- Save debug symbol settings in persistent session file.
+
+Changes since V 8.8.1
+- Added view menuitem - allocate new memory region inside debugee.
+- Added two view menuitems - read into and write from selected memory node.
+- Added PEBrowsePro's calltree display.
+- Added PEBrowsePro's chains/links display.
+- Added option to suppress "code is patched" messages.
+- Added command to zero stack area from the current location to the stack limit address.
+- Added copy summary only command.
+- Fixed summary counts/visits bug when changing the sort order.
+- Added persistant settings for the execution log display.
+
+Changes since V 8.9
+- Added read from file and write to file menuitems to memory dump display.
+- Added option in Anti-Debug configuration to NOT handle debugee INT3's automatically.
+- Added option in Anti-Debug configuration to support F1 opcode anti-debug bypass.
+- Added option to suppress automatic display of stack frames.
+- Added option to disable the automatic masking of the trap flag state when the debugger stops.
+- Fix for processes launched via IFEO with spaces in their pathname.
+- Added support for displaying special operations in the execution path log.
+- Added previous execution path display (obtained from session file).
+- Added support to replay of prior execution path log information.
+
+Changes since V 8.10
+- Restricted some menu items while the debugee is active and not stopped by the debugger.
+
+Changes since V 8.10.1
+- Fixed regression bug that disabled support for source code displays.
+
+Changes since V 8.10.2
+- Added restricted operations setting to startup log.
+- Fixed "missing" memory dump entries at frame boundaries in stack display.
+- Added horizontal scrolling in attach to process dialogbox.
+- Removed extra breakpoints perserved in session file after terminating a process - created by runto mode.
+- Added debug menu item to create a breakpoint when a specific DLL is initialized.
+- Restored commandline, startup directory, and additional environment variables persistence in session file.
+- Always display suppressed exceptions in debug log.
+- Fixed bug when newly-minted session files were not added to most recent list.
+- Suppressing statusbar hints when debugger is not stopped.
+- Added support for tracking user-specified values in the registers and memory displays.
+
+Changes since V 8.11
+- Fixed address displays in COM interface display.
+- Fixed synch node in disassembly window.
+- Cleanup of export node display. (Eliminated duplicate ordinal display.)
+- Removed multi-select option from log.
+- Cleanup any lingering handles before starting a new session.
+- Display wide-strings in variables display.
+- Changed default break on INT3 to match other debuggers.
+- Added menu item to hide jump and jump target offsets and addresses.
+- Enhancements and fixes to replay mode and previous execution path display.
+- Better support for moving session files from one machine to another.
+
+Changes since V 8.12
+- Added remove conditional values from breakpoints menuitem.
+- Splashscreen display when refreshing the index.
+- Additional activities now captured in execution log display.
+- Added remove breakpoint conditions menuitem.
+- Refresh breakpoint display when adding memory breakpoints.
+- Added thunk indicator in execution log display.
+- Monitored breakpoints now displayed in a different color.
+- Replay is allowed only when the debugger is stopped.
+- Optionally display DOS, File, Optional Header, Section, Import, and Resource nodes.
+- Changed to more reliable method for locating a process' user objects (one less driver call).
+- Display user objects in Vista.
+- Persist break on DLL load settings.
+- Added process security information to process information display.
+
+Changes since V 8.13
+- Completed display of process security information.
+- Added memory scan option.
+- Fixed debugee process handle leak.
+- Reset breakpoint visit counts when changing conditions.
+
+Changes since V 8.13.1
+- Identified two more memory areas in a process.
+- Added more memory labels to stack/memory displays.
+- Various GUI tweaks and fixes.
+
+Changes since V 8.13.2
+- Various GUI tweaks and fixes.
+- Fixed trace mode for Windows 2003 and Vista
+- Structure displays based on an initial register value will now be refreshed using new values in that register.
+- Display additional information in process information - modules display.
+
+
+Changes since V 8.13.3
+- bug fixes
+- upgraded compiler
+
+Changes since V 9.0.0
+- Added ability to attach to a process with a pre-existing session file.
+- Added COM Information display.
+- Enhanced value tracking and added support for three highlighting colors.
+- Several bug fixes.
+- Minor GUI changes.
+- When DLL unloads and has breakpoints, add the breakpoints to pending list.
+
+Changes since V 9.1.0
+- Index font now same as other window displays.
+- Various bug fixes.
+
+Changes since V 9.1.1
+- Various bug fixes.
+- Fixed node sync operation.
+- Driver loaded (if enabled) with first debug session.
+- Windows 7 fixes.
+- Cleanup string displays in debug symbols node.
+- Display returncode from user-selected functions.
+
+Changes since V 9.2
+- fixed broken local variable display
+- various bug fixes
+
+Changes since V 9.3
+- Fixed kernel object display and added missing types in Windows 7
+- Enable thread suspend, resume and terminate while debuggee is not stopped
+- Enable zero-register and call-thru register displays
+- Added dialogbox to minidump creation process
+- Fixed for critical section display on OSes Win2003 and greater.
+- Additional information for more kernel objects.
+- Fixed session files storing incorrect executable names and settings.
+
+Changes since V 9.3.1
+- Added menuitem to display recursion counts in stackframe display.
+- Added more kernel object type security information.

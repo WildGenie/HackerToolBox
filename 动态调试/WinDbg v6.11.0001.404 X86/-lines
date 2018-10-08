@@ -1,0 +1,8 @@
+Opened log file '-lines'
+
+Microsoft (R) Windows Debugger Version 6.11.0001.404 X86
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: c:\out.txt -c "lm;q"
+Cannot execute 'c:\out.txt -c "lm;q"', Win32 error 0n2
+    "œµÕ≥’“≤ªµΩ÷"

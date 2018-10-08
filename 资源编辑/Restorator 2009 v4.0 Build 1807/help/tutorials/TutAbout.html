@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="description" content="Replace a resource with Restorator - the customization, localization, and translation tool">
+	<meta name="keywords" content="replace resource tutorial, localization, translation, editor, windows resources, skins">
+	<link rel="SHORTCUT ICON" href="../../webicon.ico">
+	<title>Replace Resource Tutorial - Restorator - bome.com</title>
+	<link rel="STYLESHEET" type="text/css" href="../../styles.css">
+
+</head>
+<body bgcolor="#E0E0E0" text="#000000" link="#A92C2F" vlink="#991C1F" alink="#505050" leftmargin=3 topmargin=3>
+<table width="100%" class=master_table border="0" cellspacing="4" cellpadding="1">
+<tr>
+<td width="100%">
+
+
+<!-- ]==========[ Content ]==========[ -->
+<!-- Help Header -->
+<table border="0" cellpadding="0" align="right">
+<tr><td align="right" valign="top">
+<a href="../../help/support.html">Help Overview</a><br>
+<a href="../../help/help.html">Manual</a><br>
+<a href="../../help/tutorials.html">Tutorials</a><br>
+<a href="../../help/FAQ.html">FAQ</a><br>
+<a href="../../purchase.html">Purchase</a><br>
+<a href="http://www.bome.com/Restorator/">Restorator Web</a>
+</td></tr></table>
+
+<h1>Restorator<br>
+Replace Resource Tutorial</h1>
+<h2 class=top>Tutorial: Replacing the about graphic of WinXP Notepad</h2>
+
+<p>This tutorial
+shows you how to have some fun: We will replace the <i>About</i> window of
+the calculator, Notepad and other Windows applications !</p>
+<p>Please note
+that these apps are copyrighted programs: you should only modify them
+for your private use.&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="about/dragopen.png" hspace="0"></p>
+<p>Here is another possibility how to open a file: Use Restorator's File
+Browser and type &quot;C:\WINDOWS\SYSTEM32&quot; in the <i>Folder</i> field.</p>
+<p>You can also use the &quot;..&quot; folder in
+the File Browser or the <img src="tool/tooldirup.gif" align="absmiddle"
+width="34" height="28"> button to go to a higher folder.</p>
+<p>Then drag the file <b>shell32.dll</b> with
+the mouse into the Resource Tree.</p>
+<p>We found the location of the about image by using the <i>Grab Resources</i> tool (in the Tools menu)
+and then extracting all images of files in the systems32 folder.</p>
+<p>Another handy tool is the
+Depends application included in Microsoft Visual C++ (it displays all the dll's used by an application).</p>
+<!-- <p>You should make a backup
+copy of the dll before modifying it.</p>-->
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top"><img src="about/splash.png" align="left"></td>
+<td width=10>&nbsp;</td>
+<td width="130">Now look at the Bitmap resources:
+number '131' contains the bitmap that is displayed in the about
+box of Notepad (it be a different number on your system, e.g. 149).</td>
+</tr></table>
+<p>Changing image resources is done in that fashion:</p>
+<ol>
+<li>Extract the resource to disk</li>
+<li>Modify it with another program</li>
+<li>Assign the modified file to the respective resource</li>
+<li>Save to create the custom application</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>1.
+Extract a resource to disk</strong></p>
+<table border="0" cellpadding="0" cellspacing="0" width=800>
+<tr>
+<td valign="top" width="150">The simplest way
+is to drag the resource with the mouse in the File Browser. In this
+example create a folder C:\test where you save the about
+picture 131.
+<p>This will create the file 131.bmp.</p>
+<p>&nbsp;</p>
+</td>
+<td><img src="about/extract.png" align="left"></td>
+</tr></table>
+<p>Alternatively you could use the pop-up menu on the resource
+131 or look in the &quot;Resources&quot; menu.</p>
+<p>This process of saving a resource is called <i>to
+extract a resource</i>.</p>
+<p><strong>2. Modify the resource</strong></p>
+<p>For image editing, you can use the program <a href=
+"http://www.jasc.com/">Paint Shop Pro</a> (or any other image editor like MS Paint).
+Open the image 131.bmp and put a little <i><a href="about/snake.jpg">snake</a></i>
+inside.</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="205">
+<p>The image size and color depth of the image is maintained to
+fit its location.</p>
+<p>&nbsp;</p></td>
+<td><img src="about/131.png"></td>
+</tr></table>
+<p><strong>3.
+Assign the modified file</strong></p>
+<p>Again, this
+is done simplest by dragging the new file on the resource item in the
+Resource Tree.</p>
+<p><img src="about/assign.png" hspace="0"><br>
+This process of replacing
+a resource is called <i>assignment</i>. You can look
+up in the context menu of resource 131 or in the menu &quot;Resources&quot;
+<img src="about/arrow.png" align="left" hspace="0">for other ways of
+assigning a file to a resource.
+When you have successfully assigned a file, the resource icon is marked
+with a small arrow.</p>
+<p>Note that you can also use the Copy/Paste functions to exchange images
+with the image editor.
+</p>
+<p>The undo
+function can be found in the menu &quot;Resources&quot; or the pop-up menu;
+it's called <i>Detach</i>.
+<br clear="all"></p>
+<p><strong>4. Save
+shell32.dll to create the custom application</strong></p>
+<p>Use the menu or
+save button <img src="tool/toolsave.gif" align="absmiddle" width="22"
+height="22">. Reboot.</p>
+<p><strong>Test it
+!</strong></p>
+<p>Finally, look
+at the about box of 'Notepad', 'Calculator' and other
+Windows applications. The snake will be waiting for you.</p>
+<p><img border="0" src="about/about_mod.png"></p>
+<p>See the next tutorial on
+<a href="TutPatch.html">how to create a ResPatcher</a> if you want to share the snake with your
+friends without sending the application or dll.</p>
+<p><a href="../tutorials.html">[Back]</a></p>
+
+
+<!-- ]==========[ Footer ]==========[ -->
+   <div align="center">
+    <hr width="400" align="center" size="4">
+    <font class="copyright">Copyright 1997-2007 by bome.com</font>
+   </div>
+  </td></tr></table>
+ </body>
+</html>

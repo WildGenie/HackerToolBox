@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Strings>
+    <Language Id ="ENG" LId ="0x409" Name="English">
+      <Message Id="MainForm.btnOk" >Ok</Message>
+      <Message Id="MainForm.btnCancel">Cancel</Message>
+      <Message Id="MainForm.errorConnection">Unable to connect to '{0}'!</Message>
+      <Message Id="MainForm.Header">Welcome</Message>
+      <Message Id="MainForm.WebUrl">How to Buy...</Message>
+      <Message Id="MainForm.GetActKey">Get Activation Key</Message>
+      <Message Id="MainForm.ACTitle">Activation Code:</Message>
+      <Message Id="MainForm.ACOptions">Activation Options...</Message>
+      <Message Id="MainForm.Activate">Activate</Message>
+      <Message Id="MainForm.Launch">Launch</Message>
+      <Message Id="MainForm.RunDemo">Try Demo</Message>
+
+      <Message Id="ACOptions.CopyHC">Copy Hardware Code to Clipboard</Message>
+      <Message Id="ACOptions.OpenURL">Open Activation Page in Browser</Message>
+      <Message Id="ACOptions.CopyURL">Copy Activation Link to Clipboard</Message>
+
+      <Message Id="Error.EmptyAC">Please enter your Activation Code</Message>
+      <Message Id="Error.EmptyRN">Please enter your Registration Name</Message>
+      <Message Id="Error.BadAC">Invalid Activation Code</Message>
+      <Message Id="Error.ServerUnavailable">Failed to connect to Activation Server</Message>
+      <Message Id="Error.ServerInvalid">Unexpected server response</Message>
+
+      <Message Id="Server.ServerException">Internal Server error {0}</Message>
+      <Message Id="Server.Internal">Internal Server error {0}</Message>
+
+      <Message Id="Server.ActivationSuccessful">Activation complete</Message>
+
+      <Message Id="Key.InvalidHardware">Key doesn't match this PC</Message>
+      <Message Id="Key.BlacklistedKey">This key is blacklisted</Message>
+      <Message Id="Key.KeyExpired">Activation key has expired</Message>
+      <Message Id="Key.ModeExpired">Software has expired</Message>
+      <Message Id="Key.InvalidActKey">Invalid Activation Code</Message>
+      <Message Id="Key.ActivationComplete">Activation complete</Message>
+
+      <Message Id="Status.ClipboardUrl">Activation URL copied to Clipboard</Message>
+      <Message Id="Status.ClipboardHC">Hardware Code copied to Clipboard</Message>
+      <Message Id="Status.DaysLeft">You have %MODEDAYSLEFT% days left</Message>
+      <Message Id="Status.ExecLeft">You have %MODEEXECLEFT% executions left</Message>
+
+      <Message Id="Status.KeyInformation">Information for %RN%</Message>
+      <Message Id="Status.ModeDays">%MODEDAYSLEFT% days left</Message>
+      <Message Id="Status.ModeExec">%MODEEXECLEFT% executions left</Message>
+      <Message Id="Status.ModeDate">expires on %MODEEXPIREDATE%</Message>
+      <Message Id="Status.KeyDate">key expires on %KEYEXPIREDATE%</Message>
+      <Message Id="Status.InfoSeparator">, </Message>
+
+   </Language>
+
+  </Strings>
+  <Configuration>
+    <Option Name="ActivationURL.Automatic" Value="http://localhost/keygen.exe?rn=%RN%&amp;hc=%HC%"/>
+    <Option Name="ActivationURL.Manual" Value="http://aspack.com"/>
+  </Configuration>
+</root>

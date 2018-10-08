@@ -1,0 +1,49 @@
+
+ ui_name      = English
+ ui_code_page = 1252
+ ui_autor     = SetiSoft (c) Tech (www.setisoft.com)
+
+
+
+ 1  = File
+ 2  = Close
+ 3  = Help
+ 4  = Home Page
+ 5  = About...
+ 6  = Select file
+ 7  = Run! 
+ 8  = Create *.bak file (create copy of origin file)
+ 9  = Action
+ 10 = Clear old resource section (zero fill of old ".rsrc" section)
+ 11 = Simple reconstruct PE file
+ 12 = Fast resource reconstruction
+ 13 = Full resource reconstruction
+ 14 = Create binary resource dump file
+ 15 = Attach binary resource dump to file
+ 16 = Open file
+ 17 = All files|*.*
+ 18 = Applications [*.exe]|*.exe
+ 19 = Librarys [*.dll]|*.dll
+ 20 = [%s] - [%s] (size 0x%x, language 0x%x)
+ 21 = Selected file does not exist !
+ 22 = Error: Can't find resource section !
+ 23 = Address
+ 24 = Enter relative virtual address(rva), to binary data alignment for:
+ 25 = Resource section: 0x%x
+ 26 = Begin resource write
+ 27 = Select resource dump
+ 28 = Resource dump [*.rsrc]|*.rsrc
+ 29 = All files [*.*]|*.*
+ 30 = Resource dump does not select
+ 31 = Enter relative virtual address (rva), to binary data writing for:
+ 32 = All was done !
+ 33 = Delete all resources from file
+ 34 = Dump all resources to dll (from inside of process)
+ 35 = Ready
+ 36 = Error
+ 37 = OK
+ 38 = Cancel
+ 39 = Select
+ 40 = Delete section from file
+ 41 = Load data to section from file
+

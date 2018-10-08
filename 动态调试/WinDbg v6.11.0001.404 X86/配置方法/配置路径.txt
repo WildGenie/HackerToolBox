@@ -1,0 +1,5 @@
+;D:\破解工具箱\动态调试\WinDbg v6.11.0001.404 X86
+
+_NT_SYMBOL_PATH
+
+srv*F:\Temp\Symbol* http://msdl.microsoft.com/download/symbols

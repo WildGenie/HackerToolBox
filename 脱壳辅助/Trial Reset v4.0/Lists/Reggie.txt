@@ -1,0 +1,1 @@
+Reggie	Reg32Key	HKLM\SOFTWARE\Reggie\

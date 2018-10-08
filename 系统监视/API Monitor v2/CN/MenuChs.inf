@@ -1,0 +1,15 @@
+[Version]
+Signature="$CHICAGO$"
+Provider=kajaa@eastday.com, 2002
+
+[DefaultInstall]
+; DelReg=api-monitor-v2-setup-x64.п╤ть_DelReg
+AddReg=api-monitor-v2-setup-x64.п╤ть_AddReg
+
+[api-monitor-v2-setup-x64.п╤ть_DelReg]
+
+[api-monitor-v2-setup-x64.п╤ть_AddReg]
+
+hku,"S-1-5-21-3467944430-882259048-2762802080-500\Software\rohitab.com\API Monitor v2\Options","ApiDirectory",,"C:\Users\Administrator\Desktop\API Monitor\API"
+
+[Strings]

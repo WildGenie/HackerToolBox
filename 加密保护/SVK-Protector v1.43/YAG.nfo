@@ -1,0 +1,37 @@
+                              TEAM YAG presents:
+                              SVK Protector 1.43
+
+
+Release-Date: 2004-09-14
+Program Typ : Protection System
+URL         : http://www.anticracking.sk
+
+
+Release-Notes:
+==============
+
+SVK Protector is a powerful tool offering both software developers and distributors a protection of software products
+against unauthorized copying, use and distribution. SVK Protector was designed with ease of use and high speed as
+a priority without sacrificing high levels of protection. It offers four different methods of protection. In
+addition, it uses RSA algorithm, API functions, new anti-debug tricks, active protection against dumping from
+memory and tracers. For software protection SVK Protector uses registration keys - flexible software licensing
+terms. Support a rich set of licensing terms and create complex ones to satisfy the most demanding customers.
+Licensing offerings to meet individual customers needs. It is really easy to create trial and demo versions that
+expire after a certain number of days or program executions.
+
+This update will solve next problems:
+
+    - fixed DLL files support
+    - added support for encrypted blocks inside of DLL 
+    - added support for DLL files with relocations
+    - fixed problem with Delphi files
+    - added new function Move API calls
+    - whole SVKP's code moved to DLL
+    - fixed some minor bugs
+
+
+
+Install-Notes:
+==============
+
+install & copy the 'svkp.key' from the crack dir to your install dir

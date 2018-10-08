@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?>
+<UpgradeLog>
+<Properties><Property Name="Solution" Value="Proyecto1">
+</Property><Property Name="Solution File" Value="C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Proyecto1.sln">
+</Property><Property Name="User Options File" Value="C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Proyecto1.suo">
+</Property><Property Name="Date" Value="miércoles, 26 de julio de 2006">
+</Property><Property Name="Time" Value="9:48">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Proyecto1.sln" Description="File successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\Proyecto1.sln">
+</Event><Event ErrorLevel="0" Project="" Source="Proyecto1.suo" Description="File successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\Proyecto1.suo">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="Proyecto1.vbproj" Description="Project file successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\Proyecto1.vbproj">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="Proyecto1.vbproj.user" Description="Project user file successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\Proyecto1.vbproj.user">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="AssemblyInfo.vb" Description="File successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="Form1.vb" Description="File successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\Form1.vb">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="Module1.vb" Description="File successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\Module1.vb">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="_UpgradeReport.htm" Description="File successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\_UpgradeReport.htm">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="Form1.resX" Description="File successfully backed up as C:\Oreans Projects\WinLicense Build\WinlicenseSDK\ExamplesSDK\Trial-Registration\Visual Basic\Visual Basic .NET\Backup\Form1.resX">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="Proyecto1.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Proyecto1" Source="Proyecto1.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Proyecto1.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Proyecto1.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Proyecto1" Source="Proyecto1.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

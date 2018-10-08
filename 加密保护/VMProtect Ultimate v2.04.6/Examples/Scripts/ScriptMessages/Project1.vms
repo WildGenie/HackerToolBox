@@ -1,0 +1,14 @@
+procedure OnBeforeCompilation;
+begin 
+  Writeln('OnBeforeCompilation');
+end;
+
+procedure OnAfterCompilation;
+begin
+  Writeln('OnAfterCompilation');
+end;
+
+procedure OnAfterSaveFile;
+begin 
+  Writeln('OnAfterSaveFile');
+end;

@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="description" content="FAQ's for Restorator - customization, localization, and translation tool">
+	<meta name="keywords" content="faq, frequently asked questions, restorator, localization, translation, editor, windows resources, skins">
+	<link rel="SHORTCUT ICON" href="../webicon.ico">
+	<title>FAQ - Restorator - Bome Software</title>
+	<link rel="STYLESHEET" type="text/css" href="../styles.css">
+
+</head>
+<body bgcolor="#E0E0E0" text="#000000" link="#A92C2F" vlink="#991C1F" alink="#505050" leftmargin=3 topmargin=3>
+<table width="100%" class=master_table border="0" cellspacing="4" cellpadding="1">
+<tr>
+<td width="100%">
+
+
+<!-- ]==========[ Content ]==========[ -->
+<!-- Help Header -->
+<table border="0" cellpadding="0" align="right">
+<tr><td align="right" valign="top">
+<a href="../help/support.html">Help Overview</a><br>
+<a href="../help/help.html">Manual</a><br>
+<a href="../help/tutorials.html">Tutorials</a><br>
+<a href="../help/FAQ.html">FAQ</a><br>
+<a href="../purchase.html">Purchase</a><br>
+<a href="http://www.bome.com/Restorator/">Restorator Web</a>
+</td></tr></table>
+
+<h1>Restorator<br>
+FAQ</h1>
+<h2 class=top>Frequently Asked Questions</h2>
+<br>
+<b>1. When will a new version of Restorator be available ?</b><br>
+We usually do not disclose the release date of the next version. Check back often on <a href="http://www.bome.com/Restorator/help/../">
+bome.com</a> [online] for latest news. There you can also subscribe to the
+<a href="http://www.bome.com/Restorator/help/../list.php">announcement list</a> [online] to receive
+an email when a new version is released.
+<br>
+<br>
+
+<b>2. Restorator does not seem to open 16-bit files. Will there be support in the future ?</b><br>
+No. Restorator is only for 32-bit files and 64-bit files.
+<br>
+<br>
+
+<b>3. I have created a ResPatcher. Can I send it to friends ? Will there be copyright problems ? Can I sell it ?</b><br>
+Yes, you can send it to anybody, and you will not infringe any copyrights, because ResPatchers only contain your work.
+If you want to sell ResPatchers, please <a href="http://www.bome.com/Restorator/help/../contact.php?subject=Sell+ResPatchers">contact Bome Software</a> [online].
+<br>
+<br>
+
+<b>4. Restorator displays "corrupt resource". What's wrong ?</b><br>
+Most likely, this exe file is compressed and/or encrypted with an exe-packer (especially if all resources, except
+sometimes icons and version, are marked corrupt). You need to look for an
+unpacker on the Internet. Invoke the Properties on the exe file in Restorator to find out more about
+the sections and to maybe get a clue which exe-packer has been used.<br>
+<b>Notes:</b>
+<ul class=nospace>
+	<li>Since version 2005, Restorator comes with built-in support for the widely used UPX compressor.
+	<li>By searching the Internet for &quot;unpacker download exe packer&quot; or so you'll most
+		likely find programs to unpack your file so that it can be opened with Restorator.
+</ul>
+If you don't think that the corrupt resource is due to an encrypted and/or packed file,
+please <a href="http://www.bome.com/Restorator/help/../contact.php?subject=Corrupt Resource">contact Bome Software</a> [online] with a detailed description how to reproduce this.
+<br>
+<br>
+
+<b>5. I want to edit text XYZ, but Restorator cannot find the text</b><br>
+Some programs may use or display texts that cannot be edited with Restorator. It modifies resources only,
+so any text outside the resource section are out of scope for Restorator. You may have better
+luck with a hex editor then.
+<br>
+<br>
+
+<b>6. Can I have the source code of Restorator ?</b><br>
+Please <a href="http://www.bome.com/Restorator/help/../contact.php?subject=License+Restorator+source+code">contact
+Bome Software</a> [online] for
+source code licensing.
+<br>
+<br>
+
+<b>7. I found a problem with Restorator. Where can I report this bug ?</b><br>
+Please report the bug in the bug report in the
+<a href="http://www.bome.com/Restorator/help/../../forums/viewforum.php?f=2"><b>bug report discussion forum</b></a> [online].
+<br>
+<br>
+
+<b>8. What types of files can I modify?</b><br>
+Genererally, you can view and modify files with windows resources.
+These are either executable files (<i>PE files</i> for Portable Executable), RES Files, or RC Files.<br>
+The most common PE files are: .exe, .dll, .scr and .ocx files.<br>
+RES files have the extension .res, and RC files end with .rc.<br>
+For details, <a href="help.html#_Resource_Files_1">see the help file</a>.<br>
+<br>
+
+<b>9. Is Restorator a tool for experts only or can I use it as a
+non-programmer?</b><br>
+Restorator is helpful either way. Programmers will appreciate it for
+post-compilation tweaking and to understand their applications better.
+Designers will use it to modify the look and feel with Restorator's easy user
+interface without touching any code at all. Last but not least, it can be
+used to translate an application by anyone. The
+<a href="tutorials.html">tutorials</a> provide easy
+step-by-step instructions on how to go about it.
+<br>
+<br>
+
+<b>10. Does Restorator supply a command line version?</b><br>
+Yes, you can execute
+Restorator directly from the command line. E.g. conveniently from a batch
+program, for automated execution. You can extract resources and assemble
+applications again. It is also possible to incorporate Restorator or a
+ResPatch into installation programs (like InstallShield) to automate
+resource patching during installation (note that you can only distribute
+ResPatchers for free, you cannot distribute Restorator!).<br>
+<a href="help.html#_Toc350126141">Click here for more info on command line parameters.</a>
+<br>
+<br>
+
+<b>11. I would like to show or distribute a modified 3rd party
+application.</b><br>
+You can create a ResPatcher that allows to create a small executable
+that automatically modifies another application.<br>
+See also <a href="help.html">Help</a> and <a href="tutorials.html">Tutorials</a>.
+<br>
+<br>
+
+<b>12. I like the application, but a specific feature is missing - what can I do?</b><br>
+Please post your feature requests in the
+<a href="http://www.bome.com/Restorator/help/../../forums/viewforum.php?f=6"><b>feature request discussion forum</b></a> [online].<br>
+We will try to
+accommodate the request in a future version, but
+the list of requests is long. If it is an option for you, you can pay for the
+development: we will create a customized version or prioritize your
+request for the next release.
+<br>
+<br>
+
+<b>13. I have trouble purchasing Restorator</b><br>
+Please make sure you have followed the <a href="../purchase.html">purchase instructions</a>.
+If you are still experiencing problems, please
+<a href="http://www.shareit.com/ccc/index.html?publisherid=10128">contact ShareIt</a> [online] for
+questions related to payment processing. If you have already successfully payed and received your license key,
+<a href="http://www.bome.com/Restorator/help/../contact.php?subject=License+Key+Problem">contact Bome Software</a> [online] for assistance.
+<br>
+<br>
+
+
+<!-- ]==========[ Footer ]==========[ -->
+   <div align="center">
+    <hr width="400" align="center" size="4">
+    <font class="copyright">Copyright 1997-2007 by Bome Software</font>
+   </div>
+  </td></tr></table>
+ </body>
+</html>

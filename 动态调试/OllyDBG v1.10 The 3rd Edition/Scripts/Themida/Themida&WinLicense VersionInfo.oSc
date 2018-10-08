@@ -1,0 +1,52 @@
+////////////////////////////////////////////////////////////
+/// Themida & WinLicense 版本信息山寨版                  ///
+/// first by fxyang[CUG]                                 ///
+/// modified by qql504                                   ///
+/// http://www.unpack.cn                                 ///
+///                           2009.01.07                 ///
+////////////////////////////////////////////////////////////
+var 	version
+var 	tmp
+var 	temp
+//////////Start/////////////
+bphwcall
+bc
+gpa 	"RtlRaiseException", "ntdll"
+cmp 	$RESULT, 0
+je 	stop
+bphws 	$RESULT
+esto
+bphwcall
+mov   	version, [esp+8]
+mov	tmp, [esp+8]
+GMEMI 	version, MEMORYBASE
+mov 	temp, $RESULT
+find 	temp, #000004000000322E#          //特征码
+cmp 	$RESULT, 0
+jz  	next
+jmp 	ver
+next:
+find 	temp, #000004000000312E#          //特征码
+cmp 	$RESULT, 0
+jz  	stop
+ver:
+mov 	temp, $RESULT
+add 	temp, 6
+push 	eax
+reploop:
+mov 	al, [temp]
+test 	al, al
+jz 	message
+mov	[tmp], al, 1	
+inc 	tmp
+inc 	temp
+jmp 	reploop
+message:
+pop	eax
+eval 	"版本:{[version]}"
+msg 	$RESULT
+ret
+
+stop:
+msg 	"出错啦！"
+ret

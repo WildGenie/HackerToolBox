@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ida xmlns:xi="http://www.w3.org/2003/XInclude"
+     xmlns:xpath="http://www.idapro.com/ns/xpath"
+     xmlns:idc="http://www.idapro.com/ns/idc">
+  <templates>
+    <page X="processor_pc_p" title="PC Processor Options" subtitle="How would you like the PC processor module to analyze the input file?" visible="false">
+      <checklistbox>
+        Conversion of immediate operands
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_PUSH"    caption="Convert immediate operand of 'push' to offset">
+          <help>
+            In sequence
+
+                    push    seg
+                    push    num
+
+            IDA will try to convert 'num' to offset.
+          </help>
+        </checkitem>
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_MOVOFF"  caption="Convert immediate operand of 'mov reg,...' to offset">
+          <help>
+            In sequence
+
+                    mov reg,    num
+                    mov segreg, immseg
+
+            where
+
+                    reg    - any general register
+                    num    - a number
+                    segreg - any segment register
+                    immseg - any form of operand representing a segment paragraph
+
+            'num' will be converted to an offset.
+          </help>
+        </checkitem>
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_MOVOFF2" caption="Convert immediate operand of 'mov memory,...' to offset">
+          <help>
+            In sequence
+
+                    mov x1, num
+                    mov x2, seg
+
+            where
+                    x1,x2 - any references to memory
+
+            'num' will be converted to an offset.
+          </help>
+        </checkitem>
+        Padding instructions
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_NOP"     caption="Convert db 90h after 'jmp' to 'nop'">
+          <help>
+            Sequence
+                    jmp     short label
+                    db      90h
+ 
+            will be converted to
+
+                    jmp     short label
+                    nop
+          </help>
+        </checkitem>
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_ZEROINS" caption="Disassemble zero opcode instructions">
+          <help>
+            This option allows ida to disassemble the following instructions:
+
+            00 00      add [bx+si], al      ; 16 bit
+            00 00      add [eax], al        ; 32 bit
+
+            Usually this option is disabled.
+          </help>
+        </checkitem>
+        Advanced instructions
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_NOPREF"  caption="Don't display redundant instruction prefixes">
+          <help>
+            This option makes the disassembly more readable by hiding the 
+            superfluous instruction prefixes which are not used in the instruction.
+          </help>
+        </checkitem>
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_FPEMU"   caption="Enable FPU emulation instructions">
+          <help>
+            This option turns on interpretation of int 3?h
+            instructions as FPU emulation instructions.
+          </help>
+        </checkitem>
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_SHOWRIP" caption="Explicit RIP-addressing">
+          <help>
+            If this option is turned on, then RIP addressing is always represented with the RIP register:
+            
+                    mov rax, [rip+1234]
+            
+            Otherwise RIP addressing is replaced by the corresponding memory reference (when possible).
+            This option is valid only for the 64-bit mode.
+          </help>
+        </checkitem>
+        High-level language
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_BRTTI"   caption="Advanced analysis of Borland's RTTI">
+          <help>
+            This option allows IDA to test and create RTTI structures.
+            The analysis is triggered by renaming a location.
+            If the new name can be demangled as Borland's RTTI descriptor
+            name then the analysis is performed.
+          </help>
+        </checkitem>
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_UNKRTTI" caption="Check 'unknown_libname' for Borland's RTTI">
+          <help>
+            This option allows IDA to test locations named as
+            "unknown_libname" for RTTI structures. This option is
+            meaningful only if the advanced analysis of RTTI is allowed.
+          </help>
+        </checkitem>
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_EXPFUNC" caption="Advanced analysis of catch/finally block after function">
+          <help>
+            This option allows IDA to check
+            for catch/finally exception blocks.
+          </help>
+        </checkitem>
+        Misc
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_VXD"     caption="Interpret int 20 as VxDcall">
+          <help>
+            This option turns on interpretation
+            of int 20h as a VxDcall/jump (for 32-bit files).
+          </help>
+        </checkitem>
+        <checkitem variable="/ida/processors/pc/@PC_ANALYZE_DIFBASE" caption="Allow references with different segment bases">
+          <help>
+            This option allows IDA to display a reference to a symbol even if
+            the reference value is not equal to the symbol value. For example,
+            to refer to symbol "x" at 0000:0100 with expression 0010:0000.
+
+            This option is useful for disassembling BIOS images.
+          </help>
+        </checkitem>
+      </checklistbox>
+    </page>
+  </templates>
+</ida>

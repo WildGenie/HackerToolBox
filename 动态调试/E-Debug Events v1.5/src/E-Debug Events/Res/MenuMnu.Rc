@@ -1,0 +1,12 @@
+#define IDR_MENU 10000
+#define IDM_Options 10001
+#define IDM_Exception 10002
+#define IDM_JunkCode 10003
+IDR_MENU MENUEX
+BEGIN
+  POPUP "&Options",IDM_Options
+  BEGIN
+    MENUITEM "Exceptions",IDM_Exception
+    MENUITEM "Junk Code",IDM_JunkCode
+  END
+END

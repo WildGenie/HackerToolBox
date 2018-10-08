@@ -1,0 +1,164 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+201                     ICON    DISCARDABLE     "mainicon.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+301                     BITMAP  DISCARDABLE     "uinclogo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+101 DIALOGEX 0, 0, 187, 179
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE
+CAPTION "DLL ReBaser by Dr.Golova"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Select file for processing.",IDC_STATIC,4,2,179,27,
+                    WS_TABSTOP
+    EDITTEXT        401,10,11,148,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",501,162,11,16,12
+    EDITTEXT        402,4,33,179,65,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Process.",502,4,160,50,15
+    PUSHBUTTON      "Close.",504,133,160,50,15
+    CONTROL         "BackUp.",601,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    140,40,8
+    PUSHBUTTON      "About.",503,69,160,50,15
+    GROUPBOX        "Options",IDC_STATIC,3,100,180,53
+    CONTROL         "Copy Overlay.",602,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,67,140,59,8
+    CONTROL         "Save.",603,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,141,
+                    140,33,8
+    EDITTEXT        403,10,122,70,12,ES_RIGHT | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Original ImageBase:",IDC_STATIC,13,111,71,8
+    EDITTEXT        404,102,122,70,12,ES_RIGHT | ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    LTEXT           "New ImageBase:",IDC_STATIC,109,112,60,8
+    LTEXT           "h",IDC_STATIC,81,124,8,10
+    LTEXT           "h",IDC_STATIC,173,124,8,10
+END
+
+102 DIALOGEX 0, 0, 143, 127
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_CLIENTEDGE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close.",505,47,112,50,12
+    CONTROL         301,2001,"Static",SS_BITMAP | SS_REALSIZEIMAGE,5,5,138,
+                    62,WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,5,67,135,40
+    CTEXT           "DLL ReBaser by Dr.Golova v1.0",IDC_STATIC,11,74,121,8
+    CTEXT           "Another quality && free stuff from UInC",IDC_STATIC,12,
+                    84,122,8
+    CTEXT           "mailto: dr.golova@reversing.net",IDC_STATIC,13,95,117,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    102, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 140
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 124
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

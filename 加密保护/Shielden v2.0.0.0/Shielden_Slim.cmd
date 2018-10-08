@@ -1,0 +1,1 @@
+start Shielden.exe /slim

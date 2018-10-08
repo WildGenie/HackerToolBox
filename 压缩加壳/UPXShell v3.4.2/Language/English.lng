@@ -1,0 +1,165 @@
+;English blueprint by ION T, 2001-2003
+;Updated by BlackDex 2004-2006
+;*************************************
+
+;Main Form
+;Top frame
+MainForm.lblCompressor.Caption=Win32 EXE, DLL compressor
+MainForm.lblInsCap.Caption=UPX Inside:
+MainForm.lblOutCap.Caption=UPX Outside:
+
+;Open File tab
+MainForm.tbsOpen.Caption=Open File
+MainForm.btnOpen.Caption=Open
+MainForm.lblHistory.Caption=History
+MainForm.pnlFileInfo.Caption=File Information
+MainForm.lblFNameCap.Caption=File Name
+MainForm.lblFName.Caption=N/A
+MainForm.lblFSizeCap.Caption=File size (original)
+MainForm.lblFSize.Caption=N/A
+MainForm.lblCSizeCap.Caption=File size (compressed)
+MainForm.lblCSize.Caption=N/A
+MainForm.lblRatioCap.Caption=Compression ratio
+MainForm.lblRatio.Caption=N/A
+MainForm.mnuHistory.Caption=Clear History
+
+;Compress tab
+MainForm.tbsCompress.Caption=Compress
+MainForm.btnGo.Caption=Go!
+MainForm.chkDecomp.Caption=Decompress
+MainForm.btnRun.Caption=Run
+MainForm.lblProgress.Caption=Compression Progress
+MainForm.lblProgressSize.Caption=Compressed File Size
+
+;Options tab
+MainForm.tbsOptions.Caption=Options
+MainForm.chkBackup.Caption=Create Backup Copy
+MainForm.chkAutoCompress.Caption=Auto compress after loading
+MainForm.chkExitDone.Caption=Exit when done
+MainForm.chkTest.Caption=Test file after compression
+MainForm.btnAdvanced.Caption=Advanced
+MainForm.lblCompressLevel.Caption=Compression level:
+MainForm.lblFaster.Caption=Faster
+MainForm.lblBetter.Caption=Better
+MainForm.lblLanguage.Caption=Select your language:
+MainForm.btnMultiPck.Caption=MultiPack
+
+;About tab
+MainForm.tbsAbout.Caption=About
+MainForm.lblReleaseCap.Caption=Release:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.Caption=Mail to BlackDex
+MainForm.lblBlaineMail.Caption=Mail to Blaine
+
+;Help tab
+MainForm.tbsHelp.Caption=Help
+MainForm.btnHelp.Caption=Help
+
+;Update Tab --NEW NEW NEW--
+MainForm.tbsUpdate.Caption=Update
+MainForm.btnChkUpdate.Caption=Check for updates
+MainForm.lblOnlineVersionCap.Caption=Online version:
+MainForm.lblOnlineVersion.Caption=N/A
+MainForm.lblReleaseDateCap.Caption=Release Date:
+MainForm.lblReleaseDate.Caption=N/A
+MainForm.lblDownloadCap.Caption=Download site:
+MainForm.lblDownload.Caption=N/A
+
+;Setup Form
+SetupForm.chkScramble.Caption=Use file Scrambler
+SetupForm.btnScramble.Caption=Scramble
+SetupForm.chkIntegrate.Caption=Integrate into context menu
+SetupForm.lblAdvacedOpts.Caption=Advanced UPX Options:
+SetupForm.chkResources.Caption=Compress resources
+SetupForm.chkExports.Caption=Compress exports
+SetupForm.chkRelocs.Caption=Strip relocations
+SetupForm.chkForce.Caption=Force compression
+SetupForm.lblPriority.Caption=Packer priority:
+SetupForm.cmbPriority.0=IDLE
+SetupForm.cmbPriority.1=NORMAL (default)
+SetupForm.cmbPriority.2=HIGH
+SetupForm.cmbPriority.3=REALTIME
+SetupForm.lblIcons.Caption=Icons:
+SetupForm.cmbIcons.0=All but 1st directory
+SetupForm.cmbIcons.1=All but 1st icon
+SetupForm.cmbIcons.2=Don't compress
+SetupForm.lblCommands.Caption=Additional UPX commands:
+SetupForm.chkCommands.Caption=Save commands
+SetupForm.btnOk.Caption=Ok
+SetupForm.chkCompression.Caption=Additional compression
+SetupForm.btnCommands.Caption=Commands
+;--NEW NEW NEW--
+SetupForm.lblUPX2Only.Caption=UPX v1.9x Only:
+SetupForm.chkBrute.Caption=Brute
+SetupForm.chkMethods.Caption=All Methods
+SetupForm.chkFilters.Caption=All Filters
+
+;MultiPack Form
+MultiForm.Caption=MultiPack
+MultiForm.grpSearch.Caption=Search Path:
+MultiForm.lblDir.Caption=N/A
+MultiForm.btnBrowse.Caption=&Browse
+MultiForm.chkRecurse.Caption=&Recurse subdirectories
+MultiForm.chkAll.Caption=&All
+MultiForm.lblCurrent.Caption=Current file:
+MultiForm.lblOverall.Caption=Overall progress:
+MultiForm.lblTimeCap.Caption=Time Taken:
+MultiForm.btnScan.Caption=&Scan
+MultiForm.btnPack.Caption=&Pack
+MultiForm.btnExit.Caption=&Exit
+
+;TreeView Form
+TreeViewForm.lblSelect.Caption=Select directory to compress:
+TreeViewForm.btnOK.Caption=OK
+TreeViewForm.btnCancel.Caption=Cancel
+
+;Const_Messages
+msg[001]=Could not access file. It may be allready open
+msg[002]=The file attribute is set to ReadOnly. To proceed it must be unset. Continue?
+msg[003]=Best
+msg[004]=This file doesn't seem to be packed. Run the Scrambler?
+msg[005]= (in 
+msg[006]= seconds)
+msg[007]=decompress
+msg[008]=compress
+msg[009]=There is nothing to 
+msg[010]=N/A
+msg[011]=No directory selected
+msg[012]=...update failed :-(
+msg[013]=Could not connect to update server!
+msg[014]=Updated version of product found!
+msg[015]=Parsing update file...
+msg[016]=Retrieving update information...
+msg[017]=File successfully compressed
+msg[018]=File successfully decompressed
+msg[019]=File compressed with warnings
+msg[020]=File decompressed with warnings
+msg[021]=Errors occured. File not compressed
+msg[022]=Errors occured. File not decompressed
+msg[023]= & tested
+msg[024]= & tested w/warnings
+msg[025]= & test failed
+msg[026]=UPX returned following error:\n
+msg[027]= & scrambled
+msg[028]=...update found
+msg[029]=...no updates found
+msg[030]=OK
+msg[031]=Failed
+msg[032]=Skip
+msg[033]=File Name
+msg[034]=Folder
+msg[035]=Size
+msg[036]=Packed
+msg[037]=Result
+msg[038]=Error
+msg[039]=Confirmation
+msg[040]=Select directory to compress:
+msg[041]=This file is now Scrambled!
+msg[042]=This file has NOT been scrambled!
+msg[043]=Compress with UPX
+msg[044]=Custom upx.exe

@@ -1,0 +1,164 @@
+
+;English blueprint by ION T, 2001-2003
+;*************************************
+;Main Form
+;Top frame
+MainForm.lblCompressor.Caption=Win32 EXE, DLL compressor
+MainForm.lblInsCap.Caption=UPX Inside:
+MainForm.lblOutCap.Caption=UPX Outside:
+
+;Open File tab
+MainForm.tbsOpen.Caption=Otvori Datoteku
+MainForm.btnOpen.Caption=Open
+MainForm.lblHistory.Caption=Istorija
+MainForm.pnlFileInfo.Caption=Informacija o Datoteci
+MainForm.lblFNameCap.Caption=Ime Datoteke
+MainForm.lblFName.Caption=N/A
+MainForm.lblFSizeCap.Caption=Velicina Datoteke (original)
+MainForm.lblFSize.Caption=N/A
+MainForm.lblCSizeCap.Caption=Velicina Datoteke (kompresovana)
+MainForm.lblCSize.Caption=N/A
+MainForm.lblRatioCap.Caption=Jacina Kompresije
+MainForm.lblRatio.Caption=N/A
+MainForm.mnuHistory.Caption=Ocisti Istoriju
+
+;Compress tab
+MainForm.tbsCompress.Caption=Kompresuj
+MainForm.btnGo.Caption=Pokreni Kompresiju!
+MainForm.chkDecomp.Caption=Dekompresuj
+MainForm.btnRun.Caption=Pokreni
+MainForm.lblProgress.Caption=Proces Kompresije
+MainForm.lblProgressSize.Caption=Kompresovana velicina datoteke
+
+;Options tab
+MainForm.tbsOptions.Caption=Opcije
+MainForm.chkBackup.Caption=Kreiraj kopiju datoteke
+MainForm.chkAutoCompress.Caption=Auto kompresija poslije ucitavanja
+MainForm.chkExitDone.Caption=Izadji na kraju
+MainForm.chkTest.Caption=Testiraj datoteku poslije kompresije
+MainForm.btnAdvanced.Caption=Napredno podesavanje
+MainForm.lblCompressLevel.Caption=Jacina kompresije:
+MainForm.lblFaster.Caption=Brze
+MainForm.lblBetter.Caption=Bolje
+MainForm.lblLanguage.Caption=Izaberi jezik:
+MainForm.btnMultiPck.Caption=MultiPack
+
+;About tab
+MainForm.tbsAbout.Caption=O programu
+MainForm.lblReleaseCap.Caption=Izdanje:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.Caption=Mail to BlackDex
+MainForm.lblBlaineMail.Caption=Mail to Blaine
+
+;Help tab
+MainForm.tbsHelp.Caption=Pomoc
+MainForm.btnHelp.Caption=Pomoc
+
+;Update Tab --NEW NEW NEW--
+MainForm.tbsUpdate.Caption=Update
+MainForm.btnChkUpdate.Caption=Provjeri updajte
+MainForm.lblOnlineVersionCap.Caption=Online verzija:
+MainForm.lblOnlineVersion.Caption=N/A
+MainForm.lblReleaseDateCap.Caption=Datum Izdanja:
+MainForm.lblReleaseDate.Caption=N/A
+MainForm.lblDownloadCap.Caption=Download stranica:
+MainForm.lblDownload.Caption=N/A
+
+;Setup Form
+SetupForm.chkScramble.Caption=Ukljuci kodiranje
+SetupForm.btnScramble.Caption=Kodiraj
+SetupForm.chkIntegrate.Caption=Ubaci u meni
+SetupForm.lblAdvacedOpts.Caption=Napredne UPX Opcije:
+SetupForm.chkResources.Caption=Izvori kompresije
+SetupForm.chkExports.Caption=Izlazi kompresije
+SetupForm.chkRelocs.Caption=Ukini relokaciju
+SetupForm.chkForce.Caption=Snazna kompresija
+SetupForm.lblPriority.Caption=Prioritet Pakera:
+SetupForm.cmbPriority.0=OBICNO
+SetupForm.cmbPriority.1=NORMALNO (standardno)
+SetupForm.cmbPriority.2=VELIKO
+SetupForm.cmbPriority.3=U REALNOM VREMENU
+SetupForm.lblIcons.Caption=Ikone:
+SetupForm.cmbIcons.0=Sve osim prvog direktorija
+SetupForm.cmbIcons.1=Sve osim prve ikone
+SetupForm.cmbIcons.2=Otkazi kompresiju
+SetupForm.lblCommands.Caption=Dodatne UPX komande:
+SetupForm.chkCommands.Caption=Sacuvaj komande
+SetupForm.btnOk.Caption=Ok
+SetupForm.chkCompression.Caption=Dodatna kompresija
+SetupForm.btnCommands.Caption=Komande
+
+;--NEW NEW NEW--
+SetupForm.lblUPX2Only.Caption=Samo UPX v1.9x:
+SetupForm.chkBrute.Caption=Nasilno
+SetupForm.chkMethods.Caption=Sve metode
+SetupForm.chkFilters.Caption=Sve filtere
+
+;MultiPack Form
+MultiForm.Caption=Vise paketa
+MultiForm.grpSearch.Caption=Putanja trazenja:
+MultiForm.lblDir.Caption=N/A
+MultiForm.btnBrowse.Caption=&Pronadji
+MultiForm.chkRecurse.Caption=&Pristupi poddirektoriju
+MultiForm.chkAll.Caption=&Sve
+MultiForm.lblCurrent.Caption=Trenitna datoteka:
+MultiForm.lblOverall.Caption=Krajnji proces:
+MultiForm.lblTimeCap.Caption=Proslo vremena:
+MultiForm.btnScan.Caption=&Skeniraj
+MultiForm.btnPack.Caption=&Pakuj
+MultiForm.btnExit.Caption=&Izlaz
+
+;TreeView Form
+TreeViewForm.lblSelect.Caption=Izaberi direktorij za kompresiju:
+TreeViewForm.btnOK.Caption=OK
+TreeViewForm.btnCancel.Caption=Otkazi
+
+;Const_Messages
+msg[001]=Nemoguce pristupiti datoteci. Mozda je vec pokrenuta
+msg[002]=Datoteka je podesena samo za citanje. Za nastavak ovo iskljucite. Nastavi?
+msg[003]=Bolje
+msg[004]=Ova datoteka nije zapakovana. Pokreni kompresije?
+msg[005]= (u 
+msg[006]= sekundi)
+msg[007]=dekompresuj
+msg[008]=kompresuj
+msg[009]=Nema nista za kompresiju 
+msg[010]=N/A
+msg[011]=Direktorij nije selektovan
+msg[012]=...prekinut update :-(
+msg[013]=Nemoguce pristupiti update serveru!
+msg[014]=Nova verzija programa pronadjena!
+msg[015]=Slanje datoteke...
+msg[016]=Povratna informacija...
+msg[017]=Datoteka kompresovana
+msg[018]=Datoteka dekompresovana
+msg[019]=Datoteka kompresovana sa upozorenjem
+msg[020]=Datoteka dekompresovana sa upozorenjem
+msg[021]=Greska. Datoteka nije kompresovana
+msg[022]=Greska. Datoteka nije dekompresovana
+msg[023]= & testirano
+msg[024]= & testirana upozorenja
+msg[025]= & test otkazan
+msg[026]=UPX vratio sljedece greske: 
+msg[027]= & kodirano
+msg[028]=...pronadjen update
+msg[029]=...nema update-a
+msg[030]=OK
+msg[031]=Propalo
+msg[032]=Preskoci
+msg[033]=Ime datoteke
+msg[034]=Direktorij
+msg[035]=Velicina
+msg[036]=Pakovano
+msg[037]=Rezultat
+msg[038]=Greska
+msg[039]=Potvrdi
+msg[040]=Izaberi direktorij za kompresiju:
+msg[041]=Datoteka je sada kodirana!
+msg[042]=Datoteka NIJE kodirana!
+msg[043]=Kompresuj sa UPX

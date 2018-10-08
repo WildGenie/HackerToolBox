@@ -1,0 +1,145 @@
+//Español internacional por José Vicente Beltrán, 2003
+//Main Form
+//Top frame
+MainForm.lblCompressor.Caption=compresor Win32 EXE, DLL
+MainForm.lblInsCap.Caption=UPX Interno:
+MainForm.lblOutCap.Caption=UPX Externo:
+//Open File tab
+MainForm.tbsOpen.Caption=Archivo
+MainForm.btnOpen.Caption=Abrir
+MainForm.lblHistory.Caption=Historia
+MainForm.pnlFileInfo.Caption=Información del archivo
+MainForm.lblFNameCap.Caption=Nombre
+MainForm.lblFName.Caption=N/D
+MainForm.lblFSizeCap.Caption=Tamaño (original)
+MainForm.lblFSize.Caption=N/D
+MainForm.lblCSizeCap.Caption=Tamaño (comprimido)
+MainForm.lblCSize.Caption=N/D
+MainForm.lblRatioCap.Caption=Ratio compresión
+MainForm.lblRatio.Caption=N/D
+MainForm.mnuHistory.Caption=Borrar historia
+//Compress tab
+MainForm.tbsCompress.Caption=Comprimir
+MainForm.btnGo.Caption=Ejecutar!
+MainForm.chkDecomp.Caption=Descomprimir
+MainForm.btnRun.Caption=Lanzar
+MainForm.lblProgress.Caption=Progreso de la compresión
+MainForm.lblProgressSize.Caption=Tamaño del archivo comprimido
+//Options tab
+MainForm.tbsOptions.Caption=Opciones
+MainForm.chkBackup.Caption=Crea copia de seguridad
+MainForm.chkAutoCompress.Caption=Auto comprimir despues de cargar
+MainForm.chkExitDone.Caption=Salir al terminar
+MainForm.chkTest.Caption=Test archivo después de comprimir
+MainForm.btnAdvanced.Caption=Avanzado
+MainForm.lblCompressLevel.Caption=Nivel de compresión:
+MainForm.lblFaster.Caption=Rápido
+MainForm.lblBetter.Caption=Mejor
+MainForm.lblLanguage.Caption=Seleccione idioma:
+MainForm.btnMultiPck.Caption=Multi-empaquetar
+ //About tab
+MainForm.tbsAbout.Caption=Acerca de
+MainForm.lblReleaseCap.Caption=Release:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblCoDomain.Caption=Coders Domain
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblAnkanMail.Caption=Mail to ©OnT®oL
+MainForm.lblBlaineMail.Caption=Mail to Blaine
+ //Help tab
+MainForm.tbsHelp.Caption=Ayuda
+MainForm.btnHelp.Caption=Ayuda
+MainForm.btnUpdate.Caption=Actualizar modulos
+	//Setup Form
+SetupForm.chkScramble.Caption=Usar Scrambler
+SetupForm.btnScramble.Caption=Scramble
+SetupForm.chkIntegrate.Caption=Integrar en menú contextual
+SetupForm.lblAdvacedOpts.Caption=UPX avanzado:
+SetupForm.chkResources.Caption=Comprimir recursos
+SetupForm.chkExports.Caption=Comprimir exportaciones
+SetupForm.chkRelocs.Caption=Permitir relocalizaciones
+SetupForm.chkForce.Caption=Forzar compresión
+SetupForm.lblPriority.Caption=prioridad:
+SetupForm.cmbPriority.0=INACTIVO
+SetupForm.cmbPriority.1=NORMAL (defecto)
+SetupForm.cmbPriority.2=ALTO
+SetupForm.cmbPriority.3=TIEMPO REAL
+SetupForm.lblIcons.Caption=Iconos:
+SetupForm.cmbIcons.0=Todo menos 1er directorio
+SetupForm.cmbIcons.1=Todo menos 1er icono
+SetupForm.cmbIcons.2=No comprimir
+SetupForm.lblCommands.Caption=Comandos adicionales UPX:
+SetupForm.chkCommands.Caption=Salvar comandos
+SetupForm.btnOk.Caption=Ok
+SetupForm.chkCompression.Caption=Compresión adicional
+SetupForm.btnCommands.Caption=Comandos
+	//MultiPack Form
+MultiForm.grpSearch.Caption=Ruta del directorio:
+MultiForm.lblDir.Caption=N/D
+MultiForm.btnBrowse.Caption=&Buscar
+MultiForm.chkRecurse.Caption=&Incluir subdirectorios
+MultiForm.chkAll.Caption=&Todo
+MultiForm.lblCurrent.Caption=Archivo actual:
+MultiForm.lblOverall.Caption=progreso:
+MultiForm.btnScan.Caption=&Escanear
+MultiForm.btnPack.Caption=Em&paquetar
+MultiForm.btnExit.Caption=&Salir
+	//TreeView Form
+TreeViewForm.lblSelect.Caption=Seleccione directorio a comprimir:
+TreeViewForm.btnOK.Caption=OK
+TreeViewForm.btnCancel.Caption=Cancelar
+	//Update Form
+UpdateForm.grpProgress.Caption=Status:
+UpdateForm.grpUpdateInfo.Caption=Información de actualización:
+UpdateForm.lblReleaseCap.Caption=Release:
+UpdateForm.lblRelease.Caption=N/D
+UpdateForm.lblBuildCap.Caption=Build:
+UpdateForm.lblBuild.Caption=N/D
+UpdateForm.lblDateCap.Caption=Fecha:
+UpdateForm.lblDate.Caption=N/D
+UpdateForm.lblSizeCap.Caption=Tamaño:
+UpdateForm.lblSize.Caption=N/D
+UpdateForm.lblNews.Caption=Noticias:
+UpdateForm.grpDownload.Caption=Sitio de descarga:
+UpdateForm.lblDownload.Caption=N/D
+	//Messages
+msg[001]=No puedo acceder al archivo. Puede que esté abierto
+msg[002]=El archivo tiene atributo de solo lectura. Para proceder debe quitar el atriburo. Continuar?
+msg[003]=Optimo
+msg[004]=Este archivo no parece estar empaquetado. ¿Ejecutar el Scrambler?
+msg[005]= (en 
+msg[006]= segundos)
+msg[007]=descomprimir
+msg[008]=comprimir
+msg[009]=No hay nada que 
+msg[010]=N/D
+msg[011]=No se ha seleccionado ningún directorio
+msg[012]=...la actualización ha fallado :-(
+msg[013]=Imposible conectar al servidor de actualización!
+msg[014]=versión de actualización encontrada!
+msg[015]=Parsing update file...
+msg[016]=Recuperando imformación de actualización...
+msg[017]=Archivo comprimido satisfactoriamente
+msg[018]=Archivo descomprimido satisfactoriamente
+msg[019]=Archivo comprimido con warnings
+msg[020]=Archivo descomprimido con warnings
+msg[021]=Han ocurrido errores. Archivo no comprimido
+msg[022]=Han ocurrido errores. Archivo no descomprimido
+msg[023]= & testeado
+msg[024]= & testeado w/warnings
+msg[025]= & test fallido
+msg[026]=UPX devuelve el siguiente error: 
+msg[027]= & scrambled
+msg[028]=...actualización encontrada
+msg[029]=...no se encontraron actualizaciones
+msg[030]=OK
+msg[031]=Fallo
+msg[032]=Pasar
+msg[033]=Nombre de archivo
+msg[034]=Carpeta
+msg[035]=Tamaño
+msg[036]=Empaquetado
+msg[037]=Resultado

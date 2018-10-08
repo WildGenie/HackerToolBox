@@ -1,0 +1,4 @@
+a = MsgBox("Are you sure to exit?","Information",4)
+if a ==6
+then ExitProcess(1);
+end

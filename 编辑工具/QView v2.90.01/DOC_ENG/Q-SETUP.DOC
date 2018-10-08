@@ -1,0 +1,150 @@
+
+		       -=-=-=-=-    Q-Setup    -=-=-=-=-
+                                 (QView Setup)
+                                 Version  2.50
+
+
+ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+º Why Q-Setup? ³
+ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+
+    This program is useless for those who doesn't use the  wonderful viewer
+QView by Alexandr Gazko. This program will help you to easily configure the
+viewer as you prefer and will show you all changes you made on-fly. See the
+QVIEW.DOC for more details about the settings.
+
+ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+º How it works? ³
+ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+
+    Program needs MS-DOS 3.3 or higher and about 150K free RAM to run.
+
+
+    Just run the Q-Setup!
+
+    The only one parameter available - is CONVERT <file> .  This  will help
+you to make  your own character redefinition table and easily convert it to
+the QVIEW.CHR then.
+    To define table you should  start with the NAME keyword followed by the
+table name. All after the #0, #9  and ';' characters are ignored.  From the
+next strings you may start to  define character. Note, that by default each
+caracter is redefined to itself so you may redefine the only characters you
+need.
+    You may define character  by  its number as well as by literal. Numbers
+are  always decimal;  literal  characters are enclosed in single quotes;  a
+semicolon separate definition at  the same  line;  blank spaces,  tabs  and
+carriage returns are ignored. E.g.:
+                                'û'='ş'; 246='õ'
+                               245=244; 'ê' = 39
+    You may use up to 255-bytes per line.
+    The first character is what you are want to translate,  the second - to
+what character it should be tranlated.
+
+
+    Think I should not give you more notices - just refer the help on F1.
+
+
+    Program operates with three files - QVIEW.INI, QVIEW.FMG and QVIEW.EHL.
+These files should be placed in the sturt-up directory of Q-Setup. If they
+are not,  the built-in settings will be used.  And  these  files  will  be
+created when you hit F2 (Save).
+
+    The start-up directory may not be the current one. It's ok, if you type
+the path to the setup in the command line or if the start-up directory will
+be specified in the %PATH% variable.
+
+ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+º Mouse support ³
+ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+
+    The program should work correctly with any type of mouse.  There is  no
+difference between the rigth & middle (if any) mouse buttons.
+    The left mouse button is  similar to <Enter> key, but if pressed in the
+bottom line of screen it calls Help.
+    The right button is always similar to <Alt-F5> combination.
+    In tables use double-click to accept.
+
+ÖÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+º AS IS  ³
+ÈÍÍÍÍÍÍÍÍ¾
+
+    This program distributed AS IS and as a freeware, i.e. with no  payment
+for use (but I have no idea why I should not accept some support :).  Note,
+that I'm declining the responsibility  for the program's work result (but I
+have not included any destructive feature to Q-Setup).
+    So, if you're not sure - do not use this program!
+    The program sale is prohibited!
+
+ÖÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+º What's new ³
+ÈÍÍÍÍÍÍÍÍÍÍÍÍ¾
+
+  Legend:
+
+  ~ author's remark,  ş worked feature,  + added,  - removed,  û changed/fixed
+
+  ±±±±±±± 2.50, 21/02/98 ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+  ~ Previous version is 1.30R.
+
+  + Convert charcter table file option in menu.
+  + Fast quit from Q-Setup (Ctrl-\).
+  + Swap on DOS Shell to XMS/EMS/Disk.
+  + Directory browser when open file for import/convert.
+  + File manager configuration file (qview.fmg) support added (QView 2.50+).
+  û F2 allows to enter the new path and/or name for the INI/FMG-file.
+  û Minor cosmetic changes.
+
+ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+º Thanks a lot! ³
+ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+
+   I'd like to thank the following people that doesn't make me asleep... :-)
+
+        Alexandr Gazko          <2:5030/445>
+	Misha Ivanov		<2:5020/108.81>
+	Alexander Zacepin	<2:5030/211.20>
+	Dmitry Jemerov		<2:5030/654>
+
+ÖÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+º Who am I ³
+ÈÍÍÍÍÍÍÍÍÍÍ¾
+
+    To contact the author:
+    
+			  Fidonet: 2:5030/482@fidonet
+                   Internet: niva@f482.n5030.z2.fidonet.org,
+                            naryshkin@geocities.com
+
+    Any comments, desires, proposales, bug-reports, interesting ideas, etc.
+are welcome! Thank you in advance for your support.
+    Also you can try to find the echoconference  QVIEW.SUPPORT  somewere in
+the Fidonet or maybe also in the Internet, I hope.
+
+		     Igor Naryshkin, St.Petersburg, Russia
+                                   21/02/1998
+
+ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+º My Public Key ³
+ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+
+Type Bits/KeyID    Date       User ID
+pub  1024/A4C82255 1997/01/28 Igor Naryshkin <2:5030/482@fidonet.org>
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.3i
+
+mQCNAzLt0/QAAAEEANUHZzUSY4HVgXIJbiAAjqTgwZua4uWcUKzhuHwt+bfiM9mc
+ZX0Kn4YjYeorjj8U5PF6H/UQzdhQtqOJ+NBbbPwtDvQTOrDiNwDj7mgX20Rk/zKZ
+aNLZT3QJq3W7sCYYgkPQPwtq/jnbEo/sKXWv7s8WW9Lx8+Y21iq3dmqkyCJVAAUV
+tCdJZ29yIE5hcnlzaGtpbiA8Mjo1MDMwLzQ4MkBmaWRvbmV0Lm9yZz6JAJUDBRAy
+7dP1Krd2aqTIIlUBAdgJA/0bzysau7tYickPQQKNrHhvJZSK4K/mwdaa5V4QZHrT
+pNs0j+wY5vdL0Q76zG1vslI1eZNf0ppwgPcaHmVC2hYax78V7/DTGuyCPZElty0b
+1e2vL5SItm4Wravebg+w2GF6tw1u0nd1ZDv37Vmkzl9GNBEwxvxsJq7Ml4qY6uDw
+pg==
+=F0uv
+-----END PGP PUBLIC KEY BLOCK-----
+
+ÖÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+º the End, folks ³
+ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾

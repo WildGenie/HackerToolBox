@@ -1,0 +1,1 @@
+regsvr32 /s RICHTX32.OCX

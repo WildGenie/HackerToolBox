@@ -1,0 +1,179 @@
+//French translation by SpeedFire, 08/2003
+//based on English.lng by ION Trooper
+//Updated for v3.07
+
+// Mise à jour et modifications par int24h
+// Le 09 octobre 2003
+
+	//Main Form
+ //Top frame
+MainForm.lblCompressor.Caption=Compresseur Win32 EXE/DLL
+MainForm.lblInsCap.Caption=UPX Interne:
+MainForm.lblInsCap.Hint=Version de UPX
+MainForm.lblOutCap.Caption=UPX Externe:
+MainForm.lblOutCap.Hint=Version de UPXShell
+ //Open File tab
+MainForm.tbsOpen.Caption=Ouvrir Fichier
+MainForm.btnOpen.Caption=Ouvrir
+MainForm.lblHistory.Caption=Historique
+MainForm.pnlFileInfo.Caption=Informations sur le fichier
+MainForm.lblFNameCap.Caption=Nom du fichier
+MainForm.lblFName.Caption=N/A
+MainForm.lblFSizeCap.Caption=Taille originale
+MainForm.lblFSize.Caption=N/A
+MainForm.lblCSizeCap.Caption=Taille après compression
+MainForm.lblCSize.Caption=N/A
+MainForm.lblRatioCap.Caption=Taux de compression
+MainForm.lblRatio.Caption=N/A
+MainForm.mnuHistory.Caption=Effacer l'historique
+ //Compress tab
+MainForm.tbsCompress.Caption=Compresser
+MainForm.btnGo.Caption=Go !
+MainForm.chkDecomp.Caption=Décompresser
+MainForm.btnRun.Caption=Lancer
+MainForm.lblProgress.Caption=Progression de la compression
+MainForm.lblProgressSize.Caption=Taille du fichier compressé
+ //Options tab
+MainForm.tbsOptions.Caption=Options
+MainForm.chkBackup.Caption=Créer une copie de sauvegarde
+MainForm.chkAutoCompress.Caption=Compresser au lancement
+MainForm.chkExitDone.Caption=Sortir quand terminé
+MainForm.chkTest.Caption=Tester le fichier après compression
+MainForm.btnAdvanced.Caption=Avancé
+MainForm.lblCompressLevel.Caption=Niveau de compression:
+MainForm.lblFaster.Caption=Plus rapide
+MainForm.lblBetter.Caption=Meilleur
+MainForm.lblLanguage.Caption=Langue:
+MainForm.btnMultiPck.Caption=MultiPack
+ //About tab
+MainForm.tbsAbout.Caption=A propos
+MainForm.lblReleaseCap.Caption=Release:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblIONT.Hint=Site Web de ION Tek
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblUPX.Hint=Site web officiel de UPX
+MainForm.lblCoDomain.Caption=Coders Domain
+MainForm.lblCoDomain.Hint=Visiter Coders Domain
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblIONTmail.Hint=Envoyer un mail à l´auteur
+MainForm.lblAnkanMail.Caption=Mail à ©OnT®oL
+MainForm.lblAnkanmail.Hint=Envoyer un mail à l´auteur de UPX Scrambler
+MainForm.lblBlaineMail.Caption=Mail à Blaine
+MainForm.lblBlaineMail.Hint=Envoyer un mail à Blain R. Southam
+ //Help tab
+MainForm.tbsHelp.Caption=Aide
+MainForm.btnHelp.Caption=Aide
+MainForm.btnHelp.Hint=Lire le fichier d'aide
+MainForm.btnUpdate.Caption=Mise à jour
+MainForm.btnUpdate.Hint=Recherche une mise à jour de UPXShell sur Internet
+	//Setup Form
+SetupForm.chkScramble.Caption=Utiliser le brouilleur
+SetupForm.chkScramble.Hint=Brouiller les fichiers compressés avec UPX
+SetupForm.btnScramble.Caption=Brouiller
+SetupForm.btnScramble.Hint=Brouiller le fichier sélectionné maintenant
+SetupForm.chkIntegrate.Caption=Intégrer dans le menu contextuel
+SetupForm.chkIntegrate.Hint=Ajouter "Compresser avec UPX" dans le menu contextuel
+SetupForm.lblAdvacedOpts.Caption=Options UPX avancées:
+SetupForm.chkResources.Caption=Compresser les rsrc
+SetupForm.chkResources.Hint=Compresser les ressources (meilleure compression)
+SetupForm.chkExports.Caption=Compresser les exports
+SetupForm.chkExports.Hint=Compresser les exports
+SetupForm.chkRelocs.Caption=Enlever les relocations
+SetupForm.chkRelocs.Hint=Enlever les relocations
+SetupForm.chkForce.Caption=Forcer la compression
+SetupForm.chkForce.Hint=Forcer la compression des fichiers suspects
+SetupForm.lblPriority.Caption=Priorité de la compression
+SetupForm.cmbPriority.Hint=Sélectionner le niveau de priorité du compresseur
+SetupForm.cmbPriority.0=MINIMAL
+SetupForm.cmbPriority.1=NORMAL (défaut)
+SetupForm.cmbPriority.2=ELEVE
+SetupForm.cmbPriority.3=TEMPS REEL
+SetupForm.lblIcons.Caption=Icônes:
+SetupForm.cmbIcons.Hint=Choisir quoi faire avec les icônes
+SetupForm.cmbIcons.0=Tous sauf 1er répertoire
+SetupForm.cmbIcons.1=Tous sauf 1er icône
+SetupForm.cmbIcons.2=Ne pas compresser
+SetupForm.lblCommands.Caption=Commandes UPX additionnelles
+SetupForm.chkCommands.Caption=Sauvegarder les commandes
+SetupForm.chkCommands.Hint=Toujours utiliser les commances saisies
+SetupForm.btnOk.Caption=Ok
+SetupForm.chkCompression.Caption=Compression additionnelle
+SetupForm.chkCompression.Hint=Améliore le rapport de compression mais utilise plus de mémoire durant la compression
+// La ligne ci-dessous ne fontionne pas
+SetupForm.trbCompression.Hint=Plus le curseur est à droite, plus il faut de mémoire pour compresser
+SetupForm.btnCommands.Caption=Commandes
+SetupForm.btnCommands.Hint=Commandes
+	//MultiPack Form
+MultiForm.grpSearch.Caption=Chercher dans:
+MultiForm.lblDir.Caption=N/A
+MultiForm.btnBrowse.Caption=&Parcourir
+MultiForm.chkRecurse.Caption=&Inclure sous-répertoires
+MultiForm.chkAll.Caption=&Tous
+MultiForm.lblCurrent.Caption=Fichier courant:
+MultiForm.lblOverall.Caption=Progression globale:
+MultiForm.btnScan.Caption=&Scanner
+MultiForm.btnPack.Caption=&Compresser
+MultiForm.btnExit.Caption=&Sortir
+MultiForm.lvFiles.Hint=Appuyer sur 'Suppr' ou cliquer-droit sur un élément pour qu'il ne soit pas traité
+	//TreeView Form
+TreeViewForm.lblSelect.Caption=Sélectionnez un dossier à compresser:
+TreeViewForm.btnOK.Caption=OK
+TreeViewForm.btnCancel.Caption=Annuler
+	//Update Form
+UpdateForm.grpProgress.Caption=Statut:
+UpdateForm.grpUpdateInfo.Caption=Informations de mise à jour:
+UpdateForm.lblReleaseCap.Caption=Release:
+UpdateForm.lblRelease.Caption=N/A
+UpdateForm.lblBuildCap.Caption=Build:
+UpdateForm.lblBuild.Caption=N/A
+UpdateForm.lblDateCap.Caption=Date:
+UpdateForm.lblDate.Caption=N/A
+UpdateForm.lblSizeCap.Caption=Taille:
+UpdateForm.lblSize.Caption=N/A
+UpdateForm.lblNews.Caption=Nouvelles:
+UpdateForm.grpDownload.Caption=Site de téléchargement
+UpdateForm.lblDownload.Caption=N/A
+	//Messages
+msg[001]=Ne peut accéder au fichier. Il doit être déjà ouvert
+msg[002]=L'attribut lecture seule est activé pour ce fichier, il doit être désactivé. Continuer ?
+msg[003]=Meilleur
+msg[004]=Ce fichier n'est apparemment pas compressé. Lancer le brouilleur ?
+msg[005]= (en 
+msg[006]= secondes)
+msg[007]=décompresser
+msg[008]=compresser
+msg[009]=Il n'y a rien à 
+msg[010]=N/A
+msg[011]=Aucun dossier sélectionné
+msg[012]=Echec de la mise à jour :(
+msg[013]=Impossible de se connecter au serveur de mise à jour !
+msg[014]=Mise à jour trouvée ! :)
+msg[015]=Analyse du fichier de mise à jour...
+msg[016]=Charge les informations de mise à jour...
+msg[017]=Fichier compressé avec succès
+msg[018]=Fichier décompressé avec succès
+msg[019]=Fichier compressé avec avertissements
+msg[020]=Fichier décompressé avec avertissements
+msg[021]=Erreurs fatales. Fichier NON compressé
+msg[022]=Erreurs fatales. Fichier NON décompressé
+msg[023]= & testé avec succès
+msg[024]= & testé avec avertissements
+msg[025]= & test a echoué
+msg[026]=UPX a renvoyé l'erreur suivante:
+msg[027]= & brouillé
+msg[028]=Mise à jour disponible!
+msg[029]=Vous avez la version la plus récente.
+msg[030]=OK
+msg[031]=Echec
+msg[032]=Eviter
+msg[033]=Nom
+msg[034]=Dossier
+msg[035]=Taille
+msg[036]=Compacté
+msg[037]=Résultat
+msg[038]=Erreur
+msg[039]=Confirmation
+msg[040]=Sélectionnez un dosier à compresser:

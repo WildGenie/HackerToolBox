@@ -1,0 +1,10 @@
+Sometimes You want to communicate with protection.
+Easy and very good a way are SVKP's API functions. There
+I wrote examples for Masm, Delphi, Visual C++ and Visual Basic. 
+Ofcourse You can use this method of protection in other 
+compilers too, but maybe it will be possible after some changes
+in include and library files. If You will have any problems
+with another compiler, please contact me and I will try help 
+You.
+For API functions specification please read documentation.
+

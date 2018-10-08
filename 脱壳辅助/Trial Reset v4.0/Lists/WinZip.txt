@@ -1,0 +1,2 @@
+WinZip	Reg32Key	HKEY_CURRENT_USER\Software\Nico Mak Computing\WinZip\rrs
+WinZip	Reg32Key	HKEY_LOCAL_MACHINE\Software\Nico Mak Computing\WinZip\rrs

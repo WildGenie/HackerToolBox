@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="description" content="Change a Delphi program with Restorator - the customization, localization, and translation tool">
+	<meta name="keywords" content="change delphi programs tutorial, localization, translation, editor, windows resources, skins">
+	<link rel="SHORTCUT ICON" href="../../webicon.ico">
+	<title>Change Delphi Program Tutorial - Restorator - bome.com</title>
+	<link rel="STYLESHEET" type="text/css" href="../../styles.css">
+
+</head>
+<body bgcolor="#E0E0E0" text="#000000" link="#A92C2F" vlink="#991C1F" alink="#505050" leftmargin=3 topmargin=3>
+<table width="100%" class=master_table border="0" cellspacing="4" cellpadding="1">
+<tr>
+<td width="100%">
+
+
+<!-- ]==========[ Content ]==========[ -->
+<!-- Help Header -->
+<table border="0" cellpadding="0" align="right">
+<tr><td align="right" valign="top">
+<a href="../../help/support.html">Help Overview</a><br>
+<a href="../../help/help.html">Manual</a><br>
+<a href="../../help/tutorials.html">Tutorials</a><br>
+<a href="../../help/FAQ.html">FAQ</a><br>
+<a href="../../purchase.html">Purchase</a><br>
+<a href="http://www.bome.com/Restorator/">Restorator Web</a>
+</td></tr></table>
+
+<h1>Restorator<br>
+Change Delphi Program Tutorial</h1>
+<h2 class=top>Tutorial: Changing a Delphi program</h2>
+
+<div align="center"><table border=0 cellpadding=10 cellspacing=0 bgcolor="#D0D0D0"><tr><td><b>Note:</b> the screenshots in this tutorial originate from an older version of Restorator.</td></tr></table></div>
+
+<p>This tutorial
+shows how to change properties of Delphi programs. Properties
+contain a lot of parameters of the visual user interface. This also
+includes many text messages and the menu ! As demonstration, we use
+<a href="http://www.bome.com/midi/keyboard/">Bome's Mouse Keyboard</a> [online].
+A bome.com application that allows playing a piano on the screen.</p>
+<p><strong>1.
+About Delphi programs</strong></p>
+<p>Borland's
+Delphi is a development tool with which it is made very easy to
+create powerful applications. Restorator is created
+with Delphi. However, Delphi does not follow the Windows
+resource standards. Instead, Delphi creates a predefined resource type called
+<i>RCData</i> for each window of the program. This resource contains all
+information of that window, e.g. its size, contained controls and
+included images.</p>
+<p>2<strong>.
+Looking at the splash window</strong></p>
+<p>Open
+MouseKeyboard.exe in examples and have a look at the resource
+RCData- TSPLASHFORM1.&nbsp;</p>
+<div align="left">
+<table border="0" cellpadding="2" width="640">
+<tr>
+<td><img src="delphi/rstsplash.gif" align="right" hspace="0" ></td>
+</tr></table></div>
+<p>This is the
+window that appears when you start the application or when you
+select in the help menu "About". In the Resource Viewer, you can
+already see the window definition !</p>
+<p>Now save it to
+disk (e.g. by dragging and dropping like in the previous
+tutorials). The window description is saved as a txt file. All
+included images and binary data of Delphi windows are stored in
+separate files. In this case, one separate file will be created:
+&quot;<a href="delphi/TSplashForm1_Image1_Picture_Data.bmp">TSplashForm1_Image1_Picture_Data.bmp</a>&quot;.</p>
+<p>Open the text
+file with a text editor. You'll see a line where this image is
+referenced:</p>
+<p><img src="delphi/rsttxt.gif"><br>
+You can change any items in the txt file, but you should be
+careful, changing too much will result in a non-working application
+when saving...</p>
+<p>You can also change the image
+to create your own keyboard version. Do that like in <a href="TutAbout.html">Tutorial
+2</a>. However, don't assign the image, that will
+be explained in the next step.</p>
+<p><strong>3.
+Assigning the modified files</strong></p>
+<p>With other
+resources, there was just one file to modify and assign. Here you
+have 2 of them (the txt and the bmp). As the txt file contains a
+reference to the bmp image, you always use the txt file to assign a
+Delphi window.</p>
+<p>Meanwhile you
+should know how to assign resource files, e.g. drag'n'drop
+TSplashForm1.txt on the respective resource item. When Restorator
+didn't report an error, just save MouseKeyboard.exe as
+MouseKeyboard1.exe...and there you go ! It's as simple as that
+!</p>
+<p>Look also
+through the other resources. If you come up with a funky version,
+we send you a MouseKeyboard registration.</p>
+<p><a href="../tutorials.html">[Back]</a></p>
+
+
+<!-- ]==========[ Footer ]==========[ -->
+   <div align="center">
+    <hr width="400" align="center" size="4">
+    <font class="copyright">Copyright 1997-2007 by bome.com</font>
+   </div>
+  </td></tr></table>
+ </body>
+</html>

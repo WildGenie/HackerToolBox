@@ -1,0 +1,22 @@
+[PROJECT]
+Type=0
+ReleaseCommandLine=
+DebugCommandLine=
+AutoIncFileVersion=0
+RCSilent=0
+[MAKE]
+ActiveBuild=0
+CompileRC=/v
+RCToObj=
+Assemble=/c /coff /Cp /nologo
+Link=/SUBSYSTEM:WINDOWS /RELEASE /VERSION:4.0
+Out=
+DebAssemble=/c /coff /Cp /nologo /Fm /Zi /Zd
+DebLink=/SUBSYSTEM:WINDOWS /DEBUG /VERSION:4.0
+DebOut=
+[FILES]
+1=KmdManager.asm
+2=rsrc.rc
+[SHOWFILE]
+1=160000001D000000C4020000B30100000000000003000000D70400008B
+2=160000001D000000C4020000B3010000010000000100000000000000AF

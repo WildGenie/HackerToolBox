@@ -1,0 +1,7 @@
+LIBRARY	pec2hooks_fastimport
+EXPORTS 
+	GetPointerToHookData
+	GetHookDataSize
+	GetHookName
+	GetHookAuthor
+	GetHookFlags

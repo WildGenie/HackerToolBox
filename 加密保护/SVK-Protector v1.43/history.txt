@@ -1,0 +1,112 @@
+v1.43 final (September,14,2004) - fixed DLL files support
+				- added support for encrypted blocks inside of DLL 
+				- added support for DLL files with relocations
+				- fixed problem with Delphi files
+				- added new function Move API calls
+				- whole SVKP's code moved to DLL
+				- help file was changed
+				- fixed some minor bugs
+v1.42 final (September,04,2004) - internal release
+v1.41 final (June,04,2004)     - fixed serious problem with moved API calls
+v1.40 final (May,28,2004)      - added features
+                               - fixed bug when was not possible generate keys two times
+                               - fixed some messages
+                               - added svkp alive checks
+                               - random bytes to blocks coded with poly
+                               - fixed bug when application was run with incorect license
+                                 with HW Info enabled, then application crashed
+                               - added encryption of API calls in .code section
+                               - fixed bug when some special files were not protect correctly
+                               - fixed bug when sometimes compression was not correct
+                               - fixed bug with some compilers like BC++ which import API 
+                                 to special.dll like ordinals
+                               - OpenProcess protection was removed because protected 
+                                 application can't use printers
+                               - added suport for multi-threads applications with encrypted
+                                 blocks
+                               - added some changes for RSA blocks, now they are cryped and
+                                 decrypted really fast
+                               - moved API functions are protected with poly
+                               - now is possible use 250 blocks for RSA blocks
+                               - fixed bug with allocated memory for WinXP SP2
+                               - fixed bug when was project loaded and then was selected
+                                 new project and save project, wrong (old) project was saved
+                               - fixed bug when was selected new project and then save 
+                                 project messages for project were empty
+                               - fixed bug with generating license keys 
+                               - don't change thread priority
+                               - added minimize button for svkp
+                               - fixed command line support
+v1.40 beta1 (April,15,2004)    - internal release
+v1.39 final (February,20,2004) - internal release
+v1.38 final (December,12,2003) - internal release
+v1.37 final (September,20,2003) - fixed some minor bugs
+v1.36 final (August,18,2003) - fixed problem with some dialogs for advanced dialog
+			     - fixed problem with command line support
+			     - fixed some minor bugs  	
+v1.35 final (July,29,2003) - fixed problem with encr. blocks 1 and 2 without RSA encr. blocks
+v1.34 final (July,25,2003) - definitions for encrypted blocks changed
+			   - fixed problem with TimeLock and license keys
+			   - fixed problem with time limited license keys
+			   - added possibility deactivate driver for WinNT,2k,XP
+			   - added possibility deactivate driver for Win9x, ME
+                           - fixed problem with TimeLock and Visual Basic programs
+			   - fixed obfuscator for entry point code
+			   - fixed some minor bugs	
+v1.33 final (June,25,2003) - fixed problem with SVKP_GetHWInfo in Visual Basic
+			   - fixed some minor problems with advanced dialog
+v1.32 final (May,22,2003)  - fixed critical problem with hardware information
+v1.31 final (May,21,2003)  - added new feature Advanced TimeLock
+			   - fixed some minor bugs
+v1.31 beta1 (May,10,2003)  - fixed problems with saving project file	
+v1.30 final (April,17,2003)- fixed some minor bugs
+			   - added examples of hardware locked license keys for Visual Basic
+			   - added Utilities (get_hw.exe)
+v1.30 beta3 (April,02,2003)- compress file function doesn't work correctly with some files
+			   - protected applications don't work with Win95 
+v1.30 beta2 (March,26,2003)- added many new features
+v1.13  (November,08,2002)  - added possibility change encryption algorithm (very useful for large files)
+			   - added commandline feature; svkp.exe xxx.svkp (where xxx.svkp is SVKP's project file)
+			   - enlarge number of blocks type1 and type2 to 500 blocks for both types
+			   - compression of loader code; protected file expands only about 50Kb
+			   - added anti-debug tricks to SVKP_KillDebugger fuction against kernel debuggers (like VC debugger,W32Dasm ...)
+			   - added possibility to lock application with license key, and without correct license key, is not possible run it
+			   - fixed problem with some older computers and Visual Basic programs	
+v1.12  (October,09,2002)   - fixed problem with files which use API functios names shorter than four characters
+			   - added examples for hardware locked license keys for Delphi	
+v1.11  (September,17,2002) - added hardware locked license keys
+			   - added examples for hardware locked license keys (Examples\HW_locked)	
+			   - updated help	
+			   - fixed some minor bugs
+v1.10  (Jule,30,2002)      - fixed problem with some Win98SE versions
+			   - fixed problem with some special Win2k versions	
+v1.09  (Jule,18,2002)	   - critical update for AMD processors (this version fixed some problems for these processors)!!!
+			   - fixed some minor bugs
+			   - added support to GUI for SCR, DLL and OCX files	
+v1.08  (Jule,03,2002)      - added check for already protected files with other protector or compressor
+			   - added TLS handling (necessary for some special files)
+			   - added check for space in PE header for SVKP
+			   - added possibility to increase space in PE header
+			   - fixed problem at Duron processors in Win9x 	
+v1.07  (June,20,2002)      - fixed problem at Athlon processors in driver for Win NT,2k,XP
+			   - added possibility for protection of DLL files (only beta version)
+v1.06  (May,31,2002)       - fixed problem with Norton AntiVirus
+                           - fixed problem with loading and saving keys & project files
+                           - added two new types of special blocks (please look to examples directory)
+                           - fixed problem in special blocks (no save of flags)
+                           - remove names of sections in PE header
+                           - changed import table rebuilding
+                           - added test for API hooking
+                           - fixed problem with some PE files
+v1.05  (April,22,2002)     - fixed loader problem (thanks to Ahn Heeyong)
+                           - added check for license keys
+                           - changed about box
+                           - fixed some minor bugs
+v1.04  (April,10,2002)     - fixed problem with imports from some special DLLs (private version)
+v1.03  (April,07,2002)     - fixed problem with command line and some special file managers (Far..) (thanks to Carsten Jendro)
+                           - fixed some minor bugs
+v1.02  (March,20,2002)     - private version
+v1.01  (March,13,2002)     - updated Windows XP problem
+                           - fixed error with Start Menu
+v1.0   (March,01,2002)     - The first official release after many "internal"
+                             versions

@@ -1,0 +1,10 @@
+EXPORTS
+
+InitPluginSettings
+GetPluginEnabled
+PluginProcess
+GetPluginContextSize
+GetPluginContext
+GetPluginBinName
+GetPluginType
+ShowPluginOptions

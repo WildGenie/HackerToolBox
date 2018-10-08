@@ -1,0 +1,110 @@
+PUSHAD
+
+sub esp,c
+MOV DWORD PTR SS:[ESP+8],1
+MOV DWORD PTR SS:[ESP],693100
+mov eax,[662CF0]
+MOV DWORD PTR SS:[ESP+4],eax
+CALL 005DE988
+
+mov ecx,[esp+8]
+cmp ecx,0
+jz 0069403d
+
+dec ecx
+mov [esp+8],ecx
+mov ecx,[esp]
+add ecx,100
+mov [esp],ecx
+jmp 00694013
+
+MOV DWORD PTR SS:[ESP+8],1
+MOV DWORD PTR SS:[ESP],693100
+CALL 005DE9B8
+add eax,ecx
+
+MOV DWORD PTR DS:[eax],5c
+mov ecx,[esp+8]
+cmp ecx,0
+jz 00694075
+
+dec ecx
+mov [esp+8],ecx
+mov ecx,[esp]
+add ecx,100
+mov [esp],ecx
+jmp 0069404c
+
+MOV DWORD PTR SS:[ESP+8],1
+MOV DWORD PTR SS:[ESP],693100
+CALL 005DE9B8
+add eax,ecx
+
+
+MOV DWORD PTR SS:[ESP+4],693000
+MOV DWORD PTR SS:[ESP],eax
+CALL 005DE988
+
+mov ecx,[esp+8]
+cmp ecx,0
+jz 006940c2
+
+dec ecx
+mov [esp+8],ecx
+mov ecx,[esp+4]
+add ecx,7
+mov [esp+4],ecx
+mov ecx,[esp]
+add ecx,100
+mov [esp],ecx
+jmp 00694096
+
+
+sub esp,10
+MOV EAX,DWORD PTR DS:[662CF4]
+MOV DWORD PTR SS:[ESP+8],693200
+MOV DWORD PTR SS:[ESP+4],601DD3
+MOV DWORD PTR SS:[ESP],00601D31
+MOV DWORD PTR SS:[ESP+C],EAX
+CALL 004E7420
+sub esp,10
+MOV EAX,DWORD PTR DS:[662CF4]
+MOV DWORD PTR SS:[ESP+8],693100
+MOV DWORD PTR SS:[ESP+4],601DDc
+MOV DWORD PTR SS:[ESP],00601D31
+MOV DWORD PTR SS:[ESP+C],EAX
+CALL 004E7420
+
+MOV DWORD PTR SS:[ESP+8],1
+mov edi,693100
+MOV DWORD PTR SS:[ESP],693100
+
+CALL 005DE9B8
+mov ecx,eax
+
+xor eax,eax
+REP STOS BYTE PTR ES:[EDI]
+
+mov ecx,[esp+8]
+cmp ecx,0
+jz 00694150
+
+dec ecx
+mov [esp+8],ecx
+mov ecx,[esp]
+add ecx,100
+mov [esp],ecx
+MOV EDI,DWORD PTR SS:[ESP]
+jmp 00694126
+add esp,c
+
+popad
+
+MOV DWORD PTR SS:[ESP+4],7F02
+jmp 00450D9B
+
+nop
+nop
+nop
+nop
+

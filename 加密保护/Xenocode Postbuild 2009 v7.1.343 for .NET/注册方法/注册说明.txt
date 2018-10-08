@@ -1,0 +1,25 @@
+把以下4个文件复制到 x:\windows\system32 文件夹下
+
+Postbuild.bin
+XBuild.bin
+DannyHelper.dll
+PostbuildHelper.dll
+
+然后打开 Postbuild.exe 在 Options 菜单下选 Install License Certificate  并把下面英文的注册码内容复制进去点 OK 就可以了
+
+注册码:
+
+<?xml version="1.0" encoding="utf-16"?>
+<LicenseCertificate version="2" publisher="Xenocode">
+  <LicenseType>Retail</LicenseType>
+  <LicenseModel>Site</LicenseModel>
+  <ProductCode>ALL</ProductCode>
+  <LicenseeName>Danny Su</LicenseeName>
+  <AccountNumber>74149478E1G67EDCFD64CGF054868C64</AccountNumber>
+  <Signature>
+    ef6033cc7aabadd60994281c92373b321a41137e45c0e920ef0e6f175c641f25
+    284b6211033128e7cf6330908aca22278592abe2aad98e9616ca65130c2c6c0a
+    d5144a04913d35332f837959168d485324fd6c55f4473317da156625a00af262
+    df019e69bf2c833136991e8989107bbce794c635cf3294476636d2355479f25f
+  </Signature>
+</LicenseCertificate>

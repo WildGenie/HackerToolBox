@@ -1,0 +1,203 @@
+;Simplified Chinese translating by ChRoNo, 2005-7
+;*************************************
+
+;Main Form (主窗体)
+;Top frame (顶端框架)
+MainForm.lblCompressor.Caption=Win32 EXE, DLL 压缩器
+MainForm.lblInsCap.hint=UPX 内核版本
+MainForm.lblInsCap.Caption=UPX 内核: 
+MainForm.lblOutCap.hint=UPX 外壳版本
+MainForm.lblOutCap.Caption=UPX 外壳: 
+
+;Open File tab (打开文件标签)
+MainForm.tbsOpen.Caption=打开文件
+MainForm.btnOpen.Caption=打开
+MainForm.dlgOpen.Filter=可执行文件 (*.exe)|*.exe|动态链接库文件 (*.dll)|*.dll|命令集文件 (*.com)|*.com|系统文件 (*.sys)|*.sys|组件 (*.ocx;*.dpl;*.bpl)|*.ocx;*.dpl;*.bpl|屏幕保护程序 (*.scr)|*.scr|ACM 编码文件 (*.acm,*.ax)|*.acm;*.ax|所有系统文件|*.exe;*.dll;*.com;*.sys;*.ocx;*.dpl;*.bpl;*.scr;*.acm;*.ax|所有文件|*.*
+MainForm.lblHistory.Caption=历史记录
+MainForm.pnlFileInfo.Caption=文件信息
+MainForm.lblFNameCap.Caption=文件名称
+MainForm.lblFName.Caption=N/A
+MainForm.lblFSizeCap.Caption=文件大小 (原始)
+MainForm.lblFSize.Caption=N/A
+MainForm.lblCSizeCap.Caption=文件大小 (压缩后)
+MainForm.lblCSize.Caption=N/A
+MainForm.lblRatioCap.Caption=压缩率
+MainForm.lblRatio.Caption=N/A
+MainForm.mnuHistory.Caption=清除历史记录
+
+;Compress tab (压缩标签)
+MainForm.tbsCompress.Caption=压缩
+MainForm.btnGo.Caption=执行!
+MainForm.chkDecomp.Caption=解压
+MainForm.btnRun.Caption=运行
+MainForm.lblProgress.Caption=压缩进程
+MainForm.lblProgressSize.Caption=压缩后文件大小
+
+;Options tab (选项标签)
+MainForm.tbsOptions.Caption=选项
+MainForm.chkBackup.Caption=创建备份
+MainForm.chkAutoCompress.Caption=载入后自动压缩
+MainForm.chkExitDone.Caption=完成后自动退出
+MainForm.chkTest.Caption=压缩完成后测试文件
+MainForm.btnAdvanced.Caption=高级选项
+MainForm.lblCompressLevel.Caption=压缩级别: 
+MainForm.lblFaster.Caption=较快
+MainForm.lblBetter.Caption=较好
+MainForm.lblLanguage.Caption=选择语言: 
+MainForm.btnMultiPck.Caption=多文件压缩
+
+;About tab (关于标签)
+MainForm.tbsAbout.Caption=关于
+MainForm.lblReleaseCap.Caption=Release:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.hint=ION Tek 的主页
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.hint=访问 UPX 官方主页
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblIONTmail.hint=发送邮件给本软件作者
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.hint=发送邮件给 BlackDex
+MainForm.lblBlackDexMail.Caption=写信给 BlackDex
+MainForm.lblBlaineMail.hint=发送邮件给 Blaine R Southam
+MainForm.lblBlaineMail.Caption=写信给 Blaine
+
+;Help tab (帮助标签)
+MainForm.tbsHelp.Caption=帮助
+MainForm.btnHelp.hint=阅读帮助文件
+MainForm.btnHelp.Caption=帮助
+
+;Update Tab --NEW NEW NEW-- (更新标签)
+MainForm.tbsUpdate.Caption=更新
+MainForm.btnChkUpdate.Caption=检查更新
+MainForm.lblOnlineVersionCap.Caption=在线版本: 
+MainForm.lblOnlineVersion.Caption=N/A
+MainForm.lblReleaseDateCap.Hint=年-月-日
+MainForm.lblReleaseDateCap.Caption=发布日期: 
+MainForm.lblReleaseDate.Hint=年-月-日
+MainForm.lblReleaseDate.Caption=N/A
+MainForm.lblDownloadCap.Caption=下载站点: 
+MainForm.lblDownload.Caption=N/A
+
+;Setup Form (设置窗体)
+SetupForm.chkScramble.Hint=加密 UPX 压缩的文件
+SetupForm.chkScramble.Caption=使用文件加密器
+SetupForm.btnScramble.Hint=立即加密选中的文件
+SetupForm.btnScramble.Caption=加密
+SetupForm.chkIntegrate.Hint=将 [用 UPX 压缩(&C)] 选项整合到资源管理器右键菜单
+SetupForm.chkIntegrate.Caption=整合到右键菜单
+SetupForm.lblAdvacedOpts.Caption=高级 UPX 选项: 
+SetupForm.chkResources.Hint=压缩资源 (压缩较好)
+SetupForm.chkResources.Caption=压缩资源
+SetupForm.chkExports.Hint=压缩导出模块
+SetupForm.chkExports.Caption=压缩导出模块
+SetupForm.chkRelocs.Hint=去除重定位
+SetupForm.chkRelocs.Caption=去除重定位
+SetupForm.chkForce.Hint=强制压缩可疑文件
+SetupForm.chkForce.Caption=强制压缩
+SetupForm.cmbPriority.Hint=选择压缩器进程优先级
+SetupForm.lblPriority.Caption=压缩器优先级: 
+SetupForm.cmbPriority.0=空闲
+SetupForm.cmbPriority.1=普通 (默认)
+SetupForm.cmbPriority.2=高
+SetupForm.cmbPriority.3=实时
+SetupForm.cmbIcons.Hint=选择是否压缩图标
+SetupForm.lblIcons.Caption=图标: 
+SetupForm.cmbIcons.0=全部 (除第一个目录外)
+SetupForm.cmbIcons.1=全部 (除第一个图标外)
+SetupForm.cmbIcons.2=不进行压缩
+SetupForm.lblCommands.Caption=附加 UPX 命令: 
+SetupForm.chkCommands.Hint=总是使用所输入的命令
+SetupForm.chkCommands.Caption=保存命令
+SetupForm.btnOk.Caption=确定
+SetupForm.trbCompression.Hint=数值设得越大,压缩文件时就需要占用更多的内存
+SetupForm.chkCompression.Hint=能改善压缩率,但压缩时会占用更多的内存
+SetupForm.chkCompression.Caption=额外压缩
+SetupForm.btnCommands.Caption=命令
+;--NEW NEW NEW--
+SetupForm.lblUPX2Only.Caption=仅对 UPX v1.9x: 
+SetupForm.chkBrute.Hint=选择此项即使用选项: --best, --all-methods, --all-filters 及额外压缩 = 999999
+SetupForm.chkBrute.Caption=强行压缩
+SetupForm.chkMethods.Hint=选择此项将使用所有可行的压缩方式对程序进行多次压缩. 这在某些情况下可能提高压缩率, 但通常情况下使用默认方式即可得到最佳结果.
+SetupForm.chkMethods.Caption=全部方式
+SetupForm.chkFilters.Hint=选择此项将使用所有可行的压缩方式对程序进行多次压缩. 这在某些情况下可能提高压缩率, 但通常情况下使用默认方式即可得到最佳结果.
+SetupForm.chkFilters.Caption=全部过滤
+
+;MultiPack Form (多文件压缩窗体)
+MultiForm.Caption=多文件压缩
+MultiForm.grpSearch.Caption=查找路径: 
+MultiForm.lblDir.Caption=N/A
+MultiForm.btnBrowse.Caption=浏览(&B)
+MultiForm.chkRecurse.Caption=扫描子目录(&R)
+MultiForm.cmbType.0=*.exe (可执行文件)
+MultiForm.cmbType.1=*.dll (动态链接库文件)
+MultiForm.cmbType.2=*.com (命令集文件)
+MultiForm.cmbType.3=*.sys (系统文件)
+MultiForm.cmbType.4=*.ocx (ActiveX 控件)
+MultiForm.cmbType.5=*.dpl (Delphi 链接库文件)
+MultiForm.cmbType.6=*.bpl (Delphi 链接库文件)
+MultiForm.cmbType.7=*.scr (屏幕保护程序)
+MultiForm.cmbType.8=*.acm (ACM 编码文件)
+MultiForm.cmbType.9=*.ax  (ACM/AX 编码文件)
+MultiForm.cmbType.10=*.*  (任何文件)
+MultiForm.lvFiles.Hint=按 [Del] 键或鼠标右击一个项目可跳过该操作
+MultiForm.chkAll.Caption=全部(&A)
+MultiForm.lblCurrent.Caption=当前文件: 
+MultiForm.lblOverall.Caption=全部进程: 
+MultiForm.lblTotalCap.Caption=文件合计: 
+MultiForm.lblSelectedCap.Caption=已选择: 
+MultiForm.lblTimeCap.Caption=耗费时间: 
+MultiForm.btnScan.Caption=扫描(&S)
+MultiForm.btnPack.Caption=压缩(&P)
+MultiForm.btnExit.Caption=退出(&E)
+
+;TreeView Form (树形视图窗体)
+TreeViewForm.lblSelect.Caption=选择要压缩的文件夹: 
+TreeViewForm.btnOK.Caption=确定
+TreeViewForm.btnCancel.Caption=取消
+
+;Const_Messages (常用信息)
+msg[001]=不能访问文件. 文件可能已经打开
+msg[002]=文件被设为只读属性. 若要继续必须去掉只读属性. 是否继续?
+msg[003]=最好
+msg[004]=此文件可能没有压缩. 要运行加密器吗?
+msg[005]= (用时 
+msg[006]= 秒)
+msg[007]=解压
+msg[008]=压缩
+msg[009]=没有任何文件
+msg[010]=N/A
+msg[011]=没有选择目录
+msg[012]=...更新失败 :-(
+msg[013]=无法连接到更新服务器!
+msg[014]=发现更新的版本!
+msg[015]=分析更新文件...
+msg[016]=检索更新信息...
+msg[017]=成功压缩文件
+msg[018]=成功解压文件
+msg[019]=文件已压缩但有警告信息
+msg[020]=文件已解压但有警告信息
+msg[021]=发生错误. 文件未被压缩
+msg[022]=发生错误. 文件未被解压
+msg[023]=并已测试
+msg[024]=并已测试(有警告)
+msg[025]=并测试失败
+msg[026]=UPX 返回下列错误: 
+msg[027]=并已加密
+msg[028]=...发现更新
+msg[029]=...没有找到更新
+msg[030]=成功
+msg[031]=失败
+msg[032]=跳过
+msg[033]=文件名称
+msg[034]=文件夹
+msg[035]=大小
+msg[036]=压缩后
+msg[037]=结果
+msg[038]=错误
+msg[039]=确认
+msg[040]=选择要压缩的文件夹: 
+msg[041]=此文件现在已被加密!
+msg[042]=此文件还没有被加密!
+msg[043]=用 UPX 压缩(&C)

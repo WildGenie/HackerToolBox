@@ -1,0 +1,591 @@
+* 6.1 build 794 (January 7, 2012)
+
+- fixed: Korean translation (Changwoo Nam)
+
+* 6.1 build 793 (December 9, 2011)
+
+- updated: Slovak translations (Peter Kapusta)
+
+* 6.1 build 792 (November 8, 2011)
+
+- updated: German translation (Brick Vanderhoven)
+
+* 6.1 build 791 (November 4, 2011)
+
+- updated: Croatian translation (Tomislav Gotic)
+- fixed: Variables Exclude List is not refreshing if one clicks "Edit"
+  and changes options
+- fixed: "Split variable" option changes don't apply to the system
+  variables until restart
+- fixed: OK button flickers on mouse over & out action (About dialog)
+
+* 6.1 build 790 (November 4, 2011)
+
+- updated: Polish translation
+
+* 6.1 build 789 (October 25, 2011)
+
+- updated: Dutch translation (Tony Leenen)
+
+* 6.1 build 788 (October 24, 2011)
+
+- updated: Chinese translation (Ji Liu)
+
+* 6.1 build 787 (October 22, 2011)
+
+- fixed: set focus to the User Variables tree after startup
+
+* 6.1 build 786 (October 13, 2011)
+
+- added: Danish translation (Jesper Toftegaard)
+
+* 6.1 build 785 (September 25, 2011)
+
+- added: shortcut (Ctrl-H) to show/hide read-only variables
+
+* 6.0 build 782 (September 23, 2011)
+
+- fixed: Korean translation (Changwoo Nam)
+
+* 6.0 build 781 (September 22, 2011)
+
+- fixed: error if element value includes ';' character
+- fixed: write variables in alphabetical order (an attempt to workaround
+  'nested expansion' bug in Windows - http://support.microsoft.com/kb/911089)
+
+* 6.0 build 779 (September 22, 2011)
+
+- fixed: Chinese translation (Ji Liu)
+
+* 6.0 build 778 (September 21, 2011)
+
+- fixed: Swedish translation (Ake Engelbrektson)
+
+* 6.0 build 777 (September 20, 2011)
+
+- added: Variables exclude list (see 'Options')
+- fixed: memory usage optimizations
+- changed: icons
+
+* 5.1 build 754 (September 5, 2011)
+
+- fixed: Chinese translation (Ji Liu)
+
+* 5.1 build 753 (September 4, 2011)
+
+- added: Expand/Collapse All icons
+
+* 5.1 build 752 (August 23, 2011)
+
+- fixed: increased size of the auto-completition popup
+- fixed: show hints for long items, which are getting beyond the right
+  edge of the popup
+
+* 5.1 build 751 (August 16, 2011)
+
+- fixed: Slovak translation (Peter Kapusta)
+
+* 5.1 build 750 (August 13, 2011)
+
+- added: installer supports "for all users" and "for the current user" modes
+
+* 5.0 build 748 (August 6, 2011)
+
+- fixed: copy/paste adds extra characters to the end
+- added: "Open Folder" feature allowing to open selected folder in Windows
+  Explorer
+
+* 5.0 build 747 (August 3, 2011)
+
+- fixed: broken filename/path validation in the 'User Variables' panel
+- added: wildcards support for the filename/path validation
+- changed: annoying behavior of the auto-completition popup. Now, by default,
+  the first item is not selected making the behavior of pressing Enter more
+  predictable
+
+* 5.0 build 745 (July 26, 2011)
+
+- fixed: Chinese translation (Ji Liu)
+
+* 5.0 build 744 (July 26, 2011)
+
+- fixed: typos
+- fixed: Swedish translation (Ake Engelbrektson)
+
+* 5.0 build 743 (July 25, 2011)
+
+- added: Croatian translation (Tomislav Gotic)
+- added: "Cleanup paths" feature to remove empty values and duplicates
+- added: hints into the main menu & context menu
+- fixed: use HOMEDRIVE value when checking directory for HOMEPATH (make sense if
+  RapidEE has been started from the USB drive or non-system drive)
+
+* 5.0 build 737 (June 13, 2011)
+
+- fixed: show tooltip when the whole text doesn't fit the screen
+- fixed: Korean translation (Changwoo Nam)
+
+* 5.0 build 734 (June 3, 2011)
+
+- fixed: Chinese translation (Ji Liu)
+- fixed: backup doesn't work if RapidEE is not stared with
+  administrative privileges
+
+* 5.0 build 733 (June 1, 2011)
+
+- changed: removed /cd & /usb parameter (as well as corresponding batch files).
+  To enable "portable mode" just create empty rapidee.ini file
+- added: command line parameters to set, remove & change variables
+
+* 4.0 build 725 (May 22, 2011)
+
+- fixed: Russian translation
+
+* 4.0 build 724 (May 3, 2011)
+
+- fixed: Chinese translation (Ji Liu)
+
+* 4.0 build 723 (May 2, 2011)
+
+- fixed: show error message if registry key is locked
+
+* 4.0 build 720 (April 21, 2011)
+
+- fixed: issue with empty Username combobox
+
+* 4.0 build 719 (April 19, 2011)
+
+- fixed: user names are sorted alphabetically
+
+* 4.0 build 707 (April 3, 2011)
+
+- added: support for domain users
+- updated: Japanese translation (Chieri Saito)
+
+* 3.3 build 615 (February 22, 2011)
+
+- added: edit mode on double-click
+
+* 3.3 build 614 (February 16, 2011)
+
+- fixed: French translation (Gratien Falcoz)
+
+* 3.3 build 613 (February 13, 2011)
+
+- updated: small fixes & optimizations
+
+* 3.3 build 612 (February 3, 2011)
+
+- added: Korean translation (Changwoo Nam)
+
+* 3.3 build 611 (January 30, 2011)
+
+- fixed: typos, small optimizations
+
+* 3.3 build 610 (January 10, 2011)
+
+- fixed: Swedish translation (Ake Engelbrektson)
+
+* 3.3 build 609 (January 9, 2011)
+
+- fixed: memory usage optimization
+
+* 3.3 build 608 (December 8, 2010)
+
+- fixed: Chinese translation (Ji Liu)
+
+* 3.3 build 607 (December 2, 2010)
+
+- fixed: restore position should respect taskbar placed on the left
+  side of the screen
+- fixed: support recursion in the expandable variables
+
+* 3.3 build 606 (November 30, 2010)
+
+- fixed: sometimes auto-completition popup was not closing
+
+* 3.3 build 605 (November 15, 2010)
+
+- added: uninstall icon & version number in the Control Panel
+- added: check for updates shows detailed changes
+- fixed: 'Refresh' doesn't not work if user has no administrator rights
+- changed: do not hide 'Users' combo if user has no administrator rights, just
+  disable it
+
+* 3.3 build 602 (November 11, 2010)
+
+- fixed: %ProgramFiles% -> %ProgramFiles(x86)% conversion issue on 64-bit OS
+
+* 3.3 build 601 (November 4, 2010)
+
+- fixed: Chinese translation (Ji Liu)
+
+* 3.3 build 600 (October 17, 2010)
+
+- fixed: UAC issue with autoupdate
+
+* 3.3 build 591 (October 16, 2010)
+
+- added: icons into the auto-complete menu
+- fixed: crash on exist if auto-complete menu is opened
+- fixed: read-only variables are supported in all modern OSes including x64
+
+* 3.3 build 582 (October 6, 2010)
+
+- fixed: restored missed translations
+
+* 3.3 build 581 (October 5, 2010)
+
+- fixed: removed reference to the FastMM_FullDebugMode.dll
+
+* 3.3 build 580 (October 4, 2010)
+
+- fixed: hotkeys (F6, F7, etc) should be available in the Edit mode
+- added: auto-complete path/filename feature (Ctrl-Space)
+- added: esc after 'insert value' removes an empty value
+- fixed: drawing artefacts when one press esc in the 'edit variable name' mode
+- fixed: wrong icons in the tree
+- added: 'restart as administrator' button
+- fixed: auto-complete list contains dups if variable exists in both the
+  system and user list.
+
+* 3.2 build 565 (August 19, 2010)
+
+- fixed: tree scrolling with keyboard doesn't work
+
+* 3.2 build 564 (August 1, 2010)
+
+- fixed: French translation (Jean-Francois Simoneau)
+
+* 3.2 build 563 (April 3, 2010)
+
+- fixed: Swedish translation (Ake Engelbrektson)
+
+* 3.2 build 562 (March 31, 2010)
+
+- added: Swedish translation (Ake Engelbrektson)
+
+* 3.2 build 561 (March 28, 2010)
+
+- fixed: updated Japanese translation (Yuki Kodama)
+
+* 3.2 build 560 (March 13, 2010)
+
+- fixed: updated Chinese translation (Ji Liu)
+
+* 3.2 build 559 (December 8, 2009)
+
+- updated: proxy support for auto-update
+
+* 3.2 build 550 (November 29, 2009)
+
+- updated: Italian translation (Luigi Bava)
+
+* 3.2 build 549 (November 15, 2009)
+
+- updated: French translation (M. Arpon)
+
+* 3.2 build 523 (August 21, 2009)
+
+- fixed: updated Chinese translation (Ji Liu)
+
+* 3.2 build 522 (August 20, 2009)
+
+- fixed: Polish localization (Przemyslaw P. Socha)
+
+* 3.2 build 521 (August 19, 2009)
+
+- added: "Automatically check for updates" feature
+
+* 3.2 build 519 (July 26, 2009)
+
+- fixed: memory leaks, typos
+
+* 3.2 build 518 (May 11, 2009)
+
+- added: Dutch localization (Hendrik de Goede)
+
+* 3.2 build 517 (May 1, 2009)
+
+- fixed: updated French translation (Daniel U. Thibault)
+
+* 3.2 build 516 (April 9, 2009)
+
+- fixed: updated Chinese translation (Ji Liu)
+
+* 3.2 build 515 (March 20, 2009)
+
+- fixed: updated Italian translation (Luigi Bava)
+
+* 3.2 build 514 (March 19, 2009)
+
+- fixed: updated Latvian translation (Andris Veics)
+
+* 3.2 build 513 (February 24, 2009)
+
+- fixed: updated French translation (Daniel U. Thibault)
+- fixed: updated strategy for validating paths in variables
+
+* 3.2 build 512 (February 2, 2009)
+
+- fixed: broken auto-completition feature (on percent sign
+  or Ctrl-Space)
+
+* 3.2 build 511 (February 1, 2009)
+
+- fixed: Polish localization (Przemyslaw P. Socha)
+- fixed: added check for existing variable in the "Add variable"
+  dialog
+- fixed: set focus correctly in the "Search" dialog
+- fixed: refresh variable value after "Insert directory path"
+
+* 3.2 build 508 (January 17, 2009)
+
+- fixed: avoid double confirmation on user switch
+- added: number of hotkeys
+- added: skins into the dialogs
+- fixed: disable toolbar buttons if the are no active user tree
+- fixed: added check for empty variable name in the "Add variable"
+  dialog
+
+* 3.2 build 497 (January 2, 2009)
+
+- added: auto-update feature in the "Check for updates"
+  dialog
+
+* 3.1 build 492 (December 27, 2008)
+
+- added: OS version checking in the instaler
+- fixed: copy variable value to the system clipboard (Ctrl-C)
+
+* 3.1 build 485 (December 14, 2008)
+
+- added: Chinese translation (Adlina Baozhu)
+
+* 3.1 build 484 (December 13, 2008)
+
+- fixed: another icon for uninstaller
+- fixed: updated Japanese translation (thanks to Hisateru Tanaka,
+  Kazunori Ikezawa)
+
+* 3.1 build 480 (December 7, 2008)
+
+- added: Spanish translation (J.Franco)
+- fixed: first user switching doesn't work
+- fixed: set focus on variable tree after startup
+- added: mark logged in user in the list
+- fixed: combo-box size is enough to fit the data
+  without scrolling
+
+* 3.0 build 471 (December 3, 2008)
+
+- added: Greek translation (Dimitris Gios)
+- fixed: Polish translation (Przemyslaw P. Socha)
+- changed: updated skin engine
+- changed: 3.x doesn't support Windows 9x
+
+* 2.1 build 447 (November 12, 2008)
+
+- added: Find feature
+- added: Slovak translation (Peter Kapusta)
+- fixed: Refresh caused exception if current user is a domain user
+- fixed: German translation (Roland Muhlberger)
+
+* 2.0 build 427 (September 7, 2008)
+
+- added: Latvian translation (thanks to Andris Veics)
+
+* 2.0 build 424 (July 29, 2008)
+
+- added: Refresh variables and values (F5) 
+
+* 2.0 build 423 (July 15, 2008)
+
+- added: Italian translation (thanks to Damiano Battaglia)
+
+* 2.0 build 420 (June 13, 2008)
+
+- fixed: updated French translation (thanks to Daniel U. Thibault)
+- added: checking for the empty name of the new variable (thanks to
+  Daniel for the bug report)
+
+* 2.0 build 410 (May 28, 2008)
+
+- added: German translation (thanks to Christian Gopfert)
+
+* 2.0 build 409 (May 6, 2008)
+
+- added: Polish translation (thanks to Przemyslaw P. Socha)
+
+* 2.0 build 408 (May 3, 2008)
+
+- added: inspector shows Long and Short (8.3) pathnames
+- added: odd and even rows in inspector have a different
+  background colors
+
+* 2.0 build 407 (May 3, 2008)
+
+- changed: auto-completition feature works now for expandable
+  variables only
+- fixed: mouse didn't work in auto-completition popup
+- fixed: access violation error on drag'n'drop
+
+* 2.0 build 402 (Apr 28, 2008)
+
+- fixed: restored main icon
+
+* 2.0 build 401 (Apr 26, 2008)
+
+- added: ability to convert long path to the 8.3 format and vice versa
+- added: Inspector pane showing information about variable and values
+- changed: icons have been polished a bit
+- added: Ctrl-Ins and Shift-Ins shortcuts in the tree
+
+* 1.9 build 379 (Mar 23, 2008)
+
+- added: auto-completition feature (on % or Ctrl-Space)
+- fixed: window position on multimonitor configuration
+- changed: hotkey to delete variable/element (Del instead
+  of Ctrl-Del)
+- added: history of the latest version in the
+  'Check for updates' dialog
+
+* 1.9 build 357 (Mar 10, 2008)
+
+- added: French translation (thanks to Jean-Max Buzzi)
+- fixed: icon of the "Saving..." indicator
+
+* 1.9 build 355 (Mar 6, 2008)
+
+- added: Japanese translation (thanks to Nardog)
+- fixed: translation of the 'System variables (read-only)' caption
+
+* 1.9 build 353 (Mar 4, 2008)
+
+- added: switch users combo-box (not supported on Win9x)
+- added: show/hide toolbars
+- fixed: Ctrl+C/Ctrl+V work inside editor
+- fixed: localization issues
+
+* 1.8 build 319 (Jan 24, 2008)
+
+- fixed: Esc issue in the "Insert file path" window
+- added: Ability to localize user interface
+- added: Russian localization
+
+* 1.7 build 309 (Jan 19, 2008)
+
+- fixed: RapidEE supports two command line parameters: /cd and /usb.
+  /cd allows to READ program settings from the .ini file.
+  /usb allows to READ and WRITE program settings from/to the .ini
+
+* 1.7 build 306 (Jan 15, 2008)
+
+- fixed: special read-only variables should not be saved
+  to the registry
+- fixed: fixed undo issue after first edit
+
+* 1.7 build 305 (Jan 14, 2008)
+
+- added: special read-only variables (USERPROFILE, etc)
+
+* 1.6 build 275 (Jan 6, 2008)
+
+- added: hints for variable elements (useful for "Expandable string")
+- added: copy/paste
+- added: drag'n'drop variables between trees
+
+* 1.6 build 252 (Dec 25, 2007)
+
+- added: drag'n'drop between variable trees
+- fixed: support quoted values. "C:\;D:\" is a single value now
+- added: variable name can't be empty
+- fixed: edited value has not been checked for incorrect path
+- added: "Insert file path..."
+- added: "Saving..." indicator
+- changed: "portable mode" icon
+
+* 1.5 build 182 (Nov 9, 2007)
+
+- added: command line parameter /portable. With this parameter
+  RapidEE doesn't save configuration to the registry.
+- added: PortableRapidEE.bat to run RapidEE in "portable mode"
+
+* 1.5 build 181 (Oct 23, 2007)
+
+- added: restore window size and position on startup to its last state
+
+* 1.5 build 179 (Sep 27, 2007)
+
+- fixed: variable didn't refresh after "Edit as path"
+
+* 1.5 build 178 (Sep 21, 2007)
+
+- fixed incorrect sorting of variables & values
+
+* 1.5 build 177 (Sep 21, 2007)
+
+- added icons for variables containing errors
+
+* 1.5 build 168 (Sep 20, 2007)
+
+- added skins
+- added icons to the toolbar
+- fixed taskbar issues for Windows 9x
+
+* 1.4 build 138 (Sep 10, 2007)
+
+- memory usage optimization
+- reduced program size
+- visual notification about "read only" only mode:
+  background and message
+- rearranged menu items (Edit and View)
+- added visual indicator to the "Check for Update" window
+- interface enhancements
+
+* 1.4 build 124 (Sep 7, 2007)
+
+- "expandable variables" could be checked as well as
+  "string variables" for path correctness. They will
+  be expanded before checking.
+
+* 1.3 build 120 (Aug 24, 2007)
+
+- fixed "Add New Variable" window, it can't be resized now
+- added installer/uninstaller
+
+* 1.3 build 119 (Aug 20, 2007)
+
+- fixed memory leaks and small bugs
+
+* 1.3 build 113 (Aug 20, 2007)
+
+- added alphabetical sorting of variables
+- added datetime stamp into the backup filename
+- if user has no write access to the system variables then
+  RapidEE uses read-only mode
+- improved look and feel for Windows XP
+- "Legend" could be hidden
+
+* 1.2 build 102 (Aug 16, 2007)
+
+- added drag'n'drop feature
+- search of the existing variable is not case sensitive now
+- added ability to rename variable (Edit/F2)
+
+* 1.1 build 97 (Aug 12, 2007)
+- added "Check for Updates..." into the Help menu
+- added confirmation dialogs for Delete and Exit
+- changed hotkey for Delete (Ctrl-Del)
+
+* 1.0 build 90 (Jul 26, 2007)
+- Added "Move up" and "Move down" features
+- Added tree icons for the "String" and "Expandable" variables
+- Fixed some interface bugs
+
+* 1.0 build 76
+- Added checking for invalid files in variables
+- Added "Backup" feature
+
+* 1.0 build 71
+- Added checking for invalid path in variables

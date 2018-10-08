@@ -1,0 +1,609 @@
+Version 8.3
+
+Add: Calling VTable properties and methods from some form to any other
+     form now can be decompiled. For example if you change in Form1
+     property of object in Form2 - it can be correctly decompiled (Native Code)
+Add: Parameters of object method/property is now typicle. If object
+     have parameters as boolean or single - it will be decompiled correctly:
+     single as float variable, boolean as True/False) (Native Code)
+Add: Decompile declaration of all types of array. Multifield arrays and
+     arrays of object (array of Form or commandButton for example) also
+     supported (Native Code)
+Add: Decompile __vbaVar2Vec, __vbaAryMove msvbvm functions
+Add: Italian language translation
+Add: Parsing control array index in events
+Add: Parsing function return value (P-Code)
+Add: Help files (English and Russian) is updated. New topics writen:
+     Opening file, Working with database, Saving the list of procedures,
+     Jump to address, The main window, Viewing of code, Decompilation from offset,
+     Language selection, Plugins
+Add: Language files changed
+BugFix: Correctly calculate count of parameters in public sub's
+BugFix: Procedure analyzer and optimazer now correctly process second parameter in For command
+BugFix: Correctly process some types of VarType integer and long (Native Code)
+BugFix: Correctly detect end of some non-standard procedures in source mode (Native Code)
+
+Version 8.2
+
+Add: Jumping back and forward from function to function (call stack)
+Add: Double processing P-Code functions for correcly parse "Do ... Loop"
+     and "Else" instructions in first access (P-Code)
+Add: Decompilation __vbaFileOpen (partially), __vbaPrintFile,
+     __vbaFileClose, __vbaInputFile, __vbaFileSeek, __vbaFileLock,
+     __vbaGet4, __vbaGetFxStr4, __vbaGetOwner4, __vbaPut4,
+     __vbaPutFxStr4, __vbaPutOwner4, __vbaRedim, __vbaRedimPreserve,
+     __vbaLineInputStr, __vbaLineInputVar (Native Code)
+Add: Decompiling types for ByRef variables (Native Code)
+Add: Convert hex values to decimal (Native Code)
+Add: Processing imul opcode (Native Code)
+Add: Processing all 44 tables used in Ecma-335 5th edition (.NET)
+Add: Show more debug information from metadata tables (.NET)
+Add: Support calling  methods from MethodSpec table (.NET)
+Add: Now you may hide debug information and disassembling will be faster (.NET)
+Add: Declaration for methods (.NET)
+Add: Parameters for methods and using it on IL code (.NET)
+Add: Global variables parsing and declare (P-Code)
+Add: Disassembler and Native Code emulator now support Win9x
+Add: VersionCheck plugin now support Win9x
+Add: Obfuscation engine improved
+BugFix: Saving forms in "Decompile only forms" mode
+BugFix: Correctly processing clicks on .NET internal tables (.NET)
+BugFix: Find next in "Search string" tool now working correctly
+BugFix: Resize RAEdit control after using Splitter control
+BugFix: Variables is not declared now in disassembler mode (P-Code)
+BugFix: Char "%" is now correctly showed (P-Code)
+BugFix: Correctly declare sub names from modules (P-Code)
+BugFix: Correctly support api names from VB 5.0
+BugFix: Correctly parsing event types
+
+Version 8.1
+
+Add: Decompilation "Do ... Loop" instructions in P-Code
+Add: Unpacker engine improved
+BugFix: Correctly detection end of some optimized procedures in Native Code
+BugFix: Correctly forms decompilation
+BugFix: Unpacker now don't freeze if timeout is reached
+
+Version 8.0
+
+Add: Detect correct end of code in pure disassembler mode
+Add: Decompile negative values in object sizes
+Add: Generate "Else" constructions in P-Code
+Add: Detect "Exit For" command
+Add: Selection FRX files in FRXView plugin using keyboard
+Add: ProgressBar in Windows 7 taskbar
+Add: Decompile LitVarUI1 P-Code opcode
+Add: Decompile ImpAdCallNonVirt P-Code opcode
+Add: Multilanguage interface now supported
+Add: Spanish interface translation
+Add: French interface translation
+Add: German interface translation
+Add: Russian interface translation
+Add: Slovak interface translation
+Add: Spanish help file
+Add: German help file rewriten
+Add: Unpacker engine improved, disassembler rewriten
+Add: Decompile real API calling in P-Code (used in obfuscated applications)
+Add: Resize support for String References window
+Add: Unpacking timeout increased
+BugFix: Decompilation MemStAd opcode in P-Code rewriten
+BugFix: Decompilation New opcode in P-Code rewriten
+BugFix: Declare variables in Lite version
+BugFix: Clear old VB5/6 prototypes before .NET decompiling
+BugFix: "Unknown compiler" error in chinese locale with VB5/6 applications
+BugFix: MAP file saving in non English locales
+
+Version 7.9
+
+Add: Decompiling User defined ScaleMode in Forms and PictureBoxes
+Add: Decompiling all ImpAdLd* P-Code opcodes
+Add: Decompiling LateIdCallLdVar P-Code opcode
+Add: Checking unset variables in Native Code
+Add: Decompilation of Native Code is improved
+Add: Correclty calling user defined functions in Native Code
+Add: Correclty detect parameters of user defined functions in Native Code
+Add: Parsing ByRef variables in Native Code
+Add: Decompiling type &h4008 (pointer to file) in Native Code
+Add: Decompile rtcBstrFromFormatVar function
+Add: Decompile __vbaStrToUnicode function
+Add: Strings with apostrophes now supported and decompiled correctly
+Add: Powerfull strings parsing with correct decoding special chars in Native Code
+Add: Objects database format changed, type of RetVal added
+Add: Decompiling objects calling with new object as result,
+     changing "This" and declare variable with new type
+Add: Variables declaration in Native Code
+Add: Decompile __vbaBoolVarNull function
+Add: Emulate "not" command
+Add: Unpacker engine highly improved, driver rewriten
+BugFix: Wrong decompiling ScaleMode types larger than 0
+BugFix: Wrong decompiling fields from Global GUID (Clipboard, Printer, etc)
+BugFix: Compile stack parameters now enabled by default
+
+Version 7.8
+
+Add: Unpacker engine improved
+Add: Working on Windows x64 improved
+Add: References in IL code
+Add: Decompiling P-Code procedures with size larger than 32767 bytes
+BugFix: Crashes on decompiling .NET programs in "full decompilation" mode
+
+Version 7.7
+
+Add: Two types of "Decompile from VA" in .NET (IL and ASM decompile)
+Add: Obfuscator modified for stop false alarms on AV
+Add: New version of Show References plugin. More fixes
+Add: Language autodetection for decompiled VB file (you don't see "???" in code anymore)
+Add: Detecting names of public variables in classes
+Add: Decompiling access to public variables from one class to another
+Add: Database for VB5 updated
+Add: New options window
+Add: Windows 7 fully supported now
+
+Version 7.6
+
+Add: Coprocessor emulation improved
+Add: Fully compatible with old OS versions (like 9x/Me)
+Add: Optimization for Windows 7 RC1
+Add: Unpacker engine improved
+BugFix: User strings (#US heap) parsing (.NET)
+BugFix: Incorrect decompile some classes in full decompilation mode
+
+Version 7.5
+
+Add: Namespace loading speed improved (.NET)
+Add: Open and Save DataBase (.NET)
+Add: Saving to TXT, IDC, Names, MAP (.NET)
+Add: Save all in one module (.NET)
+Add: Show String References (.NET)
+Add: Cache decompiled code (.NET)
+Add: Edit String References (.NET)
+Add: Parsing rtcGetDateValue
+Add: Parsing rtcFileDateTime
+Add: Intelliparsing large Native procedures
+Add: Now you may find address jumps in active window
+     simply select address and press Ctrl+G
+Add: Unpacker engine updated
+BugFix: Scroll after click to string references
+BugFix: GoTo Virtual Address
+
+Version 7.4
+
+BugFix: Some crashes while decompiling obfuscated code
+
+Version 7.3
+
+Add: Unknown VTable calls now marked and not decompiled
+Add: Progress bar for all code loading
+Add: You may change file path now after decompilation
+     by pressing Enter after changing FileName field
+Add: Export names to IDA via IDC script (added to File -> Save procedures list menu)
+Add: Export names to HIEW names file format (added to File -> Save procedures list menu)
+Add: Export names to MAP file (added to File -> Save procedures list menu)
+Add: Parsing __vbaGenerateBoundsError
+Add: Parsing __vbaAryLock
+Add: Parsing __vbaAryUnlock
+Add: Parsing __vbaBoolVar
+Add: Parsing __vbaOnError
+Add: Saving String References list to file
+Add: Tiny code format parsing (.NET)
+Add: FAT code format parsing (.NET)
+Add: Disassemble IL with show offsets of code lines (.NET)
+Add: Decompile strings in IL (.NET)
+Add: Decompile virtual calls to MethodDef and MemberRef tables (.NET)
+Add: Disassemble unmanaged methods (.NET)
+Add: Decompile references to Field table rows in code (.NET)
+Add: Decompile branch IL opcodes (.NET)
+Add: Decompile Int64 type (.NET)
+Add: Decompile SEH frames (.NET)
+Add: Decompile parameters for methods (.NET)
+
+Version 7.2
+
+Add: New unpacker engine
+Add: Version Check plugin for checking new versions of VB Decompiler
+Add: Changes in all help files
+Add: Parsing __vbaI2I4
+Add: Parsing __vbaR8Sgn
+Add: Parsing __vbaR8Str
+Add: Coprocessor emulation improved
+Add: If "Add Address" is unchecked in "Options" you may only use disassembler mode
+Add: New version of Show References plugin
+
+BugFix: If source lines is long (more 300 chars) decompiler crashes
+
+Version 7.1
+
+Add: Control arrays decompilation in P-Code
+Add: New unpacker engine
+Add: Control Arrays events detection
+BugFix: Decode first section offset in dumped programs
+BugFix: Lcase and Ucase is not checked in type name
+BugFix: Error in decompiling Labels in Native Code
+BugFix: Some signatures in Native Code is not working
+BugFix: Control index parsing
+
+Version 7.0
+
+Add: New unpacker engine
+Add: Help files changed
+Add: "For Each" decompilation in Native Code
+Add: Screen object
+Add: Printer object
+Add: Clipboard object
+Add: vbGlobal parsing
+Add: vbSingle type of data
+Add: Dispatch vbaLate functions parser
+Add: Clear FPU error checking and objects checking instruction in Native Code
+Add: rtcGetErl decompilation
+Add: Objects declaration in P-Code
+Add: Parsing "Set" opcode and use this variables in object reference
+Add: "FnIntVar" decompilation in P-Code
+Add: Resorting history after deleting items 
+Add: FRX Viewer plugin (need .NET Framework 2.0)
+Add: New type of renaming Unknown functions
+BugFix: P-Code Put and Get opcodes
+BugFix: Procedure analyzer and optimizer no don't clear some variables
+BugFix: Clear "@" chars in names of P-Code procedures and functions
+BugFix: Parameters in VTable Get/Let/Set procedures
+
+Version 6.0
+
+Add: New unpacker engine
+Add: Parameters detection in unknown P-Code procedures
+Add: Visual Basic 4.0 32 bit forms decompilation
+Add: Parsing __vbaVarCopy
+Add: Parsing __vbaVarCat
+Add: Parsing __vbaVarMove
+Add: Parsing __vbaStrMove
+Add: Parsing __vbaChkstk
+Add: Parsing __vbaVarPow
+Add: Parsing __vbaVarDiv
+Add: Parsing __vbaVarMul
+Add: Parsing __vbaVarAdd
+Add: Parsing __vbaVarSub
+Add: Parsing __vbaVarAbs
+Add: Parsing __vbaVarAnd
+Add: FPU commands emulation
+BugFix: VB Decompiler now vorking in Windows 2008 Server without crashes
+BugFix: Form parsing if control has no id
+BugFix: Vars parser in Native Code
+BugFix: User controls decompilation if function type = 256
+
+Version 5.0
+
+Add: New unpacker engine
+Add: OptionButton decompilation
+Add: Russian help file rewriten
+Add: New plugin functions: GetFrxIconCount, GetFrxIconOffset, GetFrxIconSize
+Add: Address in String Reference window
+Add: Strings editor in String Reference window
+Add: Collapse and expand "If" and "For" constructions in text window
+BugFix: Parameters parser fixed
+BugFix: Resize in Windows Vista SP1
+
+Version 3.9
+
+Add: Parsing LateIdLdVar opcode
+Add: Parsing LateIdSt opcode
+Add: Parsing CastAdVar opcode
+Add: Detecting type of property (Let, Set, Get)
+Add: New powerful database for external ActiveX (richtx32.ocx, comctl32.ocx and others)
+Add: Recent files history list in File menu
+Add: Detect events for UserControls
+Add: New plugin functions: ClearAllBuffers, GetCompiler, IsPacked,
+     SetStackCheckBoxValue, SetAnalyzerCheckBoxValue
+Add: If plugin function have error after using method
+     decompiler return information about this or "1" if all ok
+Add: Detection form properties in Native Code
+Add: Detection standard controls properties in Native Code
+Add: New DataBase packed format (now supported new and old DataBases)
+BugFix: "On Error" and "Resume" commands decompiling
+BugFix: VTable parsing
+
+Version 3.8
+
+Add: Imp, Eqv, Like and Pwr preffix decompilation (P-Code)
+Add: ForEach decompilation (P-Code)
+Add: Packer detection improved
+Add: Decompile for VA supports Native Code now
+Add: Unpacker updated
+Add: New plugin for changing decompiler priority
+Add: Progress bar for Native Code "non-fast" decompilation
+Add: New signatures for P-Code in Lite version
+Add: Float numbers processing (P-Code)
+Add: Decompiler search "VB5!" now in all space of first section
+BugFix: Clear stack before parsing procedure
+
+Version 3.7
+
+Add: Fast Native Code loading
+Add: Import parser improved
+BugFix: Native Code emulator fixed
+BugFix: String references searching
+
+Version 3.6
+
+Add: Show External API calls in Native Code
+Add: New plugin LangeFree for editing language dll name in VB programs (thanks to Executioner)
+Add: All windows centered to owner
+Add: Methods parsing optimized
+Add: Strings parser rewriten (now working spaces after and before
+     strings and with zero bytes in string)
+Add: Decompiling commands with length>9 in mnemonics mode (P-Code)
+Bugfix: Calculating VTable offset in PCode for PropertyPages and WebClasses fixed
+BugFix: Fixed commands length in P-Code (NextEachVar, ExitProcFrameCb, ExitProcFrameCbStack.
+        LateMemNamed*, LateIdNamed*, VarLateMemCallLdRfVar)
+BugFix: "On Error" command decompilation (with FFFE and FFFF parameters)
+
+Version 3.5
+
+Add: Generic unpacker for most packers (thanx to Archer)
+     If program packed - VB Decompiler detect it automatically
+Add: No "Emulation errors" anymore. Now all errors handled and
+     showing after all decompilation process
+Add: FASM Plugin SDK
+Add: CreateMap plugin (thanks to Executioner)
+Add: Emulate inc, dec, add, and, or commands (Native Code)
+Add: Flags emulation (Native Code)
+Add: Auto filter and delete from code __vbaHresultCheckObj
+     and __vbaNew2 object checking (Native Code)
+Add: AddRef plugin improved
+Add: Search in string references window
+Add: New Vista icon
+Bugfix: Import table loading
+Bugfix: vbaVarFree emulation if vars > 1000
+Bugfix: decompile procedures with more than 9999 lines of code
+
+Version 3.4
+
+Add: Native Code stack parser
+Add: Native Code procedure analyzer and optimizer
+Add: Native Code emulator improved
+Add: Autodetect procedures protected with VMP
+Add: Bound import is using now for names recovery (UnObfuscator)
+Add: New plugin functions
+     GetFileName,
+     IsNativeCompilation,
+     GetVBFormCount,
+     GetModuleCount,
+     GetModuleFunctionCount
+Add: OEP disassembling and emulation (100% VBHeader finding)
+Bugfix: Resizing in Vista
+Bugfix: ActiveX version in Project .vbp files 
+Bugfix: Patch function is not working after loading database
+Bugfix: Unicode conversions fix
+
+Version 3.3
+
+Add: Native Code procedure size autodetect
+Add: AppActivate command decompilation
+Add: Decompile Native Code If ... End If constructions
+Bugfix: Plugins CallBack fixed
+
+Version 3.2
+
+Add: Splitter between tree and code text
+Add: Method types recovery (Sub of Function)
+Add: Functions names recovery
+Add: Functions parameters recovery (with names)
+Add: Native Code modules decompiler (new code binary search and analization)
+Add: Methods and Properties has different icons now
+Add: German help file
+Add: Show Code References plugin by Babakhanov Aslan
+Add: ThisVCallHResult opcode decompilation
+Add: New database format
+Add: Plugin function GetActiveText (51) set data to text box and to ActiveModule
+Add: Global variables decompilation as global_XX
+Add: Decompile "FLdPr", "NewIfNullPr", "VCallAd" p-code commands
+Add: Long strings decompiling to frx
+Add: Events types decompilation
+Add: Decompile controls Names in code (VCallAd)
+Add: DateAdd, LikeStr API decompilation
+Add: Decompile "Resume" p-code command
+Add: Decompile "ImpAd*" as memory address to user variable (MemVar_XXXXXXXX)
+Add: Decompile "LateIdLdVar" p-code command
+Add: Decompile "AryLdRf" p-code command
+Add: Decompile "LateMemSt", "LateMemLd", "LateMemCall" p-code commands
+Add: Decompile Mem API "GetMem*", "PutMem*" and "SetMem*"
+Add: Decompile "LateIdCall" p-code command
+Bugfix: Disassembler options not working correctly in "Goto virtual address"
+Bugfix: Circle, Line, Scale methods fixed
+Bugfix: Timer Top property decompilation
+Bugfix: FRX buffer is not clearing before new decompiation
+Bugfix: Patch option working only if Fast decompilation mode checked. Fixed.
+
+
+Version 3.1
+
+Add: Native Code disassembler improved (some code emulating and tracing)
+Add: Native __vbaFreeObjList, __vbaFreeStrList, __vbaFreeVarList decompilation
+Add: WebClass decompilation (this forms is only used in DLL's)
+Add: Add "All Files" pattern to "Open File" dialog
+Add: VB Decompiler version to result files
+Add: "Write" and "Input" VB opcodes decompilation
+Add: "Format" VB5 API decompilation
+Add: All ImpAdSt* opcodes decompilation
+Add: All modules ObjectType=&H18041 decompilation
+Add: New plugin function SetActiveTextLine (54)
+Add: New plugin function GetActiveModuleCoordinats (55)
+Add: New plugin function GetVBDecompilerPath (56)
+Bugfix: Image under textbox flashing
+Bugfix: "Add Address" option lock decompilation process
+Bugfix: Menu unlocking after .NET prgrams loading
+Bugfix: String references End_ID not used correctly
+Bugfix: API in events declarations not filtered in the p-code
+Bugfix: Command32 parameter in project with one quote.
+Bugfix: SystemPath changed to system32 in project
+Bugfix: Native Code class in "Fast Decompilation" mode is not decompiling
+Bugfix: VB5 P-Code modules procedures is not right
+Bugfix: Plugins menu fixed in Windows Vista
+
+Version 3.0
+
+Add: Advanced code patcher instrument
+Add: DataSource property decompilation
+Add: MaskColor property converted to HEX
+Add: context comments for MousePointer property
+Add: "Collection" object decompilation
+Add: "Screen" object decompilation
+Add: All MemLd* and MemSt* opcodes decompilation
+Add: Prototypes generator for all functions
+Add: String References engine improved
+Add: Asm Plugin SDK (thanx to Jupiter)
+Bugfix: Form and controls properties fix: Align, MultiSelect, LinkMode, BOFAction, EOFAction, DefaultType, OLETypeAllowed, OLEDragMode, OLEDropMode, ScaleMode, FontTransparent, AutoRedraw
+Bugfix: BorderStyle properties for Line and Shape
+Bugfix: Timer linear sizes
+Bugfix: Progress bar resizing
+Bugfix: Procedure analyzer and optimizer crashes if var > 999
+
+Version 2.7
+
+This version of the decompiler contains huge modifications. Now you can
+decompile even a 10-megabyte EXE file for only 5-10 seconds. It became
+possible due to the on-the-fly decompilation technology. Now if you select
+the "Fast decompilation" checkbox in the options, the decompiler will
+decompile not the entire file, but only the tree of functions. Functions
+will be decompiled transparent for you when you access them. It will allow
+you to start analyzing the file at once. Of course, the decompiler will
+decompile the rest of the file when you save the project, but it is better
+anyway because it is much more important to start faster than to save the
+project faster. Let me remind you that you might as well disable this
+option. You will also find the "Cache decompiled code" checkbox in the
+options. It is used to decompile a function only once and when you access it
+later, it will take code from the internal structures of the decompiler. Do
+not enable this option, if you want to use different on-the-fly
+decompilation methods using the "Compile stack parameters" and "Procedure
+analyzer and optimizer" checkboxes.
+
+Version 2.6
+
+Add: Obfuscator engine improved
+Add: Decompile VB5 modules
+Add: New engine for decompiling VB6 modules
+Add: More than 100 MSVBVM50.DLL signatures
+Add: Decompiling some structures in .NET applications (experimental)
+Add: Decompiling string references in .NET applications
+Add: find string into text field and find string references in RAEdit control
+Bugfix: Fixed some bugs in obfuscation engine
+
+Version 2.5
+
+Add: Double stack engine (for variables and records)
+Add: More fixes in signatures
+Add: Decompiling strutures code
+Add: Portugal help file
+Bugfix: Saving code to DB with no forms
+Bugfix: DragMode property from 2 bytes to 1 byte fixed
+
+Version 2.4
+
+Add: More memory outflow fixes
+Add: Native code 100kb+ procedures now decompiling correctly
+Add: Long name paths (255 chars+) now supported for saving ond loading results
+
+Version 2.3
+
+Add: Updated more beautifull icons
+Add: More syntax coloring options
+Add: Decompiling GUID objects at p-code improved
+Add: Many new signatures and fixes
+Add: Decompilation speed increased
+Add: C++ Plugin SDK (thanx to Jupiter)
+Add: Decompiling "Print" opcode
+Bugfix: String references in native applications
+Bugfix: Data object unicode properties
+Bugfix: P-Code commands with 10 or more parameters
+
+Version 2.2 Lite
+
+Add: New cool RichEdit control RAEdit.dll (big thanx to KetilO)
+Add: String references and API references in native applications
+Add: New price for 2.2 Pro
+Bugfix: Norton AV false alarm fixed (program repacked)
+Bugfix: More bugfixes
+
+Version 2.1
+
+Add: Decompile from offset
+Add: Decompile "For Each ... Next" construction
+Add: Icons to main menu
+Add: Decompile dumped files if NtHeaderSize<>0E
+Add: Windows 98/NT support
+Add: Class modules generating is more real now
+Add: New encryption algorithm
+Add: Prototypes of ASProtect and Guardant API (from SDK)
+Add: Stack engine is improved
+Add: New very fast API decompilation
+Bugfix: End procedure bug
+Bugfix: String reference onclose bug
+
+Version 2.0
+
+Add: Save decompiled data to single DB file
+Add: New plugins sdk
+Add: Decompiling standart objects (without Ole control)
+Add: Tree of functions
+Add: New search and string reference engine
+Bugfix: More fixes in signatures
+Bugfix: More bugfixes
+
+Version 1.4
+
+Add: Local variables engine
+     Declarations of variables moved to start of procedure, P-Code is more simple to analyze now
+Bugfix: More fixes in signatures
+Add: Some icons to main menu
+Add: Powerful obfuscation engine. The given engine modifies your program, thus many decompilers will be crashed at attempt to decompile your program or can not distinguish names of the forms, objects and procedures. use this engine to more protect your VB programs
+Add: Plugins support + sdk
+
+Version 1.3
+
+Add: Command line support
+Bugfix: If ... End If structures is more real now
+Bugfix: Project file for OCX and DLL more real now
+Add: Russian language full help
+Add: Registration dialog
+Add: Installer and uninstaller
+
+Version 1.2
+
+Add: Decompiling constants
+Add: Color theme support (select theme in options dialog)
+     If you create cool theme - please send this theme for my Email
+Add: P-Code decompiling mode select (to mnemonics or to simple source)
+     Available only in Pro version
+
+Version 1.1
+
+Add: Ballon ToolTip help
+Add: Options dialog (many options)
+Add: Some cosmetic changes in program interface
+Add: Decompiling references to dll's used in program
+Bugfix: Strings decompiling fix
+Thanx for testing to: Jupiter, gloom, Mario555, vins
+
+Version 1.0
+
+Add: Command line support
+Add: Drag & Drop file
+Add: Browse button on main form
+Bugfix: All disassembler crashes fixed (new disassembler dll)
+Bugfix: Some bugs in decompiling forms
+Bugfix: Some bugs in saving projects
+
+Version 0.4
+
+Bugfix: Disassembling addresses is wrong
+Bugfix: If file not found - decompiler crashes
+Bugfix: Some bugs in decompiling forms
+
+Version 0.3
+
+Add:    Menu icons
+Add:    New encryption algorithm
+Add:    Some new dialogs
+Bugfix: Some non critical bugs
+
+Version 0.2
+
+Bugfix: support exe/dll/ocx without forms

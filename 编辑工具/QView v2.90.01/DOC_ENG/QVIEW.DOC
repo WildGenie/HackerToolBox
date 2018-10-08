@@ -1,0 +1,1186 @@
+           ÚÄÄÄÄÄÄ    ÚÄÄÄÄÄÄ    ÚÄÄÄÄÄÄ
+         ÚÄÄ    ÚÄÄ ÚÄÄ    ÚÄÄ ÚÄÄ    ÚÄÄ
+        ÚÄÄ    ÚÄÄ ÚÄÄ        ÚÄÄ
+       ÚÄÄÄÄÄÄÄÄÄ ÚÄÄ  ÚÄÄÄ  ÚÄÄ
+      ÚÄÄ    ÚÄÄ ÚÄÄ    ÚÄÄ ÚÄÄ    ÚÄÄ
+     ÚÄÄ    ÚÄÄ  ÚÄÄÄÄÄÄÄ   ÚÄÄÄÄÄÄÄ
+
+                           ÚÄÄÄÄ  ÚÄÄÄÄ  ÚÄÄÄÄÄ ÚÄÄÄÄ  ÚÄ  ÚÄ ÚÄÄÄÄÄ ÚÄÄÄÄÄ
+                          ÚÄ  ÚÄ ÚÄ  ÚÄ ÚÄ  ÚÄ ÚÄ  ÚÄ ÚÄ  ÚÄ ÚÄ       ÚÄ
+                         ÚÄÄÄÄ  ÚÄÄÄÄ  ÚÄ  ÚÄ ÚÄ  ÚÄ ÚÄ  ÚÄ ÚÄ       ÚÄ
+                        ÚÄ     ÚÄ  ÚÄ ÚÄÄÄÄÄ ÚÄÄÄÄ  ÚÄÄÄÄÄ ÚÄÄÄÄÄ   ÚÄ
+
+
+             ßßßßßß\     ßß\    ßß\  ßßßßßßß\   ßßßßßßß\  ßß\      ßß\
+           ßß\    ßß\   ßß\    ßß\     ßß\     ßß\       ßß\      ßß\
+          ßß\    ßß\   ßß\    ßß\     ßß\     ßß\       ßß\      ßß\
+         ßß\    ßß\   ßß\    ßß\     ßß\     ßßßßßßß\  ßß\  ß\  ßß\
+        ßß\ ß\ ßß\   ßß\    ßß\     ßß\     ßß\       ßß\ ßß\  ßß\
+        ßß\  ßßß\    ßß\  ßß\      ßß\     ßß\        ßß\ßßß\ßß\
+        ßßßßßß\      ßßßßß\     ßßßßßßß\  ßßßßßßß\    ßß\  ßß\
+              ßß\
+
+  Release 2.50.00  21 Feb 1998                                Dedicated to ...
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Product support ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+           ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+           ³Welcome to the echo-conference QVIEW.SUPPORT in Fidonetº
+           ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+~ The latest version of QView is file requestable at 2:5030/445 by the alias
+  QVIEW
+~ It also can be found in Internet (refer QView.URL file).
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Table of contents ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+  1. Main features.
+  2. System requirements.
+  3. Video modes.
+  4. Status line.
+  5. String search, search with replace.
+  6. Assembler search.
+  7. Jumps on jmp/call etc. in disassembler.
+  8. A few words about the internal disassembler.
+  9. Block operations.
+ 10. Bookmarks.
+ 11. Calculator.
+ 12. Crypt-system.
+ 13. Base.
+ 14. Views-history file and its dialog.
+ 15. Configuration files qview.ini, qview.ehl.
+ 16. Help file qview.hlp.
+ 17. User character table redefining file qview.chr.
+ 18. Mouse support.
+ 19. .CRK file support.
+ 20. The comments for the instructions in AV support.
+ 21. Extra service functions.
+ 19. Controll keys.
+ 20. Command-line options and start-up.
+ 21. A lot of thanks.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Main features ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+  ş Unlimited size file viewing in txt/hex/asm modes: TV,HV,AV.
+  ş Highlight fields in HV,AV and text in TV.
+  ş Support of Alternate, Windows and KOI-8 text encoding.
+  ş LineFeed autodetect feature and on-fly change (TV).
+  ş Full-file editor in AV in codes and i486 assembler.
+  ş Full-file editor in HV in Hex/ASCII mode.
+  ş Changes save in .CRK-type file
+  ş Current file update with the .CRK-type file information
+  ş Creating new files, appending and truncating files ability.
+  ş Support of MS-DOS 'MZ' executable files header.
+  ş Support of Windows 95/NT 'PE' executable files header.
+  ş Support of Windows,OS/2,DOS 4 etc. 'NE' executable files header.
+  ş Support of OS/2 'LX' executable files header.
+  ş Support of Windows 95 'LE' executable files header.
+  ş i80486/87 powerfull disassembler.
+  ş The instruction comments are allowed in AV mode.
+  ş The file-start base.
+  ş Support of jump on jmp/call/loop.../j... etc. in disassembler.
+  ş Serach of any i486/87 commands with a mask ability.
+  ş Search for Jumps/Calls/Pointers to the current offset (AV).
+  ş Ascii/Hex [sub]string search with masking and case sensitive ability.
+  ş Ascii/Hex [sub]string search and replace.
+  ş Jump to offset in HV, AV.
+  ş Block-save on disk in Code/Dump/Assembler.
+  ş Block-read from disk to file in Code.
+  ş Block-delete/insert from/to file.
+  ş A zero-bytes block insert to file.
+  ş The block of bytes delete feature.
+  ş The file recode function in TV mode
+  ş A powerfull crypt-system for the file encoding.
+  ş Internal calculator.
+  ş 9 bookmarks for each view mode.
+  ş The context-depended help system.
+  ş Automatic views-history file support ability.
+  ş Views-history dialog for the fast'n'easy file management.
+  ş Open/create a file from the viewer ability.
+  ş Viewer colors override ability.
+  ş Supported video modes: 80*25, 80*30, 132*25, 132*30 etc.
+  ş Mouse support.
+  ş Built-in file manager when load file for view from the viewer.
+  ş Time slices under the multitasking environment.
+  ş Memory requirements of about 90 Kb RAM.
+  ş Q-Setup by Igor Naryshkin.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß System requirements ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+    Program requires:
+
+         CPU:   386+
+       Video:   VGA+, MDA, Hercules, CGA, EGA
+         DOS:   MS DOS 3.3+
+      Memory:   ~90 Kb
+
+P.S. Video: no snow checking.
+P.P.S. Also works well in both OS/2 and Windows95 DOS-sessions.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Video modes ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+    Supported: 80*25, 80*30, 80*50, 132*25, 132*30 etc., i.e. all  known text
+video modes.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Status line ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Filename.ext YYYYYYY  M xxxxxxxx  ---------   00 Ş QView 2.50  AGC Product
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ ÀÄÄÄÄÂÄÄÄÄÄÙ ÀÄÄÂÄÄÄÙ ³ ÀÄÄÂÄÄÄÙ  ÀÄÄÄÂÄÄÄÙ  ÀÄÂÙ
+      ³         File   ³  current   bookmarks   first
+      ³         size   ³  offset   (unique for  column in
+      ³       in bytes ³  (Hex)     each view   the text
+      ³        (Dec)   ³              mode)     mode (Hex)
+  Filename             ³
+                       À Line editor mode
+                         (I-Insert, O-Overwrite)
+
+ See also 'Mouse support'
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß String search, search with replace ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     Search works with the whole file from the current position the the  start
+of file (Backward) or to the it's end (Forward). Optionally the case sensitive
+mode may be used.  Default is off  (both english and russian letters  are sup-
+ported). If text is entered in the HEX-line, the case sensitive flag is ignor-
+ed - always used a case sensitive mode.
+
+     You may enter the searched string in  ASCII  as well as in HEX modes  and
+switch between them (<up>, <down> arrow keys).  If the 'Masking' option is on,
+the '?' symbol is accepted as mask  and shown as '??' in the  HEX-line  and as
+'?' in ASCII one.
+
+     When masked search is used, any symbol is allowed in the  string  instead
+of '?' one. If you enter something like  'one ?y?e',  the result of search may
+be 'one byte' as well as 'one type', etc. If 'B4 ?? CD 21' is entered, the re-
+sult may be 'B4 3F CD 21' as well as 'B4 40 CD 21' etc.
+
+     You have ability to enter the assembler instruction. After you've pressed
+Enter key, your instruction is assembled and returned code is  placed  to  the
+search fields. Press Enter again to start search.
+
+     Keys:
+
+     F1    - Help           - help
+     F2    - Assembler      - accept assembler instruction
+     F4    - Case sensitive - case [in]sensitive mode
+     F5    - Use mask       - search with[out] masking
+     F7    - History        - searched strings history
+     F9    - Direction      - search forward/backward
+     Enter - start          - start search
+     Esc   - exit           - exit from dialog (skip search)
+
+     The history dialog is consist of the records  from  the  QVIEW.SRH  file,
+where the last searched substrings  are stored.  The last entered substring is
+pushing (or replacing) to the top of the stack.
+
+       Control keys:
+
+       Up, Down         goto the previous/next record
+       F8, Del          delete the current record
+       F10              clear the history file
+       Enter            pick up the current record from the list
+       Esc              exit from the dialog (return no substring)
+
+Note:
+     the history file could be prohibited in QVIEW.INI
+
+     Search with replace  may be forced by  Ctrl+F7  and contains  the  second
+field for the replacing string to be entered. Direction is always forward.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Assembler search ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+   Works in the disassembler mode.
+   Start    : [F6]
+   Continue : [Shift]-[F6]
+
+   [F6] key calls the next dialog:
+
+       ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ Assembler search ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+       º                                                      º
+       º  °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°  º
+       º                                                      º
+       º  Step: Command Area: File  Offs: Begin  Type: Full   º
+       º  ~~~~          ~~~~        ~~~~         ~~~~         º
+       ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+   1. Step  -  step of search - use [F2] to change
+           'Command' - search by instructions (commands)
+           'Byte   ' - search by 1-st byte ( slower, but more faithfully ;)
+
+   2. Area  -  searched area - use [F3] to change
+           'File '   - the whole file
+           'Block'   - in block
+
+   3. Offs  -  offset - use [F4] to change
+            'Begin ' - search from the file(block) begining
+            'CurOfs' - search from the file(block) current position
+
+   4. Type  -  search type - use [F5] to change
+            'Full '  - search for all substring entries, i.e. if you'll simply
+                       type 'MOV' - the  all instructions  of  'MOV x,y'  form
+                       will be found. Also if you type 'mov ax,$FE' - the  all
+                       instruction 'mov ax,00FE', 'mov ax,FE12', etc.  will be
+                       found. If 'xor ?x,byte ptr [si'  substring  is  entered
+                       'xor ax,byte ptr [si+1000]',    'xor cx,byte ptr [si]',
+                       etc. instructions will be found.
+            'Small'  - exact search, i.e. when 'mov *,$1' is entered the view-
+                       er will find the 'mov si,0001', 'mov cl,01', 'mov dword
+                       ptr [bx+si],00000001', etc. instructions.  But if there
+                       will be '10'  in the end of the  last  instruction,  it
+                       won't be found.
+
+   5. Mask syntax
+         Use the assembler syntax for the instructions and operands.  The case
+     of the symbols has no importance - use it as you prefer. Don't insert the
+     unnecessary spaces - the viewer does not process them. Don't forget about
+     the type reduction - 'byte ptr' - is a 2 words! Feel yourself free to use
+     the mask if you are too lazy to type that.
+
+       Mask symbols:
+          '?' - any one symbol (byte)
+          '*' - any substring to the comma or to the end of string
+          '$' - use befor the numeric constant to force the viewer
+                to skip a leadind noughtes
+          '%' - any word (till the space, comma or end of the string)
+
+   Examples:
+        ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+        ³ 1. 'mov ?s,ax'              ³ 'mov es,ax'                          ³
+        ³                             ³ 'mov ds,ax'                          ³
+        ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+        ³ 2. '*,$1'                   ³ 'mov ax,0001'                        ³
+        ³                             ³ 'cmp byte ptr [ebx],01'              ³
+        ³                             ³ 'shl dx,01'                          ³
+        ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+        ³ 3. '% % ptr fs:[e?x+$14],*' ³ 'cmp byte ptr fs:[eax+14],01'        ³
+        ³                             ³ 'mov dword ptr fs:[ebx+00000014],esi'³
+        ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+        ³ 4. 'l?s *,*'                ³ 'lds si,word ptr [1980]'             ³
+        ³                             ³ 'les eax,dword ptr [ebx]'            ³
+        ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+  ~ Use you imagine :-)
+
+  6. Search for Jumps/Calls/Pointers to the current offset - [F6] - Reference
+
+  7. Search dialog - [F7]
+
+     The history dialog is consist of the records  from  the  QVIEW.SRA  file,
+where the last searched substrings  are stored.  The last entered substring is
+pushing (or replacing) to the top of the stack.
+
+       Control keys:
+
+       Up, Down         goto the previous/next record
+       F8, Del          delete the current record
+       F10              clear the history file
+       Enter            pick up the current record from the list
+       Esc              exit from the dialog (return no substring)
+
+Note:
+     the history file could be prohibited in QVIEW.INI
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Jumps by jmp/call, etc. in the disassembler ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+   Keys:
+    [Shift]+[1]...[Shift]+[9] - jumps
+    [Shift]+[0] - return (only one step back - use bookmarks!)
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß A few words about the internal disassembler ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+   Genaraly,  the  assembler syntax is the same as in the  disassembler.  Don't
+forget about type reduction where needed,  but generaly defaults are used.  For
+the jumps - 'short','near',etc. are absent, the FAR defaults or the 'byte(word,
+dword,pword) ptr' constructions are used (so 'byte' for 'short',  'word(dword)'
+for 'near', 'pwrod' for 'far').
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Block operations ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+  All block operations are supported
+
+    [Shift-F2] - write marked block to the file                   (HV,AV)
+    [Shift-F3] - read block from the file to the marked block     (HV,AV)
+    [Shift-F4] - delete marked block                              (HV,AV)
+    [Shift-F5] - insert block from a file to the current position (HV,AV)
+    [Ins]      - mark the start/end of the block, clear mark      (HV,AV)
+    [Ctrl-F4]  - insert block of 0h-bytes to the current position (Text,HV,AV)
+    [Ctrl-F5]  - delete block of bytes from the current position  (Text,HV,AV)
+    [Alt-A]    - mark the whole file as a block [HV,AV]
+
+ 1. The next dialog is appeares:
+
+   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Write block to file ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+   ³                                                                        ³
+   ³ Block : Begin :  00000000     End :  00000000     Length :  00000000   ³
+   ³                                                                        ³
+   ³ File  : °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°   ³
+   ³                                                                        ³
+   ³ Offset: °°°°°°°°    Save as :   (*) Code  ( ) Dump  ( ) Assembler      ³
+   ³                                                                        ³
+   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 1.1. First line is the block parametres (start, end, size).
+ 1.2. Use [Tab] to jump between the fields.
+ 1.3. Use [Enter] to write block, [Esc] to reject operation.
+ 1.4. Use [Space] at ( ) Code, ( ) Dump, ( ) Assembler to set the type of
+      the output.
+ 1.5. 'Offset' is the offset in the output file to start writing at. By default
+      0 is assumed. If the offset is greater than the file size, the block will be
+      appended to the end of the file.  Use the FFFFFFFF  offset to write block
+      to the end of file for sure.
+ 1.6. In the Dump mode the filter is used for the output:  00-31 ASCII  symbols
+      are are skipped.
+ 1.7. In the Assembler mode the disassembler listing is written.
+
+ 2. When read a block from the file,  if the number of bytes from Offset to the
+    end of the input file smaller than the marked block size the  "Illegal off-
+    set in file" report is appeares.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Bookmarks ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     You may use bookmarks to save the current position and then easily restore
+it.  [Alt]+[+] stores the current position, [BS] restores  one  of  the current
+bookmark and so on. For each view mode (text/hex/asm) there are 9 bookmarks may
+be used. Use [Alt]+[1]...[Alt]+[9] to restore any of the stored position.
+
+     [Alt]+[+]             - store the current position
+     [BS]                  - go to the current bookmark
+     [Alt]+[1]...[Alt]+[9] - go to the bookmark number 1..9
+     [Alt]+[-]             - delete the current bookmark
+     [Alt]+[0]             - clear all bookmarks
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Calculator ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     The powerfull calculator with the  complete  set  of  the arithmetical and
+logical functions is built-in.  Use Ctrl-[F6] to call the  calculator.  You may
+use the four next modes to enter the expression in:  Dec, Hex, Oct, Bin.   Also
+you may force the type reduction by typing the one of the  next  symbols  after
+the numbers: d - Dec, h - Hex, o - Oct, b - Bin. All numbers are in double word
+type (32 bits).  Operations with equal precedence  are normally performed  from
+left to right.  Expressions within the parentheses are evaluated  before  being
+treated as a single operands.
+
+     Operation precedence:
+        ÚÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+        ³1³ (, )             ³ parentheses                               ³
+        ³2³ ~, -             ³ not, unary_minus                          ³
+        ³3³ <<, >>           ³ shl, shr                                  ³
+        ³4³ *, /, %, &, |, ^ ³ mul, div, mod, and, or, xor               ³
+        ³5³ +, -             ³ add, sub                                  ³
+        ÀÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+     Note: the highest precedence is 1
+
+     Keys:
+         F2    - Dec default
+         F3    - Hex default
+         F4    - Oct default
+         F5    - Bin default
+         Enter - Evaluate
+         Esc   - Exit
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Crypt-system ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     As I see,  the programming of different compilers-interpreters is a thank-
+less task. Besides that it is requires a sizeable memory resources, etc. I have
+analized known crypt-systems such as one in Hiew, Proview and others (let's de-
+fine the crypt-system as the automatical or semi-automatical mechanism  of  the
+file recoding)  and  have  found all of them  too narrow-featured for the  real
+hacker. So I've choosen my own way.  Ofcause, there are also some  limits in my
+program, but it has a wider potentialities than the other systems. But any coin
+has two sides, and the reverse side is  that  the clearness and control  of the
+crypt-system work are absent.  But to my mind  it is a low price  for the great
+inherent potentialities - just be carefull and everything will be Ok!
+
+    So:
+
+     1.  Crypt-system works with a marked block up to  64000  bytes  of size in
+the normal mode, so don't forget to pick up the block to be crypted.
+
+     2.  Crypt is a FAR-procedure called by a viewer, so do not  forget  to add
+the RETF instruction to the end of it!
+
+     3.  Viewer sets the next registers befor the procedure call
+            DS:SI - start address of the block to be crypted
+            CX    - size of the block to be crypted
+            ES:DI - the procedure data area
+
+     4.  Any of i486 instruction is allowed.
+
+     5.  Viewer leaves the procedure to its own controll.  Do not forget to pop
+up all data pushed to the stack.  So, take care of the crypt-procedure correct-
+ness - I leave it to you.
+
+     6.  The maximum code and data size of the procedure is 1024 bytes. Use the
+DataOffset field  to change the code and data correlation.  The  data area from
+the DataOffset up to the 1024 bytes is fixed,  so you may  directly access this
+area. It holds the crypt-procedure local variables, tables, etc.  Assembling is
+maked into the code area. Program size is limited up to 200 lines.
+
+    Control keys:
+
+       Up, Down         Move up/down
+       Right, Left      Move left/right
+       Alt+F1           Assembler editor mode: insert/override
+       F1               Help
+       F2               Save crypt file
+       F3               Load crypt file
+       F4               Crypt procedure data section offset
+       F5               Go to offset
+       F6               Erase crypt procedure
+       F7               Clear crypt procedure data section
+       F8               Delete current instruction
+       F9               Run crypt procedure
+       TAB              Toggle assembler/data editor
+       ENTER            Assemble instruction
+       ESC              Exit w/o crypt
+       and so on...
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Base ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     You may change the base address of the program.  It is may be usefull when
+you need to define the start address for the .COM as 100h  or to point the off-
+set of some command to the desired address.  In that  case  you  may define the
+special constant - address base,  that is automatically added to the Offset and
+the jump-addresses. To call the dialog use Ctrl+F2.
+
+    Control keys:
+
+       Up, Down         Move up/down
+       Tab              Next record
+       F1...F8          Select 1..8 base
+       Enter            Select current base
+       F10              Clear program base VA
+       ESC              Abort operation
+
+    Base symbols:
+       '+','-'          Sign of the base constant
+       '*'              Auto-change the current offset to the constant after
+                        '*'. So when needed to redefine the current  offset,
+                        e.g. 1893h, to the new one, let's say 200h, then just
+                        type *200h.
+
+  Note: the dialog may be also called with a mouse (see 'Mouse support').
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Views-history file and its dialog ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     The history file stores the information about the viewed files such as the
+current file offset (note: if the size of the file was chanched since the  last
+view, the 0 offset is accepted),  LineFeed, [Un]Wrap status,  both standard and
+assembler search options  (but not the searched substrings itself),  bookmarks.
+When you call the same file to view again, all settings  are restored  from the
+history file.
+
+     The history file is logged automatically and one for all the viewed files.
+The history file is located in the same directory that the QView is. The histo-
+ry  file  is refreshed on exit from  the QView. The size of the history file is
+limited up to a 32 records.
+
+     The views-history dialog allows the record deletion and  fast'n'easy  file
+management. Use Alt-F7 to call this dialog box.
+
+       Control keys:
+
+       Up, Down         goto the the previous/next record
+       F8, Del          delete the current record
+       F10              clear the history file
+       Enter            pick up the current record from list
+       Esc              exit from the dialog (return no substring)
+
+Note:
+     the history file could be prohibited in QVIEW.INI
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Configuration file ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+  N.B. Q-Setup program exist to help you to configure the viewer as you prefer.
+       Q-Setup works in interactive (menu) mode.  Refer the Q-Setup.doc for de-
+       tails.
+
+ÖÄÍ QVIEW.INI ÍÍÍÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+    ~~~~~~~~~
+ 1. Configuration file
+      Name        : QVIEW.INI
+      Size        : 87 bytes
+      Type        : optional (the defaults are used if absent)
+      Description : Colors and options override
+      Location    : with QVIEW.EXE
+
+ 2. Format:
+
+;--- Ini file data ----------------------------------------------------------
+IniHeader    db      'AGC231'
+IniAttrib:
+;--- Information line colors ------------------------------------------------
+cCopyRight    db      70h                ; Copyright string color
+cFileName     db      79h                ; File name color
+cFileSize     db      70h                ; Color of file size
+cTxtOutOfs    db      74h                ; Color for output offset
+;--- Status/help line colors ------------------------------------------------
+cStLineKey    db      74h                ; Status line key color
+cStLineMes    db      70h                ; Status line message color
+cStLineGray   db      78h                ; Status line message grayed color
+;--- Input line colors ------------------------------------------------------
+cInpLineTxt   db      8Eh                ; Input line text
+cInpLineHex   db      8Ah                ; Input line hex
+cEditBG       db      70h                ; Input line BG
+;--- Dialog boxes colors ----------------------------------------------------
+cDlgBox       db      7Fh                ; Dialog box background with frame
+cDlgHeader    db      7Eh                ; Dialog box header
+cDlgText      db      70h                ; Dialog box text
+cDlgScrBar    db      0Eh                ; Dialog box scroll bar
+cDlgCursor    db      9Eh                ; Dialog box cursor attr
+cGrpTxt       db      30h                ; Group box attr
+cGrpGray      db      38h                ; Group box grayed item
+cGrpHeader    db      7Fh                ; Group box header
+cGrpFrame     db      70h                ; Group box frame
+cGrpHigh      db      7Ah                ; Group highlite header
+;--- Text view mode colors --------------------------------------------------
+ctvAttrOut    db      87h                ; Attributes for output chars
+ctvMarkOut    db      70h                ; Searched value highlight
+ctvDivider    db      8Fh                ; Symbols
+ctvNumber     db      8Bh                ; Numbers
+ctvComment    db      83h                ; Comment string attribut
+ctvString     db      8Dh                ; Strings color
+;--- Dump view mode colors --------------------------------------------------
+chvAttrOut    db      87h                ; Main color
+chvByteHexOut db      87h                ; Bytes hex out color
+chvByteAscOut db      87h                ; Bytes ascii out color
+chvCursorAttr db      3Fh                ; Cursor color
+chvMarkOut    db      70h                ; Searched value highlight
+chvDivider    db      8Fh                ; Symbols
+chvChgHexOut  db      8Ah                ; Changed bytes color hex out
+chvChgAscOut  db      8Eh                ; Changed bytes color asc out
+chvNewHexOut  db      8Bh                ; HV new bytes color hex out
+chvNewAscOut  db      8Fh                ; HV new bytes color ascii out
+chvBlkHexMark db      8Eh                ; Mark block color hex
+chvBlkAscMark db      8Ah                ; Mark block color ascii
+;--- Assembler view mode colors ---------------------------------------------
+cavAttrOut    db      87h                ; Attributes for output chars
+cavCodeField  db      8Fh                ; Instr code field
+cavCursorAttr db      3Fh                ; Cursor color
+cavMarkOut    db      70h                ; Searched value highlight
+cavDivider    db      8Fh                ; Symbols
+cavNumber     db      8Bh                ; Numbers
+cavJmpField   db      83h                ; Jmp field
+cavAsmField   db      87h                ; Instr. field
+cavComment    db      83h                ; Comment string attribut
+cavChgHexOut  db      8Ah                ; Changed bytes color hex out
+cavNewHexOut  db      8Bh                ; AV new bytes color
+cavBlkHexMark db      8Eh                ; Mark block color hex
+cavBlkAscMark db      8Ah                ; Mark block color ascii
+;--- Help window colors -----------------------------------------------------
+bHlpWinAttr   db      3Fh                ; Help window frame attr
+bHlpTxtAttr   db      30h                ; Help text attr
+bHlpCurAttr   db      0Fh                ; Help cursor attr
+bHlpTxtHigh1  db      3Eh                ; Highlight group 1
+bHlpTxtHigh2  db      3Fh                ; Highlight group 2
+bHlpTxtHigh3  db      3Ah                ; Highlight group 3
+bHlpTxtHigh4  db      3Bh                ; Highlight group 4
+;--- Other colors -----------------------------------------------------------
+cIntro        db      04h                ; Intro color
+ScrBarAttr    db      83h                ; Attr Scroll Bar
+;--- Other options ------------------------------------------------15 bytes--
+OtherParms:
+OutMode     db      0         ; Output mode  0-TV, 1-HV, 2-AV
+WrapLog     db      1         ; TextWrap 0FFh-Wrap, 01h-UnWrap
+SearchOpt   db      0FFh      ; Case sentensivity 01 - On, 0FFh - Off
+PercentCnt  db      0FFh      ; ScrollBar 0FFh, Percent counter 01h
+LFCurPos    db      5         ; 0-CRLF,1-CR,2-LF,3-NULL,4-LFCR,5- None,6-AUTO
+DefSegSize  db      16        ; Segment size 10h-16, 20h-32
+UndocOper   db      1         ; Undoc operation - (not use)
+bStepValue  db      1         ; AsmSr Step 01h-Command, 0FFh-Byte
+bAreaValue  db      1         ; AsmSr Area 01h-File, 0FFh-Block
+bOffsValue  db      1         ; AsmSr Offs 01h-Begin, 0FFh-CurOfs
+bTypeValue  db      1         ; AsmSr Type 01h-Full, 0FFh-Small
+bAutoHis    db      1         ; Auto history 01h-On, 0FFh-Off
+bCharSet    db      0         ; 0-Alt, 1-Win, 2-KOI
+bCmdOpTab   db      7         ; TabSize from BegCmd to operands
+CalcMode    db      1         ; 0-Dec, 1-Hex, 2-Oct, 3-Bin
+AdvancedOpt db      0FFh      ; Search with mask
+UseCharSet  db      1         ; Search with use current CharSet
+bAVEdBGChar db      ' '       ; AV edit cmd BG char
+bEditEnable db      1         ; Enable editing file after run viewer
+bTabONFlag  db      1         ; Tab symbols on
+bZoomWinFlg db      1         ; Zooming window enable/disable
+
+  Note: the defaults are taken from the QVIEW.COM
+
+ÖÄÍ QVIEW.EHL ÍÍÍÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+    ~~~~~~~~~
+                                                     See the world coloured ;)
+
+  Name          : QVIEW.EHL
+  Size          : variable
+  Type          : optional
+  Description   : file extensions setup
+  Location      : with QVIEW.EXE
+  Record size   : 48 bytes
+
+ÚÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³  Field   ³ Size  ³  Example    ³               Description                  ³
+³          ³(bytes)³             ³                                            ³
+ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+³FileExt   ³  4    ³'ASM',0      ³File extension                              ³
+³OutMode   ³  1    ³ 0           ³Output mode  0-TV, 1-HV, 2-AV               ³
+³WrapFlg   ³  1    ³ 1           ³TextWrap 0FFh-Wrap, 01h-UnWrap              ³
+³LFChar    ³  1    ³ 6           ³0-CRLF,1-CR,2-LF,3-NULL,4-LFCR,5-None,6-AUTO³
+³CharSet   ³  1    ³ 0           ³0-Alt, 1-Win, 2-KOI                         ³
+³EditFlg   ³  1    ³ 0FFh        ³Enable editing file after run viewer        ³
+³TabONFlg  ³  1    ³ 1           ³Tab symbols on                              ³
+³TVHighFlg ³  1    ³ 1           ³Global highlight in TV (01-On,0FFh-Off)     ³
+³TVCommChar³  5    ³';',4 dup (0)³Single-character comments start             ³
+³TVComm1Str³  6    ³ 6 dup (0)   ³Sinle-line commet first string              ³
+³TVCommBeg ³  6    ³ 6 dup (0)   ³Multi-line commet first string              ³
+³TVCommFlg ³  1    ³ 1           ³Comments highlight flag                     ³
+³TVNumFlg  ³  1    ³ 1           ³Numerals highlight flag                     ³
+³TVDivFlg  ³  1    ³ 1           ³Dividers highlight flag                     ³
+³TVStrFlg  ³  1    ³ 1           ³"string"-strings highlight flag             ³
+³TVStrFlg1 ³  1    ³ 1           ³'string'-strings highlight flag             ³
+³Reserved  ³  15   ³ 15 dup (0)  ³Reserved                                    ³
+ÀÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ÖÄÍ QVIEW.FMG ÍÍÍÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+    ~~~~~~~~~
+ 1. Configuration file
+      Name        : QVIEW.FMG
+      Size        : 417 bytes (01A1h)
+      Type        : optional (the defaults are used if absent)
+      Description : file panel (manager) options override
+      Location    : with QVIEW.EXE
+
+ 2. Format:
+;--- Configuration options ------------------------------------------------
+FmgHeader         db      'AGC250'      ; Header
+bfimaSysFileColor db      0FFh          ; Highlight Sys,Hid,SysHid files (0FFh - Off, 01h - On)
+bfimaSysDirColor  db      0FFh          ; Highlight Sys,Hid,SysHid directory (0FFh - Off, 01h - On)
+bfimaExecToBegin  db      1             ; Executable files to begin (0FFh - Off, 01h - On)
+bSortCurPos       db      2             ; Sorting method (0-Unsorted,1-By name,2-By extension,3-By size,4-By Date&Time)
+bfimaPanelMode    db      0             ; Panel show mode (0-Brief, 1-Full)
+;---Highlights group extension --------------------------------------------
+; Format: 64 bytes per group, 4 bytes per extension, all unused bytes shoul be
+; filled with zero.
+bfimaHighExec     db      'bat',0,'com',0,'exe',0,52 dup (0)
+bfimaHighFiles1   db      'pas',0,'asm',0,'inc',0,'c',0,0,0,'cpp',0,44 dup (0)
+bfimaHighFiles2   db      '.',0,0,0,'doc',0,'txt',0,'ctl',0,'diz',0,'ini',0,'cfg',0,36 dup (0)
+bfimaHighFiles3   db      'dbf',0,'wkz',0,'wks',0,'123',0,'wk',0,0,44 dup (0)
+bfimaHighFiles4   db      'tmp',0,'$$$',0,'bak',0,52 dup (0)
+bfimaHighFiles5   db      'pcx',0,'bmp',0,'pic',0,'gif',0,'rle',0,'ico',0,'jpg',0,36 dup (0)
+;--- File panel colors ----------------------------------------------------
+cfpWindow         db      1Bh           ; Window color
+cfpGreed          db      1Bh           ; Greed color
+cfpPath           db      1Eh           ; Window header (path to directory) color
+cfpTitle          db      1Fh           ; Column headers color
+cfpFiles          db      1Fh           ; File color
+cfpFileMark       db      1Eh           ; Marked files color
+cfpCursor         db      07h           ; Bar cursor color
+cfpFileInfo       db      1Eh           ; Full info about file color
+cfpScrlBar        db      07h           ; Scroll bar color
+cfpDirectory      db      1Ah           ; Directory color
+cfpHidden         db      17h           ; Hidden files color (if bfimaSysFileColor==1)
+cfpSystem         db      1Bh           ; System files color (if bfimaSysFileColor==1)
+cfpHidSys         db      13h           ; Hidden&System files color (if bfimaSysFileColor==1)
+cfpDirHidden      db      17h           ; Hidden directory color (if bfimaSysDirColor==1)
+cfpDirSystem      db      1Bh           ; System directory color (if bfimaSysDirColor==1)
+cfpDirHidSys      db      13h           ; Hidden&System directory color (if bfimaSysDirColor==1)
+;--- File highlighting colors ---------------------------------------------
+cfpFileExec       db      1Bh           ; Executable files color
+cfpFileHigh1      db      13h           ; Highlight group 1 color
+cfpFileHigh2      db      12h           ; Highlight group 2 color
+cfpFileHigh3      db      15h           ; Highlight group 3 color
+cfpFileHigh4      db      14h           ; Highlight group 4 color
+cfpFileHigh5      db      11h           ; Highlight group 5 color
+;--- End configuration options --------------------------------------------
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Help file QVIEW.HLP ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     Help file is a plain MS-DOS text file and contains a text  appeared  when
+[F1] key is pressed in the viewer. Text is divided to the topics. Every  topic
+is started with its identifier [xxxx], where  xxxx  is the topic  number.  The
+last topic  [!END] is always empty.  The  number  of  strings in each topic is
+limited up to a 100 ones,  the  superfluous strings  are ignored.  The  string
+length is limited up to a 70 symbols, the superfluous symbols are also ignored.
+
+     For the better perception the colour highlight is applied. There are five
+highlight groups from 0 to 4, where the first (0) colour is the basic one  for
+the help text output. To appoint the colour the  !x combination is used, where
+x is the group number. The new colour setting, the space symbol and the end of
+the string are reset the current colour setting to the basic one.
+
+     The help file is optional as well as the any topic in it.  You may remove
+some topics or the whole file if you want to, but note that some control  keys
+are described only in the help file.
+
+     So, you may include everything you want to the topic.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß User character table redefining file QVIEW.CHR ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+    Now you can easily create your own code table in addition  to  the default
+ones. These tables are stored in the QVIEW.CHR file.
+
+    Q-Setup utility is supplied  to make  it easy to create and edit your  own
+recode definition file. You're just to create plain text file with the  recode
+definitions and compile it then with the help of Q-Setup. Refer the Q-Setup.doc
+for details.
+
+ÖÄÍ QVIEW.CHR ÍÍÍÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ·
+    ~~~~~~~~~
+
+  Name          : QVIEW.CHR
+  Size          : 1071 bytes
+  Type          : optional
+  Description   : user-defined character tables support
+  Location      : with the QVIEW.EXE
+
+ÚÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³  Field   ³ Size ³    Data     ³               Description                  ³
+³          ³(byte)³             ³                                            ³
+ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+³Header    ³  6   ³'AGC242'     ³ Version identifier                         ³
+³CharSetCnt³  1   ³ 1..4        ³ The number of code tables in file          ³
+³TableName1³  10  ³ table name  ³ The 1st table name                         ³
+³TableName2³  10  ³ table name  ³ The 2nd table name                         ³
+³TableName3³  10  ³ table name  ³ The 3rd table name                         ³
+³TableName4³  10  ³ table name  ³ The 4th table name                         ³
+³TableData1³  256 ³ 1st table   ³ 1st table                                  ³
+³TableData2³  256 ³ 2nd table   ³ 2nd table                                  ³
+³TableData3³  256 ³ 3rd table   ³ 3rd table                                  ³
+³TableData4³  256 ³ 4th table   ³ 4th table                                  ³
+ÀÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ Notes for the fields format TableData1..TableData4:
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1. Redefinition is available for the second half of the  ASCII table only
+    (ASCII 128..255).
+ 2. Fist 128 bytes: characters from the current code table accorded to the
+    ones of the redefining table, with codes in range of 128..255.
+ 3. Second 128 bytes: vise versa.
+
+E.g.:
+
+win2ansi          DB      176,177,178,179,180,181,182,183  ;128
+                  DB      184,185,186,187,188,189,190,191  ;136
+                  DB      192,193,194,195,196,197,198,199  ;144
+                  DB      200,201,202,203,204,205,206,207  ;152
+                  DB      208,209,210,211,212,213,214,215  ;160
+                  DB      216,217,218,219,220,221,222,223  ;168
+                  DB      240,241,242,243,244,245,246,247  ;176
+                  DB      248,249,250,251,252,253,254,255  ;184
+                  DB      128,129,130,131,132,133,134,135  ;192
+                  DB      136,137,138,139,140,141,142,143  ;200
+                  DB      144,145,146,147,148,149,150,151  ;208
+                  DB      152,153,154,155,156,157,158,159  ;216
+                  DB      160,161,162,163,164,165,166,167  ;224
+                  DB      168,169,170,171,172,173,174,175  ;232
+                  DB      224,225,226,227,228,229,230,231  ;240
+                  DB      232,233,234,235,236,237,238,239  ;248
+
+ansi2win          DB      192,193,194,195,196,197,198,199  ;128
+                  DB      200,201,202,203,204,205,206,207  ;136
+                  DB      208,209,210,211,212,213,214,215  ;144
+                  DB      216,217,218,219,220,221,222,223  ;152
+                  DB      224,225,226,227,228,229,230,231  ;160
+                  DB      232,233,234,235,236,237,238,239  ;168
+                  DB      128,129,130,131,132,133,134,135  ;176
+                  DB      136,137,138,139,140,141,142,143  ;184
+                  DB      144,145,146,147,148,149,150,151  ;192
+                  DB      152,153,154,155,156,157,158,159  ;200
+                  DB      160,161,162,163,164,165,166,167  ;208
+                  DB      168,169,170,171,172,173,174,175  ;216
+                  DB      240,241,242,243,244,245,246,247  ;224
+                  DB      248,249,250,251,252,253,254,255  ;232
+                  DB      176,177,178,179,180,181,182,183  ;240
+                  DB      184,185,186,187,188,189,190,191  ;248
+
+     Distributed qview.chr file contains the Windows 1251 tables.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞßÜß Control keys ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     The all keys and its descriptions available in the current mode are listed
+in the help file. Just hit [F1] to call it when in QView.
+
+     To get the list of all QView control key simply remove all control symbols
+from the QVIEW.HLP to get a plain MS-DOS text file.  But we're recommended that
+you keep the copy of the original QVIEW.HLP because of the colour cacophony.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞÜßÜ Mouse support ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     Generally the viewer has a full mouse support, except a  few  seldom-used
+dialogs. To my mind, there won't be any cardinal changes.  Always use the left
+mouse button. The right one is the mark-line a`la DosNavigator Editor.
+     At start the mouse cursor is always placed in the left up corner.
+
+                       So, a few notes about the mice ;)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                  Status line
+                                  ~~~~~~~~~~~
+           In the status line the left mouse button click implements:
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+[] Filename.ext YYYYYYYY xxxxxxxx_ +12ş-5----Ş   00 I Ş QView 2.50 AGC Product
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ÃÙ ÀÄÄÄÄÄÄÄÄÄÂÙ          ÀÄÄÂÄÄÄÙÀ´³ÀÄÄÄÂÄÄÄÙ³  ÀÂÄÙ
+Exit from    ³          Jump to   ³ÀÄ¿  ³    ³ Mode change
+the viewer   ³          offset    ³  ³  ³    ³ between
+(Analogue to ³          in HV,AV  À¿ ³  ³    ³ TV, HV, AV
+ESC key)     ³          (Analogue  ³ ³  ³    ³ (Enter, F4)
+             ³          to F5 key) ³ ³  ³    ÀÄÄÄÄÄÄÄÄÄÄÄ¿
+    ÚÄÄÄÄÄÄÄÄÙ   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ ³  ³                ³
+    ³            ³          ÚÄÄÄÄÄÄÄÄÙ  ³                ³
+File panel      Call    Save cur.   Go to the         Return from jump
+call         BaseOfs    position    pointed           in AV (Analogue
+(Alt-F6)      dialog    to the      bookmark          to Shift+'0')
+           (Ctrl+F2)    BookMarks   (Analogue
+                        (Alt+'+')   to Alt+'1'... Alt+'9')
+
+                                  TV mode
+                                  ~~~~~~~
+     In the view window the left mouse button click:
+
+1. In the first column: scrolls text left;
+2. In the last column (befor the ScrollBar): scrolls text right;
+3. In the top half of screen: scrolls text one line up;
+4. In the bottom half of screen: scrolls text one line down.
+
+                                  HV mode
+                                  ~~~~~~~
+     In the view window the left mouse button click:
+
+1. Scrolls up, down, left or right according to the cursor position,
+   increases/decreases file offset;
+2. Switches between the hex/ascii input when the edit mode is on.
+
+                                  AV mode
+                                  ~~~~~~~
+     In the view window the left mouse button click:
+
+1. Scrolls up, down, left or right according to the cursor position;
+2. Switches between the hex/ascii input when the edit mode is on.
+3. Traces the Jump/Call/etc. command when clicked on (1)...(9).
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞÜßÜ .CRK-files support ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+1. Changes save in .CRK-type file with [Shift]+[F9].
+ 
+2. Function of upgrade the current file with the crack file information.
+   Call: [Ctrl]+[F8]
+   Work:
+           1. The first dialog requires the base address of crack. It is
+              only needed in case to change the base address stored in crack
+              file. The address you put here becomes the base (first)
+              address, and all the other crack addresses are changed by the
+              required offset automatically.
+
+           2. The second dialog requires the crack file name.
+
+   N.B.:
+           1. The crack file format is fixed !!! It must include the crack
+              only, i.e. the strings like this: '12345678: 12 34',0Dh,0Ah.
+              First eight characters are the crack address (offset) - use the
+              leading '0' if required; then ':' followed by the Space symbol;
+              then two numbers devided by space: the old byte & the new byte.
+              The every string should be ended with 0Dh,0Ah (Cariage Return
+              and Line Feed characters).
+
+           2. Program takes the full crack syntax controll. If the string
+              causes the problem, it's number is outputed. The problem may
+              occure in a two cases: if the string syntax illegal and if the
+              old byte in the crack file not equal to found in the current
+              file one. The byte is changed only if all the requirements
+              are satisfied.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞÜßÜ The comments for the instructions in AV support ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     So, finaly  the assembler instruction comment  system  added.  Up  to 1000
+comment lines of 58 characters each are supported (of course, all 58 characters
+could be used in 132*xx video modes only).  The  systems  work  is simple - the
+file with the address depended comments created.  All operations with this file
+are produced automatically. You are only to read your own comments. So, go on -
+put your comments to the files.  The  comment  file gets the same as the viewed
+one and the extenxion '.CMT', so we do not recommend that you're  comment  this
+file by itself. Well, the system is half-done - we're wait for responses.
+
+   [Alt]+[E] - insert the comment for the current instruction
+   [Alt]+[Left] - jump to the previous comment
+   [Alt]+[Right] - jump to the next comment
+   
+     The sequence of jumps between the comments is depend of the order comments
+entered to the file, not of the addresses of the commands.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞÜßÜ Extra system functions ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+  ş The system time shown when [Shift] is pressed   (TV,HV,AV)
+  ş The system date shown when [Ctrl] is pressed   (TV,HV,AV)
+  ş The strings dump output to file in the TV with [Shift]+[F3]
+  ş The screen output to file with [Alt]+[P] (TV,HV,AV)
+  ş In the TV mode you may save the current file as recoded. Use [F9] key.
+    N.B. Do not save the file with the same name!
+  ş The user (DOS) screen show with [Alt]+[F5] - UserScr (TV,HV,AV)
+  ş Far call the procedure under cursor in AV mode. Use [Alt]+[C]. The screen
+    is swapped out on call. The work is not checked. Purpose: short  programs
+    call. (E.g.: mov al,2Eh; out 70h,al; jmps $+2; out 71h,al; retf).
+  ş Edit mode on/off with [Alt]+[F3] plus the setup setting (HV,AV).
+  ş 'Tabulation symbol support ON/OFF' in TV with [Shift]+[F2].
+    (We recommend that you use tabulation off in TV with the Wrap mode on -
+    the scrolling of long lines is much faster in that case; binaries
+    especially).
+  ş GotoAdr(F5) jumps history with [F7] (HV,AV).
+  ş Clear string in edit line hotkey - [Ctrl]+[Y].
+  ş File panel (file manager) on OpenFile ([Alt]+[F6]).
+  ş Call dump view at cursor offset from AV with [Alt]+[J]+[W] when 16-bit
+    offset assumed or [Alt]+[J]+[D] - when 32-bit is.
+    Return from HV to AV on call position with [Alt]+[J]
+
+    Notation: here's the example of how it works:
+    ~~~~~~~~
+    1. AV
+    000009A2: BA170B                    mov    dx,0B17
+                ^^ cursor is here in AV, press Alt+J, W
+    000009A5: B409                      mov    ah,09
+    000009A7: CD21                      int    21
+
+    2. Automatically goes to HV for the offset 0B17h:
+
+    00000B17: 0A 0D 43 41³4C 43 20 5B³2F 3F 5D 5B³2F 73 5D 5B  ..CALC [/?][/s][
+    00000B27: 2F 2A 5D 0A³0D 24 20 20³20 20 20 2F³73 20 2D 20  /*]..$     /s -
+
+    Scroll it however you want, then press Alt+J to go back to 1.
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞÜßÜ Command-line options and start-up ÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+1. Program start-up Ü
+    ßßßßßßßßßßßßßßßßß
+  Usage: qview.com  <filename.ext> [keys]
+  Keys:  /mt - force text view
+         /md - force dump view
+         /ma - force asm view
+         /r  - read only mode
+
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+ŞÜßÜ A lot of thanks ßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßÜßİ
+°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°±²Û²±°
+
+     Special thanks to Dmitry Gazko  AKA  Dr.Khumen for the first QSetup and
+for the problems discussion.
+
+     Also a lot of thanks to  Igor Naryshkin  for the new Q-Setup,  creation
+and moderatoring of the QVIEW.SUPPORT echo-conference, bug-hunting  and  for
+the different problems discussion.
+
+     ... for everyone sent me a comments, bug-reports and proposales.  Sorry
+if someone missed. Send me a mail... :)
+
+                    Alex Churakow
+                    Alex Jivitca
+                    Alex Morshchakin
+                    Alex Pakhotin
+                    Alex S Aganichev
+                    Alex Semenyaka
+                    Alex Silman
+                    Alex Zatvornitski
+                    Alex Zemlaykov
+                    Alexander Alferowich
+                    Alexander Fedenko
+                    Alexander Kron
+                    Alexander Shursha
+                    Alexander Skorodumov
+                    Alexander Zacepin
+                    Alexandr Gazko
+                    Alexey Gogotz
+                    Alexey Monastyrenko
+                    Anatoly Rodnikov
+                    Anatoly Soroka
+                    Andrej Zverev
+                    Andrew Lazarchuk
+                    Andrew Tkachenko
+                    Andrey Alekseyev
+                    Andrey Prokopishin
+                    Andrey Ryabuhin
+                    Andrey Siniakov
+                    Andy Knyazev
+                    Andy Semenov
+                    Andy Shevchenko
+                    Artem Danilenko
+                    Bohdan Troshchinskiy
+                    Boris Baskakov
+                    Boris Felikson
+                    Danil Shubin
+                    Dennis B. Kobernic
+                    Dmitry Belyi
+                    Dmitry Fedotov
+                    Dmitry Gazko
+                    Dmitry Jemerov
+                    Dmitry Shevchenko
+                    Dmitry Zavalskov
+                    DoubleMan
+                    Eugene Lisovy
+                    Evgeniy Graznov
+                    F0RESTER
+                    Igor Dyatlov
+                    Igor Naryshkin
+                    Igor Pronin
+                    Igor Smirnov
+                    Igor Vasilchikov
+                    Ilgar Veliev
+                    Ilia Levin
+                    Ilja Evseev
+                    Ilya Aniskovets
+                    Ilya Kuznetsov
+                    Ivan Kuznetsov
+                    Kirill Joss
+                    Kirill Kutejnikov
+                    Kolya Nesterov
+                    Konstantin Boldyshev
+                    Kostya Volkov
+                    Leonid Shirmanov
+                    Max Ivanov
+                    Max Popov
+                    Maxim Shashkov
+                    Maximilian Gvozdev
+                    Michail Danshin
+                    Milan Kosina
+                    Misha Ivanov
+                    Nikolay Sidoroff
+                    Oleg Rombakh
+                    Paul Sokolovsky
+                    Pavel Chuvanov
+                    Pavel Popov
+                    Peter Sobolev
+                    Peter Teslenko
+                    Professor Nimnull
+                    Rick Murray
+                    Roman Papusha
+                    Sanya Tankeev
+                    Sergej Miroshnichenko
+                    Sergey Chabunin
+                    Sergey Chehuta
+                    Sergey Monin
+                    Sergey Ovcharenko
+                    Sergey Pliusnin
+                    Sergey Podolanchyk
+                    Sergey Samoyloff
+                    Sergey Savchenko
+                    Sergey Stukov
+                    Sergey Temrezov
+                    Sergey Volkov
+                    Sergey Zabaryansky
+                    Slav Kuznetsov
+                    Slava Tarasjuk
+                    Stanislav Davidov
+                    TERMINATOR
+                    Timur Chuzhinov
+                    Tony Mantana
+                    Vadim Bodrov
+                    Vadim Dolganov
+                    Vadim Yoockin
+                    Vano Sergeev
+                    Vasily Idanov
+                    Victor Chuchupal
+                    Victor Frolov
+                    Victor Shantar
+                    Viktor Ostashev
+                    Vladimir Gordeev
+                    Vladimir Kvitnitskiy
+                    Vladimir Ruzin
+                    Vladimir Soshkin
+                    Vovec Tokmakov
+                    Wadim A. Sigalov
+                    Wowik Mikolenko
+                    Yuri Baranow
+                    Yuri Onufreeshin
+                    Yuri Pohilko
+                    Yury Urbanovitch
+                    basil vorontsov
+                    damir bikmuhametov
+                    hubak@elf.stuba.sk
+                    the unforgiven
+
+NB: Nobody's desires and proposales aren't forgotten - if still not realized,
+    they are waiting for the time to come. All known bugs I'm kill as soon as
+    as find it in the ~1 Mb asm source ;)
+
+
+ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+P.S.  Any comments, desires, proposales, bug-reports, interesting ideas  are
+      welcome! Thank you for your support.
+
+
+ With Best Regards,
+                   Alexandr Gazko   AKA
+                                    2:5030/445@FidoNet
+                                    2:5030/445.4@FidoNet
+                                    2:5030/282.4@FidoNet
+                                    2:5030/317.4@FidoNet
+
+                                                   02:50:00,
+                                                   21-02-98
+                                                          AGC
+
+ÖÄ
+º Translated by Igor Naryshkin. Please E-mail me any corrections on this
+º documement at:
+º Fido: 2:5030/482@fidonet,
+º Internet: niva@f482.n5030.z2.fidonet.org
+º           naryshkin@geocities.com
+ÓÄ
+
+                  ²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
+                  ²²²ÎÎÎÎÎÎ²²ÎÎ²²ÎÎ²²ÎÎÎÎÎÎ²²ÎÎÎÎÎÎ²²²²°°
+                  ²²²¹±±±±±±²²Î±²Î±±²²±ÎÎ±±±²²±ÎÎ±±±²²²°°
+                  ²²²ÎÎÎÎÎÎ²²²²ÎÎ²±²²²²ÎÎ±²²²²²ÎÎ±²²²²²°°
+                  ²²²Î±±±±±±²²Î²±Î²²²²²ÎÎ±²²²²²ÎÎ±²²²²²°°
+                  ²²²ÎÎÎÎÎÎ²²ÎÎ±²ÎÎ²²ÎÎÎÎÎÎ²²²²ÎÎ±²²²²²°°
+                  ²²²²±±±±±±²²±±²²±±²²±±±±±±²²²²±±²²²²²°°
+                  ²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²°°
+                  ²²²²²   Yes    ²²²²²²    No     ²²²²²°°
+                  ²²²²²²²±±±±±±±±±±²²²²²²±±±±±±±±±±±²²²°°
+                  ²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²°°
+                    °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°

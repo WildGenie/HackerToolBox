@@ -1,0 +1,93 @@
+function gmemory(var str libpath)
+begin
+  if !testfunc("initfile")
+  then begin
+    msgbox("Please import 'File System Library' before import this !")
+    debug("Please import 'File System Library' before import this !")
+    halt()
+  end
+end
+function gmem_save(var str name,var str value)
+begin
+  var int fp
+  var str table
+  
+  set table="c:\gmlog.txt"
+  
+  if GetFileSize(table)<0
+  then begin
+    // Create a file
+    set fp=opentextfile(table,1)
+    closetextfile(fp)
+  end
+  else begin
+    gmem_delete(name)
+  end
+  set fp=opentextfile(table,3)
+  writestr(fp,name+chr(13)+chr(10)+value)
+  closetextfile(fp)
+end
+function gmem_load(var str name)
+begin
+  var int fp,ok
+  var str table,result,na,va
+  
+  set table="c:\gmlog.txt"
+  
+  if GetFileSize(table)>0
+  then begin
+    set ok=0
+    set name=uppercase(name)
+    set fp=opentextfile(table,2)
+    while (!eof(fp)) && (ok=0)
+    begin
+      set na =readstr(fp)
+      set va =readstr(fp)
+      if (uppercase(na)=name)
+      then begin
+        set ok=1
+      end
+    end
+    closetextfile(fp)
+    if (ok<>0)
+    then begin
+      set result=va
+    end
+    else begin
+      set result=""
+    end
+  end
+  else begin
+    set result=""
+  end
+end
+function gmem_delete(var str name)
+begin
+  var int fp,wp,ok
+  var str table,tmpfile,na,va
+  
+  set table  ="c:\gmlog.txt"
+  set tmpfile="c:\gmlog.txt.tmp"
+  
+  if GetFileSize(table)>0
+  then begin
+    set wp=opentextfile(tmpfile,1)
+    set ok=0
+    set name=uppercase(name)
+    set fp=opentextfile(table,2)
+    while (!eof(fp)) && (ok=0)
+    begin
+      set na =readstr(fp)
+      set va =readstr(fp)
+      if (uppercase(na)<>name)
+      then begin
+        writestr(wp,na+chr(13)+chr(10))
+        writestr(wp,va+chr(13)+chr(10))
+      end
+    end
+    closetextfile(fp)
+    closetextfile(wp)
+    deletefile(table)
+    renamefile(tmpfile,table)
+  end
+end

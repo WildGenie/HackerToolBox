@@ -1,0 +1,5 @@
+Memory Access
+NT
+###########################################################
+kernel32.dll,WriteProcessMemory
+kernel32.dll,ReadProcessMemory

@@ -1,0 +1,164 @@
+;UPX Shell - version 3.2.1.2007 - Italiano
+;translated by Marco Tettamanti - 24.08.05
+;*****************************************
+
+;Main Form
+;Top frame
+MainForm.lblCompressor.Caption=Compressore Win32 di EXE/DLL
+MainForm.lblInsCap.Caption=UPX Interno:
+MainForm.lblOutCap.Caption=UPX Esterno:
+
+;Open File tab
+MainForm.tbsOpen.Caption=Apri il file
+MainForm.btnOpen.Caption=Apri
+MainForm.lblHistory.Caption=File recenti
+MainForm.pnlFileInfo.Caption=Informazioni sul file
+MainForm.lblFNameCap.Caption=Nome del file
+MainForm.lblFName.Caption=non disponibile
+MainForm.lblFSizeCap.Caption=Dimensione del file (originale)
+MainForm.lblFSize.Caption=non disponibile
+MainForm.lblCSizeCap.Caption=Dimensione del file (compresso)
+MainForm.lblCSize.Caption=non disponibile
+MainForm.lblRatioCap.Caption=Percentuale di compressione
+MainForm.lblRatio.Caption=non disponibile
+MainForm.mnuHistory.Caption=Cancella i file recenti
+
+;Compress tab
+MainForm.tbsCompress.Caption=Comprimi
+MainForm.btnGo.Caption=Avvia
+MainForm.chkDecomp.Caption=Decomprimi
+MainForm.btnRun.Caption=Avvia
+MainForm.lblProgress.Caption=Progresso (de)compressione
+MainForm.lblProgressSize.Caption=Dimensione del file (de)compresso
+
+;Options tab
+MainForm.tbsOptions.Caption=Opzioni
+MainForm.chkBackup.Caption=Crea una copia backup
+MainForm.chkAutoCompress.Caption=Comprimi automaticamente
+MainForm.chkExitDone.Caption=Chiudi al termine
+MainForm.chkTest.Caption=Verifica dopo la compressione
+MainForm.btnAdvanced.Caption=Avanzato
+MainForm.lblCompressLevel.Caption=Livello di compressione:
+MainForm.lblFaster.Caption=Veloce
+MainForm.lblBetter.Caption=Lento
+MainForm.lblLanguage.Caption=Seleziona la lingua:
+MainForm.btnMultiPck.Caption=Multicompressione
+
+;About tab
+MainForm.tbsAbout.Caption=Informazioni
+MainForm.lblReleaseCap.Caption=versione
+MainForm.lblBuildCap.Caption=revisione
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.Caption=Scrivi a BlackDex
+MainForm.lblBlaineMail.Caption=Scrivi a Blaine
+
+;Help tab
+MainForm.tbsHelp.Caption=Aiuto
+MainForm.btnHelp.Caption=Aiuto
+
+;Update Tab --NEW NEW NEW--
+MainForm.tbsUpdate.Caption=Aggiornamenti
+MainForm.btnChkUpdate.Caption=Controlla versione
+MainForm.lblOnlineVersionCap.Caption=Versione attuale:
+MainForm.lblOnlineVersion.Caption=non disponibile
+MainForm.lblReleaseDateCap.Caption=Data di rilascio:
+MainForm.lblReleaseDate.Caption=non disponibile
+MainForm.lblDownloadCap.Caption=Scarica dal sito:
+MainForm.lblDownload.Caption=non disponibile
+
+;Setup Form
+SetupForm.chkScramble.Caption=Usa lo Scrambler
+SetupForm.btnScramble.Caption=Scrambler
+SetupForm.chkIntegrate.Caption=Inserisci nel menù contestuale
+SetupForm.lblAdvacedOpts.Caption=Opzioni avanzate UPX:
+SetupForm.chkResources.Caption=Comprimi le risorse
+SetupForm.chkExports.Caption=Comprimi ed esporta
+SetupForm.chkRelocs.Caption=Ricolloca
+SetupForm.chkForce.Caption=Forza la compressione
+SetupForm.lblPriority.Caption=Priorità di compressione:
+SetupForm.cmbPriority.0=Bassa
+SetupForm.cmbPriority.1=Normale (predefinita)
+SetupForm.cmbPriority.2=Alta
+SetupForm.cmbPriority.3=In tempo reale
+SetupForm.lblIcons.Caption=Icone:
+SetupForm.cmbIcons.0=Tutte tranne 1° cartella
+SetupForm.cmbIcons.1=Tutte tranne 1° icona
+SetupForm.cmbIcons.2=Non comprimere
+SetupForm.lblCommands.Caption=Comandi addizionali UPX:
+SetupForm.chkCommands.Caption=Salva i comandi
+SetupForm.btnOk.Caption=Ok
+SetupForm.chkCompression.Caption=Ulteriore compressione
+SetupForm.btnCommands.Caption=Comandi
+;--NEW NEW NEW--
+SetupForm.lblUPX2Only.Caption=Solo per UPX v1.9x:
+SetupForm.chkBrute.Caption=Metodo bruto
+SetupForm.chkMethods.Caption=Tutti i metodi
+SetupForm.chkFilters.Caption=Tutti i filtri
+
+;MultiPack Form
+MultiForm.Caption=Multicompressione
+MultiForm.grpSearch.Caption=Percorso di ricerca:
+MultiForm.lblDir.Caption=non disponibile
+MultiForm.btnBrowse.Caption=&Sfoglia
+MultiForm.chkRecurse.Caption=Esamina le sottoca&rtelle
+MultiForm.chkAll.Caption=&Tutti
+MultiForm.lblCurrent.Caption=File corrente:
+MultiForm.lblOverall.Caption=Indicazione progresso:
+MultiForm.lblTimeCap.Caption=Tempo trascorso:
+MultiForm.btnScan.Caption=&Verifica
+MultiForm.btnPack.Caption=&Comprimi
+MultiForm.btnExit.Caption=&Esci
+
+;TreeView Form
+TreeViewForm.lblSelect.Caption=Seleziona la cartella di compressione:
+TreeViewForm.btnOK.Caption=OK
+TreeViewForm.btnCancel.Caption=Cancella
+
+;Const_Messages
+msg[001]=Non è stato possibile accedere al file. Potrebbe essere già aperto
+msg[002]=Il file ha attributi di sola lettura. Per continuare si deve rimuovere l'attributo. Continuare?
+msg[003]=Migliore
+msg[004]=Questo file non può essere compresso. Avviare lo Scrambler?
+msg[005]= (in
+msg[006]= secondi)
+msg[007]=decompressione
+msg[008]=compressione
+msg[009]=Non c'è niente
+msg[010]=non disponibile
+msg[011]=Nessuna cartella selezionata
+msg[012]=...aggiornamento fallito :-(
+msg[013]=non può connettersi al server!
+msg[014]=Aggiornamento versione trovato!
+msg[015]=Ricerca file di aggiornamento...
+msg[016]=Ricezione aggiornamento informazioni...
+msg[017]=File compresso con successo
+msg[018]=File decompresso con successo
+msg[019]=File compresso con avvisi
+msg[020]=File decompresso con avvisi
+msg[021]=Sono avvenuti errori. File non compresso
+msg[022]=Sono avvenuti errori. File non decompresso
+msg[023]= & testato
+msg[024]= & testato con avvisi
+msg[025]= & test fallito
+msg[026]=UPX ha segnalato l'errore:
+msg[027]= & scrambled
+msg[028]=...aggiornamento trovato
+msg[029]=...nessun aggiornamento trovato
+msg[030]=OK
+msg[031]=Fallito
+msg[032]=Salta
+msg[033]=Nome File
+msg[034]=Cartella
+msg[035]=Dimensione
+msg[036]=Pacchetto
+msg[037]=Risultato
+msg[038]=Errore
+msg[039]=Conferma
+msg[040]=Seleziona la cartella di compressione:
+msg[041]=Questo file è ora scrambled!
+msg[042]=Questo file non è scrambled!
+msg[043]=Comprimi con UPX

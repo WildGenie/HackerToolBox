@@ -1,0 +1,20 @@
+It is very easy protect your application with SVK very well.
+You can encrypt some blocks of code and these parts will not
+possible decrypt without correct registration key. If you use
+Hardare ID of the computer to lock registration key, then this
+key will work only for this one computer.
+I wrote examples for Masm, Delphi and Visual C++. Of course You
+can use this method of protection in other compilers too. 
+It is very easy use it and it is very secure way how protect some
+functions in your application. 
+If user will not have correct registration key or he will not have
+correct computer for which was registration key created, there will 
+show message box with message: "This function is not implemented in 
+UNREGISTERED version. Please register it!" and Hardware ID for this 
+computer.
+
+Note: Please check special example for Visual Basic!
+
+Note2: If you call SVKP_GetHWInfo function, program must be protected
+by SVKP. Hardware ID check box in Key Protection menu must be checked
+before encryption of file.

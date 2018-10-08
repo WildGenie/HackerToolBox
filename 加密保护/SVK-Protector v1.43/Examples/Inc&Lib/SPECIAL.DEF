@@ -1,0 +1,12 @@
+NAME SPECIAL.DLL
+
+EXPORTS
+SVKP_GetRegistrationInformation
+SVKP_GetTrialDays
+SVKP_GetTrialExecs
+SVKP_CheckTrial
+SVKP_LockKeyboard
+SVKP_UnLockKeyboard
+SVKP_KillDebugger
+SVKP_RebootComputer
+SVKP_GetHWInfo

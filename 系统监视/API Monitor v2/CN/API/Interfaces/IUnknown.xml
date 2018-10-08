@@ -1,0 +1,199 @@
+<!--
+    API Monitor Definitions
+    (c) 2010-2011, Rohitab Batra <rohitab@rohitab.com>
+    http://www.rohitab.com/apimonitor/
+-->
+<ApiMonitor>
+    <Include Filename="Headers\windows.h.xml" />
+    <Include Filename="Headers\ole.h.xml" />
+    <Include Filename="Headers\shell.h.xml" />
+    <Interface Name="IUnknown" Id="{00000000-0000-0000-C000-000000000046}" OnlineHelp="MSDN" ErrorFunc="HRESULT" Category="Component Development/COM/Component Object Model (COM)/COM Fundamentals/Interfaces">
+
+        <!-- Forward Interface Declarations -->
+        <Variable Name="ITypeComp"      Type="Interface" />
+        <Variable Name="ITypeLib"       Type="Interface" />
+
+        <!-- Variables-->
+        <Variable Name="MEMBERID"       Type="Alias"    Base="DISPID" />
+        <Variable Name="MEMBERID*"      Type="Pointer"  Base="MEMBERID" />
+        <Variable Name="VARIANTARG"     Type="Alias"    Base="VARIANT" />
+        <Variable Name="VARIANTARG*"    Type="Pointer"  Base="VARIANTARG" />
+        <Variable Name="HREFTYPE"       Type="Alias"    Base="DWORD" />
+        <Variable Name="HREFTYPE*"      Type="Pointer"  Base="HREFTYPE" />
+
+        <!-- TODO: Structures -->
+        <Variable Name="TYPEDESC*"          Type="Alias"    Base="LPVOID" />
+        <Variable Name="BINDPTR*"           Type="Alias"    Base="LPVOID" />
+        <Variable Name="TYPEATTR*"          Type="Alias"    Base="LPVOID" />
+        <Variable Name="TYPEATTR**"         Type="Pointer"  Base="TYPEATTR*" />
+        <Variable Name="FUNCDESC*"          Type="Alias"    Base="LPVOID" />
+        <Variable Name="FUNCDESC**"         Type="Pointer"  Base="FUNCDESC*" />
+        <Variable Name="VARDESC*"           Type="Alias"    Base="LPVOID" />
+        <Variable Name="VARDESC**"          Type="Pointer"  Base="VARDESC*" />
+
+        <!-- TYPEKIND -->
+        <Variable Name="TYPEKIND" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="TKIND_ENUM"		    Value="0" />
+                <Set Name="TKIND_RECORD" 		Value="1" />
+                <Set Name="TKIND_MODULE" 		Value="2" />
+                <Set Name="TKIND_INTERFACE"     Value="3" />
+                <Set Name="TKIND_DISPATCH"		Value="4" />
+                <Set Name="TKIND_COCLASS"		Value="5" />
+                <Set Name="TKIND_ALIAS"		    Value="6" />
+                <Set Name="TKIND_UNION"		    Value="7" />
+                <Set Name="TKIND_MAX"		    Value="8" />
+            </Enum>
+        </Variable>
+        <Variable Name="TYPEKIND*" Type="Pointer" Base="TYPEKIND" />
+
+        <!-- [IDLFLAG] -->
+        <Variable Name="[IDLFLAG]" Type="Alias" Base="USHORT">
+            <Display Name="USHORT" />
+            <Flag>
+                <Set Name="IDLFLAG_NONE"     	Value="0"  />
+                <Set Name="IDLFLAG_FIN"     	Value="0x1"  />
+                <Set Name="IDLFLAG_FOUT"     	Value="0x2"  />
+                <Set Name="IDLFLAG_FLCID"     	Value="0x4"  />
+                <Set Name="IDLFLAG_FRETVAL"     Value="0x8"  />
+            </Flag>
+        </Variable>
+
+        <!-- IDLDESC -->
+        <Variable Name="IDLDESC" Type="Struct">
+            <Field Type="ULONG_PTR"     Name="dwReserved" />
+            <Field Type="[IDLFLAG]"     Name="wIDLFlags" />
+        </Variable>
+        <Variable Name="IDLDESC*" Type="Pointer" Base="IDLDESC" />
+
+        <!-- [InvokeFlags] -->
+        <Variable Name="[InvokeFlags]" Type="Alias" Base="WORD">
+            <Display Name="WORD" />
+            <Flag>
+                <Set Name="DISPATCH_METHOD"             Value="0x1" />
+                <Set Name="DISPATCH_PROPERTYGET"        Value="0x2" />
+                <Set Name="DISPATCH_PROPERTYPUT"        Value="0x4" />
+                <Set Name="DISPATCH_PROPERTYPUTREF"     Value="0x8" />
+            </Flag>
+        </Variable>
+
+        <!-- CHANGEKIND -->
+        <Variable Name="CHANGEKIND" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="CHANGEKIND_ADDMEMBER"		    Value="0" />
+                <Set Name="CHANGEKIND_DELETEMEMBER"		    Value="1" />
+                <Set Name="CHANGEKIND_SETNAMES"		        Value="2" />
+                <Set Name="CHANGEKIND_SETDOCUMENTATION"     Value="3" />
+                <Set Name="CHANGEKIND_GENERAL"		        Value="4" />
+                <Set Name="CHANGEKIND_INVALIDATE"		    Value="5" />
+                <Set Name="CHANGEKIND_CHANGEFAILED"		    Value="6" />
+            </Enum>
+        </Variable>
+
+        <!-- DESCKIND -->
+        <Variable Name="DESCKIND" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="DESCKIND_NONE"		        Value="0" />
+                <Set Name="DESCKIND_FUNCDESC"		    Value="1" />
+                <Set Name="DESCKIND_VARDESC"		    Value="2" />
+                <Set Name="DESCKIND_TYPECOMP"		    Value="3" />
+                <Set Name="DESCKIND_IMPLICITAPPOBJ"     Value="4" />
+            </Enum>
+        </Variable>
+        <Variable Name="DESCKIND*" Type="Pointer" Base="DESCKIND" />
+
+        <!-- INVOKEKIND -->
+        <Variable Name="INVOKEKIND" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="INVOKE_FUNC"             Value="1" />
+                <Set Name="INVOKE_PROPERTYGET"      Value="2" />
+                <Set Name="INVOKE_PROPERTYPUT"      Value="4" />
+                <Set Name="INVOKE_PROPERTYPUTREF"   Value="8" />
+            </Enum>
+        </Variable>
+
+        <!-- CUSTDATAITEM -->
+        <Variable Name="CUSTDATAITEM" Type="Struct">
+            <Field Type="GUID"          Name="guid" />
+            <Field Type="VARIANTARG"     Name="varValue" />
+        </Variable>
+        <Variable Name="LPCUSTDATAITEM" Type="Pointer" Base="CUSTDATAITEM" />
+
+        <!-- CUSTDATA -->
+        <Variable Name="CUSTDATA" Type="Struct">
+            <Field Type="DWORD"             Name="cCustData" />
+            <Field Type="LPCUSTDATAITEM"    Name="prgCustData" />
+        </Variable>
+        <Variable Name="CUSTDATA*" Type="Pointer" Base="CUSTDATA" />
+
+        <!-- SYSKIND -->
+        <Variable Name="SYSKIND" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="SYS_WIN16"       Value="0" />
+                <Set Name="SYS_WIN32"       Value="1" />
+                <Set Name="SYS_MAC"    	    Value="2" />
+                <Set Name="SYS_WIN64"       Value="3" />
+            </Enum>
+        </Variable>
+
+        <!-- LIBFLAGS -->
+        <Variable Name="LIBFLAGS" Type="Alias" Base="WORD">
+            <Display Name="WORD" />
+            <Flag>
+                <Set Name="LIBFLAG_FRESTRICTED"     Value="0x1" />
+                <Set Name="LIBFLAG_FCONTROL"        Value="0x2" />
+                <Set Name="LIBFLAG_FHIDDEN"         Value="0x4" />
+                <Set Name="LIBFLAG_FHASDISKIMAGE"   Value="0x8" />
+            </Flag>
+        </Variable>
+
+        <!-- TLIBATTR -->
+        <Variable Name="TLIBATTR" Type="Struct">
+            <Field Type="GUID"      Name="guid" />
+            <Field Type="LCID"      Name="lcid" />
+            <Field Type="SYSKIND"   Name="syskind" />
+            <Field Type="WORD"      Name="wMajorVerNum" />
+            <Field Type="WORD"      Name="wMinorVerNum" />
+            <Field Type="LIBFLAGS"  Name="wLibFlags" />
+        </Variable>
+        <Variable Name="TLIBATTR*"  Type="Pointer" Base="TLIBATTR" />
+        <Variable Name="TLIBATTR**" Type="Pointer"  Base="TLIBATTR*" />
+
+        <!-- DISPPARAMS -->
+        <Variable Name="DISPPARAMS" Type="Struct">
+            <Field Type="VARIANTARG*"   Name="rgvarg" />
+            <Field Type="DISPID*"       Name="rgdispidNamedArgs" />
+            <Field Type="UINT"          Name="cArgs" />
+            <Field Type="UINT"          Name="cNamedArgs" />
+        </Variable>
+        <Variable Name="DISPPARAMS*" Type="Pointer" Base="DISPPARAMS" />
+
+        <!-- EXCEPINFO -->
+        <Variable Name="EXCEPINFO" Type="Struct">
+            <Field Type="WORD"      Name="wCode" />
+            <Field Type="WORD"      Name="wReserved" />
+            <Field Type="BSTR"      Name="bstrSource" />
+            <Field Type="BSTR"      Name="bstrDescription" />
+            <Field Type="BSTR"      Name="bstrHelpFile" />
+            <Field Type="DWORD"     Name="dwHelpContext" />
+            <Field Type="PVOID"     Name="pvReserved" />
+            <Field Type="LPVOID"    Name="pfnDeferredFillIn" Display="HRESULT (__stdcall *)(struct tagEXCEPINFO *)" />
+            <Field Type="SCODE"     Name="scode" />
+        </Variable>
+        <Variable Name="EXCEPINFO*" Type="Pointer" Base="EXCEPINFO" />
+
+        <!-- Methods -->
+        <Api Name="QueryInterface">
+            <Param Type="REFIID" Name="riid" />
+            <Param Type="void**" Name="ppvObject" InterfaceId="riid" />
+            <Return Type="HRESULT" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="AddRef">
+            <Return Type="ULONG" />
+        </Api>
+        <Api Name="Release">
+            <Return Type="ULONG" />
+        </Api>
+    </Interface>
+</ApiMonitor>

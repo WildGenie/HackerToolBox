@@ -1,0 +1,630 @@
+010 Editor - Revision Log
+
+Version  Date             
+-------- ---------------------------------------------------------------
+
+3.1.3    November 10th, 2010
+
+    Fixed possible Windows DLL exploit (see https://www.microsoft.com/technet/security/advisory/2269637.mspx).
+    Fixed crash using Export CSV with very large datasets.
+    Fixed compile errors using DOS style linefeeds after preprocessor statements.
+    Fixed crash on comparing large files.
+    Fixed occasional problems with button labels in message boxes.
+    Fixed some button sizes on Windows 7.
+    Now opening .lnk and .url files will load those files directly, not the files to which they link.
+    Updates for installing from a CD.
+
+3.1.2    May 21st, 2010
+
+    Fixed crash with 'Run as administrator' on Windows 7 x64 machines.
+    Fixed some constants being incorrectly identified as 'int64' instead of 'int'.
+
+3.1.1    May 5th, 2010
+
+    Fixed Windows Explorer shell extension on Windows 7 x64 machines.
+    Template results now display ASCII strings in the current file character set.
+    Fixed error if a script or template included more than 16 files.
+    Fixed error using sizeof operator to calculate the size of a struct.
+    Fixed error message with -replace command line option when no values found.
+    Fixed behavior comparing int -1 to 0xffffffff to be consistent with 3.0.
+
+3.1      February 16th, 2010
+
+    New Features Overview
+        Support for the UTF-8 character set.
+        Support preprocessor directives #define, #ifdef, #ifndef, #else, etc.
+        Support for wstring and wchar_t in scripts/templates (unicode strings).
+        Use -noui to run 010 Editor without a user interface for batch files.
+        Template variables can now have comments (e.g. <comment=""> after a variable).
+        New options when defining template variables: 
+            <fgcolor=???>, <bgcolor=???>, <open=true,false,suppress>, <hidden=true,false>.
+        Can pass arguments into structures.
+        
+    New Features List   
+        Editor
+            Support the UTF-8 character set.
+            Added 'UTF-8' and 'Binary' to the 'Edit As' drop-down list.
+            Added support for Ctrl+Ins(Copy), Shift+Ins(Paste), and Shift+Del(Cut).
+            Shows a current column position arrow in the text editor ruler.
+            Soft hyphen (0xAD) displayed as hyphen instead of space.
+        Command line
+            Use -noui to run 010 Editor without a user interface for batch files.
+            Added -nowarnings to disable display of message boxes when using -noui.
+            Can run comparisons from the command line with -compare.
+            Added -exitnoerrors to close 010 Editor only if there are no script or template errors.
+        Histogram
+            Char column in histogram displays the current file character set.
+        Bookmarks
+            Toggle Bookmark (Ctrl+F2) makes a bookmark for the whole selection, not just the selected byte.
+        Compare
+            If exactly two files are open, they will automatically be filled in the Compare dialog when opened.
+            Can run comparisons from the command line.
+            Increased number of internal allowed differences in comparison algorithm.
+        Options
+            Can hide the splash screen on startup (only when the software is registered).
+            Control the color of the caret. 
+            Can change the input-method editor (IME) color.
+            Can control the ruler column marker arrow color.
+        Templates and Scripts
+            Can display comments for variables using <comment=""> syntax after a variable.
+            Can set the color of a variable using <fgcolor=???> or <bgcolor=???> after a variable
+                (for example, <fgcolor=cBlack, bgcolor=0x803020>).
+            Can use <open=true, false> after a variable to have a variable open by default.
+            Can use <hidden=true, false> after a variable to hide variables.
+            Can use <open=suppress> after a variable to prevent it opening during Expand All.
+            Can pass arguments into structures.
+            Support #ifdef, #ifndef, #define, #undef, #endif, #else, #warning, #error preprocessor directives.
+            Added support for unicode strings (wstring/wchar_t).
+            Can use L to indicate wide-string constants (e.g. L"dog").
+            Bitfields and enums can now work together.
+            Can now call functions in templates from scripts.
+            Enum values can now be any expression.
+            Better handling of int64 constants (auto-detect).
+            Added current template directory to include path search.
+            Use Ctrl+Left/Right/Enter for better navigation in the template results tree.
+            Double-click on an error or warning takes you to the source code line.
+            Enum list items can be selected on single-click instead of double-click.
+            Support showing local variables inside a struct.
+            Correctly update focus highlight in Variables tab when switching files.
+            Can cast time types to ints or floats.
+            Updating variable coloring rule so colors are properly propagated from parents to children.
+            Exec function is no longer allowed in a template.
+            Now require "" or <> after #include statements.
+        New Functions
+            Can run a template from a script (RunTemplate).
+            Can set bookmarks from a script or template 
+                (AddBookmark, GetBookmarkName, GetBookmarkPos, GetNumBookmarks, RemoveBookmark).
+            Added new clipboard functions (ClearClipboard, CopyStringToClipboard, GetClipboardString).
+            Get the current time (GetCurrentTime, GetCurrentDate, GetCurrentDateTime).
+            Added an Assert function.
+            Convert a variable such as int or float to bytes (ConvertDataToBytes).
+            Retrieve the current temporary directory (GetTempDirectory).
+            Control the output panel where Printf data is displayed (OutputPaneClear, OutputPaneSave, OutputPaneCopy).
+            Can wait for a certain number of milliseconds (Sleep).
+            New wstring (unicode string) functions:
+                InputWString, ReadWLine, ReadWString, StringToWString, WMemcmp, 
+                WMemcpy, WMemset, WriteWString, WStrcat, WStrchr, WStrcmp
+                WStrcpy, WStrDel, WStricmp WStringToString, WStrlen, WStrncmp
+                WStrncpy, WStrnicmp, WStrstr, WSubStr.        
+            Can determine if a function exists with 'function_exists' keyword.
+            Exec function has a parameter to wait until execution is finished before returning.
+            FileOpen can execute the template associated with a file.
+            Can access the current structure variable with 'this' keyword.
+            Can access the parent of a structure variable with 'parentof' keyword.
+        General
+            Installer can warn user if installing a version that will require an upgrade.
+            Register dialog button displays 'Cancel' instead of 'Continue' to prevent confusion.
+            Temp directory can pick up the TEMP system variable.
+            Add Ctrl+Enter shortcut in Find in File results (keeps focus on Output Window).
+            Better handling of multiple versions of the configuration file.
+            Configuration file should be less prone to corruption.
+        Bug Fixes
+            Fixed templates variable arrays if the size of the array is greater than 2 GB.
+            Fixed bug where a file could display no data after canceling a script or template.
+            Fixed bug drawing the ruler when certain fonts are chosen.
+            Now correctly report physical disk size on Windows XP or higher.
+            Improved error message when using shift operators.
+            Improved error message when defining a structure twice with typedef.
+            Fixed empty structure warning when using bitfields and no padding.
+            Fixed bug with drawing Fg: in the template results.
+            Fixed bug selecting bytes in Unicode.
+            Fixed bug extending a selection with Shift+click.
+            Fixed reading bookmarks containing enums.
+            Fixed opening files containing '@'.
+            Fixed importing a hex text containing very long lines.
+            Fixed using bitfields mixing named and unnamed variable.
+            Fixed auto-detect of decimal import text.
+            Fixed bug using post increment during array access.
+            Fixed printfs sometimes being colored red after an error.
+            Fixed syntax highlighting issue with quotes.
+            Fixed possible crash with the FileClose function.
+            Fixed error message when defining struct variables incorrectly.
+            Fixed a typo in the welcome dialog.
+            Fixed issue with the syntax highlighting menu.
+            Fixed an issue with double-clicking on find-in-file results.
+            Fixed Variables Tab not being updated correctly after running a script.
+            Fixed issue working with files that are deleted.
+            Fixed issue passing strings to functions which are then passed to other functions.
+            Fixed selecting issue by dragging over the last line in the text editor.
+            Fixed negative enums.
+            Fix for optimizing warning on struct that just contains a 'string' variable.
+
+3.0.6    October 26th, 2009
+
+    Fixed importing hex text with very long lines.
+    Fixed templates which mixed bitfields and regular variables.
+    Fixed Printf with '%%'.
+    Fixed issues on Windows 7.
+
+3.0.5    April 13th, 2009
+
+    Now support Input Method Editors (IMEs) for multi-byte character sets.
+    Fixed bug with Find dialog and multi-byte character sets.
+    Fixed problem with backspace and multi-byte character sets.
+    Fixed possible buffer overruns running templates and scripts.
+    Fixed problems with the FindFirst and ReplaceAll functions.
+    Scripts and templates now support '0h' as well as '00h'.
+    Fixed bug in displaying warning message about optimized arrays.
+    Fixed crash using Overwrite Bytes on a large drive.
+    Fixed possible crash when closing a file after a comparison.
+    Fixed not being able to open certain logical and physical drives.
+    Fixed bookmarks being deleted when overwriting a block of data.
+    Fixed being able to open Unicode filenames from the Windows Explorer right-click menu.
+
+3.0.4    February 6th, 2009
+
+    Fixed issues with displaying Japanese and Chinese character sets.
+    Updated character handling engine for non-ASCII character sets.
+    Fixed restoring the maximized state of 010 Editor on restart.
+    Fixed possible crash when opening files from Windows Explorer right-click menu.
+    Fixed issues with properly refreshing the Inspector values.
+    Fixed crash in Replace dialog.
+    Fixed crash when setting certain Group By values.
+    Fixed issue with certain foreign characters in the Register dialog.
+    Fixed typo in the calculator.
+
+3.0.3    October 17th, 2008
+
+    Improved memory handling for running very large templates.
+    Fixed possible crash with syntax highlighting.
+    Fixed possible crash running a script with a long line.
+    Fixed some Unicode rendering issues in the hex editor.
+    Fixed crash with exporting a text area from a Script in certain cases.
+    Fixed the find in selection not working properly in certain cases.
+    Fixed disabled/enabled problems with buttons in the find dialog.
+    Fixed a problem with the ',' constant in scripts.
+    Fixed error message for attempting incorrect operations on structs.
+    Fixed possible crash using the StrDel function.
+    Fixed typo in script cancelled error message.
+    Can now copying Unicode data to the clipboard correctly.
+
+3.0.2    August 28th, 2008
+
+    Automatically hide empty floating tab group on startup.
+    Fixed crash with inspector when displaying certain characters.
+    Fixed focus issues when loading files via the Windows explorer right-click menu.
+    Fixed potential crash with -exit command line option.
+    Bug fix for Keep File Time functionality.
+    Fixed crash closing deleted files in certain cases.
+    Allow custom read/write functions to work with equivalent types.
+
+3.0.1    July 16th, 2008
+
+    Bug Fixes
+        Fixed periodic hangs when using the Explorer tab to browse a network drive.
+        Fixed international character set issues.
+        Fixed some keyboard keys not working on international keyboards.
+        Fixed possible crash with Copy As Hex Bytes.
+        Fixed replace up missing some occurrences in certain cases.
+        Fixed visual issues editing Unicode hex data.
+        Fixed using the clipboard when some specialized clipboard managers were installed.
+        Fixed progress update on running some scripts.
+        Fixed issues with the scope of local variables between functions and structs.
+        Fixed problem with empty statements inside a switch statement.
+        Fixed a reporting issue with Byte by Byte comparisons.
+        Fixed being able to run the Calculator on other files in the interface.
+        Fixed occasional crash when opening files when all windows were closed.
+        Fixed display glitch with Output tab showing red text.
+        Fixed tool bar undocking issues.
+    General
+        Each Tool Bars can now be resized to be smaller than its contents.
+        Visual changes on Vista machines for more consistency.
+
+3.0      May 19th, 2008
+
+    New Features Overview
+        Includes a text editor with syntax highlighting.
+        Improved interface with new icons.
+        Improved file tabs with close buttons that can be dragged to new positions.
+        Can have multiple scripts/templates open at the same time.
+        Find/replace, goto, etc. can be applied to templates or scripts.
+        Full support for Unicode file names and strings in the application.
+        Scripts and Templates now stored in "My Documents\SweetScape" directory.
+        Official support for Windows 98/Me/NT has been dropped.
+        A whole range of other improvements.
+    
+    New Features List        
+        Text Editor
+            Can now edit text, Unicode, or EBCDIC files.
+            Basic support for syntax highlighting for C/C++ files.
+            Support indenting or unindenting text with Tab or Shift+Tab.
+            Added insert date/time and insert color commands.
+        Hex Editor
+            Improved visual style for hex editing.
+            Can display addresses in sectors.
+        File Tabs
+            Improved tab-based interface with close buttons.
+            Added a floating tab group.
+            Can drag and drop file tabs (even between the floating tab group).
+            Able to have multiple tab groups laid out horizontally or vertically.
+        Startup Page
+            Optional startup page shows recent files, latest application news, and tips.
+        File Interfaces
+            Added 'Edit As' combo box to switch between editing text, hex, C++, etc. files.
+            Added Ctrl+H shortcut to toggle between text and hex files.
+            Use Ctrl++ or Ctrl+- to enlarge or shrink fonts.
+            Can set status bar and ruler display formats for different file interfaces.
+        Find/Replace
+            Added Replace in Files command.
+            Find dialog automatically copies selected bytes to the Value field.
+            Improved status bar for doing long replace operations.
+            Find results update when bytes inserted/deleted.
+        Goto
+            Can use goto dialog to jump to an address, line or a sector.
+            Use ',a', ',l' or ',s' options in Goto combo box for address, line or sector.
+        Bookmarks
+            Added a Toggle Bookmark command (can be used to add quick bookmarks).
+            Bookmark positions properly update when bytes inserted/deleted.
+        Printing
+            Enhanced Print Preview dialog.
+            Printing now works with text files (including Templates and Scripts).
+        Tools
+            Improved calculator with input buttons for performing quick calculations using the mouse.
+            Improved conversion utility can be used to convert character sets and/or linefeeds.
+            Improved checksum tool can treat data as ushorts, uints, or uint64s.
+            Improved histogram tool can treat data as other data types.
+        Workspace
+            Enhanced the 'Explorer' tab of the Workspace.
+        Inspector
+            Added Unicode string to the Inspector.
+            Moved list of available functions to the 'Functions' tab of the Inspector.
+        Scripts and Templates
+            Can have more than one script or template open at a time.
+            Find, print, other operations can all be applied to a script or template.
+            Select which script or template to run using drop-down list in the Tool Bar.
+            Results from Printf now displayed in 'Output' tab in the Output panel.
+            Code Editor has been removed and replaced with a Floating Tab Group.
+            Can display local variables in the template results.
+            Add RequiresVersion, ReadInt64, ReadUInt64, WriteInt64, WriteUInt64 functions.
+            Variables defined in script are now displayed in the 'Variables' tab of the Inspector.
+            List of functions now displayed in the 'Functions' tab of the Inspector.
+            Removed size limitation for scripts and templates.                
+            Scripts now stored in "My Documents\SweetScape\010 Scripts" directory.
+            Templates now stored in "My Documents\SweetScape\010 Templates" directory.
+            Added default import byte to 'ImportFile' function.
+        Register Dialog
+            Improved register dialog lists when Support/Maintenance expires.
+            Can look up forgotten passwords.
+            Can remove license from the current machine.
+        General
+            Added tutorial for using Binary Templates.
+            Updated some hotkeys for various tasks.
+            Show current character set, linefeeds, and tabs in the status bar.
+            Synchronized Scrolling now synchronizes scrolling horizontally and vertically.
+            Added Overwrite File and Overwrite Bytes commands.
+            Many dialogs have an expandable 'Options' section.
+            Improved New and Open tool buttons with drop-down list.
+            Full support for Unicode file names and strings in the application.
+            Can use 'File > Revert/Refresh' to update processes or drives.
+            Added -reset and -resetall command line options to reset the interface.
+            Official support for Windows 98/Me/NT has been dropped.
+        Options
+            Can control the mouse wheel scroll rate.
+            Can control the directories where Scripts and Templates are stored.
+        Bug Fixes
+            Fixed problems with different DPI settings.
+            Fixed problem imported certain base64 files.
+            Fixed occasional crash on shutdown.
+            Fixed disappearing columns on some multi-monitor systems.
+            Fixed crash when deleting multiple files that were open in 010 Editor.
+
+2.1.4    February 22nd, 2008
+
+    Bug fix with assigning to dates in a script.
+    Bug fix with importing long lines.
+    Bug fix with memory leak in FPrintf.
+    Updated licensing to support version 3 licenses.
+
+2.1.3    April 5th, 2007
+
+    Workaround for startup problems caused by faulty Microsoft hotfix.
+
+2.1.2    March 10th, 2007
+
+    Bug fix for 'FindAll' function.
+
+2.1.1    March 9th, 2007
+
+    Added support for Windows Vista.
+    Fixed bug with string compare in scripts and templates.
+
+2.1      March 5th, 2007
+
+    General
+        Improved right-click menu in Windows explorer.
+        Updated some icons.
+    Import/Export
+        Added ability to export as HTML, RTF, or a text area.
+        Can import or export Base64 and uuencoded data.
+        Can use 'Copy As' or 'Paste from' for many different types of data.     
+    Tab menu
+        Added right-click menu to file Tabs.
+        Can middle-click on a tab to close a file.
+    Command line    
+        Can Replace a string or set of bytes from the command line. 
+        Added ability to save or close a file from the command line.
+    Scripts and Templates
+        Improved bitfield mode without padding (see BitfieldDisablePadding).
+        Added 'Always on Top' toggle for the Code Editor (from right-click menu).
+        Check to reload script/template if modified by an external program.
+    Editor      
+        Now able to input characters more than 0x80 into the character area.
+        Added option to remove ':' separators in file addresses.
+    New Functions
+        BitfieldEnablePadding/BitfieldDisablePadding for bit streaming.
+        Function for locating files in a directory (FindFiles).
+        Added directory manipulation functions (DirectoryExists, MakeDir).
+        Added function to convert an enum to a string (EnumToString).
+        Functions to convert Dates to strings and vise versa.
+        Exit function can be used to return errorlevel to a batch file.
+    Bugs
+        Fixed problem exporting Intel-Hex 16-bit files with custom addresses.
+        Fixed printf functions occasionally detecting the wrong number of arguments.
+        Importing files now properly imports last line if it does not have a carriage return.
+        Fixed sign of variables when doing divisions and comparisons.
+        Fixed template hints occasionally not displaying correctly.
+        Fixed problem with read function occasionally not being executed.
+        Modified BMPTemplate.bt read functions to flip red and blue colors.        
+
+2.0.3    November 28th, 2006
+
+    Fixed bug with FileSave function.
+    Fixed bug with allowing more than one instance.
+    Fixed problem with exporting hex text and long lines.
+    Now use Exit function to set global errorlevel return value.
+    Allow bookmarks on consecutive bytes.
+    Fixed bug exporting data from disk or process.
+
+2.0.2    June 9th, 2005
+
+    Fixed problem in help index with function names not jumping directly to function help.
+    Fixed using copy and paste when editing a template variable.
+    Fixed problems using Printf on some strings.
+    Fixed bugs with custom read functions and forward structs.
+    Added uninstall survey.
+
+2.0.1    April 28th, 2005
+
+    Fixed issues with custom read/write functions.
+    Fixed issues with minimize/maximize behaviour.
+    Fixed issues with time data formats.
+    Bug fixes with canceling operations, resizing, window order, and divisions.
+
+2.0      March 30th, 2005
+
+    New Features Overview
+        Added hard drive editing for logical and physical drives.
+        Added editing of system processes.
+        More powerful interface for viewing template results (results displayed in panel 
+            below each hex editor, mouse-over hints, reverse lookup for template variables).
+        More powerful scripts/templates syntax (custom functions, custom data types, more 
+            standard keywords supported, union support, include support, 44 new functions).
+        New Windows XP style.
+        Many improvements in tools (new Find in Files tool).
+        A whole range of other improvements.
+    
+    New Features List
+        Hard Drive Editing 
+            Open entire logical or physical hard drives using 'File > Open Drive'.
+            Make disk images for drive using 'File > Save As'.
+            Jump to next or previous drive sector with Alt+Down, Alt+Up.
+            Get properties of the drive using 'Edit > Properties'.
+            Open hard drives from the command line.    
+        Process Editing 
+            Open processes using 'File > Open Process'.
+            Select which heaps or modules to open.
+            Make image of process using 'File > Save As'.
+            Get properties of the process using 'Edit > Properties'.
+            Open processes from the command line.
+            List of current heaps displayed in 'Process' tab of the Output Window.    
+       Templates/Scripts
+            Templates/Scripts Interface
+                Templates results can now be displayed in the 'Template Results' panel below each hex editor.
+                Application contains links to an online repository for scripts and templates.
+                Display hint for template variable when the cursor is over bytes in the hex editor.
+                New 'Jump to Template Variable' command to lookup a template variable from a file address.
+                Scripts and templates can be opened by double-clicking them in Windows Explorer.
+                Scripts and templates can be run from the command line.
+                Can mark scripts to be run on startup, shutdown, or when certain files are opened.
+                Speed improvements for scripts and templates.
+                Added default shortcut for saving a script or template.
+                Context sensitive help in the Code Editor.    
+            Templates/Scripts Syntax
+                Define your own custom functions.
+                Use '#include' keyword to include files.
+                Support for switch, case, break, and continue keywords.
+                Support for unions.
+                Default custom variables using the syntax <read=[functionname], write=[functionname]>.
+                Control whether arrays of structures are optimized with <optimize=true|false>.
+                Specify display format for variable using the syntax <format=hex|decimal|octal|binary>.
+                sizeof now works properly on simple structures.
+                Special new keywords 'exists' and 'startof' for template variables.
+                Array initializers work properly (e.g. int a[3] = {1, 2, 3};).
+                No need to use 'return' when doing simple expressions in the calculator.
+                Changed how scoping works in structs - automatically look up a level.
+                44 new functions: Checksum, ChecksumAlgStr, ChecksumAlgBytes, Compare, ConvertASCIIToUNICODE, 
+                    ConvertASCIIToUNICODEW, ConvertUNICODEToASCII, ConvertUNICODEToASCIIW, DeleteFile, Exit, 
+                    ExportFile, FindAll, FindFirst, FindInFiles, FindNext, FPrintf, GetBytesPerLine, 
+                    GetReadOnly, GetSectorSize, Histogram, ImportFile, InputOpenFileName, InputOpenFileNames, 
+                    InputSaveFileName, InsertFile, IsBigEndian, IsDrive, IsEditorFocused, IsLittleEndian, 
+                    IsLogicalDrive, IsModified, IsPhysicalDrive, IsProcess, OpenLogicalDrive, 
+                    OpenPhysicalDrive, OpenProcessById, OpenProcessByName, RenameFile, ReplaceAll, SetReadOnly,
+                    SScanf, StrDel, SubStr, Terminate.    
+            New Templates/Scripts
+                New default scripts for splitting or joining binary files.
+                New default template for parsing a WAV sound file.    
+        General
+            New Windows XP Style.
+            New 'File > Special > Save Selection' command to save selected bytes.
+            Show selection start and size in the status bar.
+            Click on position or size in status bar brings up an edit dialog.
+            Many tables have an 'Export CSV' option on right-click menu to write a comma-delimited file.
+            Can change read-only plus other flags in file properties.    
+        Hex Editor
+            Cursor size changes in Insert/Overwrite mode.
+            UNICODE character set support.
+            International character sets support.
+            Can split the hex editor into two parts using 'Window > Split Window' or button above scroll bar.
+            Scrolling can be synchronized between windows with 'Window > Synchronize Scrolling'.
+            Division lines can be used to indicate blocks of data.
+            Sector lines are drawn to indicate sectors on a hard drive.
+            Addresses can be displayed as octal format or as a line number.     
+        Tools
+            Find in Files tool
+                Can recursively search a directory or all open files for a set of bytes.
+                Display find in files results in 'Find in Files' tab of Output Window.
+                Can expand or hide results for each file.
+            Find 
+                Can search with wildcards '*' and '?'.
+                Allow multiple find ranges to color the same file.
+                Find works with UNICODE.
+            Highlights
+                Allow multiple highlights to be applied at the same time.
+                Assign different colors to highlights.
+            Comparison
+                Can limit which bytes are compared in a file (use to compare two regions in the same file).
+                Comparison results are sortable by clicking on the table headings.
+                Add color indicator box to the type column.
+                Can enable synchronized scrolling after running a comparison.
+            Base Converter 
+                Support for Float, Double, ASCII strings, EBCDIC strings, UNICODE strings in base converter.
+            Checksum
+                Can exclude a set of bytes in the file from the checksum.
+                Can display the checksum results in decimal format.    
+        Inspector
+            String type in inspector.
+            Display start address as local (offset from parent) from right-click menu.
+            Template variable name can be 'Type + Name' or just 'Name' (use Column Display Format).    
+        Bookmarks
+            Bookmarks can now use custom data types defined in Templates.
+            Bookmarks can be set to move when the cursor changes position.    
+        Importing
+            Do checksum when importing an Intel-hex file.
+            In import file dialog box, can set file type as 'All Supported Import Types'.
+            Can import multiple files at the same time.
+            Support for reading and writing Intel Hex files that use word-based addresses.    
+        Options
+            Specify color of right area, separator lines, sector lines, and variable highlight.
+            Specify additional include directories.
+            Specify minimum number of digits in address.
+            Option for turning on/off mouse over and hints.
+            Option for adding 010 Editor to the Windows Explorer right-click menu.    
+        Command line
+            Can open a drive or process from the command line using '-drive:' or '-process:'.
+            Run a script or a template from the command line using '-script:' or '-template:'.
+            Mark a file as readonly using '-readonly'.
+            Exit the application using '-exit'.
+            Can use wildcards when opening files or importing files on the command line.    
+        Help
+            New improved help file.    
+        Bugs
+            Bug with window opening at zero height (in special cases).
+            Bug with a slow-down when defining large arrays in scripts.
+            Bug with divisions and the resulting types in scripts (in special cases).
+            Bug with replace all never finishing on certain replaces.
+            Other minor bug fixes.
+
+1.3      April 1st, 2004
+
+    Templates
+        Added bitfield support to templates 
+        Added DisplayFormatBinary and DisplayFormatOctal functions
+        Can disable warnings under 'Tools > Options > Code Editor'
+    General
+        Now use the new XP file dialog boxes
+    Clipboard
+        Can use 'Paste Special' command to paste in different formats
+    Bug fixes
+        Fixed problems with workspace, filling bytes, running templates,
+           pasting large blocks, and selecting bytes on NT machines
+
+1.3.2    April 19th, 2004
+
+    Added functions ConvertASCIIToEBCDIC, ConvertEBCDICToASCII
+    Added functions BitfieldLeftToRight, BitfieldRightToLeft
+    Bug fixes with Printf, Operations, and local arrays in Templates
+
+1.3.1    April 6th, 2004
+
+    Changed header for templates and scripts
+    Bug fixes for the system path, and the Inspector
+
+
+1.2      Jan 24th, 2004
+
+    Inspector and Output Windows
+        Added 'Copy Column', 'Copy Row', and 'Copy Table' to right-click menu
+        Added 'Column Display Format' to right-click menu - set the format to hex or decimal
+    Scripts
+        Fixed scripts to work better when writing out large files
+        Any of the 'Write' functions now automatically expand the file size when 
+            writing past the end of the file 
+        A single variable (i.e int x) defined in a template can be accessed as x[0]
+        Added 'DisableUndo' and 'EnableUndo' to turn on or off undo - speeds up script
+            when writing large files
+        The 'FileNew' function now returns the file number of the created file
+    Import/Export
+        Added the ability to import or export 'Decimal Text'
+    Bug Fixes
+        Fixed 'Invalid Pointer Operation' bug in the Code Editor
+        Fixed a bug with the 'GetFileNum' function
+        A few other minor bug fixes with hotkeys and Templates
+
+1.1.1    Dec 19th, 2003
+
+    Minor bug fixes with bookmarks and the inspector.
+    Added Expand All option to template right-click menu. 
+
+1.1      Nov 1st, 2003
+
+    Templates
+        Support for enums (e.g. 'enum <ushort> MYENUM { COMP_1, COMP_2=5, COMP_3 } var1;').
+        Enums variables are displayed with a drop-down list in the Inspector.
+        Forward declared and recursive structs work properly.
+        Defining local variables inside structs works better (proper scope).
+        Zero-length arrays generate no variable (but do generate a warning).
+        Can specify hex or decimal display in Inspector with 
+            DisplayFormatHex() or DisplayFormatDecimal() functions.
+        Zip template now contains an example of enums.
+    Installer
+        010 Editor can be added to the system path automatically.
+        Can automatically associate with Intel Hex or Motorola S-Record files.
+    Explorer
+        Can drag-and-drop files from Windows Explorer to open them.
+        Drag-and-drop for Intel Hex or Motorola S-Record files will 
+            automatically import them.
+    Importing
+        Added default import byte under General Options (used for Intel Hex files).
+    Comparison
+        Improved comparison algorithm.
+    Bug fixes
+        Minor bug fixes with the Code Editor.
+
+1.0.1    Sept 26th, 2003  
+
+    Minor bug fixes with printing and inspector
+
+1.0      Sept 16th, 2003  
+
+    Initial release
+

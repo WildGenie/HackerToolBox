@@ -1,0 +1,520 @@
+[Info]
+LanguageName="German"
+Charset="utf-8"
+Version="1.3"
+
+[frmMain]
+; main window
+Caption="Obsidium Software Protection System"
+
+; page selection buttons
+1000.Tooltip="Laden/Speichern von Projektdateien"
+1001.Tooltip="Editieren von Projekteinstellungen"
+1002.Tooltip="Schlüsselmanagement"
+1003.Tooltip="Die Anwendung schützen"
+1004.Tooltip="Über dieses Programm"
+
+; toolbuttons
+1005.Tooltip="Neue Projektdatei erstellen"
+1006.Tooltip="Projektdatei laden"
+1007.Tooltip="Projektdatei speichern"
+1008.Tooltip="Einstellungen"
+
+; project management page
+1100.Caption="Projektmanagement"
+1101.Caption="Aktion"
+1102.Caption="Information"
+1103.Caption="Neues Projekt"
+1103.Tooltip="Ein neues Projekt erstellen"
+1104.Caption="Erstellt eine neue Projektdatei. Nicht gespeicherte Änderungen am aktuellen Projekt gehen verloren."
+1105.Caption="Projekt laden"
+1105.Tooltip="Ein bereits existierendes Projekt laden"
+1106.Caption="Lädt eine zuvor erstellte Projektdatei. Nicht gespeicherte Änderungen am aktuellen Projekt gehen verloren."
+1107.Caption="Projekt speichern"
+1107.Tooltip="Das aktuelle Projekt speichern"
+1108.Caption="Sichert das aktuelle Projekt zur späteren Wiederverwendung."
+1109.Caption="Nach dem Start von Obsidium muß entweder ein neues Projekt erstellt oder ein bereits vorhandenes geladen werden."
+
+; options page
+1200.Caption="Optionen"
+1201.Caption="Einfach\nErweitert\nLizenzierung\nZeitbeschränkungen\nNachrichten"
+; basic settings
+1202.Caption="Einfache Einstellungen"
+1203.Caption="Ressourcen verschlüsseln"
+1203.Tooltip="Verschlüsselt das Ressourcen-Verzeichnis (empfohlen)"
+1204.Caption="Kompression"
+1204.Tooltip="Aktiviert Kompression von Code und Daten"
+1205.Caption="Exporte entfernen"
+1205.Tooltip="Entfernt exportierte Funktionen"
+1206.Caption="Overlays behalten"
+1206.Tooltip="Erhält an die ausführbare Datei angehängte Daten"
+1207.Caption="Overlay-Zugriff kontrollieren"
+1207.Tooltip="Überwacht und steuert Zugriffe auf Overlay-Daten"
+1208.Caption="Overlays verschlüsseln"
+1208.Tooltip="Verschlüsselt angehängte Daten"
+1209.Caption="Debugger-Überprüfung"
+1209.Tooltip="Überprüft auf das Vorhandensein von Debuggern (empfohlen)"
+1210.Caption="Keine Erkennungsnachricht"
+1210.Tooltip="Keine Rückmeldung falls ein Debugger gefunden wurde"
+1211.Caption="Paßwortschutz"
+1211.Tooltip="Falls diese Option aktiviert ist, wird die Eingabe eines Paßworts zum Starten der Anwendung benötigt"
+1212.Tooltip="Geben Sie hier das Paßwort ein"
+1213.Caption="Umgebungsvariablen setzen"
+1213.Tooltip="Speichert Informationen vom Schutzsystem in Umgebungsvariablen"
+1214.Caption="Variablen verbergen"
+1214.Tooltip="Verbirgt die Umgebungsvariablen vor Überwachungsprogrammen"
+1215.Caption="Lizenzen an System binden"
+1215.Tooltip="Lizenzschlüssel sind nur für ein bestimmtes System gültig"
+1216.Caption="CPU"
+1216.Tooltip="CPU zur System-ID hinzufügen"
+1217.Caption="Festplatte"
+1217.Tooltip="Festplatte zur System-ID hinzufügen"
+1218.Caption="Betriebssystem"
+1218.Tooltip="Betriebssystem zur System-ID hinzufügen"
+1219.Caption="MAC-Adresse"
+1219.Tooltip="MAC-Adresse des primären Netzwerkadapters zur System-ID hinzufügen"
+; advanced settings
+1220.Caption="Erweiterte Einstellungen"
+1221.Caption="Basisadresse beibehalten"
+1221.Tooltip="Erzwingt die Verwendungen der ursprünglichen Basisadresse (zur Fehlersuche aktivieren)"
+1222.Caption="Bytes am OEP entfernen"
+1222.Tooltip="Entfernt die ersten Instruktionen am Entry Point des Programms (zur Fehlersuche deaktivieren)"
+1223.Caption="Keine Nachrichten anzeigen"
+1223.Tooltip="Unterdrückt die Darstellung jeglicher Nachrichten im Fehlerfall"
+1224.Caption="Unbenutze Ressourcen löschen"
+1224.Tooltip="Macht zur Ausführung nicht benötigte Ressourcen unbrauchbar (Delphi-spezifische Option)"
+1225.Caption="Delphi/BCB Verschleierung"
+1225.Tooltip="Delphi/BCB Verschleierung (siehe Dokumentation)"
+1226.Caption="Dynamischer API-Zugriff"
+1226.Tooltip="Erlaubt dynamischen Zugriff auf die Schutz-API via LoadLibrary/GetProcAddress"
+1227.Caption="Laufzeit-Patching"
+1227.Tooltip="Modifikation des Programmcodes zur Laufzeit (zur Fehlersuche deaktivieren)"
+1228.Caption="Laufzeit-Tracing"
+1228.Tooltip="Tracen des Programmcodes zur Laufzeit\n(deaktivieren zur Fehlersuche / Erhöhung der Ausführungsgeschwindigkeit)"
+1229.Caption="Geschützte Sektionen prüfen"
+1229.Tooltip="Verschlüsselte Sektionen auf Änderungen überprüfen"
+; licensing settings
+1230.Caption="Lizenzierungs-Einstellungen"
+1231.Caption="Speicherstelle von Lizenzschlüsseln:"
+1232.Caption="Lizenzdatei"
+1232.Tooltip="Lizenzschlüssel werden in einer Datei gespeichert"
+1233.Caption="Registrierung (Aktueller Benutzer)"
+1233.Tooltip="Lizenzschlüssel werden in der Registrierung gespeichert (HKEY_CURRENT_USER)"
+1234.Caption="Registrierung (Alle Benutzer)"
+1234.Tooltip="Lizenzschlüssel werden in der Registrierung gespeichert (HKEY_LOCAL_MACHINE)"
+1235.Caption="Name der Lizenzdatei:"
+1236.Tooltip="Geben Sie hier den gewünschten Namen ein"
+1237.Caption="Gültige Lizenz zum Starten erforderlich"
+1237.Tooltip="Aktivieren, um den Start des Programms ohne gültigen Lizenzschlüssel zu verhindern"
+; time trial settings
+1238.Caption="Ablaufen am"
+1238.Tooltip="Läßt die Anwendung an einem festen Datum ablaufen"
+1239.Tooltip="Hier das Ablaufdatum auswählen"
+1240.Caption="Begrenzte Ausführungsanzahl:"
+1240.Tooltip="Läßt die Anwendung nach eine bestimmten Anzahl an Ausführungen ablaufen"
+1241.Tooltip="Geben Sie hier die Anzahl an Ausführungen ein"
+1242.Caption="Eigener Nagscreen"
+1242.Tooltip="Einen eigenen Nagscreen bei Programmstart anzeigen (siehe Dokumentation)"
+1243.Caption="Wählen"
+1243.Tooltip="Dialogdatei auswählen"
+1244.Caption="Verzögerung in Sekunden:"
+1245.Caption="Begrenzte Taganzahl:"
+1245.Tooltip="Läßt die Anwendung eine bestimmte Anzahl Tage nach der Installation ablaufen"
+1246.Caption="Ablaufen der Anwendung erlauben"
+1246.Tooltip="Die Anwendung bleibt trotz Ablauf der Zeitbeschränkung lauffähig (siehe Dokumentation)"
+1247.Caption="Neuer Testzeitraum, Version"
+1247.Tooltip="Gewährt einen neuen Testzeitraum falls eine aktuellere Version der Anwendung installiert wird"
+1248.Tooltip="Hier die aktuelle Versionsnummer eingeben"
+1249.Caption="Daten entfernen"
+1249.Tooltip="Entfernt die auf diesem Computer gespeicherten Informationen zum Testzeitraum
+1259.Tooltip="Geben Sie hier die Anzahl der Tage ein"
+1260.Caption="Zeitbeschränkungs-Einstellungen"
+; messages settings
+1250.Caption="Eigene Nachrichten"
+;1251.Caption="Debugger gefunden:"
+;1252.Caption="Testzeitraum abgelaufen:"
+
+1253.Caption="Nachricht wählen:"
+1254.Caption="Debugger gefunden\nTestzeitraum abgelaufen\nLizenz erforderlich\nDatenintegrität verletzt\nSpeicherallozierungsfehler\nFehler beim Laden einer DLL\nImportfehler\nOrdinal-Importfehler\nInterner Fehler"
+1255.Caption="Titel:"
+1256.Tooltip="Geben Sie hier den Titel der Nachricht ein"
+1257.Caption="Nachricht"
+1258.Tooltip="Geben Sie hier den Nachrichtentext ein"
+
+; key management page
+1300.Caption="Schlüsselmanagement"
+1301.Caption="Internes System benutzen"
+1301.Tooltip="Select this to use the Obsidium licensing system"
+1302.Caption="Externes System benutzen"
+1302.Tooltip="Select this if your application already uses a reliable licensing sytem"
+1303.Caption="Internes Lizenzierungs-System"
+1304.Caption="Schlüssel generieren"
+1304.Tooltip="Generiert symmetrische und asymmetrische Schlüssel"
+1305.Caption="512 Bits\n768 Bits\n1024 Bits\n1536 Bits\n2048 Bits"
+1305.Tooltip="Gewünschte Schlüssellänge auswählen"
+1306.Caption="Wählen Sie die gewünschte Schlüssellänge, bevor Sie die Schlüssel generieren lassen."
+1307.Caption="Sperren von Lizenzschlüsseln"
+1308.Caption="Gesperrte Lizenzschlüssel"
+1308.Tooltip="Hinzufügen und Entfernen gesperrter Lizenzschlüssel"
+1309.Caption="Klicken Sie hier, um die Liste der derzeitig gesperrten Lizenzschlüssel aufzurufen und Einträge hinzuzufügen oder zu entfernen."
+1310.Caption="Erstellen von Lizenzschlüsseln"
+1311.Caption="Lizenz generieren"
+1311.Tooltip="Dialog zur Lizenzschlüssel-Generierung aufrufen"
+1312.Caption="Ruft den Dialog zur Lizenzschlüssel-Generierung auf, mit dem Text- und Binärschlüssel erstellt werden können"
+1313.Caption="Schlüsselgeneration läuft. Die kann einige Minuten in Anspruch nehmen (abhängig von Schlüssellänge und Prozessorgeschwindigkeit)"
+1315.Caption="Externes Lizenzierungs-System"
+1316.Caption="Dieser Schlüssel wird zum Schutz von markierten Abschnitten im Programmcode verwendet (Details siehe Dokumentation)"
+1317.Caption="Schlüssel laden"
+1317.Tooltip="Lädt einen Schlüssel aus einer Datei"
+1318.Caption="Externer Schlüssel vorhanden"
+
+; protection page
+1400.Caption="Schutz"
+1401.Caption="Einstellungen\nProgrammdateien"
+1402.Caption="Ausgabepfad:"
+1403.Caption="Wählen"
+1403.Tooltip="Ausgabeverzeichnis auswählen"
+1404.Tooltip="Informationen zum Schutzvorgang werden hier angezeigt"
+1405.Caption="Abbruch bei Fehler"
+1405.Tooltip="Bricht den Schutzvorgang ab, falls ein Fehler auftritt\n(beim Schutz mehrerer Dateien)"
+1406.Caption="Alle schützen"
+1406.Tooltip="Schütz alle Programmdateien"
+1407.Caption="Eingabepfad\nRelativer Ausgabepfad"
+1408.Caption="Hinzufügen"
+1408.Tooltip="Fügt Dateien der Liste hinzu"
+1409.Caption="Bearbeiten"
+1409.Tooltip="Dateinamen bearbeiten"
+1410.Caption="Schützen"
+1410.Tooltip="Schützt die ausgewählte Programmdatei"
+1411.Caption="Löschen"
+1411.Tooltip="Entfernt die gewählte Programmdatei aus der Liste"
+
+; about page
+1500.Caption="Über Obsidium"
+1501.Caption="Diese Version von Obsidium ist registriert für:"
+1502.Caption="Registrieren"
+1502.Tooltip="Lizenzschlüssel eingeben"
+
+
+[frmBlacklist]
+; blacklisted keyfiles
+Caption="Gesperrte Lizenzschlüssel"
+
+1000.Caption="Hash\nLizenzinformation"
+1000.Tooltip="Liste derzeitig gesperrter Lizenzschlüssel"
+1001.Caption="Hinzufügen"
+1001.Tooltip="Fügt einen Lizenzschlüssel der Sperrliste hinzu"
+1002.Caption="Textschlüssel"
+1002.Tooltip="Fügt einen Textschlüssel der Sperrliste hinzu"
+1003.Caption="Entfernen"
+1003.Tooltip="Entfernt den gewählten Lizenzschlüssel aus der Sperrliste"
+1004.Caption="Schließen"
+1004.Tooltip="Schließt diesen Dialog"
+
+
+[frmEnterKey]
+; dialog for entering text keys
+Caption="Lizenzschlüssel"
+
+1000.Caption="OK"
+1000.Tooltip="Diesen Dialog schließen"
+1001.Caption="Abbruch"
+1001.Tooltip="Abbrechen und diesen Dialog schließen"
+
+
+[frmFileSelect]
+; file selection dialog
+Caption="Dateien auswählen"
+
+1000.Caption="Dateien auswählen"
+1001.Caption="Eingabedatei:"
+1002.Caption="Relativer Ausgabepfad:"
+1003.Caption="Wählen"
+1004.Caption="Wählen"
+1005.Caption="OK"
+1006.Caption="Abbruch"
+
+
+[frmKeygen]
+; license key generation dialog
+Caption="Lizenzschlüssel generieren"
+
+1000.Caption="Lizenzinformation"
+1001.Tooltip="Zusätzliche Informationen, die im Lizenzschlüssel gespeichert werden (max. 31 Zeichen)"
+1002.Tooltip="Zusätzliche Informationen, die im Lizenzschlüssel gespeichert werden (max. 127 Zeichen)"
+1003.Caption="System-ID"
+1004.Tooltip="Der Lizenzschlüssel wird an diese System-ID gebunden"
+1005.Caption="Optionen"
+1006.Caption="Nur Datei"
+1006.Tooltip="Erstellt nur eine Schlüsseldatei"
+1007.Caption="Nur Text"
+1007.Tooltip="Erstellt nur einen Textschlüssel"
+1008.Caption="Beides"
+1008.Tooltip="Erstellt sowohl eine Schlüsseldatei als auch einen Textschlüssel"
+1009.Caption="Ablaufdatum:"
+1010.Tooltip="Wählen Sie ein Datum, um einen zeitbeschränkten Lizenzschlüssel zu erstellen"
+1011.Caption="Generieren"
+1011.Tooltip="Erstellt einen neuen Lizenzschlüssel"
+1012.Caption="Schließen"
+1012.Tooltip="Diesen Dialog schließen"
+
+
+[frmPreferences]
+; preferences dialog
+Caption="Einstellungen"
+
+1000.Caption="Pfade"
+1001.Caption="Verzeichnis für Projektdateien"
+1002.Caption="Wählen"
+1003.Caption="Optionen"
+1004.Caption="Projektdateien beim Beenden speichern"
+1005.Caption="OK"
+1006.Caption="Abbruch"
+1007.Caption="Sprache"
+
+
+[frmProjectName]
+Caption="Name des Projekts / der Anwendung"
+
+1000.Caption="Bitte geben Sie einen eindeutigen Namen für dieses Projekt ein (z.B. den Namen der Anwendung). Dieser Name ist nur zum internen Gebrauch und kann nicht nachträglich verändert werden."
+1001.Caption="OK"
+
+
+[frmRegister]
+Caption="Obsidium registrieren"
+
+1000.Caption="Bitte kopieren Sie Ihren persönlichen Lizenzschlüssel und fügen ihn hier ein."
+1001.Caption="OK"
+1001.Tooltip="Lizenzschlüssel akzeptieren"
+1002.Caption="Abbruch"
+1002.Tooltip="Abbrechen und diesen Dialog schließen"
+
+
+[frmShowKey]
+; dialog showing generated license keys
+Caption="Licenzschlüssel"
+
+1000.Caption="In Datei speichern"
+1000.Tooltip="Schreibt den Lizenzschlüssel in eine Textdatei"
+1001.Caption="Zwischenablage"
+1001.Tooltip="Kopiert den Lizenzschlüssel in die Zwischenablage"
+1002.Caption="Schließen"
+1002.Tooltip="Diesen Dialog schließen"
+
+
+[Strings]
+; default message captions
+3000="Hinweis"
+3001="Fehler"
+
+2001="Memory allocation error."
+2002="Datei E/A Fehler."
+
+; blacklist dialog strings
+2000="Fehler beim Lesen der Lizenzdatei."
+2003="Kann Lizenzdatei nicht öffnen."
+2004="Lizenz ist bereits gesperrt."
+2005="Ungültiger Lizenzschlüssel."
+2006="Es wurden "
+2007=" Lizenzschlüssel hinzugefügt"
+; blacklist popup menu
+2008="Lizenz entfernen"
+2009="Lizenz hinzufügen"
+2010="Textschlüssel hinzufügen"
+2011="Aus Datei hinzufügen"
+2012="Aus Datei ersetzen"
+
+; enter key dialog strings
+2100="Der Textschlüssel ist ungültig."
+
+; file selection dialog strings
+2200="Hinweis: Unterschiedliche Dateierweiterungen."
+2201="Warnung: Kein gültiger relativer Pfad:"
+
+; key generation dialog strings
+2300="Bitte geben Sie die System-ID ein."
+2301="Die angegebene System-ID ist ungültig."
+2302="Fehler beim Erstellen der Lizenzdatei!"
+2303="Fehler beim Schreiben in die Lizenzdatei!"
+2304="Der Lizenzschlüssel konnte nicht in Textform konvertiert werden!"
+2305="Sie haben keine Lizenzinformationen eingegeben. Trotzdem fortfahren?"
+
+; project name dialog strings
+2400="Bitte geben Sie mindestens 5 Zeichen ein."
+
+; registration dialog strings
+2500="Bitte starten Sie Obsidium neu, um den Registrierungsvorgang abzuschließen."
+2501="Ungültiger Lizenzschlüssel."
+
+; dialog showing generated license keys
+2600="Fehler beim Schreiben in die Datei!"
+2601="Fehler beim Erstellen der Datei!"
+
+; main window strings
+1000="Das Laden von Projektdateien ist in der Demo-Version leider deaktiviert."
+1001="Aus Projektdatei geladen"
+1002="Bitte deaktivieren Sie den Debugger und starten die Anwendung neu."
+1003="Ihr Testzeitraum ist abgelaufen."
+1004="Neues Projekt erstellen?"
+1005="Die Projektdatei wurde aus einem veralteten Format konvertiert, bitte erneut öffnen."
+1006="Kann Projektdatei nicht in neues Format konvertieren."
+1007="Fehler beim Öffnen der Projektdatei."
+1008="Schutzvorgang läuft, Ihr Projekt wird nicht gespeichert. Trotzdem beenden?"
+1009="Schlüsselgenerierung läuft, Ihr Projekt wird nicht gespeichert. Trotzdem beenden?"
+1010="Das aktuelle Projekt vor dem Beenden speichern?"
+1011="Schutzvorgang erfolgreich!"
+1012="Kann die Eingabedatei nicht öffnen"
+1013="Kann die Ausgabedatei nicht erstellen"
+1014="Ungültige Eingabedatei"
+1015="Nicht unterstützte Eingabedatei"
+1016="Fehler beim Schreiben in die Ausgabedatei"
+1017="Fehler bei der Speicher-Allokation"
+1018="Fehler beim Bearbeiten der Ressourcen"
+1019="Fehler beim Bearbeiten der Exporte"
+1020="Fehler beim Bearbeiten der Importe"
+1021="Fehler beim Schreiben des Schutz-Codes"
+1022="Fehler beim Bearbeiten der TLS"
+1023="Die Datei ist möglicherweise bereits gepackt oder geschützt"
+1024="Unbekannter Fehler"
+1028="Kein Ausgabeverzeichnis angegeben"
+1029="Kein Name für die Lizenzdatei angegeben, benutze Standardeinstellung"
+1030="Die Einstellungen der System-ID sind ungültig"
+1031="Kein gültiger relativer Pfad"
+1032="Bearbeite Projekt-Einstellungen"
+1033="Ausgabedatei "
+1034="Schütze Datei "
+1035="Ausgabedatei erstellen..."
+1036="Eingabedatei öffnen..."
+1037="Eingabedatei überprüfen..."
+1038="Bearbeite Exporte..."
+1039="Bearbeite Importe..."
+1040="Bearbeite Ressourcen..."
+1041="Bearbeite TLS..."
+1042="Schreibe Schutz-Code..."
+1043="Verschlüsselungs-Markierung gefunden an relativer Adresse 0x"
+1044="FEHLER: Nicht unterstütztes call mark."
+1045="FEHLER: Offene Verschlüsselungs-Markierung."
+1046="Verschlüsselungs-Markierung gefunden an relativer Adresse 0x"
+1047="Fehler beim Laden der DLL "
+1048="Bitte stellen Sie sicher, daß alle benötigten DLLs geladen werden können."
+1049="FEHLER: Verschachtelte Verschlüsselungs-Markierung an relativer Adresse 0x"
+1050="Komprimiere Section, 0x"
+1051=" Bytes"
+1052="Komprimierte Größe 0x"
+1053="Hinweis: Benutzen Sie zur Verschlüsselungs-Markierungen Verbesserung des Schutzes."
+1054="WARNUNG: Eingabedatei scheint gepackt zu sein."
+1055="Bitte geben Sie eine gültige Versionsnummer ein.\nBeispiele für gültige Nummern: 1, 1.0, 2.5"
+1056="Bitte geben Sie eine gültige Anzahl an Tagen ein."
+1057="Bitte geben Sie eine gültige Anzahl an Ausführungen ein."
+1058="Fehler beim Lesen der Datei."
+1059="Datei enthält keine Dialogdaten."
+1071="Die eingegebene Nachricht ist ungültig, Details hierzu finden sich in der Dokumentation."
+
+; protected files popup menu
+1060="Hinzufügen"
+1061="Bearbeiten"
+1062="Schützen"
+1063="Entfernen"
+
+1064="Doppelter Eintrag für diese Datei."
+1065="Bitte geben sie das Ausgabeverzeichnis für dieses Projekt an, in dem verschlüsselte Dateien abgelegt werden."
+1066="Verschlüsselung erfolgreich"
+1067="Fehler beim Verschlüsseln der Datei"
+1068="Diesen Eintrag wirklich entfernen?"
+1069="Die Daten des Testzeitraums wurden entfernt."
+
+; open project file popup menu
+1070="Projektdatei öffnen..."
+
+
+; --- strings added in version 1.3 ---
+
+[frmEnterShortKey]
+Caption="Eingabe eines kurzen Lizenzschlüssels"
+1000.Caption="Lizenzinformation:"
+1001.Caption="Lizenzschlüssel:"
+1002.Caption="OK"
+1002.Tooltip="Diesen Dialog schließen"
+1003.Caption="Abbrechen"
+1003.Tooltip="Abbrechen und diesen Dialog schließen"
+
+[frmBlacklistShort]
+Caption="Gesperrte Lizenzschlüssel"
+1000.Caption="Lizenz hinzufügen"
+1000.Tooltip="Fügt einen Lizenzschlüssel der Sperrliste hinzu"
+1001.Caption="Lizenz entfernen"
+1001.Tooltip="Entfernt den markierten Lizenzschlüssel aus der Liste"
+1002.Caption="Schließen"
+1002.Tooltip="Diesen Dialog schließen"
+1003.Caption="Hash\nLizenzinfo"
+1003.Tooltip="Liste derzeit gesperrter Lizenzschlüssel"
+
+[frmMain]
+; key management page
+1319.Caption="Internes System\nInternes System (kurze Schlüssel)\nExternes System"
+1319.Tooltip="Wählen Sie hier das Lizenzsystem für dieses Projekt"
+1320.Caption="Detaillierte Informationen über die einzelnen Lizenzierungssysteme finden sich in der Dokumentation."
+1321.Caption="Internes Lizenzierungs-System (kurze Schlüssel)"
+1322.Caption="Schlüssel generieren"
+1322.Tooltip="Generiert symmetrische und asymmetrische Schlüssel"
+1323.Caption="kurz\nmittel\nlang"
+1323.Tooltip="Gewünschte Schlüssellänge auswählen"
+1324.Caption="Wählen Sie links die gewünschte Schlüssellänge, bevor Sie die Schlüssel generieren lassen."
+1325.Caption="Sperren von Schlüsseln"
+1326.Caption="Gesperrte Lizenzschlüssel"
+1326.Tooltip="Anzeigen/Hinzügen/Entfernen von gesperrten Lizenzschlüsseln"
+1327.Caption="Klicken Sie hier, um die Liste der derzeitig gesperrten Lizenzschlüssel aufzurufen und Einträge hinzuzufügen oder zu entfernen."
+1328.Caption="Schlüsselgenerierung"
+1329.Caption="Lizenzinformation:"
+1330.Caption="Lizenzschlüssel:"
+1331.Caption="Schlüssel generieren"
+1331.Tooltip="Generiert einen neuen Lizenzschlüssel mit den aktuellen Parametern"
+1332.Caption="Schlüssel prüfen"
+1332.Tooltip="Verifiziert den Lizenzschlüssel anahnd der aktuellen Parameter"
+1333.Caption="System-ID:"
+1334.Caption="Erweiterter Schlüssel"
+1334.Tooltip="Erweiterte Lizenzschlüssel erzeugen (siehe Dokumentation)"
+1335.Caption="Ablaufdatum:"
+1336.Tooltip="Lizenzinformationen (z.B. Name des Benutzers)"
+1337.Tooltip="Ablaufdatum des Lizenzschlüssels"
+1338.Tooltip="Der Lizenzschlüssel wird an diese System-ID gebunden"
+1339.Caption="Schlüssel kopieren"
+1339.Tooltip="Kopiert den generierten Schlüssel in die Zwischenablage"
+1440.Caption="Benutzerdefinierter Wert:"
+1441.Tooltip="Geben Sie hier den benutzerdefinierten Wert des Schlüssels ein (Details hierzu in der Dokumentation)"
+1442.Tooltip="Die System-ID dieses Computers (für Testzwecke)"
+; toolbuttons
+1009.Tooltip="Hilfedatei öffnen"
+; advanced options
+1261.Caption="Visual Studio 2005 Fix"
+1261.Tooltip="Verbessert Kompatibilität zu von Visual Studio 2005 erstellten Dateien"
+1262.Caption="..."
+1262.Tooltip="Vom Laufzeit-Tracing ausgenommene DLLs anzeigen"
+1263.Caption="Import-Daten beibehalten"
+1263.Tooltip="Verhindert das Entfernen von Import-Daten, sollte i.d.R. deaktiviert bleiben"
+1264.Caption="API-Emulation deaktivieren"
+1264.Tooltip="Deaktiviert die Emulation bestimmter API-Funktionen"
+
+[frmTraceBlacklist]
+Caption="Vom Laufzeit-Tracing ausgenommene DLLs"
+1000.Caption="Hinzufügen"
+1000.Tooltip="Zur Liste der ausgeschlossenen DLLs hinzufügen"
+1001.Caption="Entfernen"
+1001.Tooltip="Gewählten Eintrag aus der Liste der ausgeschlossenen DLLs entfernen"
+1002.Caption="OK"
+
+[Strings]
+; frmEnterShortKey strings
+2700="Der eingegebene Lizenzschlüssel scheint systemspezifisch zu sein. Den Schlüssel trotzdem hinzufügen?"
+; frmBlacklistShort strings
+2800="Lizenzschlüssel &entfernen"
+2801="Lizenzschlüssel &hinzufügen"
+2802="Dieser Lizenzschlüssel ist bereits gesperrt"
+; main form strings
+2803="Sie müssen eine System-ID eingeben"
+2804="Der Lizenzschlüssel ist gültig"
+2805="Ablaufdatum:"
+2806="Der Lizenzschlüssel ist ungültig"
+2807="Benutzerdefinierter Wert:"
+2808="Die gewählte Sprachdatei ist veraltet, einige Teile der Anwendung sind eventuell nicht übersetzt."
+2809="In die Zwischenablage kopieren"

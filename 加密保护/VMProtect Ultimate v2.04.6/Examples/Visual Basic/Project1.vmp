@@ -1,0 +1,22 @@
+[ProjectInfo]
+Count=3
+Options=88
+AddressSort=0
+VMCodeSectionName=.vmp
+RunParameters=
+[Procedures]
+Address0=4201797
+NeedCompile0=1
+CompilationType0=0
+MapAddress0=VMProtectMarker1
+ExtAddressCount0=0
+Address1=4201256
+NeedCompile1=0
+CompilationType1=0
+MapAddress1=string "Correct password"
+ExtAddressCount1=0
+Address2=4201324
+NeedCompile2=0
+CompilationType2=0
+MapAddress2=string "Incorrect password"
+ExtAddressCount2=0

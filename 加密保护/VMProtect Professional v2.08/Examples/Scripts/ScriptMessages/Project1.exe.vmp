@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<Protection InputFileName="Project1.exe" Options="0" CheckKernelDebugger="false" CompressionMode="0" VMCodeSectionName=".vmp" VMExecutorCount="1" LicenseDataFileName="" OutputFileName="" WaterMarkName="" RunParameters="">
+		<Folders/>
+		<Procedures>
+			<Procedure MapAddress="VMProtectMarker &quot;Test marker&quot;" IncludedInCompilation="true" Options="1" CompilationType="0"/>
+			<Procedure MapAddress="string &quot;Correct password&quot;" IncludedInCompilation="false" Options="1" CompilationType="0"/>
+			<Procedure MapAddress="string &quot;Incorrect password&quot;" IncludedInCompilation="false" Options="1" CompilationType="0"/>
+		</Procedures>
+	</Protection>
+	<DLLBox/>
+	<Script IncludedInCompilation="true">procedure OnBeforeCompilation;
+begin 
+  Writeln('OnBeforeCompilation');
+end;
+
+procedure OnAfterCompilation;
+begin
+  Writeln('OnAfterCompilation');
+end;
+
+procedure OnAfterSaveFile;
+begin 
+  Writeln('OnAfterSaveFile');
+end;
+</Script>
+</Document>

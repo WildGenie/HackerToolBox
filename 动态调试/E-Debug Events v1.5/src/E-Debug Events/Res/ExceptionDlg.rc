@@ -1,0 +1,14 @@
+#define IDD_DLG1 103
+#define IDC_EDT_Exception 1001
+#define IDC_BTN_Application 1002
+#define IDC_BTN_Cancel 1003
+IDD_DLG1 DIALOGEX 6,6,194,87
+CAPTION "Exceptions code by cektop"
+FONT 9,"ËÎÌו",400,0,134
+STYLE 0x10CA0000
+EXSTYLE 0x00000000
+BEGIN
+  CONTROL "",IDC_EDT_Exception,"Edit",0x50211004,0,0,194,64,0x00000200
+  CONTROL "&Application",IDC_BTN_Application,"Button",0x50010000,36,68,50,15,0x00000000
+  CONTROL "&Cancel",IDC_BTN_Cancel,"Button",0x50010000,118,68,50,15,0x00000000
+END

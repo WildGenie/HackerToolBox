@@ -1,0 +1,8 @@
+#include "Res/E-Debug EventsDlg.rc"
+#include "Res/ExceptionDlg.rc"
+#include "Res/Junk CodeDlg.rc"
+#include "Res/MenuMnu.rc"
+#include "Res/ErrorFile.rc"
+#include "Res/E-Debug EventsStr.rc"
+#include "Res/E-Debug EventsRes.rc"
+

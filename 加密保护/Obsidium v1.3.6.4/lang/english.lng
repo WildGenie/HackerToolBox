@@ -1,0 +1,521 @@
+[Info]
+LanguageName="English"
+Charset="utf-8"
+Version="1.3"
+
+[frmMain]
+; main window
+Caption="Obsidium Software Protection System"
+
+; page selection buttons
+1000.Tooltip="Load/Save project files"
+1001.Tooltip="Edit project settings"
+1002.Tooltip="Key management"
+1003.Tooltip="Protect the application"
+1004.Tooltip="About this program"
+
+; toolbuttons
+1005.Tooltip="Create new project file"
+1006.Tooltip="Load project file"
+1007.Tooltip="Save project file"
+1008.Tooltip="Preferences"
+
+; project management page
+1100.Caption="Project management"
+1101.Caption="Action"
+1102.Caption="Information"
+1103.Caption="New Project"
+1103.Tooltip="Create a new project"
+1104.Caption="Creates a new project file. All unsaved changes made to the current project will be lost."
+1105.Caption="Load Project"
+1105.Tooltip="Load an existing project"
+1106.Caption="Loads a previously saved project file. All unsaved changes made to the current project will be lost."
+1107.Caption="Save Project"
+1107.Tooltip="Save the current project"
+1108.Caption="Saves the current project for later use."
+1109.Caption="When starting Obsidium, you must either create a new project file or load an existing one."
+
+; options page
+1200.Caption="Options"
+1201.Caption="Basic\nAdvanced\nLicensing\nTime trial\nMessages"
+; basic settings
+1202.Caption="Basic settings"
+1203.Caption="Encrypt resources"
+1203.Tooltip="Encrypt resource directory (recommended)"
+1204.Caption="Compression"
+1204.Tooltip="Enables executable compession"
+1205.Caption="Remove exports"
+1205.Tooltip="Remove exports from executable"
+1206.Caption="Keep overlays"
+1206.Tooltip="Preserve any data appended to the executable"
+1207.Caption="Control overlay access"
+1207.Tooltip="Monitor and control access to the overlay data"
+1208.Caption="Encrypt overlays"
+1208.Tooltip="Encrypt overlay data"
+1209.Caption="Debugger checks"
+1209.Tooltip="Check for debuggers (recommended)"
+1210.Caption="No detection message"
+1210.Tooltip="Suppress debugger detection message"
+1211.Caption="Application password"
+1211.Tooltip="If checked, the application will only run after entering a password"
+1212.Tooltip="Enter the application password here"
+1213.Caption="Set environment variables"
+1213.Tooltip="Store protection parameters in environment variables"
+1214.Caption="Hide environment variables"
+1214.Tooltip="Hide environment variables from monitoring tools"
+1215.Caption="Lock licenses to system"
+1215.Tooltip="License keys will only be valid for a specific system"
+1216.Caption="CPU"
+1216.Tooltip="Add CPU to system ID"
+1217.Caption="Harddisk"
+1217.Tooltip="Add harddisk to system ID"
+1218.Caption="Operating system"
+1218.Tooltip="Add operating system to system ID"
+1219.Caption="MAC address"
+1219.Tooltip="Add the primary LAN adapter's MAC address to system ID"
+; advanced settings
+1220.Caption="Advanced settings"
+1221.Caption="Don't relocate image"
+1221.Tooltip="Force original image base (enable for troubleshooting purposes)"
+1222.Caption="Remove bytes at OEP"
+1222.Tooltip="Remove first instructions at the program's entry point (disable for troubleshooting)"
+1223.Caption="Don't display any messages"
+1223.Tooltip="Suppress any message boxes in case of an error"
+1224.Caption="Void unneeded resources"
+1224.Tooltip="Remove unnecessary resources (Delphi-specific option)"
+1225.Caption="Delphi/BCB obfuscation"
+1225.Tooltip="Delphi/BCB obfuscation (see documentation)"
+1226.Caption="Dynamic protection API access"
+1226.Tooltip="Enable dynamic access to the protection API via LoadLibrary/GetProcAddress"
+1227.Caption="Runtime patching"
+1227.Tooltip="Patching of executable's code during runtime (disable for troubleshooting purposes)"
+1228.Caption="Runtime tracing"
+1228.Tooltip="Tracing of executable's code during runtime (disable for troubleshooting purposes / runtime speed gain)"
+1229.Caption="Check encrypted sections"
+1229.Tooltip="Check encrypted sections for modifications"
+; licensing settings
+1230.Caption="Licensing settings"
+1231.Caption="License key location:"
+1232.Caption="keyfile"
+1232.Tooltip="License keys will be stored in a file (specify name below)"
+1233.Caption="registry (current user)"
+1233.Tooltip="License keys will be stored in the registry (HKEY_CURRENT_USER)"
+1234.Caption="registry (all users)"
+1234.Tooltip="License keys will be stored in the registry (HKEY_LOCAL_MACHINE)"
+1235.Caption="Name of keyfile:"
+1236.Tooltip="Enter the desired keyfile name here"
+1237.Caption="Require a valid license to run"
+1237.Tooltip="If enabled, a valid license key is required to run the program"
+; time trial settings
+1238.Caption="Expire on"
+1238.Tooltip="Enable to make application expire on a fixed date"
+1239.Tooltip="Select the expiration date here"
+1240.Caption="Limited number of runs:"
+1240.Tooltip="Enable to make application expire a user defined number of runs after installation"
+1241.Tooltip="Enter the number of runs here"
+1242.Caption="Display custom nag screen"
+1242.Tooltip="Display custom nag screen on program startup (see documentation)"
+1243.Caption="Select"
+1243.Tooltip="Select dialog file"
+1244.Caption="Delay in seconds:"
+1245.Caption="Limited number of days:"
+1245.Tooltip="Enable to make application expire a user defined number of days after installation"
+1246.Caption="Allow application to expire"
+1246.Tooltip="Application will run even if expired, see documentation for details"
+1247.Caption="Allow new trial period, version"
+1247.Tooltip="Enable to grant a new trial period if a newer version of the application is installed"
+1248.Tooltip="Enter the current version number here"
+1249.Caption="Remove trial data"
+1249.Tooltip="Remove time trial data from this computer"
+1259.Tooltip="Enter the number of days here"
+1260.Caption="Time trial settings"
+; messages settings
+1250.Caption="Custom messages"
+1251.Caption="Debugger detected:"
+1252.Caption="Trial expired:"
+;
+1253.Caption="Select message:"
+1254.Caption="Debugger detected\nTrial expired\nLicense required\nFile integrity error\nMemory allocation error\nDLL load error\nImport error\nImport ordinal error\nInternal error"
+1255.Caption="Caption:"
+1256.Tooltip="Enter the message caption here"
+1257.Caption="Message"
+1258.Tooltip="Enter the message text here"
+
+
+; key management page
+1300.Caption="Key management"
+1301.Caption="Use internal licensing system"
+1301.Tooltip="Select this to use the Obsidium licensing system"
+1302.Caption="Use external licensing system"
+1302.Tooltip="Select this if your application already uses a reliable licensing system"
+1303.Caption="Internal licensing system"
+1304.Caption="Generate encryption keys"
+1304.Tooltip="Generate symmetric and asymmetric encryption keys"
+1305.Caption="512 bits\n768 bits\n1024 bits\n1536 bits\n2048 bits"
+1305.Tooltip="Select your desired keysize"
+1306.Caption="Before generating the encryption keys, select the desired keysize on the left. Key generation may take a considerable amount of time ."
+1307.Caption="Keyfile blacklisting"
+1308.Caption="Keyfile blacklist"
+1308.Tooltip="View/add/remove blacklisted keyfiles"
+1309.Caption="Press the 'Keyfile blacklist' button to view the list of currently blacklisted keyfiles and add/remove entries."
+1310.Caption="Keyfile generation"
+1311.Caption="Generate keyfile"
+1311.Tooltip="Show keyfile generation dialog"
+1312.Caption="Press the 'Generate keyfile' button to show the keyfile generation dialog which allows you to create textual and binary license keys for this project."
+1313.Caption="Key generation in progress. This may take up to a few minutes depending on the selected keysize and your CPU speed."
+1315.Caption="External licensing system"
+1316.Caption="This key will be used to encrypt marked code sections. Refer to the documentation for details."
+1317.Caption="Load key"
+1317.Tooltip="Load encryption key from file"
+1318.Caption="External key present"
+
+; protection page
+1400.Caption="Protection"
+1401.Caption="Settings\nExecutables"
+1402.Caption="Output directory:"
+1403.Caption="Select"
+1403.Tooltip="Select output directory"
+1404.Tooltip="The protection status is shown here"
+1405.Caption="Abort on error"
+1405.Tooltip="Abort protection if an error occurs (when protecting multiple files)"
+1406.Caption="Protect all"
+1406.Tooltip="Protect all executable files"
+1407.Caption="Input file\nRelative output path"
+1408.Caption="Add"
+1408.Tooltip="Add files to the list"
+1409.Caption="Edit"
+1409.Tooltip="Edit filenames"
+1410.Caption="Protect"
+1410.Tooltip="Protect selected file"
+1411.Caption="Delete"
+1411.Tooltip="Delete selected file from the list"
+
+; about page
+1500.Caption="About Obsidium"
+1501.Caption="This copy of Obsidium is licensed to:"
+1502.Caption="Register"
+1502.Tooltip="Enter registration code"
+
+
+[frmBlacklist]
+; blacklisted keyfiles
+Caption="Blacklisted keyfiles"
+
+1000.Caption="Hash\nLicense info"
+1000.Tooltip="List of currently blacklisted keyfiles"
+1001.Caption="Add keyfile"
+1001.Tooltip="Add a keyfile to the blacklist"
+1002.Caption="Add text key"
+1002.Tooltip="Add a text key to the blacklist"
+1003.Caption="Remove keyfile"
+1003.Tooltip="Remove the selected keyfile from the list"
+1004.Caption="Close"
+1004.Tooltip="Close this dialog"
+
+
+[frmEnterKey]
+; dialog for entering text keys
+Caption="License key"
+
+1000.Caption="OK"
+1000.Tooltip="Close this dialog"
+1001.Caption="Cancel"
+1001.Tooltip="Abort and close this dialog"
+
+
+[frmFileSelect]
+; file selection dialog
+Caption="Select files"
+
+1000.Caption="Select files"
+1001.Caption="Input file:"
+1002.Caption="Relative output path:"
+1003.Caption="Select"
+1004.Caption="Select"
+1005.Caption="OK"
+1006.Caption="Cancel"
+
+
+[frmKeygen]
+; license key generation dialog
+Caption="Keyfile generation"
+
+1000.Caption="License information"
+1001.Tooltip="Additional information stored in the keyfile (31 chars max)"
+1002.Tooltip="Additional information stored in the keyfile (127 chars max)"
+1003.Caption="System ID"
+1004.Tooltip="License will be locked to this system ID"
+1005.Caption="Options"
+1006.Caption="File only"
+1006.Tooltip="Create keyfile only"
+1007.Caption="Text only"
+1007.Tooltip="Create license data as text only"
+1008.Caption="Both"
+1008.Tooltip="Create both keyfile and text data"
+1009.Caption="Keyfile expires on:"
+1010.Tooltip="Enable and select a date to create a time limited keyfile"
+1011.Caption="Generate"
+1011.Tooltip="Generate license key"
+1012.Caption="Close"
+1012.Tooltip="Close this dialog"
+
+
+[frmPreferences]
+; preferences dialog
+Caption="Preferences"
+
+1000.Caption="Paths"
+1001.Caption="Default project file path"
+1002.Caption="Select"
+1003.Caption="Options"
+1004.Caption="Autosave project files on exit"
+1005.Caption="OK"
+1006.Caption="Cancel"
+1007.Caption="Interface language"
+
+
+[frmProjectName]
+Caption="Project/Application name"
+
+1000.Caption="Please enter a unique name (e.g. the name of your application) for this project. This name is for internal use only and can not be changed afterwards."
+1001.Caption="OK"
+
+
+[frmRegister]
+Caption="Register Obsidium"
+
+1000.Caption="Please copy your registration code and paste it here."
+1001.Caption="OK"
+1001.Tooltip="Accept registration code"
+1002.Caption="Cancel"
+1002.Tooltip="Abort and close this dialog"
+
+
+[frmShowKey]
+; dialog showing generated license keys
+Caption="License key"
+
+1000.Caption="Save to file"
+1000.Tooltip="Write the license data to a text file"
+1001.Caption="Copy to clipboard"
+1001.Tooltip="Copy license data to clipboard"
+1002.Caption="Close"
+1002.Tooltip="Close this dialog"
+
+
+[Strings]
+; default message captions
+3000="Notice"
+3001="Error"
+
+2001="Memory allocation error."
+2002="File I/O error."
+
+; blacklist dialog strings
+2000="Error reading keyfile."
+2003="Cannot open keyfile."
+2004="Keyfile is already blacklisted."
+2005="Invalid keyfile."
+2006="Added "
+2007=" keys to the blacklist"
+; blacklist popup menu
+2008="&Remove keyfile"
+2009="&Add keyfile"
+2010="Add &text key"
+2011="Add from file"
+2012="Replace from file"
+
+; enter key dialog strings
+2100="The text key seems to be invalid."
+
+; file selection dialog strings
+2200="Notice: File extensions differ."
+2201="Warning: Not a valid relative path:"
+
+; key generation dialog strings
+2300="Please enter the system ID."
+2301="The system ID you entered is invalid."
+2302="Cannot create keyfile!"
+2303="Error writing to keyfile!"
+2304="Cannot convert keyfile to text string!"
+2305="You did not enter any license information. Continue anyway?"
+
+; project name dialog strings
+2400="Please enter at least 5 characters."
+
+; registration dialog strings
+2500="Please restart Obsidium to complete the registration process."
+2501="Invalid registration code."
+
+; dialog showing generated license keys
+2600="Error writing to file!"
+2601="Cannot create file!"
+
+; main window strings
+1000="Sorry, loading project files is disabled in the demo version."
+1001="Loaded from project file"
+1002="Debugger detected - please disable it and restart the application."
+1003="Your trial period has ended."
+1004="Create a new project?"
+1005="The project file was converted from an old format, please re-open it."
+1006="Cannot convert project file from old format."
+1007="Cannot open project file."
+1008="Protection is in progress, your project will not be saved. Exit anyway?"
+1009="Key generation is in progress, your project will not be saved. Exit anyway?"
+1010="Save the current project before exiting?"
+1011="Protection successful!"
+1012="Cannot open the input file"
+1013="Cannot create the output file"
+1014="Invalid input file"
+1015="Unsupported input file"
+1016="Error writing to output file"
+1017="Error allocating memory"
+1018="Error handling resources"
+1019="Error handling exports"
+1020="Error handling imports"
+1021="Error writing/creating protection code"
+1022="Error handling TLS"
+1023="File seems to be already protected/packed"
+1024="Unknown error"
+1028="No output directory specified"
+1029="No keyfile name specified, using default"
+1030="Invalid system lock options"
+1031="Not a valid relative path"
+1032="Gathering project settings"
+1033="Output file "
+1034="Protecting file "
+1035="Creating output file..."
+1036="Opening input file..."
+1037="Checking input file..."
+1038="Handling exports..."
+1039="Handling imports..."
+1040="Handling resources..."
+1041="Handling TLS..."
+1042="Creating/writing protection code..."
+1043="Found encryption mark at RVA 0x"
+1044="ERROR: Unsupported call mark."
+1045="ERROR: Open runtime encryption mark."
+1046="Found runtime encryption mark at RVA 0x"
+1047="Failed to load DLL "
+1048="Please make sure all required DLLs can be loaded by Obsidium."
+1049="ERROR: Nested encryption mark at RVA 0x"
+1050="Compressing section, 0x"
+1051=" bytes"
+1052="Compressed size 0x"
+1053="Hint: Use runtime encryption to increase security."
+1054="WARNING: Input file appears to be packed."
+1055="Please enter a valid version number.\nExamples for valid numbers: 1, 1.0, 2.5"
+1056="Please enter a valid number of days."
+1057="Please enter a valid number of runs."
+1058="Cannot read file."
+1059="File does not contain dialog data."
+1071="The message text you entered is invalid. Please refer to the documentation for details."
+
+; protected files popup menu
+1060="&Add"
+1061="&Edit"
+1062="&Protect"
+1063="&Delete"
+
+1064="Duplicate entry for this file."
+1065="Please select the project's output directory which will be used to store protected/encrypted files."
+1066="Encryption successful"
+1067="Error while encrypting file"
+1068="Do you really want to delete this entry?"
+1069="Time trial information has been removed."
+
+; open project file popup menu
+1070="Open project file..."
+
+
+; --- strings added in version 1.3 ---
+
+[frmEnterShortKey]
+Caption="Enter short license key"
+1000.Caption="License info:"
+1001.Caption="License key:"
+1002.Caption="OK"
+1002.Tooltip="Close this dialog"
+1003.Caption="Cancel"
+1003.Tooltip="Abort and close this dialog"
+
+[frmBlacklistShort]
+Caption="Blacklisted license keys"
+1000.Caption="Add license"
+1000.Tooltip="Add a license key to the blacklist"
+1001.Caption="Remove license"
+1001.Tooltip="Remove the selected license key from the list"
+1002.Caption="Close"
+1002.Tooltip="Close this dialog"
+1003.Caption="Hash\nLicense info"
+1003.Tooltip="List of currently blacklisted license keys"
+
+[frmMain]
+; key management page
+1319.Caption="Internal system\nInternal system (short keys)\nExternal system"
+1319.Tooltip="Select the licensing system used in this project"
+1320.Caption="To learn more about the different licensing systems please refer to the documentation."
+1321.Caption="Internal licensing system (short keys)"
+1322.Caption="Generate encryption keys"
+1322.Tooltip="Generate symmetric and asymmetric encryption keys"
+1323.Caption="short\nmedium\nlong"
+1323.Tooltip="Select the desired keysize"
+1324.Caption="Before generating the encryption keys, select the desired keysize on the left."
+1325.Caption="Blacklisting"
+1326.Caption="Key blacklist"
+1326.Tooltip="View/add/remove blacklisted license keys"
+1327.Caption="Press the 'Key blacklist' button to view the list of currently blacklisted keys and add/remove entries."
+1328.Caption="Key generation"
+1329.Caption="License info:"
+1330.Caption="License key:"
+1331.Caption="Generate key"
+1331.Tooltip="Generate a new license key using current parameters"
+1332.Caption="Verify key"
+1332.Tooltip="Verify the license key using current parameters"
+1333.Caption="System ID:"
+1334.Caption="Generate advanced key"
+1334.Tooltip="Generate advanced license keys (see documentation)"
+1335.Caption="Key expiration date:"
+1336.Tooltip="Enter the license information (e.g. user name) here"
+1337.Tooltip="License key expiration date"
+1338.Tooltip="The license key will be locked to this system ID"
+1339.Caption="Copy key"
+1339.Tooltip="Copy the generated key to the clipboard"
+1440.Caption="Custom value:"
+1441.Tooltip="Enter the key's custom value here (see documentation for details)"
+1442.Tooltip="This computer's system ID (for testing purposes)"
+; toolbuttons
+1009.Tooltip="Open help file"
+; advanced settings
+1261.Caption="Visual Studio 2005 fix"
+1261.Tooltip="Improves compatibility with executables created by Visual Studio 2005"
+1262.Caption="..."
+1262.Tooltip="Display DLLs excluded from runtime tracing"
+1263.Caption="Keep import data"
+1263.Tooltip="Prevents removal of import data, do not enable unless absolutely necessary"
+1264.Caption="Disable API emulation"
+1264.Tooltip="Disables emulation of certain API calls"
+
+[frmTraceBlacklist]
+Caption="DLLs excluded from runtime tracing"
+1000.Caption="Add"
+1000.Tooltip="Add to list of excluded DLLs"
+1001.Caption="Delete"
+1001.Tooltip="Remove selected entry from list of excluded DLLs"
+1002.Caption="OK"
+
+[Strings]
+; frmEnterShortKey strings
+2700="The license key you entered seems to be invalid or system-specific, add anyway?"
+; frmBlacklistShort strings
+2800="&Remove license key"
+2801="&Add license key"
+2802="License key is already blacklisted"
+; main form strings
+2803="You need to enter a system ID"
+2804="The license key is valid"
+2805="Expiration date:"
+2806="The license key is invalid"
+2807="Custom value:"
+2808="The language file you selected is outdated, some parts of the application may not be translated."
+2809="Copy to clipboard"

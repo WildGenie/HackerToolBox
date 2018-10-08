@@ -1,0 +1,89 @@
+SOFTWARE LICENSE AGREEMENT
+
+*** Please read this entire AGREEMENT ***
+
+LICENSE:
+
+* This limited use software license agreement (the
+"AGREEMENT") is a legal agreement between you ("LICENSEE"),
+the end-user, and bome.com for the use of the Restorator
+software product ("SOFTWARE").
+
+* By using this SOFTWARE or storing this program on a
+computer hard drive (or other media), you are agreeing to be
+bound by the terms of this AGREEMENT. If you do not agree to
+the terms of this AGREEMENT, and you have registered this
+SOFTWARE, promptly return the SOFTWARE and the accompanying
+items (including any written materials), along with your
+receipt for a full refund; or delete the SOFTWARE from all
+storage media.
+
+* You may install this program to test and evaluate if it
+suits your needs and you wish to purchase it. There is a
+limit of 30 days for the evaluation time.
+
+* The order fee will license one copy for use by the person
+who purchased the SOFTWARE.
+
+* The full version of this SOFTWARE may not be distributed
+on CD-ROM, disk, or other physical media for a fee without
+the written permission of bome.com.
+
+* The trial version of Restorator and ResPatchers may be
+distributed freely without charge. Anyone distributing
+Restorator for any kind of remuneration must first contact
+the author for authorization. When you want to sell
+ResPatchers, royalties apply. Contact the author for
+details.
+
+* Except for your own personal use, you may not alter this
+SOFTWARE in any way, including changing or removing any
+messages or windows without the written permission of
+bome.com.
+
+* You may not decompile, reverse engineer, disassemble or
+otherwise reduce this SOFTWARE to a human perceivable form.
+You may not modify, rent or resell for profit this SOFTWARE,
+or create derivative works based upon this SOFTWARE. You may
+not publicize or distribute any license code algorithms,
+information, or license codes used by this SOFTWARE without
+permission of bome.com. You may distribute ResPatches
+created with Restorator.
+
+* You may not use any license codes for the SOFTWARE that
+have not been purchased from bome.com or ShareIt!, or
+another authorized representative of bome.com.
+
+* Usage of this program may violate the copyright of the PE
+files that you saved with the SOFTWARE. It is your
+responsibility to respect all legal aspects.
+
+* You don't have the right to release to public any programs
+which were altered using Restorator, if not expressively
+granted by the respective authors. Restorator is strictly
+for your personal use.
+
+COPYRIGHT:
+* Restorator is copyright 1999 - 2005 by bome.com. You
+must treat the SOFTWARE like any other copyrighted material.
+
+-----------------------------------------
+DISCLAIMS AND WARRANTY for the SOFTWARE.
+
+The SOFTWARE and any related documentation is provided "as
+is" without warranty of any kind, either express or implied,
+including, without limitation, the implied warranties or
+merchantability, fitness for a particular purpose, or
+noninfringement. The entire risk arising out of use or
+performance of the SOFTWARE remains with you.
+
+THIS SOFTWARE IS NOT FAULT TOLERANT AND SHOULD NOT BE USED
+IN ANY ENVIRONMENT WHICH REQUIRES THIS.
+
+NO LIABILITY FOR DAMAGES. In no event shall bome.com or its
+suppliers be liable for any damages whatsoever (including,
+without limitation, damages for loss of business profits,
+business interruption, loss of business information, or any
+other pecuniary loss) arising out of the use of or inability
+to use this SOFTWARE, EVEN IF BOME.COM HAS BEEN ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGES.

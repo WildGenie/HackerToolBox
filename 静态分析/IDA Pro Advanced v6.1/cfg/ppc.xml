@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ida xmlns:xi="http://www.w3.org/2003/XInclude"
+     xmlns:xpath="http://www.idapro.com/ns/xpath"
+     xmlns:idc="http://www.idapro.com/ns/idc">
+  <templates>
+    <page X="processor_ppc_p" title="PowerPC Processor Options" subtitle="How would you like the PowerPC processor module to analyze the input file?" visible="false">
+      <checkbox variable="/ida/processors/ppc/@PPC_LISOFF" caption="Convert lis/addi to offsets"/>
+    </page>
+  </templates>
+</ida>

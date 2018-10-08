@@ -1,0 +1,64 @@
+** THIS PROGRAM IS FREE TO USE AND DISTRIBUTE, HOWEVER NO PORTIONS **
+** OF THE SOURCE CODE MAY BE USED WITHOUT PRIOR WRITTEN PERMISSION **
+** FROM VIROGEN (vgen@hotmail.com).				   **
+
+			PhrozenCrew PE Shrinker			
+			 (c)1999 by Virogen 
+			 version 0.70 beta
+			     06/27/99
+	========================================================== 
+	
+ Phrozen Crew PE Shrinker is an windows 9x/NT executable file compressor, allowing compressed executables to run, functionally,
+the same as always, but occupy a significantly less amount of 
+disk space.
+
+ Features:
+   + Code, data, resource, and import directory compression.
+   + Tight compression and fast decompression using Jibz Aplib v0.22.
+   + Restructuring of resource data to improve compression ratios.
+   + Preserves shell icon and version information.
+   + Merging of compressable sections to reduce file alignment
+     induced padding and to improve compression ratios.
+   + Realigns, rebuilds, and trims executable before and after
+     compression.
+   + Removes debug information from executable.
+   + win95/98/NT4/w2k compatible.
+   
+ Usage:
+ PCSHRINK [filename]
+   -filename is optional, specifing the file you wish to compress.
+   
+ Options:
+ 	[ ] Restructure Resource Data
+ 		- Some executables may make direct references
+ 		  to resource data, and therefore resource
+ 		  restructuring will not work. If you have
+ 		  any problems with the compressed executable,
+ 		  turn this option off.
+        [ ] Merge Sections
+        	- There should be no problems with section merging,
+        	  but just in case I included the ability to turn
+        	  this feature off.
+        [ ] Backup File
+        	- The original executable is copied to *.BAK before
+        	  compression.
+        	          	  
+ 			
+ Warning on compressing DLLs:
+  Compression of DLLs has not been truely added yet, however you
+  may be able to compress DLLs as long as you rebase them to a 
+  base which will ensure that no collision will occur with their
+  associated applications. Support for relocations has not yet
+  been added.
+
+ 
+ Updates to this program can be obtained from http://virogen.cjb.net
+ or by emailing Virogen at vgen@hotmail.com.
+ 
+ 
+ 
+ 
+ 
+ 						Latez,
+ 						Virogen
+		 

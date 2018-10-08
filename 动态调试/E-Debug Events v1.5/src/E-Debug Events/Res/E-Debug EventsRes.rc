@@ -1,0 +1,2 @@
+#define MAIN_ICO			1
+MAIN_ICO		ICON      DISCARDABLE "Res/MAIN.ico"

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ida xmlns:xi="http://www.w3.org/2003/XInclude"
+     xmlns:xpath="http://www.idapro.com/ns/xpath"
+     xmlns:idc="http://www.idapro.com/ns/idc">
+  <templates>
+    <page X="processor_sparc_p" title="SPARC Processor Options" subtitle="How would you like the SPARC processor module to analyze the input file?" visible="false">
+      <checkbox variable="/ida/processors/sparc/@SPARC_STRICT"   caption="Strictly adhere to instruction formats">
+        <help>
+          If this option is on, IDA will check that unused fields
+          of instructions are filled by zeroes. If they are not,
+          it will refuse to disassemble the instruction.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/sparc/@SPARC_SIMPLIFY" caption="Simplify instructions">
+        <help>
+          If this option is on, IDA will simplify instructions and replace
+          them by clearer pseudo-instructions.
+          For example,
+
+                  or      %g0, regimm, x
+
+          will be replaced by
+
+                  mov     regimm, x
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/sparc/@SPARC_MACRO"    caption="Use macro instructions">
+        <help>
+          If this option is on, IDA will try to combine several instructions
+          into a macro instruction.
+          For example,
+
+                  sethi   %hi(value), %rd
+                  or      %rd, %lo(value), %rd
+
+          will be replaced by
+
+                  set   value, %rd
+
+          IDA uses the following conversions:
+
+           1.sethi   %hi(value), %rx
+             lduw    [%rx+%lo(value)], %ry        =>     lduw value, %ry
+           2.sethi   %hi(value), %rx
+             stw     %ry, [%rx+%lo(value)]        =>     stw %ry, value
+           3.sethi   %hi(value), %rx
+             or      %rx, %lo(value), %rd         =>     setuw   value, %rd
+           4.sethi   %hi(value), %rx
+             add     %rx, %lo(value), %rd         =>     setuw   value, %rd
+
+          This option requires the previous option to be turned on.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/sparc/@SPARC_V8"       caption="Architecture V8">
+        <help>
+          If this option is on, IDA will disassemble V8 instructions.
+        </help>
+      </checkbox>
+    </page>
+  </templates>
+</ida>

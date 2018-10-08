@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<Protection InputFileName="Project1.exe" Options="0" CheckKernelDebugger="false" CompressionMode="0" VMCodeSectionName=".vmp" VMExecutorCount="1" LicenseDataFileName="" OutputFileName="" WaterMarkName="" RunParameters="">
+		<Folders/>
+		<Procedures>
+			<Procedure MapAddress="VMProtectMarker &quot;Test marker&quot;" IncludedInCompilation="true" Options="1" CompilationType="0"/>
+			<Procedure MapAddress="string &quot;Correct password&quot;" IncludedInCompilation="false" Options="1" CompilationType="0"/>
+			<Procedure MapAddress="string &quot;Incorrect password&quot;" IncludedInCompilation="false" Options="1" CompilationType="0"/>
+		</Procedures>
+	</Protection>
+	<DLLBox/>
+	<Script IncludedInCompilation="true">function MessageBox(HWnd: Integer; Text, Caption: PChar; Flags: Integer): Integer; 
+external 'MessageBoxA@user32.dll stdcall';
+
+procedure OnBeforeCompilation;
+begin 
+  MessageBox(0,'OnBeforeCompilation','MessageBox from user32.dll',MB_OK or MB_ICONINFORMATION);
+end;
+
+procedure OnAfterCompilation;
+begin
+  MessageBox(0,'OnAfterCompilation','MessageBox from user32.dll',MB_OK or MB_ICONINFORMATION);
+end;
+</Script>
+</Document>

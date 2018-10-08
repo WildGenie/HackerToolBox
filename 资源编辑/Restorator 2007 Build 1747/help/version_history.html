@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="description" content="Version History of Restorator - the customization, localization, and translation tool">
+	<meta name="keywords" content="version, history, documentation, help, restorator">
+	<link rel="SHORTCUT ICON" href="../webicon.ico">
+	<title>Version History - Restorator - Bome Software</title>
+	<link rel="STYLESHEET" type="text/css" href="../styles.css">
+
+</head>
+<body bgcolor="#E0E0E0" text="#000000" link="#A92C2F" vlink="#991C1F" alink="#505050" leftmargin=3 topmargin=3>
+<table width="100%" class=master_table border="0" cellspacing="4" cellpadding="1">
+<tr>
+<td width="100%">
+
+
+<!-- ]==========[ Content ]==========[ -->
+<!-- Help Header -->
+<table border="0" cellpadding="0" align="right">
+<tr><td align="right" valign="top">
+<a href="../help/support.html">Help Overview</a><br>
+<a href="../help/help.html">Manual</a><br>
+<a href="../help/tutorials.html">Tutorials</a><br>
+<a href="../help/FAQ.html">FAQ</a><br>
+<a href="../purchase.html">Purchase</a><br>
+<a href="http://www.bome.com/Restorator/">Restorator Web</a>
+</td></tr></table>
+
+<h1>Restorator<br>
+Version History</h1>
+<h2 class=top>Restorator Version History</h2>
+
+<table cellpadding=0 cellspacing=0><tr>
+<td><h3><a name="2007"></a>Restorator 2007</h3></td>
+<td valign=bottom>&nbsp;&nbsp;(January 2007)</td></tr></table>
+New features in Restorator 2007:
+<ul class="nospace">
+<li>Improved command line parameters, specify as many operations at once.<br>
+	See <a href="help.html#_Toc350126141">command line parameters in the reference manual</a> for more info.
+<li>support for 64-bit exe files (amd64, ia64)
+<li>easier String management: display string resources in just one resource
+<li>support for Vista-style icons
+</ul>
+
+Bug fixes and new features in Version 2007 Update 2 (July 2007):
+<ul class="nospace">
+<li>new command line parameters for version resource editing:<br>
+  See <a href="help.html#_Toc350126141">the reference manual</a> for more info.
+<li>new command line parameter to add/replace manifest from command line with parameter <code>-setManifestFromVersion</code>
+<li>option to show absolute offset (file offset) in hex viewer
+<li>bugfix: access violation when deleting string resource
+<li>bugfix: copy/paste/drag'n'drop of cursor resources caused &quot;corrupt resource&quot;
+<li>bugfix: when running as user with limited rights, the exe association could be accidentally overwritten.
+	See <a href="http://www.bome.com/forums/http://www.bome.com/forums/viewtopic.php?p=3599">the forum thread</a> for more info.
+</ul>
+
+Bug fixes in Version 2007 Update 1 (February 2007):
+<ul class="nospace">
+<li>bugfix: Find Resources: when searching for a specific file extension, nothing is found
+<li>bugfix: Find Resources: when searching in .rc files, error messages are displayed
+<li>bugfix: in dialog resources, static controls with numeric text will not be parsed correctly
+<li>bugfix: remember setting for using UPX packer
+<li>bugfix: dialog resources without final padding are marked corrupt
+<li>improve transparent display of PNG images
+<li>bugfix: fix display of color depth for PNG images
+<li>bugfix: some VIsta icons are not handled correctly
+<li>bugfix: do not ask for folder if dragging or dropping resources
+<li>bugfix: when adding bitmap resources from the command line, the type may be interpreted wrongly
+</ul>
+
+Bug fixes in Version 2007:
+<ul class="nospace">
+<li>display icons and images in dialogs
+<li>create default resources for new/added empty items (Version, Menu, Dialog, String)
+<li>version editor: buttons to add a new version key and to delete keys
+<li>allow to drag'n'drop multiple files (not only one) for assigning them
+<li>added option to settings: select codepage for Unicode-to-8bit conversion
+<li>added option to settings: have Restorator window always on top
+<li>added option to settings: save Delphi/C++ Builder forms in old ANSI format
+  if Delphi3 or earlier, force temporary setting of compatibility mode
+<li>added option to settings: to ask for folder for Extract/Assign All Resources
+<li>when extracting/assigning resources with an "Open File" dialog, the
+  last used folder is remembered
+<li>when importing strings, do not overwrite existing strings in the same block.
+<li>in RES files, new resource items are inserted in alphabetical order
+<li>fixed handling of \0x00 characters in strings
+<li>allow dialog RC resources with omitted text in control statements
+<li>fixed RC parsing of empty STRINGTABLE and DIALOG statements
+<li>fixed PE optional header handling with fewer than 16 data directories
+<li>fixed IAE when deleting empty numbered resource
+<li>fixed display of OS/2-type bitmaps
+<li>fixed writing corrupt exe file (dvstreamer2.exe)
+<li>fixed PE section header if rawdata includes padding after the resource section
+</ul><br>
+
+<table cellpadding=0 cellspacing=0><tr>
+<td><h3><a name="2006U1"></a>Restorator 2006 Update 1</h3></td>
+<td valign=bottom>&nbsp;&nbsp;(March 1st, 2006)</td></tr></table>
+Bug fixes:
+<ul class="nospace">
+<li>fix italics flag in DialogEx resources in RC mode
+</ul><br>
+
+<table cellpadding=0 cellspacing=0><tr>
+<td><h3><a name="2006"></a>Restorator 2006</h3></td>
+<td valign=bottom>&nbsp;&nbsp;(February 14th, 2006)</td></tr></table>
+New features in Restorator 2006:
+<ul class="nospace">
+<li>extended RC file support: open RC files in left resource list. <br>
+	See <a href="help.html#RCFile">RC Files in the reference manual</a> for more info.
+<li>opening multiple files with one OpenFileDialog
+</ul>
+Bug fixes:
+<ul class="nospace">
+<li>fix MBCS support
+<li>allow icons with > 255 pixels
+<li>allow double quotes in RC files as an escaped quote sign
+<li>some other minor fixes
+</ul><br>
+
+<table cellpadding=0 cellspacing=0><tr>
+<td><h3><a name="2005U1"></a>Restorator 2005 Update 1</h3></td>
+<td valign=bottom>&nbsp;&nbsp;(July 30th, 2005)</td></tr></table>
+Minor new features in Restorator 2005 Update 1:
+<ul class="nospace">
+<li>option to not show the splash screen
+<li>added -infile and -outfile parameters to ResPatcher
+</ul>
+
+Bug fixes:
+<ul class="nospace">
+<li>display bitmaps in .dll/.exe dialogs
+<li>fix persistence of maximized window state
+<li>prevent double SEPARATOR entry in MENUITEM declaration
+<li>remove erronous display of SaveAs dialog in batch mode with -assignall parameter
+<li>always run a batch process with -batchClose in an own instance
+</ul><br>
+
+<table cellpadding=0 cellspacing=0><tr>
+<td><h3><a name="2005"></a>New Features and Bug Fixes in Restorator 2005</h3></td>
+<td valign=bottom>&nbsp;&nbsp;(May 3rd, 2005)</td></tr></table>
+Main new functions:
+<ul class="nospace">
+<li><a href="tutorials/exp/version_edit.png">version editor</a>
+<li><a href="images/part_view_rc.png">new internal text editor</a>:
+ <ul class=nospace>
+  <li>shows line numbers
+  <li>undo/redo
+ </ul>
+<li>support for UPX compressed files
+<li>new look
+<li>support for new resource types:
+ <ul class=nospace>
+ <li>PNG images
+ <li>GIF images
+ <li>XML, HTML and Manifest resources
+ <li>Delphi PackageInfo
+ </ul>
+<li><a href="images/xp_manifest.png">new tool to add an XP manifest</a>
+<li><a href="help.html#_Toc350126140">Many new keyboard shortcuts</a>
+ </ul>
+ <br>
+
+Minor new features in Restorator 2005:
+<ul class="nospace">
+<li>set font in resource viewer
+<li>reduce explicit unicode (like #234) in Delphi RCData (option <i>Convert Delphi Unicode string</i>)
+<li>support for .res files in Search In Files
+<li>allow overwriting read-only files
+<li>allow to paste arbitrary files on user-defined resources
+<li>when adding resources, the tree will be opened to show the new resource
+<li>when a delphi resource cannot be saved, the cursor is positioned
+  at the error line
+<li>Resource Viewer: added edit menu for copy/paste/etc.
+<li>new look of settings dialog
+<li>new option: allow multiple instances of Restorator
+<li>new option: choose from 3 different internal text editors
+<li>remember position/size of menu and dialog preview window
+<li>updated dialog editor to add XP styles
+<li>new icon and cursor viewer: show all icons/cursors at once
+<li>add link to msdn in rc help texts
+<li>remember cursor position in edit fields
+<li>do not reset resource tree when saving
+<li>save data that is appended to exe files (e.g. for Flash files)
+<li>better support for usage with keyboard (many more keyboard shortcuts)
+  <li>back/forward keys/mouse buttons in file browser
+  <li>added support for the context menu key
+<li>option to not mark modified resources (the small arrows) (not available in trial version)
+<li>enable editing of the code page
+<li>allow editing of the version resource also in trial version
+</ul><br>
+
+
+Bug fixes in Restorator 2005:
+<ul class="nospace">
+<li>bug fix: problem when removing caption of edit field in dialog editor
+<li>bug fix: non-quoted CLASS names
+<li>bug fix: WAVE and AIFF playback
+<li>bug fix: store width of resource tree
+<li>bug fix: orphaned res viewer when cancelling Force File at Restart when closing Restorator with opened files
+<li>bug fix: infinite "Do you want to Commit changes..." question when collapsing the Resource Tree and pressing Cancel
+<li>bug fix: status bar displays information about last opened resource even after closing file.
+<li>bug fix: Access violation in Res File|Save each resource
+<li>bug fix: correct state of "Fixed System Font" and "Shell Font" in dialog editor
+<li>bug fix: error message when saving exe files with a zero-sized pe section
+<li>bug fix: Access violation on some computers when trial version is over
+<li>bug fix: fixed parsing of corrupt .res files
+<li>bug fix: parsing of rc menu files with an additional attribute for the POP statement
+<li>bug fix: blank res viewer after deleting an item from the res viewer
+<li>bug fix: handle PE sections with uninitialized data correctly
+<li>bug fix: POPUP ID in MENUEX resources does not disappear anymore
+<li>bug fix: tool tips are not shown, even if enabled in the settings
+<li>bug fix: enforce that the name of String resources must be numeric
+<li>bug fix: overwriting w/out backup does not work
+<li>bug fix: ability to grab resources with backslash in name (like msinfo32.dll)
+<li>bug fix: accelerator editing (if ANSI accelerator <32, was not displayed correctly)
+</ul><br>
+
+<h2><a name="2004"></a>New Features and Bug Fixes in Restorator 2004</h2>
+
+ Main new functions:
+ <ul class="nospace">
+ <li>new improved user interface
+ <li>graphical dialog editor
+ <li>add/delete/rename resources
+ <li>more compatible with Delphi resources
+ <li>creates more compliant files
+ <li>reference manual
+ <li>batch parameters for Restorator and ResPatchers
+ <li>highlighting of searched text
+ </ul>
+ <br>
+ Bug fixes in Restorator 2004:
+ <ul class="nospace">
+ <li>cleaner extension type management
+ <li>allow editing of dcr files
+ <li>saving res or dcr files doesn't change the name by default
+ <li>rename-in-place of items in res/dcr files (F2)
+ <li>"save as" is now always allowed for res _and_ dcr files
+ <li>text recognition for RCData and html types
+ <li>save all as a certain type
+ <li>Easy adding of a file to a res file: just drop it on it.
+  (file type is recognized automatically). This works the same for assigning now.
+ <li>When extracting Delphi forms, icons are now better detected
+ <li>When extracting Delphi forms, included files are referenced with relative path
+ <li>Property dialog for files: added "Target Platform" info
+ <li>icon overlay for newly created resources
+ <li>added parameter -assignall and -batchclose
+ <li>fixed bug when sorting is handled differently in certain locales
+ <li>Fixed editing big RCData resources (Message "Text exceeds memo capacity")
+ <li>fixed GPF when loading thousands of files
+ <li>"save only changed resources to res file" now also includes resources
+  that have been changed in previous sessions.
+ <li>fixed bug when \001 appeared in a string resource
+ <li>fixed bug for non-separator empty menu items
+ <li>fixed abort of Find In Resources Dialog with "Corrupt Resource" message
+  for encrypted/compressed exe files.
+ <li>improved internal architecture of ResPatchers
+ <li>New mode for saving resource folders: a dialog pops up and the user can
+  make detailed decisions how the output file(s) will be
+ <li>fixed bug in Dialog rc editing
+ <li>changed GUI to a 2-window layout
+ <li>Resource Viewer cannot be made a toolwindow anymore
+ <li>added "default view mode" button
+ <li>file view mode is now one revolving button
+ <li>"New->res" file and "New->.dcr" menu and tool button
+ <li>changed name to Restorator 2004, version to 3.00
+ <li>remove proverbs in splash screen
+ <li>moved "Configure Tools" entry as last entry in menu
+ <li>type description includes "raw data" if no parsed/understood format
+ <li>save width of list columns in resource viewer for exe/folder display
+ <li>add GIF image file format to Find dialog
+ <li>GIF display of dimensions and color depth
+ <li>Property Dialog remembers position
+ <li>improved UNICODE searching on Windows NT/2000/XP (non case-sensitive)
+ <li>activated case-sensitive searching
+ <li>highlight/select the found text in text or hex display
+ <li>added "Language..." menu item to change the language of a resource or resource tree
+ <li>added FAQ menu item
+ <li>possibility to cancel changing to another resource when edits were made in edit (ab) mode
+ <li>in edit (ab) mode: F8 does not let the cursor jump to the beginning
+ <li>if an error occurs with F8 in edit (ab) mode, the cursor jumps to the error line
+ <li>Ctrl-A selects all
+ <li>moved bookmark menu in Browser menu
+ <li>moved Extract/Assign menus in context menu
+ <li>Added "Save" function
+ <li>remodeled help menu
+ <li>modified meaning of "ab" button: it is independent of the view mode buttons now
+ <li>allow overwriting version resource (still disabled in demo version)
+ <li>fixed bug: in dialogs, edit text shows "y" as text
+ <li>improved compatibility of dialog display. Now all dialogs are displayed.
+ <li>fixed problem where the Grab Resources tool would hang
+ <li>nicer display of progress in Find Resources and Grab Resources tools
+ <li>Dialog Editor
+ </ul>
+
+
+<!-- ]==========[ Footer ]==========[ -->
+   <div align="center">
+    <hr width="400" align="center" size="4">
+    <font class="copyright">Copyright 1997-2007 by Bome Software</font>
+   </div>
+  </td></tr></table>
+ </body>
+</html>

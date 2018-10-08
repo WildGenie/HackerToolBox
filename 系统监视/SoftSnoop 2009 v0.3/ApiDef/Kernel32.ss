@@ -1,0 +1,14 @@
+-CreateFileA
+4
+1
+1
+1
+1
+1
+1
+-ReadFileA
+1
+1
+1
+5
+1

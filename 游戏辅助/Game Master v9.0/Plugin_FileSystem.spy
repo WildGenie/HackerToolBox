@@ -1,0 +1,12 @@
+File System Access
+NT
+###########################################################
+kernel32.dll,CreateFileA
+kernel32.dll,CreateFileW
+kernel32.dll,LockFile
+kernel32.dll,LockFileEx
+kernel32.dll,ReadFile
+kernel32.dll,ReadFileEx
+kernel32.dll,WriteFile
+kernel32.dll,WriteFileEx
+#kernel32.dll,CloseHandle

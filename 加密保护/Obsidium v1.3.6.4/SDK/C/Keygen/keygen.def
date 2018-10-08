@@ -1,0 +1,10 @@
+LIBRARY     KEYGEN.DLL
+
+EXPORTS
+GenerateKeyfile@4=GenerateKeyfile       @1
+VerifyKeyfile@4=VerifyKeyfile           @2
+ConvertToString@12=ConvertToString      @3
+ConvertToBin@8=ConvertToBin             @4
+GenerateShortKey@4=GenerateShortKey     @7
+VerifyShortKey@4=VerifyShortKey         @8
+GetLicenseHash@12=GetLicenseHash        @9

@@ -1,0 +1,145 @@
+//Czech translation by Geralt, 2003
+	//Main Form
+ //Top frame
+MainForm.lblCompressor.Caption=Komprimátor Win32 EXE, DLL
+MainForm.lblInsCap.Caption=Ver. UPX:
+MainForm.lblOutCap.Caption=Ver. UPX Shell:
+ //Open File tab
+MainForm.tbsOpen.Caption=Soubor
+MainForm.btnOpen.Caption=Otevøít
+MainForm.lblHistory.Caption=Historie
+MainForm.pnlFileInfo.Caption=Informace o souboru
+MainForm.lblFNameCap.Caption=Název souboru
+MainForm.lblFName.Caption=N/D
+MainForm.lblFSizeCap.Caption=Pùvodní velikost souboru
+MainForm.lblFSize.Caption=N/D
+MainForm.lblCSizeCap.Caption=Komprimovaná velikost souboru
+MainForm.lblCSize.Caption=N/D
+MainForm.lblRatioCap.Caption=Pomìr komprese
+MainForm.lblRatio.Caption=N/D
+MainForm.mnuHistory.Caption=Vymazat historii
+ //Compress tab
+MainForm.tbsCompress.Caption=Komprimace
+MainForm.btnGo.Caption=Spustit!
+MainForm.chkDecomp.Caption=Dekomprimovat
+MainForm.btnRun.Caption=Test
+MainForm.lblProgress.Caption=Prùbìh komprimace
+MainForm.lblProgressSize.Caption=Velikost komprimovaného souboru
+ //Options tab
+MainForm.tbsOptions.Caption=Možnosti
+MainForm.chkBackup.Caption=Vytvoøit záložní kopii
+MainForm.chkAutoCompress.Caption=Po naètení automaticky komprimovat
+MainForm.chkExitDone.Caption=Zavøít program po dokonèení
+MainForm.chkTest.Caption=Test souboru po komrimaci
+MainForm.btnAdvanced.Caption=Pokroèilé nastavení
+MainForm.lblCompressLevel.Caption=Úroveò komprese:
+MainForm.lblFaster.Caption=Nejrychlejší
+MainForm.lblBetter.Caption=Nejlepší
+MainForm.lblLanguage.Caption=Zvolte jazyk:
+MainForm.btnMultiPck.Caption=Více souborù
+ //About tab
+MainForm.tbsAbout.Caption=O programu
+MainForm.lblReleaseCap.Caption=Release:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblCoDomain.Caption=Coders Domain
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblAnkanMail.Caption=©OnT®oL
+MainForm.lblBlaineMail.Caption=Blaine
+ //Help tab
+MainForm.tbsHelp.Caption=Nápovìda
+MainForm.btnHelp.Caption=Nápovìda
+MainForm.btnUpdate.Caption=Aktualizovat moduly
+	//Setup Form
+SetupForm.chkScramble.Caption=Použít mód Scramble
+SetupForm.btnScramble.Caption=Scramble
+SetupForm.chkIntegrate.Caption=Integrovat do kontextového menu
+SetupForm.lblAdvacedOpts.Caption=Další možnosti UPX:
+SetupForm.chkResources.Caption=Komprimovat zdroje
+SetupForm.chkExports.Caption=Komprimovat celkovì
+SetupForm.chkRelocs.Caption=Nezahrnovat pøemístìní
+SetupForm.chkForce.Caption=Urychlení komprimace
+SetupForm.lblPriority.Caption=Priorita komprimátoru:
+SetupForm.cmbPriority.0=ŽÁDNÁ
+SetupForm.cmbPriority.1=NORMÁLNÍ (výchozí)
+SetupForm.cmbPriority.2=VYSOKÁ
+SetupForm.cmbPriority.3=SKUTEÈNÁ
+SetupForm.lblIcons.Caption=Ikony:
+SetupForm.cmbIcons.0=Všechny, ale 1ní složku
+SetupForm.cmbIcons.1=Všechny, ale 1ní ikonu
+SetupForm.cmbIcons.2=Nekomprimovat
+SetupForm.lblCommands.Caption=Další pøíkazy UPX:
+SetupForm.chkCommands.Caption=Uložit pøíkazy
+SetupForm.btnOk.Caption=Ok
+SetupForm.chkCompression.Caption=Pøídavná komprese
+SetupForm.btnCommands.Caption=Pøíkazy
+	//MultiPack Form
+MultiForm.grpSearch.Caption=Cesta:
+MultiForm.lblDir.Caption=N/D
+MultiForm.btnBrowse.Caption=&Procházet
+MultiForm.chkRecurse.Caption=P&rohledat podadresáøe
+MultiForm.chkAll.Caption=&Vše
+MultiForm.lblCurrent.Caption=Aktuální soubor:
+MultiForm.lblOverall.Caption=Celkový prùbìh:
+MultiForm.btnScan.Caption=Pro&hledat
+MultiForm.btnPack.Caption=Kom&primovat
+MultiForm.btnExit.Caption=&Konec
+	//TreeView Form
+TreeViewForm.lblSelect.Caption=Zvolte adresáø pro komprimaci:
+TreeViewForm.btnOK.Caption=OK
+TreeViewForm.btnCancel.Caption=Storno
+	//Update Form
+UpdateForm.grpProgress.Caption=Stav:
+UpdateForm.grpUpdateInfo.Caption=Informace o aktualizaci:
+UpdateForm.lblReleaseCap.Caption=Verze:
+UpdateForm.lblRelease.Caption=N/D
+UpdateForm.lblBuildCap.Caption=Sestavení:
+UpdateForm.lblBuild.Caption=N/D
+UpdateForm.lblDateCap.Caption=Datum:
+UpdateForm.lblDate.Caption=N/D
+UpdateForm.lblSizeCap.Caption=Velikost:
+UpdateForm.lblSize.Caption=N/D
+UpdateForm.lblNews.Caption=Novinky:
+UpdateForm.grpDownload.Caption=Download site:
+UpdateForm.lblDownload.Caption=N/D
+	//Messages
+msg[001]=Nelze zpracovat soubor. Pravdìpodobnì je používán
+msg[002]=Soubore je urèen pouze pro ètení. Pro pokraèování je nutné zmìnit tento atribut. Pøejete si pokraèovat?
+msg[003]=Nejlepší
+msg[004]=Tento soubor nebude pravdìpodobnì komprimován. Pøejet si spustit mód Scramble?
+msg[005]= (v 
+msg[006]= sekund)
+msg[007]=dekomprimaci
+msg[008]=komprimaci
+msg[009]=Nebylo vybráno nic ke 
+msg[010]=N/D
+msg[011]=Nebyl vybrán žádný adresáø
+msg[012]=...aktualizace zrušena :-(
+msg[013]=Nebylo možné se pøipojit k aktualizaènímu serveru!
+msg[014]=Nalezena aktualizovaná vere produktu!
+msg[015]=Analyzuji aktualizaèní soubor...
+msg[016]=Získávám informace o aktualizaci...
+msg[017]=Soubor byl úspìšnì komprimován
+msg[018]=Soubor byl úspìšnì dekomprimován
+msg[019]=Soubor byl komprimován s následujícím varováním
+msg[020]=Soubor byl dekomprimován s následujícím varováním
+msg[021]=Vyskytly se chyby. Soubor nebyl komprimován
+msg[022]=Vyskytly se chyby. Seobur nebyl dekomprimován
+msg[023]= & testováno
+msg[024]= & testováno w/varování
+msg[025]= & test zrušen
+msg[026]=UPX nahlásil následující chybu: 
+msg[027]= & použit mód scramble
+msg[028]=...aktualizací nalezeno
+msg[029]=...nebyly nalezeny žádné aktualizace
+msg[030]=OK
+msg[031]=Zrušeno
+msg[032]=Pøeskoèeno
+msg[033]=Název souboru
+msg[034]=Složka
+msg[035]=Velikost
+msg[036]=Komprimováno
+msg[037]=Výsledky

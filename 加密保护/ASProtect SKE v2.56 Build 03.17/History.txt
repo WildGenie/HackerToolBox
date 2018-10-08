@@ -1,0 +1,411 @@
+
+  History
+  ~~~~~~~
+
+  [ Legend                     ]
+  [ + Added feature            ]
+  [ * Improved/changed feature ]
+  [ - Bug fixed                ]
+
+
+    ASProtect 2.56 SKE Beta
+    =========================================
+  - Fixed loading problem of ASR-enabled EXE files under Vista and above
+  - Fixed crash during unloading of certain protected DLLs
+  - Corrected Keygen IDE mode selection behavior
+  - Corrected ASProtect IDE main window behavior under XP and above
+
+
+    ASProtect 2.52 SKE Beta
+    =========================================
+  - Fixed Keygen IDE hang under Windows Vista and above
+  - Fixed incorrect keys generation/validation by Keygen IDE
+
+
+    ASProtect 2.51 SKE Beta
+    =========================================
+  * Improved Windows 7 compatibility
+  * Re-versioned from 2.6 Alpha to 2.51 Beta
+
+
+    ASProtect 2.6 SKE Alpha
+    =========================================
+  + Added configurable external Activation GUI module
+  + New inter-mode compatible HardwareID format
+  * Increased maximum Activation Keys lifetime
+
+
+    ASProtect 2.5 SKE Release
+    =========================================
+  * Changed from Beta to Release
+  * Improved command line parameters handling
+  * Show error message if project file can not be written
+  * Improved map-files parsing
+  * Improved compatibility with certain Delphi toolkits (EurekaLog, etc.)
+  * If protection fails, no (unprotected) output file will be created
+  * Various Help file corrections
+  - Fixed incorrect mode name on Password dialog
+  - Fixed application termination instead of displaying Trial Reminder if no
+    trial counters have been used
+  - Fixed aspr_ide crash under Delphi IDE
+
+
+    ASProtect 2.4 SKE build 02.26 Beta
+    =========================================
+  - Fixed random crash during processing of the aspr_crypt_begin / aspr_crypt_end blocks
+  - Corrected local registration information removal under Vista
+
+
+    ASProtect 2.4 SKE build 09.11 Beta
+    =========================================
+  + Support for Vindows Vista operating system
+  + Exended HardwareID support
+  * Improved USERBUFFER protection
+  * Improved Imports protection
+  - Fixed security problem of the Registration Schema
+
+
+    ASProtect 2.3 SKE build 06.21 Beta
+    =========================================
+  + Added new "Type Ia" signature size
+  * Improved ASProtect envelope protection and speed performance
+  - Fixed the bug with keys file searching. Keys file for dynamic libraries will be searching in the DLL folder (not EXE folder as previously).
+  - Fixed the problem with Keygen_Ide request strings generation (bug with expired days number calculation)
+  - Fixed minor problem with export table processing
+  - Fixed the bug with modes deletion
+  - Fixed the problem with backup files (*.bak) usage
+  - Fixed small bug with envelope checks
+
+
+    ASProtect 2.3 SKE build 05.14 Beta
+    =========================================
+  - Minor import table processing fixes
+  - Fixed the bug with new "GetHardwareIdEx" API
+  - Fixed one more minor problem with large export tables
+  - Fixed several problems with envelope checks
+
+  * Changed "Don`t use built-in dialogs" option behaviour -
+    If there are no valid registration keys found on application startup,
+    ASProtect will display this dialog and ask for registration key and name.
+    Once valid key/name pair is entered, ASProtect will proceed with
+    application execution. Please, recheck this option usage in your project.
+
+  + Added built-in messages properties editing possibility. Now it is possible
+    to edit all the internal messages both for new registration key dialog and
+    for "no valid modes found" situation.
+
+
+    ASProtect 2.3 SKE build 04.26 Beta
+    =========================================
+  - Fixed small problem with old HardwareIDs support
+  - Fixed the problem with empty mode names
+  + Added new option "Support `GetHardwareID` API"
+
+    If you don`t want to support registration keys with "old" HardwareIDs
+    generated earlier for some selected mode, just turn this option off.
+    It is Turned On by default.
+
+
+    ASProtect 2.3 SKE build 04.25 Beta
+    =========================================
+
+  - Fixed small problem with VB protected applications
+  - Fixed the problem with export section processing on some applications
+  * Modes Manager was updated and additionaly protected to prevent its patching
+  * Visual Studio 2005 signatures were updated
+  + Added additional envelope and virtual machines protection against ASProtect Stripper
+  + Added additional checksum protection against protected applications patching and unpacking
+  + Added the possibility and debugging support for using aspr_ide.dll library directly inside Visual Basic IDE environment, without necessity to compile native or protected code
+  + Added new ASProtect API - "RemoveKey". New API gives one a possibility to completely remove selected registration key both from the system and ASProtect internal Modes Manager.
+
+    function RemoveKey ( ModeID : Byte ): Boolean; stdcall;
+
+    Please, refer to updated header files for API format and parameters.
+
+  + Added new ASProtect API - "GetHardwareIDEx". New API gives more options to lock protected application depending on hardware/software, selected for a specific mode.
+    GetHardwareIDEx - retrieves the unique computer identifier, depending on settings of selected mode (currently working or any other valid modes). HardwareID is used to generate keys, limited to particular computer.
+
+    function GetHardwareIDEx ( ModeID : Byte ) : PChar; stdcall;
+
+    Please, refer to updated header files for API format and parameters.
+
+
+    ASProtect 2.3 SKE build 03.19 Beta
+    =========================================
+
+  + Added support for Visual Studio 2005 compiled apps
+  - Fixed small problem with sections encryption
+  - Fixed the problem with section packing for DLLs
+  - Fixed minor problem with Import Table processing (error 115)
+  - Fixed the problem with "/ZI" option for VS2005 apps
+  - Fixed floating point error for debug compiled VS2005 apps
+
+    ASProtect 2.3 SKE build 03.05 Beta
+    =========================================
+
+  - Fixed the problem with code section packing/encoding
+  - Fixed one more problem with Delphi 2006 applications
+  - Fixed minor problem with APIs incorrect parameters checking
+  - Fixed the problems with shared sections states
+  - Fixed small bug with BlackList (symbol "0" inside the string)
+
+    ASProtect 2.3 SKE build 01.14 Beta
+    =========================================
+
+  - Fixed some minor bugs
+  - Fixed the problem with BlackList (I-type keys only)
+  - Fixed the problem with ATI Tray Tools
+  - Fixed bug with modes index
+  - Fixed problem with shared constants during modes copy/paste operations
+  + Added support for Delphi2006 and C++Builder2006 applications
+
+    ASProtect 2.3 SKE build 12.30 Beta
+    =========================================
+
+  - Fixed the bug with CheckKeyAndDecrypt API for VB6 applications
+  - Fixed the problem with BlackList items checksums
+  - Fixed the problem with sections enumeration in asprotect.h
+  - Fixed bug in keygen with identical registration keys generation
+  - Fixed ASProtect keys file locking (read/write access while keys checking)
+  - Fixed small problem with PolyBuffer (reproduced with ASProtect PolyBuffer example)
+  - Fixed bug with DEP Windows protection
+  + Added libkeygen.so linux shared object usage description in help file (keys generation automation)
+  + Added warning notice in case encryption constants are not equal for different share modes
+  + Added additional trial protection against SharewareCheater tool.
+  + Added protection against TrashReg tool.
+  * Added additional protection against ASProtect ebvelope removing.
+  * Activation link for offline registration modified to: http://www.asprotect.net/cgi-bin/activation.asp
+
+    ASProtect 2.2 SKE build 12.30 Release
+    =========================================
+
+  - Fixed bug with Delphi2006 applications protection.
+  - Fixed bug with CRC marks processing.
+  - Fixed error 162.
+  * Online activation wizard was changed.
+
+    ASProtect 2.2 SKE build 11.04 Release
+    =====================================
+
+  + Added GCC examples
+  + Added PowerBasic examples
+  + Help file was rewritten.
+  + Online Help was added: http://www.aspack.com/help/asprotect_ske
+  + ASProtect saves the last selected mode on the Activation Keys tab on program restart
+  + Trial routine was updated. "GetTrialDays" API now works even if application running more than 1 day.
+  + Added new project parameter - "cbDisableSubmitBtn". If this parameter 1 - submit button on the exception dialog will be disabled. 
+    Default value is 0 (submit button enabled).
+  + Added ClockBack support for time limited registration keys.
+  + New log message will be displayed during protection routine, in case no default mode was found:
+    "Warning! Default mode is not found..."
+  + New log message will be displayed during protection routine, in case no registered sections were choosen for any valid keys-mode 
+    with reg. sections usage:
+    "Warning! No registered sections were choosen for "Unlock Encrypted Sections" option..."
+  + Some command line parameters were added:
+    -log - duplicate log information to external log file
+    -infile=path - alternative file to be protected by ASProtect
+    -outfile=path - alternative output file
+
+    All parameters are working only together with "-process" parameter (console protection).
+
+    Example:
+    asprotect.exe -process -log -infile=infile.exe protect1.aspr2 -outfile=out.exe
+
+
+  * "CheckKeyAndDecrypt" API now returns FALSE, if registration key is valid, but key is BlackListed, Expred or HardwareID mismatch.
+  * "CheckKey" API meaning was changed. Now it checks whether key is valid or not. If it is NOT valid - we should check TModeStatus 
+    structure flags. TModeStatus structure filling always now, no matter what was the API result (true or false).
+  * Removed #define IMPORT __declspec(dllimport) (aspr_api.h) line in order to avoid recompilation of modules
+  * "IsModeActivated" flag added. It is TRUE, if three next flags are FALSE: IsWrongHardwareID, IsKeyExpired, IsBlackListedKey.
+  * "IsKeyPresent" flag now means a little bit different behaviour now. It is TRUE, if any key (no matter valid or not) was installed 
+    for the mode via CheckKey or CheckKeyAndDecrypt API (now or befor).
+  * "GetRegistrationInformation" API header was changed. New parameter added - "ModeID : Byte".
+  * New first parameter "ModeID : Byte" was added to the follows APIs:
+    GetKeyDate
+    GetKeyExpirationDate
+    GetTrialDays
+    GetTrialExecs
+    GetExpirationDate
+  * Default Trial messages will now be established during new modes creation.
+  * IsModeActivated flag will now be turned on for any non key-mode, in case it is not expired and enabled.
+  * Bug report send button disabled.
+
+  - Fixed the bug with several NOPs (PoluBuffer problem)
+  - Error in ASProtect IDE (Protection Error 171, cDataReadError) fixed
+  - Fixed error 251 - (ASProtect own import run-time installing)
+  - Fixed error 224
+  - Fixed bug with different time zones (current date = key creation date - 1)
+  - Fixed bug with project files without full path in command line.
+  - Fixed bug with delay and reminder for registered modes.
+  - Fixed bug in CGI modules. It ignores '+' (means ' ') in user name. 
+  - Fixed error 174 message - text added: "(blacklisted key)".
+  - Fixed bug with registered sections protection.
+    For example, if protected application has any registered sections, but there are no modes for using these sections, all such sections 
+    will be encrypted, but never decrypted at the run-time. The right behaviour is to not touch any sections that does not have corresponding 
+    modes for using it.
+  - Fixed: ASProtect.exe doesn't clear blacklist info after new project is loaded.
+  - Fixed bug with Mode Name limits overflow
+  - Fixed bug with equal source and destination file names (with "Create backup copy" option usage)
+  - Fixed bug with Trial messages limits overflow
+  - Fixed the problem with IsModeExpired flag. Expired Modes will not be activated anymore. Registered sections will not be decrypted for expired modes.
+    IsModeActivated flag meaning was changed:
+    If TRUE, selected mode is activated. Thus, IsKeyExpired IsBlackListedKey, IsWrongHarwareID and IsModeExpired flags must be FALSE.
+  - Fixed bug with empty trial messages.
+  - Fixed bug in PowerBuilder envelope checks
+  - Fixed bug with blacklisted registration keys.
+  - Fixed bug with CheckKey API
+  - Fixed bug and memory leak in GetRegistrationKeys API 
+  - Fixed bug in PolyBuffer ("ADC" instruction emulation).
+  - Fixed bugs with KeygenIDE tool (added support for HardwareID and KeyExpiration fields)
+
+    ASProtect 2.2 SKE build 06.05 Beta
+    ==================================
+
+  - Fixed the bug with VB applications during CheckKeyAndDecrypt API calling.
+  - Fixed the problem with external key processing ("Cant process manager data" message)
+
+  * Improved ASProtect trial protection algorithm against trial resetting tools.
+  * Fixed some minors bugs
+  * ASProtect protection level is improved
+  * Fixed the problem with VB applications and modes processing
+  * Fixed the problem with Import Table processing for big applications (more than 20Mb)
+  * Fixed the problem with shared access to the keys storage file (aspr_keys.ini)
+  * Fixed the problem with DLL memory leaks
+  * Fixed the problem with error 158
+  * Option name "Dont show messages when mode is expired" changed to "Don`t use built-in dialogs"
+  * "Modes oversight" option was removed
+    If you dont want ASProtect to show internal messages when mode is expired,
+    or in case of BlackListed keys entered by the user and want to handle this
+    situations by yourself for specific mode, you should turn "Don`t use built-in dialogs" option on (Modes tab).
+  * ASProtect now saves only one registration key for each mode
+  * SaveKey API was removed
+  * ASProtect SDK header files (API functions prototypes and TModeStatus structure)
+    were changed
+  + New option added to the IDE project selection window: "Dont show ide dialog"
+  + Added automatic encryption sections processing by polymorphic markers
+  + ASProtect SKE envelope layer size is increased to 200Kb due to new protection technics
+  + GetModeInformation API is changed:
+
+    CODE function  GetModeInformation(     ModeID     : Byte;
+                                       var ModeName   : PChar;
+                                       var ModeStatus : TModeStatus ): Boolean; stdcall;
+
+    Now its possible to get information for any mode installed by using new parameter 
+    "ModeID" (Mode identifier)
+
+  + Added new TModeStatus state - "ModeID"
+  + Added new simple VB example with several modes usage
+
+  ASProtect 2.11 SKE build 03.13 Release
+  ======================================
+  - Fixed the problem with negative EncryptionConst value
+  - Fixed the error 171
+  - Fixed the problem with aspr_ide.dll and some C++Bulder applications
+
+  ASProtect 2.11 SKE build 03.06 Beta
+  ===================================
+  - Fixed the problem with negative KeyGen EncryptionConst value
+  - Fixed the small bug in Import Table processing
+  - Fixed the problem with GetTrialDays false result
+  - Fixed corrupted keygen.dll and keygen.exe CGI
+  - Fixed the bug with KeyGen "Type III" keys generation
+
+  * Encryption Section dialog is now centerred over the parent window
+  * Project parameter "EncryptionValue" renamed to "EncryptionConst", "HardwareLockingID" changed to HardwareID
+  * Improved modes usage and states changing
+  * Added error result value description in case of invalid KeyGen parameters
+  * "Activation key info" window will alert with "BLACKLISTED KEY" prompt in case of blacklisted registration key
+  * Hardware Locked registration keys are now possible to check/verify only with valid HardwareID value
+
+  + KeyGen_Ide.exe: New function/button added. "Gen URL" - generates KeyGen request string for the choosen mode and registration info
+  + Added Encryption Sections usage history (move mouse over sections to see its usage status) 
+  + Added different registration keys storage area support (MainMenu -> Options -> Keys storage area type)
+
+  ASProtect 2.1 SKE build 02.19 Release
+  =====================================
+  - Fixed CRC calculation error for some files
+  - Fixed the problem with change of active mode 
+  + WinCGI keygenerator was added
+
+  ASProtect 2.0 SKE build 02.15 Release
+  =====================================
+  + Added command line support ("-process" key)
+  + New modes states tracking optinon added:
+    MainMenu -> Options -> Modes statuses oversight
+
+    If you want ASProtect to stop tracking modes states, you should turn this
+    option off. After that you will have to process all mode states by yourself.
+
+  + Added BlackListed registration keys support for IDE Debug logger
+  + Add OutputDebugString IDE logging for service applications testing
+  + Added ASProtect Main Window minimization feature
+  + Added new ASProtect API - "GetKeyDate"
+
+    "GetKeyDate" API Description:
+
+    GetKeyExpirationDate
+
+    Description: 
+
+    GetKeyExpirationDate - retrieves the creation date for registration key
+    of the currently working mode. If the function succeeds, the return value
+    is TRUE. If current mode is not using activation keys or there is no
+    registration key installed, the function will fail and return FALSE.
+
+    Declaration: 
+
+    For Delphi: 
+
+    function  GetKeyDate    ( var Day   : WORD;
+                              var Month : WORD;
+                              var Year  : WORD ): Boolean; stdcall;
+
+    Sample: 
+
+    For Delphi:
+
+    Var
+      Day,
+      Month,
+      Year  : WORD;
+
+    begin
+      GetKeyDate( Day, Month, Year );
+      Form.Caption := Format('Key Creation Date: %d/%d/%d', [Day, Month, Year]);
+    end;
+
+  * Fixed right mouse click problem on About Box
+  * Improved "Advanced Import protection" option
+  * "Is this Mode registered?" caption changed to "Is this Mode in Registered state?".
+  * Improved "CheckSum Protection" option
+  * Improved ASProtect Keygen random generator
+  * Interface changes: encryption sections are now opening in new modal window
+
+  * ASProtect API function "GetModeInformation" was changed!
+
+    In order to check mode states after calling ASProtect API functions:
+    ("CheckKeyAndDecrypt" and "CheckKey") use new boolean parameter in
+    "GetModeInformation" API function - "CurrMode". If it is set to "True",
+    function will return current mode states, otherwise it will return the
+    states of last key-mode checking operation.
+
+    Declaration for Delphi:
+    procedure GetModeInformation( var ModeName   : PChar;
+                                  var ModeStatus : TModeStatus;
+                                      CurrMode   : Boolean ); stdcall;
+    Declaration for C++:
+    extern "C" _stdcall __declspec(dllimport)
+    BOOL GetModeInformation(char** ModeName, PMODE_STATUS mode_status, BOOL CurrMode);
+
+
+  - Fixed date bug in "GetKeyExpirationDate" API function
+  - Fixed small bug in "CheckKeyAndDecrypt" API function
+  - Fixed "IsWrongHardwareID" wrong spelling in TModeStatus type
+  - Fixed the problem with "Reset Trial On New Version" option
+  - Fixed the error 31
+  - Fixed the error 251
+  - Fixed the bug with "Clear Local Trial Information" option
+  - Fixed the small bug in Import Table processing
+  - Fixed the problem with "OEP protection" option on Delphi Applications
+  - Fixed the problem with repeated HardwareIDs generation.
+    (Only repeated HardwareIDs will be affected by this fix)

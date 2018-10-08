@@ -1,0 +1,15 @@
+nPack source code is available for purchase for 17$ under the following terms:
+
+You may not sell or distribute:
+     - The source code or any part of it. 
+     - A modified part of the source code. 
+     - A compiled version of the source code. 
+     - A modified compiled version of the source code.
+
+You may sell an application which uses the compiled source code or a modification of it.
+
+Please e-mail neox@petools.org.ru in order to recieve instructions on how to purchase the source code.
+
+OR
+
+http://shareit.com/product.html?productid=300161907

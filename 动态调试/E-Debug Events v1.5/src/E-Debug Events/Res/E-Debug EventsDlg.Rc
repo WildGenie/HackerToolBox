@@ -1,0 +1,34 @@
+#define IDD_DIALOG1 101
+#define IDC_EDT_LOG 1001
+#define IDC_BTN_OPEN 1002
+#define IDC_GRP1 1003
+#define IDC_RBN_Static 1004
+#define IDC_RBN_Independent 1005
+#define IDC_RBN_Compile 1006
+#define IDC_BTN_ClearLog 1007
+#define IDC_BTN_Start 1008
+#define IDC_BTN_Terminate 1009
+#define IDC_GRP1 1010
+#define IDC_CHK_TopMostWindow 1011
+#define IDC_CHK_InterruptAddress 1012
+#define IDC_EDT_InterruptAddress 1013
+IDD_DIALOG1 DIALOGEX 6,6,302,256
+CAPTION "E-Debug Events v1.5 code by cektop "
+FONT 8,"MS Sans Serif",0,0
+STYLE 0x10CA0800
+EXSTYLE 0x00000000
+BEGIN
+  CONTROL "",IDC_EDT_LOG,"Edit",0x50211004,4,1,224,238,0x00000200
+  CONTROL "&Open",IDC_BTN_OPEN,"Button",0x50010000,240,1,54,16,0x00000000
+  CONTROL "±‡“Î∑Ω Ω",IDC_GRP1,"Button",0x50000007,234,27,64,65,0x00000000
+  CONTROL "æ≤Ã¨±‡“Î",IDC_RBN_Static,"Button",0x50010009,238,42,52,8,0x00000000
+  CONTROL "∂¿¡¢±‡“Î",IDC_RBN_Independent,"Button",0x50010009,238,57,56,8,0x00000000
+  CONTROL "±‡“Î",IDC_RBN_Compile,"Button",0x50010009,238,72,54,12,0x00000000
+  CONTROL "&ClearLog",IDC_BTN_ClearLog,"Button",0x50010000,240,97,54,16,0x00000000
+  CONTROL "&Start",IDC_BTN_Start,"Button",0x50010000,240,125,54,16,0x00000000
+  CONTROL "&Terminate",IDC_BTN_Terminate,"Button",0x50010000,240,155,54,16,0x00000000
+  CONTROL "—°œÓ",IDC_GRP1,"Button",0x50000007,234,179,64,57,0x00000000
+  CONTROL "&Stay on Top",IDC_CHK_TopMostWindow,"Button",0x50010003,238,221,52,11,0x00000000
+  CONTROL "÷–∂œµÿ÷∑",IDC_CHK_InterruptAddress,"Button",0x50010003,238,192,52,9,0x00000000
+  CONTROL "",IDC_EDT_InterruptAddress,"Edit",0x50010008,238,204,52,12,0x00000200
+END

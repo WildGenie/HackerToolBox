@@ -1,0 +1,30 @@
+Reloz
+
+使用向导:
+1、选择原加壳的文件
+2、点击 “Get Reloc ”按钮,获取重定位表,并可以进行添加/修改
+3、点击Fix Pe 修复脱壳文件.
+
+Author:golds7n[LAG]
+
+
+Version 1.0
+Features:
+0. Fix PE's Relocation With High Efficiency And Most Convenience;
+1. Dynamic Resolve PE's Relocations;
+2. Dynamic ADD/DEL Entries;
+3. Export To Bin Function;
+4. Fix Dumpped PE Files;
+5. Support Overlay Reverse While Fix PE;
+
+ReloZ 1.0 版本
+功能特点:
+0.更方便更高效率的修复脱壳文件重定位表工具;
+1.动态解析可执行文件的重定位表项;
+2.支持动态添加/删除项目;
+3.支持导出为二进制文件功能(重定位表完全格式);
+4.修复脱壳文件功能;
+5.支持自动处理附加数据;
+
+
+

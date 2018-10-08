@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<Protection InputFileName="Project1.exe" Options="32768" CheckKernelDebugger="false" CompressionMode="0" VMCodeSectionName=".vmp" VMExecutorCount="1" LicenseDataFileName="" OutputFileName="" WaterMarkName="" RunParameters="">
+		<Folders/>
+		<Procedures/>
+	</Protection>
+	<DLLBox/>
+	<Script IncludedInCompilation="true">procedure OnBeforeSaveFile;
+var I,J:Integer;
+    RCDataRecord:TPEResourceRecord;
+    ResourceNames:TStringList;
+begin
+  with VMProtector.OutputFile do
+   begin
+    I:=ResourceRecords.IndexOfResType(rtRCData);
+    if I&gt;-1 then
+     begin
+      RCDataRecord:=ResourceRecords[I];
+      ResourceNames:=TStringList.Create;
+      try
+       ResourceNames.Add('PACKAGEINFO');
+       ResourceNames.Add('DVCLAL');
+       for J:=0 to ResourceNames.Count-1 do
+        begin
+         I:=RCDataRecord.IndexOfName(ResourceNames[J]);
+         if I&gt;-1 then
+          begin
+           RCDataRecord.Delete(I);
+           Writeln(Format('Resource "%s" is deleted',[ResourceNames[J]]));
+          end;
+        end;
+      finally  
+       ResourceNames.Free;
+      end;     
+     end; 
+   end;
+end;</Script>
+</Document>

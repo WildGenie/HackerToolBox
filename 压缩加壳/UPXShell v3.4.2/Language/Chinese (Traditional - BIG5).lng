@@ -1,0 +1,174 @@
+;Language: Traditional Chinese (BIG5)
+;Translated by Li Bojun
+;Date: August.24th,2005
+;E-mail: LiBojun.Chinese@Gmail.COM
+;Updated by BlackDex 2004-2006
+;*********************************************************************
+;官方繁體中文版
+;軟體譯製：李柏均
+;譯製日期：2005年8月24日
+;如有翻譯不當之處，敬請來信指教！
+;電子郵件：LiBojun.Chinese@Gmail.COM
+;軟體更新：BlackDex 2004-2006
+;*********************************************************************
+
+;Main Form
+;Top frame
+MainForm.lblCompressor.Caption=Win32 EXE、DLL 壓縮器
+MainForm.lblInsCap.Caption=內置 UPX 版本：
+MainForm.lblOutCap.Caption=外部 UPX 版本：
+
+;Open File tab
+MainForm.tbsOpen.Caption=開啟檔案
+MainForm.btnOpen.Caption=開啟
+MainForm.lblHistory.Caption=歷史記錄
+MainForm.pnlFileInfo.Caption=檔案資訊
+MainForm.lblFNameCap.Caption=檔案名
+MainForm.lblFName.Caption=N/A
+MainForm.lblFSizeCap.Caption=源檔案容量
+MainForm.lblFSize.Caption=N/A
+MainForm.lblCSizeCap.Caption=壓縮後容量
+MainForm.lblCSize.Caption=N/A
+MainForm.lblRatioCap.Caption=壓縮率
+MainForm.lblRatio.Caption=N/A
+MainForm.mnuHistory.Caption=清空歷史記錄
+
+;Compress tab
+MainForm.tbsCompress.Caption=壓縮
+MainForm.btnGo.Caption=開始！
+MainForm.chkDecomp.Caption=解壓縮
+MainForm.btnRun.Caption=運行
+MainForm.lblProgress.Caption=壓縮進程
+MainForm.lblProgressSize.Caption=壓縮率
+
+;Options tab
+MainForm.tbsOptions.Caption=選項
+MainForm.chkBackup.Caption=創建檔案備份
+MainForm.chkAutoCompress.Caption=載入後自動壓縮
+MainForm.chkExitDone.Caption=完成後退出
+MainForm.chkTest.Caption=壓縮後測試檔案
+MainForm.btnAdvanced.Caption=進階
+MainForm.lblCompressLevel.Caption=壓縮級別：
+MainForm.lblFaster.Caption=較快
+MainForm.lblBetter.Caption=較好
+MainForm.lblLanguage.Caption=語言選擇：
+MainForm.btnMultiPck.Caption=壓縮多個檔案
+
+;About tab
+MainForm.tbsAbout.Caption=關於
+MainForm.lblReleaseCap.Caption=版本：
+MainForm.lblBuildCap.Caption=編譯：
+MainForm.lblWWW.Caption=網址：
+MainForm.lblEMail.Caption=電子郵件：
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.Caption=給 BlackDex 發郵件
+MainForm.lblBlaineMail.Caption=給 Blaine 發郵件
+
+;Help tab
+MainForm.tbsHelp.Caption=說明
+MainForm.btnHelp.Caption=說明
+
+;Update Tab --NEW NEW NEW--
+MainForm.tbsUpdate.Caption=更新
+MainForm.btnChkUpdate.Caption=單擊這裏更新
+MainForm.lblOnlineVersionCap.Caption=最新版本：
+MainForm.lblOnlineVersion.Caption=N/A
+MainForm.lblReleaseDateCap.Caption=發佈日期：
+MainForm.lblReleaseDate.Caption=N/A
+MainForm.lblDownloadCap.Caption=下載站點：
+MainForm.lblDownload.Caption=N/A
+
+;Setup Form
+SetupForm.chkScramble.Caption=使用檔案編碼器
+SetupForm.btnScramble.Caption=編碼
+SetupForm.chkIntegrate.Caption=集成到滑鼠右鍵關聯功能表
+SetupForm.lblAdvacedOpts.Caption=UPX 進階選項：
+SetupForm.chkResources.Caption=壓縮資源
+SetupForm.chkExports.Caption=壓縮導出項
+SetupForm.chkRelocs.Caption=去除再定位
+SetupForm.chkForce.Caption=強制壓縮
+SetupForm.lblPriority.Caption=壓縮器優先順序：
+SetupForm.cmbPriority.0=空閒
+SetupForm.cmbPriority.1=標準 (預設值)
+SetupForm.cmbPriority.2=高
+SetupForm.cmbPriority.3=即時
+SetupForm.lblIcons.Caption=圖示：
+SetupForm.cmbIcons.0=除第一個目錄之外的所有目錄
+SetupForm.cmbIcons.1=除第一個圖示之外的所有圖示
+SetupForm.cmbIcons.2=不壓縮
+SetupForm.lblCommands.Caption=UPX 附加命令：
+SetupForm.chkCommands.Caption=保存命令
+SetupForm.btnOk.Caption=確定
+SetupForm.chkCompression.Caption=附加壓縮
+SetupForm.btnCommands.Caption=命令
+;--NEW NEW NEW--
+SetupForm.lblUPX2Only.Caption=僅限於 UPX 1.9x 版：
+SetupForm.chkBrute.Caption=強制
+SetupForm.chkMethods.Caption=所有方式
+SetupForm.chkFilters.Caption=所有篩檢程式
+
+;MultiPack Form
+MultiForm.Caption=壓縮多個檔案
+MultiForm.grpSearch.Caption=搜索路徑：
+MultiForm.lblDir.Caption=N/A
+MultiForm.btnBrowse.Caption=流覽(&B)
+MultiForm.chkRecurse.Caption=搜索子目錄(&R)
+MultiForm.chkAll.Caption=全部(&A)
+MultiForm.lblCurrent.Caption=當前檔案：
+MultiForm.lblOverall.Caption=整體進程：
+MultiForm.lblTimeCap.Caption=花費時間：
+MultiForm.btnScan.Caption=掃描(&S)
+MultiForm.btnPack.Caption=壓縮(&P)
+MultiForm.btnExit.Caption=退出(&E)
+
+;TreeView Form
+TreeViewForm.lblSelect.Caption=選擇要壓縮的目錄：
+TreeViewForm.btnOK.Caption=確定
+TreeViewForm.btnCancel.Caption=取消
+
+;Const_Messages
+msg[001]=無法訪問檔案。或許該檔案已被開啟。
+msg[002]=該檔案的屬性被設置為“唯讀”。要處理該檔案必須先清除其屬性。是否繼續？
+msg[003]=最佳
+msg[004]=該檔案似乎沒有被壓縮過。是否運行編碼器？
+msg[005]= (耗時
+msg[006]= 秒)
+msg[007]=解壓縮
+msg[008]=壓縮
+msg[009]=未選擇檔案
+msg[010]=N/A
+msg[011]=未選擇資料夾
+msg[012]=...更新失敗 :-(
+msg[013]=無法連接到更新伺服器！
+msg[014]=發現新版本！
+msg[015]=正在分析更新檔案...
+msg[016]=正在接收更新檔案...
+msg[017]=壓縮檔案成功
+msg[018]=解壓縮檔案成功
+msg[019]=檔案已壓縮(附帶警告資訊)
+msg[020]=檔案已解壓縮(附帶警告資訊)
+msg[021]=發生錯誤：未壓縮檔案。
+msg[022]=發生錯誤：未解壓縮檔案。
+msg[023]= 並且已測試
+msg[024]= 並且已測試(附帶警告資訊)
+msg[025]= 並且測試失敗
+msg[026]=UPX 返回下列錯誤資訊：
+msg[027]= 並且已完成編碼
+msg[028]=...發現更新
+msg[029]=...未發現更新
+msg[030]=確定
+msg[031]=失敗
+msg[032]=跳過
+msg[033]=檔案名
+msg[034]=資料夾
+msg[035]=容量
+msg[036]=壓縮後
+msg[037]=結果
+msg[038]=錯誤
+msg[039]=確認
+msg[040]=選擇要壓縮的目錄：
+msg[041]=該檔案已編碼！
+msg[042]=該檔案尚未編碼！
+msg[043]=用 UPX 壓縮

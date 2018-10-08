@@ -1,0 +1,2 @@
+#	GoldWave 4.x/5.x usage count reset
+GoldWave	Reg32Val	HKCU\Software\GoldWave\GoldWave\Options\\Usage

@@ -1,0 +1,71 @@
+                          Q-Setup changes since v2.50.
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*** 20/02/98 * Q-Setup 2.50 released.
+
+-----------------------------------------------------------------------------
+
+*** 28/02/98
+  No more trap at Extension browser call when EHL-file is empty.
+  [Убран трап при вызове броузера расширений при пустом EHL-файле.]
+  {reported by D.Jemerov}
+
+*** 28/02/98
+  Restored the old state of saving procedure. Added Shift-F2 combination
+  - 'Save as...'. Not for EHL-file.
+  [Восстановлен старый режим работы процедуры сохранения файлов. Добавлена
+  комбинация Shift-F2 - 'Сохранить как...'. Не касается EHL-файла.]
+  {reported by D.Jemerov}
+
+*** 03/03/98
+  The leading point in the extension will be deleted if any.
+  [Точка в расширении (если введена) теперь удаляется.]
+  {reported by D.Jemerov}
+
+*** 03/03/98
+  Input window called when <Ins> ('Add extension') pressed.
+  [При добавлении расширения (Ins) вызывается окно ввода.]
+
+*** 05/03/98
+  F3 hot-key in the file manager (Import/Convert window) - change drive.
+  [В файловом менэджере (Импорт/Конвертация) кнопка F3 - смена диска.]
+  {reported by D.Jemerov}
+
+*** 05/03/98
+  Filenames in the file manager (Import/Convert window) are downcased.
+  [Имена файлов в окне импорта/конвертации выводятся строчными буквами.]
+  {reported by D.Jemerov}
+
+*** 05/03/98
+  Import/Convert browser algorithm was generally changed.
+  [Алгоритм броузера при импорте/конвертации был значительно переделан.]
+
+*** 05/03/98
+  Help topic search algorithm was optimized.
+  [Алгоритм поиска раздела помощи оптимизирован.]
+
+*** 06/03/98
+  Sort by names of the files & directories in the Import/Convert window.
+  [Сортировка по именам файлов и каталогов в окне импорта/конвертации.]
+
+*** 14/03/98 * Q-Setup 2.60 released.
+
+-----------------------------------------------------------------------------
+
+*** 25/03/98
+  Q-Setup now restores the sturtup directory on exit.
+  [Восстанавливается директория запуска при выходе.]
+
+*** 25/03/98
+  Convert protocol was changed (QVIEW.CHR written in startup directory;
+  if convertion fails QVIEW.CHR is untouched.)
+  [Протокол конвертации был изменен (QVIEW.CHR пишется в каталог запуска;
+  если конвертация неудачная, QVIEW.CHR остается без изменений).]
+
+*** 25/03/98
+  Imported configuration now saved in the startup directory with the QVIEW.*
+  name (was bug with saving with the original name).
+  [Импортированные настройки теперь сохраняются в каталог запуска под именем
+  QVIEW.* (исправлен баг с сохранением под оригинальным именем).]
+
+*** 07/04/98 * Q-Setup 2.61 released.

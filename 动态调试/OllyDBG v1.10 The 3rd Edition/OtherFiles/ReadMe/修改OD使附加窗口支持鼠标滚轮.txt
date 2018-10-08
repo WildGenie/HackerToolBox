@@ -1,0 +1,46 @@
+修改OD使附加窗口支持鼠标滚轮添加一种非伪造WM_KEYDOWN消息的修改方法
+OD附加窗口不支持鼠标滚轮,这个有点郁闷.对于习惯了滚轮的偶来说实在是痛苦.因此决定PATCH代码让他支持.
+
+分析后发现只是没有处理滚轮消息,因此决定伪造消息来支持鼠标滚轮消息. 
+
+地址:00477C98 ->jmp 005112A5 (全0或者添加的PE节)
+
+PATCH代码如下:
+005112A5    81FA 0A020000                  cmp edx, 20A     是否是滚轮消息
+005112AB    74 0B                          je short 005112B8  是了就执行PATCH代码(就是相应滚轮消息的代码)
+005112AD    81FA 04010000                  cmp edx, 104       不是就回到原流程.
+005112B3  - E9 E569F6FF                    jmp 00477C9D
+005112B8    837D 10 00                     cmp dword ptr [ebp+10], 0    判断滚轮消息是上滚还是下滚
+005112BC    7F 1E                          jg short 005112DC           
+005112BE    C745 0C 00010000               mov dword ptr [ebp+C], 100   伪造消息
+005112C5    C745 10 28000000               mov dword ptr [ebp+10], 28   VK_DOWN 
+005112CC    C745 14 01005001               mov dword ptr [ebp+14], 1500001
+005112D3    B8 00010000                    mov eax, 100
+005112D8    8BD0                           mov edx, eax
+005112DA  ^ EB D1                          jmp short 005112AD  回到正常执行的地方
+005112DC    C745 0C 00010000               mov dword ptr [ebp+C], 100  伪造消息
+005112E3    C745 10 26000000               mov dword ptr [ebp+10], 26   VK_UP 
+005112EA    C745 14 01005001               mov dword ptr [ebp+14], 1500001
+005112F1    B8 00010000                    mov eax, 100
+005112F6    8BD0                           mov edx, eax
+005112F8  ^ EB B3                          jmp short 005112AD  回到正常执行的地方
+伪造的消息是WM_KEYDOWN,其实点多于的地方,
+关键的就是
+mov dword ptr [ebp+10], 26 
+mov eax, 100
+mov edx, eax
+有兴趣的可以自己更改一下~
+
+有些兄弟可能不喜欢这种风格,没关系.在伪造一下WM_VSCROLL
+005112A5    81FA 0A020000                cmp edx, 20A
+005112AB    74 0B                        je short 005112B8
+005112AD    81FA 04010000                cmp edx, 104
+005112B3  - E9 E569F6FF                  jmp 00477C9D
+005112B8    837D 10 00                   cmp dword ptr [ebp+10], 0
+005112BC    7F 09                        jg short 005112C7           判断滚轮消息是上滚还是下滚
+005112BE    C745 10 01000000             mov dword ptr [ebp+10], 1    SB_LINEDOWN
+005112C5    EB 07                        jmp short 005112CE
+005112C7    C745 10 00000000             mov dword ptr [ebp+10], 0 SB_LINEUP
+005112CE    B8 15010000                  mov eax, 115            伪造WM_VSCROLL消息
+005112D3    8BD0                         mov edx, eax
+005112D5  ^ EB D6                        jmp short 005112AD

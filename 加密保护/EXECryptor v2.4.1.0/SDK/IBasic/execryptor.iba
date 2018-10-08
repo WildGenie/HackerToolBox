@@ -1,0 +1,295 @@
+$define EXECRYPTOR_MAIN
+$include "windows.inc"
+$include "execryptor.inc"
+
+EXPORT EXECryptor_AntiDebug
+SUB EXECryptor_AntiDebug()
+  _asm
+    db 0x90, 0x90, 0x90, 0x90, 0x90
+  _endasm
+  return
+ENDSUB
+
+EXPORT EXECryptor_ProtectImport
+SUB EXECryptor_ProtectImport()
+  _asm
+    db 0x90, 0x90, 0x90, 0x90, 0x90
+  _endasm
+  return
+ENDSUB
+
+EXPORT EXECryptor_GetHardwareID
+SUB EXECryptor_GetHardwareID(), UINT
+  _asm
+    db 0x90, 0x90, 0x90, 0x90, 0x90
+  _endasm
+  return 0
+ENDSUB
+
+GLOBAL GetHardwareID
+SUB GetHardwareID(), STRING
+$include "crypt_start.inc"
+  return RIGHT$("00000000"+HEX$(EXECryptor_GetHardwareID()),8)
+$include "crypt_end.inc"
+ENDSUB
+
+EXPORT EXECryptor_IsAppProtected
+SUB EXECryptor_IsAppProtected(), SCHAR
+  return 0
+ENDSUB
+
+EXPORT EXECryptor_GetEXECryptorVersion
+SUB EXECryptor_GetEXECryptorVersion(), STRING
+  return "UNPROTECTED"
+ENDSUB
+
+DECLARE "kernel32", GetSystemTimeAsFileTime(tm as FILETIME BYREF)
+DECLARE "kernel32", FileTimeToLocalFileTime(t1 as FILETIME BYREF, t2 as FILETIME BYREF), INT
+DECLARE "kernel32", FileTimeToDosDateTime(tm as FILETIME BYREF, dt as WORD BYREF, tt as WORD BYREF), INT
+EXPORT EXECryptor_GetDate
+SUB EXECryptor_GetDate(),UINT
+  FILETIME t1,t2
+  WORD datedt,tt
+  GetSystemTimeAsFileTime(t1)
+  FileTimeToLocalFileTime(t1,t2)
+  FileTimeToDosDateTime(t2,datedt,tt)
+  return datedt
+ENDSUB
+
+EXPORT EXECryptor_GetReleaseDate
+SUB EXECryptor_GetReleaseDate(),UINT
+  FILETIME t1,t2
+  WORD datedt,tt
+  GetSystemTimeAsFileTime(t1)
+  FileTimeToLocalFileTime(t1,t2)
+  FileTimeToDosDateTime(t2,datedt,tt)
+  return datedt
+ENDSUB
+
+GLOBAL GetReleaseDate
+SUB GetReleaseDate (DateDay AS INT BYREF, DateMonth AS INT BYREF, DateYear AS INT BYREF)
+$include "crypt_start.inc"
+  UINT datedt
+  datedt = EXECryptor_GetReleaseDate()
+  DateDay = datedt & 0x1F
+  datedt = datedt >> 5
+  DateMonth = datedt & 0xF
+  datedt = datedt >> 4
+  DateYear = datedt + 1980
+  return
+$include "crypt_end.inc"
+ENDSUB
+
+GLOBAL SafeGetDate
+SUB SafeGetDate (DateDay AS INT BYREF, DateMonth AS INT BYREF, DateYear AS INT BYREF)
+$include "crypt_start.inc"
+  UINT datedt
+  datedt = EXECryptor_GetDate()
+  DateDay = datedt & 0x1F
+  datedt = datedt >> 5
+  DateMonth = datedt & 0xF
+  datedt = datedt >> 4
+  DateYear = datedt + 1980
+  return
+$include "crypt_end.inc"
+ENDSUB
+
+EXPORT EXECryptor_GetTrialDaysLeft
+SUB EXECryptor_GetTrialDaysLeft(TrialPeriod AS INT), INT
+  return TrialPeriod
+ENDSUB
+
+EXPORT EXECryptor_GetTrialRunsLeft
+SUB EXECryptor_GetTrialRunsLeft(TrialRuns AS INT), INT
+  return TrialRuns
+ENDSUB
+
+EXPORT EXECryptor_EncryptStr
+SUB EXECryptor_EncryptStr(Src AS POINTER, Dst AS POINTER) 
+  while #<CHAR>Src <> 0
+    #<CHAR>Dst = #<CHAR>Src
+    Dst = Dst + 1
+    Src = Src + 1
+  endwhile
+  #<CHAR>Dst = 0
+  return
+ENDSUB
+
+GLOBAL EncryptStr
+SUB EncryptStr (Src AS STRING BYREF), STRING
+$include "crypt_start.inc"
+  STRING temp
+  temp = SPACE$(2*LEN(Src)+1)
+  EXECryptor_EncryptStr(&Src,&temp)
+  return temp
+$include "crypt_end.inc"
+ENDSUB
+
+EXPORT EXECryptor_DecryptStr
+SUB EXECryptor_DecryptStr(Src AS POINTER, Dst AS POINTER) 
+  while #<CHAR>Src <> 0
+    #<CHAR>Dst = #<CHAR>Src
+    Dst = Dst + 1
+    Src = Src + 1
+  endwhile
+  #<CHAR>Dst = 0
+  return
+ENDSUB
+
+GLOBAL DecryptStr
+SUB DecryptStr (Src AS STRING BYREF), STRING
+$include "crypt_start.inc"
+  STRING temp
+  temp = SPACE$(LEN(Src)+1)
+  EXECryptor_DecryptStr(&Src,&temp)
+  return temp
+$include "crypt_end.inc"
+ENDSUB
+
+EXPORT EXECryptor_SecureWrite
+SUB EXECryptor_SecureWrite (VName AS POINTER, Value AS POINTER), SCHAR  
+  INT KeyHandle
+  IF _RegCreateKey(HKEY_CURRENT_USER, "Software\EXECryptorTestKeys", KeyHandle) = ERROR_SUCCESS THEN
+    _RegSetValueEx(KeyHandle, #<STRING>VName, 0, REG_BINARY, Value, LEN(#<STRING>Value)+1)
+    _RegCloseKey(KeyHandle)
+    return 1
+  ELSE
+    return 0
+  ENDIF
+ENDSUB
+
+GLOBAL SecureWrite
+SUB SecureWrite(ValName AS STRING BYREF, Value AS STRING BYREF), INT
+  return EXECryptor_SecureWrite(&ValName, &Value)
+ENDSUB
+
+EXPORT EXECryptor_SecureRead
+SUB EXECryptor_SecureRead (VName AS POINTER, Value AS POINTER), SCHAR
+  INT KeyHandle, sz, tp
+  SCHAR Result
+  Result = 0
+  IF _RegOpenKeyEx(HKEY_CURRENT_USER, "Software\EXECryptorTestKeys", 0, KEY_QUERY_VALUE, KeyHandle) = ERROR_SUCCESS THEN
+    tp = REG_BINARY
+    sz = 254
+    IF _RegQueryValueEx(KeyHandle, #<STRING>VName, 0, tp, Value, sz) = ERROR_SUCCESS THEN
+      Result = 1
+    ENDIF
+    _RegCloseKey(KeyHandle)
+  ENDIF
+  return Result
+ENDSUB
+
+GLOBAL SecureRead
+SUB SecureRead(ValName AS STRING BYREF), STRING
+  STRING Value
+  Value = SPACE$(254)
+  IF EXECryptor_SecureRead(&ValName,&Value) <> 0 THEN
+    return Value
+  ELSE
+    return ""
+  ENDIF
+ENDSUB
+
+EXPORT EXECryptor_MessageBox
+SUB EXECryptor_MessageBox(hwnd AS INT,lpText AS STRING,lpCaption AS STRING,wType AS INT),INT
+  return _MessageBox(hWnd,lpText,lpCaption,wType)
+ENDSUB
+
+EXPORT EXECryptor_VerifySerialNumber
+SUB EXECryptor_VerifySerialNumber (RegistrationName AS STRING BYREF, SerialNumber AS STRING BYREF, LicInfo AS LicenseInfo BYREF, HardwareID AS STRING BYREF), INT
+  LicInfo.LicType = 0
+  LicInfo.UserParam = 0
+  LicInfo.F1 = 1
+  LicInfo.F2 = 1
+  LicInfo.F3 = 1
+  LicInfo.F4 = 1
+  LicInfo.F5 = 1
+  LicInfo.F6 = 1
+  return vrOK
+ENDSUB
+
+GLOBAL VerifySerialNumber
+SUB VerifySerialNumber (RegistrationName AS STRING BYREF, SerialNumber AS STRING BYREF), INT
+$include "crypt_start.inc"
+  DEF LicInfo AS LicenseInfo
+  STRING HWID
+  HWID = GetHardwareID()
+  return EXECryptor_VerifySerialNumber(RegistrationName, SerialNumber, LicInfo, HWID)
+$include "crypt_end.inc"
+ENDSUB
+
+GLOBAL VerifySerialNumberEx
+SUB VerifySerialNumberEx (RegistrationName AS STRING BYREF, SerialNumber AS STRING BYREF, LicInfo AS LicenseInfo BYREF), INT
+$include "crypt_start.inc"
+  STRING HWID
+  HWID = GetHardwareID()
+  return EXECryptor_VerifySerialNumber(RegistrationName, SerialNumber, LicInfo, HWID)
+$include "crypt_end.inc"
+ENDSUB
+
+EXPORT EXECryptor_DecodeSerialNumber
+SUB EXECryptor_DecodeSerialNumber (RegistrationName AS STRING BYREF, SerialNumber AS STRING BYREF, LicInfo AS LicenseInfo BYREF, HardwareID AS STRING BYREF), INT
+  LicInfo.LicType = 0
+  LicInfo.UserParam = 0
+  LicInfo.F1 = 1
+  LicInfo.F2 = 1
+  LicInfo.F3 = 1
+  LicInfo.F4 = 1
+  LicInfo.F5 = 1
+  LicInfo.F6 = 1
+  return vrOK
+ENDSUB
+
+GLOBAL DecodeSerialNumber
+SUB DecodeSerialNumber (RegistrationName AS STRING BYREF, SerialNumber AS STRING BYREF, LicInfo AS LicenseInfo BYREF), INT
+$include "crypt_start.inc"
+  STRING HWID
+  HWID = GetHardwareID()
+  return EXECryptor_DecodeSerialNumber(RegistrationName, SerialNumber, LicInfo, HWID)
+$include "crypt_end.inc"
+ENDSUB
+
+EXPORT EXECryptor_IsRegistered
+SUB EXECryptor_IsRegistered(),INT
+  return vrOK
+ENDSUB
+
+EXPORT EXECryptor_RegConst_0
+SUB EXECryptor_RegConst_0(),INT
+  return 0
+ENDSUB
+
+EXPORT EXECryptor_RegConst_1
+SUB EXECryptor_RegConst_1(),INT
+  return 1
+ENDSUB
+
+EXPORT EXECryptor_RegConst_2
+SUB EXECryptor_RegConst_2(),INT
+  return 2
+ENDSUB
+
+EXPORT EXECryptor_RegConst_3
+SUB EXECryptor_RegConst_3(),INT
+  return 3
+ENDSUB
+
+EXPORT EXECryptor_RegConst_4
+SUB EXECryptor_RegConst_4(),INT
+  return 4
+ENDSUB
+
+EXPORT EXECryptor_RegConst_5
+SUB EXECryptor_RegConst_5(),INT
+  return 5
+ENDSUB
+
+EXPORT EXECryptor_RegConst_6
+SUB EXECryptor_RegConst_6(),INT
+  return 6
+ENDSUB
+
+EXPORT EXECryptor_RegConst_7
+SUB EXECryptor_RegConst_7(),INT
+  return 7
+ENDSUB

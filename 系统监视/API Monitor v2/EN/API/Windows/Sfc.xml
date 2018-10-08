@@ -1,0 +1,39 @@
+<!--
+    API Monitor Definitions
+    (c) 2010-2011, Rohitab Batra <rohitab@rohitab.com>
+    http://www.rohitab.com/apimonitor/
+-->
+<ApiMonitor>
+    <Include Filename="Headers\windows.h.xml" />
+    <Include Filename="Headers\registry.h.xml" />
+    
+    <Module Name="Sfc.dll" CallingConvention="STDCALL" ErrorFunc="GetLastError" OnlineHelp="MSDN">
+
+        <!-- PROTECTED_FILE_DATA -->
+        <Variable Name="PROTECTED_FILE_DATA" Type="Struct">
+            <Field Type="WCHAR [MAX_PATH]"  Name="FileName" />
+            <Field Type="DWORD"             Name="FileNumber" />
+        </Variable>
+        <Variable Name="PPROTECTED_FILE_DATA" Type="Pointer" Base="PROTECTED_FILE_DATA" />
+
+        <!-- Api's -->
+        <Category Name="System Administration/Windows Resource Protection (WRP)" />
+        <Api Name="SfcIsFileProtected">
+            <Param Type="HANDLE" Name="RpcHandle" />
+            <Param Type="LPCWSTR" Name="ProtFileName" />
+            <Return Type="BOOL" />
+        </Api>
+        <Api Name="SfcIsKeyProtected">
+            <Param Type="HKEY" Name="hKey" />
+            <Param Type="LPCWSTR" Name="lpSubKey" />
+            <Param Type="REGSAM" Name="samDesired" />
+            <Return Type="BOOL" />
+        </Api>
+        <Api Name="SfcGetNextProtectedFile">
+            <Param Type="HANDLE" Name="RpcHandle" />
+            <Param Type="PPROTECTED_FILE_DATA" Name="ProtFileData" />
+            <Return Type="BOOL" />
+            <Success Return="NotEqual" Value="0" />
+        </Api>
+    </Module>
+</ApiMonitor>

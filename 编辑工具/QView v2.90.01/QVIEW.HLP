@@ -1,0 +1,679 @@
+[0000]
+ !4Text !4view Ü
+  ßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       Line up/down
+ !1Left!0,!1Right    Character left/right
+ !1Home!0,!1End      Line begin/end
+ !1PgUp!0,!1PgDn     Page up/down
+ !1Ctrl!0+!1Home     Top of file
+ !1Ctrl!0+!1End      End of file
+ !1Ctrl!0+!1PgUp     Top of file
+ !1Ctrl!0+!1PgDn     End of file
+ !1Ctrl!0+!1Left     20 characters left
+ !1Ctrl!0+!1Right    20 characters right
+ !1Alt!0+!1Up        Backward search next string
+ !1Alt!0+!1Dn        Forward search next string
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1F2            Select word wrap/unwrap mode
+ !1F3            Text edit on/off (files only)
+ !1F4            Change view mode to Hex view
+ !1F6            Select character code table
+ !1F7            String search
+ !1F8            Select LineFeed type
+ !1F9            Recode current file from current CharSet to default CharSet
+ !1F10           Quit
+ !1Alt!0+!1F1        About
+ !1Alt!0+!1F3        Edit On/Off
+ !1Alt!0+!1F5        User screen
+ !1Alt!0+!1F6        Open/create file
+ !1Alt!0+!1F7        File history list
+ !1Alt!0+!1F9        Update all changes
+ !1Alt!0+!1F10       Truncate file at current position
+ !1Shift!0+!1F1      Color glucker on/off
+ !1Shift!0+!1F2      Tabulation symbols support On/Off
+ !1Shift!0+!1F3      Write text dump to file
+ !1Shift!0+!1F7      Search next string
+ !1Shift!0+!1F9      Write changes as .CRK file
+ !1Ctrl!0+!1F2       Change file offset
+ !1Ctrl!0+!1F6       Calculator
+ !1Ctrl!0+!1F7       Replace string
+ !1Ctrl!0+!1F8       Update viewed file with .CRK file
+ !1Ctrl!0+!1F9       Undo all changes
+ !1Ctrl!0+!1Tab      Next file from history list
+ !1Shift!0+!1Tab     Prevision file from history list
+ !1Alt!0+!1'P'       Put screen to file
+ !1Alt!0+!1'F'       Open/create file
+ !1Alt!0+!1'D'       Select logical disk for viewing/editing
+ !1Alt!0+!1'S'       Select physical disk for viewing/editing
+ !1Alt!0+!1'M'       Select 1-st Mb memory for viewing/editing
+ !1Alt!0+!1'G'       Advanced goto
+ !1Alt!0+!1'C'       Calculate number of text string (files only)
+ !1Alt!0+!1'G'       Goto line number (files only)
+ !1Esc           Quit
+ !1Enter         Next view mode
+
+!2ÄÄÄÄ !3Text !3editor !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Ins           Select Insert/Override edit mode
+ !1Del           Delete character at the right
+ !1BS            Delete character at the left
+ !1Ctrl!0+!1Y        Delete string
+ !1Alt!0+!1Y      ÄÂ Delete from the cursor position to end of line
+ !1Ctrl!0+!1K     ÄÙ
+ !1Ctrl!0+!1Del      Delete marked block
+ !1Ctrl!0+!1Ins      Copy marked block to buffer
+ !1Shift!0+!1Ins     Insert block from buffer
+ !1Shift!0+!1Up   Ä¿
+ !1Shift!0+!1Down Ä´
+ !1Shift!0+!1Left Ä´
+ !1Shift!0+!1Right!0ÄÅ Block marking
+ !1Shift!0+!1Home Ä´
+ !1Shift!0+!1End  Ä´
+ !1Shift!0+!1PgUp Ä´
+ !1Shift!0+!1PgDn ÄÙ
+ !1Alt!0+!1'U'       Unmark block
+
+!2ÄÄÄ !3Block !3operations !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Ctrl!0+!1F4       Insert bytes into viewed file from current position
+ !1Ctrl!0+!1F5       Delete bytes from viewed file from current position
+
+!2ÄÄÄÄ !3BookMarks !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Alt!0+!1'+'       Store current position to the bookmark state
+ !1Alt!0+!1'-'       Delete current bookmark state ( '-' not from numeric
+               keypad )
+ !1Alt!0+!1BS        Restore position of the current bookmark state
+ !1Alt!0+!1'1' Ä¿
+  ...     ÃÄÄ  Restore position of the N-th bookmark state
+ !1Alt!0+!1'9' ÄÙ
+ !1Alt!0+!1'0'       Clear all the bookmark states
+[0001]
+ !4Hex !4view Ü
+  ßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       Line up/down
+ !1Left!0,!1Right    Byte left/rigth
+ !1Home!0,!1End      Line begin/end
+ !1PgUp!0,!1PgDn     Page up/down
+ !1Ctrl!0+!1Home     Top of file
+ !1Ctrl!0+!1End      End of file
+ !1Ctrl!0+!1PgUp     Top of file
+ !1Ctrl!0+!1PgDn     End of file
+ !1Ctrl!0+!1Left     Screen left
+ !1Ctrl!0+!1Right    Screen right
+ !1Alt!0+!1Up        Backward search next string
+ !1Alt!0+!1Dn        Forward search next string
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1F3            Undo current byte
+ !1BS            Undo prevision byte
+ !1F4            Change view mode to AV
+ !1F5            Goto address
+ !1F6            Select character code table
+ !1F7            String search
+ !1F8            MS-DOS .exe header view
+ !1F9            Call crypt system for the marked block
+ !1F10           Quit
+ !1Shift!0+!1F1      Color glucker On/Off
+ !1Shift!0+!1F7      Search next string
+ !1Shift!0+!1F9      Write changes as .CRK file
+ !1Ctrl!0+!1F2       Change file offset
+ !1Ctrl!0+!1F6       Calculator
+ !1Ctrl!0+!1F7       Replace string
+ !1Ctrl!0+!1F8       Update viewed file with .CRK file
+ !1Ctrl!0+!1F9       Undo all changes
+ !1Alt!0+!1F1        About
+ !1Alt!0+!1F3        Edit On/Off
+ !1Alt!0+!1F5        User screen
+ !1Alt!0+!1F6        Open/create file
+ !1Alt!0+!1F7        File history list
+ !1Alt!0+!1F9        Update all changes
+ !1Alt!0+!1F10       Truncate file at current position
+ !1Ctrl!0+!1Tab      Next file from history list
+ !1Shift!0+!1Tab     Prevision file from history list
+ !1Alt!0+!1'P'       Put screen to file
+ !1Alt!0+!1'J'       Return to AV mode from Alt+J+W(+D) call
+ !1Alt!0+!1'F'       Open/create file
+ !1Alt!0+!1'D'       Select logical disk for viewing/editing
+ !1Alt!0+!1'S'       Select physical disk for viewing/editing
+ !1Alt!0+!1'M'       Select 1-st Mb memory for viewing/editing
+ !1Alt!0+!1'G'       Advanced goto
+ !1Tab           Select hex/ascii input
+ !1Esc           Quit
+ !1Enter         Next view mode
+
+!2ÄÄÄÄ !3Block !3operations !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Ins           Mark block begin/end, unmark block
+ !1Alt!0+!1'A'       Mark the whole file as a block
+ !1Shift!0+!1F2      Put marked block to a file as code/dump/asm list
+ !1Shift!0+!1F3      Get block from a file into marked block
+ !1Shift!0+!1F4      Delete marked block from the viewed file
+ !1Shift!0+!1F5      Insert block from a file into viewed one at the
+               current position
+ !1Ctrl!0+!1F4       Insert bytes into the viewed file at the current
+               position
+ !1Ctrl!0+!1F5       Delete bytes from the viewed file from the current
+               position
+
+!2ÄÄÄÄ !3BookMarks !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Alt!0+!1'+'       Store current position to the bookmark state
+ !1Alt!0+!1'-'       Delete current bookmark state ( '-' not from numeric
+               keypad )
+ !1Alt!0+!1BS        Restore position of the current bookmark state
+ !1Alt!0+!1'1' Ä¿
+  ...     ÃÄÄ  Restore position of the N-th bookmark state
+ !1Alt!0+!1'9' ÄÙ
+ !1Alt!0+!1'0'       Clear all the bookmark states
+[0002]
+ !4Asm !4view Ü
+  ßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       Line up/down
+ !1Left!0,!1Right    Byte left/rigth
+ !1PgUp!0,!1PgDn     Page up/down
+ !1Ctrl!0+!1Home     Top of file
+ !1Ctrl!0+!1End      End of file
+ !1Ctrl!0+!1PgUp     Top of file
+ !1Ctrl!0+!1PgDn     End of file
+ !1Ctrl!0+!1Left     Screen left
+ !1Ctrl!0+!1Right    Screen right
+ !1Alt!0+!1Left      Go to the previous comment string
+ !1Alt!0+!1Right     Go to the next comment string
+ !1Alt!0+!1Up        Backward search next string
+ !1Alt!0+!1Dn        Forward search next string
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1F2            Set the defalt segment address & operands size as
+               16/32 bit
+ !1F3            Undo current byte
+ !1BS            Undo prevision byte
+ !1F4            Change view mode to TV
+ !1F5            Go to address
+ !1F6            Assembler search
+ !1F7            String search
+ !1F8            MS-DOS .exe header view
+ !1F9            Crypt system for marked block
+ !1F10           Quit
+ !1Shift!0+!1F1      Color glucker On/Off
+ !1Shift!0+!1F6      Next assembler search
+ !1Shift!0+!1F7      Next string search
+ !1Shift!0+!1F9      Write changes as .CRK file
+ !1Ctrl!0+!1F2       Change file offset
+ !1Ctrl!0+!1F6       Calculator
+ !1Ctrl!0+!1F7       Replace string
+ !1Ctrl!0+!1F8       Update viewed file with .CRK file
+ !1Ctrl!0+!1F9       Undo all changes
+ !1Alt!0+!1F1        About
+ !1Alt!0+!1F3        Edit On/Off
+ !1Alt!0+!1F5        User screen
+ !1Alt!0+!1F6        Open/create file
+ !1Alt!0+!1F7        Viewed files history list
+ !1Alt!0+!1F9        Update all changes
+ !1Alt!0+!1F10       Truncate file at current position
+ !1Ctrl!0+!1Tab      Next file from history list
+ !1Shift!0+!1Tab     Prevision file from history list
+ !1Alt!0+!1'P'       Put screen to file
+ !1Alt!0+!1'C'       Call a far procedure at the cursor
+               !4N.B. Use !2RETF instruction at the end of procedure
+ !1Alt!0+!1'E'       Apply the comment for the current string
+ !1Alt!0+!1'J'+!1'W'   View hex dump of word offset under cursor
+ !1Alt!0+!1'J'+!1'D'   View hex dump of dword offset under cursor
+ !1Alt!0+!1'F'       Open/create file
+ !1Alt!0+!1'D'       Select logical disk for viewing/editing
+ !1Alt!0+!1'S'       Select physical disk for viewing/editing
+ !1Alt!0+!1'M'       Select 1-st Mb memory for viewing/editing
+ !1Alt!0+!1'G'       Advanced goto
+ !1Tab           Select hex/asm input
+ !1Esc           Quit
+ !1Enter         Next view mode
+
+!2ÄÄÄÄ !3Block !3operations !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Ins           Mark block begin/end, unmark block
+ !1Alt!0+!1'A'       Mark the whole file as a block
+ !1Shift!0+!1F2      Put marked block to a file as code/dump/asm list
+ !1Shift!0+!1F3      Get block from a file into marked block
+ !1Shift!0+!1F4      Delete marked block from the viewed file
+ !1Shift!0+!1F5      Insert block from a file into viewed one at the
+               current position
+ !1Ctrl!0+!1F4       Insert bytes into the viewed file at the current
+               position
+ !1Ctrl!0+!1F5       Delete bytes from the viewed file from the current
+               position
+
+!2ÄÄÄÄ !3BookMarks !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Alt!0+!1'+'       Store current position to the bookmark state
+ !1Alt!0+!1'-'       Delete current bookmark state ( '-' not from numeric
+               keypad )
+ !1Alt!0+!1BS        Restore position of the current bookmark state
+ !1Alt!0+!1'1' Ä¿
+  ...     ÃÄÄ  Restore position of the N-th bookmark state
+ !1Alt!0+!1'9' ÄÙ
+ !1Alt!0+!1'0'       Clear all the bookmark states
+
+!2ÄÄÄÄ !3Asm !3jmp/call !3etc !3trace !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Shift!0+!1'1' Ä¿
+    ...     ÃÄ Go to address from the N-th jmp/call etc
+ !1Shift!0+!1'9' ÄÙ
+ !1Shift!0+!1'0'     Return from jump
+[0003]
+ !4View !4MS-DOS !4.exe !4header Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+ !1F1            Help
+ !1F3            Edit the header fields
+ !1F5            Goto the MS-DOS 'MZ' executable file entry point
+ !1ESC           Return to view mode
+[0004]
+ !4Edit !4MS-DOS !4.exe !4header Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Rigth    Cursor left/right
+ !1Up!0,!1Down       Cursor up/down
+ !1TAB           Cursor down
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1F3            Undo the current field changes
+ !1F9            Return to the view with the header update
+ !1ESC           Return to the view with all the changes skip
+[0005]
+ !4Search !4string Ü
+  ßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Rigth    Char left/rigth
+ !1Up!0,!1Down      Select Ascii/Hex input
+ !1Tab           Select Ascii/Hex input
+ !1Home!0,!1End      String begin/end
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Del!0,!1BS        Delete character from the string
+ !1Ctrl!0+!1'Y'      Clear the string
+ !1Ins           Insert/Overide input mode select
+ !1Esc           Exit to the view mode
+ !1Enter         Start string search / goto input the string for replace
+ !1F1            Help
+ !1F2            Assembler
+ !1F4            Case sensitive On/Off select
+ !1F5            Search with the mask On/Off select
+ !1F6            Search with the current character set use On/Off select
+ !1F7            History list
+ !1F9            Search direction: forward/backward
+
+!2ÄÄÄÄ !3Compare !3mask !3symbol !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1'?'           Skip one character (if the mask mode is on)
+[0006]
+ !4Replace !4string Ü
+  ßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Rigth    Char left/rigth
+ !1Up!0,!1Down       Select Ascii/Hex input
+ !1Tab           Select Ascii/Hex input
+ !1Home!0,!1End      String begin/end
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Del!0,!1BS        Delete character from the string
+ !1Ctrl!0+!1'Y'      Clear the string
+ !1Ins           Insert/Overide input mode select
+ !1Esc           Exit to the view mode
+ !1Enter         Start search and replace
+ !1F1            Help
+ !1F2            Assembler
+ !1F5            Search with the mask On/Off select
+ !1F6            Search with the current character set use On/Off select
+ !1F7            History list
+[0007]
+ !4Assembler !4search Ü
+  ßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Rigth    Char left/rigth
+ !1Home!0,!1End      String begin/end
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Del!0,!1BS        Delete character from the string
+ !1Ctrl!0+!1'Y'      Clear the string
+ !1Ins           Insert/Overide input mode select
+ !1Esc           Exit to the view mode
+ !1Enter         Start the assembler search
+ !1F1            Help
+ !1F2            Search step select
+ !1F3            Search area select
+ !1F4            Search offset select
+ !1F5            Search type select
+ !1F6            Find reference to the current file offset
+ !1F7            History list
+
+!2ÄÄÄÄ !3Compare !3mask !3symbols !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1'?'           Skip one char
+ !1'*'           Skip substring from the current char to the end of the
+               string or ',' char
+ !1'$'           Skip '0'-started number constant
+ !1'%'           Skip one word from the current char to the end of the
+               string, ' ' or ',' symbols
+ !1'@'           Search substring
+
+!2ÄÄÄÄ !3Search !3options !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ ş !1Step
+  - Command    Select the next instruction for compare after the current
+               instruction
+  - Byte       Select the next instruction for compare after the current
+               byte
+ ş !1Area
+  - File       search through the file
+  - Block      search through the block
+
+ ş !1Offs
+  - Begin      search from the file/block begin
+  - CurOfs     search from the current position in the file/block
+
+ ş !1Type
+  - Full       Stop compare the characters after the end of the searched
+               string
+  - Small      Select only equal instruction
+[0008]
+ !4View !4PE !4header Ü
+  ßßßßßßßßßßßßßßßß
+ !1F1            Help
+ !1F3            Object table dialog
+ !1F5            Go to the entry point
+ !1F8            Go to the 'MZ' MS-DOS header view
+ !1ESC           Return to the view mode
+[0009]
+ !4View !4PE !4header !4object !4table Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       Line up/down
+ !1PgUp!0,!1PgDn     Page up/down
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1Enter         Go to object's first page
+ !1ESC           Return to the PE header view
+
+!2ÄÄÄÄ !3Fields !3comments !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Object        Object name
+ !1V_Size        Virtual memory size. The size of the object that
+                 will be allocated when the object is loaded.
+ !1RVA           Relative Virtual Address.
+ !1PhysSize      The size of the initialized data in the file for
+                 the object.
+ !1PhysOffs      Physical offset for object's first page.
+ !1WREspcUIC
+ ³³³³³³³³ÀÄÄÄÄ Code object.
+ ³³³³³³³ÀÄÄÄÄÄ Initialized data object.
+ ³³³³³³ÀÄÄÄÄÄÄ Uninitialized data object.
+ ³³³³³ÀÄÄÄÄÄÄÄ Object must not be cached.
+ ³³³³ÀÄÄÄÄÄÄÄÄ Object is not pageable.
+ ³³³ÀÄÄÄÄÄÄÄÄÄ Object is shared.
+ ³³ÀÄÄÄÄÄÄÄÄÄÄ Executable object.
+ ³ÀÄÄÄÄÄÄÄÄÄÄÄ Readable object.
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄ Writeable object.
+[000A]
+ !4Edit !4in !4Asm !4view !4(Assembler) Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Rigth    Char left/right
+ !1Home!0,!1End      String begin/end
+ !1Up!0,!1Down       Select prev/next instruction for edit without
+               assemble the instruction from the input string
+
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Ins           Select Insert/Override edit mode
+ !1BS!0,!1DEL        Delete character from the string
+ !1Ctrl!0+!1'Y'      Clear the string
+ !1ENTER         Assemble the instruction (changed instructions only)
+ !1TAB!0,!1ESC       Select the hex edit
+ !1F1            Help
+[000B]
+ !4History !4list Ü
+  ßßßßßßßßßßßßß
+ !1Up!0,!1Down       Line up/down
+ !1F1            Help
+ !1F8!0,!1DEL        Delete current record
+ !1F10           Delete all records
+ !1ENTER         Return with the current record selected
+ !1ESC           Return with the select skip
+[000C]
+ !4Crypt !4procedure !4edit Ü
+  ßßßßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Right    Character left/right
+ !1Up!0,!1Down       Line up/down
+ !1Home!0,!1End      String begin/end
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Ins           Select Insert/Override edit mode
+ !1BS!0,!1DEL        Delete char in string
+ !1Ctrl!0+!1'Y'      Clear the string
+ !1F1            Help
+ !1F2            Save the crypt procedure to the file
+ !1F3            Load the crypt procedure from the file
+ !1F4            Input offset for the data section of the crypt procedure
+ !1F5            Go to address
+ !1F6            Erase the crypt procedure without data section
+ !1F7            Clear the crypt procedure's data section
+ !1F8            Delete the current instruction
+ !1F9            Run the crypt procedure
+ !1Alt!0+!1F1        Select asm command input mode: Insert/Override
+ !1TAB           Select the data section edit
+ !1ENTER         Assemble instruction
+ !1ESC           Exit to view without run crypt procedure
+[000D]
+ !4Crypt !4data !4editor Ü
+  ßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Right    Character left/right
+ !1Up!0,!1Down       Line up/down
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1F5            Go to address
+ !1TAB           Select the crypt procedure edit
+ !1ESC           Exit to view without run the crypt procedure
+[000E]
+ !4Calculator Ü
+  ßßßßßßßßßßß
+!2ÄÄÄÄ !3String !3editor !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Right    Char left/right
+ !1Home!0,!1End      String begin/end
+ !1Ins           Select Insert/Override edit mode
+ !1BS!0,!1DEL        Delete character in the string
+ !1Ctrl!0+!1'Y'      Clear the string
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1F2            Assume Dec as default
+ !1F3            Assume Hex as default
+ !1F4            Assume Oct as default
+ !1F5            Assume Bin as default
+ !1Alt!0+!1'D'       Assume Dec as default
+ !1Alt!0+!1'H'       Assume Hex as default
+ !1Alt!0+!1'O'       Assume Oct as default
+ !1Alt!0+!1'B'       Assume Bin as default
+ !1Enter         Evaluate
+ !1Esc           Exit
+
+!2ÄÄÄÄ !3Operations !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1()            Change evaluation order                 ş Priority 0
+ !1~!0, !1-          NOT, NEG (unary minus)                  ş Priority 1
+ !1<<!0, !1>>        SHL, SHR                                ş Priority 2
+ !1*!0, !1/!0, !1%       MUL, DIV (unsigned int), DIV remainder  ş Priority 3
+ !1&!0, !1|!0, !1^       AND, OR, XOR                            ş Priority 3
+ !1+!0, !1-          ADD, SUB                                ş Priority 4
+
+Note: the highest priority level is zero.
+
+!2ÄÄÄÄ !3Type !3convertions !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ The last character in the number constant is:
+ !1d             dec
+ !1h             hex
+ !1o             oct
+ !1b             bin
+[000F]
+ !4NE !4header !4View Ü
+  ßßßßßßßßßßßßßßßß
+ !1F1            Help
+ !1F3            Object table dialog
+ !1F5            Go to the entry point
+ !1F8            Go to the 'MZ' MS-DOS header view
+ !1ESC           Return to the view mode
+[0010]
+ !4View !4NE !4header !4object !4table Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       Line up/down
+ !1PgUp!0,!1PgDn     Page up/down
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1Enter         Go to the object's first page
+ !1ESC           Return to view NE header
+
+!2ÄÄÄÄ !3Fields !3comments !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+!1GH3DPLCrEPsMIttt
+³³³³À´³³³³³³³ÀÁÁ Segment type Data/Code
+³³³³ ³³³³³³³ÀÄÄÄ Iterated segment
+³³³³ ³³³³³³ÀÄÄÄÄ Movable segment
+³³³³ ³³³³³ÀÄÄÄÄÄ Segment can be shared
+³³³³ ³³³³ÀÄÄÄÄÄÄ Preload segment
+³³³³ ³³³ÀÄÄÄÄÄÄÄ Execute/read-only for code/data segment
+³³³³ ³³ÀÄÄÄÄÄÄÄÄ Segment has relocations
+³³³³ ³ÀÄÄÄÄÄÄÄÄÄ Code conforming/Data is expand down
+³³³³ ÀÄÄÄÄÄÄÄÄÄÄ I/O privilege level
+³³³ÀÄÄÄÄÄÄÄÄÄÄÄÄ Discardable segment
+³³ÀÄÄÄÄÄÄÄÄÄÄÄÄÄ 32-bit code segment
+³ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Huge segment
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ GDT allocation requested
+[0011]
+ !4LE !4header !4View Ü
+  ßßßßßßßßßßßßßßßß
+ !1F1            Help
+ !1F8            Go to the 'MZ' MS-DOS header view
+ !1ESC           Return to the view mode
+[0012]
+ !4LX !4header !4View Ü
+  ßßßßßßßßßßßßßßßß
+ !1F1            Help
+ !1F8            Go to the 'MZ' MS-DOS header view
+ !1ESC           Return to the view mode
+[0013]
+ !4File !4panel Ü
+  ßßßßßßßßßßß
+!2ÄÄÄÄ !3Cursor !3movement !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       Line up/down
+ !1Left!0,!1Right    Column left/right
+ !1Home!0,!1End      List begin/end
+ !1PgUp!0,!1PgDn     Page up/down
+ !1BkSp          Go to up level directory
+
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1F2            Select sorting method
+ !1F3            Select drive
+ !1F4            Create a new file
+ !1F5            Select view mode brief/full
+ !1Enter         Select a file for view or enter the directory
+ !1ESC           Return to the view mode
+[0014]
+ !4Boot !4record Ü
+  ßßßßßßßßßßßß
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1ESC           Return to the view mode
+
+!2ÄÄÄÄ !3Info !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+        Map of the boot sector of an MS-DOS disk.
+  00H ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+      ³             E9 XX XX or EB XX 90              ³
+  03H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+      ³             OEM name and version              ³
+      ³                   (8 bytes)                   ³
+  OBH ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´Ä¿
+      ³          Bytes per sector (2 bytes)           ³ ³
+  ODH ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³     Sectors per allocation unit (1 byte)      ³ ³
+  0EH ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³   Reserved sectors, starting at 0 (2 bytes)   ³ ³
+  10H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³            Number of FATs (1 byte)            ³ B
+  11H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ P
+      ³  Number of root-directory entries (2 bytes)   ³ B
+  13H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³   Total sectors in logical volume (2 bytes)   ³ ³
+  15H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³ MS-DOS
+      ³             Media descriptor byte             ³ ³ version 2.0
+  16H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³      Number of sectors per FAT (2 bytes)      ³ ³
+  18H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´Íµ
+      ³          Sectors per track (2 bytes)          ³ ³
+  1AH ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³           Number of heads (2 bytes)           ³ ³ MS-DOS
+  1CH ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³ version 3.0
+      ³      Number of hidden sectors (4 bytes)       ³Íµ
+  20H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³ MS-DOS
+      ³        Total sectors in logical volume        ³ ³ version 4.0
+      ³      (MS-DOS 4.0 and volume size >32 MB)      ³ ³
+  24H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´Íµ
+      ³             Physical drive number             ³ ³
+  25H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³                   Reserved                    ³ ³
+  26H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³     Extended boot signature record (29H)      ³ ³ Additional
+  27H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³ MS-DOS 4.0
+      ³            32-bit binary volume ID            ³ ³ information
+  2BH ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³            Volume label (11 bytes)            ³ ³
+  36H ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ ³
+      ³              Reserved (8 bytes)               ³ ³
+  3EH ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ÄÙ
+      ³                   Bootstrap                   ³
+      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[0015]
+ !4Master !4boot !4record Ü
+  ßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3General !3function !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1F1            Help
+ !1ESC           Return to the view mode
+
+!2ÄÄÄÄ !3Info !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+     The  first  physical  sector  on  a fixed disk (track 0, head 0,
+sector  1)  contains  the  master  boot  record, which is laid out as
+follows:
+
+  Bytes              Contents
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+  000Ä1BDH           Reserved
+  1BEÄ1CDH           Partition #1 descriptor
+  1CEÄ1DDH           Partition #2 descriptor
+  1DEÄ1EDH           Partition #3 descriptor
+  1EEÄ1FDH           Partition #4 descriptor
+  1FEÄ1FFH           Signature word (AA55H)
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+     The  partition  descriptors in the master boot record define the
+size, location, and type of each partition, as follows:
+
+  Byte(s)            Contents
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+  00H                Active flag (0 = not bootable, 80H = bootable)
+  01H                Starting head
+  02HÄ03H            Starting cylinder/sector
+  04H                Partition type
+                        00H   Unused
+                        01H   FAT-12
+                        04H   FAT-16
+                        05H   ExtPar
+                        06H   BigDos
+  05H                Ending head
+  06HÄ07H            Ending cylinder/sector
+  08HÄ0BH            Starting sector for partition, relative to begin-
+                     ning of disk
+  0CHÄ0FH            Partition length in sectorsThe active flag, which
+                     indicates that the partition is bootable, can be
+                     set on only one partition at a time.
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+[!END]

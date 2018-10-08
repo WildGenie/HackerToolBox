@@ -1,0 +1,1 @@
+Bitsum	Reg32Key	HKCU\Software\Microsoft\Windows\CurrentVersion\COMCTL\

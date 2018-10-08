@@ -1,0 +1,26 @@
+:BASE pelock_pl.hlp
+1 Wprowadzenie
+2 Informacje=Info@pelock_pl.hlp
+2 Dlaczego=Why@pelock_pl.hlp
+2 Historia wersji=History@pelock_pl.hlp
+2 Licencja=License@pelock_pl.hlp
+2 Podziêkowania=Credits@pelock_pl.hlp
+2 FAQ=FAQ@pelock_pl.hlp
+1 Konfiguracja
+2 Opcje programu=ProgramOptions@pelock_pl.hlp
+2 Opcje projektu=ProjectOptions@pelock_pl.hlp
+1 Przyk³ady
+2 Klucze licencyjne=ExampleLicenseKeys@pelock_pl.hlp
+2 Dodatkowe dane klucza=ExampleAdditionalKeyData@pelock_pl.hlp
+2 Data wygaœniêcia klucza=ExampleKeyExpirationDate@pelock_pl.hlp
+2 Sprzêtowy identyfikator klucza=ExampleHardwareKeyId@pelock_pl.hlp
+2 Nazwa u¿ytkownika=ExampleUserName@pelock_pl.hlp
+2 Ustawianie klucza=ExampleSettingKey@pelock_pl.hlp
+2 Szyfrowanie kodu=ExampleCryptMarkers@pelock_pl.hlp
+2 Zamazywanie kodu=ExampleClearMarkers@pelock_pl.hlp
+2 Generator kluczy=ExampleKeygen@pelock_pl.hlp
+1 Rejestracja
+2 Wersja demo=Demo@pelock_pl.hlp
+2 Jak zamówiæ=HowToOrder@pelock_pl.hlp
+2 Uaktualnienia=Upgrade@pelock_pl.hlp
+1 Kontakt=Contact@pelock_pl.hlp

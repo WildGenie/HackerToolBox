@@ -1,0 +1,45 @@
+[Project ID]
+Signature=UE Proj: v.1
+[Project Information]
+Project Directory=D:\Documents and Settings\pll\My Documents\C32Asm\Debug\language\
+Use Relative Directory=1
+Relative to Project File=1
+Project Wordfile=
+[Open Files]
+Open File0=D:\Documents and Settings\pll\My Documents\C32Asm\Debug\LANGUAGE\ChineseGb.ini
+Active File Display Mode=3
+Open File Pos0=18565
+Open File Line0=0
+Active File Index=2
+Open File Window Pos0=0,1,-1,-1,-4,-23,22,22,808,419
+Open File1=D:\Documents and Settings\pll\My Documents\C32Asm\Debug\LANGUAGE\English.ini
+Open File Pos1=22934
+Open File Line1=22670
+Open File Window Pos1=0,1,-1,-1,-4,-23,44,44,834,445
+Open File2=D:\Documents and Settings\pll\My Documents\C32Asm\更改纪录.txt
+Open File Pos2=320
+Open File Line2=0
+Open File Window Pos2=2,3,-1,-1,-4,-23,110,110,726,511
+Open File3=D:\Documents and Settings\pll\My Documents\C32Asm\Debug\C32ASM.INI
+Open File Pos3=92
+Open File Line3=2
+Open File Window Pos3=0,1,-1,-1,-4,-23,176,176,792,577
+Open File4=
+Open File Pos4=13065
+Open File Line4=0
+Open File Window Pos4=2,3,-1,-1,-4,-23,154,154,770,555
+Open File5=
+[File View]
+Current Select=打开文件\
+[Group]
+0=language
+2=
+1=
+[Files]
+0=ChineseGb.ini
+1=D:\Documents and Settings\pll\My Documents\C32Asm\Debug\C32ASM.INI
+2=D:\Documents and Settings\pll\My Documents\C32Asm\更改纪录.txt
+3=English.ini
+[Files - language]
+0=ChineseGb.ini
+1=English.ini

@@ -1,0 +1,226 @@
+
+ ui_name       = Czech
+ ui_code_page  = 1250 
+ ui_autor      = SetiSoft (c) Tech (www.setisoft.com, thx Daniel Housa)) 
+ ui_mod_version = 3.2.0
+
+ 1  = Soubor
+ 2  = Ukonèit
+ 3  = Novı projekt
+ 4  = Otevøít projekt
+ 5  = Uloit projekt
+ 6  = Nápovìda
+ 7  = Nápovìda
+ 8  = O programu...
+ 9  = Spustit ochranu !
+10  = Menu
+11  = Kopírovat
+12  = Info o aplikaci
+13  = Monosti ochrany
+14  = Upravit dialogy
+15  = Soubor VM && map
+16  = Spustit ochranu !
+17  = Licencování
+18  = Vloit
+19  = Zvláštní monosti
+20  = VM
+21  = Stav/Chyba
+22  = Vloit jméno souboru:
+23  = Jméno aplikace:
+24  = Domovská stránka:
+25  = Stránka pro zakoupení aplikace:
+26  = Zobrazit kód
+27  = Uivatelské pole
+28  = 
+29  = Neobnovovat Import Adress Table (IAT) , vymazat ji [NEBEZPEÈNÉ!]
+30  = Povolit konverzi "op-kódù" na "vm p-kódy"
+31  = Pouít reim "anti dump"
+32  = Stejná velikost souboru  (jako pùvodní soubor)
+33  = Kód
+34  = Live ochrana pøi spuštìní
+35  = Pøi chybách zozbrazovat hlášení
+36  = Vytvoøit záloní soubor
+37  = Nemohu chránit aplikaci která nemá oddíl ".code" !
+38  = Znemonit debugování a tracování
+39  = Vysoce úèinnı poly-meta morfing
+40  = Virtualizace importù
+41  = Stolen resources, konverze .rsrc na vlastní formát
+42  = Ochrana CRC oddílu "Code" / Blokovat "Loadery"
+43  = Reim virtualizace Entry pointu
+44  = Plnı
+45  = První call/jmp
+46  = Manuální, poèet instrukcí
+47  = Seznam hlášení:
+48  = Dùvod
+49  = OK
+50  = Chyba: Pøi spuštìní pod Windows 9x/ME
+51  = Chyba: Pøi detekci debuggeru / chybném CRC
+52  = Zrušit
+53  = Vytvoøit klíè
+54  = Kopírovat klíè do schránky
+55  = Vymazat tento záznam ?
+56  = Neplatnı klíè
+57  = Klíè je platnı
+58  = 
+59  = 
+60  = Spustit ochranu!
+61  = Obnovit ze zálohy
+62  = Spustit aplikaci !
+63  = Novı klíè
+64  = Ovìøit klíè
+65  = Black list
+66  = vytvoøit novı klíè
+67  = 
+68  = Aktivaèní klíè:
+69  = Aktivaèní klíè k ovìøení:
+70  = Info o klíèi
+71  = Kontrola klíèe
+72  = 
+73  = 
+74  = Pøidat uniklı klíè
+75  = Hledat hodnotu
+76  = Vymazat klíè
+77  = 
+78  = Název souboru klíèe (defaultní jméno klíèe ".unlock"):
+79  = 
+80  = Vıjimka:
+81  = Vybrat procedury pro virtualizaci:
+82  = z
+83  = Litujeme, ale tento program nepracuje pod Windows 9x/ME !
+84  = Nalezen debugger
+85  = Ve vašem systému byl nalezen bìící debugger.
+86  = Prosím, odstraòte jej z pamìti a restartujte Váš program !
+87  = Velikost souboru:
+88  = 
+89  = 
+90  = 
+91  = Soubor neexistuje
+92  = Obnovit soubor:
+93  = Spustit soubor:
+94  = Klíè se zdá bıt platnı
+95  = Neplatnı klíè, chybí signatura klíèe !
+96  = Neplatná data klíèe !
+97  = Neplatné MachineID, prosím zkontrolujte ho !
+98  = Hledat
+99  = Zadat jméno:
+100 = Analıza kódu...
+101 = V souboru MAP chybí procedury !
+102 = Vytvoøit seznam procedur...
+103 = Nahrávání souboru MAP selhalo !
+104 = Soubor MAP "%s" nebyl nalezen !
+105 = Soubor "%s" nebyl nalezen !
+106 = Soubor projektu %s nebyl nalezen !
+107 = Chyba pøi nahrávání souboru projektu
+108 = Chyba pøi zápisu do logovacího souboru
+109 = Litujeme, knihovnu nelze chránit !
+110 = Nenalezen soubor obrázku pro úvodní obrazovku !
+111 = 
+112 = 
+113 = Vytvoøit AES-256 bitovı klíè
+114 = Pokouším se nahrát MAP soubor
+115 = Soubor MAP byl nahrán
+116 = Chyba: Neplatnı MAP soubor !
+117 = 
+118 = Nová velikost importù
+119 = 
+120 = Zaèínám virtualizaci importù... prosím vyèkejte
+121 = urèuji oddíl kódu: na
+122 = celková virtuální
+123 = Vyhledávám odkazy na funkce importu. Èekejte...
+124 = Nalezen pro poèet "%s"
+125 = Chyba: virtuální entry point - velikost < 5 bytù
+126 = Virtuální entry point
+127 = Virtualizace: nalezeny znaèky na
+128 = vm
+129 = Chyba
+130 = Znaèky: nalezeny a zakódovány znaèky na
+131 = Chyba: Nebyl nylezen privátní klíè pro licencování !!
+132 = Licencování: nalezeny a zakódovány znaèky na
+133 = Komprimuji, prosím vyèkejte
+134 = 
+135 = Celková velikost loaderu
+136 = Aktualizuji TLS data
+137 = Pøidávám TLS data
+138 = Aktualizuji oddíl resource
+139 = Optimalizace souboru
+140 = Stejná velikost souboru: selhala - nová velikost souboru > pùvodní velikost souboru
+141 = Stejná velikost souboru: velikost byla nastavena
+142 = Ochrana probìhla úspìšnì !
+143 = Chyba
+144 = Morfování: nalezeny znaèky na
+145 = mm
+146 = Chybnı kód !
+147 = Neregistrovaná verze
+148 = Licenèní ID pro registraci:
+149 = 
+150 = 
+151 = Zadat klíè
+152 = Koupit
+153 = OK
+154 = Aktivaèní klíè pro odstranìní omezení:
+155 = Nemohu uloit licenèní klíè
+156 = Funkènost aplikace vypršela. Prosím navštivte naši webovou stránku !
+157 = Aplikace [*.exe]|*.exe
+158 = Všechny soubory [*.*]|*.*
+159 = Uivatelé a klíèe
+160 = Uivatelé
+161 = Klíèe
+162 = Black list
+163 = Privátní data pro zakódování klíèù a kódu:
+164 = Uloit klíèe do:
+165 = Datum vypršení platnosti aplikace:
+166 = Nespouštìt aplikaci bez platného aktivaèního klíèe
+167 = 
+168 = Monosti klíèe (uiv.nastav.bitù)
+169 =  [ Chyba ]
+170 = Toto èíslo MachineID je chybné !
+171 = (neregistrováno)
+172 = Verze programu 
+173 = Vytvoøit
+174 = Pole uivatel (jméno pro zapsání do klíèe):
+175 = Datum vypršení platnosti klíèe:
+176 = Monosti klíèe (uiv.nast. bitù)
+177 = Aktivaèní klíè:
+178 = Pouít standardní registraèní okno
+179 = Titulek dialogového okna 
+180 = Titulek Licenèního ID
+181 = Titulek Aktivaèního okna
+182 = Text:
+183 = Titulek tlaèítka [Zadat klíè]
+184 = Titulek tlaèítka [OK]
+185 = Titulek tlaèítka [Koupit]
+186 = Monosti
+187 = Vytvoøit projekt "keygen.exe"
+188 = Domovská stránka
+189 = Objednat nyní !
+190 = Okno registrace
+191 = Poadavek administrátorskıch práv
+192 = Kontrola jména chránìného souboru 
+193 = Debug
+194 = Èíst verzi ze souboru
+195 = Vybrat soubor...
+196 = Zobrazit v prohlíeèi
+197 = Log:
+198 = Chyba: nemáte administrátorská práva
+199 = Prosím, spuste tuto aplikaci s ADMINISTRÁTORSKİMI právy !
+
+200 = [ CHYBA ] Zjištìn debugger
+201 = [ CHYBA ] Licenèní klíè nelze uloit
+202 = [ TRIAL ] Platnost aplikace vypršela
+203 = [ CHYBA ] Uivatel nemá práva administrátora
+204 = Virtualizace
+205 = Knihovny [*.dll]|*.dll
+206 = [ CHYBA ] Kontrola CRC selhala
+207 = [ TRIAL ] Limitace doby spuštìní
+208 = Vytvoøit
+209 = Licenèní ID závisí na:
+210 = Hardwaru a platformì (vıchozí)
+211 = Hardwaru
+212 = Nezávislé
+213 = Povolit tvorbu zmìn v RTTI (delphi,vc)
+214 = Pouze jeden spuštìnı proces v pamìti
+215 = Pouít limit doby spuštìní, sekundy
+216 = [  ZPRÁVA  ] Aplikace je ji spuštìna
+217 = [ TRIAL ] Zjištìna manipulace se systémovım èasem
+218 = Tato funkce je dostupná pouze v registrované verzi!
+219 = Uloit aktivaèní klíè do souboru

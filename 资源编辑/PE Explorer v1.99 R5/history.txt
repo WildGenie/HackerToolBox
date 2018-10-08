@@ -1,0 +1,564 @@
+================================================================
+        PE Explorer: 版本历史
+================================================================
+
+	图例:
+	+ 新特性
+	* 改进/修正或者 BUG 修正
+
+
+ 1.99 R5 (10/28/2008)
+
+	常规: 
+	* BUG 修正: 修正在 Windows Vista 下的 UI 错误。
+	* BUG 修正: 修正退出 PE Explorer 时偶然发生的系统锁死。
+	* 其他小的 BUG 修正和改进。
+
+	文件头信息查看器:
+	+ 在描述字段增加字段编辑器来查看或设置标记位。
+
+	重定位表查看器:
+	* BUG 修正: 不能显示位于文件资源区段后的重定位表。
+
+	资源编辑器:
+	* 在风格加载向导中增加处理器构架选项。 
+	* BUG 修正: 当最后编辑的项目是菜单的分隔器时发生的错误。
+
+	UPX 脱壳插件: 
+	* 小更新。
+
+ 1.99 R4 (07/28/2008)
+
+	General:
+	+ Added the option to save the Headers Info, Data Directories
+	  and Section Headers View to a text file.
+	* Improved opening of huge files (of 1 Gb or larger). 
+	* Bugfix: PE Explorer reported negative values for the total 
+	  physical memory under Vista SP1.
+	* Minor tweaks.
+
+	Resource editor:
+	* Bugfix: Fixed an error that occasionally occurred when 
+	  editing menus.
+
+ 1.99 R3 (06/05/2008)
+
+	General:
+	* Added the Reload Last Opened File button.
+	* Minor tweaks and improvements.
+
+	Section Headers Viewer:
+	* Added the Delete/Undelete Section buttons.
+	* Bugfix: Sections could not be deleted.
+
+	Resource editor:
+	* Bugfix: Fixed an error that caused PE Explorer to unexpectedly
+	  shut down when saving multiple resources at once.
+
+	UPX Unpacker plug-in:
+	+ Now supports for UPX v3.03.
+	* Minor improvements.
+
+ 1.99 R2 (08/17/2007)
+
+	General:
+	+ Added the NsPack Unpacker plug-in.
+	* Bugfix: PE Explorer would occasionally raise an exception on 
+	  startup if the logfile was corrupted.
+	* Minor tweaks and improvements.
+
+	Resource editor:
+	* Bugfix: when displaying multilingual StringTables the string 
+	  indices would be displayed incorrectly.
+
+	UPX Unpacker plug-in:
+	+ Now supports for UPX v3.01.
+	+ Now supports for LZMA compression method.
+	+ Now supports for scrambled files originally compressed by UPX v3.01.
+	* Minor improvements.
+
+ 1.99 (05/02/2007)
+
+	General:
+	+ Added the Digital Signature Viewer.
+	* Now prompts to remove missing files from the Recent File list.
+	* Minor tweaks and improvements.
+
+	Section Headers Viewer:
+	+ Now supports creating a resource section in files that don't 
+	  contain a resource table.
+	* Bugfix: Fixed errors that occurred when saving files with the 
+	  first section of zero length. 
+
+	Resource editor:
+	+ Now supports replacing large (256x256) Vista icons stored as .ICO 
+	  with an icon from a PNG file.
+	+ Manifest Wizard now supports adding a trust info section to mark 
+	  a pre-Vista application with a requested execution level.
+	* Bugfix: The newly created manifest resource could not be deleted.
+
+ 1.98 R5 (11/15/2006)
+
+	General:
+	* Now PE Explorer is Vista Ready. Fixed issues with Thumbnail 
+	  Preview and Flip 3D.
+	* Bugfix: Failed to maintain the maximum log size and the number 
+	  of files available in the Recent Files submenu from session to 
+	  session.
+	* Bugfix: Fixed minor memory leaks.
+	* Other minor bugfixes and improvements.
+
+	Resource editor:
+	* Bugfix: The search dialog didn't get minimized when minimizing 
+	  PE Explorer.
+	* Bugfix: The dialog preview window stayed on top when switching 
+	  to another application.
+	* Bugfix: Visual Studio gave an incorrect format error on some 
+	  dialogs in files saved out of PE Explorer.
+
+ 1.98 R4 (09/01/2006)
+
+	General:
+	+ Added the WinUpack/Upack Unpacker plug-in. 
+	* Improved detection of files with non-standard PE headers.
+	* Bugfix: PE Explorer occasionally hangs on startup on some 
+	  systems (the splash screen is displayed and then hangs in there).
+
+	Disassembler:
+	+ Added the options to save and load the disassembly listing and all 
+	  the changes made to continue on later.
+	+ Added the shortcut key to switch between the Disassembler and the 
+	  main PE Explorer window.
+	* Bugfix: Displaying addresses in the View tabs didn't work. 
+	* Other minor bugfixes.
+
+	Export Viewer:
+	+ Added the button to jump to a selected address in the Disassembler.
+
+
+ 1.98 R3 (07/07/2006)
+
+	Disassembler:
+	* Bugfix: Attempting to disassemble a file with damaged 
+	  imports/relocations causes an error.
+	* Other minor bugfixes.
+
+	UPX Unpacker plug-in:
+	+ Now supports unpacking of files packed with a number of 
+	  UPX scramblers: Advanced UPX Scrambler, UPoLyX, UPX Lock,
+	  UPX Mutanter, UPX Scrambler, UPX SHIT.
+
+ 1.98 R2 (05/02/2006)
+
+	* Bugfix: Attempting to view the raw data for a section 
+	  occaissionally causes an access violation.
+	* Bugfix: The dialog editor didn't allow editing dialogs 
+	  in Windows Mobile 5 files.
+	* Bugfix: Replacing an icon resource with one from a file 
+	  causes an error.
+	* Bugfix: Attempting to play an .AVI resource occaissionally 
+	  causes an error.
+	* Bugfix: Displaying a resource as hex dump occaissionally 
+	  causes an error.
+	* Bugfix: Fixed an issue with the numbers on the numeric keypad.
+	* Bugfix: Fixed errors that occaissionally occurred when editing 
+	  a Delphi Image List (the image transparency no longer worked, 
+	  the picture appeared as a monochrome bitmap).
+	* Other minor bugfixes and improvements.
+
+ 1.98 (12/01/2005)
+
+	Resource editor:
+	+ Now supports viewing and replacing large (256x256) Vista 
+	  icons stored as PNGs.
+	* Bugfix: Fixed an error that occaissionally occurred when 
+	  displaying a resource as hex dump.
+
+	UPX Unpacker plug-in:
+	* Now supports unpacking of programs packed with the obsolete 
+	  early versions of UPX (prior to 0.80).
+	* Now attempts to recover a file, even when an original PE file 
+	  header entry is no longer available after unpacking.
+
+	Data Directories:
+	* Added the Set to Zero button to make removing a pointer easier.
+
+	Disassembler:
+	* Bugfix: Fixed an error that occaissionally occurred when 
+	  searching for an offset to fields in the VCL objects.
+	* Other minor improvements.
+
+ 1.97 (04/25/2005)
+
+	General:
+	+ Added the Favorite Files menu item to display a list 
+	  of favorite files for easy access.
+
+	Disassembler:
+	* Bugfix: The search command didn't start at the current line
+	  of the code when reversing the direction of the search.
+	* Other minor bug fixes.
+
+	Resource editor:
+        + Now supports editing Dialog Data (string values only).
+        * Now supports viewing and editing Bitmaps contained in binary 
+	  streams (previously PE Explorer failed to find the needed 
+          resources in programs written in Borland Delphi & C++ Builder).
+
+ 1.96 (11/01/2004)
+
+	Disassembler:
+	+ Added the option to save the disassemly listing with 
+	  opcodes and addresses.
+	+ Added the option to save the Strings List Tab View to 
+	  a text file.
+	+ Added the option to save the VCL Methods Tab View to 
+	  a text file.
+	* Upgraded algorithms and methods resulting in:
+	  - Better Unicode Strings detection.
+	  - Better compiler version detection for programs written 
+	    in Borland Delphi & C++ Builder.
+	* Bugfix: Fixed an error that occaissionally occurred 
+	  when searching for VCL object names.
+
+	UPX Unpacker plug-in:
+	* Now all versions of UPX are supported from 0.8x up to 1.92.
+
+ 1.95 (06/14/2004)
+
+	General:
+	+ Added the Remove Debug Information Tool.
+	+ Added the Remove Relocations Tool.
+
+	Disassembler:
+	+ Now supports the SSE3 instruction set.
+	* Upgraded the algorithm for detecting Unicode strings.
+	* Improved the data analysis algorithm to produce a higher 
+	  quality disassembly listing. 
+
+	Resource editor:
+	* Bugfix: TypeLibs in the multi-language resources would 
+	  occassionally display incorrectly.
+
+ 1.94 (10/20/2003)
+
+	Resource editor:
+        + Now supports editing Accelerators.
+
+	Disassembler:
+	+ Now supports the SSE2 instruction set.
+	
+	General:
+	* Now supports opening files with modified MS-DOS stubs.
+	* Now saves charset settings when customizing font.
+
+	UPX Unpacker plug-in:
+	* Added support for NRV2E_LE32 compression method. Now all versions 
+	  of UPX are supported from 0.8x up to 1.90.
+	* Now supports unpacking files with modified UPX headers.
+
+ 1.93 (06/16/2003)
+
+	Resource editor:
+	+ Now supports searching for strings in string resources.
+	+ XML files can now be displayed and edited.
+
+	Disassembler:
+	+ Added ability to search the Quick View tabs in the Disassembler window.
+
+	General:
+	* Added ability to set the default Viewer at startup.
+	* Date/Time displayed in the Log window can be turned off.
+
+ 1.92 (04/24/2003)
+
+	Resource editor:
+	* Bugfix: Fixed an error that occurred when modifying ImageLists 
+	  built with Delphi 7.
+	* Bugfix: The icon viewer would occaissionally display large icons 
+	  incorrectly.
+
+	General:
+	* Minor changes to the user interface. 
+	* Bugfix: The UPX Unpacker plug-in would occaissionally display 
+	  resource names incorrectly.
+
+ 1.91 (01/20/2003)
+
+	Resource editor:
+	+ Now supports editing DFM (Borland Delphi/Builder forms).
+	* Bugfix: Pasting to and from the clipboard in the dialog, menu 
+	  and text modes was repaired again.
+	* Bugfix: The UPX Unpacker plug-in would occaissionally display 
+	  resource names incorrectly. 
+
+	Disassembler:
+        + Now displays opcode values as part of the listing.
+	+ Now supports copying selected text from the disassembly listing 
+	  to the clipboard.
+	+ Added the Strings Quick View Tab.
+	+ Added the VCL Methods Quick View Tab (for Borland Delphi/Builder).
+	+ Added 4 new views for displaying selected addresses from the 
+	  disassembly listing. These views support quick swapping with the 
+	  main disassembly listing.
+	+ Now supports renaming labels and adding comments.
+	+ Added the option to find references to the current location.
+	* Improved the look of the Disassembly Listing Window by color 
+	  coding different sections.
+	* Doubleclicking an address in the listing window brings that 
+	  address into focus (like pressing Enter before).
+	* The Go To Next and Go To Previous buttons on the toolbar can be 
+	  used to navigate through the history of selected addresses.
+	* Verticle line spacing and the number of displayed opcode bytes can 
+	  be adjusted.
+
+	General:
+	+ Added drag and drop support.
+	* Bugfix: Filenames were always saved in lowercase - repaired.
+
+
+ 1.90 (09/16/2002)
+
+	Resource editor:
+	+ Now supports replacing non-standard resources in a file: 
+	  typelibs, cab, MIDI, custom resources and more.
+	+ Now extracts Borland VCL images (ImageList & Bitmap) at 
+	  a 24 bit color depth.
+	* Bugfix: Pasting to and from the clipboard in the dialog, 
+	  menu and text modes was repaired.
+	* Bugfix: Fixed minor syntax errors in saved *.rc files. 
+
+	Disassembler:
+        + Upgraded algorithms and methods resulting in: 
+	牋牱 Faster disassembly times. Disassembly is now 10 times 
+	     faster with most files.
+	牋牱 Higher quality sourcecode listings with fewer 
+	     misinterpretations of data.
+	牋牱 All Borland Delphi and Builder types and objects are 
+	     detected correctly.
+	牋牱 System libraries can now be disassembled without errors.
+	+ Added the option to verify offsets.
+	+ Added the option to analyze unprocessed data.
+	+ Now supports the SSE instruction set.
+
+	Dependency Scanner:
+	+ Added the option to automatically refresh the scan when the 
+	  window is reopened.
+
+	General:
+	* Improved Export Entry processing speed. Libraries with 1000+ 
+	  export functions open significantly faster.
+	* Bugfix: Fixed minor memory and resource leaks.
+
+
+ 1.81 (06/12/2002)
+
+        Resource editor:
+	+ PNG files can now be displayed and replaced.
+
+
+ 1.80 (04/29/2002)
+
+	General:
+	+ Added the TimeDateStamp Adjuster Tool.
+        + Added support for unmangling overloaded C++ function names 
+          for files built with Borland and Microsoft compilers in the 
+          Syntax Lookup.
+        + Added option to create backup files to the Customize dialog.
+        * Bugfix: Empty folders were being created when saving multiple 
+          resources at once.
+
+
+ 1.70 (03/10/2002)
+
+	Resource editor:
+	+ Added ability to detect HTML and PNG file types.
+        + Added the Delete/Undelete Resource feature.
+        + Added ability to numerically adjust a control position and 
+          size when editing a dialog.
+        * Improved Icon and Bitmap detection algorithm when showing 
+          dialogs  (previously PE Explorer failed to find the needed 
+          resources on occasion).
+
+	Disassembler:
+        * Listing Window is now flicker free.
+        * Bugfix: Fixed a List Index Out Of Bound error that occurred 
+          when fitting small disassembly listings into the Listing Window.
+
+        General:
+        + Added the Undecorate C++ function names feature in the Syntax 
+          Lookup.
+        * The Open/Save dialogs are resizeable now.
+        * Bugfix: Fixed the Syntax Editor window size.
+        * Bugfix: Fixed a memory access error that caused PE Explorer to 
+          unexpectedly shut down on occassion.
+
+
+
+ 1.60 (11/15/2001)
+
+	Resource editor:
+	* Added changes to the output format used for writing ImageLists.
+	* Bugfix: Modified files would be inoperable when non-terminated 
+	  Unicode text strings were present.
+
+	General:
+	* PE Explorer is now resizable! Control positions are maintained 
+	  from session to session. 
+	* The color and font for ListViews, TreeViews and RichText Edit 
+	  Controls is now customizable.
+
+
+ 1.50 (10/12/2001)
+
+	Resource editor:
+	+ Windows XP Visual Style Manifest Wizard.
+	+ Save Multiple Resources at Once.
+	+ Version Info Editor.
+
+	Disassembler:
+	+ Several new disassembly options.
+	+ Added support for new Delphi 6 object types to the VCL object 
+	  search and detect algorithm.
+	* Improved the data analysis algorithm to produce a higher quality 
+	  sourcecode listing.
+	* Improved compiler version detection for programs written in Borland 
+	  Delphi & C++ Builder.
+
+
+	General:
+	+ Several Customization options - including font face and size 
+	  selection, background color settings and user selected project 
+	  directories and log file settings.
+	+ Plug-ins manager.
+	+ UPX Unpacker plug-in.
+
+
+ 1.40 (08/01/2001)
+
+	Resource editor:
+	+ The TypeLib data format can now detected and displayed (classes, 
+	  interfaces, properties, etc).
+	+ Message Tables can now be edited.
+	+ Animated Cursors can now be displayed and replaced.
+	+ Animated Gifs can now be played.
+	+ Rich Text Format can now detected and edited.
+	+ Windows Meta Files can now be detected and replaced (.wmf only).
+	+ Dialog Data can now be detected and displayed (string values only).
+	+ ToolBars can now be detected and displayed.
+	+ Executable formats (PE/LE/NE) can now be detected.
+	+ Added Borland Delphi 6 compatibility.
+	* SysDateTimePick32 and ToolbarWindow32 classes are now displayed 
+	  correctly when viewing/editing a dialog.
+	* Bugfix: A bad pointer to the Directory Name would result in losing 
+	  names and resources if there was a Named Directory listed first in 
+	  the resource list.
+
+	Headers Info:
+	+ The Entry Point value can now be modified using automatic range 
+	  checking, provided the new value falls within the permissable range.
+
+	Disassembler:
+	+ Disassembly time for Borland VCL executables is reduced up to 25%!
+	+ Objects found in Borland VCL executables can be saved immediately 
+	  after the preload step.
+	+ Improved the algorithm for working with Borland VCL files. Objects 
+	  stored in DLLs are now detected correctly in most cases.
+	+ The Name List and the Problems and Messages List can now be saved.
+	+ Search options for searching through the disassembly listing and 
+	  the Name List.
+	+ A list of jumps is maintained for easier navigation through the 
+	  disassembly listing.
+	+ Quickly jump to a selected lable value using a mouse context menu 
+	  or Enter.
+	+ Splitters and scrollbars added.
+	+ The Disassembler main window, the splitters, the infoforms and the 
+	  object table fields all retain their positions from your most recent 
+	  PE Explorer session.
+
+	Data Directory Viewer:
+	* Bugfix: Errors detected in the resources when opening a file (Safe 
+	  Mode) would result in not being able to save a new image.
+
+	General:
+	* Bugfix: The accelerator keys misfunctioned for the menus under Win95/NT.
+	* Bugfix: Occaissionally menus would resize to the entire screen width.
+	* Bugfix: Occaissionally the splash screen would stall on Windows 2000 
+	  installations because of the following instruction:
+	牋SendMessage(HWND_BROADCAST, WM_FONTCHANGE, 0, 0);
+	牋Apparently, Windows 2000 sometimes has trouble checking the message queue.
+
+ 1.30 (06/18/2001)
+
+	+ Support for opening a file from the command line.
+	+ Integration with the Clipboard (copy/paste).
+	+ Changing Font properties in the Dialog Editor.
+	* Added shortcuts for SpeedButtons.
+	* Fixed:
+	牋- Working with ImageList for Borland Delphi 2/3.
+	牋- Algorithm for verifying sections alignment on the FileAlignment 
+	    boundary.
+	牋- Working with Unicode Strings in the Resource Viewer/Editor.
+	牋- Algorithm for searching in the resource tree (sped up 1000 times!).
+
+ 1.20 (05/07/2001)
+
+	+ Quick Function Syntax Lookup - displays the calling syntax for 
+	  exported/imported functions.
+	+ Syntax description editor - for adding custom comments, altering 
+	  values or creating new library description.
+	+ Dependency Scanner - recursively scans all modules linked to by a 
+	  particular PE file.
+	* Fixed a bug in the Resource viewer: when displaying Borland VCL
+          objects the value for strings would occassionally display 
+	  incorrectly.
+
+ 1.01 (03/23/2001)
+
+	* Fixed a bug which raised an error when compiling resources:
+	  occasionally the resource names would be lost.
+	* Fixed a bug which raised an exception when aborting disassembly.
+	* The improved algorithm of working with big number (500 and more)
+	  of items in the resource tree.
+	* Changes to the user interface for easy accessability.
+
+
+ 1.00 (02/23/2001)
+
+	+ The Section Editor - now you can edit, repair and restore the damaged
+	  section headers.
+	+ The Resource Editor - easy-to-use visual editing features let you 
+	  quickly modify the resources without writing any scripts.
+	+ Opening file in Safe Mode - now you can open and explore even broken 
+	  or packed files.
+	+ The Plug-ins System - now you can write your own custom plug-ins to 
+          perform any startup processing (for unpacking or whatever).
+	* The improved algorithm of access to internal structures of PE files.
+	* A lot of small but useful enhancements.
+	* Some pretty changes to the user interface.
+	* Some bugs were caught and fixed (thanks to all who helped testing 
+          the beta versions).
+
+
+
+ Beta versions history:
+-----------------------
+ build 0.90 ?New features added to Resource Viewer:
+   		- Menu and Dialogs visualization,
+   		- Accelerators and Message Table support,
+   		- Autorecognition of Unicode Text and CAB. Displaying info 
+		  about CAB contents.
+	    ?Added the Delay Import Viewer.
+	    ?The Characteristics Editor added to the Section Headers Viewer.
+	    ?Fixed a bug which raised an exception when obtaining debug info.
+	    ?Some changes to the user interface.
+
+
+ build 0.80 ?Added detailed analysis of form contents (for Borland) with 
+              possibility to navigate easily through objects and save their 
+              contents (Image Lists, Strings List, Glyphs, Bitmaps etc). 
+            ?Compiler version determination (Standard Version / Professional 
+              Version / Client/Server Suite (Enterprise)) for Borland products.
+            ?Minor changes to the user interface.
+
+ build 0.70 ?initial public beta release (October 3, 2000)

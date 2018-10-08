@@ -1,0 +1,221 @@
+[0000] - £« ¢­®¥ ¬¥­î.
+ !4Main !4Menu Ü
+  ßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last item
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1Alt!0+!1J         Fall to DOS-shell
+ !1Shift!0+!1F9      Save current setup (of Q-Setup :)
+ !1F2            Save settings
+ !1Shift!0+!1F2      Save settings as...
+ !1F9            Load built-it palette
+ !1Enter         Child window
+ !1Esc           Exit Q-Setup
+
+[0005] - ¨¬¯®àâ ª®­ä¨£ãà æ¨¨.
+ !4Import !4Configuration Ü
+  ßßßßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1F3            Change drive
+ !1Ctrl!0+!1\        Fast quit
+ !1Enter         Accept your choice
+ !1Esc           Exit window
+
+[0006] - ª®­¢¥àâ æ¨ï â ¡«¨æë á¨¬¢®«®¢.
+ !4Convert !4Character !4Tables !4File Ü
+  ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1F3            Change drive
+ !1Ctrl!0+!1\        Fast quit
+ !1Enter         Accept your choice
+ !1Esc           Exit window
+
+[0010] - ®á­®¢­ë¥ ®¯æ¨¨.
+ !4Global !4Options Ü
+  ßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last item
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1F2            Save settings
+ !1Shift!0+!1F2      Save settings as...
+ !1Enter         Child window
+ !1Esc           Exit window
+
+
+[0011] - ®á­®¢­ë¥ ®¯æ¨¨. Tab.
+ !4Global !4Options Ü
+  ßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last item
+ !1Left!0,!1Right    Dec/Inc current number (circulary)
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1F2            Save settings
+ !1Shift!0+!1F2      Save settings as...
+ !1Esc           Exit window
+
+
+[0012] - ®á­®¢­ë¥ ®¯æ¨¨. Chr.
+ !4Global !4Options Ü
+  ßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last item
+ !1Left!0,!1Right    Dec/Inc current number (circulary)
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1F2            Save settings
+ !1Shift!0+!1F2      Save settings as...
+ !1Enter         Call ASCII-table
+ !1Esc           Exit window
+
+
+[0020] - ¬¥­î æ¢¥â®¢.
+ !4Color !4Options Ü
+  ßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last item
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1F2            Save settings
+ !1Shift!0+!1F2      Save settings as...
+ !1Enter         Child window
+ !1Esc           Exit window
+
+
+[0021] - â ¡«¨æ  (¢ë¡®à) æ¢¥â®¢.
+ !4Color !4Table Ü
+  ßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last colomn
+ !1PgUp!0,!1PgDn     Go to the top/bottom line
+ !1Ctrl!0+!1Home     Go to the top-left corner
+ !1Ctrl!0+!1End      Go to the bottom-right corner
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1Enter         Accept your choice
+ !1Esc           Exit window
+
+
+[0030] - ¬¥­î à áè¨à¥­¨©.
+ !4Extension !4Options Ü
+  ßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Left!0,!1Right    Next record (extension)
+ !1Home!0,!1End      Go to the first/last item
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1Alt!0+!1F10       Extension browser
+ !1Alt!0+!1R         Sort the Reversed Extensions (tm)
+ !1Alt!0+!1S         Sort the extensions
+ !1F2            Save settings
+ !1F5            Copy current record
+ !1Ins           Add new record
+ !1Enter         Child window
+ !1Esc           Exit window
+
+
+[0040] - â ¡«¨æ  ASCII.
+ !4ASCII !4Table Ü
+  ßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last colomn
+ !1PgUp!0,!1PgDn     Go to the top/bottom line
+ !1Ctrl!0+!1Home     Go to the top-left corner
+ !1Ctrl!0+!1End      Go to the bottom-right corner
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Enter         Accept your choice
+ !1Esc           Exit window
+
+
+[0041] - ®ª­® ¢¢®¤ .
+ !4Input !4Window Ü
+  ßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Right!0,
+ !1Home!0,!1End      Cursor movement
+ !1Ins           Insert mode on/off
+ !1Del           Delete character
+ !1BackSpace     Delete character left
+ !1Ctrl!0+!1BS       Delete all characters left
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1F5            Call ASCII-table
+ !1Enter         Accept input
+ !1Esc           Exit window
+
+
+[0042]
+ !4Warning !4Window Ü
+  ßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Right    Cursor movement
+ !1Y!0,!1N!0,!1C         Force the action matching the key
+ !1Enter         Accept your choice
+ !1Esc           Exit window
+
+
+[0043] - ®ª­® ¢¢®¤  áâà®ª¨.
+ !4String !4Input Ü
+  ßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Left!0,!1Right!0,
+ !1Home!0,!1End      Cursor movement
+ !1Ins           Insert mode on/off
+ !1Del           Delete character
+ !1BackSpace     Delete character left
+ !1Ctrl!0+!1BS       Delete all characters left
+ !1Ctrl!0+!1\        Fast quit
+ !1Enter         Accept input
+ !1Esc           Exit window
+
+
+[0080] - ä ©«®¢ë© ¬í­¥¤¦¥à.
+ !4File !4Manager !4Options Ü
+  ßßßßßßßßßßßßßßßßßßßßß
+!2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last item
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1F2            Save settings
+ !1Shift!0+!1F2      Save settings as...
+ !1Enter         Child window
+ !1Esc           Exit window
+
+[0081]
+ !4File !4Manager !4Colors Ü
+  ßßßßßßßßßßßßßßßßßßßß
+ !2ÄÄÄÄ !3Control !3keys !2ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ !1Up!0,!1Down       One position up/down
+ !1Home!0,!1End      Go to the first/last item
+ !1Ctrl!0+!1F5       Move window
+ !1Ctrl!0+!1\        Fast quit
+ !1Alt!0+!1F5        Show main screen
+ !1F2            Save settings
+ !1Shift!0+!1F2      Save settings as...
+ !1Enter         Child window
+ !1Esc           Exit window
+
+
+[!END]

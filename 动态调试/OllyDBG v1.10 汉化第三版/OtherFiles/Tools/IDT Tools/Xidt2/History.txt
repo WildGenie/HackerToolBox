@@ -1,0 +1,59 @@
+3/15/2005
+---------------------------
+2k3下测试有点小问题,要改一下源码:xidt.cpp:
+
+--------------------------------------------------------------------------------
+BOOL AdjustTocken(LPCTSTR tocken)
+{
+  HANDLE hToken = NULL;
+  TOKEN_PRIVILEGES tkp;
+  BOOL bRet = FALSE;
+
+  tkp.PrivilegeCount = 1;
+  tkp.Privileges[0].Attributes = SE_PRIVILEGE_ENABLED;
+
+  if ( OpenProcessToken(GetCurrentProcess(),TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, &hToken) &&
+    LookupPrivilegeValue(NULL, tocken, &tkp.Privileges[0].Luid) &&
+    (SetLastError(0),TRUE) &&
+    AdjustTokenPrivileges(hToken, FALSE, &tkp, 0, (PTOKEN_PRIVILEGES)NULL, 0) &&
+    GetLastError() == 0)
+  {
+    bRet = TRUE;
+  }
+  if(hToken) CloseHandle(hToken);
+  return bRet;
+}
+
+BOOL CXIdtApp::InitInstance()
+{
+  AdjustTocken(SE_LOAD_DRIVER_NAME);
+--------------------------------------------------------------------------------
+
+3/14/2005
+-----------
+- First release
+备份及恢复IDT的小工具，支持win2k/xp/2003。
+
+主界面上有四个按钮：
+show : 查看当前idt.
+save : 存档：保存当前的idt到文件。
+load : 读档：从文件中读出idt.
+write: 将idt写入到系统中！
+
+实现说明：
+事实上，我写了一个dll,krmem.dll这个dll的功能很简单，从内核读入内存或向内核写入内存。利用这个功能，就可以写出这个idt工具了。事实上，还可以写出更多的好工具。
+
+krmem.dll导出三个函数：
+#define KRIMPORT __declspec(dllimport)
+KRIMPORT BOOL WINAPI KmOperation(IN const PVOID pSrc,OUT PVOID pdst,SIZE_T len);
+KRIMPORT BOOL WINAPI KReadMemory(IN const PVOID pSrc,OUT PVOID pdst,SIZE_T len);
+KRIMPORT BOOL WINAPI KWriteMemory(OUT PVOID pdst,IN const PVOID pSrc,SIZE_T len);
+KmOperation:相当于memcpy,只是copy的地址psrc和pdst都可以是内核地址。
+KReadMemory:读取内存，它是用KmOperation实现的。
+KWriteMemory:写入内存，它也是用KmOperation实现的。
+
+程序通过sidt指令得到idt地址，通过KReadMemory或KWriteMemory实现idt表的读取和写入。
+
+
+作者：goldenegg
+原文：http://bbs.pediy.com/showthread.php?s=&postid=76530#post76530

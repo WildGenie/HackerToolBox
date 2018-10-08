@@ -1,0 +1,108 @@
+END-USER LICENSE AGREEMENT FOR SAFENGINE SOFTWARE
+
+IMPORTANT-READ CAREFULLY: This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and Safengine Development Team for the Safengine software that accompanies this EULA, which includes associated media and Safengine Internet-based services ("Software").  An amendment or addendum to this EULA may accompany the Software.  YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA BY INSTALLING, COPYING, OR USING THE SOFTWARE.  IF YOU DO NOT AGREE, DO NOT INSTALL, COPY, OR USE THE SOFTWARE.
+
+1.	GRANT OF LICENSE.  Safengine grants you the following rights provided that you comply with all terms and conditions of this EULA:
+
+1.1	Installation and use.  You may:
+	(a) install and use a copy of the Software on one personal computer or other device; and 
+	(b) install an additional copy of the Software on a second, portable device for the exclusive use of the primary user of the first copy of the Software.
+	
+1.2	Alternative Rights for Storage/Network Use.  
+As an alternative to Section 1.1(a), you may install a copy of the Software on a network storage device, such as a server computer, and allow one access device, such as a personal computer, to access and use that licensed copy of the Software over a private network.  You must obtain a license to the Software for each additional device that accesses and uses the Software installed on the network storage device, except as permitted by Section 1.4 of this EULA.  
+
+1.3	License Grant for Remote Desktop.  
+You may use remote access technologies, such as the Remote Desktop features in Safengine products or NetMeeting, to access and use your licensed copy of the Software, provided that only the primary user of the device hosting the remote desktop session accesses and uses the Software with a remote access device.  These remote desktop rights do not permit you to use the Software on both the device hosting the remote desktop session and the access device at the same time.
+
+1.4	License Grant for Remote Assistance.  
+You may permit any device to access and use your licensed copy of the Software for the sole purpose of providing you with technical support and maintenance services.
+
+1.6	License Grant for Documentation.  
+The documentation that accompanies the Software is licensed for internal, non-commercial reference purposes only.
+
+1.8 License Grant for Personal Edition
+Allows one software developer to use Safengine Personal Edition on one computer.  This license offers advanced functionality for independent developers. This license allows to distribute protected applications on behalf of a person.
+
+1.9 License Grant for Enterprise Edition
+Allows any number of developers from the same company to use Safengine. If you represent a company, or a group or team of developers, choose this license type.  This license allows to distribute protected applications on behalf of a team or company.
+
+1.10 License Grant for Templates.  
+The Software may include document templates.  You may copy and modify the document templates available as part of the Safengine software that accompanies this EULA and distribute such templates along with your modifications for use by other licensees of the Software.  You also may copy, modify and distribute the 
+templates available through related Internet-based services along with your modifications for use by other licensees of the Software, but only for personal or commercial correspondence involving person-to-person communication.  You are not licensed to do any of the following:
+*	You may not sell, resell, license, rent, lease, lend, or otherwise transfer for value, the templates.
+*	You may not distribute the templates available via Internet-based services as part of any product or service.
+*	You may not copy or post any templates available through Internet-based services on any network computer or broadcast it in any media.  
+
+You must indemnify and defend Safengine against any claims or lawsuits, including attorneys' fees that arise from or result from the licensing or distribution of the templates as modified by you.
+
+2.	DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+
+2.1	Mandatory Activation.  THERE ARE TECHNOLOGICAL MEASURES IN THIS SOFTWARE THAT ARE DESIGNED TO PREVENT UNLICENSED USE OF THE SOFTWARE.   
+You may not be able to exercise your rights to the Software under this EULA after a finite number of product launches unless you activate your copy of the Software in the manner described during the launch sequence.  You may also need to 
+reactivate the Software if you modify your computer hardware or alter the Software.  Safengine will use those measures to confirm you have a legally licensed copy of the Software.  If you are not using a licensed copy of the Software, you are not allowed to install the Software or future Software updates.  Safengine will not collect any personally identifiable information from your device during this process.
+
+2.2	Internet-Based Services.  
+You may not use any Safengine Internet-based services associated with the Software in any manner that could damage, disable, overburden, or impair such services or interfere with any other party's use and enjoyment of them. You may not attempt to gain unauthorized access to any service, account, computer systems or networks associated with the Internet-based services.  
+
+3.	RESERVATION OF RIGHTS AND OWNERSHIP.  
+
+3.1 Safengine reserves all rights not expressly granted to you in this EULA.  The Software is protected by copyright and other intellectual property laws and treaties. Safengine or its suppliers own the title, copyright, and other intellectual property rights in the Software.  The Software is licensed, not sold.  This EULA does not grant you any rights to trademarks or service marks of Safengine.
+
+3.2 Safengine reserves the right to change the executable code and to remove, add or change the Software's functions.
+
+3.3 Any variation to the terms of this Agreement shall only be valid if made and delivered by Licensor. If you do not agree to any clause of this Agreement, you may ask for explanations from Licensor. However, this does not authorize you to consider this Agreement admitted. 
+
+4.	LIMITATIONS ON REVERSE ENGINEERING, DECOMPILATION, AND DISASSEMBLY. 
+
+4.1 You may not reverse engineer, decompile, or disassemble the Software, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation. 
+
+4.2 You may not remove or alter any Licensor copyright, trademark or other proprietary rights notice contained in any portion of this Software or other files that bear such a notice.
+
+4.3 Any such unauthorized use will result in immediate and automatic termination of this license without compensation of any charges connected with use of Safengine and may result in criminal and/or civil prosecution.
+
+5.	NO RENTAL/COMMERCIAL HOSTING. 
+You may not rent, lease, lend or provide commercial hosting services with the Software.
+
+6.	CONSENT TO USE OF DATA.  
+You agree that Safengine and its affiliates may collect and use technical information gathered as part of the product support services provided to you, if any, related to the Software.  Safengine may use this information solely to improve our products or to provide customized services or technologies to you and will not disclose this information in a form that personally identifies you.
+
+7.	ADDITIONAL SOFTWARE/SERVICES.  
+This EULA applies to updates, supplements, add-on components, or Internet-based services components, of the Software that Safengine may provide to you or make available to you after the date you obtain your initial copy of the Software, unless they are accompanied by separate terms.  Safengine reserves the right to discontinue Internet-based services provided to you or made available to you through the use of the Software.
+
+8.	UPGRADES. 
+To use Software identified as an upgrade, you must first be licensed for the software identified by Safengine as eligible for the upgrade. After installing the upgrade, you may no longer use the original software that formed the basis for your upgrade eligibility, except as part of the upgraded software.
+
+9.	NOT FOR RESALE SOFTWARE.  
+Software identified as "Not for Resale" or "NFR," may not be sold or otherwise transferred for value, or used for any purpose other than demonstration, test or evaluation.
+
+10.	SEPARATION OF COMPONENTS.  
+The Software is licensed as a single product. Its component parts may not be separated for use on more than one device.
+
+11.	SOFTWARE TRANSFER.  
+
+Internal.  
+You may transfer your copy of the Software to a different device.  After the transfer, you must completely remove the Software from the former device.  
+
+Transfer to Third Party.  
+If you are the person who initially licensed the Software, you may make a one-time permanent transfer of this EULA, Software and Certificate of Authenticity (if applicable) to another end user, provided that you do not retain any copies 
+of the Software.  This transfer must include all of the Software (including all component parts, the media and printed materials, any upgrades, this EULA, and, if applicable, the Certificate of Authenticity).  The transfer may not be an indirect transfer, such as a consignment.  Prior to the transfer, the end user receiving the Software must agree to all the EULA terms.
+
+12.	TERMINATION.  
+Without prejudice to any other rights, Safengine may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the Software and all of its component parts.
+
+13.	ENTIRE AGREEMENT; SEVERABILITY.  
+This EULA (including any addendum or amendment to this EULA which is included with the Software) is the entire agreement between you and Safengine relating to the Software and the support services (if any) and they supersede all prior or contemporaneous oral or written communications, proposals and representations with respect to the Software or any other subject matter covered by this EULA.  To the extent the terms of any Safengine policies or programs for support services conflict with the terms of this EULA, the terms of this EULA shall control.  If any provision of this EULA is held to be void, invalid, unenforceable or illegal, the other provisions shall continue in full force and effect.
+
+14. LIMITATION OF LIABILITY
+Safengine IS DISTRIBUTED "AS IS". NO WARRANTY OF ANY KIND IS EXPRESSED OR IMPLIED. YOU USE AT YOUR OWN RISK. THE AUTHOR WILL NOT BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE.
+
+15. PRIVACY POLICY
+We do not sell, hire or publicize your e-mail address or any other personal data held in our records.
+
+17. We have never claimed that Safengine encryption solutions provide 100% security or are uncrackable but help to reduce piracy.
+
+18. Installing or using Safengine signifies acceptance of these terms and conditions of the license.
+
+19. If you do not agree with the terms of this license you must remove Safengine from your storage devices and cease to use Safengine forthwith.
+
+

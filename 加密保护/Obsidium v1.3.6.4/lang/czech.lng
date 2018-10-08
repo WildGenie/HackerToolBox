@@ -1,0 +1,521 @@
+﻿[Info]
+LanguageName="Czech"
+Charset="utf-8"
+Version="1.3"
+
+[frmMain]
+; main window
+Caption="Obsidium Software Protection System"
+
+; page selection buttons
+1000.Tooltip="Nahrát/uložit soubor projektu"
+1001.Tooltip="Editovat nastavení projektu"
+1002.Tooltip="Správa klíčů"
+1003.Tooltip="Chránit aplikaci"
+1004.Tooltip="O programu"
+
+; toolbuttons
+1005.Tooltip="Vytvořit nový soubor projektu"
+1006.Tooltip="Nahrát soubor projektu"
+1007.Tooltip="Uložit soubor projektu"
+1008.Tooltip="Nastavení"
+
+; project management page
+1100.Caption="Správa projektu"
+1101.Caption="Činnost"
+1102.Caption="Informace"
+1103.Caption="Nový projekt"
+1103.Tooltip="Vytvořit nový projekt"
+1104.Caption="Vytvořit nový soubor projektu. Všechny neuložené změny v současném projektu budou ztraceny."
+1105.Caption="Nahrát projekt"
+1105.Tooltip="Nahrát existující projekt"
+1106.Caption="Nahrát dříve uložený soubor projektu. Všechny neuložené změny v současném projektu budou ztraceny."
+1107.Caption="Uložit projekt"
+1107.Tooltip="Uložit současný projekt"
+1108.Caption="Uložit současný projekt pro pozdější použití."
+1109.Caption="Při startu programu Obsidium musíte buď vytvořit nový soubor projektu nebo otevřít existující projekt."
+
+; options page
+1200.Caption="Možnosti"
+1201.Caption="Základní\nPokročilé\nLicencování\nČasové omezení\nHlášení"
+; basic settings
+1202.Caption="Základní nastavení"
+1203.Caption="Kódovat resources"
+1203.Tooltip="Kódovat resource directory (doporučeno)"
+1204.Caption="Komprese"
+1204.Tooltip="Povolit kompresi spustitelného programu a dat"
+1205.Caption="Odstranit exporty"
+1205.Tooltip="Odstranit exportované funkce ze spustitelného souboru"
+1206.Caption="Zachovat overlay"
+1206.Tooltip="Zachovat jakákoliv data přidaná ke spustitelnému souboru"
+1207.Caption="Kontrolovat přístup k overlay"
+1207.Tooltip="Monitorovat a kontrolovat přístup k datům overlaye"
+1208.Caption="Enkryptovat overlay"
+1208.Tooltip="Kódovat data overlaye"
+1209.Caption="Kontrola debuggeru"
+1209.Tooltip="Kontrola přítomnosti debuggeru (doporučeno)"
+1210.Caption="Nehlásit při detekci"
+1210.Tooltip="Potlačit hlášení o přítomnosti debuggeru"
+1211.Caption="Ochrana aplikace heslem"
+1211.Tooltip="Pokud zaškrtnete, bude aplikace spuštěna pouze po zadání hesla"
+1212.Tooltip="Zde zadejte heslo pro spuštění aplikace"
+1213.Caption="Nastavit proměnné prostředí"
+1213.Tooltip="Nastavit parametry ochrany v proměnných prostředí"
+1214.Caption="Skrýt proměnné prostředí"
+1214.Tooltip="Skrýt proměnné prostředí před monitorovacími nástroji"
+1215.Caption="Zamknout licenci jen pro určitý systém"
+1215.Tooltip="Licenční klíče budou platné jen pro určitý systém"
+1216.Caption="CPU"
+1216.Tooltip="Přidat CPU ke kalkulaci ID Systému"
+1217.Caption="Pevný disk"
+1217.Tooltip="Přidat pevný disk ke kalkulaci ID Systému"
+1218.Caption="Operační systém"
+1218.Tooltip="Přidat operační systém ke kalkulaci ID Systému"
+1219.Caption="MAC addresa"
+1219.Tooltip="Přidat MAC adresu primárního LAN adaptéru ke kalkulaci ID Systému"
+; advanced settings
+1220.Caption="Pokročilé nastavení"
+1221.Caption="Neprovádět relokaci image"
+1221.Tooltip="Force original image base (při potížích povolte)"
+1222.Caption="Odstranit byty v OEP"
+1222.Tooltip="Odstranit první instrukce v entry point programu (při obtížích zakažte)"
+1223.Caption="Nezobrazovat žádná hlášení"
+1223.Tooltip="Potlačit hlášení v případě chyby"
+1224.Caption="Odstranit nepotřebné resources"
+1224.Tooltip="Odstranit nepotřebné resources (specificky pro programy v Delphi)"
+1225.Caption="Delphi/BCB obfuscation"
+1225.Tooltip="Delphi/BCB obfuscation (čti dokumentaci)"
+1226.Caption="Dynamický přístup k API"
+1226.Tooltip="Povolit dynamický přístup k API ochrany prostřednictvím LoadLibrary/GetProcAddress"
+1227.Caption="Runtime patching"
+1227.Tooltip="Patching kódu spustitelného souboru během spuštění (při obtížích zakažte)"
+1228.Caption="Runtime tracing"
+1228.Tooltip="Tracování kódu spustitelného programu během běhu (při obtížích zakažte / zvýšit rychlost běhu programu)"
+1229.Caption="Kontrola enkryptov. oddílů"
+1229.Tooltip="Zkontrolovat možnou modifikaci enkryptovaných oddílů"
+; licensing settings
+1230.Caption="Nastavení licencování"
+1231.Caption="Umístění licenčního klíče:"
+1232.Caption="licenční klíč"
+1232.Tooltip="Licenční klíč bude uložen v souboru (jméno specifikujte dole)"
+1233.Caption="registr (současný uživatel)"
+1233.Tooltip="Licenční klíče budou uloženy v registru (HKEY_CURRENT_USER)"
+1234.Caption="registr (všichni uživatelé)"
+1234.Tooltip="Licenční klíče budou uloženy v registru (HKEY_LOCAL_MACHINE)"
+1235.Caption="Název klíčového souboru:"
+1236.Tooltip="Zde zadejte jméno klíčového souboru"
+1237.Caption="Vyžadovat pro běh programu platnou licenci"
+1237.Tooltip="Pokud povolíte tuto možnost, bude pro běh programu vyžadován platný registrační klíč"
+; time trial settings
+1238.Caption="Zapnout datum expirace"
+1238.Tooltip="Povolit pokud má funkčnost programu vypršet v určité datum"
+1239.Tooltip="Zde vyberte datum expirace"
+1240.Caption="Limitovaný počet spuštění:"
+1240.Tooltip="Povolit pokud má funkčnost programu vypršet po určitém počtu spuštění po instalaci"
+1241.Tooltip="Zde zadejte počet spuštění"
+1242.Caption="Zobrazit uživatelský NAG screen"
+1242.Tooltip="Zobrazit při spuštění programu uživatelský NAG screen (čtěte dokumentace)"
+1243.Caption="Vybrat"
+1243.Tooltip="Vybrat dialogový soubor"
+1244.Caption="Zpoždění v sekundách:"
+1245.Caption="Omezit počtem dní:"
+1245.Tooltip="Povolit pokud má funkčnost programu vypršet po uživatelem určeném počtu dní po instalaci"
+1246.Caption="Povolit expiraci aplikace"
+1246.Tooltip="Aplikace se spustí i když vyprší doba funkčnosti programu, pro bližší detaily čtěte dokumentaci"
+1247.Caption="Povolit novou zkušební dobu, verze"
+1247.Tooltip="Povolte, pokud chcete po instalaci novější verze aplikace znovu povolit zkušební dobu"
+1248.Tooltip="Zde zadat současné číslo verze"
+1249.Caption="Odstranit data o trialu"
+1249.Tooltip="Odstranit data o zkušebních omezeních z tohoto počítače"
+1259.Tooltip="Zde zadat počet dní"
+1260.Caption="Nastavení časového omezení"
+; messages settings
+1250.Caption="Uživatelská hlášení"
+1251.Caption="Detekován debugger:"
+1252.Caption="Vypršení zkušební doby:"
+;
+1253.Caption="Vybrat hlášení:"
+1254.Caption="Detekován debugger\nZkušební doba uplynula\nJe vyžadována licence\nPorucha integrity souboru\Chyba alokace paměti\nPorucha nahrávání DLL\nChyba importu\nImport ordinal error\nVnitřní chyba"
+1255.Caption="Záhlaví:"
+1256.Tooltip="Zde zadejte text záhlaví"
+1257.Caption="Hlášení"
+1258.Tooltip="Zde zadejte text hlášení"
+
+
+; key management page
+1300.Caption="Správa klíčů"
+1301.Caption="Použít interní licenční systém"
+1301.Tooltip="Vyberte v případě použití licenčního systému programu Obsidium"
+1302.Caption="Použít externí licenční systém"
+1302.Tooltip="Vyberte v případě že již používáte spolehlivý licenční systém"
+1303.Caption="Interní licenční systém"
+1304.Caption="Vytvořit kódovací klíče"
+1304.Tooltip="Vytvořit symetrické a asymetrické kódovací klíče"
+1305.Caption="512 bitů\n768 bitů\n1024 bitů\n1536 bitů\n2048 bitů"
+1305.Tooltip="Vyberte požadovanou velikost klíče"
+1306.Caption="Před vytvořením kódovacího klíče vyberte vlevo požadovanou velikost kódovacích klíčů. Tvorba klíče může trvat velmi dlouho."
+1307.Caption="Blacklisting klíčového souboru"
+1308.Caption="Blacklist klíčových souborů"
+1308.Tooltip="Prohlížet/přidat/odstranit blacklistované klíčové soubory"
+1309.Caption="Stiskněte tlačítko 'Blacklist klíčových souborů' pro prohlížení seznamu aktuálně blacklistovaných klíčových souborů a přidání/odstranění položek."
+1310.Caption="Tvorba klíčového souboru"
+1311.Caption="Vytvořit klíčový soubor"
+1311.Tooltip="Ukázat dialogové okno tvorby klíčového souboru"
+1312.Caption="Stiskněte tlačítko 'Vytvořit klíčový soubor' k ukázání se dialogového okna tvorby klíčového souboru které umožňuje tvorbu textových a binárních licenčních klíčů pro váš projekt."
+1313.Caption="Probíhá tvorba klíče. Tato činnost může trvat i několik minut v závislosti na vybrané velikosti klíče a rychlosti vašeho CPU."
+1315.Caption="Externí licenční systém"
+1316.Caption="Tento klíč bude použit ke kódování označených částí kódu. Detaily naleznete v dokumentaci."
+1317.Caption="Nahrát klíč"
+1317.Tooltip="Nahrát kódovací klíč ze souboru"
+1318.Caption="Externí klíč přítomen"
+
+; protection page
+1400.Caption="Ochrana"
+1401.Caption="Nastavení\nSpustitelné soubory"
+1402.Caption="Výstupní adresář:"
+1403.Caption="Vybrat"
+1403.Tooltip="Vybrat výstupní adresář"
+1404.Tooltip="Zde je ukázán stav ochrany"
+1405.Caption="Skončit při chybě"
+1405.Tooltip="Skončit aplikaci ochrany při výskytu chyby (při chránění více souborů)"
+1406.Caption="Ochránit všechny"
+1406.Tooltip="Ochránit všechny spustitelné soubory"
+1407.Caption="Vstupní soubor\nRelativní cesta výstupních souborů"
+1408.Caption="Přidat"
+1408.Tooltip="Přidat soubory do seznamu"
+1409.Caption="Editovat"
+1409.Tooltip="Editovat jména souborů"
+1410.Caption="Chránit"
+1410.Tooltip="Chránit vybraný soubor"
+1411.Caption="Vymazat"
+1411.Tooltip="Vymazat vybraný soubor se seznamu"
+
+; about page
+1500.Caption="O programu Obsidium"
+1501.Caption="Tato kopie programu Obsidium je licencována na:"
+1502.Caption="Registrovat"
+1502.Tooltip="Zadejte registrační kód"
+
+
+[frmBlacklist]
+; blacklisted keyfiles
+Caption="Klíčové soubory na blacklistu"
+
+1000.Caption="Hash\nLicense info"
+1000.Tooltip="Seznam klíčových souborů na blacklistu"
+1001.Caption="Přidat klíčový soubor"
+1001.Tooltip="Přidat klíčový soubor na blacklist"
+1002.Caption="Přidat textový klíč"
+1002.Tooltip="Přidat textový klíč na blacklist"
+1003.Caption="Odstranit klíčový soubor"
+1003.Tooltip="Odstranit vybraný klíčový soubor se seznamu"
+1004.Caption="Ukončit"
+1004.Tooltip="Ukončit toto dialogové okno"
+
+
+[frmEnterKey]
+; dialog for entering text keys
+Caption="Licenční klíč"
+
+1000.Caption="OK"
+1000.Tooltip="Zavřít toto okno"
+1001.Caption="Ukončit"
+1001.Tooltip="Ukončit a zavřít toto dialogové okno"
+
+
+[frmFileSelect]
+; file selection dialog
+Caption="Vybrat soubory"
+
+1000.Caption="Vybrat soubory"
+1001.Caption="Zadat soubor:"
+1002.Caption="Relativní výstupní cesta programu:"
+1003.Caption="Vybrat"
+1004.Caption="Vybrat"
+1005.Caption="OK"
+1006.Caption="Ukončit"
+
+
+[frmKeygen]
+; license key generation dialog
+Caption="Tvorba souboru s licenčním klíčem"
+
+1000.Caption="Licenční informace"
+1001.Tooltip="Přídatné informace uložené v licenčním souboru (max 31 znaků)"
+1002.Tooltip="Přídatné informace uložené v licenčním souboru (max 127 znaků)"
+1003.Caption="ID Systému"
+1004.Tooltip="Licence bude uzamčena pro toto ID systému"
+1005.Caption="Možnosti"
+1006.Caption="Pouze soubor"
+1006.Tooltip="Vytvořit pouze klíčový soubor"
+1007.Caption="Pouze text"
+1007.Tooltip="Vytvořit licenční data pouze jako text"
+1008.Caption="Text i soubor"
+1008.Tooltip="Vytvořit jak klíčový soubor tak data ve formě textu"
+1009.Caption="klíčový soubor vyprší:"
+1010.Tooltip="Povolit a vybrat datum pro vytvoření časově omezeného klíčového souboru"
+1011.Caption="Vytvořit"
+1011.Tooltip="Vytvořit licenční klíč"
+1012.Caption="Zavřít"
+1012.Tooltip="Zavřít toto dialogové okno"
+
+
+[frmPreferences]
+; preferences dialog
+Caption="Preferences"
+
+1000.Caption="Cesty"
+1001.Caption="Defaultní cesta k souboru projektu"
+1002.Caption="Vybrat"
+1003.Caption="Možnosti"
+1004.Caption="Automatické ukládání projektových souborů při ukončení"
+1005.Caption="OK"
+1006.Caption="Odejít"
+1007.Caption="Jazyk rozhraní"
+
+
+[frmProjectName]
+Caption="Projekt/Název aplikace"
+
+1000.Caption="Prosím zadejte jedinečné jméno (např. jméno aplikace) pro tento projekt. Toto jméno je pouze pro vnitřní účely a nemůže být následně změněno."
+1001.Caption="OK"
+
+
+[frmRegister]
+Caption="Registrovat Obsidium"
+
+1000.Caption="Prosím zkopírujte Váš registračního kód a vložte jej sem."
+1001.Caption="OK"
+1001.Tooltip="Akceptovat registrační kód"
+1002.Caption="Ukončit"
+1002.Tooltip="Ukončit a a zavřít toto dialogové okno"
+
+
+[frmShowKey]
+; dialog showing generated license keys
+Caption="Licenční klíč"
+
+1000.Caption="Uložit do souboru"
+1000.Tooltip="Zapsat licenční data do textového souboru"
+1001.Caption="Kopírovat do schránky"
+1001.Tooltip="Kopírovat licenční data do schránky"
+1002.Caption="Zavřít"
+1002.Tooltip="Zavřít toto dialogové okno"
+
+
+[Strings]
+; default message captions
+3000="Upozornění"
+3001="Chyba"
+
+2001="Chyba alokace paměti."
+2002="I/O chyba souboru."
+
+; blacklist dialog strings
+2000="Chyba při čtení klíčového souboru."
+2003="Nemohu otevřít klíčový soubor."
+2004="Klíčový soubor je již na blacklistu."
+2005="Chybný klíčový soubor."
+2006="Přidáno "
+2007=" klíčů na blacklist"
+; blacklist popup menu
+2008="&Odstranit klíčový soubor"
+2009="&Přidat klíčový soubor"
+2010="Přidat &textový klíč"
+2011="Přidat ze souboru"
+2012="Nahradit ze souboru"
+
+; enter key dialog strings
+2100="Textový klíč je chybný."
+
+; file selection dialog strings
+2200="Upozornění: Přípony názvu souborů se liší."
+2201="Výstraha: Toto není platná relativní cesta:"
+
+; key generation dialog strings
+2300="Prosím zadejte ID systému."
+2301="Zadané ID systému je chybné."
+2302="Nemohu vytvořit klíčový soubor!"
+2303="Chyba přo zápisu do klíčového souboru!"
+2304="Nemohu přeměnit klíčový soubor na textový řetězec!"
+2305="Nezadal(a) jste žádnou licenční informaci. Chcete přesto pokračovat?"
+
+; project name dialog strings
+2400="Prosím zadejte alespoň 5 znaků."
+
+; registration dialog strings
+2500="Pro dokončení procesu registrace prosím restartujte Obsidium."
+2501="Chybný registrační kód."
+
+; dialog showing generated license keys
+2600="Chyba při zápisu do souboru!"
+2601="Nemohu vytvořit soubor!"
+
+; main window strings
+1000="Litujeme, nahrávaní projektových souborů není v demo verzi umožněno."
+1001="Nahráno ze souboru projektu"
+1002="Detekován debugger - prosím vypněte ho a restartujte aplikaci."
+1003="Vaše zkušební doba skončila."
+1004="Vytvořit nový projekt?"
+1005="Soubor projektu byl zkonvertován ze starého formátu, prosím znovu jej otevřete."
+1006="Nemohu zkonvertovat soubor projektu ze starého formátu."
+1007="Nemohu otevřít soubor projektu."
+1008="Ochrana je v běhu, váš projekt nebude uložen. Chcete stejně odejít?"
+1009="Probíhá tvorba klíče, váš projekt nebude uložen. Chcete stejně odejít?"
+1010="Chcete před ukončením uložit současný projekt?"
+1011="Aplikace ochrany proběhla úspěšně!"
+1012="Nemohu otevřít vstupní soubor"
+1013="Nemohu vytvořit výstupní soubor"
+1014="Chybný vstupní soubor"
+1015="Nepodporovaný vstupní soubor"
+1016="Chyba při zápisu do výstupního souboru"
+1017="Chyba alokace paměti"
+1018="Chyba při manipulaci s resources"
+1019="Chyba při manipulaci s exporty"
+1020="Chyba při manipulaci s importy"
+1021="Chyba při zápisu/tvorbě chráněného kódu"
+1022="Chyba při manipulaci s TLS"
+1023="Soubor je již pravděpodobně chráněn/zpakován"
+1024="Neznámá chyba"
+1028="Nebyl zadán výstupní adresář"
+1029="Nebylo určeno jméno klíčového souboru, bude použito defaultní"
+1030="Chybná volba zamknutí jen pro určitý systém"
+1031="Toto není platná relativní cesta"
+1032="Získávám nastavení projektu"
+1033="Výstupní soubor "
+1034="Chráním soubor "
+1035="Vytvářím výstupní soubor..."
+1036="Otevírám vstupní soubor..."
+1037="Kontroluji vstupní soubor..."
+1038="Provádím manipulaci s exporty..."
+1039="Provádím manipulaci s importy..."
+1040="Provádím manipulaci s resources..."
+1041="Provádím manipulaci s TLS..."
+1042="Tvorba/zapisování chráněného kódu..."
+1043="Nalezena značka pro enkryptování na RVA 0x"
+1044="CHYBA: Nepodporovaná značka volání - call mark."
+1045="CHYBA: Neukončená značka enkryptování runtime."
+1046="Nalezena značka pro enkrypci runtime na RVA 0x"
+1047="Chyba při nahrávání DLL "
+1048="Prosím ujistěte se že všechny vyžadovaná DLL mohou být programem Obsidium nahrána."
+1049="CHYBA: Vložená enkryptovací značka v RVA 0x"
+1050="Komprimuji část, 0x"
+1051=" bytů"
+1052="Komprimovaná velikost 0x"
+1053="Rada: Pro zvýšení bezpečnosti použijte runtime encryption."
+1054="WARNING: Vstupní soubor je již zpakován."
+1055="Prosím zadejte platné číslo verze.\nPříklady platných čísel: 1, 1.0, 2.5"
+1056="Prosím zadejte platný počet dní."
+1057="Prosím zadejte platný počet spuštění."
+1058="Nelze číst soubor."
+1059="Soubor neobsahuje dialogová data."
+1071="Text zprávy který jste zadali je chybný. Prosím pro bližší detaily zkontrolujte dokumentaci."
+
+; protected files popup menu
+1060="&Přidat"
+1061="&Editovat"
+1062="&Chránit"
+1063="&Smazat"
+
+1064="Duplikátní záznam pro tento soubor."
+1065="Prosím vyberte výstupní adresář projektu který bude použit pro uložení chráněných/kryptovaných souborů."
+1066="Kódování bylo úspěšné"
+1067="Chyba při kódování souboru"
+1068="Opravdu chcete smazat tuto položku?"
+1069="Data o časovém omezení odstraněna."
+
+; open project file popup menu
+1070="Otevřít soubor projektu..."
+
+
+; --- strings added in version 1.3 ---
+
+[frmEnterShortKey]
+Caption="Zadat krátký licenční klíč"
+1000.Caption="Licenční informace:"
+1001.Caption="Licenční klíč:"
+1002.Caption="OK"
+1002.Tooltip="Zavřít toto dialogové okno"
+1003.Caption="Zrušit"
+1003.Tooltip="Ukončit and zavřít toto dialogové okno"
+
+[frmBlacklistShort]
+Caption="Licenční klíče na blacklistu"
+1000.Caption="Přidat licenci"
+1000.Tooltip="Přidat licenční klíč na blacklist"
+1001.Caption="Odstranit licenci"
+1001.Tooltip="Odstranit vybraný licenční klíč ze seznamu"
+1002.Caption="Uzavřít"
+1002.Tooltip="Uzavřít dialogové okno"
+1003.Caption="Hash\nLicenční info"
+1003.Tooltip="Seznam licenčních klíčů v současnosti na blacklistu"
+
+[frmMain]
+; key management page
+1319.Caption="Interní systém\nInterní systém (krátké klíče)\nExterní systém"
+1319.Tooltip="Vyberte licenční systém který použijete v tomto projektu"
+1320.Caption="To learn more about the different licensing systems please refer to the documentation."
+1321.Caption="Interní licenční systém (krátké klíče)"
+1322.Caption="Vytvořit kódovací klíče"
+1322.Tooltip="Vytvořit symetrické a asymetrické kódovací klíče"
+1323.Caption="krátký\nstřední\ndlouhý"
+1323.Tooltip="Vybrat požadovanou velikost klíče"
+1324.Caption="Před vytvořením kódovacích klíčů vyberte vlevo požadovanou délku klíče."
+1325.Caption="Blacklisting"
+1326.Caption="Klíče na blacklistu"
+1326.Tooltip="Prohlížet/přidat/odstranit licenční klíče na blacklistu"
+1327.Caption="Stiskněte tlačítko 'Blacklist klíčů' k prohlížení seznamu aktuálně blokovaných klíčů a k přidání/odstranění položek."
+1328.Caption="Tvorba klíčů"
+1329.Caption="Licenční informace:"
+1330.Caption="Licenční klíč:"
+1331.Caption="Vytvořit klíč"
+1331.Tooltip="Vytvořit klíč za použití současných parametrů"
+1332.Caption="Ověřit klíč"
+1332.Tooltip="Ověřit klíč za použití současných parametrů"
+1333.Caption="ID systému:"
+1334.Caption="Vytvořit pokročilý klíč"
+1334.Tooltip="Vytvořit pokročilé licenční klíče (čtěte dokumentaci)"
+1335.Caption="Datum vypršení klíče:"
+1336.Tooltip="Zde zadejte licenční informace (např. uživatelské jméno)"
+1337.Tooltip="Datum vypršení licenčního klíče"
+1338.Tooltip="Licenční klíč bude svázán s tímto ID systému"
+1339.Caption="Kopírovat klíč"
+1339.Tooltip="Kopírovat vytvořený klíč do schránky"
+1440.Caption="Uživatelská data:"
+1441.Tooltip="Zde zadejte uživatelská data klíče (pro podrobnosti čtěte dokumentaci)"
+1442.Tooltip="ID systému tohoto počítače (pro testovací účely)"
+; toolbuttons
+1009.Tooltip="Otevřít soubor nápovědy"
+; advanced settings
+1261.Caption="Visual Studio 2005 fix"
+1261.Tooltip="Zlepšuje kompatibilitu se spustitelnými soubory vytvořenými ve Visual Studiu 2005"
+1262.Caption="..."
+1262.Tooltip="Zobrazit DLL vyloučené z tracování běhu programu"
+1263.Caption="Zachovat data importu"
+1263.Tooltip="Brání odtstranění dat importu, nepovolujte pokud není absolutně nezbytné"
+1264.Caption="Vypnout emulaci API"
+1264.Tooltip="Vypne emulaci určitých volání API"
+
+[frmTraceBlacklist]
+Caption="DLL vyloučené z tracování běhu programu"
+1000.Caption="Přidat"
+1000.Tooltip="Přidat do seznamu vyloučených DLL"
+1001.Caption="vymazat"
+1001.Tooltip="Odstranit vybranou položku se seznamu vyloučených DLL"
+1002.Caption="OK"
+
+[Strings]
+; frmEnterShortKey strings
+2700="Zadaný licenční klíč je neplatný nebo vázaný na systém, chcete ho přesto přidat?"
+; frmBlacklistShort strings
+2800="&Odstranit licenční klíč"
+2801="&Přidat licenční klíč"
+2802="Licenční klíč je již na blacklistu"
+; main form strings
+2803="Musíte zadat ID systému"
+2804="Licenční klíč je platný"
+2805="Datum expirace:"
+2806="Licenční klíč je neplatný"
+2807="Uživatelská data:"
+2808="Vybraný jazykový soubor je zastaralý, některé části aplikace nemusí být přeloženy."
+2809="Kopírovat do schránky"

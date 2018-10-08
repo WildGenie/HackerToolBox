@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ida xmlns:xi="http://www.w3.org/2003/XInclude"
+     xmlns:xpath="http://www.idapro.com/ns/xpath"
+     xmlns:idc="http://www.idapro.com/ns/idc">
+  <templates>
+    <page X="processor_arm_p" title="ARM Processor Options" subtitle="How would you like the ARM processor module to analyze the input file?" visible="false">
+      <checkbox variable="/ida/processors/arm/@ARM_SIMPLIFY"            caption="Simplify instructions">
+        <help>
+          If this option is on, IDA will simplify instructions and replace
+          them by clearer pseudo-instructions.
+          For example,
+
+                  mov     pc, lr
+
+          will be replaced by
+ 
+                  retn
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/arm/@ARM_NO_PTR_DEREF"        caption="Disable pointer dereferencing">
+        <help>
+          If this option is on, IDA will not use =label syntax for
+          pointer references.
+          For example,
+
+                        LDR     R1, =dst
+                        ...
+          off_0_1003C   DCD dst
+
+          will be replaced by
+
+                        LDR     R1, off_0_1003C
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/arm/@ARM_USE_MACROS"          caption="Enable macros">
+        <help>
+          If this option is on, IDA will use macro instructions to simplify disassembly.
+          For example,
+
+                  MOV R7,#2
+                  ADD R7,R7,#3
+
+          will be replaced by
+
+                  MOV R7, #5
+
+          Apart from the ADD instruction,
+          SUB, ORR and LSL instructions are supported.
+
+          Also,
+
+                  MVN Rx, #x
+
+          will be replaced by
+
+                  MOV Rx, #~x
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/arm/@ARM_ARCHITECTURE_5"      caption="ARM architecture 5 or higher">
+        <help>
+          If this option is on, IDA will use bit 0
+          of the value loaded into PC as the Thumb mode bit.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/arm/@ARM_NO_ARM_THUMB_SWITCH" caption="No automatic ARM-Thumb switch">
+        <help>
+          If this option is on, IDA will not propagate
+          ARM or Thumb mode automatically when following jumps and calls.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/arm/@ARM_DISABLE_BL_JUMPS" caption="Disable BL jumps detection">
+        <help>
+          Some ARM compilers in Thumb mode use BL (branch-and-link)
+          instead of B (branch) for long jumps, since BL has more range.
+          By default, IDA tries to determine if BL is a jump or a call.
+          You can override IDA's decision using commands in Edit/Other menu
+          (Force BL call/Force BL jump).
+          If your target does not use this trick, you can set this option
+          and IDA will always treat BL as a call.
+        </help>
+      </checkbox>
+    </page>
+  </templates>
+</ida>

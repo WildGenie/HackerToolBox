@@ -1,0 +1,15 @@
+MoleBox Pro 2.6.3.2462 ∫∫ªØ£∫∫¸¿Í…Ÿ“Ø Fox.Soft2CN.CoM
+
+:SysInfo:CPU:         (MMX/MMX2/SSE)
+:SysInfo:OsVersion:   WindowsXP(Service Pack 3)
+:SysInfo:FileVersion: [msvcrt.dll]   7.0.2600.5512
+:SysInfo:FileVersion: [msvcp60.dll]  6.0.8972.0
+:SysInfo:FileVersion: [winmm.dll]    5.1.2600.5512
+:SysInfo:FileVersion: [user32.dll]   5.1.2600.5512
+:SysInfo:FileVersion: [gdi32.dll]    5.1.2600.5698
+:SysInfo:FileVersion: [kernel32.dll] 5.1.2600.5781
+:SysInfo:FileVersion: [comctl32.dll] 6.0.2900.5512
+:SysInfo:FileVersion: [shell32.dll]  6.0.2900.5622
+:SysInfo:FileVersion: [shlwapi.dll]  6.0.2900.5512
+:SysInfo:FileVersion: [hha.dll]      x.x.x.x
+

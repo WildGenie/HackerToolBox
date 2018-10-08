@@ -1,0 +1,7 @@
+This method of protection allow you check for unpacked
+versions of your software. Just put these checks to your
+application and they will check SVKP. If it was removed
+then they will crash application. Best of use is random
+or in not very offen used procedures.
+
+Note: Don't use this method in Visual Basic !

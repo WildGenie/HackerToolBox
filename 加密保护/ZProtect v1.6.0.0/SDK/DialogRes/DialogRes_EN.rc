@@ -1,0 +1,156 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PECANCER_REG DIALOGEX 0, 0, 259, 158
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Unregistered"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDT_NAME,77,76,168,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_SN,77,96,168,34,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "&Try",IDC_BTN_TRY,109,134,44,16
+    PUSHBUTTON      "&Buy",IDC_BTN_BUY,158,134,41,16
+    DEFPUSHBUTTON   "&Register",IDOK,204,134,41,16
+    EDITTEXT        IDC_EDT_CODE,77,56,168,12,ES_UPPERCASE | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,5,1,248,152
+    LTEXT           "This application needs a valid key to start, please paste your serial number below. You may contact us at support@peguard.com for more details.",IDC_STATIC,13,13,234,30
+    RTEXT           "Hardware ID:",IDC_STC_CODE,20,56,49,8
+    RTEXT           "Serial Number:",IDC_STC_SN,12,98,57,8
+    RTEXT           "Username:",IDC_STC_NAME,32,76,37,8
+END
+
+IDD_PECANCER_PWD DIALOGEX 0, 0, 263, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input Password"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDT_PWD,18,33,228,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,142,54,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,198,54,50,14
+    LTEXT           "This application needs a password to start, please input your password:",IDC_STATIC,18,11,231,21
+    GROUPBOX        "",IDC_STATIC,5,2,254,72
+END
+
+IDD_DIALOG_EXCEPTION DIALOGEX 0, 0, 289, 172
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Unknown Exception"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Copy",IDC_BTN_COPY,235,8,46,17
+    GROUPBOX        "",IDC_STATIC,1,0,286,172
+    LTEXT           "Zprotect encounters an unknown exception, please email us the following information to help us solve it. Thank you!",IDC_STATIC,7,9,223,28,0,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDT_EXCEPTION,7,40,274,126,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_DIALOG_LOGIN DIALOGEX 0, 0, 197, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Login"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Login",IDOK,69,77,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,77,50,14
+    EDITTEXT        IDC_EDIT1,51,18,129,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,51,40,129,12,ES_AUTOHSCROLL
+    CONTROL         "Remember Password",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,51,59,48,10
+    CONTROL         "Auto Login",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,120,59,48,10
+    LTEXT           "User:",IDC_STATIC,22,21,25,8
+    LTEXT           "Password:",IDC_STATIC,22,43,25,8
+    GROUPBOX        "",IDC_STATIC,4,0,189,99
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 149, 44
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Networks"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Connecting to server...",IDC_STATIC,0,17,149,26
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PECANCER_REG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 258
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_PECANCER_PWD, DIALOG
+    BEGIN
+        RIGHTMARGIN, 177
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

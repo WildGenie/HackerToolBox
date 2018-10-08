@@ -1,0 +1,1 @@
+Enable overlay handling options when protecting the example.

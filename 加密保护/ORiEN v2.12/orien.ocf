@@ -1,0 +1,14 @@
+[CFG]
+IsFirstStart=0
+cbAutorun=0
+cbAutoReadVer=1
+cbWarnings=1
+cbHighlight=1
+cbMultiProt=1
+cbCreateBackup=0
+cbBackupOverwrite=0
+meBackupExt=.bak
+[HASP]
+Count=0
+[PSW]
+cbHidePsw=0

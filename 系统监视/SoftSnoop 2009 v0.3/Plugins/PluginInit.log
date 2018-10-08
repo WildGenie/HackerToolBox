@@ -1,0 +1,12 @@
+
+->HelloWorld.dll:
+Plugin loaded successfully.
+"HelloWorld" added in the plugin menu.
+
+->MsgHook.dll:
+Plugin loaded successfully.
+"StartSSPlugin" export not found.
+
+->PluginExp3.dll:
+Plugin loaded successfully.
+"PluginExp3" added in the plugin menu.

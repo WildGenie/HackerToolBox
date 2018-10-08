@@ -1,0 +1,163 @@
+<!--
+    API Monitor Definitions
+    (c) 2010-2011, Rohitab Batra <rohitab@rohitab.com>
+    http://www.rohitab.com/apimonitor/
+-->
+<ApiMonitor>
+    <Include Filename="Headers\windows.h.xml" />
+    <Module Name="Tdh.dll" CallingConvention="STDCALL" ErrorFunc="GetLastError" OnlineHelp="MSDN">
+        
+        <!-- Variables -->
+        
+        <!-- TODO: Structures -->
+        <Variable Name="PPROVIDER_FIELD_INFOARRAY"       Type="Alias"        Base="LPVOID" />
+        <Variable Name="PPROVIDER_FILTER_INFO*"          Type="Alias"        Base="LPVOID" />
+        <Variable Name="PPROVIDER_ENUMERATION_INFO"      Type="Alias"        Base="LPVOID" />
+        <Variable Name="PTRACE_EVENT_INFO"               Type="Alias"        Base="LPVOID" />
+        <Variable Name="PEVENT_MAP_INFO"                 Type="Alias"        Base="LPVOID" />
+        <Variable Name="PEVENT_RECORD"                   Type="Alias"        Base="LPVOID" />
+
+        <!-- EVENT_FIELD_TYPE -->
+        <Variable Name="EVENT_FIELD_TYPE" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="EventKeywordInformation"     Value="0" />
+                <Set Name="EventLevelInformation"       Value="1" />
+                <Set Name="EventChannelInformation"     Value="2" />
+                <Set Name="EventTaskInformation"        Value="3" />
+                <Set Name="EventOpcodeInformation"      Value="4" />
+            </Enum>
+        </Variable>
+
+        <!-- PROVIDER_FIELD_INFO -->
+        <Variable Name="PROVIDER_FIELD_INFO" Type="Struct">
+            <Field Type="ULONG" 	    Name="NameOffset" />
+            <Field Type="ULONG" 	    Name="DescriptionOffset" />
+            <Field Type="ULONGLONG" 	Name="Value" />
+        </Variable>
+
+        <!-- TDH_CONTEXT_TYPE -->
+        <Variable Name="TDH_CONTEXT_TYPE" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="TDH_CONTEXT_WPP_TMFFILE"         Value="0" />
+                <Set Name="TDH_CONTEXT_WPP_TMFSEARCHPATH"   Value="1" />
+                <Set Name="TDH_CONTEXT_WPP_GMT"             Value="2" />
+                <Set Name="TDH_CONTEXT_POINTERSIZE"         Value="3" />
+            </Enum>
+        </Variable>
+        
+        <!-- TDH_CONTEXT -->
+        <Variable Name="TDH_CONTEXT" Type="Struct">
+            <Field Type="ULONGLONG" 	    Name="ParameterValue" />
+            <Field Type="TDH_CONTEXT_TYPE" 	Name="ParameterType" />
+            <Field Type="ULONG" 	        Name="ParameterSize" />
+        </Variable>
+        <Variable Name="PTDH_CONTEXT" Type="Pointer" Base="TDH_CONTEXT" />
+
+        <!-- PROPERTY_DATA_DESCRIPTOR -->
+        <Variable Name="PROPERTY_DATA_DESCRIPTOR" Type="Struct">
+            <Field Type="ULONGLONG" 	Name="PropertyName" />
+            <Field Type="ULONG" 	    Name="ArrayIndex" />
+            <Field Type="ULONG" 	    Name="Reserved" />
+        </Variable>
+        <Variable Name="PPROPERTY_DATA_DESCRIPTOR" Type="Pointer" Base="PROPERTY_DATA_DESCRIPTOR" />
+
+        <!-- Event Tracing -->
+        <Category Name="Diagnostics/Windows Events/Event Tracing" />
+        <Api Name="TdhEnumerateProviderFieldInformation">
+            <Param Type="LPGUID" Name="pGuid" />
+            <Param Type="EVENT_FIELD_TYPE" Name="EventFieldType" />
+            <Param Type="PPROVIDER_FIELD_INFOARRAY" Name="pBuffer" PostLength="pBufferSize" />
+            <Param Type="ULONG*" Name="pBufferSize" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhEnumerateProviderFilters">
+            <Param Type="LPGUID" Name="pGuid" />
+            <Param Type="ULONG" Name="TdhContextCount" />
+            <Param Type="PTDH_CONTEXT" Name="pTdhContext" />
+            <Param Type="ULONG*" Name="FilterCount" />
+            <Param Type="PPROVIDER_FILTER_INFO*" Name="pBuffer" PostLength="pBufferSize" />
+            <Param Type="ULONG*" Name="pBufferSize" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhEnumerateProviders">
+            <Param Type="PPROVIDER_ENUMERATION_INFO" Name="pBuffer" PostLength="pBufferSize" />
+            <Param Type="ULONG*" Name="pBufferSize" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhFormatProperty">
+            <Param Type="PTRACE_EVENT_INFO" Name="EventInfo" />
+            <Param Type="PEVENT_MAP_INFO" Name="MapInfo" />
+            <Param Type="ULONG" Name="PointerSize" />
+            <Param Type="USHORT" Name="PropertyInType" />
+            <Param Type="USHORT" Name="PropertyOutType" />
+            <Param Type="USHORT" Name="PropertyLength" />
+            <Param Type="USHORT" Name="UserDataLength" />
+            <Param Type="PBYTE" Name="UserData" />
+            <Param Type="PULONG" Name="BufferSize" />
+            <Param Type="PWCHAR" Name="Buffer" />
+            <Param Type="PUSHORT" Name="UserDataConsumed" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhGetEventInformation">
+            <Param Type="PEVENT_RECORD" Name="pEvent" />
+            <Param Type="ULONG" Name="TdhContextCount" />
+            <Param Type="PTDH_CONTEXT" Name="pTdhContext" />
+            <Param Type="PTRACE_EVENT_INFO" Name="pBuffer" PostLength="pBufferSize" />
+            <Param Type="ULONG*" Name="pBufferSize" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhGetEventMapInformation">
+            <Param Type="PEVENT_RECORD" Name="pEvent" />
+            <Param Type="LPWSTR" Name="pMapName" />
+            <Param Type="PEVENT_MAP_INFO" Name="pBuffer" PostLength="pBufferSize" />
+            <Param Type="ULONG*" Name="pBufferSize" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhGetPropertySize">
+            <Param Type="PEVENT_RECORD" Name="pEvent" />
+            <Param Type="ULONG" Name="TdhContextCount" />
+            <Param Type="PTDH_CONTEXT" Name="pTdhContext" />
+            <Param Type="ULONG" Name="PropertyDataCount" />
+            <Param Type="PPROPERTY_DATA_DESCRIPTOR" Name="pPropertyData" />
+            <Param Type="ULONG*" Name="pPropertySize" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhGetProperty">
+            <Param Type="PEVENT_RECORD" Name="pEvent" />
+            <Param Type="ULONG" Name="TdhContextCount" />
+            <Param Type="PTDH_CONTEXT" Name="pTdhContext" />
+            <Param Type="ULONG" Name="PropertyDataCount" />
+            <Param Type="PPROPERTY_DATA_DESCRIPTOR" Name="pPropertyData" />
+            <Param Type="ULONG" Name="BufferSize" />
+            <Param Type="PBYTE" Name="pBuffer" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhLoadManifest">
+            <Param Type="PWSTR" Name="Manifest" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhQueryProviderFieldInformation">
+            <Param Type="LPGUID" Name="pGuid" />
+            <Param Type="ULONGLONG" Name="EventFieldValue" />
+            <Param Type="EVENT_FIELD_TYPE" Name="EventFieldType" />
+            <Param Type="PPROVIDER_FIELD_INFOARRAY" Name="pBuffer" PostLength="pBufferSize" />
+            <Param Type="ULONG*" Name="pBufferSize" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="TdhUnloadManifest">
+            <Param Type="PWSTR" Name="Manifest" />
+            <Return Type="ULONG" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+    </Module>
+</ApiMonitor>

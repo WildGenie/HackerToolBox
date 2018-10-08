@@ -1,0 +1,20 @@
+
+       ßßßßßß\   ßß\    ßß\  ßßßßßßß\   ßßßßßßß\  ßß\      ßß\   ver 2.50.00 Ü
+     ßß\    ßß\ ßß\    ßß\     ßß\     ßß\       ßß\      ßß\     ßßßßßßßßßßßß
+    ßß\    ßß\ ßß\    ßß\     ßß\     ßßßßßßß\  ßß\  ß\  ßß\
+   ßß\ ß\ ßß\  ßß\  ßß\      ßß\     ßß\        ßß\ ßß\ ßß\
+    ßßßßßß\     ßßßß\     ßßßßßßß\  ßßßßßßß\     ßß\ ßß\     AGC Product Ü
+         ß\                                                   ßßßßßßßßßßßß
+
+                                Future plans ;)
+                                ~~~~~~~~~~~~~~~
+ - Editing in the TV
+ - ix86 up to Pentium MMX support
+ - Sequence of commands search in the assembler search
+ - WordWrap mode in the TV
+ - Memory, disk, etc. viewing support
+ - Extra text-search mask '*' to search for the substrings
+ - Two files processing at the same time (compare etc.)
+ - Backward search in 'Replace string' and 'Assembler search' modes
+ - Optional (specified) configuration file
+ - Users registration with the news notification.

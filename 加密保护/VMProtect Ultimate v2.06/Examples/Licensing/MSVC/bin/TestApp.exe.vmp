@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<Protection InputFileName=".\TestApp.exe" Options="5064" CheckKernelDebugger="false" CompressionMode="0" VMCodeSectionName=".vmp" VMExecutorCount="1" LicenseDataFileName="" OutputFileName="" WaterMarkName="" RunParameters="">
+		<Folders/>
+		<Procedures>
+			<Procedure MapAddress="ProtectedCode(struct HWND__ *)" IncludedInCompilation="true" Options="8193" CompilationType="2"/>
+			<Procedure MapAddress="ParseStatus(struct HWND__ *,int)" IncludedInCompilation="false" Options="1" CompilationType="2"/>
+			<Procedure MapAddress="ProcessSerialNumber(struct HWND__ *)" IncludedInCompilation="false" Options="1" CompilationType="2"/>
+		</Procedures>
+	</Protection>
+	<DLLBox/>
+	<Script IncludedInCompilation="true"></Script>  <LicenseManager ProductCode="MYepA12Fxaw=" LicenseData="" Algorithm="RSA" Bits="2048" PublicExp="AAEAAQ==" PrivateExp="qA/5YwcsKJ63gVXf438aCxF0p45Mmew/CXj9TBg0i+biY7nJQqOFP4BhqiBY+4zrqh2iWrse3pZStEm7jqFh488xP2p7KMQHB+EPWx4ZYA6OFVl1SLG3gK7C0pqDmqQ289NUi5u56N+gNV+YA/mZ/dXBCbXv/HDgSuPEfkygz+CG20uRWoKbF+JKF6dHLbQHnn7l9nu1ht7+6NeL32UV8sEu8E508qF4cEni4RPu4cvnp98t8FF5e10JFpCE5wjkg47GQ+vUB5z+Z2AzuQdW8EHPvWwn+TNvcIh2tHEPWT39IeZ2X2KbfLCqdW4T2wwHHesiNwhqOwpNnxzHmDyaAQ==" Modulus="rnK4CvdHf4d3DTtS7B7Fyu5kzT16BTWlecKTZcjw5Ji9BTLfhjgIxSyY6uqD2wNxd+qTzNY4PHvAf8lwxsLE9ir7sDhrDgzLp5PR5EW5nuZgHC+QKpXoaXH9Q73i6KcfDOUSHquQmRNtDHqyublT9/yv1pLuA+mCC+/gWZhgdAGZbwA0Ek61mGH1YFOUY+qLGyiJwGSMBXDWgEAm36wUHyTjZhN2003JuJwtpT8IWKiR5sy+vNQdtj+QEeyADbTFuYv5RHXUkUVvc0RUXecFLAQuE/1i1AJDAd5s4oDKUizZ10nCsHawSnHn4pgdQFzvhxnNTEVcjhcWMW0+/Zvfhw==" BlackList="otWtn30OFtt0r2IlOB/bly1m1fk=">
+    <License Date="2010-04-15" CustomerName="John Doe" CustomerEmail="john@doe.com" OrderRef="" SerialNumber="FgeTRyB93RJeABJN83qKo7mTEvXHGHwYXmZ6pGY5o1X09bc8fmmebq1mryX5yHUWb6F+cauzsLxUyG+uTQBT9zC31EJPQqG9YgaRbOPPS9A7u1HXZA8x491ew0lDKJISy8TYNsjTJ2vB903jW+/A/UVc2+cgDCF3eqztkvYBEas6Y40Hj9A2ylJVYsYWq41RCZyDcXZtlbnuk8W2CDBAk+PGZeUPjEq/oasnTCeKdkO4NY2QVrFzvC/msT+7FWAaBNwe5OQYZLCH875qFVw0H2B9xcnVuIAHAYD00H0Hzk9sf/jAGx4l5CS8FQ4tshZfEllF6CcwVQuRdGz07gQWAQ==" Blocked="true">
+      <Comments></Comments>
+    </License>
+    <License Date="2010-04-15" CustomerName="John Doe" CustomerEmail="john@doe.com" OrderRef="" SerialNumber="IOtjdo0yTQFhExs0hoDu7Y6O3jQgsJqSu2eytTmlsFI1+XJdPXdhRJmSkqzld/RSGes7wqxmxtFQUakrHxkAruXPgOPRZX1Mr/d717LlpDW1DvJJ7ndD/fAziYcKGiQ1HfWjwXWAzjM/A1zT0X333E8zCYmGrWHPC0u94UqjabJ2EF4Wu5K+6zZX8Gy+msV8BarrW1VdGCcEIMA/wVD5t1nrhU4PMAsqzZHkmXuH9RT8AWCBz2n1RWqnk3YOCNFJ8Oywi7YBjVnyzTTHTOojBXo77xmMFoncxUoUzFA6P5653KK14nZ2A4yXb4t2Ia5XOFMcfEQ4HOfLK9dnD2BeGA==" Blocked="false">
+      <Comments></Comments>
+    </License>
+  </LicenseManager>
+</Document>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<Protection InputFileName="Project1.exe" Options="5064" CheckKernelDebugger="false" CompressionMode="0" VMCodeSectionName=".vmp" VMExecutorCount="1" LicenseDataFileName="" OutputFileName="" WaterMarkName="" RunParameters="">
+	</Protection>
+	<DLLBox/>
+	<Script IncludedInCompilation="true">procedure OnBeforeCompilation;
+var R:TIntelRecord;
+    CompilationType:TCompilationType;
+    Ptr:Int64;
+    I:Integer;
+    S:String;
+begin
+  R:=TIntelRecord.Create(nil);
+  with VMProtector do
+   for I:=0 to InputFile.MapRecords.Count-1 do
+    with InputFile.MapRecords.Items[I] do
+     if CodeType=otMarker then
+      begin
+       Ptr:=Address+$12; // $12 - size of VMProtectBegin
+       R.ReadFromFile(InputFile,Ptr);
+       S:=R.CommandText;
+       if S='lea eax, [eax]' then
+        CompilationType:=ctMutation
+       else
+       if S='lea ebx, [ebx]' then
+        CompilationType:=ctUltra
+       else
+        CompilationType:=ctVirtualization;
+       AddByAddress(Address,CompilationType,True);
+      end;
+  R.Free;
+end;
+</Script>
+</Document>

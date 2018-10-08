@@ -1,0 +1,54 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Object={831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0; MSCOMCTL.OCX
+Module=Registry; Registry.bas
+Reference=*\G{642AC760-AAB4-11D0-8494-00A0C90DC8A9}#1.0#0#..\..\..\..\..\Windows\SysWow64\MSDBRPTR.DLL#Microsoft Data Report Designer 6.0 (SP4)
+Reference=*\G{6B263850-900B-11D0-9484-00A0C91110ED}#1.0#0#..\..\..\..\..\Windows\SysWow64\MSSTDFMT.DLL#Microsoft Data Formatting Object Library 6.0 (SP4)
+Form=FRMView.frm
+Form=FRMProtect.frm
+Form=FRMAdd.frm
+Form=FRMMain.frm
+Form=FRMAbout.frm
+Form=FRMSTClear.frm
+Module=Declarations; Declarations.bas
+Module=Functions; Functions.bas
+Module=Scanners; Scanners.bas
+ResFile32="TrialReset.res"
+IconForm="FRMMain"
+Startup="FRMMain"
+HelpFile="Trial-Reset.chm"
+Title="Trial-Reset"
+ExeName32="Trial-Reset.exe"
+Path32="..\.."
+Command32=""
+Name="TrialReset"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=4
+MinorVer=0
+RevisionVer=3817
+AutoIncrementVer=1
+ServerSupportFiles=0
+VersionCompanyName="Microsoft"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=-1
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+DebugStartupOption=0
+
+[MS Transaction Server]
+AutoRefresh=1
+
+[CodeSMART]
+Task_UID=27_12_07_18_03_16

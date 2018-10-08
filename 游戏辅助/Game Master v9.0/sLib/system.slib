@@ -1,0 +1,41 @@
+function system(var str libpath)
+begin
+end
+function ReadPChar(var int p)
+begin
+  var str result
+  var int ch,bup
+
+  set ch    =rptrb(p)
+  set result=""
+  set bup   =p
+  while ch<>0
+  begin
+    set result = result + chr(ch)
+    inc p
+    set ch=rptrb(p)
+    if (p-bup>=250)
+    then begin
+      set ch=0
+    end
+  end
+end
+function ReadGamePChar(var int p)
+begin
+  var str result
+  var int ch,bup
+
+  set ch    =readmem(p, 1)
+  set result=""
+  set bup   =p
+  while ch<>0
+  begin
+    set result = result + chr(ch)
+    inc p
+    set ch=readmem(p, 1)
+    if (p-bup>=250)
+    then begin
+      set ch=0
+    end
+  end
+end

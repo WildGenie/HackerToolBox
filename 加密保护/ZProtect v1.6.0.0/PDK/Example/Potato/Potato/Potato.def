@@ -1,0 +1,7 @@
+EXPORTS
+	ZPCP_Init
+	ZPCP_Exit
+	ZPCP_SettingDlg
+	ZPCP_AboutDlg
+	ZPCP_GetPluginInfo
+	ZPCP_QueryShellInfo32

@@ -1,0 +1,1115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="description" content="Reference Manual of Restorator - the customization, localization, and translation tool">
+	<meta name="keywords" content="reference manual, documentation, help, restorator">
+	<link rel="SHORTCUT ICON" href="../webicon.ico">
+	<title>Reference Manual - Restorator - bome.com</title>
+	<link rel="STYLESHEET" type="text/css" href="../styles.css">
+
+</head>
+<body bgcolor="#E0E0E0" text="#000000" link="#A92C2F" vlink="#991C1F" alink="#505050" leftmargin=3 topmargin=3>
+<table width="100%" class=master_table border="0" cellspacing="4" cellpadding="1">
+<tr>
+<td width="100%">
+
+
+<!-- ]==========[ Content ]==========[ -->
+<!-- Help Header -->
+<table border="0" cellpadding="0" align="right">
+<tr><td align="right" valign="top">
+<a href="../help/support.html">Help Overview</a><br>
+<a href="../help/help.html">Manual</a><br>
+<a href="../help/tutorials.html">Tutorials</a><br>
+<a href="../help/FAQ.html">FAQ</a><br>
+<a href="../purchase.html">Purchase</a><br>
+<a href="http://www.bome.com/Restorator/">Restorator Web</a>
+</td></tr></table>
+
+<h1>Restorator<br>
+Reference Manual</h1>
+ <h2 class=top>Table of Contents</h2>
+ <ul class="nospace">
+  <li><b><a href="#_Toc35012611">Overview</a></b></li>
+  <li><b><a href="#_Toc35012613">Features</a></b></li>
+  <li><b><a href="#_Toc35012612">What's new</a></b></li>
+  <li><b><a href="#_Toc35012614">Usage Tutorials</a></b></li>
+  <li><b><a href="#_Toc350126140">Keyboard Shortcuts</a></b></li>
+  <li><b><a href="#_Toc350126141">Commandline Parameters</a></b></li>
+  <li><b><a href="#_Toc350126142">RC File support</a></b></li>
+  <li><b><a href="#_Toc35012615">Menu</a></b>
+    <ul>
+     <li><a href="#_Toc35012616">File</a>
+      <ul>
+       <li><a href="#_Toc35012617">New .res file / .dcr file .</a></li>
+       <li><a href="#_Toc35012618">Open</a></li>
+       <li><a href="#_Toc35012619">Save</a></li>
+       <li><a href="#_Toc35012620">Save As</a></li>
+       <li><a href="#_Toc35012621">Run</a></li>
+       <li><a href="#_Toc35012622">Close</a></li>
+       <li><a href="#_Toc35012623">Close all</a></li>
+       <li><a href="#_Toc35012624">Recent Files</a></li>
+       <li><a href="#_Toc35012625">Last found Files</a></li>
+       <li><a href="#_Toc35012626">Exit</a></li>
+      </ul>
+     </li>
+     <li><a href="#_Toc35012627">Resources</a>
+      <ul>
+       <li><a href="#_Toc35012628">Delete</a></li>
+       <li><a href="#_Toc35012629">Rename</a></li>
+       <li><a href="#_Toc35012630">Extract</a></li>
+       <li><a href="#_Toc35012631">Assign|Auto Assign all Resources</a></li>
+       <li><a href="#_Toc35012632">Detach</a></li>
+       <li><a href="#_Toc35012633">Res Files</a></li>
+       <li><a href="#_Toc35012634">Add Resource</a></li>
+       <li><a href="#_Toc35012635">Set Language ID</a></li>
+       <li><a href="#_Toc35012636">Copy</a></li>
+       <li><a href="#_Toc35012637">Paste</a></li>
+       <li><a href="#_Toc35012638">Browse to "folder location"</a></li>
+       <li><a href="#_Toc35012639">Find in Resources</a></li>
+       <li><a href="#_Toc35012640">Find Next</a></li>
+       <li><a href="#_Toc35012641">Properties</a></li>
+      </ul>
+     </li>
+    <li><a href="#_Toc35012643">Resource Viewer</a></li>
+    <ul>
+     <li><a href="#_Toc35012644">Default mode</a></li>
+     <li><a href="#_Toc35012645">Hexdump mode</a></li>
+     <li><a href="#_Toc35012646">RC mode</a></li>
+     <li><a href="#_Toc35012647">Editing Resources</a></li>
+     <li><a href="#_Toc35012648">Autosize</a></li>
+    </ul>
+    <li><a href="#_Toc35012649">Tools</a></li>
+    <ul>
+     <li><a href="#_Toc35012650">Settings...</a></li>
+     <li><a href="#_Toc350126501">Find Resources</a></li>
+     <li><a href="#_Toc35012651">Grab Resources</a></li>
+     <li><a href="#_Toc35012652">Create ResPatcher...</a></li>
+     <li><a href="#_Toc350126521">Create Windows XP Manifest...</a></li>
+     <li><a href="#_Toc35012653">Force File replace on next restart</a></li>
+     <li><a href="#_Toc35012654">Edit file associations</a></li>
+     <li><a href="#_Toc35012655">Configure tools...</a></li>
+     <li><a href="#_Toc350126551">Resource Tree</a></li>
+    </ul>
+    <li><a href="#_Toc35012656">Help</a></li>
+    <ul>
+     <li><a href="#_Toc35012657">Help</a></li>
+     <li><a href="#_Toc35012658">FAQ</a></li>
+     <li><a href="#_Toc35012659">Tutorial: How to translate a program</a></li>
+     <li><a href="#_Toc35012660">Buy Restorator</a></li>
+     <li><a href="#_Toc35012661">About</a></li>
+    </ul>
+    <li><a href="#_Toc35012662">Context Menu</a></li>
+   </ul>
+   </li>
+  <li><b><a href="#_Toc35012663">License</a></b></li>
+  <li><b><a href="#_Toc35012664">Uninstall</a></b></li>
+  <li><b><a href="#_Toc350126641">Acknowledgements</a></b></li>
+  <li><b><a href="#_Toc35012665">Glossary</a></b></li>
+ </ul>
+
+ <hr width="400" align="center" size="8">
+ <h2 align="left"><a name="_Toc35012611">Overview</a></h2>
+ <p>Restorator is a resource
+  editor for Windows. Resources are additional data accompanying a Windows
+  application. Resources are usually part of the application interface.
+  E.g. dialogs, menus, images, text, icons etc. They are usually stored
+  with the executable or dll (see below for other possible <a
+  href="#_Resource_Files_1">Resource Files</a>). Restorator can edit those resource
+  files and thereby change the look and feel or language of an application
+  completely independent of the development and compile tools.</p>
+ <p>You can edit resources directly
+  in the executable, e.g. by opening an exe file. Main usage:</p>
+ <ul class="nospace">
+  <li>For localizing (translating)
+   programs:<br>
+   Restorator allows to localize entire applications:<br>
+   You can edit all resources that contain text, and translate them to
+   different languages. Also, with an external image editor, you can
+   translate texts that appear in images.</li>
+  <li>As a resource editor:<br>
+   For developers - manage your .res, .dcr and other files containing
+   resources efficiently with Restorator</li>
+  <li>As a skin editor:<br>
+   Modify the user interface of any Windows 32-bit program and create
+   your own custom applications</li>
+ </ul>
+ <p>Restorator makes it easy
+  to view, extract, and change resources like images, icons, text, menus,
+  dialogs, sounds, animations, and many more. Among the file types understood
+  by Restorator are exe,
+  dll, res (resource files), rc (resource compiler), ocx (Active X),
+  scr (screen saver), dcr (delphi
+  component resource) and many other file types.</p>
+ <p>See <a href="#_Resource_Files_1">Resource
+  Files</a> for a complete listing.</p>
+ <table width="50%" border="0" cellspacing="10" cellpadding="10" align="center" bgcolor="#CCCCCC">
+  <tr>
+   <td>
+    <div align="center">The
+     single best hint is to watch the statusbar whenever you scroll
+     over an option .</div>
+   </td>
+  </tr>
+ </table>
+ <p>&nbsp;</p>
+ <hr width="400" align="center" size="8">
+ <h2><a name="_Toc35012613">Features</a></h2>
+ <p>Restorator helps you to transform
+  an application's appearance.<br>
+  The core features are:</p>
+ <ul class="nospace">
+  <li>Easy accessible browsing
+   of resource files</li>
+  <li>Manipulation of text elements
+   and dialogs in the application</li>
+  <li>Editing dialogs WYSIWYG</li>
+  <li>Adding multi language
+   support to applications</li>
+  <li>Save modifications to
+   be applied later. <i>ResPatcher</i></li>
+  <li>Locating resources on
+   your hard drive</li>
+  <li>Locating elements in resources</li>
+  <li>Integrate editing tools
+   for images, translation etc.</li>
+ </ul>
+ <p>See also the <a href="../features.html">complete list of features</a>
+    or the <a href="tech.html">list of resources types supported by Restorator</a>.</p>
+
+ <hr width="400" align="center" size="8">
+ <a name="whatsnew"></a>
+ <h2><a name="_Toc35012612">What's
+  new in Restorator 2007</a></h2>
+ <p>See the <a href="version_history.html">Version History</a>.
+
+
+ <hr width="400" align="center" size="8">
+ <h2><a name="_Toc35012614"></a>Usage
+  Tutorials</h2>
+ <p>The tutorials provide
+  the best possibility to understand the power and features of Restorator.
+  They give step-by-step explanations how to achieve certain tasks.</p>
+ <p><a href="tutorials.html">Tutorials</a></p>
+
+ <hr width="400" align="center" size="8">
+ <h2><a name="_Toc350126140"></a>Keyboard Shortcuts</h2>
+ <p>Restorator's most important functions can be activated by way of
+ keyboard shortcuts.</p>
+ <table cellpadding=3 border=1 cellspacing=0>
+ <tr><th>Shortcut</th>
+ <th>Function</th>
+ </tr>
+<tr><td align=top>Alt+Enter	</td><td valign="top">Resource Properties (Resource Tree)<br>File Properties (File Browser)</td></tr>
+<tr><td align=top>Ctrl+Left	</td><td valign="top">Go Back (File Browser)</td></tr>
+<tr><td align=top>Ctrl+Right	</td><td valign="top">Go Forward (File Browser)</td></tr>
+<tr><td align=top>Alt+Left	</td><td valign="top">Collapse current resource item in tree</td></tr>
+<tr><td align=top>Alt+Right	</td><td valign="top">Expand current resource item in tree</td></tr>
+<tr><td align=top>Alt+Down	</td><td valign="top">Next Resource</td></tr>
+<tr><td align=top>Alt+Up		</td><td valign="top">Previous Resource</td></tr>
+<tr><td align=top>Ctrl+A		</td><td valign="top">Select All (text editor, File Browser)</td></tr>
+<tr><td align=top>Ctrl+Alt+N	</td><td valign="top">New Folder (File Browser)</td></tr>
+<tr><td align=top>Ctrl+C		</td><td valign="top">Copy to Clipboard (text editor, Resource Tree)</td></tr>
+<tr><td align=top>Ctrl+D		</td><td valign="top">Detach</td></tr>
+<tr><td align=top>Ctrl+F		</td><td valign="top">Find in Resources</td></tr>
+<tr><td align=top>Ctrl+L		</td><td valign="top">Set Language ID/Locale for a resource or resource tree</td></tr>
+<tr><td align=top>Ctrl+N		</td><td valign="top">New...</td></tr>
+<tr><td align=top>Ctrl+O		</td><td valign="top">Open</td></tr>
+<tr><td align=top>Ctrl+R		</td><td valign="top">Run the current exe file</td></tr>
+<tr><td align=top>Ctrl+S		</td><td valign="top">Save</td></tr>
+<tr><td align=top>Ctrl+U		</td><td valign="top">Add Resource</td></tr>
+<tr><td align=top>Ctrl+V		</td><td valign="top">Paste from Clipboard (ab text, resources in resource tree)</td></tr>
+<tr><td align=top>Ctrl+X		</td><td valign="top">Cut to Clipboard (ab text)</td></tr>
+<tr><td align=top>Ctrl+Y		</td><td valign="top">Redo (ab text)</td></tr>
+<tr><td align=top>Ctrl+Z		</td><td valign="top">Undo (ab text)</td></tr>
+<tr><td align=top>Delete		</td><td valign="top">Delete current selection (ab mode), delete resource (Resource Tree)<br>Delete File(s) (File Browser)</td></tr>
+<tr><td align=top>Backspace	</td><td valign="top">Close File (Resource Tree)<br>Parent Folder (File Browser)</td></tr>
+<tr><td align=top>Ctrl+Shift+F	</td><td valign="top">Find Resources</td></tr>
+<tr><td align=top>Ctrl+Shift+G	</td><td valign="top">Grab Resources</td></tr>
+<tr><td align=top>Ctrl+Shift+N	</td><td valign="top">Force File Replace on next Restart</td></tr>
+<tr><td align=top>Ctrl+Shift+R	</td><td valign="top">Create ResPatcher</td></tr>
+<tr><td align=top>Ctrl+Shift+S	</td><td valign="top">Settings</td></tr>
+<tr><td align=top>Ctrl+Shift+V	</td><td valign="top">Paste as new resource file</td></tr>
+<tr><td align=top>Ctrl+Shift+X	</td><td valign="top">Create XP Manifest</td></tr>
+<tr><td align=top>F1		</td><td valign="top">Help</td></tr>
+<tr><td align=top>F2    		</td><td valign="top">rename resource (Resource Tree)<br>rename file (File Browser)</td></tr>
+<tr><td align=top>F3		</td><td valign="top">Find Next</td></tr>
+<tr><td align=top>F5    		</td><td valign="top">Refresh (File Browser)<br>Update Preview (editing Menus and Dialogs as RC text)</td></tr>
+<tr><td align=top>F6		</td><td valign="top">Toggle Edit (ab) Mode (Resource Viewer)</td></tr>
+<tr><td align=top>F8		</td><td valign="top">Commit changes (editing Menus and Dialogs as RC text)</td></tr>
+<tr><td align=top>F9		</td><td valign="top">Switch to Resource Tree</td></tr>
+<tr><td align=top>F10		</td><td valign="top">Switch to Resource Viewer</td></tr>
+<tr><td align=top>F11		</td><td valign="top">Switch to File Browser</td></tr>
+<tr><td align=top>F12		</td><td valign="top">Save As</td></tr>
+<tr><td align=top>Ctrl+F5		</td><td valign="top">Default View Mode (Resource Viewer)</td></tr>
+<tr><td align=top>Ctrl+F6		</td><td valign="top">Hexdump View Mode (Resource Viewer)</td></tr>
+<tr><td align=top>Ctrl+F7		</td><td valign="top">RC View Mode (Resource Viewer)</td></tr>
+</table>
+
+ <!-- hr width="400" align="center" size="8"> -->
+ <h2><a name="_Toc350126141"></a>Commandline
+ Parameters</h2>
+ <p>With the commandline parameters,
+ you can execute Restorator conveniently from a batch program, for automated
+ execution. It is also possible to incorporate Restorator or a ResPatch
+ into installation programs (like InstallShield) to automate resource
+ patching during installation.<br>
+ <br>
+ You can specify as many parameters as you want on one command line.
+ If you want to start Restorator with several batch processes in a row, it's a good idea
+ to allow some time for start up, processing, and closing, etc. When
+ you use the <code>-exit</code> flag, you should wait until Restorator has closed.
+ Then you can check whether the operation has been successful by looking
+ if Restorator created the destfile.<br>
+<br>
+ <b>Parameters for Restorator:</b><br>
+ <br>
+ <b>-backup</b> and <b>-noBackup</b><br>
+ [available since Restorator 2007]<br>
+ When saving a file, and overwriting an existing file, create [do not create] a backup file
+ of the original file. This setting will override the setting made in the settings
+ dialog in Restorator. If these options are not specified on the command line,
+ the current setting from Restorator's settings dialog is used.<br>
+ <br>
+ <b>-errorLog &lt;log file name&gt;</b><br>
+ [available since Restorator 2007]<br>
+ Specify a log file for the batch operation. All warnings and error messages during
+ batch operation will be written to this file. If the file already exists before
+ invoking Restorator with this parameter, the file will be overwritten.<br>
+ <br>
+ <b>-open &lt;exe/dll/res/rc file&gt;</b><br>
+ [available since Restorator 2007]<br>
+ Open the specified file. The following batch commands will operate on this file,
+ unless another file is opened with another <code>-open</code> command.<br>
+ <br>
+ <b>-assign &lt;res/rc file or folder&gt;</b><br>
+ [available since Restorator 2007]<br>
+ Assign the specified file or folder to the currently opened file. Requires that you
+ have opened a file with the <code>-open</code> command. This command is equivalent to dragging
+ a file or a folder on the exe file in Restorator's left Resource Tree.<br>
+ <br>
+ <b>-assignOn &lt;resource&gt;&lt;res/rc file or folder&gt;</b><br>
+ [available since Restorator 2007]<br>
+ Assign the specified file or folder to specified resource of the currently opened file.
+ Requires that you have opened a file with the <code>-open</code> command.
+ The resource is specified as a path: to assign the String folder, just specify <code>String</code>.
+ In order to assign on bitmap 1, specify <code>Bitmap\1</code> as resource parameter. In order to
+ specify a certain resource of a specific language, use e.g. <code>Bitmap\1\English&nbsp;(United&nbsp;States)</code>.
+ You can see the respective path in Restorator's status bar at the bottom when selecting a resource.
+ If the specified resource does not exist, it will be created first.
+ This command is equivalent to dragging a file or a folder on a resource or resource folder
+ in Restorator's left Resource Tree.<br>
+ <br>
+ <b>-delete &lt;resource&gt;</b><br>
+ [available since Restorator 2007]<br>
+ Delete the specified resource or resource folder of the currently opened file.
+ Requires that you have opened a file with the <code>-open</code> command.
+ Specify the resource as a path just as with the <code>-assignOn</code> command.
+ This command is equivalent to selecting a resource or a resource folder
+ in Restorator's left Resource Tree, and then choosing the delete command from the Resources menu.<br>
+ <br>
+ <b>-save</b><br>
+ [available since Restorator 2007]<br>
+ Save the currently open exe file.
+ Requires that you have opened a file with the <code>-open</code> command.<br>
+ <br>
+ <b>-saveAs &lt;file name&gt;</b><br>
+ [available since Restorator 2007]<br>
+ Save the currently open exe file under the specified name.
+ Requires that you have opened a file with the <code>-open</code> command.<br>
+ <br>
+ <b>-exit</b><br>
+ [available since Restorator 2007]<br>
+ Close Restorator after executing the batch commands.
+ This parameter has 2 implications:
+ <ol class="nospace">
+ <li>For the batch operation, Restorator is always started in its own
+    instance, regardless of the setting <i>Allow multiple Restorator instances</i>.
+ <li>Restorator is always closed after the batch process has finished, regardless
+    if the batch process was successful or not. You can use the log file
+    to check for error messages.
+ </ol>
+ Without <code>-exit</code>, if an instance of Restorator is already running,
+ and the <i>Allow multiple Restorator instances</i> setting is not checked,
+ the batch function is executed in the first instance of Restorator.<br>
+ <br>
+ <b>Examples</b><br>
+ <br>
+ Open file.exe, delete Icon resources, save as file2.exe:<br>
+ <code>Restorator.exe -open file.exe -delete Icon -saveAs file2.exe -exit</code><br>
+ <br>
+ Open a.exe, assign all resources that exist in all.res, delete RCData\DESCRIPTION
+ resource, assign rcdata.res on the RCData resource, save and exit:<br>
+ <pre>Restorator.exe -open a.exe -assign all.res -delete RCData\DESCRIPTION
+ 	            -assignOn RCData rcdata.res -save -exit</pre>
+ Open test.res, assign test.rc, save, open test2.res, assign the file icon.ico, save, and exit.
+ Log everything to log.txt:<br>
+ <pre>Restorator.exe -errorLog log.txt -open test.res -assign test.rc -save
+ 	            -open test2.res -assign icon.ico -save -exit</pre><br>
+
+
+<b>Legacy Parameters (recommened to use the commands above):</b><br>
+<br>
+ <b>-assignall &lt;resdir&gt; &lt;srcfile&gt; &lt;destfile&gt;</b><br>
+ This function opens <code>srcfile</code>,
+ executes an <i>Assign All</i> on <code>resdir</code>, saves the modified
+ file as <code>destfile</code> and closes the file. The <code>resdir</code>
+ should contain subfolders with the correct resource type names. You can create
+ such a structure for a given Resource File with the function <i>Extract All</i>
+ in the Resources menu.<br>
+ <br>
+ <b>-batchClose</b><br>
+ This parameter is equivalent to the <code>-exit</code> parameter explained above.
+
+ Here is an example (of course all on one line):<br>
+ <code>C:\Program Files\Restorator 2007\Restorator.exe -batchClose <br>
+ &nbsp;&nbsp;&nbsp;-assignall C:\TestFiles C:\SendSX.exe C:\SendSXPatched.exe</code><br>
+ <br>
+ <br>
+
+ <b>Parameters for ResPatches:</b>
+ <br>
+ <b>-force</b><br>
+ This function disables the CRC check that normally
+ verifies that you are actually patching the correct Resource File.<br>
+ <br>
+ <b>-guiless</b><br>
+ Do not display main window; patch the
+ file automatically (<code>-auto</code> implicit, but error messages are displayed)<br>
+ <br>
+ <b>-quiet</b><br>
+ do not display error messages<br>
+ <br>
+ <b>-auto</b><br>
+ Automatically start patching,
+ exit after patching.<br>
+ <br>
+ <b>-dir &lt;dir&gt;</b><br>
+ Folder where to apply the patch.<br>
+ <br>
+ <b>-nobackup</b><br>
+ Do not create backup files of original
+ Resource Files.<br>
+ <br>
+ <b>-help</b><br>
+ Display help text (will not patch
+ anything and ignore other options).<br>
+ <br>
+ </p>
+
+ <hr width="400" align="center" size="8">
+ <h2><a name="_Toc350126142"></a><a name="RCFile">RC File Support</a></h2>
+ <p>Since version 2006, Restorator provides extended support for RC files.
+ 	Previous versions only allowed to export as RC files and to replace
+ 	single resources with RC files that only contained one resource.
+ 	Now with Restorator 2006 and later, you can open RC files in the left Resource Tree:
+
+ 	<ul>
+ 		<li>open RC files with any number of different resources</li>
+ 		<li>These pre-processor commands are supported:
+ 			<ul class=nospace>
+ 				<li><code>#define</code></li>
+ 				<li><code>#undef</code></li>
+ 				<li><code>#include</code></li>
+ 				<li><code>#ifdef</code></li>
+ 				<li><code>#ifndef</code></li>
+ 				<li><code>#if</code></li>
+ 				<li><code>#elif</code></li>
+ 				<li><code>#else</code></li>
+ 				<li><code>#endif</code></li>
+ 			</ul></li>
+		<li>only non-compound #defines are supported, i.e. complex mathematical
+		expressions are not evaluated.</li>
+		<li>#defines are not retained when you save a modified RC file.</li>
+		<li>Binary resource definitions are not supported</li>
+	</ul>
+ 	<br>
+ </p>
+
+ <hr width="400" align="center" size="8">
+ <h2><a name="_Toc35012615">Menu</a></h2>
+ <p>This chapter lists the items
+  in the Restorator menu. Reading through it will help you to understand
+  features and usage. It also serves as a reference.</p>
+ <p>Please note that the menu
+  items dynamically change when certain elements are selected or in specific
+  modes. If you do not find the item you are looking for, please try to
+  select the element you actually want do use. E.g. operations on a collection
+  of files is available when a folder is selected, not when a single
+  file is selected.</p>
+
+ <hr width="200" align="center" size="4">
+ <h2><a name="_Toc35012616">File</a></h2>
+ <p>Provides functionality to
+  open, save and access <a href="#_Resource_Files_1">Resource Files</a>.</p>
+ <h3><a name="_Toc35012617"></a>New
+  .res file/.dcr file/.rc file.</h3>
+ <p>Add a new empty resource file in
+  the <a href="#_Resource_Tree">Resource Tree</a>.
+  You can then add resources to this file.
+  These .res files can be used to store any resources and imported into
+  other exe or dll files. You select to create a .res, .dcr, or .rc file.
+  .res files contain compiled resources in the
+  standard Windows resource format. .rc files contain resources in text format.
+  A .dcr file is a Delphi Component
+  Resources and belongs to components of Delphi, to store e.g. the icon
+  of a component.</p>
+  <p align="right">Keyboard shortcut: Ctrl+N</p>
+
+ <h3> <a name="_Toc35012618">Open</a></h3>
+ <p>Open a <a href="#_Resource_Files">file
+  that contains resources</a> like exe files. You can then browse and
+  edit resources.</p>
+ <p align="right">Keyboard shortcut: Ctrl+O</p>
+ <h3> <a name="_Toc35012619">Save</a></h3>
+ <p>Save the current file under
+  the current original name. The file that was loaded is overwritten and
+  the modified file is saved. Use <i>Save As</i> to store the current
+  file under a different name if you are not sure that you want to overwrite
+  the current file.</p>
+ <p align="right">Keyboard shortcut: Ctrl+S</p>
+ <h3> <a name="_Toc35012620">Save
+  As</a></h3>
+ <p>Save the current file
+  under a different name. The current file is the Resource File
+  selected in the <a href="#_Resource_Tree">Resource Tree</a>.
+  Use this menu item to store a modified executable
+  to a different file name to keep the original file unmodified.</p>
+ <p align="right">Keyboard shortcut: F12</p>
+ <h3> <a name="_Toc35012621">Run</a></h3>
+ <p>Start the file that is currently
+  selected. This is usable only if an executable file is selected. Use
+  this option to test a modification on the application when the application
+  is actually running.</p>
+ <p align="right">Keyboard shortcut: Ctrl+R</p>
+ <p>&nbsp;</p>
+ <h3> <a name="_Toc35012622">Close</a></h3>
+ <p>Close the file currently
+  selected in the <a href="#_Resource_Tree">Resource Tree</a> window.</p>
+ <p align="right">Keyboard shortcut: BACKSPACE</p>
+ <h3> <a name="_Toc35012623">Close
+  all</a></h3>
+ <p>Close all files open in the
+  <a href="#_Resource_Tree">Resource Tree</a> window.</p>
+ <p>&nbsp;</p>
+ <h3> <a name="_Toc35012624">Recent
+  Files</a></h3>
+ <p>A list with the files last
+  opened. Select a file to open it again quickly.</p>
+ <p>&nbsp;</p>
+ <h3> <a name="_Toc35012625">Last
+  found Files</a></h3>
+ <p>Provides access to a list
+  with the files that were recently found with the resource finder (Tools
+  &gt; Find Resources). Select a file to re-open it quickly.</p>
+ <p>&nbsp;</p>
+ <h3> <a name="_Toc35012626">Exit</a></h3>
+ <p>This terminates Restorator. If you have
+ unsaved files open in the Resource Tree, you will
+  be asked if you want to save them.</p>
+ <p align="right">Keyboard shortcut: Alt+F4</p>
+ <hr width="200" align="center" size="4">
+ <h2><a name="_Toc35012627">Resources</a></h2>
+ <p>The content of the resource
+  menu is dynamically adjusted depending on the selection in the Resource
+  Tree. You only see the functions that are useful for the current selection.</p>
+ <p>&nbsp;</p>
+ <h3><a name="_Toc35012628">Delete</a></h3>
+ <p>Delete a specific resource
+  or resource folder. Be careful: the delete operation cannot be undone!
+  Also, in most cases, exe files with missing resources will most likely
+  not run correctly. You should know what you are doing when using this
+  function.</p>
+ <p align="right">Keyboard shortcut: DEL</p>
+ <h3><a name="_Toc35012629">Rename</a></h3>
+ <p>The resource folders
+  typically have a default type like <i>Bitmap</i> for the group that
+  contains bitmap resources. Select <i>Rename</i> to modify the type of
+  the selected group. You can also rename individual resources in order
+  to change the resource name.</p>
+ <p align="right">Keyboard shortcut: F2</p>
+ <h3> <a name="_Toc35012630">Extract</a>|Extract
+  All </h3>
+ <p>This sub-menu contains functions
+  for extracting resources from the selected resource file or resource
+  folder to files on disk. <i>Extract All</i> creates files for each
+  resource or sub-resource in the current folder of the File
+  Browser. If the resources are in sub-resource-folders, folders
+  are created for the resources on disk. After changing some of the resources
+  on disk, you can use the<a href="#_Toc35012631"> <i>Assign|Auto Assign
+  all Resources</i></a> function to integrate the changes into the original
+  resource file. This function can be used to conveniently save all resources
+  to disk and then edit the files with other programs. Once editing is
+  done, use <a href="#_Toc35012631"><i>Assign|Auto Assign all Resources</i></a>
+  to assign all the modified files to the resources (i.e. "commit" the
+  changes on the files).</p>
+ <p>The
+  powerful RC extraction dialog (<i>Extract As RC File</i>) lets you create
+  .rc files from the resources in the currently selected Resource File.
+  You can choose which resources to include, and whether to add all resources
+  into one .rc file or create one .rc file for each resource. </p>
+ <p>&nbsp;</p>
+ <h3> <a name="_Toc35012631">Assign|Auto
+  Assign all Resources</a></h3>
+ <p>This function tries to assign
+  files in the current folder of the File Browser to resources of the
+  current Resource File. It is the reverse operation of <a href="#_Toc35012630"><i>Extract|All
+  Resources</i></a>. It looks for files with names of the resources and
+  in sub folders with names of the resource folders, exactly as
+  <a href="#_Toc35012630"><i>Extract|Extract All Resources</i></a> creates
+  the files.</p>
+ <p>This function can be used
+  to conveniently commit the changes made to files saved to disk with
+  the <a href="#_Toc35012630"><i>Extract|Extract All Resources</i></a>
+  function: once editing is done, use <i>Assign|Auto Assign all Resources
+  </i>to assign all the modified files to the resources (i.e. "commit"
+  the changes on the files).</p>
+ <p>&nbsp;</p>
+ <h3><a name="_Toc35012632">Detach</a></h3>
+ <p>When you have assigned resources
+  (i.e. modified) but want to undo the modification and revert to the
+  original resource, use the Detach function. You can detach single resources
+  or entire resource folders.</p>
+ <p align="right">Keyboard shortcut: Ctrl+D</p>
+ <p>&nbsp;</p>
+ <h3><a name="_Toc35012633">Res
+  Files</a></h3>
+ <p>The sub-menu contains functions
+  for working with res files on disk: you can assign the contents of a
+  .res file to the current Resource File/resource folder/resource (Res
+  Files|Assign). Or the powerful Save dialog (Res Files|Save) allows you
+  to create .res files from the resources in the current Resource File
+  with your given criteria (i.e. you can include in the saved .res file
+  only resources of specific languages). You can choose to include all
+  resources in one single .res file, or create one .res file for each
+  resource.</p>
+ <p>&nbsp;</p>
+ <h3> <a name="_Toc35012634">Add Resource</a></h3>
+ <p>Adds a resource in the current
+  resource tree. You can extend applications by including new resources.
+  If the application is selected, you select a type, e.g. bitmap that
+  is created in the bitmap folder. If a folder like bitmap is already
+  selected, you will add a resource to this folder.</p>
+ <p>Added resources are particularly
+  useful for your created .res, .dcr, or .rc files, or if you want to add custom
+  resources to your own projects.</p>
+ <p>Note that you cannot edit the name of a string resource due to internal
+ 	representation of string resources.</p>
+ <p align="right">Keyboard shortcut: Ctrl+U</p>
+ <p><img border="0" src="images/add_resource.png""></p>
+
+ <h3> <a name="_Toc35012635">Set Language ID</a></h3>
+ <p>Define a Language/Locale ID for the
+  resources contained in the selection. When you start an application, its
+  resources are chosen according
+  to the Locale setting of the operating system. This feature enables you
+  to translate applications that dynamically adjust to the language of
+  the operating system without recompiling the application. <br>
+  <br>
+  You can also set the code page, but the setting is ignored by Restorator, and as far as we can tell, it
+  is ignored by Windows, too. You can set the code page for ANSI-Unicode conversion in the settings dialog.
+ </p>
+ <p align="right">Keyboard shortcut: Ctrl+L</p>
+ <p>&nbsp;</p>
+ <h3><a name="_Toc35012636">Copy</a></h3>
+ <p>Copy the selected resource
+  to the clipboard buffer. You can then paste it in a different location
+  in the resource tree. You can easily transfer a single resource or entire
+  resource folders to another resource file. Some resources types,
+  e.g. bitmaps, can also be pasted into other programs, like an external
+  graphics program.</p>
+ <p align="right">Keyboard shortcut: Ctrl-C</p>
+ <h3> <a name="_Toc35012637">Paste</a></h3>
+ <p>Paste a copied resource in
+  the current location in the resource tree. For some resource types (e.g.
+  bitmaps) you can paste data copied in external programs, like images
+  copied in an external graphics program.</p>
+ <p align="right">Keyboard shortcut: Ctrl-V</p>
+ <h3> <a name="_Toc35012638">Browse
+  to "folder location"</a></h3>
+ <p>In the File Browser, change
+  the folder to the one where the selected resource file is located.
+  </p>
+ <p>&nbsp;</p>
+ <h3><a name="_Toc35012639"></a>Find
+  in Resources</h3>
+ <p>Use this function to search
+  the selected resources in the <a href="#_Resource_Tree">Resource Tree</a>
+  for search words. When the word is found, the resource is displayed
+  in the Resource Viewer and the occurrence, if visible, highlighted.
+  This function is looking for the given words/string within resources.
+  If you are looking for Resource Files that contain resources with specific
+  criteria, select '<i>Find Resources'</i> in <i>'Tools'.</i></p>
+ <p align="right">Keyboard shortcut: Ctrl-F</p>
+ <h3> <a name="_Toc35012640">Find
+  Next</a></h3>
+ <p>Finds the next occurrence
+  of the search word used in <i>Find in Resources</i>.</p>
+ <p align="right">Keyboard shortcut: F3</p>
+ <h3> <a name="_Toc35012641">Properties</a></h3>
+ <p>Shows additional information
+  on selected resource or resource folder. It has some additional information
+  for exe files like section headers.</p>
+ <p align="right">Keyboard shortcut: Alt+ENTER</p>
+ <p><a name="_Toc34914663"></a><a name=
+ "_Toc35008736"></a><a name="_Toc35008824"></a><a name=
+ "_Toc35012478"></a><a name="_Toc35012642"><img border="0"
+ src="images/image004.jpg"></a></p>
+
+ <hr width="200" align="center" size="4">
+ <h2><a name="_Toc35012643">Viewer</a></h2>
+ <p>The Resource Viewer displays
+  the resources that you select in the Resource Tree. If you select
+  a resource file or a resource folder, it will display the contents
+  of the file or folder, respectively.</p>
+ There are <b>3 view modes</b>
+ for the resources:
+ <h3>1. <a name="_Toc35012644">Default mode</a></h3>
+ <p>The <i>Default Mode</i> is
+  displaying each resource in its "natural" representation. I.e. images
+  are displayed as images, textual resources like strings are presented
+  in a text field, etc. If Restorator does not know a resource's
+  type, it is displayed as a hex dump (see below). Suited for browsing
+  the content and understanding the structure of the resource file without
+  accidental modifications.</p>
+ <p align="right">Keyboard shortcut: Ctrl-F5</p>
+ <p><img border="0" src="images/part_view_default.png"></p>
+ <p>Image: Example of the display of a dialog in Default mode.</p>
+
+ <h3>2. <a name="_Toc35012645">Hexdump
+  mode</a></h3>
+ <p>Displays resource content
+  in a Hexadecimal display mode. Suitable for data that cannot be displayed
+  in its "natural" format, e.g. not readable as text or viewable as image.
+  Use the <i>H</i> toolbutton to select the hex dump mode.</p>
+ <p align="right">Keyboard shortcut: Ctrl-F6</p>
+
+ <p><img border="0" src="images/part_view_hex.png"><br>
+ Image: Example of Hexdump mode view.</p>
+
+ <h3>3. <a name="_Toc35012646">RC
+  mode</a></h3>
+ <p>The <i>Resource Mode</i>
+  is displaying readable information about the resource in the viewer
+  window. It shows the structure of the individual resource in the RC
+  file format. This is always a textual representation of the resource.
+  Sometimes it displays more information than the <i>Default mode</i>.
+  Use the <i>RC</i> toolbutton to select the RC mode.</p>
+ <p align="right">Keyboard shortcut: Ctrl-F6</p>
+
+ <p><img border="0" src="images/part_view_rc.png"><br>
+ Image: Example of RC display mode.</p>
+
+ <h3> <a name="_Toc35012647">Editing
+  Resources</a></h3>
+ <p>Activate the Edit Mode (with
+  the <i>ab</i> tool
+  button or by pressing F6) in order to modify resources inside of Restorator.
+  It allows editing text-based resources within Restorator.
+  Text-based resources are strings, menus, Delphi forms, etc.
+  For dialog and version resources, it opens the special dialog or version editor.
+  For menus, it displays
+  a menu in an own window so that you can try the menu in action. When
+  you made changes, press F8 to commit them into the resource file. Press
+  F5 to update the preview window. Depending on which view mode you are,
+  you may have different ways of editing the same resource. Currently,
+  this applies to dialogs, which can be edited in RC Mode as text, and
+  in Default Mode with a graphical user interface.
+  </p>
+ <p align="right">Keyboard shortcut: F6</p>
+ <h3><a name="_Toc35012648">Autosize</a></h3>
+ <p>This applies to images only:
+  if enabled, the images are automatically resized to fit the size of
+  the Resource Viewer. It helps to preview the resource. Deactivate if
+  you want to see the original size that is used when displayed in the
+  application.</p>
+ <hr width="200" align="center" size="4">
+
+ <h2><a name="_Toc35012649">Tools</a></h2>
+ <p>Provides advanced functionality
+  for special tasks and offers cutomization for integration with other
+  editing applications.</p>
+ <h3><a name="_Toc35012650">Settings...</a></h3>
+ <p>Configuration of Restorator for display and
+ behavior options. The settings have reasonable
+  default settings.</p>
+ <p align="right">Keyboard shortcut: Shift+Ctrl+S</p>
+ <p><img border="0" src="images/settings.png"></p>
+ <h3> <a name="_Toc350126501">Find Resources</a></h3>
+ <p>With the Find Resources tool, you can find exe or res files that contain
+    a specific text or that have specific named resources.
+ </p>
+ <p align="right">Keyboard shortcut: Shift+Ctrl+F</p>
+ <h3><a name="_Toc35012651">Grab Resources</a></h3>
+ <p>With the Grab Resources tool,
+  you can extract all resources of a specified type from all or selected
+  files on your hard disk.. E.g. extract all images that are contained
+  in any application in "C:\Program Files". This can be a great tool to
+  instantly get a huge collection of images, icons, cursors, etc. See
+  the <a href="tutorials.html">tutorials</a> for more info on its usage.</p>
+ <p align="right">Keyboard shortcut: Shift+Ctrl+G</p>
+ <h3><a name="_Toc35012652">Create
+  ResPatcher...</a></h3>
+ <p>With the ResPatcher Wizard,
+  you can create a standalone program that can redo all your modifications
+  to a program. You are able to distribute your distilled manipulations
+  to an application without distributing the application itself. See the
+  tutorials for more info on its usage.</p>
+ <p><img border="0" src="tutorials/rp/rpwelcome.png"></p>
+ <p align="right">Keyboard shortcut: Shift+Ctrl+R</p>
+ <h3><a name="_Toc350126521">Create Windows XP Manifest...</a></h3>
+ <p>With the Manifest tool, you can add a Windows Manifest resource to
+    an exe file. This will enable Windows look'n'feel (theme) to your application.
+    This will freshen the look of older applications!
+ </p>
+ <p align="right">Keyboard shortcut: Shift+Ctrl+X</p>
+ <h3><a name="_Force_File_replace"></a>
+  <a name="_Toc35012653">Force File replace on next restart</a></h3>
+ <p>Use this tool if you
+  cannot replace files while Windows runs. With this function you can
+  conveniently replace programs that are always running (i.e. auto starting
+  programs) or even Windows system files like the Explorer.</p>
+ <p>Tip&nbsp;: On Windows
+  2000 and XP, you need to use this function in the "Safe Mode" if you
+  want to modify Windows files. Otherwise, the file protection will automatically
+  restore the original file with the next reboot.</p>
+ <p align="right">Keyboard shortcut: Shift+Ctrl+N</p>
+ <p><img border="0" src="images/forcefile.png"></p>
+ <p>&nbsp;</p>
+ <h3><a name="_Toc35012654">Edit file associations</a></h3>
+ <p>Edit the file types to which
+  Restorator is associated. You can double click those files in the
+  explorer to open them with Restorator. Also you can select which
+  files you want to be able to open from the Explorer's context menu.</p>
+ <p>&nbsp;</p>
+ <h3><a name="_Toc35012655">Configure tools...</a></h3>
+ <p>Define applications that
+  will be added in this <i>tools</i> menu to be easily accessible at all
+  times. E.g. if you often use a graphics program in conjunction with
+  Restorator, you can add the graphics program to the tools and have
+  instant access to it.
+  </p>
+ <h3><a name="_Toc350126551">Resource Tree</a></h3>
+ <p>Use this function to activate the left Resource Tree.
+ </p>
+ <p align="right">Keyboard shortcut: F9</p>
+ <hr width="200" align="center" size="4">
+ <h2><a name="_Toc35012656">Help</a></h2>
+ <h3> <a name="_Toc35012657">Help</a></h3>
+ <p>Diplay this help file.</p>
+ <h3> <a name="_Toc35012658">FAQ</a></h3>
+ <p>See answers to <a href="FAQ.html">frequently
+  asked questions</a>
+  </p>
+ <h3><a name="_Toc35012659">Tutorial</a></h3>
+ <p>Links to <a href="tutorials.html">tutorials</a>
+  for step-by-step guides to the features of Restorator. </p>
+ <h3><a name="_Toc35012660">Buy Restorator</a></h3>
+ <p>This will display a screen to guide
+  you to <a href="../purchase.html">purchase Restorator</a>
+  through our secure server.<br>
+  <br>
+  The full version does not have a 30 days limit and it won't add nag strings to menu, dialog, and version resources.
+  It also unlocks the Grab Resources, and Create ResPatcher tools.
+  <br>
+  The regular version will give you a life-long right for free updates
+  of Restorator. Additionally, support by email is guaranteed.</p>
+
+ <h3> <a name="_Toc35012661">About</a></h3>
+ <p>Display Copyright and version
+  info about Restorator.</p>
+ <hr width="200" align="center" size="4">
+
+ <h2><a name="_Toc35012662">Context
+  Menu</a></h2>
+ <p>The context menu apears whenever
+  the right mouse button is clicked. The presented functions are conviently
+  accessible. </p>
+ <p>Most of the available functions
+  are also acessible through the menu and are described there. The new
+  functions are described below, together with screeenshots of the available
+  menu.</p>
+ <p><img src="images/cm_file.png"><br>
+ Image: Example of a RightClick context
+  menu on an application</p>
+ <p><img src="images/cm_folder.png"><br>
+ Image: Example of a RightClick context
+  menu on a resource folder</p>
+ <p><img src="images/cm_res.png"><br>
+ Image: Example of a RightClick context
+  menu on an icon resource</p>
+ <h3>Add to Recent Files</h3>
+ Includes the selected file in
+ the list of recent files. Doing so helps to easily access the file later
+ through the <i>Files-&gt;RecentFiles </i>menu.
+ <h3> Collapse Tree</h3>
+ Closes all open folders and
+ reduces the icons to the resource file. This helps to start over the browsing
+ of the resource file.
+ <h3>Sort Tree</h3>
+ Rearranges the order of resource
+  files. Helpful if several resource files are open in the same time.
+ <h3>Properties</h3>
+ This will open a dialog displaying
+ information about the selected file. Very helpful to see the status of
+ resource files and resources.
+ <p align="right">Keyboard shortcut: Alt+Enter</p>
+ <p>&nbsp; </p>
+ <hr width="400" align="center" size="8">
+ <h2><a name="_Toc35012663">License</a></h2>
+
+ <p>The trial version is
+  limited to a 30-day trial period. See <a href="../purchase.html">purchase.html</a>
+  for information how to purchase Restorator.</p>
+ Restorator and ResPatches may
+ be distributed freely without charge. Anyone distributing Restorator for
+ any kind of remuneration must first contact the author for authorization.
+ If you want to sell ResPatches, royalties apply. Contact bome.com
+ for details.
+
+ <p>When using Restorator, you
+  must agree to the license agreement, which is contained in Restorator's
+  distribution as the file <a href="../license.txt">license.txt</a>.</p>
+ <hr width="400" align="center" size="8">
+
+ <h2><a name="_Toc35012664"></a>Uninstall</h2>
+ <p>To remove Restorator
+  from your computer:</p>
+ <ol>
+  <li> Close Restorator</li>
+  <li> On the taskbar, click
+   the Start menu button to open the Start menu.</li>
+  <li> Choose Settings &gt;
+   Control Panel. The Control Panel opens.</li>
+  <li> Double-click the Add/Remove
+   Programs button. The Add/Remove Programs Properties dialog box opens.</li>
+  <li> If necessary, click the
+   Install/Uninstall tab to bring it to the front.</li>
+  <li> Scroll through the list
+   box to find Restorator.</li>
+  <li> Highlight Restorator.</li>
+  <li> Click the Add/Remove
+   button. The Uninstall setup program starts.</li>
+  <li> Follow the on-screen
+   prompts.</li>
+ </ol>
+
+
+<hr width="400" align="center" size="8">
+<h2><a name="_Toc350126641">Acknowledgements</a></h2>
+<p>
+For GIF reading, this software is based, in part, on the work
+of Anders Melander.<br>
+Portions of the code are partially based on the work of the
+Independent JPEG Group.<br>
+This software is distributed with the UPX exe packer/unpacker;
+thanks for the authors for this useful application.<br>
+For PNG reading, this software is based, in part, on the work
+of Gustavo Huffenbacher Daud.<br>
+</p>
+
+ <hr width="400" align="center" size="8">
+ <h2><a name="_Toc35012665">Glossary</a></h2>
+ <h3><a name="_Toc35012666"></a><a name="_Resource_Tree"></a>Resource Tree</h3>
+ <p>Left pane of the Restorator application (per default).</p>
+ <p>The Resource Tree displays
+  all resource files that are currently open. The display is arranged
+  in a tree that arranges resources in hierarchical levels.</p>
+ <p>The Resource Tree is used
+  to browse and select resources in the open files.</p>
+ <p>To display resources, drag
+  .exe file from into this window. Use right click on resources for common
+  operations.</p>
+ <h3><a name="_Toc35012667"></a><a name="_Resource_Files"></a>Resource Viewer</h3>
+ <p>Right pane of the Restorator application (per default).</p>
+ <p>The Resource Viewer displays
+  the individual resources that are selected in the <a href="#_Resource_Tree">Resource
+  Tree</a>. You can view or edit them here.</p>
+ <h3><a name="_Toc35012668">Resources</a></h3>
+ <p>Resources are additional
+  data accompanying a Windows application. Resources are usually part
+  of the application interface. E.g. dialogs, menus, images, text, icons
+  etc. They are stored with the executable or dll (see below for other
+  types of <a href="#_Resource_Files_1">Resource Files</a>). Restorator
+  can edit those resource files and thereby change the look and feel
+  or language of an application. You do not need any other tools, compilers,
+  or even the source code of the application - Restorator is completely
+  independent of other tools.</p>
+ <p><a name="_Resource_Files_1"></a></p>
+ <h3>Resource Files</h3>
+ <p>Resource files are any files
+  that contain resources and can be opened and edited with Restorator.</p>
+ <p>Common Resource files are:</p>
+ <table border="1" cellspacing="0" cellpadding="3">
+  <tr>
+   <th valign="top">File Type</th>
+   <th valign="top">Extension</th>
+   <th valign="top">Description</th>
+  </tr>
+  <tr>
+   <td valign="top">
+    Executable
+   </td>
+   <td valign="top">
+    .exe
+   </td>
+   <td valign="top">
+    Regular executable
+     windows application.
+   </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    DLL (Dynamic Link Library)
+   </td>
+   <td valign="top">
+    .dll
+   </td>
+   <td valign="top">
+    Additional binary loaded upon program execution.
+   </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Resource File
+   </td>
+   <td valign="top">
+    .res
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Textual Resource File
+   </td>
+   <td valign="top">
+    .rc
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Screen Saver
+   </td>
+   <td valign="top">
+    .scr
+   </td>
+   <td valign="top">Screensaver
+    resource -- activated when computer is idle.</td>
+  </tr>
+  <tr>
+   <td valign="top">
+    ActiveX Control
+   </td>
+   <td valign="top">
+    .ocx
+   </td>
+   <td valign="top">Micrsoft
+    active X control.</td>
+  </tr>
+  <tr>
+   <td valign="top">
+    ActiveX Type Library
+   </td>
+   <td valign="top">
+    .tlb
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Device Driver
+   </td>
+   <td valign="top">
+    .sys/.drv/.tsp
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Control Panel Applet
+   </td>
+   <td valign="top">
+    .cpl
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Multimedia Codec
+   </td>
+   <td valign="top">
+    .acm/.ax
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Delphi Package
+   </td>
+   <td valign="top">
+    .dpl
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Borland Package
+   </td>
+   <td valign="top">
+    .bpl
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Converter
+   </td>
+   <td valign="top">
+    .cnv/.wpc
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Graphics import filter
+   </td>
+   <td valign="top">
+    .flt
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+  <tr>
+   <td valign="top">
+    Delphi Component Resource
+   </td>
+   <td valign="top">
+    .dcr
+   </td>
+   <td valign="top">&nbsp;
+    </td>
+  </tr>
+ </table>
+ See the <a href="tech.html">technical specifications</a> for a list of resource
+ types known by Restorator.
+ <p>&nbsp;</p>
+
+
+<!-- ]==========[ Footer ]==========[ -->
+   <div align="center">
+    <hr width="400" align="center" size="4">
+    <font class="copyright">Copyright 1997-2007 by bome.com</font>
+   </div>
+  </td></tr></table>
+ </body>
+</html>

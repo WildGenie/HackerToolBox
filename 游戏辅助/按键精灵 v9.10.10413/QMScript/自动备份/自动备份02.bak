@@ -1,0 +1,70 @@
+[General]
+MacroID=14ea3d33-d288-40d7-96df-79794e67e2db
+SyntaxVersion=2
+BeginHotkey=121
+BeginHotkeyMod=0
+PauseHotkey=0
+PauseHotkeyMod=0
+StopHotkey=123
+StopHotkeyMod=0
+RunOnce=1
+EnableWindow=
+Description=SteVeN 的网页脚本
+Enable=0
+AutoRun=0
+[Repeat]
+Type=0
+Number=1
+[SetupUI]
+Type=2
+QUI=
+[Relative]
+SetupOCXFile=
+[Comment]
+
+[Script]
+ProcessID=Plugin.Web.Bind("wqm.exe")
+Delay 2000
+If ProcessID=0 then
+  MessageBox "网页按键精灵没有运行"
+  EndScript
+End If
+Call Plugin.Web.Tips("脚本开始运行")
+Call Plugin.Web.SetSize(727,784)
+Call Plugin.Web.Go("http://main.skyscraper.qzone.qzoneapp.com/index.php?openid=000000000000000000000000005E9383&openkey=AA3FFFF22333DE1846E9D9BA4D10C3A1")
+Call Plugin.Web.ScrollTo(0,0)
+Delay 8455
+Call Plugin.Web.LeftClick(495,623)
+Delay 593
+Call Plugin.Web.LeftClick(498,619)
+Delay 2949
+Call Plugin.Web.LeftClick(511,255)
+Delay 873
+Call Plugin.Web.LeftClick(510,256)
+Delay 983
+Call Plugin.Web.LeftClick(543,531)
+Delay 1030
+Call Plugin.Web.LeftClick(571,410)
+Delay 1248
+Call Plugin.Web.LeftClick(225,436)
+Delay 1856
+Call Plugin.Web.LeftClick(346,414)
+Delay 94
+Call Plugin.Web.LeftDoubleClick(346,414)
+Delay 109
+Call Plugin.Web.LeftUp(346,414)
+Delay 140
+Call Plugin.Web.LeftClick(346,414)
+Delay 141
+Call Plugin.Web.LeftDoubleClick(346,414)
+Delay 78
+Call Plugin.Web.LeftUp(346,414)
+Delay 514
+Call Plugin.Web.LeftClick(346,414)
+Delay 1046
+Call Plugin.Web.LeftClick(316,482)
+Delay 4493
+Call Plugin.Web.LeftClick(688,254)
+Sub OnScriptExit()
+  Call Plugin.Web.Tips("脚本停止运行")
+End Sub

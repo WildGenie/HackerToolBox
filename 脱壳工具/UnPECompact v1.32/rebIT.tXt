@@ -1,0 +1,97 @@
+
+
+		-=[	rebIT.dll - a generic Import Table Rebuilder	]=-
+
+                           for Win 9x/ME/NT/2k  -  version:  1.1
+
+
+Features:
+---------
+- rebIT.dll should rebuild all usual destructed Import Tables :)
+- it can rebuild Ordinal Imports
+- rebIT.dll can find Import Tables back which have been destroyed e.g. through
+  a packer
+- it is also able to rebuild Image Import Descriptors
+
+
+Known probs:
+------------
+- windows nt/2k isn't full supported yet...sometimes the IT couldn't be rebuilded
+  right and an other time the produced exe isn't a valid Win 32 file !!! :(
+
+
+Tested with:
+------------
+rebIT.dll could rebuild the Import Tables which have been destroyed with the following packers:
+- ASPack 2.11
+- PEPack 1.0
+- NeoLite 2.0
+- PECompact 1.43
+- UPX 1.03
+- PE Diminisher 0.1
+- PKLite32 1.1
+- WWPack 1.20
+
+Please mail if you could add to this list.
+
+
+Usage:
+------
+Make sure that all dlls imported by the target PE file are in the same or in the windows directory.
+Function prototypes:
+
+BYTE RebuildIT (LPVOID pMap ,
+		DWORD  dwMemSize,
+                BYTE   byRebuildType);
+
+Parameters:
+- pMap is a pointer to the memory mapped PE file you want to rebuild
+- dwMemSize is the RAW size (filesize) of the file
+  ( If you want to rebuild a new Import Table (byReabuildType = 1) then you have to allocate 200h 
+    more bytes for a new section ! Take care of a maybe unaligned last section while calculating
+    the new filesize !!!)
+- byReabuildType is either 0 or 1
+  0: Rebuild Import Table
+     - this will rebuild files which still have there old Image Import Descriptors in the file
+     - rebIT.dll will first search for another Import Table and rebuild the Thunks
+  1: Rebuild New Import Table
+     - use this method if the Image Import Descriptors of the old Import Table were destroyed
+     - rebIT.dll will create a new section in the target file memory with a new, valid (I hope :)
+       Image Import Descriptor
+     - at the end the Thunks will be rebuilded
+
+
+BYTE RebuildITDeluxe(LPTSTR szTargetFile,
+                     BYTE   byRebuildType);
+
+Notes:
+Works like "RebuildIT" but you don't need to map the file.
+
+
+Return Values: (for both functions)
+--------------
+0- an error occurred :.(
+1- Import Table rebuilded successfully
+
+
+Tip:
+----
+If you use the debug APIs and you want to rebuild an Import Table with rebIT.dll then
+you've to replace the FirstThunk of the debugged file with a valid one before rebuilding !!!
+
+
+For any bugs reports or comments mail to:
+LordPE@gmx.net or
+
+visit y0da.cjb.net !
+
+Have fun !
+
+
+History:
+--------
+1.1: - most bugs that appeared on NT-based OS's were fixed
+     - many bugfixes and many things recoded/improved
+     
+1.0: - first release
+

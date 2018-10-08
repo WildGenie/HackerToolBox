@@ -1,0 +1,15 @@
+Windows Registry (ASCII)
+NT
+###########################################################
+advapi32.dll,RegOpenKeyA
+advapi32.dll,RegOpenKeyExA
+advapi32.dll,RegQueryValueA
+advapi32.dll,RegQueryValueExA
+advapi32.dll,RegSetValueA
+advapi32.dll,RegSetValueExA
+advapi32.dll,RegCreateKeyA
+advapi32.dll,RegCreateKeyExA
+advapi32.dll,RegCloseKey
+advapi32.dll,RegDeleteKeyA
+advapi32.dll,RegDeleteValueA
+advapi32.dll,RegConnectRegistryA

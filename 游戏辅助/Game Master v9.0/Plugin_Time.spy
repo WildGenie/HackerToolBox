@@ -1,0 +1,8 @@
+Time Related Feature
+NT
+###########################################################
+kernel32.dll,Sleep
+kernel32.dll,SleepEx
+kernel32.dll,GetTickCount
+kernel32.dll,QueryPerformanceCounter
+kernel32.dll,QueryPerformanceFrequency

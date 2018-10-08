@@ -1,0 +1,10 @@
+%systemroot%\system32\smss.exe
+%systemroot%\system32\csrss.exe
+%systemroot%\system32\WINLOGON.exe
+%systemroot%\system32\services.exe
+%systemroot%\system32\LSASS.exe
+%systemroot%\system32\MDM.exe
+%systemroot%\system32\svchost.exe
+%systemroot%\system32\SPOOLSV.exe
+%systemroot%\system32\ntoskrnl.exe
+%systemroot%\explorer.exe

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ida xmlns:xi="http://www.w3.org/2003/XInclude"
+     xmlns:xpath="http://www.idapro.com/ns/xpath"
+     xmlns:idc="http://www.idapro.com/ns/idc">
+  <templates>
+    <page X="processor_alpha_p" title="Alpha Processor Options" subtitle="How would you like the Alpha processor module to analyze the input file?" visible="false">
+      <checkbox variable="/ida/processors/alpha/@ALPHA_STRICT"   caption="Strictly adhere to instruction formats">
+        <help>
+          If this option is on, IDA will check that unused fields
+          of instructions are filled by zeroes. If they are not,
+          it will refuse to disassemble the instruction.
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/alpha/@ALPHA_SIMPLIFY" caption="Simplify instructions">
+        <help>
+          If this option is on, IDA will simplify instructions and replace
+          them by clearer pseudo-instructions.
+          For example,
+
+                  bis     $31, $1, $2
+
+          will be replaced by
+
+                  mov     $1, $2
+        </help>
+      </checkbox>
+      <checkbox variable="/ida/processors/alpha/@ALPHA_MNEMONIC" caption="Use mnemonic register names">
+        <help>
+          If checked, IDA will use mnemonic names of the registers,
+          like s0, s1, t0, v0...
+        </help>
+      </checkbox>
+    </page>
+  </templates>
+</ida>

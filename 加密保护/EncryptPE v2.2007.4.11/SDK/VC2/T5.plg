@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: T5 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/T5.res" /d "_DEBUG" "G:\EncryptPE V2.2004.8.10\SDK\VC2\T5.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1A.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/T5.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"G:\EncryptPE V2.2004.8.10\SDK\VC2\LeftView.cpp"
+"G:\EncryptPE V2.2004.8.10\SDK\VC2\MainFrm.cpp"
+"G:\EncryptPE V2.2004.8.10\SDK\VC2\T5.cpp"
+"G:\EncryptPE V2.2004.8.10\SDK\VC2\T5Doc.cpp"
+"G:\EncryptPE V2.2004.8.10\SDK\VC2\T5View.cpp"
+"G:\EncryptPE V2.2004.8.10\SDK\VC2\TestConfig.cpp"
+"G:\EncryptPE V2.2004.8.10\SDK\VC2\ShareI.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1A.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1B.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/T5.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"G:\EncryptPE V2.2004.8.10\SDK\VC2\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1B.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1C.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/a.pdb" /debug /machine:I386 /out:"Debug/a.exe" /pdbtype:sept 
+".\Debug\LeftView.obj"
+".\Debug\MainFrm.obj"
+".\Debug\StdAfx.obj"
+".\Debug\T5.obj"
+".\Debug\T5Doc.obj"
+".\Debug\T5View.obj"
+".\Debug\TestConfig.obj"
+".\Debug\ShareI.obj"
+".\Debug\T5.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+LeftView.cpp
+MainFrm.cpp
+T5.cpp
+T5Doc.cpp
+T5View.cpp
+TestConfig.cpp
+ShareI.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+a.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

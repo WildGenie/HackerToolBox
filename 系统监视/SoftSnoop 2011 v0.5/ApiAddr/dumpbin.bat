@@ -1,0 +1,1 @@
+dumpbin/exports shell32.lib >shell32.txt

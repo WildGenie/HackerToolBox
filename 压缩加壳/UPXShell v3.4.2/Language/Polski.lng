@@ -1,0 +1,191 @@
+;Polish translation by [ro] <roi@epf.pl>, 2003-2005
+;Polskie t³umaczenie wykonane przez [ro] <roi@epf.pl>, 2003-2005
+;1.25
+;***************************************************************
+
+;Main Form
+;Top frame
+MainForm.lblCompressor.Caption=Kompresor EXE, DLL dla Win32
+MainForm.lblCompressor.Hint=Najlepszy darmowy kompresor EXE!!!
+MainForm.lblInsCap.Caption=UPX wewn¹trz:
+MainForm.lblInsCap.Hint=Wersja kompresora UPX
+MainForm.lblOutCap.Caption=UPX interfejs:
+MainForm.lblOutCap.Hint=Wersja UPX Shell (interfejs do UPX)
+
+;Open File tab
+MainForm.tbsOpen.Caption=Otwórz plik
+MainForm.btnOpen.Caption=Otwórz
+MainForm.lblHistory.Caption=Historia
+MainForm.pnlFileInfo.Caption=Informacje o pliku
+MainForm.lblFNameCap.Caption=Nazwa pliku
+MainForm.lblFName.Caption=niedostêpna
+MainForm.lblFSizeCap.Caption=Rozmiar pliku (przed kompresj¹)
+MainForm.lblFSize.Caption=niedostêpny
+MainForm.lblCSizeCap.Caption=Rozmiar pliku (skompresowany)
+MainForm.lblCSize.Caption=niedostêpny
+MainForm.lblRatioCap.Caption=Stopieñ kompresji
+MainForm.lblRatio.Caption=niedostêpny
+MainForm.mnuHistory.Caption=Wyczyœæ historiê
+
+;Compress tab
+MainForm.tbsCompress.Caption=Kompresuj
+MainForm.btnGo.Caption=Jazda!
+MainForm.chkDecomp.Caption=Dekompresuj
+MainForm.btnRun.Caption=Uruchom
+MainForm.lblProgress.Caption=Postêp kompresji
+MainForm.lblProgressSize.Caption=Rozmiar pliku po kompresji
+
+;Options tab
+MainForm.tbsOptions.Caption=Opcje
+MainForm.chkBackup.Caption=Twórz kopiê bezpieczeñstwa
+MainForm.chkAutoCompress.Caption=Autokompresja po za³adowaniu
+MainForm.chkExitDone.Caption=Zamknij po zakoñczeniu
+MainForm.chkTest.Caption=Testuj plik po kompresji
+MainForm.btnAdvanced.Caption=Zaawansowane
+MainForm.lblCompressLevel.Caption=Poziom kompresji:
+MainForm.lblFaster.Caption=Szybciej
+MainForm.lblBetter.Caption=Lepiej
+MainForm.lblLanguage.Caption=Wybierz jêzyk:
+MainForm.btnMultiPck.Caption=Mullikompresja
+MainForm.btnMultiPck.Hint=Kompresja plików w ca³ym katalogu (i podkatalogach)
+
+;About tab
+MainForm.tbsAbout.Caption=O programie...
+MainForm.lblReleaseCap.Caption=Release:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblIONT.Hint=Strona projektu UPX Shell ION Tek
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblUPX.Hint=OdwiedŸ oficjaln¹ stronê UPX
+MainForm.lblCoDomain.Caption=Koderzy
+MainForm.lblCoDomain.Hint=OdwiedŸ domenê koderów
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblIONTmail.Hint=Wyœlij emaliê do autora
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.Caption=Mail do BlackDex
+MainForm.lblBlackDexMail.Hint=Wyœlij emaliê do autora UPX Scrambler
+MainForm.lblBlaineMail.Caption=Mail do Blaine
+MainForm.lblBlaineMail.Hint=Wyœlij emaliê do Blaine R Southam
+
+;Help tab
+MainForm.tbsHelp.Caption=Pomoc
+MainForm.btnHelp.Caption=Pomoc
+MainForm.btnHelp.Hint=Przeczytaj plik pomocy
+MainForm.btnUpdate.Caption=Aktualizuj modu³y
+MainForm.btnUpdate.Hint=SprawdŸ aktualizacje UPX Shell w Internecie
+
+;Update Tab --NEW NEW NEW--
+MainForm.tbsUpdate.Caption=Aktualizacja
+MainForm.btnChkUpdate.Caption=SprawdŸ aktualizacjê
+MainForm.lblOnlineVersionCap.Caption=Dostêpna wersja:
+MainForm.lblOnlineVersion.Caption=niedostêpna
+MainForm.lblReleaseDateCap.Caption=Data publikacji:
+MainForm.lblReleaseDate.Caption=niedostêpna
+MainForm.lblDownloadCap.Caption=Za³aduj ze strony:
+MainForm.lblDownload.Caption=niedostêpna
+
+;Setup Form
+SetupForm.chkScramble.Caption=U¿yj Scrambler (do enkrypcji)
+SetupForm.chkScramble.Hint=Enkryptuj pliki skompresowane UPX
+SetupForm.btnScramble.Caption=Enkryptuj
+SetupForm.btnScramble.Hint=Enkryptuj wybrany plik teraz
+SetupForm.chkIntegrate.Caption=Integruj program z menu kontekstowym
+SetupForm.chkIntegrate.Hint=Dodaj (do menu kontekstowego explorera) polecenie "Compress with UPX"
+SetupForm.lblAdvacedOpts.Caption=Zaawansowane opcje UPX:
+SetupForm.chkResources.Caption=Kompresuj zasoby
+SetupForm.chkResources.Hint=Kompresja ikon, ³añcuchów itd. (zapewnia mniejszy rozmiar pliku)
+SetupForm.chkExports.Caption=Kompresuj "exports"
+SetupForm.chkExports.Hint=Kompresja sekcji "exports" (zwi¹zanych z funkcjami eksportowanymi)
+SetupForm.chkRelocs.Caption=Usuñ "relokacje"
+SetupForm.chkRelocs.Hint=Usuwa tablice relokacji (ang. "relocation tables"), opcja powinna byæ zawsze zaznaczona
+SetupForm.chkForce.Caption=Kompresja si³owa
+SetupForm.chkForce.Hint=Kompresja si³owa podejrzanych plików
+SetupForm.lblPriority.Caption=Priorytet programu:
+SetupForm.cmbPriority.Hint=Wybierz priorytet procesu kompresji
+SetupForm.cmbPriority.0=IDLE
+SetupForm.cmbPriority.1=NORMAL (domyœlny)
+SetupForm.cmbPriority.2=HIGH
+SetupForm.cmbPriority.3=REALTIME
+SetupForm.lblIcons.Caption=Ikony:
+SetupForm.cmbIcons.Hint=Wybierz, co zrobiæ z ikonami
+SetupForm.cmbIcons.0=Wszystko, ale 1. katalog
+SetupForm.cmbIcons.1=Wszystko, ale 1. ikona
+SetupForm.cmbIcons.2=Nie kompresuj
+SetupForm.lblCommands.Caption=Dodatkowe komendy UPX:
+SetupForm.chkCommands.Caption=Zachowaj komendy
+SetupForm.chkCommands.Hint=Zawsze u¿ywaj wprowadzonych komend
+SetupForm.btnOk.Caption=OK
+SetupForm.chkCompression.Caption=Dodatkowa kompresja
+SetupForm.trbCompression.Hint=Im wy¿sza wartoœæ, tym wiêcej pamiêci potrzeba do kompresji pliku
+SetupForm.chkCompression.Hint=Zwiêksza stopieñ kompresji, ale podczas kompresji wymaga wiêcej pamiêci
+SetupForm.btnCommands.Caption=Komendy
+;--NEW NEW NEW--
+SetupForm.lblUPX2Only.Caption=Tylko UPX v1.9x:
+SetupForm.chkBrute.Caption=brutalna
+SetupForm.chkMethods.Caption=wszystkie metody
+SetupForm.chkFilters.Caption=wszystkie filtry
+
+;MultiPack Form
+MultiForm.grpSearch.Caption=Œcie¿ka przeszukiwañ:
+MultiForm.lblDir.Caption=Niedostêpna
+MultiForm.lvFiles.Hint=Naciœnij "Del" lub prawy przycisk myszy, ¿eby pomin¹æ plik w procesie kompresji
+MultiForm.btnBrowse.Caption=&Przegl¹daj
+MultiForm.chkRecurse.Caption=P&rzegl¹daj tak¿e podkatalogi
+MultiForm.chkAll.Caption=Wszystk&o
+MultiForm.lblCurrent.Caption=Bie¿¹cy plik:
+MultiForm.lblOverall.Caption=Ca³kowity postêp:
+MultiForm.btnScan.Caption=&Skanuj
+MultiForm.btnPack.Caption=Pa&kuj
+MultiForm.btnExit.Caption=&WyjdŸ
+
+;TreeView Form
+TreeViewForm.lblSelect.Caption=Wybierz katalog do kompresji:
+TreeViewForm.btnOK.Caption=OK
+TreeViewForm.btnCancel.Caption=Anuluj
+
+;Const_Messages
+msg[001]=Dostêp do pliku jest niemo¿liwy. Plik mo¿e byæ ju¿ otwarty
+msg[002]=Atrybut tego pliku jest ustawiony na Read Only. Aby kontynuowaæ, trzeba go zlikwidowaæ. Kontynuowaæ?
+msg[003]=Najlepsza
+msg[004]=Ten plik nie wydaje siê byæ spakowany. Uruchomiæ Scrambler?
+msg[005]= (w 
+msg[006]= sekund/y)
+msg[007]=dekompresji
+msg[008]=kompresji
+msg[009]=Nie ma nic do 
+msg[010]=niedostêpne
+msg[011]=Nie wybrano katalogu
+msg[012]=...aktualizacja nie powiod³a siê :-(
+msg[013]=Nie mo¿na nawi¹zaæ po³¹czenia z serwerem aktualizacji!
+msg[014]=Zanaleziono zaktualizowan¹ wersjê programu!
+msg[015]=Postêp aktualizacji pliku...
+msg[016]=Zbieranie informacji o aktualizacji...
+msg[017]=Plik zosta³ pomyœlnie skompresowany
+msg[018]=Plik zosta³ pomyœlnie zdekompresowany
+msg[019]=Plik zosta³ skompresowany z ostrze¿eniami
+msg[020]=Plik zosta³ zdekompresowany z ostrze¿eniami
+msg[021]=Wyst¹pi³ b³¹d. Plik nie zosta³ skompresowany
+msg[022]=Wyst¹pi³ b³¹d. Plik nie zosta³ zdekompresowany
+msg[023]= i przetestowany
+msg[024]= i przetestowany z ostrze¿eniami
+msg[025]= i test nie powiód³ siê
+msg[026]=UPX zwróci³ nastêpuj¹cy b³¹d: 
+msg[027]= i z enkrypcj¹
+msg[028]=...znaleziono aktualizacjê :-)
+msg[029]=...nie znaleziono aktualizacji
+msg[030]=OK
+msg[031]=Nie powiod³o siê
+msg[032]=Pomiñ
+msg[033]=Nazwa pliku
+msg[034]=Folder
+msg[035]=Rozmiar
+msg[036]=Spakowany
+msg[037]=Wynik
+msg[038]=B³¹d
+msg[039]=Potwierdzenie
+msg[040]=Wybierz katalog do kompresji:
+msg[041]=Ten plik jest ju¿ zaszyfrowany (scrambled)!
+msg[042]=Ten plik NIE zosta³ zaszyfrowany (scrambled)!
+msg[043]=Kompresuj z UPX

@@ -1,0 +1,29 @@
+<!--
+    API Monitor Definitions
+    (c) 2010-2011, Rohitab Batra <rohitab@rohitab.com>
+    http://www.rohitab.com/apimonitor/
+-->
+<ApiMonitor>
+    <Include Filename="Interfaces\IUnknown.xml" />
+    <Interface Name="IDirectSoundCaptureFXAec" Id="{ad74143d-903d-4ab7-8066-28d363036d65}" BaseInterface="IUnknown" OnlineHelp="MSDN" ErrorFunc="HRESULT" Category="DirectX Graphics and Gaming/DirectX Audio/DirectSound">
+        <Api Name="SetAllParameters">
+            <Param Type="LPCDSCFXAec" Name="pDscFxAec" />
+            <Return Type="[DS_HRESULT]" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="GetAllParameters">
+            <Param Type="LPDSCFXAec" Name="pDscFxAec" />
+            <Return Type="[DS_HRESULT]" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="GetStatus">
+            <Param Type="LPDWORD" Name="pdwStatus" />
+            <Return Type="[DS_HRESULT]" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+        <Api Name="Reset">
+            <Return Type="[DS_HRESULT]" />
+            <Success Return="Equal" Value="0" />
+        </Api>
+    </Interface>
+</ApiMonitor>

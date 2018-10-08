@@ -1,0 +1,12 @@
+Windows Socket 2 
+NT
+###########################################################
+ws2_32.dll,send
+ws2_32.dll,recv
+ws2_32.dll,sendto
+ws2_32.dll,recvfrom
+ws2_32.dll,WSASend
+ws2_32.dll,WSARecv
+ws2_32.dll,WSASocketA
+ws2_32.dll,WSASocketW
+ws2_32.dll,WSAStartup

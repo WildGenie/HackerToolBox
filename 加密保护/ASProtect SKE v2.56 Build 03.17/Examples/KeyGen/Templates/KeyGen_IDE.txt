@@ -1,0 +1,13 @@
+
+keygen_ide.exe
+
+Template based mode-specific keys data generator.
+Keys data generator uses your project file to generate a C or Delphi
+language template that you can modify to create your own key generator.
+Keys data generator produces the templates in C and Delphi formats only
+and designed for Delphi and VC examples (Examples\KeyGen\), but you can
+easily integrate it with your own examples. A template is a generated
+"GenerateKey" routine that includes the function header and filled with
+mode-specific information function body. In order to use it, you should
+specify your project file, choose activation keys mode and press "Generate
+Template" button.

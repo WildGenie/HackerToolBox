@@ -1,0 +1,41 @@
+修改如下
+1.0.0.29
+ 1.修正中文高亮问题
+ 2.卸载时恢复hook
+
+
+1.0.0.6
+ 1. 修正 当汇编代码前有多条（>=2）竖线时，汇编代码的第一个单词不能高亮
+ 2. 鼠标点在 + - * 上时，高亮的内容将是一个组合
+
+
+
+1.0.0.5
+
+ 1. 将 + - * 作为分字符
+
+ 2. 导出两组函数，支持两种版本
+_ODBG_Pausedex
+_ODBG_Pluginaction
+_ODBG_Plugindata
+_ODBG_Plugininit
+_ODBG_Pluginmainloop
+_ODBG_Pluginmenu
+
+_SNDG_Pausedex
+_SNDG_Pluginaction
+_SNDG_Plugindata
+_SNDG_Plugininit
+_SNDG_Pluginmainloop
+_SNDG_Pluginmenu
+
+ 4.用窗口定时器替换原来的线程来做刷新动作，解决od退出时会异常问题
+
+ 5.再次修正分字符: " +-*=()[]<>{}:;,.&\\|/\""，不含@'~`!?%^
+
+
+
+备注：若出现od窗口未最大化时，高亮功能有问题的情况。 解决方法： 关闭OD，将 Ollydbg.ini 中 [Settings] 设置 Snow-free drawing=1 
+      若插件有问题，请留言，我再做修正，谢谢。
+      新版本的插件会在原来的网址有下载，需要下载更新的朋友，请留意查看：
+http://bbs.pediy.com/showthread.php?t=134277&highlight=

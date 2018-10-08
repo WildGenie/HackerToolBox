@@ -1,0 +1,116 @@
+<html><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80">
+<head><title>Overnimble Localize Plus 1.05</title><style>
+p{text-indent:21pt}
+b{cursor:default;font-weight:normal}
+blockquote{font-family:arial;font-size:10.5pt}
+.Title{font-family:宋体,Arial;font-size:12pt;font-weight:700;color:ffffff;text-align:left;background-color:9999ff;filter:Alpha(Opacity=50);cursor:default}
+pre{font-family:Fixedsys;font-size:16pt;color:333399}
+</style></head>
+
+<body background="wind.jpg" bgcolor="#d4e8ff" style="font-family:宋体,Arial;margin-left:6%;margin-right:6%;font-size:10.5pt">
+
+<br><center><table border=1 width=45%><tr><td align="center">
+	<div style="margin-top:10pt;margin-bottom:8pt;text-align:center;height:30pt;filter:shadow(color:#777777,Direction=150);cursor:default">
+	<FONT face=宋体,Arial color=#00ff00 size=6>字串替换器 1.05 FAQs</FONT>
+</div></td></tr></table></center><br><br><br>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★为什么有些程序找不到可汉化的字符串？</td></tr></table></center>
+<p></p>
+<p>有些程序进行了压缩或加密处理，对于这样的程序，需要首先解压缩和解密之后才能汉化。常用的压缩程序有 UPX、ASPack 等，其中 UPX 0.90 以上版本压缩的程序可以使用 UPX 本身进行解压缩，而 ASPack 可以使用 Unaspack、Caspr 等工具进行解压缩。或者也可以使用 CoCoRes 及其前导程序解决此问题<font color="#008888">（CoCoRes 只对资源部分有效）</font>。要检测文件被哪种压缩软件压缩，可以使用 FileInfo、GetType 之类的工具。<font color="#008888">（建议和原作者联系，以取得可汉化的版本。）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★为什么有些程序汉化之后，运行时只出现一个对话框，说程序染毒，然后就退出了？</td></tr></table></center>
+<p></p>
+<p>有些程序为了防止程序被病毒感染或恶意篡改造成的破环，有这样的自校验，对于这些程序，首先要破解其自校验代码后才能汉化。或者也可以使用 CoCoRes 及其前导程序解决此问题<font color="#008888">（CoCoRes 只对资源部分有效）</font>。<font color="#008888">（建议和原作者联系，以取得可汉化的版本。）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★什么是“标准资源”？</td></tr></table></center>
+<p></p>
+<p>微软在定义 Windows 程序的格式时，特意增加了一个可更改的段放置程序界面部分的信息，以便软件可以很方便的实现多国语言支持，其中有包含多种类型，如“Dialog”、“String”、“Icon”、“Version”等信息，另外还定义了一个“RCData”作为自定义类型。不过因为其定义的 Dialog 类型太单薄，不足以应付很多 RAD 语言，所以一般只有 C 语言的程序使用“标准资源”中的“Dialog”类型，Delphi 和 C++ Builder 不使用 Dialog 类型，而是将其窗体信息放入“RCData”内，而 VB 程序不使用“标准资源”放置其界面信息，其所有信息和代码一样在“.TEXT”区段内。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★什么是“PE 文件”？什么是“VA 方式”？</td></tr></table></center>
+<p></p>
+<p>在 Win16<font color="#008888">（如 Windows 3.x）</font>时，可执行文件<font color="#008888">（EXE、DLL、OCX 等）</font>是 NE 格式，而在 Win32<font color="#008888">（包括 Win95/98/ME/XP/NT/2000/CE）</font>时，可执行文件是 PE<font color="#008888">（Portable Executable）</font>格式，也就是说，如果一个可执行文件是专为 Win32 平台编译的，那么它就是 PE 文件了。
+<p>VA 就是“Virtual Address”，即“虚拟地址”，是 PE 文件中的指针，<font color="#008888">（几乎？）</font>所有的字串都有其相应的 VA，所以反过来使用 VA 来查找字串的话，可以增加准确率，使垃圾字串大为减少，也因此可以查找中文、日文等语种的程序。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何汉化一个 C 语言编写的软件？</td></tr></table></center>
+<p></p>
+<p>C 语言程序一般都使用“标准资源”，对“标准资源”，可以使用 VC、eXeScope、ResHacker 等工具进行汉化，使用 VC 的话，可以使用“中文化精灵”之类的工具以方便汉化升级，另外好像还有一个 Visual Localize 也有汉化升级的功能。虽然用户也可以使用 LocPlus 的查找 ASCII 和 UniCode 的功能汉化“标准资源”，不过因为无法实现大于源字串的替换，所以还是推荐使用以上介绍的资源汉化工具。C 程序汉化后有时候会出现界面字体难看的问题，对此，我有专文论述解决方法，请访问 <a href="http://llf.126.com">点睛工作室</a> 浏览。
+<p>不过，经常有一些 C 语言的程序的一些字串并不是在“标准资源”内，而是在其它的区段内<font color="#008888">（一般是“.data”段）</font>，对于这些字串，可以使用 LocPlus 查找替换 ASCII 和 UniCode 的功能进行汉化。不过需要注意的是，如果查找时不是使用“英文和符号”方式的话，则需要用户把所有的非法项<font color="#008888">（最好是所有没有汉化的项 —— 可以使用“清除冗余项”的“清除相同项”功能清除）</font>都删除之后再替换，而且对这种非资源的字串经常有一些是不能汉化的，这时使用“软件测试”进行“选择性替换”可以很快定位不应汉化的项。
+<p>所以，汉化一个 C 语言程序的基本步骤如下：
+<p>　　1、使用资源汉化工具进行“标准资源”的汉化；
+<p>　　2、使用 LocPlus 进行 ASCII 的查找和替换；<font color="#008888">（一般 WinCE 程序<font color=red>不</font>需要）</font>
+<p>　　3、使用 LocPlus 进行 UniCode 的查找和替换；<font color="#008888">（一般 WinCE 程序<font color=red>才</font>需要）</font>
+<p>　　4、进行字体修正。<font color="#008888">（可选）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何汉化一个 Delphi 编写的软件？</td></tr></table></center>
+<p></p>
+<p>Delphi 和 C++ Builder 的程序虽然也使用“标准资源”，但是却是使用“自定义格式”，所以无法使用 VC 进行汉化，不过 eXeScope 和 ResHacker 都可以编辑它，另外，使用这两个工具还可以把窗体信息导出为 DFM 格式的文件，此文件可以使用 Delphi 进行编辑。另外好像还有 Restorator 和 Language Localizator 对 Delphi 程序有汉化升级的功能。目前还没有 Delphi 资源的可视化编辑工具，不过可以使用 DFMView 或 FormRead 进行预览式编辑。虽然用户也可以使用 LocPlus 的查找 ASCII 和 UniCode 的功能汉化 Delphi 的“标准资源”，不过因为无法实现大于源字串的替换，所以还是推荐使用以上介绍的资源汉化工具。Delphi 程序汉化后有时候会出现界面字体难看的问题，对此，我有专文论述解决方法，请访问 <a href="http://llf.126.com">点睛工作室</a> 浏览。
+<p>也有很多的 Delphi 程序使用一个工具生成的 *.lng 的文件来实现多语言支持，和它配套的有一个编辑工具用来编辑此格式的文件，遇到这种情况，最好是使用它的编辑工具进行处理。
+<p>另外，Delphi 程序里也经常有一些字串并不是在“标准资源”内，而其格式中有一个字串长度，如果汉化后的字串长度和原字串不同，则其界面也会有相应的乱码出现，对于这种字串，推荐使用 LocPlus 的查找和替换 Delphi 字串的功能<font color="#008888">（此功能自动修改字串长度计数）</font>。不过，Delphi 程序里的非资源字串也有一些并不是前面所说的格式，而是 ASCIIZ<font color="#008888">（ASCIIZ 指 ASCII 和 一个“00”[Zero] 组成的字串）</font> 格式的字串，所以也许您还需要再进行一次 ASCII 的查找和替换，才能完整的汉化一个 Delphi 程序。同样的，对 Delphi 字串也需要删除非法项之后再进行替换。
+<p>所以，汉化一个 Delphi 语言程序的基本步骤如下：
+<p>　　1、使用资源汉化工具进行“标准资源”的汉化；
+<p>　　2、使用 LocPlus 进行 Delphi 字串的查找和替换；
+<p>　　3、使用 LocPlus 进行 ASCII 的查找和替换；
+<p>　　4、进行字体修正。<font color="#008888">（可选）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何汉化一个 VB 编写的软件？</td></tr></table></center>
+<p></p>
+<p>VB 程序<font color="#008888">（仅指 VB5/6）</font>的窗体信息虽然不在“标准资源”内，不过其格式和 Delphi 的窗体格式类似，可以使用我编写的“VB 窗体汉化器”进行汉化，此工具可以实现大于源字串的替换，不过需要用户保证整个窗体中的所有字串的总长度不变。虽然我在其说明文件里说它是不安全的，不过它也并不比用查找和替换 ASCII 的方式更危险，因为目前并没有更好的汉化 VB 程序的工具，它也就是一个不错的选择了。此工具目前只有简体中文版。不过，如果原程序使用了 ActiveX 控件的话<font color="#008888">（很多程序都使用了 ActiveX 控件，但是不包括 LocPlus :）</font>，一般还需要进行一次 UniCode 的查找和替换。VB 程序汉化后容易出现界面字体难看的问题，对此，我有专文论述解决方法，请访问 <a href="http://llf.126.com">点睛工作室</a> 浏览。
+<p>不过，如果要汉化的 VB 程序里使用了 Form 2.0 设计器的话，其使用 Form 2.0 作为窗体的窗体信息无法用“VB 窗体汉化器”找到，只能使用查找替换 ASCII 和 UniCode 的方式汉化。而其字体的修正在我的文章里也没有提及，不过修正方法已经被 WWP 找到，具体方法可以访问 <a href="http://llftalk.126.com">点睛工作室 论坛</a> 查找。
+<p>另外，VB 程序里也有一些字串并不是在窗体信息内<font color="#008888">（相当于标准资源里的“String”类型）</font>，而其格式中有一个字串长度，如果汉化后的字串长度和原字串不同，则其界面也会有相应的乱码出现，对于这种字串，推荐使用 LocPlus 的查找和替换 VB 字串的功能<font color="#008888">（此功能自动修改字串长度计数）</font>。同样的，对 VB 字串也需要删除非法项之后再进行替换。
+<p>所以，汉化一个 VB 语言程序的基本步骤如下：
+<p>　　1、使用“VB 窗体汉化器”进行窗体的汉化；
+<p>　　2、使用 LocPlus 进行 VB 字串的查找和替换；
+<p>　　3、使用 LocPlus 进行 UniCode 的查找和替换；<font color="#008888">（在程序使用了控件时）</font>
+<p>　　4、使用 LocPlus 进行 ASCII 的查找和替换；<font color="#008888">（仅在程序使用了 Form 2.0 设计器时）</font>
+<p>　　5、进行字体修正。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何将一个软件从简体(GBK)转换成繁体(BIG5)或从繁体(BIG5)转换成简体(GBK)？</td></tr></table></center>
+<p></p>
+<p>对于资源编辑工具，要查找和替换其它语种的字串并不难，其方式和汉化并没有什么不同，所以对于 C、Delphi、VB 程序分别进行以上的汉化方式的操作就可以了，不过这里的问题在于非资源方式查找中文。在 LocPlus 中，对于 Delphi、VB，其专用查找功能可以选择“非限制查找”的方式查到中文<font color="#008888">（或其它语言，如日文）</font>，“VB 窗体汉化器”也有“非限制查找”方式。而对于 C 程序<font color="#008888">（使用 ASCII 和 UniCode 方式查找的）</font>，查找 ASCII 时选择“VA非控制符”或“VA非限制查找”方式可以查到中文，“VA非控制符”方式会比“VA非限制查找”方式少一些垃圾字串；查找 UniCode 时选择“VA中文(GBK)”、“VA中文(BIG5)”、“VA完全中文”、“VA非保留区”、“VA非限制”可以查找到中文，按需要选择就可以了。
+<p>对于以上查找到的对照文件，在删除非法项之后，按“翻译项方式”分割对照文件，对“*.2”文件用内码转换软件进行转码<font color="#008888">（如果要求完美，可以再使用一下“繁简用语转换”功能）</font>，再按“翻译项方式”合并对照文件，然后就可以进行替换操作了。
+<p>另外，还有一点，对于 UniCode<font color="#008888">（包括 VB 字串）</font>方式查找到的对照文件，如果要转码的话，要注意只是进行繁简转换，而不是进行内码转换<font color="#008888">（GBK、BIG5）</font>，换句话说，就是在保持原有内码格式的情况下把繁体字转成简体字<font color="#008888">（或相反）</font>。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★如何汉化一个以文本格式实现多语种支持的软件？</td></tr></table></center>
+<p></p>
+<p>目前，以文本格式实现多语种支持的软件越来越多<font color="#008888">（比如 LocPlus :）</font>，对于这种软件，使用普通的文本编辑器就可以进行汉化了，不过如果只是使用文本编辑器，原软件升级的话，则需要重新输入所有内容，而使用 LocPlus，则可以轻松地实现版本升级。
+<p>对于占大多数的 INI 格式<font color="#008888">（用“=”分隔的）</font>，建议使用 LocPlus 提供的专用查找和替换功能。而对于其它格式的文本文件，可以使用“通用格式”查找和替换。
+<p>不过有很多此类软件没有设置字体字号的方法，而仍然使用 8.25 磅的字体，所以汉化后在 Win98 下的字很难看<font color="#008888">（Win2000 在内部偷偷地增大了字号，所以不会很难看）</font>，对于这种情况，可以使用我介绍的字体修改的方法。<font color="#008888">（建议和原作者联系，以便取得字体字号可改的版本。）</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★怎样使用“版本升级”功能？</td></tr></table></center>
+<p></p>
+<p>要使用“版本升级”功能，首先需要转到“翻译新版本”页面内，其中“对照文件名”选择对新版本查找得到的对照文件，而“字典文件名”选择以前版本翻译过的对照文件或字典文件就可以了。字典文件可以使用“偏移量方式”分割对照文件得到。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★使用 LocPlus 能否进行其它语种间的转换，比如可否汉化日文软件？</td></tr></table></center>
+<p></p>
+<p>汉化日语软件和转换简繁体中文软件类似，不同之处在于 GBK 和 BIG5 是兼容的，而 Shift-JIS <font color="#008888">（日语中还有 JIS 和 EUC 编码，不过不如 Shift-JIS 常见）</font> 和 GBK 或 BIG5 并不兼容<font color="#008888">（主要在于其片假名使用的是单字节编码，而 GBK 和 BIG5 中没有单字节编码）</font>，所以您不能在中文 Windows 下进行查找，不能在日文 Windows 下进行替换。正因为如此，您需要使用 Windows 2000 多语言版，先切换到日文状态下查找，再切换到中文状态下编辑和替换才可以。<font color="#008888">（也可以使用 Visual PC 等软件安装一套日文 Windows，在其中也安装一套 LocPlus 进行查找，这样的话，不需要重启就可以在中日文 Windows 之间快速切换）</font>
+<p>另外，因为对照文件是 ASCII 格式，所以在日文状态下保存的对照文件中的日文是 Shift-JIS 格式，而在中文状态下编辑时却是把它看作 GBK 内码的，因而看到的是乱码，所以需要进行内码转换，但是只能转换偶数行，如果找不到好的转码软件<font color="#008888">（能保证不出现乱码的）</font>，可以在日文状态时使用“翻译项方式”分割对照文件，使用 Win2K 的 Notepad 把“.2”文件存为 UniCode 格式，而在中文状态下再用 Notepad 把它转存回 ASCII 格式，然后合并，则对照文件中的“偶数项”<font color="#008888">（“奇数项”需保持原状态）</font>就不是乱码<font color="#008888">（如果转码正常的话，在 GBK 下可保证平假名、片假名及汉字都显示正常，BIG5 下不太清楚……）</font>了；如果出现转码错误或内码不完全兼容<font color="#008888">（比如“日文化”一个中文软件时 :）</font>时会有某些部分有乱码，这种情况可以使用像 EmEditor 之类的编辑器，在翻译时反复切换语种，以便了解原意。
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★“繁简用语转换”功能在哪里，都可用于哪些方面？</td></tr></table></center>
+<p></p>
+<p>“繁简用语转换”功能在“替换文本资源”页面内，可以用于任何文本文件<font color="#008888">（即也可用于 VC 产生的 *.RC 文件）</font>，对于 LocPlus 产生的对照文件或字典文件来说，需要先使用“翻译项方式”分割对照文件，然后对“*.2”文件使用此功能。不过，这种机器做的转换仍然可能有一些不正确的地方，还是需要校对一遍再使用才好。
+<p>“繁简用语转换”的速度为 50KB/s ，并不算快，不过台湾黄国书先生有一个“繁简词汇转换”，使用“汉书”系统进行替换，据说要转换 Teleport 需要 20 分钟，这样算来，LocPlus 的这个功能的速度还是很快的了。 :)
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title">★ LocPlus 的其它功能怎么使用？</td></tr></table></center>
+<p></p>
+<p>LocPlus 还有一些辅助性功能，也采用独立方式设计，可以说，在 LocPlus 中，所有功能都是独立存在的，就像是积木一样，可以根据使用者的要求拼接出不同的功能。而所有这些功能其核心及共同点在于其统一的对照文件和字典文件格式，用户可以在此基础上理解各个功能的用处<font color="#008888">（甚至可能是我所不曾想到过的 :）</font>。举例来说，应我的请求，吴佳勋先生曾把 1.01 版的 Readme 和 INI 的繁体用语做了调整后 Mail 给我，而我希望知道在 INI 中吴先生都做了哪些调整，所以采取了以下的步骤：
+<p>1、使用“INI 格式”查找原版的 INI 文件，使用“翻译项方式”分割查找到的字典文件；
+<p>2、使用“INI 格式”查找吴先生修改后的 INI 文件，使用“翻译项方式”分割查找到的字典文件；
+<p>3、将原版的分割后的“.1”文件和吴先生修改而分割后的“.2”文件采用“翻译项方式”合并。
+<p>4、使用“清除冗余项”中的“清除相同项”功能，得到了所有做过修改部分的对照文本。
+<p><br></p>
+
+<p><center><font style="font-family:Arial;font-size:9pt">CopyRight &copy OverNimble Inc. 2001</font></center></p>
+</body>
+</html>

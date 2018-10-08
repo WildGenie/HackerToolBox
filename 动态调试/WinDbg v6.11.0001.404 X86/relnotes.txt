@@ -1,0 +1,395 @@
+                   Microsoft(R) Debugging Tools for Windows(R)
+                            Version 6.10 Release Notes
+                                 August 2008
+
+-----------------------------------------------------------------------------
+
+Contents
+
+    Overview
+    What's New
+    Known Issues
+    Programs
+    Debugger Extensions
+    Software Development Samples
+    Documentation
+    Redistributables
+    More Information
+    Feedback
+
+-----------------------------------------------------------------------------
+
+Overview
+
+Debugging Tools for Windows contains tools to analyze and debug Windows,
+Windows drivers, and applications.  It can analyze memory dump files or
+perform live debugging.
+
+The kernel debugger is KD.exe.  It can be installed and run on Windows XP and
+later versions.  It can debug all the platforms listed below.
+
+The user-mode debugger is CDB.exe.  It can be installed and used on Windows XP
+and later versions.  It can be used to debug 32-bit X86 applications.
+
+WinDbg.exe is the GUI version of the debugger.  It supports both user-mode
+and kernel-mode debugging.  It can be installed and run on Windows XP and
+later versions.  It can debug all the platforms listed below.
+
+Supported platforms:
+
+Windows 2000 (x86)
+Windows XP (All CPU architectures)
+Windows Server 2003 (All CPU architectures)
+Windows Vista (All CPU architectures)
+Windows 2008 Server (All CPU architectures)
+
+Please be aware that while you may run the 32-bit version of the debugging
+tools on an 64-bit installation, the inverse is not supported.
+
+-----------------------------------------------------------------------------
+
+What's New
+
+This release of Debugging Tools for Windows contains many bug fixes and new
+enhancements. The debuggers are stable and more reliable than previous 
+releases and we recommend that you upgrade to this version.
+
+*** 1394 Kernel Debugging Changes ***
+
+This debugger has changes to improve 1394 debugging that require that the
+1394 debug driver shipped with this release be installed on the host machine.
+There are many improvements that have been made in the 1394 debug driver
+including changes to allow all 1394 cards to work in target machines.
+In addition, automatic reconnect to broken in targets was added for 1394.
+This release of the debugger will not work well for 1394 kernel debugging if
+it calls an old version of the driver from a previous release.  The debugger
+will check whether the 1394 driver is new enough, and if not, will install
+the latest driver when 1394 debugging is started.  There are 2 older versions
+of the driver that will not get upgraded by this process.  They are named
+1394dbg1.sys and 1394dbg2.sys.  They should be removed manually from the
+system if required.  An explanation of how to do this is contained in the
+known issues section.  It is extremely important that users do not attempt
+to prevent the upgrade to the latest 1394 driver, as 1394 kernel debugging
+may not work AT ALL if the latest driver is not installed.  Make sure if
+you are prompted to reboot the machine during driver install, that you reboot
+before attempting to do 1394 kernel debugging.  To prevent having to reboot
+your host, make sure that all instances of the debugger that are doing 1394
+kernel debugging are closed before running this release of the debugger.
+
+Important changes in WinDbg 6.10:
+
+  * CE6 dump processing now works.
+  * NT4 no longer supported.
+  * Enable installation of the USB debug driver on 64bit versions of Windows.
+  * Install USBView.exe as part of the debugger package.
+  * Enable use of any 1394 cards in target machines.
+  * Improve 1394 debug driver reliability, responsiveness and performance.
+  * Improve error messages for specific 1394 driver installation failures.
+  * Prevent loss of 1394 debug connections after host sleep or hibernate.
+  * Change the 1394 debug driver to write every sent packet to the target
+    regardless of whether the previously sent packet was acknowleged.
+  * Ensure the installed 1394 debug driver is new enough to work properly with
+    the current release of the debugger.  (Update the 1394 driver to the
+    version shipped in this debugger package.)
+  * Automatically reconnect to broken in target machines when doing 1394
+    kernel debugging.
+  * Introduce new ".dump /mA ..." option to generate user-mode minidump. 
+    The new behaiour is the same as ".dump /ma" except that it will ignore 
+    inacessable memory read failure and continue minidump generation, 
+    instead of bailing out immediately.
+  * Add CHK/FRE information in user-mode minidump. Only dumps generated from 
+    the new debugger will carry this information.
+  * Include breakpoint exception in user-mode minidump when the dump is
+    generated after a breakpoint hits. This enables debugger to show the
+    current process/thread information when debugging a dump file.
+  * Fix debugger hang when writing lsass dump files.
+  * Fix debugging of WOW64 minidumps containing managed code.
+  * Force the WOW64 extension to convert contexts as appropriate.
+  * Don't sign extend addresses of 32 bit user mode processes in the 64 bit
+    debugger.
+  * Set 64bit debugger as the postmortem debugger for WOW64 applications.
+  * Disable adding user-mode breakpoints in kd when KdIgnoreUmException is set.
+  * Fix escape character ("\") parsing problem in the bl command.
+  * Force bu breakpoint removal for unloaded modules.
+  * Add automatic IPv6 detection to the "-remote tcp:..." remote protocol.
+  * Fix .sleep to work when -ddefer is used.
+  * Fix .tlist command
+  * Performance improvements to windbg and other debuggers.
+  * Notify users when workspace corruption is detected.
+  * Fix the infinite recursion with corrupt workspaces in windbg. 
+  * Report the correct processor family values in !cpuid for all processors.
+  * Attempt to breakin only once per ctrl-c, ctrl-break instead of spinning
+    in a loop on packet write failure.
+  * Print the target computername in the debugger vertarget output when symbol
+    information is available.
+  * Tell debugger users how to break out of symbol loading, if it does not
+    complete within a reasonable amount of time.
+  * Display source server spew state when .srcnoisy is run. Also display the
+    source server only output filter state. 
+  * Workaround for Vista/DWM unpainted captions. 
+  * Add host debugger time when remote kernel target boots and shuts down.
+  * Symstore: don't truncate long file names when compressing files.
+  * Symchk: Add recursive symbol search option ("/sr") to force SymChk to
+    recursively search (non-symbol server) symbol paths for matching symbols.
+  * Add support in symsrv for getting file pointers from an http store and
+    using them as is without caching them to the default downstream store.
+  * Agestore tool should not run on computers that do not update the
+    last-access-time on files.
+  * Many !analyze improvements.
+  * Extensive debugger documentation updates.
+
+    Additional details on some of these features can be found in the debugger
+    documentation (debugger.chm).  To open this documentation, use 
+    Start --> Debugging Tools for Windows --> Debugging Help.
+
+
+-----------------------------------------------------------------------------
+
+Known Issues and Workarounds
+
+    * Docked window frames do not paint properly when running as an elevated 
+      user while the Aero theme is active on Vista.
+    * Using the 32 bit debugger on a 64 bit OS to do 1394 kernel debugging
+      will not work unless the latest 64 bit debugger is first installed and
+      used to do 1394 debugging on the host.  That will ensure that the 
+      64 bit debugger installs the most recent 1394 debug driver.  After that
+      has been done, copy 1394kdbg.sys from windows\system32\drivers into
+      windows\syswow64\drivers.  After this is done, you will be able to do
+      1394 debugging with the 32 bit debugger as the driver date check made
+      by the 32 bit version of the debugger will pass.  Note that the
+      1394kdbg.sys file in syswow64\drivers is not actually loaded or used.
+    * To prevent old 1394 debug drivers from loading on the box after the new
+      debugger is installed, do the following:
+      - Close all instances of debugger software running on the box.
+      - Go to device manager and double click on 1394 Debugger Device.
+      - Right click on each debug driver in the just opened list, and select
+        uninstall.  In the dialog box that pops, check the Delete the driver
+        software for this device check box, and click OK.  Some earlier OS
+        may not give you the option of deleting the software and you may
+        have to do it manually as described in the next bullet.
+      - After uninstalling the debug devices, double click on IEEE 1394 Bus
+        host controllers.
+      - Right click on each 1394 controller in the just opened list, and
+        select Uninstall.  Click OK in the dialog box, but DO NOT delete the
+        driver software for these devices.  (You shouldn't get that option.)
+      - Reboot the machine.  After the reboot, open device manager.  The 1394
+        host controllers should be present as they will have been found by
+        Plug and Play during boot, and reinstalled.  The debug drivers should
+        NOT be present.  If they are, you will need to manually delete the
+        driver software from the machine, and reboot.  Refer to the next
+        bullet for a description of how to do this.
+    * To manually remove 1394dbg1.sys and 1394dbg2.sys from the machine do the
+      following:
+      - Close all instances of debugger software running on the box.
+      - Go to windows\system32\drivers and delete 1394dbg1.sys and 1394dbg2.sys
+        if they are present in that directory.
+      - Go to windows\inf and check if any of the oem*.inf files refer to
+        either 1394dbg1.sys or 1394dbg2.sys.  You can do this by running
+        findstr -ip "1394dbg1.sys" from a command prompt.  You should also run
+        findstr -ip "1394dbg2.sys" to check for 1394dbg2.sys.  The names of
+        files containing those strings will be highlighted in the output of
+        these commands.
+      - Delete each oemXXX.inf file and its corresponding oemXXX.pnf file that
+        refers to the above drivers.  The oem files are numbered, so XXX will
+        correspond to some number, typically between 0 and 15.  For example
+        if the file oem4.inf contains the string 1394dbg1.sys then type
+        del oem4.* from an elevated command prompt.  Make SURE you DO NOT
+        delete any .inf files EXCEPT those containing references to either
+        1394dbg1.sys or 1394dbg2.sys.
+      - Check that all the old debug .inf files have been removed by rerunning
+        the findstr commands above.  There should be no output from either
+        search.
+      - Use device manager to uninstall all 1394 debug drivers and all 1394
+        host controllers as described in the previous bullet.
+      - Reboot the machine.
+      - After reboot, the 1394 controllers should be present, and the 1394
+        debug devices should finally be gone.
+      - Run the debugger and it will install the latest 1394 debug driver when
+        1394 debugging is used.
+
+-----------------------------------------------------------------------------
+
+Programs
+
+This distribution includes the following debuggers:
+
+    KD           - Command-line kernel debugger
+    NTSD         - Command-line user-mode debugger
+    CDB          - Command-line user-mode debugger (variant of NTSD)
+    WinDbg       - GUI kernel debugger
+
+I386KD is also provided in the package to support backwards compatibility. 
+It has the same code-base as KD.
+
+The Helpful Tools option is installed by default and includes these
+debugger-related tools:
+
+    AgeStore     - Removes old or unwanted files from the downstream store used
+                   by a symbol server or source server
+    DBH          - DbgHelp shell
+    GFlags       - Global Flags Editor
+    Breakin      - Utility to force a breakin in another process being debugged
+    Remote       - Remote Command Line
+    Kill         - Task Killing Utility
+    List         - File List Utility
+    LogViewer    - Display API logs created with the .logext extension from
+                   the debugger
+    RTList       - Remote Task List Viewer
+    SymChk       - utility to check validity of symbol files, or download
+                   symbols from a symbol server prior to a debugging session
+    SymProxy     - ISAPI filter acting as an HTTP proxy for one or more
+                   symbol servers
+    SymStore     - Creates a symbol server for automatic symbol lookup
+    ConvertStore - Modifies Symbol Server stores
+    TList        - Task List Viewer
+    UMDH         - Heap Analysis Tool
+    PdbCopy      - Symbol file stripper
+    DbEngPrx     - A repeater (small proxy server) used for remote debugging. DbgSrv is described in this documentation.
+    DbgRpc       - A tool used to display Microsoft Remote Procedure Call (RPC) state information.
+    DumpChk      - A tool used to validate a memory dump file.
+    KDbgCtrl     - A tool that controls and configures the kernel debugging connection.
+    KdSrv        - A KD connection server used for remote debugging.
+    Logger       - A tool and an extension DLL that record the function calls and other actions of a program.
+    UsbView      - Utility to view USB controllers and attached devices. Useful
+                   for properly setting up USB kernel debugging.
+
+-----------------------------------------------------------------------------
+
+Debugger Extensions
+
+Debugger Extensions are DLLs that WinDbg, CDB, NTSD, and KD can use to provide
+additional debugger commands.
+
+The extensions that work for all versions of Windows reside in the "winext"
+subdirectory, and include:
+
+    uext.dll
+    kext.dll
+    ext.dll
+    logexts.dll
+
+
+The newest version-specific debugger extensions (which work on Windows XP,
+Windows Server 2003, Windows Vista and Windows 2008 Server) reside
+in the "winxp" subdirectory, and include:
+
+    exts.dll
+    kdexts.dll
+
+The debugger has awareness of these subdirectories, and will not be able
+to find them if these subdirectories are renamed or moved.
+
+If a custom extension DLL is to be used, it should be placed in its own
+directory.  The user can then set the debugger extension path variable so the
+debugger can find the extension.  Debugger extensions can also be loaded in
+the debugger using fully qualified path names.
+
+All of the debuggers search for debugger extension DLLs in a series of 
+directories.  For a list of these directories and the sequence in which they
+are searched, open the documentation, choose the Index tab, type "extension",
+and click on "default search order" in the listing under "extension".
+
+-----------------------------------------------------------------------------
+
+Software Development Samples
+
+
+Header files, libraries and samples for debugger extensions are provided
+in this package.  They are not installed by default.  The "SDK"
+component of the package must be selected during the install to get the
+samples installed.
+
+Use the Build utility to compile and build these samples.  You must use
+the version of the Build utility supplied by the latest version of the
+Windows WDK or the Platform SDK.  These kits include several different
+build environment windows; it is important that you use the "Windows
+Server 2003 Build Environment" or "Windows Vista Build Environment"
+windows -- even if you are building samples or extensions for use on a
+different version of Windows.
+
+Attempting to build the samples and headers in a "Windows 2000 Build
+Environment" will cause compilation errors.  Building them in a "Windows
+XP Build Environment" may succeed in some cases, but it is not
+recommended.  The "Windows 2003 Server Build Environment" and "Windows
+Vista Build Environment" windows are the ones that should be used in all
+cases.
+
+The header files and libs in this package should replace any existing
+version of the header files or libs that are shipped with the Windows
+WDK or the Platform SDK.  If you follow the instructions for using the
+Build utility, which appear in the Windows WDK documentation, you can
+set your include paths so that this is done automatically.
+
+The samples will not compile if they are located in a directory path containing
+spaces.  If you have installed Debugging Tools for Windows into a path with
+spaces, you can work around this limitation by moving or copying the "sdk"
+subdirectory to a directory path without spaces.
+
+
+-----------------------------------------------------------------------------
+
+Documentation
+
+For documentation on how to use these debuggers and related tools, see the
+help file debugger.chm that is included with the tools.  This documentation
+has been improved and expanded since the last release.
+
+When Debugging Tools for Windows is installed, a shortcut to this documentation
+can be found under Start --> Programs --> Debugging Tools for Windows -->
+Debugging Help.
+
+You may also choose to review the most current documentation on MSDN: 
+	http://msdn2.microsoft.com/en-us/library/cc267445.aspx
+
+Information on how to write debugger extensions is included in this same
+documentation file.  If you plan to write debugger extensions, you should
+perform a custom install of Debugging Tools for Windows and select all
+available features.  This will ensure that you have all the necessary
+extension headers, libraries, and samples.
+
+The DbgHelp interface is documented in a separate documentation file
+(dbghelp.chm).
+
+A tutorial on kernel debugging, Kernel_Debugging_Tutorial.doc, is also included
+in this installation.  This file is helpful if you are familiar with other
+debugging tools and want to learn how to use WinDbg for kernel debugging.
+
+You need to have Internet Explorer 5.0 or greater installed in order to use
+the documentation properly.
+
+-----------------------------------------------------------------------------
+
+Redistributables
+
+Please read the license agreement during setup for legal information regarding
+redistributable files.  If this is a retail release, the license agreement 
+mentions that redist.txt gives a list of the files that are redistributable.  
+
+-----------------------------------------------------------------------------
+
+More Information
+
+For more information on debugging, see the Debugging Tools for Windows
+web page, <http://www.microsoft.com/whdc/DevTools/Debugging>.
+
+We encourage people to get the new debugger off the web "often", as
+we do many updates, while keeping compatibility with current, and Beta 
+versions of Windows.
+
+Version 6.9 was the last debugger release that supports NT 4.0.
+
+-----------------------------------------------------------------------------
+
+Feedback
+
+We are interested in your feedback on the tools.  Please mail suggestions or 
+bug reports to WinDbgfb@microsoft.com.  This is not a support alias, but your 
+feedback will help us to plan future changes for these tools and will make 
+them more useful to you in the future.
+
+There is also a newsgroup moderated by Microsoft representatives and made up 
+many users of these tools.  It is microsoft.public.windbg.  Posting questions
+or comments here will often get you the information you need to be productive
+with the debuggers.
+
+-----------------------------------------------------------------------------

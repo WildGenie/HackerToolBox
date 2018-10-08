@@ -1,0 +1,14 @@
+WinLicense DLL Control (Installation)
+-------------------------------------
+
+1) Download latest version of WinLicense (> 1.3.x.x)
+
+2) Copy WLDLLControl.bin into the same folder where you have WinLicense.exe installed
+
+3) Launch WinLicense.exe and you should see new option "WinLicense DLL Control" in the left panel.
+
+
+Website: http://www.oreans.com
+Email: info@oreans.com 
+
+ 

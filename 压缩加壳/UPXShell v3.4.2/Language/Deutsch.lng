@@ -1,0 +1,164 @@
+;Deutsche Übersetzung von Dirk Viehöver
+;Aktualisiert von Benjamin Pahlke (24. August 2005)
+;*************************************************
+
+;Main Form
+;Top frame
+MainForm.lblCompressor.Caption=Win32 EXE, DLL Packer
+MainForm.lblInsCap.Caption=UPX Packer:
+MainForm.lblOutCap.Caption=UPX Shell:
+
+;Open File tab
+MainForm.tbsOpen.Caption=Dateien öffnen
+MainForm.btnOpen.Caption=Öffnen
+MainForm.lblHistory.Caption=History Liste
+MainForm.pnlFileInfo.Caption=Datei Informationen
+MainForm.lblFNameCap.Caption=Datei Name
+MainForm.lblFName.Caption=N. V.
+MainForm.lblFSizeCap.Caption=Dateigröße (Original)
+MainForm.lblFSize.Caption=N. V.
+MainForm.lblCSizeCap.Caption=Dateigröße (Gepackt)
+MainForm.lblCSize.Caption=N. V.
+MainForm.lblRatioCap.Caption=Kompressions Rate
+MainForm.lblRatio.Caption=N. V.
+MainForm.mnuHistory.Caption=Liste löschen
+
+;Compress tab
+MainForm.tbsCompress.Caption=Komprimieren
+MainForm.btnGo.Caption=Starten!
+MainForm.chkDecomp.Caption=Dekomprimieren
+MainForm.btnRun.Caption=Run
+MainForm.lblProgress.Caption=Komprimierungs Fortschritt
+MainForm.lblProgressSize.Caption=Gepackte Dateigröße
+
+;Options tab
+MainForm.tbsOptions.Caption=Optionen
+MainForm.chkBackup.Caption=Erzeuge Sicherungs Kopie
+MainForm.chkAutoCompress.Caption=Automatisches (Ent)Packen beim Start
+MainForm.chkExitDone.Caption=Programm nach Aktion beenden
+MainForm.chkTest.Caption=Datei nach dem Packen testen
+MainForm.btnAdvanced.Caption=Erweitert
+MainForm.lblCompressLevel.Caption=Kompressions Stufe:
+MainForm.lblFaster.Caption=Schneller
+MainForm.lblBetter.Caption=Besser
+MainForm.lblLanguage.Caption=Sprache wählen:
+MainForm.btnMultiPck.Caption=MultiPacken
+
+;About tab
+MainForm.tbsAbout.Caption=Über
+MainForm.lblReleaseCap.Caption=Release:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.Caption=Mail an BlackDex
+MainForm.lblBlaineMail.Caption=Mail an Blaine
+
+;Help tab
+MainForm.tbsHelp.Caption=Hilfe
+MainForm.btnHelp.Caption=Hilfe
+
+;Update Tab --NEW NEW NEW--
+MainForm.tbsUpdate.Caption=Update
+MainForm.btnChkUpdate.Caption=Nach Updates suchen
+MainForm.lblOnlineVersionCap.Caption=Online Version:
+MainForm.lblOnlineVersion.Caption=N. V.
+MainForm.lblReleaseDateCap.Caption=Freigabe Datum:
+MainForm.lblReleaseDate.Caption=N. V.
+MainForm.lblDownloadCap.Caption=Download Seite:
+MainForm.lblDownload.Caption=N. V.
+
+;Setup Form
+SetupForm.chkScramble.Caption=Benutze Datei Verschlüsselung
+SetupForm.btnScramble.Caption=Verschlüsseln
+SetupForm.chkIntegrate.Caption=Im Kontextmenü integrieren
+SetupForm.lblAdvacedOpts.Caption=Erweiterte UPX Optionen:
+SetupForm.chkResources.Caption=Ressourcen packen
+SetupForm.chkExports.Caption=Exporte packen
+SetupForm.chkRelocs.Caption=Strip relocations
+SetupForm.chkForce.Caption=Starke Kompression
+SetupForm.lblPriority.Caption=Packer Priorität:
+SetupForm.cmbPriority.0=Gering
+SetupForm.cmbPriority.1=Normal (Standard)
+SetupForm.cmbPriority.2=Hoch
+SetupForm.cmbPriority.3=Echtzeit
+SetupForm.lblIcons.Caption=Icons:
+SetupForm.cmbIcons.0=Alle außer 1. Verzeichnis
+SetupForm.cmbIcons.1=Alle außer 1. Icon
+SetupForm.cmbIcons.2=Nicht komprimieren
+SetupForm.lblCommands.Caption=Zusätzliche UPX Parameter:
+SetupForm.chkCommands.Caption=Parameter speichern
+SetupForm.btnOk.Caption=Ok
+SetupForm.chkCompression.Caption=Zusätzliche Kompression
+SetupForm.btnCommands.Caption=Parameter
+;--NEW NEW NEW--
+SetupForm.lblUPX2Only.Caption=Nur UPX v1.9x:
+SetupForm.chkBrute.Caption=Brute
+SetupForm.chkMethods.Caption=Alle Methoden
+SetupForm.chkFilters.Caption=Alle Filter
+
+;MultiPack Form
+MultiForm.Caption=MultiPacken
+MultiForm.grpSearch.Caption=Arbeitsverzeichnis:
+MultiForm.lblDir.Caption=kein Verzeichnis ausgewählt
+MultiForm.btnBrowse.Caption=&Suchen
+MultiForm.chkRecurse.Caption=&Einschließlich Unterverzeichnisse
+MultiForm.chkAll.Caption=A&lle
+MultiForm.lblCurrent.Caption=Aktuelle Datei:
+MultiForm.lblOverall.Caption=Gesamt Fortschritt:
+MultiForm.lblTimeCap.Caption=Dauer:
+MultiForm.btnScan.Caption=&Dateien
+MultiForm.btnPack.Caption=&Packen
+MultiForm.btnExit.Caption=&Beenden
+
+;TreeView Form
+TreeViewForm.lblSelect.Caption=Wähle Verzeichnis:
+TreeViewForm.btnOK.Caption=OK
+TreeViewForm.btnCancel.Caption=Abbruch
+
+;Const_Messages
+msg[001]=Kein Zugriff auf Datei. Datei ist bereits geöffnet
+msg[002]=Dateiattribut ist "Nur Lesen". Zum Fortfahren darf es nicht gesetzt sein. Fortfahren?
+msg[003]=Beste
+msg[004]=Datei scheint nicht gepackt zu sein. Verschlüsselung starten?
+msg[005]= (in 
+msg[006]= Sekunden)
+msg[007]=entpacken
+msg[008]=packen
+msg[009]=Es gibt nichts zu 
+msg[010]=N. V.
+msg[011]=Kein Verzeichnis gewählt
+msg[012]=...Update fehlgeschlagen :-(
+msg[013]=Keine Verbindung zum Update Server
+msg[014]=Neuere Version wurde auf dem Server gefunden!
+msg[015]=Prüfe auf Update...
+msg[016]=Einlesen der Update Information...
+msg[017]=Datei erfolgreich gepackt
+msg[018]=Datei erfolgreich entpackt
+msg[019]=Datei gepackt mit Warnungen
+msg[020]=Datei entpackt mit Warnungen
+msg[021]=Fehler aufgetreten. Datei nicht gepackt
+msg[022]=Fehler aufgetreten. Datei nicht entpackt
+msg[023]= & geteset
+msg[024]= & getestet mit Warnungen
+msg[025]= & Fehler beim Testen
+msg[026]=UPX meldete folgenden Fehler: 
+msg[027]= & verschlüsselt
+msg[028]=...Update gefunden
+msg[029]=...keine Updates gefunden
+msg[030]=OK
+msg[031]=Fehlgeschlagen
+msg[032]=Überspringen
+msg[033]=Datei Name
+msg[034]=Ordner
+msg[035]=Größe
+msg[036]=Gepackt
+msg[037]=Ergebniss
+msg[038]=Fehler
+msg[039]=Bestätigung
+msg[040]=Wähle Verzeichnis zum komprimieren aus:
+msg[041]=Diese Datei ist nun verschlüsselt!
+msg[042]=diese Datei wurde NICHT verschlüsselt!
+msg[043]=(Ent)Packen mit UPX

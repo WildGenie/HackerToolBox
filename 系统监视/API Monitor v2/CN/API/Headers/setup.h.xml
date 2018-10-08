@@ -1,0 +1,12 @@
+<!--
+    API Monitor Definitions
+    (c) 2010-2011, Rohitab Batra <rohitab@rohitab.com>
+    http://www.rohitab.com/apimonitor/
+-->
+<ApiMonitor>
+    <Include Filename="Headers\windows.h.xml" />
+    <Headers>
+        <!-- TODO: Structures -->
+        <Variable Name="PSP_DRVINFO_DATA" Type="Alias" Base="LPVOID" />
+    </Headers>
+</ApiMonitor>

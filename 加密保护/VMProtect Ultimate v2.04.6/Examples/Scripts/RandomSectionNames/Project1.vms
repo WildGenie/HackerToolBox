@@ -1,0 +1,19 @@
+function GetRandomSectionName: String;
+var I:Integer;
+    B:Byte;
+begin
+  Result:='';
+  for I:=1 to 8 do
+   begin
+    B:=32+Random(Ord('z')-32);
+    Result:=Result+Chr(B);
+   end; 
+end;
+
+procedure OnAfterSaveFile;
+var I:Integer;
+begin
+  with VMProtector.OutputFile do
+   for I:=0 to Sections.Count-1 do
+    Sections.Items[I].Name:=GetRandomSectionName;
+end;

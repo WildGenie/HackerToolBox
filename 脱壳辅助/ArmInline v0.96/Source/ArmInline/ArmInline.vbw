@@ -1,0 +1,8 @@
+frmMain = 0, 0, 0, 0, C, 44, 44, 745, 660, C
+CodeSplicing = 0, 0, 0, 0, C
+Declarations = 66, 66, 878, 639, 
+frmAbout = 0, 0, 0, 0, C, 22, 22, 723, 638, C
+Common = 0, 0, 0, 0, C
+RebaseIAT = 0, 0, 0, 0, C
+Nanomites = 0, 0, 0, 0, C
+ProcessViewer = 44, 44, 856, 617, 

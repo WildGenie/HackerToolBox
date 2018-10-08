@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="description" content="Translation Tutorial for Restorator - the customization, localization, and translation tool">
+	<meta name="keywords" content="translation tutorial, localization, translation, editor, windows resources, skins">
+	<link rel="SHORTCUT ICON" href="../../webicon.ico">
+	<title>Translation Tutorial - Restorator - bome.com</title>
+	<link rel="STYLESHEET" type="text/css" href="../../styles.css">
+
+</head>
+<body bgcolor="#E0E0E0" text="#000000" link="#A92C2F" vlink="#991C1F" alink="#505050" leftmargin=3 topmargin=3>
+<table width="100%" class=master_table border="0" cellspacing="4" cellpadding="1">
+<tr>
+<td width="100%">
+
+
+<!-- ]==========[ Content ]==========[ -->
+<!-- Help Header -->
+<table border="0" cellpadding="0" align="right">
+<tr><td align="right" valign="top">
+<a href="../../help/support.html">Help Overview</a><br>
+<a href="../../help/help.html">Manual</a><br>
+<a href="../../help/tutorials.html">Tutorials</a><br>
+<a href="../../help/FAQ.html">FAQ</a><br>
+<a href="../../purchase.html">Purchase</a><br>
+<a href="http://www.bome.com/Restorator/">Restorator Web</a>
+</td></tr></table>
+
+<h1>Restorator<br>
+Translation Tutorial</h1>
+<h2 class=top>Tutorial: Translating MS Paint</h2>
+
+<div align="center"><table border=0 cellpadding=10 cellspacing=0 bgcolor="#D0D0D0"><tr><td><b>Note:</b> the screenshots in this tutorial originate from an older version of Restorator.</td></tr></table></div>
+
+<p>MS Paint is the
+image program that is delivered with Windows. You can find its file
+"MSPaint.exe" in "C:\Program Files\Accessories" (Windows 95/98/ME) or
+in "C:\WINNT\system32" (Windows NT/2000/XP).</p>
+<p>Again, respect
+the copyright of programs. You should only modify it (and other
+programs) for your private use.&nbsp;</p>
+
+<h4>1. Translating String resources</strong></h4>
+<p>Paint has a
+large number of &quot;String&quot; resources. Now we will use Restorator's
+in-built editor to change them: select a String resource...<br>
+<img src="trans/mspstring.gif"></p>
+<p>...and click on
+the &quot;ab&quot; tool button (or press F6).
+The display will change to the &quot;RC&quot; form:<br>
+<strong><img src="trans/mspedit.gif"></strong></p>
+<p>In this
+tutorial I translate the text into German :<br>
+<img src="trans/mspchanged.gif"></p>
+<p>To finalize the
+changes, I press F8 or the Commit tool button. A little arrow in
+the Resource Tree reminds me that I have changed this
+resource.</p>
+<p>Like that all
+text messages may be translated.</p>
+
+<h4>2. Translating the menus</h4>
+<p>Click on the
+first menu entry in the Resource tree. As you are still in edit
+mode, the menu will now be displayed in &quot;RC&quot; form:<br>
+<img src="trans/mspmenu1.gif"></p>
+<p>Additionally,
+the menu preview window pops up:<br>
+<strong><img src="trans/mspmenupreview.gif"></strong></p>
+<p>While editing
+the text of the menu, you can press F5 to update the
+preview.</p>
+<p>Translating
+menus is exactly done like strings. At the bottom of the &quot;RC&quot; text,
+there are some hints about special issues concerning menus.<br>
+<img src="trans/mspmenu2.gif"></p>
+<p>&nbsp;</p>
+
+<h4>3. Translating the dialogs</h4>
+<p>Translating
+dialogs is easy now. You can translate the text and directly change the layout!
+You have many options to adjust the style and arrange it to your liking.</p>
+<p><a href="trans/mspdlgedit.gif"><img src="trans/mspdlgedit.gif" width=650 border=0></a><br>
+[click image to see it in real size]
+</p>
+
+<h4>4. Translating the Accelerators</h4>
+<p>Accelerators
+are shortcut key combinations for often-used functions. For
+example, many applications define &quot;Ctrl-C&quot; for copying to the
+clipboard. These shortcuts are stored in the Accelerators resource
+type.</p>
+<p>Each
+accelerator is assigned to a menu item. In this example, I want to
+change the accelerator key for the menu item &quot;Open&quot;. Normally, it
+had the key combination &quot;Ctrl-O&quot;. Now, in my German version, I
+would like to have the umlaut &quot;Ctrl-&Ouml;&quot; as accelerator. In the
+menu resource I saw that the open menu item has the number -7935.
+So in the accelerators, I look for ID -7935:</p>
+<p><img src="trans/mspacc.gif"></p>
+<p>I just change
+it to &quot;Ctrl-&Ouml;&quot; and press F8 to commit it.</p>
+<h4>5. Saving the new MSPaint</h4>
+<p>Now save the file as
+something else, e.g. MSPaint1.exe. Then click the Run toolbutton
+<strong><img src="tool/toolrun.gif" align="absmiddle"
+width="30" height="28"></strong> and see the difference in your new custom application !</p>
+<p><a href="../tutorials.html">[Back]</a></p>
+
+
+<!-- ]==========[ Footer ]==========[ -->
+   <div align="center">
+    <hr width="400" align="center" size="4">
+    <font class="copyright">Copyright 1997-2007 by bome.com</font>
+   </div>
+  </td></tr></table>
+ </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta name="description" content="Extract Resources with Restorator - the customization, localization, and translation tool">
+	<meta name="keywords" content="extracting resources tutorial, localization, translation, editor, windows resources, skins">
+	<link rel="SHORTCUT ICON" href="../../webicon.ico">
+	<title>Extract Resources Tutorial - Restorator - bome.com</title>
+	<link rel="STYLESHEET" type="text/css" href="../../styles.css">
+
+</head>
+<body bgcolor="#E0E0E0" text="#000000" link="#A92C2F" vlink="#991C1F" alink="#505050" leftmargin=3 topmargin=3>
+<table width="100%" class=master_table border="0" cellspacing="4" cellpadding="1">
+<tr>
+<td width="100%">
+
+
+<!-- ]==========[ Content ]==========[ -->
+<!-- Help Header -->
+<table border="0" cellpadding="0" align="right">
+<tr><td align="right" valign="top">
+<a href="../../help/support.html">Help Overview</a><br>
+<a href="../../help/help.html">Manual</a><br>
+<a href="../../help/tutorials.html">Tutorials</a><br>
+<a href="../../help/FAQ.html">FAQ</a><br>
+<a href="../../purchase.html">Purchase</a><br>
+<a href="http://www.bome.com/Restorator/">Restorator Web</a>
+</td></tr></table>
+
+<h1>Restorator<br>
+Extract Resources Tutorial</h1>
+<h2 class=top>Tutorial: Extracting all Resources at once</h2>
+
+<div align="center"><table border=0 cellpadding=10 cellspacing=0 bgcolor="#D0D0D0"><tr><td><b>Note:</b> the screenshots in this tutorial originate from an older version of Restorator.</td></tr></table></div>
+
+<p>For this
+tutorial, I chose shell32.dll for demonstration. It can be found in
+the folder "Windows\System" (95/98/ME) or
+"Windows\System32" (NT/2000/XP).<img src="extrall/shopen.gif" align="right" hspace=
+"0"></p>
+<p><strong>1. Open shell32.dll</strong></p>
+<p>Here
+you'll learn a new way to open a file: use the pop-up context menu
+of Windows Explorer. For that, go to the folder given above and
+search the file shell32.dll. Then click with the right mouse button
+on it and select the entry "Open with Restorator".</p>
+<p><strong>2. Extract all resources</strong></p>
+<p>At first, to create a working space on your disk e.g. C:\Shell.</p>
+<p>You can use the
+<i>File Browser</i> in Restorator and the tool button <i>New
+Folder</i> <img src="tool/toolnewdir.gif" align="absmiddle">. I called
+this new folder "Shell". Then I drag the <em>file</em>
+Shell32.dll from the Resource Tree and drop it on the new folder
+in the File Browser. Alternatively you could use the function
+"Extract all" of the Resources menu or the pop-up menu of
+Shell32.dll.</p>
+<br clear=all>
+<div align="left">
+<img src="extrall/shnewdirs.gif" align="right" hspace="0">
+For each resource type, a
+sub-folder will be created with the name of the resource type.
+When you look in these folders with our file browser,
+you'll find for each resource a file which is named after the name
+of the resource. Especially the Icon folder contains some
+interesting icons, don't you think, too ?<br>
+<br>
+Like that you can easily build
+up your private icon database...
+</div>
+<p>Resource types,
+which are not recognized (yet) by Restorator, just have the
+extension "raw". Like this you can identify raw resource files (see
+the <a href="../tech.html">technical
+specifications</a> for details on resource
+types known by Restorator). We will extend continuously Restorator's
+range of known resources.</p>
+<p><strong>3.
+Assign ALL resources</strong></p>
+<p>You can do the
+inverse process and assign all resources at once ! This may be
+useful when you have done a lot of modifications to your resource
+files. You may want to create your own "flying files"-animation
+and/or change your system-icons... Like that you can create your
+own version of Windows !</p>
+<div align="left">
+<table border="0" cellpadding="2" width="640">
+<tr>
+<td align="center">
+<p><img src="extrall/shassign.gif"
+align="left" hspace="0" width="709" height=
+"461"></p></td></tr></table></div>
+<p>So to assign
+all at once, drag the folder "Shell" and drop it on shell32.dll in
+the Resource Tree. Again, you could use the menu "Resources" or the
+pop-up menu of shell32.dll to select the function "Auto assign all
+resources".</p>
+<p><img src="extrall/sherror.gif" align="right" hspace="0" height="160" width=
+"336">When Restorator encountered any problems or errors during the
+auto assign process, it will display a dialog with the list of
+problems. As an example, we hacked the version resource file to be broken. Since the file is not a valid version resource anymore,
+Restorator shows the dialog at right. The first
+line specifies the error message. The second line specifies
+the source file on disk, and the third line specifies the
+resource which couldn't be assigned to.</p>
+<p>&nbsp;</p>
+<p>Now you understand how to
+work with applications when you'd like to completely change them and
+to process it in a batch. If you need more batch functionality including
+several applications, see <a href="TutGrab.html">example 8</a>.</p>
+<p><a href="../tutorials.html">[Back]</a></p>
+
+
+<!-- ]==========[ Footer ]==========[ -->
+   <div align="center">
+    <hr width="400" align="center" size="4">
+    <font class="copyright">Copyright 1997-2007 by bome.com</font>
+   </div>
+  </td></tr></table>
+ </body>
+</html>

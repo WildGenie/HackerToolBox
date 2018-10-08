@@ -1,0 +1,151 @@
+
+       ßßßßßß\   ßß\    ßß\  ßßßßßßß\   ßßßßßßß\  ßß\      ßß\   ver 2.50.00 Ü
+     ßß\    ßß\ ßß\    ßß\     ßß\     ßß\       ßß\      ßß\     ßßßßßßßßßßßß
+    ßß\    ßß\ ßß\    ßß\     ßß\     ßßßßßßß\  ßß\  ß\  ßß\
+   ßß\ ß\ ßß\  ßß\  ßß\      ßß\     ßß\        ßß\ ßß\ ßß\
+    ßßßßßß\     ßßßß\     ßßßßßßß\  ßßßßßßß\     ßß\ ßß\     AGC Product Ü
+         ß\                                                   ßßßßßßßßßßßß
+                         Main fetures and differencies.
+
+ Legend:
+  HV  - mode: view file as hex/ascii dump
+  AV  - mode: view file as assembler instruction with codes
+  TV  - mode: view file as text
+  Î   - new feature.
+  þ   - now it works.
+  +   - changed.
+  û   - works, but we don't no how. :)
+  -   - coming soon.
+  ~   - author's remark.
+
+Note: to be in short we list only the latest public versions.
+
+
+±±±± Notes to version 2.50.00 ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+ + Generally corrected file QView.doc
+ + Use left mouse button on filename (in the satus line) to call the file ma-
+   nager (Similar to [Alt]+[F6]).
+ + Paragraph alignment when centre the searched string in HV mode.
+ + Default color for highlight group 5 in file manager changed: 11h -> 16h.
+ + The start-up directory is restored on exit (if was changed in the file ma-
+   nager).
+ + Use 'pword ptr' signature in assembler/disassembler for the far indirect
+   calls (32- or 48-bit pointer).
+ + 'jmp di', 'call ecx', etc. instructions in assembler is now available.
+ + 'File process bar' in 'String search' added.
+ + [Esc] key to stop 'String search' process added in 'File process bar' .
+ + Heap overflow control in file panel (over 2950 files available).
+ + File sort by size/date&time in file panel is now rearrange files by
+   size/dat&timee decrease.
+
+                          Ver. 2.46.04-2.46.02
+                        ÄÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÄ
+ Î Windows 95/NT VxD 'LE'-header support (view).
+ Î OS/2 'LX'header support (view).
+ + Searched string is now placed in center line of screen in AV,HV mode.
+ + Scrolling in History-box after record deletion was corrected.
+ + Comments now outputted more correctly when non-zero Base Offset
+ + Hide cursor on show 'About' & 'User Screen'
+ + 'Relocations' & 'Overlay number' in MZ-Headers are replaced (placed for the
+   correct position).
+ Î File panel (file manager) on OpenFile ([Alt]+[F6]).
+ Î File panel configuration file QView.fmg
+ Î Viewed file scroll in HV,AV with [Ctrl]+[Left],[Ctrl]+[Right]. Current
+   position is unchanged.
+ + [Alt]+[Left],[Alt]+[Right] - go to previous/next comment [AV].
+ + All offsets in LX,LE headers are viewed from the file begin.
+ + Viewed file percents output was corrected.
+ + Long commands code output was corrected [AV]
+ Î [Alt]+[A] - mark whole file as a block [HV,AV]
+ + Critical error handler (all errors are ignored ;)
+ Î Call dump view at cursor offset from AV with [Alt]+[J]+[W] when 16-bit
+   offset assumed or [Alt]+[J]+[D] - when 32-bit is.
+   Return from HV to AV on call position with [Alt]+[J]
+
+   Notation: here's the example of how it works:
+   ~~~~~~~~
+   1. AV
+   000009A2: BA170B                    mov    dx,0B17
+               ^^ cursor is here in AV, press Alt+J, W
+   000009A5: B409                      mov    ah,09
+   000009A7: CD21                      int    21
+
+   2. Automatically goes to HV for the offset 0B17h:
+
+   00000B17: 0A 0D 43 41³4C 43 20 5B³2F 3F 5D 5B³2F 73 5D 5B  ..CALC [/?][/s][
+   00000B27: 2F 2A 5D 0A³0D 24 20 20³20 20 20 2F³73 20 2D 20  /*]..$     /s -
+
+   Scroll it however you want, then press Alt+J to go back to 1.
+
+±±±± Notes to version 2.46.01 ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+ + Documentation was corrected.
+ + The format of .CRK files QView saves was reduced to the standard.
+ Î Function of upgrade the current file with the crack file information.
+   Call: [Ctrl]+[F8]
+   Work:
+           1. The first dialog requires the base address of crack. It is
+              only needed in case to change the base address stored in crack
+              file. The address you put here becomes the base (first)
+              address, and all the other crack addresses are changed by the
+              required offset automatically.
+
+           2. The second dialog requires the crack file name.
+
+   N.B.:
+           1. The crack file format is fixed !!! It must include the crack
+              only, i.e. the strings like this: '12345678: 12 34',0Dh,0Ah.
+              First eight characters are the crack address (offset) - use the
+              leading '0' if required; then ':' followed by the Space symbol;
+              then two numbers devided by space: the old byte & the new byte.
+              The every string should be ended with 0Dh,0Ah (Cariage Return
+              and Line Feed characters).
+
+           2. Program takes the full crack syntax controll. If the string
+              causes the problem, it's number is outputed. The problem may
+              occure in a two cases: if the string syntax illegal and if the
+              old byte in the crack file not equal to found in the current
+              file one. The byte is changed only if all the requirements
+              are satisfied.
+
+±±±± Notes to version 2.45.02 ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+ Î The strings dump output to file in the TV with [Shift]+[F3]
+ Î ICEBP command (opcode F1h) disassembler (AV)
+ Î The screen output to file with [Alt]+[P] (TV,HV,AV)
+ + Assembler instruction of [d32+IR*F] type analis bug fixed.
+   (N.B. The d32 field must be of 2 symbols minimum)
+ + [IR*F] address instruction assembler, i.e. d32=0.
+ + [IR*F] address disassembler (was 'IR*F]' ;)
+ + The [ESC] key function in 'CharSet' & 'LineFeed' dialogs was corrected
+ + The file Qview.hlp corrected according to the current keys functions
+ Î The file changes saved in .CRK-type file with [Shift]+[F9].
+ Î New mask symbol '@' in assembler search - substring search.
+   Examples:
+    1. search mask            : @bx*,*
+       possible instructions  : mov bx,5092
+                                xor word ptr [bx+si],ax
+                                etc.
+    2. search mask            : @[bx+si+1024]*
+       possible instructions  : test word ptr [bx+si+1024],5092
+                                xor byte ptr [bx+si+1024],al
+                                mov ax,word ptr [bx+si+1024]
+                                etc.
+
+±±±± Notes to version 2.42.04 ±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+
+ Î The system time shown when [Shift] pressed   (TV,HV,AV)
+ Î The system date shown when [Ctrl] pressed    (TV,HV,AV)
+ Î In the TV mode you may save the current file as recoded. Use [F9] key.
+   N.B. Do not save the file with the same name!
+ Î User-defined caracter redefinition table support applied. You may define up
+   to a 4 tables (encoding) in addition to the standard tree tables. Refer the
+   QVIEW.ENG to learn about the QVIEW.CHR format.
+ + Mouse cursor is now placed in the left up corner of the screen at start-up.
+ + Some gifts
+ Î Backward search mode is added. Use [F9] to define the search direction.
+
+±±±± Notes to earlier versions are not translated. Sorry. ±±±±±±±±±±±±±±±±±±±±
+
+...................

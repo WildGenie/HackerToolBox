@@ -1,0 +1,26 @@
+:BASE pelock_en.hlp
+1 Introduction
+2 Informations=Informations@pelock_en.hlp
+2 Purpose=Purpose@pelock_en.hlp
+2 History=History@pelock_en.hlp
+2 License=License@pelock_en.hlp
+2 Credits=Credits@pelock_en.hlp
+2 FAQ=FAQ@pelock_en.hlp
+1 Configuration
+2 Program options=ProgramOptions@pelock_en.hlp
+2 Project options=ProjectOptions@pelock_en.hlp
+1 Examples
+2 License keys=ExampleLicenseKeys@pelock_en.hlp
+2 Additional key data=ExampleAdditionalKeyData@pelock_en.hlp
+2 Key expiration date=ExampleKeyExpirationDate@pelock_en.hlp
+2 Hardware key ID=ExampleHardwareId@pelock_en.hlp
+2 User name=ExampleUseName@pelock_en.hlp
+2 Setting key=ExampleSettingKey@pelock_en.hlp
+2 Crypt markers=ExampleCryptMarkers@pelock_en.hlp
+2 Clear markers=ExampleClearMarkers@pelock_en.hlp
+2 Keygen usage=ExampleKeygen@pelock_en.hlp
+1 Registration
+2 Demo version=Demo@pelock_en.hlp
+2 How to order=Register@pelock_en.hlp
+2 Updates=Upgrade@pelock_en.hlp
+1 Contact=Contact@pelock_en.hlp

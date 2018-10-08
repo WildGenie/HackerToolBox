@@ -1,0 +1,30 @@
+procedure OnBeforeSaveFile;
+var I,J:Integer;
+    RCDataRecord:TPEResourceRecord;
+    ResourceNames:TStringList;
+begin
+  with VMProtector.OutputFile do
+   begin
+    I:=ResourceRecords.IndexOfResType(rtRCData);
+    if I>-1 then
+     begin
+      RCDataRecord:=ResourceRecords[I];
+      ResourceNames:=TStringList.Create;
+      try
+       ResourceNames.Add('PACKAGEINFO');
+       ResourceNames.Add('DVCLAL');
+       for J:=0 to ResourceNames.Count-1 do
+        begin
+         I:=RCDataRecord.IndexOfName(ResourceNames[J]);
+         if I>-1 then
+          begin
+           RCDataRecord.Delete(I);
+           Writeln(Format('Resource "%s" is deleted',[ResourceNames[J]]));
+          end;
+        end;
+      finally  
+       ResourceNames.Free;
+      end;     
+     end; 
+   end;
+end;

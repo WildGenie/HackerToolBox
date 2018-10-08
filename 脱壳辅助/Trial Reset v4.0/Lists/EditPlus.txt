@@ -1,0 +1,5 @@
+EditPlus 2.x	Reg32Val	HKCU\Software\ES-Computing\EditPlus 2\Install\\Install 2.1
+EditPlus 2.x	Reg32Val	HKLM\SOFTWARE\ES-Computing\EditPlus 2\Install\\Install 2.1
+EditPlus 3.x	Reg32Val	HKLM\Software\ES-Computing\EditPlus 3\Install\\Install
+EditPlus 3.x	Reg32Val	HKCU\Software\ES-Computing\EditPlus 3\Install\\Install
+EditPlus 3.x	File32	%P\EditPlus 3\reg_u.ini

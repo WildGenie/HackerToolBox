@@ -1,0 +1,12 @@
+function MessageBox(HWnd: Integer; Text, Caption: PChar; Flags: Integer): Integer; 
+external 'MessageBoxA@user32.dll stdcall';
+
+procedure OnBeforeCompilation;
+begin 
+  MessageBox(0,'OnBeforeCompilation','MessageBox from user32.dll',MB_OK or MB_ICONINFORMATION);
+end;
+
+procedure OnAfterCompilation;
+begin
+  MessageBox(0,'OnAfterCompilation','MessageBox from user32.dll',MB_OK or MB_ICONINFORMATION);
+end;

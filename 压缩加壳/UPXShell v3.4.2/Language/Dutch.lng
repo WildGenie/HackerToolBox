@@ -1,0 +1,166 @@
+
+;Created by BlackDex 2004-2006
+;Based Upon English.lng
+;*************************************
+;Main Form
+;Top frame
+MainForm.lblCompressor.Caption=Win32 EXE, DLL Inpakker
+MainForm.lblInsCap.Caption=UPX Intern:
+MainForm.lblOutCap.Caption=UPX Extern:
+
+;Open File tab
+MainForm.tbsOpen.Caption=Open Bestand
+MainForm.btnOpen.Caption=Open
+MainForm.lblHistory.Caption=Geschiedenis
+MainForm.pnlFileInfo.Caption=Bestand Informatie
+MainForm.lblFNameCap.Caption=Bestand Naam
+MainForm.lblFName.Caption=N/B
+MainForm.lblFSizeCap.Caption=Bestands grote (Origineel)
+MainForm.lblFSize.Caption=N/B
+MainForm.lblCSizeCap.Caption=Bestands grote (Ingepakt)
+MainForm.lblCSize.Caption=N/B
+MainForm.lblRatioCap.Caption=Inpak Ratio
+MainForm.lblRatio.Caption=N/B
+MainForm.mnuHistory.Caption=Geschiedenis Wissen
+
+;Compress tab
+MainForm.tbsCompress.Caption=Inpakken
+MainForm.btnGo.Caption=Doen!
+MainForm.chkDecomp.Caption=Uitpakken
+MainForm.btnRun.Caption=Uitvoeren
+MainForm.lblProgress.Caption=Voortgang inpakken
+MainForm.lblProgressSize.Caption=Ingepakte bestands grote
+
+;Options tab
+MainForm.tbsOptions.Caption=Opties
+MainForm.chkBackup.Caption=Maak Back-up Kopie
+MainForm.chkAutoCompress.Caption=Automatisch inpakken na laden
+MainForm.chkExitDone.Caption=Sluiten waneer klaar
+MainForm.chkTest.Caption=Test bestand na inpakken
+MainForm.btnAdvanced.Caption=Geavanceerd
+MainForm.lblCompressLevel.Caption=Inpak Niveau: 
+MainForm.lblFaster.Caption=Sneller
+MainForm.lblBetter.Caption=Beter
+MainForm.lblLanguage.Caption=Selecteer uw taal: 
+MainForm.btnMultiPck.Caption=Groeps Inpak
+
+;About tab
+MainForm.tbsAbout.Caption=Over
+MainForm.lblReleaseCap.Caption=Versie:
+MainForm.lblBuildCap.Caption=Bouw:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.Caption=Mail naar BlackDex
+MainForm.lblBlaineMail.Caption=Mail naar Blaine
+
+;Help tab
+MainForm.tbsHelp.Caption=Help
+MainForm.btnHelp.Caption=Help
+
+;Update Tab --NEW NEW NEW--
+MainForm.tbsUpdate.Caption=Update
+MainForm.btnChkUpdate.Caption=Controleer op updates
+MainForm.lblOnlineVersionCap.Caption=Online versie:
+MainForm.lblOnlineVersion.Caption=N/B
+MainForm.lblReleaseDateCap.Caption=Vrijgaven Datum:
+MainForm.lblReleaseDate.Caption=N/B
+MainForm.lblDownloadCap.Caption=Download site:
+MainForm.lblDownload.Caption=N/B
+
+;Setup Form
+SetupForm.chkScramble.Caption=Gebruik bestands Vervormer
+SetupForm.btnScramble.Caption=Vervorm
+SetupForm.chkIntegrate.Caption=Integreer in het Contextmenu
+SetupForm.lblAdvacedOpts.Caption=Geavanceerde UPX Opties:
+SetupForm.chkResources.Caption=Resources inpakken
+SetupForm.chkExports.Caption=Exports inpakken
+SetupForm.chkRelocs.Caption=Relocations wissen
+SetupForm.chkForce.Caption=Forceer inpakken
+SetupForm.lblPriority.Caption=Inpakker prioriteit:
+SetupForm.cmbPriority.0=LAAG
+SetupForm.cmbPriority.1=NORMAL (standaard)
+SetupForm.cmbPriority.2=HOOG
+SetupForm.cmbPriority.3=REALTIME
+SetupForm.lblIcons.Caption=Iconen:
+SetupForm.cmbIcons.0=Alles behalve 1e folder
+SetupForm.cmbIcons.1=Alles behalve 1e icoon
+SetupForm.cmbIcons.2=Niet inpakken
+SetupForm.lblCommands.Caption=Extra UPX commando’s:
+SetupForm.chkCommands.Caption=Sla commando’s op
+SetupForm.btnOk.Caption=Oke
+SetupForm.chkCompression.Caption=Extra inpakken
+SetupForm.btnCommands.Caption=Commando’s
+SetupForm.lblUPX2Only.Caption=Alleen UPX v1.9x:
+SetupForm.chkBrute.Caption=Bruut
+SetupForm.chkMethods.Caption=Alle Methodes
+SetupForm.chkFilters.Caption=Alle Filters
+
+;MultiPack Form
+MultiForm.Caption=Groeps Inpak
+
+;MultiPack Form
+MultiForm.grpSearch.Caption=Zoek pad:
+MultiForm.lblDir.Caption=N/B
+MultiForm.btnBrowse.Caption=&Bladeren
+MultiForm.chkRecurse.Caption=&Inclusief onderliggende mappen
+MultiForm.chkAll.Caption=&Alles
+MultiForm.lblCurrent.Caption=Huidig bestand:
+MultiForm.lblOverall.Caption=Totale vooruitgang:
+MultiForm.lblTimeCap.Caption=Tijdsduur:
+MultiForm.btnScan.Caption=&Zoek
+MultiForm.btnPack.Caption=I&npak
+MultiForm.btnExit.Caption=&Sluiten
+
+;TreeView Form
+TreeViewForm.lblSelect.Caption=Selecteer map op in te pakken:
+TreeViewForm.btnOK.Caption=OKE
+TreeViewForm.btnCancel.Caption=Annuleren
+
+;Const_Messages
+msg[001]=Kon bestand niet openen. Het is mogelijk al geopend
+msg[002]=Het bestands attribute staat op Alleen Lezen. Om verder te gaan moet dit uitgezet worden. Verdergaan?
+msg[003]=Beter
+msg[004]=Dit bestand blijkt niet ingepakt te zijn. Toch de Vervormer starten?
+msg[005]= (in 
+msg[006]= seconden)
+msg[007]=uitpakken
+msg[008]=inpakken
+msg[009]=Er is niks om  
+msg[010]=N/B
+msg[011]=Geen map geselecteerd
+msg[012]=...update mislukt :-(
+msg[013]=Kon geen verbinding maken met de update server!
+msg[014]=Geüpdate versie van dit product gevonden!
+msg[015]=Update bestand aan het onderzoeken...
+msg[016]=Bezig met update informatie ontvangen...
+msg[017]=Bestand met succes ingepakt
+msg[018]=Bestand met succes uitgepakt
+msg[019]=Bestand ingepakt met foutmeldingen
+msg[020]=Bestand uitgepakt met foutmeldingen
+msg[021]=Fout opgetreden. Bestand niet ingepakt
+msg[022]=Fout opgetreden. Bestand niet uitgepakt
+msg[023]= & getest
+msg[024]= & getest + waarschuwingen
+msg[025]= & test mislukt
+msg[026]=UPX heeft de volgende fout gegenereerd: 
+msg[027]= & vervormd
+msg[028]=...updates gevonden
+msg[029]=...geen updates gevonden
+msg[030]=OKE
+msg[031]=Mislukt
+msg[032]=Overslaan
+msg[033]=Bestands naam
+msg[034]=Map
+msg[035]=Grote
+msg[036]=Ingepakt
+msg[037]=Resultaat
+msg[038]=Fout
+msg[039]=Bevestiging
+msg[040]=Selecteer map om in te pakken:
+msg[041]=Dit bestand is nu vervormd
+msg[042]=Dit bestand is NIET vervormd
+msg[043]=In/Uitpakken met UPX
+msg[044]=Eigen upx.exe

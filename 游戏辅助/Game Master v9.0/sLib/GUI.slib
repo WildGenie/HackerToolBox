@@ -1,0 +1,27 @@
+function GUI(var str libpath)
+begin
+  // 24-03-2002
+  DLL_func("initGUI",libpath+"gui.dll","int")
+  DLL_func("GUI_GetWaitingProc",libpath+"gui.dll","str")
+  DLL_func("GUI_GetVersion",libpath+"gui.dll","int")
+  DLL_func("GUI_Sleep",libpath+"gui.dll","int","int")
+
+  DLL_func("GUI_CreateObject",libpath+"gui.dll","int","int","str","str")
+  DLL_func("GUI_RemoveObject",libpath+"gui.dll","int","int")
+
+  DLL_func("GUI_SetProperty",libpath+"gui.dll","int","int","str","str")
+  DLL_func("GUI_GetProperty",libpath+"gui.dll","str","int","str")
+
+  DLL_func("GUI_SetEvent",libpath+"gui.dll","int","int","str","str")
+
+  initGUI()
+end
+function GUI_RunMainWindow(var int win, var int rest)
+begin
+  GUI_SetProperty(win,"Visible","1")
+  while GUI_GetProperty(win,"Visible")<>"0"
+  begin
+    call(GUI_GetWaitingProc())
+    GUI_Sleep(10+rest)
+  end
+end

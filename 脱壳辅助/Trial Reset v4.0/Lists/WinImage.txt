@@ -1,0 +1,4 @@
+WinImage	Reg32Val	HKCU\Software\WinImage\\ConnectedFileOption
+WinImage	Reg32Val	HKCU\Software\WinImage\\DayOfUsing
+WinImage	Reg32Val	HKCU\Software\WinImage\\DayOfUsingLater
+WinImage	Reg32Val	HKCU\Software\WinImage\\DayOfUsingLaterDisp

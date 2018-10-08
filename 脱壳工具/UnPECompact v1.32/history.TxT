@@ -1,0 +1,38 @@
+UnPECompact 1.32
+----------------
+- support for more PEC versions (around 1.69) added (thx snaker)
+
+
+UnPECompact 1.31
+----------------
+- support for another PEC version (1.23 or 1.24) added
+- new option: "Force full IAT rebuilding"
+- reorganized some internal things
+
+
+UnPECompact 1.3
+---------------
+- new verions of rebIT.dll and realign.dll added
+- some things were recoded or added
+-> support for NT based OS's improved a lot
+
+
+UnPECompact 1.2
+---------------
+- now one can optionally optimize the filesize
+- UnPECompact.exe works now sometimes on win NT/2k
+- UnPECompact was successfully tested under win ME
+
+
+UnPECompact 1.1
+---------------
+- ImportTableRebuilder improved
+- Debug algorithm changed
+- UnPECompact should now be able to unpack ALL PECompact versions
+- more PECompact versions tested
+- commandline support added
+
+
+UnPECompact 1.0
+---------------
+- first release

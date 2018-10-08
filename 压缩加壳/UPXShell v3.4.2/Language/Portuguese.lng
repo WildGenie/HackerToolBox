@@ -1,0 +1,146 @@
+//Portuguese by VaMPiRic_CRoW, 2001-2003
+	//Main Form
+ //Top frame
+MainForm.lblCompressor.Caption=Win32 EXE, DLL compressor
+MainForm.lblInsCap.Caption=UPX:
+MainForm.lblOutCap.Caption=UPX Shell:
+ //Open File tab
+MainForm.tbsOpen.Caption=Abrir Ficheiro
+MainForm.btnOpen.Caption=Abrir
+MainForm.lblHistory.Caption=História
+MainForm.pnlFileInfo.Caption=Ficheiro de Informação
+MainForm.lblFNameCap.Caption=Nome do Ficheiro:
+MainForm.lblFName.Caption=N/D
+MainForm.lblFSizeCap.Caption=Tamanho do Ficheiro (original):
+MainForm.lblFSize.Caption=N/D
+MainForm.lblCSizeCap.Caption=Tamanho do Ficheiro (comprimido):
+MainForm.lblCSize.Caption=N/D
+MainForm.lblRatioCap.Caption=Ratio de Compressão
+MainForm.lblRatio.Caption=N/D
+MainForm.mnuHistory.Caption=Limpar História
+ //Compress tab
+MainForm.tbsCompress.Caption=Comprimir
+MainForm.btnGo.Caption=Começar!
+MainForm.chkDecomp.Caption=Descomprimir
+MainForm.btnRun.Caption=Executar
+MainForm.lblProgress.Caption=Progresso da Compressão:
+MainForm.lblProgressSize.Caption=Tamanho do Ficheiro Comprimido:
+ //Options tab
+MainForm.tbsOptions.Caption=Opções
+MainForm.chkBackup.Caption=Criar cópia de segurança
+MainForm.chkAutoCompress.Caption=Auto comprimir depois de carregar
+MainForm.chkExitDone.Caption=Sair quando acabar
+MainForm.chkTest.Caption=Testar ficheiro comprimido
+MainForm.btnAdvanced.Caption=Avançado
+MainForm.lblCompressLevel.Caption=Nivél de Compressão:
+MainForm.lblFaster.Caption=Rápida
+MainForm.lblBetter.Caption=Melhor
+MainForm.lblLanguage.Caption=Seleccione a sua língua:
+MainForm.btnMultiPck.Caption=MultiPacote
+ //About tab
+MainForm.tbsAbout.Caption=Acerca de
+MainForm.lblReleaseCap.Caption=Release:
+MainForm.lblBuildCap.Caption=Build:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblCoDomain.Caption=Programadores
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblAnkanMail.Caption=©OnT®oL
+MainForm.lblBlaineMail.Caption=Blaine
+ //Help tab
+MainForm.tbsHelp.Caption=Ajuda
+MainForm.btnHelp.Caption=Ajuda
+MainForm.btnUpdate.Caption=Actualizar Modulos
+	//Setup Form
+SetupForm.chkScramble.Caption=Usar ficheiro Protegido
+SetupForm.btnScramble.Caption=Proteger
+SetupForm.chkIntegrate.Caption=Integrar no menu de contexto
+SetupForm.lblAdvacedOpts.Caption=UPX Opções Avançadas:
+SetupForm.chkResources.Caption=Comprimir recursos
+SetupForm.chkExports.Caption=Comprimir exportações
+SetupForm.chkRelocs.Caption=Saltar relações
+SetupForm.chkForce.Caption=Forçar compressão
+SetupForm.lblPriority.Caption=Prioridade de Empacotar:
+SetupForm.cmbPriority.0=BAIXA
+SetupForm.cmbPriority.1=NORMAL (prefefinida)
+SetupForm.cmbPriority.2=GRANDE
+SetupForm.cmbPriority.3=TEMPO REAL
+SetupForm.lblIcons.Caption=Ícones:
+SetupForm.cmbIcons.0=Todos mas 1ª pasta
+SetupForm.cmbIcons.1=Todos mas 1º ícone
+SetupForm.cmbIcons.2=Não comprimir
+SetupForm.lblCommands.Caption=UPX Comandos Adicionais:
+SetupForm.chkCommands.Caption=Guardar comandos
+SetupForm.btnOk.Caption=Ok
+SetupForm.chkCompression.Caption=Compressão adicional
+SetupForm.btnCommands.Caption=Comandos
+	//MultiPack Form
+MultiForm.grpSearch.Caption=Procurar caminho:
+MultiForm.lblDir.Caption=N/D
+MultiForm.btnBrowse.Caption=&Browse
+MultiForm.chkRecurse.Caption=Sob pastas recursivamente
+MultiForm.chkAll.Caption=Tudo
+MultiForm.lblCurrent.Caption=Ficheiro actual:
+MultiForm.lblOverall.Caption=Tudo comprimido:
+MultiForm.btnScan.Caption=Procurar
+MultiForm.btnPack.Caption=Empacotar
+MultiForm.btnExit.Caption=Sair
+	//TreeView Form
+TreeViewForm.lblSelect.Caption=Seleccionar pasta para comprimir:
+TreeViewForm.btnOK.Caption=Ok
+TreeViewForm.btnCancel.Caption=Cancelar
+	//Update Form
+UpdateForm.grpProgress.Caption=Estado:
+UpdateForm.grpUpdateInfo.Caption=Informaçao da Actualização:
+UpdateForm.lblReleaseCap.Caption=Release:
+UpdateForm.lblRelease.Caption=N/D
+UpdateForm.lblBuildCap.Caption=Build:
+UpdateForm.lblBuild.Caption=N/D
+UpdateForm.lblDateCap.Caption=Data:
+UpdateForm.lblDate.Caption=N/D
+UpdateForm.lblSizeCap.Caption=Tamanho:
+UpdateForm.lblSize.Caption=N/D
+UpdateForm.lblNews.Caption=Notícias:
+UpdateForm.grpDownload.Caption=Hiperligação de transferência:
+UpdateForm.lblDownload.Caption=N/D
+	//Messages
+msg[001]=Não consegue aceder ao ficheiro. Talvez já esteja aberto
+msg[002]=Os atributos do ficheiro estão definidos para LerApenas. Para continuar tem de ser mudado. Continuar?
+msg[003]=Melhor
+msg[004]=Este ficheiro não parece empacotado. Executar o Scrambler?
+msg[005]= (em 
+msg[006]= segundos)
+msg[007]=descomprimir
+msg[008]=comprimir
+msg[009]=Não há nada para 
+msg[010]=N/D
+msg[011]=Pasta não seleccionada
+msg[012]=...actualização falhada :-(
+msg[013]=Não consegue ligar-se ao servidor de actualização!
+msg[014]=Encontrou versão actualizada do produto!
+msg[015]=A analizar a actualização do ficheiro...
+msg[016]=A obter informação...
+msg[017]=Ficheiro comprimido com sucesso
+msg[018]=Ficheiro descomprimido com sucesso
+msg[019]=Ficheiro comprimido com avisos
+msg[020]=Ficheiro descomprimido com avisos
+msg[021]=Ocorreram erros. Ficheiro não comprimido
+msg[022]=Ocorreram erros. Ficheiro não descomprimido
+msg[023]= & testado
+msg[024]= & testado com avisos
+msg[025]= & teste falhado
+msg[026]=UPX retornou o seguinte erro: 
+msg[027]= & protegido
+msg[028]=...encontrou actualizações
+msg[029]=...não encontrou actualizações
+msg[030]=Ok
+msg[031]=Falhou
+msg[032]=Saltar
+msg[033]=Nome do Nicheiro
+msg[034]=Pasta
+msg[035]=Tamanho
+msg[036]=Empacotado
+msg[037]=Resultado
+

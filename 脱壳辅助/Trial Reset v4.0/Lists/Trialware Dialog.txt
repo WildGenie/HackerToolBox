@@ -1,0 +1,2 @@
+Trialware Dialog 1.x	Reg32Key	HKLM\SOFTWARE\Ten Mile Software\
+Trialware Dialog 1.x	Reg32Key	HKCU\SOFTWARE\Ten Mile Software\

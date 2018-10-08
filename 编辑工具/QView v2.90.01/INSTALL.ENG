@@ -1,0 +1,42 @@
+
+       ßßßßßß\   ßß\    ßß\  ßßßßßßß\   ßßßßßßß\  ßß\      ßß\   ver 2.50.00 Ü
+     ßß\    ßß\ ßß\    ßß\     ßß\     ßß\       ßß\      ßß\     ßßßßßßßßßßßß
+    ßß\    ßß\ ßß\    ßß\     ßß\     ßßßßßßß\  ßß\  ß\  ßß\
+   ßß\ ß\ ßß\  ßß\  ßß\      ßß\     ßß\        ßß\ ßß\ ßß\
+    ßßßßßß\     ßßßß\     ßßßßßßß\  ßßßßßßß\     ßß\ ßß\     AGC Product Ü
+         ß\                                                   ßßßßßßßßßßßß
+
+   Files of QView:
+   1. QView.exe - viewer
+   2. QView.hlp - help file
+   3. QView.ini - user-defined options and colours
+   4. QView.ehl - file extension depended setups
+   5. QView.chr - characters redefinition tables
+   6. QView.fmg - file manager configuration file
+
+ Notes:
+     1. For work with viewer you need only QView.exe, all other files is no-
+thing more than service files that should make your work easier.
+     2. To set up QView.ini, QView.ehl, QView.chr and QView.fmg use Q-Setup.
+     3. There are examples of service files in the INI subdirectory. There're
+different *.ini files to use as basic QView.ini - just copy desired  file  to
+the basic directory, rename it to QView.ini and run Q-Setup.exe to make  some
+changes if required. You can use also the Q-Setup's option  'Import  Configu-
+ration' to bypass the manual copy & rename operations.
+     4. All structures of the service files are described in QView.doc.
+     5. Refer the History.txt for future versions, as some news you will find
+there only. :-(
+
+ Resume:
+     Unpack this archive with the subdirectories to unique directory.
+     Run Q-Setup to proper setup of configuration.
+       At this moment you may need to copy QView.ehl to the basic
+       directory from the 'INI' subdirectory by yourself.
+     After the setup you may copy the following files to any desired directo-
+     ry. We recommend  that directory  you copy the viewer  is in the  search
+     path. The last, but not least, - configure your shell to call  QView.exe
+     as the external viewer.
+       We recommend that you're copy the following files:
+       QView.exe, QView.hlp,
+       QView.ini, QView.ehl, QView.fmg,
+       Q-Setup.exe, Q-Setup.hlp.

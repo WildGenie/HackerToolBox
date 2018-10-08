@@ -1,0 +1,220 @@
+/*
+Script written by CCDebuger
+Script   : PECompact 2.x_No_ImportREC
+版本     : v0.1
+日期     : 15-2-2009
+调试环境 : OllyDbg 1.1, ODBGScript 1.65, WINXP, WIN2000
+调试选项 : 设置 OllyDbg 忽略所有异常选项 
+工具 : OllyDbg, ODBGScript 1.65
+感谢 : Oleh Yuschuk - author of OllyDbg
+       SHaG - author of OllyScript
+       hnhuqiong - author of ODbgScript
+*/
+
+var tmp1
+var tmp2
+var VirtualAlloc
+var section
+var iatloc
+var VirtualFree
+var imgbase
+var signVA
+var modsize
+var dllreloc
+var oep
+var oeprva
+var apiloc
+var unpackname
+
+msgyn "为保证脚本能正确运行，请忽略所有异常。本脚本只能用于 PECompact 2.x 版本加壳的 EXE 或 DLL"
+cmp $RESULT, 0
+je exit
+cmp $VERSION, "1.65"
+jb errorver
+bc
+bphwcall
+dbh
+GMI eip, MODULEBASE     //get imagebase
+mov imgbase, $RESULT
+gmi eip, MODULESIZE
+mov modsize,$RESULT
+mov tmp1, [imgbase+3C]    //获取 PE 签名的偏移
+add tmp1, imgbase         //tmp1=签名 VA
+mov signVA, tmp1
+
+//设 VirtualAlloc 断点，返回到相关位置
+
+gpa "VirtualAlloc", "kernel32.dll"
+mov VirtualAlloc, $RESULT
+bp VirtualAlloc
+
+VirtualAlloc_Next:
+esto
+rtu
+
+/*
+查找命令序列：
+ADD EDI,EDX
+MOV ECX,DWORD PTR DS:[EBX+8]
+MOV EAX,ECX
+*/
+find eip, #03FA8B4B088BC1#
+mov section, $RESULT
+cmp section, 0
+je VirtualAlloc_Next
+bp section
+bc VirtualAlloc
+lc
+eob logsection
+esto
+
+logsection:
+log edi, "区段 RVA = "
+rtr
+
+bc section
+cob
+log "区段 RVA = 001000"   //加上最开始的那个段
+sto
+
+isdll:
+mov tmp1, [signVA + 5E], 2  //DLL 特征值
+cmp tmp1, 1
+je dll
+mov unpackname, "Unpacked.exe"
+jmp findIAT
+
+dll:
+/*
+查找命令序列：
+MOV EAX,DWORD PTR DS:[EDI+4]
+MOV EBX,DWORD PTR DS:[EDI+8]
+CMP EAX,EBX
+JE SHORT 00AB0C12
+*/
+find eip, #8B47??8B5F??3BC374??#
+mov dllreloc, $RESULT
+cmp dllreloc, 0
+je findIAT
+add dllreloc, 0D
+//asm dllreloc, "cmp eax,eax"
+bp dllreloc
+esto
+bc
+log esi, "重定位表 RVA = "
+mov [dllreloc + 2], 0EB, 1
+/*
+查找命令序列：
+JMP SHORT 00AB0BC9
+POP ESI
+POP EDI
+POP EBX
+LEAVE
+RETN 4
+以上命令序列就是处理重定位表函数的返回部分
+*/
+find eip, #EB??5E5F5BC9C2????#
+add $RESULT, 2
+bp $RESULT
+esto
+bc
+mov [dllreloc + 2], 074, 1
+//asm dllreloc, "cmp eax,ebx"
+mov unpackname, "Unpacked.dll"
+
+findIAT:
+/*
+查找命令序列：
+MOV DWORD PTR DS:[ESI],EAX
+MOV DWORD PTR DS:[EDX],EAX
+即处理输入表的部分。
+*/
+find eip, #89068902#
+mov iatloc, $RESULT
+cmp iatloc,0
+je exit
+asm iatloc, "mov eax,[edx]"
+add iatloc, $RESULT
+asm iatloc, "mov dword ptr [esi],eax"
+bp iatloc
+
+nextapi:
+esto
+esto
+mov apiloc, [esi-4]
+cmp apiloc, 800000
+jae nextapi
+
+log apiloc, "IAT 中某函数的 RVA 地址 = "
+div apiloc, 01000
+mul apiloc, 01000
+add apiloc, imgbase
+//根据 IAT 表以 5 个字段组成，最后以 20 个 0 字节组成的特性来搜索
+//这个不大准的。IAT 结束地址只能做参考。可以根据这个参考，用16进制工具打开 dump 后的文件，上下搜搜看 20 个 0 字节，应该在附近，不会太远
+find apiloc, #0000000000000000000000000000000000000000#
+mov apiloc, $RESULT
+add apiloc, 1
+sub apiloc, imgbase
+log apiloc, "IAT 可能的结束 RVA 地址 = "
+bc iatloc
+rtr
+sto
+find eip, #485E5F5BC9C2????#   //在返回地址上设断
+add $RESULT, 5
+bp $RESULT
+esto
+bc
+asm iatloc, "mov dword ptr [edx],eax"
+sub iatloc, $RESULT
+asm iatloc, "mov dword ptr [esi],eax"
+gpa "VirtualFree", "kernel32.dll"
+mov VirtualFree, $RESULT
+BP VirtualFree
+
+nextoep:
+esto
+rtu
+rtr
+sto
+find eip, #5A5E5F595B5DFFE0#
+mov oep, $RESULT
+cmp oep, 0
+je nextoep
+bc VirtualFree
+add oep, 6
+bp oep
+esto
+sti
+bc
+mov oeprva, eip
+sub oeprva, imgbase
+log oeprva, "OEP RVA = "
+cmt eip, "这就是 OEP 了"
+mov [signVA + 3C], 1000    //文件对齐设为1000
+mov [signVA + 54], 1000    //头部大小设为1000
+mov tmp1, 0
+mov tmp1, [signVA + 6], 2 //区段数目
+mov tmp2, signVA
+add tmp2, 0F8         //第一个区段
+
+last:
+cmp tmp1, 0
+je lab1
+mov [tmp2 + 10], [tmp2 + 8]   //V.size 等于 R.size
+mov [tmp2 +14], [tmp2 + 0C]   //虚拟偏移等于 RW 偏移
+mov [tmp2 + 24], 0E00000E0   //设置区段属性
+add tmp2, 28                 //指向一个区段 
+sub tmp1, 1
+jmp last
+
+lab1:
+mov [signVA + 28], oeprva    //填写 OEP
+dm imgbase, modsize, unpackname
+msg "已经到 OEP 了。程序已 dump 后另存为 Unpacked.exe 或 Unpacked.dll。OEP 已修正，现在请参考记录窗口中的数据，重建各个区段及修正 IAT RVA 的起始地址和大小。若是 DLL，请根据记录窗口中的重定位表 RVA 数据，再对照各个区段的 RVA，自己填写。重定位表的大小就是对应区段减掉区段末尾全是0的数据后的大小。重建区段后，必要时需重建资源。"
+
+exit:
+ret
+
+errorver:
+msg "运行此脚本需要 ODbgScript 1.65 或更高的版本，您的版本过低，请更新 ODbgScript 后再试。"
+ret

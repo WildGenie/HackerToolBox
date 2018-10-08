@@ -1,0 +1,102 @@
+Software Licence
+
+VB RezQ - PRODUCT LICENCE INFORMATION
+
+NOTICE TO USERS: PLEASE CAREFULLY READ THE FOLLOWING LEGAL 
+AGREEMENT. USE OF THE SOFTWARE PROVIDED WITH THIS AGREEMENT 
+(THE "SOFTWARE") CONSTITUTES YOUR ACCEPTANCE OF THESE TERMS. 
+IF YOU DO NOT AGREE TO THE TERMS AND CONDITIONS OF THIS 
+AGREEMENT, DO NOT INSTALL AND/OR USE THIS SOFTWARE. USER'S 
+USE OF THIS SOFTWARE IS CONDITIONED UPON COMPLIANCE BY USER 
+WITH THE TERMS OF THIS AGREEMENT.
+
+LICENCE GRANT. ThunderPeek grants you a licence to use one copy of the 
+version of this SOFTWARE on any one hardware product for as many 
+licences as you purchase. "You" means the company, entity or 
+individual whose funds are used to pay the licence fee. "Use" means 
+storing, loading, installing, executing or displaying the SOFTWARE. 
+You may not modify the SOFTWARE or disable any licensing or control 
+features of the SOFTWARE except as an intended part of the SOFTWARE's 
+programming features. You may not share the Software on a network or 
+otherwise use it on more than one computer or computer terminal. This 
+licence is not transferable to any other hardware product or other 
+company, entity, or individual.
+
+OWNERSHIP. The SOFTWARE is owned and copyrighted by ThunderPeek. Your 
+licence confers no title or ownership in the SOFTWARE and should not 
+be construed as a sale of any right in the SOFTWARE.
+
+COPYRIGHT. The SOFTWARE is protected by international copyright law 
+and treaty provisions. You acknowledge that no title to the 
+intellectual property in the SOFTWARE is transferred to you. You 
+further acknowledge that title and full ownership rights to the 
+SOFTWARE will remain the exclusive property of [Company] and you will 
+not acquire any rights to the SOFTWARE except as expressly set forth 
+in this licence. You agree that any copies of the SOFTWARE will 
+contain the same proprietary notices which appear on and in the 
+SOFTWARE.
+
+UNAUTHORIZED USE. You may not use, copy, loan, rent, lease, sell, 
+modify, adapt, translate, decompile, disassemble, otherwise reverse 
+engineer, or transfer the SOFTWARE except as provided in this 
+agreement. Any such unauthorized use shall result in immediate and 
+automatic termination of this licence.
+
+LIMITED WARRANTY. THIS SOFTWARE IS PROVIDED ON AN "AS IS" 
+BASIS. THUNDERPEEK DISCLAIMS ALL WARRANTIES RELATING TO 
+THIS SOFTWARE, WHETHER EXPRESSED OR IMPLIED, INCLUDING BUT 
+NOT LIMITED TO ANY IMPLIED WARRANTIES AS TO NON-INFRINGEMENT 
+OF THIRD PARTY RIGHTS, MERCHANTABILITY OR FITNESS FOR ANY 
+PARTICULAR PURPOSE. NEITHER THUNDERPEEK NOR ANYONE ELSE 
+WHO HAS BEEN INVOLVED IN THE CREATION, PRODUCTION, OR 
+DELIVERY OF THIS SOFTWARE SHALL BE LIABLE TO YOU FOR ANY 
+INDIRECT, CONSEQUENTIAL, INCIDENTAL, SPECIAL, OR PUNITIVE 
+DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE SUCH 
+SOFTWARE, EVEN IF THUNDERPEEK HAS BEEN ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGES OR CLAIMS. THE PERSON USING THE 
+SOFTWARE BEARS ALL RISK AS TO THE QUALITY AND PERFORMANCE OF 
+THE SOFTWARE.
+
+SOME JURISDICTIONS DO NOT ALLOW LIMITATION OR EXCLUSION OF 
+INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATIONS 
+OR EXCLUSION MAY NOT APPLY TO YOU TO THE EXTENT THAT 
+LIABILITY IS BY LAW INCAPABLE OF EXCLUSION OR RESTRICTION.
+
+IN NO EVENT SHALL ANY THEORY OF LIABILITY EXCEED THE LICENCE 
+FEE PAID BY YOU TO THUNDERPEEK.
+
+SEVERABILITY. In the event of invalidity of any provision of this 
+licence, the parties agree that such invalidity shall not affect the 
+validity of the remaining portions of this licence.
+
+GOVERNING LAW. This agreement shall be governed by the laws of England. 
+
+ENTIRE AGREEMENT. This is the entire agreement between you and 
+ThunderPeek which supersedes any prior agreement or understanding, 
+whether written or oral, relating to the subject matter of this 
+licence.
+
+RESERVED RIGHTS. All rights not expressly granted here are reserved 
+to ThunderPeek.
+
+This Agreement shall terminate automatically upon failure by you to 
+comply with its terms.
+
+MAINTENANCE AND UPGRADES. ThunderPeek hereby expressly disclaims any 
+obligation to provide maintenance, patches or fixes to the ThunderPeek 
+Products. ThunderPeek may from time to time prepare and distribute 
+modifications, enhancements, updates and new releases. ThunderPeek 
+shall have no obligation to provide such modifications, enhancements, 
+updates and new releases to the user hereunder, but may make such 
+modifications, enhancements, updates and new releases available to 
+the user on such terms and conditions as ThunderPeek may determine, 
+acting in its sole discretion.
+ 
+ACKNOWLEDGEMENTS. BY USING THE SOFTWARE, YOU ACKNOWLEDGE 
+THAT YOU HAVE READ THIS LICENCE AGREEMENT, UNDERSTAND IT, 
+AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS. YOU ALSO 
+AGREE THAT THE LIMITED WARRANTY IS THE COMPLETE AND 
+EXCLUSIVE STATEMENT OF AGREEMENT BETWEEN THE PARTIES AND 
+SUPERSEDES ALL PROPOSALS OR PRIOR AGREEMENTS, ORAL OR 
+WRITTEN, AND ANY OTHER COMMUNICATIONS BETWEEN THE PARTIES 
+RELATING TO THE SUBJECT MATTER OF THE LIMITED WARRANTY.

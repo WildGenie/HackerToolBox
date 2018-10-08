@@ -1,0 +1,42 @@
+object Form1: TForm1
+  Left = 385
+  Height = 43
+  Top = 287
+  Width = 300
+  HorzScrollBar.Page = 299
+  VertScrollBar.Page = 42
+  ActiveControl = Edit1
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'VMProtect test [Lazarus]'
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Position = poScreenCenter
+  object Label1: TLabel
+    Left = 8
+    Height = 14
+    Top = 15
+    Width = 51
+    Caption = 'Password:'
+    Color = clNone
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 60
+    Height = 21
+    Top = 12
+    Width = 121
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 189
+    Height = 25
+    Top = 10
+    Width = 100
+    BorderSpacing.InnerBorder = 4
+    Caption = 'Check password'
+    Default = True
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+end

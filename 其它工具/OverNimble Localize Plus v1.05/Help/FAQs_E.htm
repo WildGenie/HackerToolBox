@@ -1,0 +1,109 @@
+<html><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb_2312-80">
+<head><title>Overnimble Localize Plus 1.05</title><style>
+p{text-indent:21pt}
+b{cursor:default;font-weight:normal}
+blockquote{font-family:Comic Sans MS,Times New Roman,Arial;font-size:10.5pt}
+.Title{font-family:Comic Sans MS,Arial;font-size:15pt;font-weight:400;color:ffffff;text-align:left;background-color:9999ff;filter:Alpha(Opacity=50);cursor:default}
+pre{font-family:Fixedsys;font-size:16pt;color:333399}
+</style></head>
+
+<body background="wind.jpg" bgcolor="#d4e8ff" style="font-family:Comic Sans MS,Times New Roman,Arial;margin-left:6%;margin-right:6%;font-size:10.5pt">
+
+<br><center><table border=1 width=68%><tr><td align="center">
+	<div style="margin-top:10pt;margin-bottom:8pt;text-align:center;height:30pt;filter:shadow(color:#777777,Direction=150);cursor:default">
+	<FONT face=Comic Sans MS,Arial color=#00ff00 size=6>Overnimble Localize Plus 1.05 FAQs</FONT>
+</div></td></tr></table></center><br><br><br>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> Why some software can not find localizeable strings ?</td></tr></table></center>
+<p></p>
+<p>Some software processed by compress or encrypt, for these software, need to uncompress or decrypt before localize it. The compress software in common used have: UPX, ASPack and so on, UPX can uncompress itself which the version higher than 0.90, ASPack can uncompressed by some tools like Unaspack, Caspr and so on. Or you can use CoCoRes to settle this problem.<font color="#008888"> (CoCoRes only supported the part of resource)</font>. To check the compresser which it used, the tools like FileInfo, GetType will help you.<font color="#008888"> (Recommend contect the author to get the localizeable version.)</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> Why some software only show a virus warning dialog when it runs after localize it ?</td></tr></table></center>
+<p></p>
+<p>Some software have verify code to prevent virus or the change with hostility. For these software, need to remove the code before localize it. Or you can use CoCoRes to settle this problem. <font color="#008888">(CoCoRes only supported the part of resource)</font>. <font color="#008888">(Recommend contect the author to get the localizeable version.)</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> What the "resource" is ?</td></tr></table></center>
+<p></p>
+<p>When defined the format of executable file on Win32, Microsoft added a changeable section to placed the infomation of a software's interface, use this, software can supported multi-language very easy. It is have multi types in resource like "Dialog", "String", "Icon", "Version" and so on. Otherwise, the user define type called "RCData" also be defined. But the "Dialog" type is too simple and can not content most RAD languages, so the "Dialog" type generally only be used by C language. Delphi and C++ Builder does not use the "Dialog" type and replaced to use "RCData" to place their infomation of interface. VB language does not use the resource to place its information of interface, its infomation placed in the ".TEXT" section with all other info and code.
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> What the "PE file" is ? and what the "VA mode" is ?</td></tr></table></center>
+<p></p>
+<p>In Win16<font color="#008888">£¨like Windows 3.x£©</font>, executable file <font color="#008888">(EXE, DLL, OCX and so on)</font> is NE format, In Win32<font color="#008888">£¨include Win95/98/ME/XP/NT/2000/CE£©</font>, executable file is PE <font color="#008888">(Portable Executable)</font> format. It means if a executable file is compiled for Win32 then we knows it is PE file.
+<p>VA means "Virtual Address", it is the pointer of PE file, <font color="#008888">(almost?)</font> all of the strings have its VA, so use VA to search strings can increase veracity and could search other local languages like Chinese, Japanese and so on.<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> How to localize a software wrote by C ?</td></tr></table></center>
+<p></p>
+<p>C language usually use the "resource" of standard, it is can be localize by using the tools like VC, eXeScope, ResHacker and so on. If you using VC, the other tools like "Localize Wizard" will help you easy to upgrade the version of localize. Otherwise the "Visual Localize" also have localize upgrade function. Although LocPlus can localize the "resource" by using "Search ASCII" and "Search UniCode" function, but it is not recommend because it can not actualize replace the length large than origin. When the C software runing after localize, the font face have not looks good sometimes <font color="#008888">(specially for Far East languages like Chinese, Japanese and so on.)</font> , for this, i have the article to explain the way to fix it, please visit <a href="http://llf.126.com">Pointer Studio</a> to explore it <font color="#008888">(Only have Chinese Simplified version.)</font> .
+<p>C software usually have some strings didn't in the "resource" but in other section <font color="#008888">£¨usually is ".data" section£©</font>, for these strings, can use LocPlus to localize by using "Search ASCII" and "Search UniCode" function. But the point need to adverted is, if the option isn't "English and Signs" by searching, it need user to delete all illegal items <font color="#008888">(Better is all of not localize strings ---- recommend use "Same item" function in "Clear redundance" page to get it.)</font> before replace. For this kind of strings, usually have some strings can not be changed, in this case, use "Appoint replace" function in "App test" page will locate these items very fast.
+<p>So, to localize a software wrote by C, the standard step is:
+<p>¡¡¡¡1. Use resource localize tools to localize the standard "resource";
+<p>¡¡¡¡2. Use LocPlus to search and replace ASCII; <font color="#008888">(Usually <font color=red>not needed</font> in WinCE software)</font>
+<p>¡¡¡¡3. Use LocPlus to search and replace UniCode; <font color="#008888">£¨Usually <font color=red>needed</font> in WinCE software)</font>
+<p>¡¡¡¡4. Fix font face problem. <font color="#008888">(optional)</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> How to localize a software wrote by Delphi ?</td></tr></table></center>
+<p></p>
+<p>Although Delphi and C++ Builder used the "resource", but the type is user define, so VC can not be used to localize it, but eXeScope and ResHacker can edit it, otherwise, these two tools can export the form infomation to DFM format, it can be used by Delphi. Otherwise the "Restorator" and "Language Localizator" have localize upgrade function for Delphi software. Now, not have the visualize tools to edit Delphi resource, but the "DFMView" and "FormRead" can edit it by using preview mode. Although user can use LocPlus to localize it by using "Search ASCII" and "Search UniCode", but it is not recommend because it can not actualize replace the length large than origin. When the Delphi software runing after localize, the font face have not looks good sometimes <font color="#008888">(specially for Far East languages like Chinese, Japanese and so on.)</font> , for this, i have the article to explain the way to fix it, please visit <a href="http://llf.126.com">Pointer Studio</a> to explore it <font color="#008888">(Only have Chinese Simplified version.)</font> .
+<p>Also have a lot of Delphi software use ".lng" file created by a tools to supported multi-language, the tools have a components to edit this format file, in this case, the best choise is use this tools to dispose it.
+<p>Otherwise, Delphi software usually have some strings didn't in the "resource", in its format have a counter of string, if change it by another length, the interface will have illegitimacy character, for these strings, recommend use LocPlus to search and replace it by using "Search Delphi" function. <font color="#008888">(this function auto change the counter)</font>. But, also have some non-resource strings of Delphi is not this format, it is ASCIIZ<font color="#008888">£¨ASCIIZ means ASCII added a "00" [Zero])</font> strings, so you might need to process an ASCII search and replace to fully localize a Delphi software. Sameness, it need user to delete all illegal items before replace too.
+<p>So, to localize a software wrote by Delphi, the standard step is:
+<p>¡¡¡¡1. Use resource localize tools to localize the "RCData" in "resource";
+<p>¡¡¡¡2. Use LocPlus to search and replace Delphi strings;
+<p>¡¡¡¡3. Use LocPlus to search and replace ASCII;
+<p>¡¡¡¡4. Fix font face problem. <font color="#008888">(optional)</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> How to localize a software wrote by VB ?</td></tr></table></center>
+<p></p>
+<p>VB software's <font color="#008888">(Only means VB5/6)</font> infomation of form did not in the "resource", but its format is very like Delphi's, it can be localized by using my other tools called "VB form localize tool" <font color="#008888">(Only have Chinese Simplified version.)</font> , this tool can actualize replace the length large than origin, but need user to ensure the strings length's summation is same with origin. Although i say it is not safety, but it is not danger than using search and replace ASCII, because not have other tools better than it, so it is a good choise now. But, if the origin software using ActiveX control <font color="#008888">(Most software using ActiveX control, but not include LocPlus :)</font>, usually need to process a UniCode search and replace. When the VB software runing after localize, the font face have not looks good usually <font color="#008888">(specially for Far East languages like Chinese, Japanese and so on.)</font> , for this, i have the article to explain the way to fix it, please visit <a href="http://llf.126.com">Pointer Studio</a> to explore it <font color="#008888">(Only have Chinese Simplified version.)</font> .
+<p>But, if the software using "Form 2.0 designer", "VB form localize tool" can not find the form by using Form 2.0, it can only localize by use search and replace ASCII and UniCode. And its way of font fix not in my article, the way have be find by WWP, to visit <a href="http://llftalk.126.com">Pointer Studio's forum</a> to search it.
+<p>Otherwise, VB software usually have some strings didn't in the forms <font color="#008888">(equal "String" type in standard resource)</font>, in its format have a counter of string, if change it by another length, the interface will have illegitimacy character, for these strings, recommend use LocPlus to search and replace it by using "Search VB" function. <font color="#008888">(this function auto change the counter)</font>. Sameness, it need user to delete all illegal items before replace too.
+<p>So, to localize a software wrote by VB, the standard step is:
+<p>¡¡¡¡1. Use "VB form localize tool" to localize the forms;
+<p>¡¡¡¡2. Use LocPlus to search and replace "VB Strings";
+<p>¡¡¡¡3. Use LocPlus to search and replace UniCode; <font color="#008888">(when the software using ActiveX controls)</font>
+<p>¡¡¡¡4. Use LocPlus to search and replace ASCII; <font color="#008888">(only by the software using "Form 2.0 designer")</font>
+<p>¡¡¡¡5. Fix font face problem. <font color="#008888">(optional)</font>
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> How to convert a software from ChineseSimplified(GBK) to ChineseTraditional(BIG5) or from ChineseTraditional(BIG5) to ChineseSimplified(GBK) ?</td></tr></table></center>
+<p></p>
+<p>For resource edit tools, it is not difficult to search and replace other language's strings, it is the same way like common localize, so it can be processing localize by using the standard step like upwards for C, Delphi and VB software. But there is a problem in searching Chinese by non-resource search mode. In LocPlus, for Delphi and VB, its special search function can search Chinese <font color="#008888">(or other language like Japanese)</font> by using the option "Unlimited", "VB form localize tool" also have "Unlimited" option. For C software <font color="#008888">(using ASCII and UniCode search mode)</font>, use the "VA UnCtrlSign", "VA Unlimited" can search Chinese ASCII, the veracity of "VA UnCtrlSign" is better than "VA Unlimited"; use the "VA Chinese(GBK)", "VA Chinese(BIG5)", "VA FullChinese", "VA UnKeepSec", "VA Unlimited" can search Chinese UniCode.
+<p>For using upwards way, after delete the illegal items in "reference file", split the file by using "Trans term mode", and than using ISN <font color="#008888">(internal statement number)</font> convertion tools to convert ".2" file <font color="#008888">(or add a ChineseSimplified and ChineseTraditional words exchange function.)</font>, join them by using "Trans term mode", after that, it can be replaced.
+<p>Otherwise, have another point is, for the "reference file" by using UniCode <font color="#008888">(include VB string)</font> mode, if need convert, it only can be process ChineseSimplified and ChineseTraditional convert, do not use ISN convert <font color="#008888">(GBK,BIG5)</font>, for another parlance, it means convert the strings by keeping ISN .
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> How to localize a software supported multi-language by using text format ?</td></tr></table></center>
+<p></p>
+<p>Now, it's more than before the software supported multi-language by using text format <font color="#008888">(example LocPlus :)</font>, for these software, localize can just using text editor, but if you only using text editor, the software upgrade will need to input the strings again, by using LocPlus, it's too easy to upgrade the localize.
+<p>For the INI format <font color="#008888">(comparted by "=")</font> used by most software, we recommend to use the special search and replace function provided by LocPlus. For other text format, using the "Normal" mode to search and replace.
+<p>But most of these software did not have the way to change font and font-size, it's still using 8.25 point to view strings, so the font face have not looks good sometimes <font color="#008888">(specially for Far East languages like Chinese, Japanese and so on.)</font> , for this, it can be fixed by using the way in my article, but recommend contect the author to get the font-changeable version.
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> How to use "Version upgrade" function ?</td></tr></table></center>
+<p></p>
+<p>To use "Version upgrade" function, you need turn to "Version upgrade" page first, select new "reference file" into "ref file name" area and select old "reference file" or "dictionary file" into "Dict file name" area, and then the upgrade function will could be processing. The "dictionary file" could be get by using "Split Ref file" of optioned by "Offset mode".
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> Could it can be convert the languages between two diffent local, exapmle converting a Japanese software into Chinese ?</td></tr></table></center>
+<p></p>
+<p>The way to converting a Japanese software into Chinese is very like convert between GBK and BIG5, but the diffents is GBK and BIG5 using the same way to coding, but the Shift-JIS using the diffent way <font color="#008888">(mainly problem is the kana )</font>, so you can't searching by using Chinese windows, and can not replaceing by using Japanese windows. Just for this, might you need to use Windows 2000 multi-language version, turn it to Japanese mode to search, and then trun it to Chinese mode to edit and replace. <font color="#008888">(Also you can using the soft like "Visual PC" to install a Japanese windows and install a LocPlus into it to search. Using this way, it can fast switch between Chinese and Japanese but not need restart your windows.)</font>
+<p>Otherwise, the "reference file" format is ASCII, so it will be saved as Shift-JIS format by Japanese mode, and it will be regarded as GBK and view as illegitimacy character, for this, can switch languages by using the editor like EmEditor; Or split the "reference file" optioned by "Trans term mode" and using Win2K's NotePad to save the ".2" file as UniCode format in Japanese mode, And using Notepad save it as ASCII format in Chinese mode, join them after that, and then the even lines will view in gear <font color="#008888">(odd lines needs keep the original state.)</font> .
+<p><br></p>
+
+<center><table border=0 width="100%" height="32pt"><tr><td class="Title"><font size=4 color=yellow>&gt;</font> How to use the other functions of LocPlus ?</td></tr></table></center>
+<p></p>
+<p>LocPlus hvae another functions of assistanted. The functions almost are self-help mode£¬just like "building block", it can be used by using diffent combination. The same point of the functions is the same "reference file" format and "dictionary file" format. User can comprehend its purpose <font color="#008888">(even i haven't think about :)</font> based on it. For example, with my ask, Mr. Johnson Wu changes the ChineseTraditional words in Readme and INI of version 1.01 and mail it to me, but i hope to know which changes be done by Mr. Wu, so the way i taken is:
+<p>1. Using "INI" option to search original INI file, using "Trans term mode" option to split it;
+<p>2. Using "INI" option to search the INI file changed by Mr. Wu, using "Trans term mode" option to split it;
+<p>3. Join the original ".1" file and ".2" changed by Mr. Wu by using "Trans term mode" option;
+<p>4. Using "Clear redundance" function optioned by "Same item" to get what i want. :)
+<p><br></p>
+
+<p><center><font style="font-family:Arial;font-size:9pt">CopyRight &copy OverNimble Inc. 2001</font></center></p>
+</body>
+</html>

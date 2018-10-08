@@ -1,0 +1,201 @@
+<!--
+    API Monitor Definitions
+    (c) 2010-2011, Rohitab Batra <rohitab@rohitab.com>
+    http://www.rohitab.com/apimonitor/
+-->
+<ApiMonitor>
+    <Include Filename="Headers\windows.h.xml" />
+    <Headers>
+        
+        <!-- Variables -->
+        <Variable Name="RPC_TSTR"                           Type="Alias"    Base="LPTSTR" />
+        <Variable Name="RPC_TSTR*"                          Type="Pointer"  Base="RPC_TSTR" />
+        <Variable Name="RPC_BINDING_HANDLE"                 Type="Alias"    Base="void*" />
+        <Variable Name="RPC_BINDING_HANDLE*"                Type="Pointer"  Base="RPC_BINDING_HANDLE" />
+        <Variable Name="RPC_IF_HANDLE"                      Type="Alias"    Base="void*" />
+        <Variable Name="RPC_NS_HANDLE"                      Type="Alias"    Base="void*" />
+        <Variable Name="RPC_NS_HANDLE*"                     Type="Pointer"  Base="RPC_NS_HANDLE" />
+        <Variable Name="RPC_AUTHZ_HANDLE"                   Type="Alias"    Base="void*" />
+        <Variable Name="RPC_AUTHZ_HANDLE*"                  Type="Pointer"  Base="RPC_AUTHZ_HANDLE" />
+        <Variable Name="RPC_AUTH_IDENTITY_HANDLE"           Type="Alias"    Base="void*" />
+        <Variable Name="RPC_AUTH_IDENTITY_HANDLE*"          Type="Pointer"  Base="RPC_AUTH_IDENTITY_HANDLE" />
+        <Variable Name="RPC_EP_INQ_HANDLE"                  Type="Alias"    Base="void*" />
+        <Variable Name="RPC_EP_INQ_HANDLE*"                 Type="Pointer"  Base="RPC_EP_INQ_HANDLE" />
+        <Variable Name="RPC_CLIENT_ALLOC*"                  Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_CLIENT_ALLOC**"                 Type="Pointer"  Base="RPC_CLIENT_ALLOC*" />
+        <Variable Name="RPC_CLIENT_FREE*"                   Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_CLIENT_FREE**"                  Type="Pointer"  Base="RPC_CLIENT_FREE*" />
+        <Variable Name="RPC_MGMT_AUTHORIZATION_FN"          Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_OBJECT_INQ_FN"                  Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_MGR_EPV*"                       Type="Alias"    Base="void*" />
+        <Variable Name="RPC_MGR_EPV**"                      Type="Pointer"  Base="RPC_MGR_EPV*" />
+        <Variable Name="RPC_AUTH_KEY_RETRIEVAL_FN"          Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_IF_CALLBACK_FN*"                Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_SS_THREAD_HANDLE"               Type="Alias"    Base="void*" />
+
+        <!-- TODO: Structures -->
+        <Variable Name="RPC_BINDING_VECTOR*"                Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_BINDING_VECTOR**"               Type="Pointer"  Base="RPC_BINDING_VECTOR*" />
+        <Variable Name="RPC_IF_ID_VECTOR*"                  Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_IF_ID_VECTOR**"                 Type="Pointer"  Base="RPC_IF_ID_VECTOR*" />
+        <Variable Name="PRPC_ASYNC_STATE"                   Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_BINDING_HANDLE_TEMPLATE_V1*"    Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_BINDING_HANDLE_SECURITY_V1*"    Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_BINDING_HANDLE_OPTIONS_V1*"     Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_EXTENDED_ERROR_INFO*"           Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_STATS_VECTOR*"                  Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_STATS_VECTOR**"                 Type="Pointer"  Base="RPC_STATS_VECTOR*" />
+        <Variable Name="RPC_PROTSEQ_VECTOR*"                Type="Alias"    Base="LPVOID" />
+        <Variable Name="RPC_PROTSEQ_VECTOR**"               Type="Pointer"  Base="RPC_PROTSEQ_VECTOR*" />
+        <Variable Name="RPC_ASYNC_NOTIFICATION_INFO*"       Type="Alias"    Base="LPVOID" />
+        <Variable Name="UUID_VECTOR*"                       Type="Alias"    Base="LPVOID" />
+
+        <!-- RPC_IF_ID -->
+        <Variable Name="RPC_IF_ID" Type="Struct">
+            <Field Type="UUID" 	            Name="Uuid" />
+            <Field Type="unsigned short" 	Name="VersMajor" />
+            <Field Type="unsigned short" 	Name="VersMinor" />
+        </Variable>
+        <Variable Name="RPC_IF_ID*" Type="Pointer" Base="RPC_IF_ID" />
+
+        <!-- RPC_VERSION -->
+        <Variable Name="RPC_VERSION" Type="Struct">
+            <Field Type="unsigned short" 	Name="MajorVersion" />
+            <Field Type="unsigned short" 	Name="MinorVersion" />
+        </Variable>
+
+        <!-- RPC_SYNTAX_IDENTIFIER -->
+        <Variable Name="RPC_SYNTAX_IDENTIFIER" Type="Struct">
+            <Field Type="GUID" 	        Name="SyntaxGUID" />
+            <Field Type="RPC_VERSION" 	Name="SyntaxVersion" />
+        </Variable>
+        <Variable Name="PRPC_SYNTAX_IDENTIFIER" Type="Pointer" Base="RPC_SYNTAX_IDENTIFIER" />
+
+        <!-- RPC_SECURITY_QOS -->
+        <Variable Name="RPC_SECURITY_QOS" Type="Struct">
+            <Field Type="unsigned long" 	Name="Version" />
+            <Field Type="unsigned long" 	Name="Capabilities" />
+            <Field Type="unsigned long" 	Name="IdentityTracking" />
+            <Field Type="unsigned long" 	Name="ImpersonationType" />
+        </Variable>
+        <Variable Name="RPC_SECURITY_QOS*" Type="Pointer" Base="RPC_SECURITY_QOS" />
+
+        <!-- RPC_POLICY -->
+        <Variable Name="RPC_POLICY" Type="Struct">
+            <Field Type="unsigned int" 	    Name="Length"  />
+            <Field Type="unsigned long"     Name="EndpointFlags"  />
+            <Field Type="unsigned long"     Name="NICFlags"  />
+        </Variable>
+        <Variable Name="PRPC_POLICY" Type="Pointer" Base="RPC_POLICY" />
+
+        <!-- RPC_ERROR_ENUM_HANDLE -->
+        <Variable Name="RPC_ERROR_ENUM_HANDLE" Type="Struct">
+            <Field Type="ULONG" 	Name="Signature" />
+            <Field Type="void*" 	Name="CurrentPos" />
+            <Field Type="void*" 	Name="Head" />
+        </Variable>
+        <Variable Name="RPC_ERROR_ENUM_HANDLE*" Type="Pointer" Base="RPC_ERROR_ENUM_HANDLE" />
+
+        <!-- RPC_NOTIFICATIONS -->
+        <Variable Name="RPC_NOTIFICATIONS" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="RpcNotificationCallNone"             Value="0" />
+                <Set Name="RpcNotificationClientDisconnect"     Value="1" />
+                <Set Name="RpcNotificationCallCancel"           Value="2" />
+            </Enum>
+        </Variable>
+
+        <!-- RPC_NOTIFICATION_TYPES -->
+        <Variable Name="RPC_NOTIFICATION_TYPES" Type="Alias" Base="UINT">
+            <Enum>
+                <Set Name="RpcNotificationTypeNone"         Value="0" />
+                <Set Name="RpcNotificationTypeEvent"        Value="1" />
+                <Set Name="RpcNotificationTypeApc"          Value="2" />
+                <Set Name="RpcNotificationTypeIoc"          Value="3" />
+                <Set Name="RpcNotificationTypeHwnd"         Value="4" />
+                <Set Name="RpcNotificationTypeCallback"     Value="5" />
+            </Enum>
+        </Variable>
+
+        <!-- [AuthenticationLevel] -->
+        <Variable Name="[AuthenticationLevel]" Type="Alias" Base="unsigned long">
+            <Display Name="unsigned long" />
+            <Enum>
+                <Set Name="RPC_C_AUTHN_LEVEL_DEFAULT"       Value="0" />
+                <Set Name="RPC_C_AUTHN_LEVEL_NONE"          Value="1" />
+                <Set Name="RPC_C_AUTHN_LEVEL_CONNECT"       Value="2" />
+                <Set Name="RPC_C_AUTHN_LEVEL_CALL"          Value="3" />
+                <Set Name="RPC_C_AUTHN_LEVEL_PKT"           Value="4" />
+                <Set Name="RPC_C_AUTHN_LEVEL_PKT_INTEGRITY" Value="5" />
+                <Set Name="RPC_C_AUTHN_LEVEL_PKT_PRIVACY"   Value="6" />
+            </Enum>
+        </Variable>
+        <Variable Name="[AuthenticationLevel*]" Type="Pointer" Base="[AuthenticationLevel]">
+            <Display Name="unsigned long*" />
+        </Variable>
+
+        <Variable Name="[AuthenticationLevel-unsigned-int]" Type="Alias" Base="[AuthenticationLevel]">
+            <Display Name="unsigned int" />
+        </Variable>
+        <Variable Name="[AuthenticationLevel-unsigned-int*]" Type="Pointer" Base="[AuthenticationLevel-unsigned-int]">
+            <Display Name="unsigned int*" />
+        </Variable>
+
+        <!-- [AuthorizationService] -->
+        <Variable Name="[AuthorizationService]" Type="Alias" Base="unsigned long">
+            <Display Name="unsigned long" />
+            <Enum>
+                <Set Name="RPC_C_AUTHZ_NONE"        Value="0" />
+                <Set Name="RPC_C_AUTHZ_NAME"        Value="1" />
+                <Set Name="RPC_C_AUTHZ_DCE"         Value="2" />
+                <Set Name="RPC_C_AUTHZ_DEFAULT"     Value="0xffffffff" />
+            </Enum>
+        </Variable>
+        <Variable Name="[AuthorizationService*]" Type="Pointer" Base="[AuthorizationService]">
+            <Display Name="unsigned long*" />
+        </Variable>
+
+        <!-- [AuthenticationService] -->
+        <Variable Name="[AuthenticationService]" Type="Alias" Base="unsigned long">
+            <Display Name="unsigned long" />
+            <Enum>
+                <Set Name="RPC_C_AUTHN_NONE"            Value="0" />
+                <Set Name="RPC_C_AUTHN_DCE_PRIVATE"     Value="1" />
+                <Set Name="RPC_C_AUTHN_DCE_PUBLIC"      Value="2" />
+                <Set Name="RPC_C_AUTHN_DEC_PUBLIC"      Value="4" />
+                <Set Name="RPC_C_AUTHN_GSS_NEGOTIATE"   Value="9" />
+                <Set Name="RPC_C_AUTHN_WINNT"           Value="10" />
+                <Set Name="RPC_C_AUTHN_GSS_SCHANNEL"    Value="14" />
+                <Set Name="RPC_C_AUTHN_GSS_KERBEROS"    Value="16" />
+                <Set Name="RPC_C_AUTHN_DPA"             Value="17" />
+                <Set Name="RPC_C_AUTHN_MSN"             Value="18" />
+                <Set Name="RPC_C_AUTHN_DIGEST"          Value="21" />
+                <Set Name="RPC_C_AUTHN_MQ"              Value="100" />
+                <Set Name="RPC_C_AUTHN_DEFAULT"         Value="0xFFFFFFFF" />
+            </Enum>
+        </Variable>
+        <Variable Name="[AuthenticationService*]" Type="Pointer" Base="[AuthenticationService]">
+            <Display Name="unsigned long*" />
+        </Variable>
+
+        <!-- RPC_STATUS -->
+        <Variable Name="RPC_STATUS" Type="Alias" Base="long">
+            <Enum>
+                <Set Name="RPC_S_OK"                        Value="0" />
+                <Set Name="RPC_S_INVALID_ARG"               Value="87" />
+                <Set Name="RPC_S_OUT_OF_MEMORY"             Value="14" />
+                <Set Name="RPC_S_OUT_OF_THREADS"            Value="164" />
+                <Set Name="RPC_S_BUFFER_TOO_SMALL"          Value="122" />
+                <Set Name="RPC_S_INVALID_SECURITY_DESC"     Value="1338" />
+                <Set Name="RPC_S_ACCESS_DENIED"             Value="5" />
+                <Set Name="RPC_S_SERVER_OUT_OF_MEMORY"      Value="1130" />
+                <Set Name="RPC_S_ASYNC_CALL_PENDING"        Value="997" />
+                <Set Name="RPC_S_UNKNOWN_PRINCIPAL"         Value="1332" />
+                <Set Name="RPC_S_TIMEOUT"                   Value="1460" />
+                <Set Name="RPC_S_NOT_ENOUGH_QUOTA"          Value="1816" />
+            </Enum>
+        </Variable>
+        <Variable Name="RPC_STATUS*" Type="Pointer" Base="RPC_STATUS" />
+
+    </Headers>
+</ApiMonitor>

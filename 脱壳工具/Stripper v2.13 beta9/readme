@@ -1,0 +1,36 @@
+stripper 2.13 - unpacker for aspr.
+
+* what is new in 2.13
+   - fixed: error 85
+   - experimental: gathering all scrembled code to new section .poly
+   - experimental: restoring VM instructions (jmp, jxx, cmp)
+   - experimental: patching one type of CheckEnvelope
+
+* what is new in 2.11
+   - aspr 1.3 - 2.0 unpacking (to unpack aspr < 1.3 and aspack use stripper 2.07f)
+   - registry cleaner feature
+   - preserving extra data feature
+   - IceExt support
+   - HT support
+
+* features:
+
+   - unpacking asprotected programs (exe, dll, ocx);
+   - rebuilding resources, relocations and import;
+   - doing some researching of packed program;
+
+* requirements:
+
+   - stripper works only under 2k and XP, also you must have 
+     administrator's rights;
+   - there will be no win9x version;
+   - SoftIce with "i3here on" for using reversing feature;	
+ 
+* greetings to:
+
+   - Sten, infern0, FEUERRADER, sanniassin, Alexy, Chris, MARcoDEN, egor2fsys, 
+     Alessandro, Kop, Zilot, -= ALEX =-, mac and _all_ other hackers 
+     around the world working for the same reason.
+
+http://syd.nightmail.ru/stripper.dhtml
+mailto:syd@gala.net

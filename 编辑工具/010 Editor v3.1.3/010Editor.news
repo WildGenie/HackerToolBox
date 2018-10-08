@@ -1,0 +1,9 @@
+<010EditorNews ver="1.0" revision="9">
+    <item link="010editor/latest_version.html" minVersion="3.0.0" maxVersion="3.1.2">010 Editor v3.1.3 Released - Click here for details</item>
+    <item link="-1400" minVersion="3.1" maxVersion="3.1">What's new in version 3.1?</item>
+    <item link="-1400" minVersion="3.0" maxVersion="3.0">What's new in version 3.0?</item>
+    <item link="-1500" minVersion="3" maxVersion="3">Important Notes for Users of 010 Editor v2.1</item>
+    <item link="-tutorial">View a short tutorial on using Binary Templates</item>
+    <item link="-1000">Getting started with 010 Editor</item>
+    <item link="010editor/templates/">Visit the online template repository</item>
+</010EditorNews>

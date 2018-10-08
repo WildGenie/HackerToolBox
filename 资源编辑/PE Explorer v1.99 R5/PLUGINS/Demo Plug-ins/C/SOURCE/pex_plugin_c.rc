@@ -1,0 +1,37 @@
+#include <windows.h>
+#include <winver.h>        // required for ver info
+#include "globals.h"
+
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1,00,0,0
+PRODUCTVERSION 1,00,0,0
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+FILEFLAGS VS_FF_DEBUG
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      SZCOMPANYNAME
+            VALUE "FileDescription",  SZDESCRIPTION
+            VALUE "FileVersion",      SZVERSION
+            VALUE "InternalName",     SZPLUGINNAME
+            VALUE "LegalCopyright",   SZCOPYRIGHTINFO
+            VALUE "OriginalFilename", SZEXENAME
+            VALUE "ProductName",      SZPLUGINNAME
+            VALUE "ProductVersion",   SZVERSION
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

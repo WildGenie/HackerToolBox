@@ -1,0 +1,24 @@
+#define VPE 1
+#define UMemory 2
+#define ExitP 3
+#define CP 4
+#define EEnd 5
+#define Interrupt 6
+#define szDll 7
+#define LibA 8
+#define libVersion 9
+
+STRINGTABLE DISCARDABLE
+BEGIN
+  ErrorFile "错误:  文件未找到!"
+  VPE "错误:  无效的PE文件!"
+  UMemory "采用ReadPWholeMemory方式!"
+  ExitP "程序退出"
+  CP "Start......"
+  EEnd "......End"
+  Interrupt "错误:  请输入中断地址!"
+  szDll "Kernel32.dll"
+  LibA "LoadLibraryA"
+  libVersion "GetVersion"
+END
+

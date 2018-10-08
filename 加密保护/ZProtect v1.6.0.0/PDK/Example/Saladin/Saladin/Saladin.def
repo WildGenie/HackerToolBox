@@ -1,0 +1,4 @@
+EXPORTS
+	ZPCP_GetPluginInfo
+	ZPCP_Init
+	ZPCP_Exit

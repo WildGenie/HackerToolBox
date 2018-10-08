@@ -1,0 +1,19 @@
+Armadillo Nanomites Fixer v1.2
+
++fix some problem
++minor code changed
++added OtherCompiler option for compatibility with other compiler
++OEP of MSVC dumped[only] target can be read automatically
+
+***********************
+Armadillo Nanomites Fixer v1.1 (public release)
++ minor code change
++ improved searching for Nanomites
++ add more search pattern for removing potential 0xcc bytes
++ fix a problem on searching for Nanomites(causes to mark it as NotNanomites)
+***********************
+Armadillo Nanomites Fixer v1.0 (private release)
+
++ first release
+
+

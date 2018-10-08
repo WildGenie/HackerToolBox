@@ -1,0 +1,4 @@
+asm 
+  call ASP_DecryptProc
+  DB $EB,04,$EB,05,$89,$01 
+end;

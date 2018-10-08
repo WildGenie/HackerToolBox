@@ -1,0 +1,165 @@
+; Russian translation by ION T, 2001
+; Updated by Andrey Aleksanyants 2005
+; *************************************
+
+; Main Form
+; Top frame
+MainForm.lblCompressor.Caption=Win32 EXE, DLL упаковщик
+MainForm.lblInsCap.Caption=UPX Inside:
+MainForm.lblOutCap.Caption=UPX Outside:
+
+; Open File tab
+MainForm.tbsOpen.Caption=Открыть файл
+MainForm.btnOpen.Caption=Открыть
+MainForm.lblHistory.Caption=Журнал
+MainForm.pnlFileInfo.Caption=Информация о файле
+MainForm.lblFNameCap.Caption=Имя файла
+MainForm.lblFName.Caption=Н/Д
+MainForm.lblFSizeCap.Caption=Размер исходного файла
+MainForm.lblFSize.Caption=Н/Д
+MainForm.lblCSizeCap.Caption=Размер сжатого файла
+MainForm.lblCSize.Caption=Н/Д
+MainForm.lblRatioCap.Caption=Степень сжатия
+MainForm.lblRatio.Caption=Н/Д
+MainForm.mnuHistory.Caption=Очистить журнал
+
+; Compress tab
+MainForm.tbsCompress.Caption=Сжать
+MainForm.btnGo.Caption=Поехали!
+MainForm.chkDecomp.Caption=Расжать
+MainForm.btnRun.Caption=Запустить
+MainForm.lblProgress.Caption=Прогресс сжатия
+MainForm.lblProgressSize.Caption=Размер сжатого файла
+
+; Options tab
+MainForm.tbsOptions.Caption=Настройки
+MainForm.chkBackup.Caption=Создавать резервную копию
+MainForm.chkAutoCompress.Caption=Сжимать сразу после загрузки
+MainForm.chkExitDone.Caption=Выйти после сжатия
+MainForm.chkTest.Caption=Тестировать сжатый файл
+MainForm.btnAdvanced.Caption=Дополнительно
+MainForm.lblCompressLevel.Caption=Уровень сжатия:
+MainForm.lblFaster.Caption=Быстрее
+MainForm.lblBetter.Caption=Лучше
+MainForm.lblLanguage.Caption=Выберите язык:
+MainForm.btnMultiPck.Caption=МультиПак
+
+; About tab
+MainForm.tbsAbout.Caption=О программе
+MainForm.lblReleaseCap.Caption=Версия:
+MainForm.lblBuildCap.Caption=Билд:
+MainForm.lblWWW.Caption=WWW:
+MainForm.lblEMail.Caption=E-Mail:
+MainForm.lblIONT.Caption=upxshell.sf.net
+MainForm.lblUPX.Caption=upx.sf.net
+MainForm.lblCoDomain.Caption=Coders Domain
+MainForm.lblIONTmail.Caption=efsoft@ukrpost.net
+MainForm.lblBlackDexMail.Caption=Mail to BlackDex
+MainForm.lblBlaineMail.Caption=Mail to Blaine
+
+; Help tab
+MainForm.tbsHelp.Caption=Справка
+MainForm.btnHelp.Caption=Справка
+
+;Update Tab --NEW NEW NEW--
+MainForm.tbsUpdate.Caption=Обновить
+MainForm.btnChkUpdate.Caption=Проверить наличие обновлений
+MainForm.lblOnlineVersionCap.Caption=Онлайн-версия:
+MainForm.lblOnlineVersion.Caption=Н/Д
+MainForm.lblReleaseDateCap.Caption=Дата выпуска:
+MainForm.lblReleaseDate.Caption=Н/Д
+MainForm.lblDownloadCap.Caption=Сайт для закачки:
+MainForm.lblDownload.Caption=Н/Д
+
+;Setup Form
+SetupForm.chkScramble.Caption=Шифровать файлы
+SetupForm.btnScramble.Caption=Зашифровать
+SetupForm.chkIntegrate.Caption=Интегрироваться в контекстное меню
+SetupForm.lblAdvacedOpts.Caption=Дополнительные настройки UPX:
+SetupForm.chkResources.Caption=Сжимать ресурсы
+SetupForm.chkExports.Caption=Сжимать экспорты
+SetupForm.chkRelocs.Caption=Удалять релокации
+SetupForm.chkForce.Caption=Насильное сжатие
+SetupForm.lblPriority.Caption=Приоритет:
+SetupForm.cmbPriority.0=Низкий
+SetupForm.cmbPriority.1=Нормальный (по ум.)
+SetupForm.cmbPriority.2=Высокий
+SetupForm.cmbPriority.3=Реальный
+SetupForm.lblIcons.Caption=Значки:
+SetupForm.cmbIcons.0=Все кроме 1-й папки
+SetupForm.cmbIcons.1=Все кроме 1-го значка
+SetupForm.cmbIcons.2=Не сжимать
+SetupForm.lblCommands.Caption=Дополнительные команды UPX:
+SetupForm.chkCommands.Caption=Сохранять команды
+SetupForm.btnOk.Caption=ОК
+SetupForm.chkCompression.Caption=Дополнительное сжатие
+SetupForm.btnCommands.Caption=Комманды
+;--NEW NEW NEW--
+SetupForm.lblUPX2Only.Caption=Только для UPX v1.9x:
+SetupForm.chkBrute.Caption=Brute
+SetupForm.chkMethods.Caption=Все методы
+SetupForm.chkFilters.Caption=Все фильтры
+
+;MultiPack Form
+MultiForm.Caption=МультиПак
+MultiForm.grpSearch.Caption=Папка для поиска:
+MultiForm.lblDir.Caption=Н/Д
+MultiForm.btnBrowse.Caption=Поиск
+MultiForm.chkRecurse.Caption=Рекурсировать подпапки
+MultiForm.chkAll.Caption=Все
+MultiForm.lblCurrent.Caption=Текущий файл:
+MultiForm.lblOverall.Caption=Выполнено:
+MultiForm.lblTimeCap.Caption=Прошло:
+MultiForm.btnScan.Caption=Сканировать
+MultiForm.btnPack.Caption=Сжать
+MultiForm.btnExit.Caption=Выход
+
+; TreeViewForm
+TreeViewForm.lblSelect.Caption=Выберите папку для сжатия:
+TreeViewForm.btnOK.Caption=ОК
+TreeViewForm.btnCancel.Caption=Отмена
+
+; Messages
+msg[001]=Невозможно открыть файл... Возможно он уже открыт другим процессом.
+msg[002]=У файла установлен атрибут "Только чтение"! Его необходимо снять! Продолжить?
+msg[003]=Лучший
+msg[004]=Файл не выглядит сжатым! Всё равно шифровать?
+msg[005]= (за
+msg[006]= секунд)
+msg[007]=расжимать
+msg[008]=сжимать
+msg[009]=Нечего
+msg[010]=Н/Д
+msg[011]=Не выбрана папка для сжатия.
+msg[012]=...ошибка при обновлении :-(
+msg[013]=Не удалось соединиться с сервером!
+msg[014]=Обнаружена обновленная версия продукта!
+msg[015]=Проверка файла обновления...
+msg[016]=Получение информации об обновлении...
+msg[017]=Файл успешно сжат
+msg[018]=Файл успешно расжат
+msg[019]=Файл сжат с предупреждениями
+msg[020]=Файл расжат с предупреждениями
+msg[021]=Ошибки при сжатии файла
+msg[022]=Ошибки при расжатии файла
+msg[023]= и протестирован
+msg[024]= и протестирован с предупреждениями
+msg[025]= , ошибка тестирования
+msg[026]=UPX возвратил ошибку:\n
+msg[027]= и зашифрован
+msg[028]=...обновление найдено
+msg[029]=...обновлений не найдено
+msg[030]=ОК
+msg[031]=Ошибка
+msg[032]=Пропуск
+msg[033]=Имя файла
+msg[034]=Папка
+msg[035]=Размер
+msg[036]=Сжатый
+msg[037]=Результат
+msg[038]=Ошибка
+msg[039]=Подтверждение
+msg[040]=Выберите папку для сжатия:
+msg[041]=Файл уже зашифрован!
+msg[042]=Файл НЕ был зашифрован!
+msg[043]=Сжать с помощью UPX

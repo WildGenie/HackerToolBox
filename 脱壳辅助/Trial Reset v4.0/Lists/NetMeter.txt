@@ -1,0 +1,1 @@
+NetMeter	Reg32Val	HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\\ShellExStateN

@@ -1,0 +1,1 @@
+dcc32 -B TestApp.dpr -GD

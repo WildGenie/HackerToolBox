@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ida xmlns:xi="http://www.w3.org/2003/XInclude"
+     xmlns:xpath="http://www.idapro.com/ns/xpath"
+     xmlns:idc="http://www.idapro.com/ns/idc">
+  <templates>
+    <page X="processor_mc68_p" title="Motorola Processor Options" subtitle="How would you like the Motorola processor module to analyze the input file?" visible="false">
+      <checkbox variable="/ida/processors/mc68/@MC68K_UNSIGNED_OPS" caption="Immediate operands are unsigned by default">
+        <help>
+          If this option is off, then
+            a 8bit operand like 0xF0 will be represented as -0x10
+            a 16bit operand like 0xFF00 will be represented as -0x100
+            a 32bit operand like 0xFFFF0000 will be represented as -0x10000
+        </help>
+      </checkbox>
+    </page>
+  </templates>
+</ida>

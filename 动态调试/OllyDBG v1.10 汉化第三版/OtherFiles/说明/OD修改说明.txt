@@ -1,0 +1,278 @@
+Modify 1 自动配置UDD、PLUGIN为绝对路径
+
+修改前
+
+00437376   .  68 027F0000   PUSH    7F02                             ; /RsrcName = IDC_WAIT
+0043737B   .  6A 00         PUSH    0                                ; |hInst = NULL
+0043737D   .  E8 76810700   CALL    <JMP.&USER32.LoadCursorA>        ; \LoadCursorA
+
+修改后
+
+00437376   . /E9 55830700   JMP     Ollydbg.004AF6D0                 ; 修改这里
+0043737B   > |6A 00         PUSH    0                                ; |hInst = NULL
+0043737D   . |E8 76810700   CALL    <JMP.&USER32.LoadCursorA>        ; \LoadCursorA
+
+修改方法:
+
+把二进制码 00 70 6C 75 67 69 6E 00 55 44 44 00 粘贴到 4AF6C4 
+
+然后修改 00437376 的 PUSH 7F02 为 JMP 004AF6D0(004AF6D0是空白的，这个自己找)
+
+最后用 OD 的 NonaWrite 插件把下面代码汇编进程序后保存所有修改就可以了
+
+  0x4AF6D0:
+  PUSHAD
+  MOV     EDI,004D3868
+  XOR     EAX,EAX
+  XOR     ECX,ECX
+  DEC     ECX
+  REPNE   SCAS BYTE PTR ES:[EDI]
+  NEG     ECX
+  DEC     ECX
+  PUSH    ECX
+  MOV     EDI,0050AE00
+  PUSH    004D3868
+  PUSH    EDI
+  CALL    004AF22E
+  POP     ECX
+  MOV     BYTE PTR DS:[ECX+EDI-1],5C
+  MOV     BYTE PTR DS:[ECX+EDI],0
+  ADD     EDI,100
+  PUSH    ECX
+  PUSH    0050AE00
+  PUSH    EDI
+  CALL    004AF22E
+  POP     ECX
+  PUSH    ECX
+  PUSH    004AF6C5
+  SUB     EDI,100
+  ADD     EDI,ECX
+  PUSH    EDI
+  CALL 004AF22E
+  NOP
+  PUSH    004AF6CC
+  ADD     EDI,100
+  PUSH    EDI
+  CALL 004AF22E
+  PUSH    004D53A4
+  PUSH    0050AF00
+  PUSH    004B74FD
+  PUSH    004B747E
+  CALL 004AF21C
+  PUSH    004D53A4
+  PUSH    0050AE00
+  PUSH    004B7506
+  PUSH    004B747E
+  CALL 004AF21C
+  POP     ECX
+  PUSH    ECX
+  MOV     EDI,0050AE00
+  ADD     ECX,7
+  XOR     EAX,EAX
+  REP     STOS BYTE PTR ES:[EDI]
+  POP     ECX
+  ADD     ECX,4
+  MOV     EDI,50AF00
+  XOR     EAX,EAX
+  REP     STOS BYTE PTR ES:[EDI]
+  POPAD
+  PUSH    7F02
+  PUSH    43737B
+  RETN
+
+
+Modify 2 解决 OD 格式化 Long Double 错误
+
+修改前
+
+0047E7D7  |> \66:8B45 14    MOV AX,WORD PTR SS:[EBP+14]
+0047E7DB  |.  50            PUSH EAX                                 ; /Arg5
+0047E7DC  |.  FF75 10       PUSH DWORD PTR SS:[EBP+10]               ; |Arg4
+0047E7DF  |.  FF75 0C       PUSH DWORD PTR SS:[EBP+C]                ; |Arg3
+0047E7E2  |.  68 94784C00   PUSH Themida_.004C7894                   ; |Arg2 = 004C7894 ASCII "%#.19Le"
+0047E7E7  |.  52            PUSH EDX                                 ; |Arg1
+0047E7E8  |.  E8 3F840200   CALL Themida_.004A6C2C                   ; \Themida_.004A6C2C
+
+修改后
+
+0047E7D7     /E9 B50F0300   JMP Themida_.004AF791                    ; 修改这里
+0047E7DC  |. |FF75 10       PUSH DWORD PTR SS:[EBP+10]               ; |Arg4
+0047E7DF  |. |FF75 0C       PUSH DWORD PTR SS:[EBP+C]                ; |Arg3
+0047E7E2  |. |68 94784C00   PUSH Themida_.004C7894                   ; |Arg2 = 004C7894 ASCII "%#.19Le"
+0047E7E7  |. |52            PUSH EDX                                 ; |Arg1
+0047E7E8  |. |E8 3F840200   CALL Themida_.004A6C2C                   ; \Themida_.004A6C2C
+
+修改方法:
+
+修改 0047E7D7 的 MOV AX,WORD PTR SS:[EBP+14] 为 JMP 004AF791
+
+然后到 004AF791 增加如下代码
+
+增加代码
+
+004AF791      837D 0C FF    CMP DWORD PTR SS:[EBP+C],-1
+004AF795      75 0A         JNZ 004AF7A1
+004AF797      837D 10 FF    CMP DWORD PTR SS:[EBP+10],-1
+004AF79B      75 04         JNZ 004AF7A1
+004AF79D      8065 0C FE    AND BYTE PTR SS:[EBP+C],0FE
+004AF7A1      66:8B45 14    MOV AX,WORD PTR SS:[EBP+14]
+004AF7A5      50            PUSH EAX
+004AF7A6    ^ E9 31F0FCFF   JMP 0047E7DC
+
+二进制代码：83 7D 0C FF 75 0A 83 7D 10 FF 75 04 80 65 0C FE 66 8B 45 14 50 E9 31 F0 FC FF
+
+Modify 3 用 UE 做的修改
+
+① 主窗口做的修改：
+
+窗口标题修改为:VistaDbg
+窗口类修改为:VistaXP
+
+② CPU 窗口做的修改:
+
+窗口类名改为:Show
+
+CPU 窗口的子窗口做的修改:
+
+窗口类名1改为:ShowASM
+窗口类名2改为:ShowREG
+窗口类名3改为:ShowINFO
+窗口类名4改为:ShowDUMP
+窗口类名5改为:ShowSTACK
+
+//③加载 Dll 动态链接库
+
+原始名称:DBGHELP.DLL
+修改后名称:OLLHELP.DLL
+
+Modify 4(插件) 反汇编窗口
+
+1
+
+1.1 查看数据 
+push A480033     //如果按Shift，则数据窗口中显示A480033数据
+mov eax,401000   //此行按Shift，则数据窗口中显示401000 数据
+mov eax,[401000] //此行按Shift，则数据窗口中显示401000 数据
+mov [ebp-4], esp //此行按Shift，则数据窗口中显示ebp-4的值（注意EIP必须指向当前行）
+mov eax, [esp+10]//此行按Shift，则数据窗口中显示esp+10的值（注意EIP必须指向当前行）
+JNZ 401000 	 //此行按Shift，则数据窗口中显示401000 数据
+
+1.2 拷贝当前地址
+00401092       68 00000080          PUSH 80000000 //选择此行市，按Ctrl+X,将地址"00401092"拷贝到剪切板.
+
+1.3 计算选择数据大小
+按住CTRL不放，拖动鼠标，可以计算出选择数据的大小
+---------------------------------------------
+2
+
+2.1 数据窗口
+(1)快速定位
+00406000  00 10 40 00 00 00 00 00 00 00 00 00 CA 2E 40 00
+          ^
+光标移到“00 10 40 00”第一字节00处，双击，反汇编窗口显示00406000，按SHIFT，反汇编窗口显示401000。
+
+2.2 计算选择数据大小
+在数据窗口按住左键不放，拖动就可以在提示栏中看到选择数据的起始地址和结束地址以及所选择数据的大小。
+---------------------------------------------
+2.3 堆栈窗口
+0012FF44   00401D8A  //双击，反汇编窗口显示0401D8A地址的内容；或者Shift，数据窗口显示0401D8A地址的内容
+0012FF48   00000000
+
+Modify 5 OD数据窗口复制BUG
+
+修改前
+
+00446A1C    68 00020000     PUSH 200
+00446A21    8D95 78FAFFFF   LEA EDX,DWORD PTR SS:[EBP-588]
+00446A27    52              PUSH EDX
+00446A28    53              PUSH EBX
+00446A29    8D8D 78FDFFFF   LEA ECX,DWORD PTR SS:[EBP-288]
+00446A2F    51              PUSH ECX
+00446A30    6A 01           PUSH 1
+00446A32    6A 00           PUSH 0
+00446A34    E8 1D870600     CALL <JMP.&KERNEL32.MultiByteToWideChar>
+
+修改后
+
+00446A1C   /E9 8C8D0600     JMP 004AF7AD
+00446A21   |8D95 78FAFFFF   LEA EDX,DWORD PTR SS:[EBP-588]
+00446A27   |52              PUSH EDX
+00446A28   |53              PUSH EBX
+00446A29   |8D8D 78FDFFFF   LEA ECX,DWORD PTR SS:[EBP-288]
+00446A2F   |51              PUSH ECX
+00446A30   |6A 01           PUSH 1
+00446A32   |6A 00           PUSH 0
+00446A34   |E8 1D870600     CALL <JMP.&KERNEL32.MultiByteToWideChar>
+
+增加代码
+
+004AF7AD    8D95 78FAFFFF   LEA EDX,DWORD PTR SS:[EBP-588]
+004AF7B3    8D8D 78FDFFFF   LEA ECX,DWORD PTR SS:[EBP-288]
+004AF7B9    51              PUSH ECX
+004AF7BA    52              PUSH EDX
+004AF7BB    68 00020000     PUSH 200
+004AF7C0    52              PUSH EDX
+004AF7C1    53              PUSH EBX
+004AF7C2    51              PUSH ECX
+004AF7C3    6A 01           PUSH 1
+004AF7C5    6A 00           PUSH 0
+004AF7C7    E8 8AF9FFFF     CALL <JMP.&KERNEL32.MultiByteToWideChar>
+004AF7CC    5A              POP EDX
+004AF7CD    59              POP ECX
+004AF7CE    8BD8            MOV EBX,EAX
+004AF7D0    03DB            ADD EBX,EBX
+004AF7D2    03D3            ADD EDX,EBX
+004AF7D4    83EA 02         SUB EDX,2
+004AF7D7    0FB71A          MOVZX EBX,WORD PTR DS:[EDX]
+004AF7DA    83FB 00         CMP EBX,0
+004AF7DD    74 05           JE SHORT 004AF7E4
+004AF7DF  ^ E9 5572F9FF     JMP 00446A39
+004AF7E4    C602 01         MOV BYTE PTR DS:[EDX],1
+004AF7E7  ^ E9 4D72F9FF     JMP 00446A39
+
+Modify 6 修改了当OD注册为系统外壳扩展方式时用WINDOWS菜单方式载入EXE文件时OD窗口的标题为 VistaDbg
+
+修改前
+
+004779C5  |.  51            PUSH ECX                                 ; /Arg4
+004779C6  |.  8D86 A5030000 LEA EAX,DWORD PTR DS:[ESI+3A5]           ; |
+004779CC  |.  50            PUSH EAX                                 ; |Arg3
+004779CD  |.  8D96 8E090000 LEA EDX,DWORD PTR DS:[ESI+98E]           ; |
+004779D3  |.  52            PUSH EDX                                 ; |Arg2
+004779D4  |.  8D8D E0FEFFFF LEA ECX,DWORD PTR SS:[EBP-120]           ; |
+004779DA  |.  51            PUSH ECX                                 ; |Arg1
+004779DB  |.  E8 4CF20200   CALL 004A6C2C                            ; \004A6C2C
+
+修改后
+
+004779C5  |.  90            NOP
+004779C6  |.  51            PUSH ECX                                 ; /Arg4
+004779C7  |.  B8 ED714B00   MOV EAX,004B71ED                         ; |ASCII "VistaDbg"
+004779CC  |.  50            PUSH EAX                                 ; |Arg3 => 004B71ED ASCII "VistaDbg"
+004779CD  |.  8D96 8E090000 LEA EDX,DWORD PTR DS:[ESI+98E]           ; |
+004779D3  |.  52            PUSH EDX                                 ; |Arg2
+004779D4  |.  8D8D E0FEFFFF LEA ECX,DWORD PTR SS:[EBP-120]           ; |
+004779DA  |.  51            PUSH ECX                                 ; |Arg1
+004779DB  |.  E8 4CF20200   CALL 004A6C2C                            ; \004A6C2C
+
+Modify 7 修正了聆风听雨在汉化时把 Switch 和 cases 翻译成 分支和案例
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,388 @@
+EXECryptor history
+
+
+2.4.1		 10 Oct 2007
+- Vista compatible GUI
+- added some tricks for defeat latest EXECryptor-specific reversing tools and researches
+- improved: antidebug/antitrace
+
+2.4.0 RC1.02		 7 Nov 2006
+- bugfix in "external key file" feature
+- bugfix in ProtectImport under Vista
+
+2.4.0 RC1.01		 6 Nov 2006
+- bugfix: program self-terminated after some delay
+
+2.4.0 RC1		 6 Nov 2006
+- improved: Vista compatible
+- improved: VirtualMachine layer rewrited for fixing minor problem and 
+- improve compatibility with DualCore/HT CPU's
+- improved: antidebug and multithreading
+
+2.3.9		 20 Mar 2006
+- improved: VS2005 compatible (case dynamic import off) 
+
+2.3.8		 17 Mar 2006
+- improved: VS2005 compatible
+- bugfix: VisualC application can't run if code compression is off
+- bugfix: possible false debugger detection with code 305
+
+2.3.7		 28 Feb 2006
+- bugfix: can't register ActiveX after protection
+- bugfix: antidebug crash on Windows 9x
+
+2.3.6		 22 Feb 2006
+- bugfix: EXECryptor crash or create invalid PE while protecting dll
+
+2.3.5		 19 Feb 2006
+- bugfix: EXECryptor crash on Windows 2003
+- bugfix: antidebug crash on Windows 2003
+
+2.3.4		 16 Feb 2006
+- bugfix: unregistered version crash
+- bugfix: code transformation produces unsafe code
+- fixed problem with "suspicious" false positive detection
+
+2.3.3		 15 Feb 2006
+- fixed problem with ClamAV false positive detection
+
+2.3.2		 14 Feb 2006
+- bugfix in EXECryptor GUI: 2.3 generates serial number with
+  invalid userparam 
+
+2.3.1		 10 Feb 2006
+- bugfix: error "Application is not licensed to use this feature"
+  while protecting Delphi application
+- bugfix: EXECryptor leaves non standard named resources entries 
+  uncompressed
+
+2.3		  1 Feb 2006
+
+NOTE: use new EXECryptor SDK's files with new version 2.3 and later. 
+      This require program recompilation
+- EXECryptor registration changed. you need use new serial numbers
+- Now all license type can use trial restrictions function. To set 
+  a trial period you can use current date or the application release 
+  date. Binding to application release date allows to generate the 
+  serial numbers valid for all software releases untill fixed date. 
+  To use this feature switch in licenses editor and set llicenses 
+  checking needed options in "Expire" menu.
+- added full Unicode support for serial numbers. Using Unicode 
+  registration names they are transformed in UTF-8 representation 
+  and then are treated by relevant same-name ANSI functions. 
+  As the representation of string that contains only latin characters 
+  and digits in UTF-8 is the same as ANSI representation we have the 
+  backward compatibility. new API function: VerifySerialNumberW
+- added new API: DecodeSerialNumber. This function is analogic to 
+  VerifySerialNumberEx, but it doesn't influence on IsRegistered, 
+  RegConst_* result nor on CRYPT_REG/CRYPT_UNREG blocks execution. 
+  This means the verification result is saved nowhere. You can use 
+  it for additional serial numbers verification or when you need to 
+  verify a serial number without any further program behaviour change. 
+- added vrStolen in TVerifyResult for stolen key detection and custom action 
+- eckeygen.dll updated for unicode support. changed interface of 
+  CreateSerialNumberTimeLimit.
+- added new feature: Advanced code protection. see help for more details.
+- improved: new API function GetReleaseDate, GetEXECryptorVersion, 
+  IsAppProtected
+- improved: Unicode version of SecureRead/Write, Encrypt/DecryptStr
+- improved: antidebug and multithreading
+- bugfix: protected DLL change priority of mainthread to idle
+
+2.2.6		 12 Sep 2005
+- bugfix: AV in registered version
+
+2.2.5 		 31 Aug 2005
+- improved: antidebug and multithreading
+- bugfix: internal memory leaks
+- bugfix: unstable hardware id on W9x if bios id checked
+- bugfix: false debugger detection with code 256
+- bugfix: in dll protection
+- bugfix: crash on W9x
+- bugfix in LZAB compression
+
+
+2.2.4 		 13 Aug 2005
+- bugfix: "file corrupted" message while protect exe's
+
+2.2.3 		 12 Aug 2005
+- improved: full multithread support. now you can use crypt_* blocks in
+  threads without critical section.
+- improved: PowerBasic 8 compatible
+- improved antidebug and patch protection
+- bugfix: multithread app unstable on P4 with HypherThread
+- bugfix: section with "executable as code" and "writeable" attributes now 
+  skipped in CRC check routine (in mode memory/aggresive)
+- bugfix: VB applications processing fail
+- bugfix: patch protection (mode file)
+
+
+2.2.1 		 29 Jul 2005
++ improved antidebug
++ improved: compatibility with MS signcode tool
++ bugfix: crash VB5 application after protection
++ bugfix: invalid value of CPU ID on AMD platform
++ bugfix in serial number verification
++ bugfix in antidebug under XP64
++ bugfix in "already protected" checking
+
+2.1.21 		 8 Jun 2005
++ added sdk and example for IBasic
++ improved antidebug
++ improved: patch protection now counteract to loader and memory patching tools
++ improved: patch protection now compatible with signcode. 
++ bugfix: possible invalid tls processing if compress code is ON
++ bugfix: entry point processing
+
+
+2.1.20 		 28 Apr 2005
++ bugfix: false positive debugger detection with code 272 on some antivirus 
+  monitors
+
+2.1.19 		 25 Apr 2005
++ added new option: Delay DLL loading
+  if this option is ON (old default behavior) - protected application load 
+  all dll's via LoadLibraryA. otherwise EXECryptor rebuild import and this 
+  needed dll's will be loaded by Windows loader.  
++ bugfix: protected application crash on Windows95 if DynamicImport is ON
++ bugfix: invalid export processing
+
+2.1.18 		 22 Apr 2005
++ added sdk and examples for support lcc, PellesC, PowerBASIC and PureBasic
++ help file updated
++ eckeygen.dll updated
++ improved: patch protection may be used without antidebug
++ improved: wmvare/virtualpc/wine compatible mode
++ improved: save last settings for different license types (Serials->Manager)
++ improved: protection from inline patching
++ improved: antidebug protection
++ bugfix: if protect entry point is ON protected application crash or 
+  slow down performance
++ bugfix: EXECryptor freeze on protect application with huge export
++ bugfix: antidebug slow down performance
++ bugfix: Error: Invalid import: GetModuleHandleA not found
++ bugfix: application sometime crash if DynamicImport is ON and some dll
+  not found
+
+2.1.17 		 17 Mar 2005
++ bugfix: invalid recognition of VB activex dll 
++ bugfix: invalid virtualization of some rarely used command
++ bugfix: crash protected dll under W9x if image must be relocated
++ improved: now GetTrialDaysLeft/GetTrialRunsLeft can be save info in HKLM.
+  for use this feature simple call to it with negative argument.
+  i.e. GetTrialDaysLeft(30) - use HKCU
+  i.e. GetTrialDaysLeft(-30) - use HKLM
++ added: now you can reset trial info. see "Advanced->Reset trial on change"
+
+2.1.16 		 15 Mar 2005
++ update execryptor.h for CBuilder & MSVC
++ bugfix: memory leak in eckeygen.dll & GUI
++ bugfix: protected application crash on start/exit
++ bugfix: false debugger detection on wine emulator (code 97)
++ added: option "nothing" on detect clock manipulation
++ improved: dynamic import, antidebug and antidump
+
+2.1.15 		 4 Feb 2005
++ bugfix: false debugger detection under Win9x (code [80])
++ bugfix: AV on getting BIOS ID under Win9x
++ bugfix: Project->New cause EXECryptor GUI crash under Win9x
+
+2.1.14 		  31 Jan 2005
++ bugfix: crash or false debugger detection with code 224-226 on some Windows
++ bugfix: unstable HardwareID if CPUID is ON
+
+2.1.13 		  29 Jan 2005
++ added: Active watch mode. Add specific code for periodically call to AntiDebug.
++ improved: now AntiDebug may be called multiple times
++ improved: new reaction on debugger found - terminate application (instead 
+  application crash). if "Debug messages" is ON - dialog box will be show with
+  waring message and error code related to antidebug trick number.
++ improved: Patch protection show messagebox with waring and exit app if
+  any modification detected.
++ improved: add more intelligence action "Show message and exit" in
+  "On detect clock manipulation"
++ bugfix: in one-touch trial if TrialPeriod & Executions both OFF
++ bugfix: sometime DynamicImport decrease application performance
++ bugfix: sometime protected app unstable 
++ bugfix: can't resolve code marks and API calls in VisualBasic-exe
+
+2.1.12 		  25 Jan 2005
++ help update
++ bugfix: installation fail on W2000
++ bugfix: "Can't resolve AntiDebug" error
++ bugfix in EXECryptor.bas (VerifySerialNumber/Ex)
++ bugfix in CBuilder SDK. "Call to undefined function strcpu" error under CB6 
+
+2.1.11 		  21 Jan 2005
++ now EXECryptor can protect MSVB application (p-code not supported).
+  see Example\MSVB and SDK\MSVB. most of EXECryptor API functions available.
+  crypt_start/reg/unreg also supported.
++ new feature: GetTrialDaysLeft,GetTrialRunsLeft allow very easy add trial
+  to your software. see EXECryptorAPI example.
++ SDK and examples updated
++ improved: remove EXECryptor export in protected exe/dll
++ bugfix: registry page is empty
+
+2.1.10 		  17 Jan 2005
++ improved: you can setup action on detect clock manipulation (Option->Advanced)
++ improved: setup for HardwareID algorithm. you can select HDD/CPU/BIOS ID's 
+  in any combination (Option->Advanced)
++ improved: customizable messages for One-touch registration reminder
++ improved: added HardwareID support in One-touch registration reminder
++ improved: Keep overlay data option
++ improved: Run batton can load and test protected dll
++ improved: EXECryptor can protect exe's without relocation info
++ full support for Bound Import
++ bugfix: protected dll fail to load
++ bugfix in SecureWrite (write to HKLM fail)
++ minor bugfix's in GUI
++ bugfix in MSVC SDK file
+
+2.1.9 		  14 Jan 2005
++ now AntiDebug/ProtectImport automatically caled if you attach 
+  EXECryptor.pas/cpp to your project and enable USE_API
++ SecureRead/Write can be use for save data to HKLM.
+  if first char of Name parameter is '@' - it use HKLM, otherwise HKCU.
+  don't forget for checking that your application have right for write
+  to HKLM
++ full support for shared data sections in all protection modes
++ destination file setup
++ SoftwareID setup
++ GUI improved
++ bugfix: DynamicImport slow down protected application performance
++ optimization tips. in some cases EXECryptor can't properly protect
+  some code fragments. we recommende disable optimization for protected
+  code fragments like next:
+  Delphi: 
+          {$O-}   // disable optimization
+          procedure func;
+          begin
+            {$I crypt_start.inc}
+            ...
+            {$I crypt_end.inc}
+          end;
+          {$O+}   // restore
+  MSVC:   
+          #pragma optimize( "", off )   // disable optimization
+          void func() {
+          CRYPT_START
+          ...
+          CRYPT_END
+          }
+          #pragma optimize( "", on )   // restore
+  C++Builder:
+          #pragma option push
+          #pragma option -Od   // disable optimization
+          void func() {
+          CRYPT_START
+          ...
+          CRYPT_END
+          }
+          #pragma option pop   // restore
+
+
+2.1.8 		  11 Jan 2005
++ improve antitrace 
++ speedup optimization of protected code
++ project format changed (minor, back compatible). eckeygen.dll updated
++ bugfix: sometimes program can't run under EXECryptor GUI
++ bugfix in compress relocations
++ bugfix in save relocations (protected dll cause GPF on W9x)
+
+2.1.7 		  4 Jan 2005
++ add option "Debug messages". if this option is ON protected application
+  show msgbox with text "Debugger detected..." and exit if debug/trace detected. 
+  otherwise application terminated with GPF/AV without any messages.
++ improve: Dynamic import
++ bugfix: GPF in One-Touch-Trial mode
+
+2.1.6 		 29 Dec 2004
++ improve antidebug
++ improve: space efficient code allocation in protected PE
++ bugfix in TLS processing (cause GPF on some specific TLS data if CompressCode ON)
++ bugfix: GPF on some PE if CompressCode is ON and DynamicImport is OFF
+
+2.1.5 		 20 Dec 2004
++ improve virtualization defence
++ improve detection of overoptimized code fragments
++ feature: support drag'n'drop *.exe from explorer
++ improve: anti-PE-sniffer
++ feature: detect compiler (if possible)
++ add shell menu for EXECryptor project (*.ep2) (need reinstall)
++ bugfix: "Patch protection" fail in "dll" case
++ bugfix: crash on some fast CPU
+
+2.1.4 		 19 Nov 2004
++ bugfix: shell notification can't work with AntiDebug is ON
+
+2.1.3 		 9 Nov 2004
++ remove "Nothing to crypt" message. i.e. EXECryptor can be used as
+  generic exe-packer without any recompilation of software
++ improve antidebug
++ GUI: improve antidebug setup. Try to right click on AntiDebug option
++ bugfix: invalid processing "Dynamic import" option for some bpl
++ bugfix: import processing (case "import as data")
++ SafeGetDate now return big date (by example in 2010 year) if detect 
+  clock movement
++ SafeGetDate don't detect clock movement less than 40h
+
+2.1.2 		 2 Nov 2004
++ bugfix: AV under W9x
+
+2.1.1 		 28 Oct 2004
++ bugfix: AntiDebug/AntiTrace options is disabled
+
+2.1 		 28 Oct 2004
++ GUI: autoopen last project
++ GUI: support pass project name as argument in command line 
++ GUI: invalid GetCurrentDir when application run under EXECryptor
++ improve: add antiemulation in AntiDebug
++ bugfix: update KeyVerify.cpp in HardKey example for MSVC
++ bugfix: SafeGetDate compatible with time sinhronization tools
++ bugfix: crash in case of protection multithread DLL/ActiveX 
++ bugfix: AV on some files if Compress Resource is ON 
++ tips: onetouch trial not applicable for DLL/ActiveX
+
+2.0 build 34	9 Sep 2004
++ bugfix: fail on incompressible resource section
++ bugfix: fail on some PE produced with Intel compilers
++ bugfix: AV in EXECryptor if "Not use serials" is on and application use Serials API
++ improve: add JScript examples. minor changes in keygen ole api for JScript compatible.
+
+2.0 build 33	17 Aug 2004
++ bugfix: random AV if AntiTrace is ON
+
+2.0 build 32	9 Aug 2004
++ bugfix: can't load dll with imagebase more than 0x10000000
+
+2.0 build 31	6 Aug 2004
++ bugfix: can't find exported functions in protected dll
+
+2.0 build 30	3 Aug 2004
++ bugfix: export functions is invisible
+
+2.0 build 29	2 Aug 2004
++ bugfix: Can't register protected COM server
++ bugfix: SecureRead/Write
++ improve: entry point detection routine
+
+2.0 build 28	23 Jul 2004
++ bugfix: AV in crypt_reg/crypt_unreg blocks
++ bugfix: can't run PE image with LoadConfig on W2003
++ bugfix: can't lock stolen serials with comment
+
+2.0 build 27	20 Jul 2004
++ AntiDebug improvement
++ EntryPoint protection improvement
++ correct some misprints in help
++ bugfix: crash on W9x
++ bugfix: "Protect" button disabled if file not exists
+
+2.0 build 26	13 Jul 2004
+- bugfix: internal memory leak
+- bugfix: AntiDebug fail in some configurations
+- bugfix: unregistered version fail
+
+2.0 build 25	11 Jul 2004
+- bugfix: SafeGetDate fail on Win9x
+

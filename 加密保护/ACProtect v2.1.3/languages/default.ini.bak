@@ -1,0 +1,95 @@
+[Translations] 
+;TabSheet
+suitabsheet1.caption=Exe Files
+suitabsheet2.caption=Options
+suitabsheet3.caption=Registration
+suitabsheet4.caption=Progress
+suitabsheet5.caption=Analysis
+suitabsheet6.caption=Trial Infos
+suitabsheet7.caption=Professional
+;Label
+label1.caption=File to Protect
+label4.caption=File to Save
+label5.caption=Specified Enemy Process
+label8.caption=Specified Parent Process
+label7caption=User   ID
+label9.caption=MachineID
+label11.caption=Embedded Protector
+label12.caption=RSA Key Lock Code
+label13.caption=Dynamic En/Decrypt
+label15.caption=Stolen UserID list
+;Tmenuitem
+project1.caption =Project
+newproject1.caption =New Project
+openprojects1.caption =Open Project
+saveproject1.caption =Save Project
+HELP2.caption         =Help
+HELPCONTENT1.caption  =Content
+HOMEPAGE1.CAPTION     =HomePage
+TECHSUPPORT3.CAPTION  =Tech Support
+BUYNOW1.CAPTION       =Buy Now
+ABOUT2.CAPTION        =About...
+;TToolButton
+toolbutton8.HINT= Save Project
+toolbutton9.HINT= Protect
+toolbutton10.HINT= Help
+toolbutton40.HINT= Home Page
+toolbutton6.HINT= New Project
+toolbutton7.HINT= Open Project
+;tSUIGROUPbOX AND tSUIRADIOGROUP
+YSXX.CAPTION         = Compress Option
+TRIALSET.caption     = Trial Setting Info
+suigroupbox1.caption = Enemy Process Name 
+suigroupbox2.caption = Advanced Options
+;tsuicheckbox
+checkbox1.caption    = Strip .reloc section (only for exe,not for dll,ocx)
+suicheckbox2.caption = API random redirection (only if  API not used  directly in the program)
+suicheckbox3.caption = Code Replace
+suicheckbox4.caption = Anti Debug
+suicheckbox5.caption = Anti Loader
+    checkRSA.caption = Use RSA Registration Keys for key license
+checkbox2.caption    = Message if no Key.dat 
+checkbox3.caption    = Message if expired
+checkbox4.caption    = OEP(Original Entry Point ) obfuscation
+;tsuibutton
+button1.caption      = Generate Key.dat
+button2.caption      = Protect
+button3.caption      = Analysis
+speedbutton8.caption = T e s t
+button5.caption      = Generate Keygen Program 
+
+[Messages] 
+;  
+m_saveprj    =Project not saved,Save?
+m_protecting =Protecting begin
+m_selfile    =please select file to protect
+m_keylock    =Found no RSAkey lock signature in your program,intensely recommend you add the RSAkeys lock  signature in your program£¬it will promote your program's intensity against crack.Just add the signature in your source code and recompile it ,see the example for how to do.
+m_keylockok  =RSAkeys is locking  some code...........................OK
+m_emlock     =Embedded protecting ....................................OK
+m_dynamiclock=Code dynamic lock protecting ...........................OK
+m_procok     =Protect Completed.
+m_genkeypair = Generate RSA key Pairs,please wait for a while...
+m_keyok      =RSA keys Generate ok,Now you can use it to generate keys
+m_nokey      =This fuction is not available in the Trial version.If you want to use this function,please register!
+m_genkeyok   =Generate Key.dat    OK
+m_NoEmbedded =Found No embedded protection signature in your program£¬intensely recommend you add the embedded protection signature in your program£¬it will promote your program's intensity against crack.Just add the signature in your source code and recompile it ,see the example for how to do.
+m_recover    =program been recovered successfully.
+m_tryagain1  =Please check the "Compress Option2 " option and try again.
+m_tryagain2  =Please check the "No Compress" option and try again.
+m_testokorNO =Is the program run normally?
+m_codeanalysis   =Code Analysising
+m_codeanalysisok =Code Analysis.......................................OK
+m_codereplace    =Code Replacing
+m_codereplaceok  =Code Replace........................................OK
+m_compress       =Compressing
+m_compressok     =Compress............................................OK
+m_trial      =Unregistered Limit  Version
+m_reason1    =Maybe due to random protection schema ,If try it more than three times,please check the following:
+m_reason2    =1. U may use API address directly in your program ,but the 'API random redirection' option is checked,check off this and try!
+m_reason3    =2. Due to the compression selection,use differrent compression selection in option tab and try!
+m_reason4    =3. Change 'Code replace' option and try!
+m_reason5    =4. Change 'OEP(Original Entry Point ) obfuscation' and try!
+m_reason6    =If the question still exists,plz contact and send the file to the author!
+m_kgcap       =ACProtect
+m_kgprompt =Please Input Keygen Program Title
+m_acpalready=This file has been protected by ACProtect already ;-)  Choose an file that has not been protected!

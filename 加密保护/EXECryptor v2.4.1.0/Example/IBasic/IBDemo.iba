@@ -1,0 +1,131 @@
+' EXECryptor Demo
+' Compile as a WINDOWS target
+$main
+$include "execryptor.inc"
+
+def dlg: Dialog
+
+CREATEDIALOG dlg,0,0,340,340,0x80C80080,0,"EXECryptor Demo",&handler
+CONTROL dlg,@LISTBOX,"",8,8,324,300,0,1
+CONTROL dlg,@BUTTON,"RUN!",60,318,40,14,0,2
+CONTROL dlg,@BUTTON,"Exit",224,318,40,14,0,3
+
+domodal dlg
+end
+
+SUB vr2text(vr AS INT), STRING
+  SELECT vr
+    CASE vrInvalid
+      return "vrInvalid"
+    CASE vrExpired
+      return "vrExpired"
+    CASE vrStolen
+      return "vrStolen"
+    CASE vrOK
+      return "vrOK"
+  ENDSELECT
+ENDSUB
+
+SUB handler
+select @MESSAGE
+	case @IDINITDIALOG
+		centerwindow dlg
+	case @IDCONTROL
+		select @CONTROLID 
+			case 2
+				$include "crypt_start.inc"
+				addstring dlg,1,"CRYPT_START/END OK!"
+				EXECryptor_AntiDebug()
+				addstring dlg,1,"AntiDebug OK"
+				EXECryptor_ProtectImport()
+				addstring dlg,1,"ProtectImport OK"
+				' 
+				addstring dlg,1,"IsAppProtected: " + STR$(EXECryptor_IsAppProtected())
+				addstring dlg,1,"GetEXECryptorVersion: " + EXECryptor_GetEXECryptorVersion()
+				' extract hardware id
+				addstring dlg,1,"GetHardwareID = " + GetHardwareID()
+				' obtain release/current date and trial period info
+				INT Day, Month, Year
+				GetReleaseDate(Day,Month,Year)
+				addstring dlg,1,"GetReleaseDate: " + STR$(Day) + "/" + STR$(Month) + "/" + STR$(Year)
+				SafeGetDate(Day,Month,Year)
+				addstring dlg,1,"SafeGetDate: " + STR$(Day) + "/" + STR$(Month) + "/" + STR$(Year)
+				addstring dlg,1,"GetTrialDaysLeft(30): " + STR$(EXECryptor_GetTrialDaysLeft(30))
+				addstring dlg,1,"GetTrialRunsLeft(100): " + STR$(EXECryptor_GetTrialRunsLeft(100))
+				' hardware depended encryption
+				STRING SomeText, EncText
+				SomeText = "This is a string."
+				addstring dlg,1,"String: '"+SomeText+"'"
+				EncText = EncryptStr(SomeText)
+				addstring dlg,1,"Encrypted: '"+EncText+"'"
+				addstring dlg,1,"Decrypted: '"+DecryptStr(EncText)+"'"
+				' secure registry read/write
+		        IF SecureWrite("ABC","Some value") <> 0 THEN
+		          addstring dlg,1,"SecureWrite OK"
+		        ELSE
+		          addstring dlg,1,"SecureWrite FAIL"
+		        ENDIF
+		        addstring dlg,1,"SecureRead = "+SecureRead("ABC")
+				' safe message box
+				EXECryptor_MessageBox(0, "Safe MessageBox", "Demo", 0x40/*MB_ICONINFORMATION*/)
+				$include "crypt_end.inc"
+
+				' serial number verification test
+			    addstring dlg,1,"EXECryptor_IsRegistered = "+vr2text(EXECryptor_IsRegistered())
+			    addstring dlg,1,"RegConst* = "+ _
+			      STR$(EXECryptor_RegConst_0())+","+STR$(EXECryptor_RegConst_1())+","+STR$(EXECryptor_RegConst_2())+","+ _
+			      STR$(EXECryptor_RegConst_3())+","+STR$(EXECryptor_RegConst_4())+","+STR$(EXECryptor_RegConst_5())+","+ _
+			      STR$(EXECryptor_RegConst_6())+","+STR$(EXECryptor_RegConst_7())
+
+				$include "crypt_unreg.inc"
+		        ' this code will be executed only if previous call to
+		        ' EXECryptor_VerifySerialNumber(Ex) was fail or if this function not called
+   		        addstring dlg,1,"CRYPT_UNREG OK"
+				$include "crypt_end.inc"
+
+			    INT vrRes
+			    vrRes = VerifySerialNumber("John Smith","GT7B-N6AG-BYLJ")
+			    addstring dlg,1,"VerifySerialNumber(John Smith,GT7B-N6AG-BYLJ) = "+vr2text(vrRes)
+
+				$include "crypt_reg.inc"
+			      ' this code will be executed only if previous call to
+			      ' VerifySerialNumber(Ex) was success
+			      addstring dlg,1,"CRYPT_REG OK"
+			      addstring dlg,1,"EXECryptor_IsRegistered = "+vr2text(EXECryptor_IsRegistered())
+			      addstring dlg,1,"RegConst* = "+ _
+			        STR$(EXECryptor_RegConst_0())+","+STR$(EXECryptor_RegConst_1())+","+STR$(EXECryptor_RegConst_2())+","+ _
+			        STR$(EXECryptor_RegConst_3())+","+STR$(EXECryptor_RegConst_4())+","+STR$(EXECryptor_RegConst_5())+","+ _
+			        STR$(EXECryptor_RegConst_6())+","+STR$(EXECryptor_RegConst_7())
+				$include "crypt_end.inc"
+
+			    DEF LicInfo AS LicenseInfo
+			    vrRes = VerifySerialNumberEx("Justas","CHCE-EAJG-EFEW-2WRX",LicInfo)
+			    addstring dlg,1,"VerifySerialNumber(Justas,CHCE-EAJG-EFEW-2WRX) = "+vr2text(vrRes)
+			    addstring dlg,1,"LicType = "+STR$(LicInfo.LicType)
+			    IF LicInfo.LicType = 1 THEN
+			      addstring dlg,1,"Expire after "+STR$(LicInfo.ExpiryMonth)+"/"+STR$(LicInfo.ExpiryYear)
+			    ELSE
+			      addstring dlg,1,"UserParam = "+STR$(LicInfo.UserParam)
+			    ENDIF
+			    addstring dlg,1,"Flags: "+ _
+			      STR$(LicInfo.F1)+","+STR$(LicInfo.F2)+","+STR$(LicInfo.F3)+","+ _
+			      STR$(LicInfo.F4)+","+STR$(LicInfo.F5)+","+STR$(LicInfo.F6)
+
+			    vrRes = VerifySerialNumberEx("Justas","CP9P-GJKL-J5LM-XHSR",LicInfo)
+			    addstring dlg,1,"VerifySerialNumber(Justas,CP9P-GJKL-J5LM-XHSR) = "+vr2text(vrRes)
+			    addstring dlg,1,"LicType = "+STR$(LicInfo.LicType)
+			    IF LicInfo.LicType = 1 THEN
+			      addstring dlg,1,"Expire after "+STR$(LicInfo.ExpiryMonth)+"/"+STR$(LicInfo.ExpiryYear)
+			    ELSE
+			      addstring dlg,1,"UserParam = "+STR$(LicInfo.UserParam)
+			    ENDIF
+			    addstring dlg,1,"Flags: "+ _
+			      STR$(LicInfo.F1)+","+STR$(LicInfo.F2)+","+STR$(LicInfo.F3)+","+ _
+			      STR$(LicInfo.F4)+","+STR$(LicInfo.F5)+","+STR$(LicInfo.F6)
+
+			case 3
+				closedialog dlg
+		endselect
+endselect
+return
+ENDSUB

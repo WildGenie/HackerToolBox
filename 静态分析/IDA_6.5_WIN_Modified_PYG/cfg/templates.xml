@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ida xmlns:xi="http://www.w3.org/2003/XInclude"
+     xmlns:xpath="http://www.idapro.com/ns/xpath"
+     xmlns:idc="http://www.idapro.com/ns/idc">
+  <templates>
+    <idc file="templates.idc"/>
+    <idc>
+      static disable_proc_options(loader)
+      {
+        SetXML(".", "@LOADER", loader);
+        SetXML(".", "@onFileLoading", "onFileLoading_disable_proc_options");
+      }
+      static onFileLoading_disable_proc_options(void)
+      {
+        if (GetXML("name(/ida/loaders/*[1])") != GetXML("@LOADER"))
+          DelXML("/ida/loading/processor");
+      }
+    </idc>
+
+    <!-- default wizard -->
+    <wizard X="default_w">
+      <idc>
+        init_wizard_captions();
+      </idc>
+
+      <page>
+        Select the advanced options you want to fine tune if required:
+        <xi:include xpointer="xpointer(/ida/templates/checkbox[@X='analysis_c'])"/>
+        To continue, click Next.
+      </page>
+
+      <xi:include xpointer="xpointer(/ida/templates/page[@X='processors_p'])"/>
+      <xi:include xpointer="xpointer(/ida/templates/page[@X='kernel_p'])"/>
+      <xi:include xpointer="xpointer(/ida/templates/page[starts-with(@X, 'processor_')])"/>
+      <xi:include xpointer="xpointer(/ida/templates/page[@X='analysis_p'])"/>
+    </wizard>
+
+    <category name="Windows">
+      <template idc:icon="I_WIN" extensions="EXE_WIN" loader="pe">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='pe_w'])"/>
+      </template>
+      <template idc:icon="I_DLL" extensions="DLL_WIN" loader="pe">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='pe_w'])"/>
+      </template>
+      <template idc:icon="I_OCX" extensions="OCX_WIN" loader="pe">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='pe_w'])"/>
+      </template>
+      <template idc:icon="I_DRV" extensions="DRV_WIN" loader="pe lx ne">
+        <idc> select_wizard(); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='pe_w'])"/>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_OBJ" extensions="OBJ_WIN" loader="coff omf">
+        <idc> disable_proc_options("coff"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_LIB" extensions="LIB_WIN" loader="coff omf">
+        <idc> disable_proc_options("coff"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="DOS">
+      <template idc:icon="I_DOS" extensions="EXE_DOS"     loader="dos lx coff">
+        <idc> disable_proc_options("coff"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DOS" extensions="EXE_COM_DOS" loader="dos"     processor="80386r">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DRV" extensions="DRV_DOS"     loader="dos"     processor="80386r">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DLL" extensions="OVR_DOS"     loader="dos"     processor="80386r">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DOS" extensions="EXE_PHARLAP" loader="expload" processor="80486p">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_OBJ" extensions="OBJ_DOS"     loader="omf"     processor="80386r">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_LIB" extensions="LIB_DOS"     loader="omf"     processor="80386r">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="Unix">
+      <template idc:icon="I_UNIX" extensions="EXE_UNIX" loader="elf coff aout qnx hpsom">
+        <idc> disable_proc_options("coff"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DLL"  extensions="DLL_UNIX" loader="elf coff">
+        <idc> disable_proc_options("coff"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_OBJ"  extensions="OBJ_UNIX" loader="elf coff">
+        <idc> disable_proc_options("coff"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_LIB"  extensions="LIB_UNIX" loader="elf coff">
+        <idc> disable_proc_options("coff"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DLL"  extensions="DLL_HPUX" loader="hpsom" processor="hppa">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="Mac">
+      <template idc:icon="I_OSX" extensions="EXE_MACOSX" loader="macho">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DLL" extensions="DLL_MACOSX" loader="macho">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_MAC" extensions="EXE_MACOS"  loader="pef">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_OBJ" extensions="OBJ_MACOSX" loader="macho">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_LIB" extensions="LIB_MACOSX" loader="macho">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="Java">
+      <template idc:icon="I_JAVA" extensions="CLASS_JAVA" loader="javaldr" processor="java">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_ZIP"  extensions="ZIP_JAVA"   loader="javaldr" processor="java">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name=".NET">
+      <template idc:icon="I_NET" extensions="EXE_NET" loader="pe" processor="cli">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DLL" extensions="DLL_NET" loader="pe" processor="cli">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="Various OS's">
+      <template idc:icon="I_OS2"     extensions="EXE_OS2"     loader="lx"    processor="metapc">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_NETWARE" extensions="DRV_NETWARE" loader="nlm"   processor="80386r">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_BEOS"    extensions="EXE_BEOS"    loader="elf pef">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_AMIGA"   extensions="AMIGA"       loader="amiga" processor="68040">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_GEOS"    extensions="GEOS"        loader="geos"  processor="metapc">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_OBJ"     extensions="OS9"         loader="os9"   processor="6809">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_EXE"     extensions="EXE_FLEX"    loader="os9"   processor="6809">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_EXE"     extensions="EXE_RT11"    loader="rt11"  processor="pdp11">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="PDAs/Handhelds/Phones">
+      <template idc:icon="I_ARM" name="Pocket PC ARM Executable"      extensions="EXE_WIN" loader="pe" processor="arm">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='pe_w'])"/>
+      </template>
+      <template idc:icon="I_DLL" name="Pocket PC ARM Dynamic Library" extensions="DLL_WIN" loader="pe" processor="arm">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='pe_w'])"/>
+      </template>
+      <template idc:icon="I_ARM"     extensions="EXE_ARM"  loader="aif"   processor="arm">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_OBJ"     extensions="OBJ_ARM"  loader="aof"   processor="arm">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_SYMBIAN" extensions="EXE_EPOC" loader="epoc">
+        <idc> disable_proc_options("epoc"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_SIS"     extensions="SIS_EPOC" loader="epoc">
+        <idc> disable_proc_options("epoc"); </idc>
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_PALM"    extensions="EXE_PALM" loader="pilot" processor="68K">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="Consoles">
+      <template idc:icon="I_XBOX"        extensions="EXE_XBOX" loader="xbe" processor="metapc">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_N64"         extensions="EXE_N64"  loader="n64" processor="mipsr">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_GAMEBOY"     extensions="ROM_NGB"               processor="gb">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_PLAYSTATION" extensions="EXE_SPSX" loader="psx" processor="r5900l">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_ROM"         extensions="BIN_SPSX" loader="psx" processor="r5900l">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_OBJ"         extensions="OBJ_SPSX" loader="psx" processor="r5900l">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DREAMCAST"   extensions="EXE_SDC"  loader="elf" processor="sh4">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="Embedded">
+      <template idc:icon="I_ROM" extensions="ROM_BIN"                processor="?">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_HEX" extensions="INTEL_HEX" loader="hex" processor="?">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_HEX" extensions="S19_HEX"   loader="hex" processor="?">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_OBJ" extensions="OBJ_INTEL" loader="intelomf">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_BIN" extensions="MAS"       loader="mas">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_BIN" extensions="SBN"       loader="sbn" processor="C166">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+
+    <category name="Various files">
+      <template idc:icon="I_UNK" name="Unknown File"                       loader="?"    processor="?"/>
+      <template idc:icon="I_RAW"                     extensions="RAW_BIN"                processor="?">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+      <template idc:icon="I_DMP"                     extensions="DUMP_BIN" loader="dump" processor="?">
+        <xi:include xpointer="xpointer(/ida/templates/wizard[@X='default_w'])"/>
+      </template>
+    </category>
+  </templates>
+</ida>
