@@ -1,5 +1,0 @@
-LIBRARY PEExtract
-EXPORTS DiePlugName
-EXPORTS DiePlugProc
-EXPORTS DiePlugHwnd
-EXPORTS DiePlugPe
