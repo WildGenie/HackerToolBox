@@ -1,11 +1,9 @@
-                            §3L软件工作室 无限体验§
-
-软件名称：音速启动(VStart)
-最新版本：5.1 Build 2012.8.19
+软件名称：音速启动
+最新版本：5.5 Build 2014.1.1
 软件性质：免费软件
-开发组员：3L软件工作室(版权所有)
-使用平台：Win9X/Me/2K/XP/2003 (Win98或以下需要VB6运行库)
-３Ｌ主页：http://www.3LSoft.com
+版权所有：Shanghai Gaoxin Computer System Co.,ltd
+使用平台：XP/Vista/Win7/Win8 (Win98或以下需要VB6运行库)
+网站主页：http://www.3LSoft.com
 软件简介：
 
     如果您还在为桌面太乱、文件太多而心烦意乱，请擦亮眼睛，音速启动将给予您最终解决方案。
